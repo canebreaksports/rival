@@ -6,60 +6,44 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-17T14:39:34.624Z",
- "engine": 2,
+ "generatedAt": "2026-11-17T14:53:00.700Z",
+ "engine": 3,
  "questions": [
   {
-   "type": "rank",
+   "type": "moment",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "In 2018, did Clyde Edwards-Helaire (LSU) have more or less than",
+   "line": "1,400 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Clyde Edwards-Helaire had 754 yards from scrimmage in 2018. 🪤 Trap: his big year was 2019 (1,868).",
+   "check": {
+    "value": 754,
+    "line": 1400
+   },
+   "sig": "tpClyde Edwards-Helaire2018scrim"
+  },
+  {
+   "type": "duel",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "Rank these players by career rushing yards (at that school), highest first.",
-   "items": [
-    {
-     "label": "Justin Jefferson (WR) · career, LSU",
-     "value": 30
-    },
-    {
-     "label": "Leonard Fournette (RB) · career, LSU",
-     "value": 3830
-    },
-    {
-     "label": "Jayden Daniels (QB) · career, LSU",
-     "value": 2019
-    },
-    {
-     "label": "Clyde Edwards-Helaire (RB) · career, LSU",
-     "value": 2104
-    }
-   ],
-   "unit": "yds",
-   "sig": "rcar|rushClyde Edwards-Helairecareer,Jayden Danielscareer,Justin Jeffersoncareer,Leonard Fournettecareer"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Arkansas",
-   "a": "LSU",
-   "b": "ARK",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    13,
-    3
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Arkansas",
-   "a": "LSU",
-   "b": "ARK",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    15,
-    11
-   ],
-   "verified": true,
-   "sig": "gpeakW"
+   "year": 2022,
+   "stat": "Rushing season",
+   "aSchool": "LSU",
+   "other": "ARK",
+   "aName": "Jayden Daniels (QB)",
+   "bName": "Raheim Sanders (RB)",
+   "A": {
+    "big": "885",
+    "sm": "rush yds · 11 TD"
+   },
+   "B": {
+    "big": "1,443",
+    "sm": "rush yds · 10 TD"
+   },
+   "flip": false,
+   "sig": "drush2022Jayden Daniels,Raheim Sanders"
   },
   {
    "type": "prog",
@@ -75,19 +59,43 @@
    "sig": "gwin3"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "trap": true,
+   "type": "prog",
+   "label": "Program Pit · LSU vs Arkansas",
+   "a": "LSU",
+   "b": "ARK",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    15,
+    11
+   ],
    "verified": true,
-   "prompt": "In 2014, did Leonard Fournette (LSU) have more or less than",
-   "line": "1,750 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. Leonard Fournette had 1,161 yards from scrimmage in 2014. 🪤 Trap: his big year was 2015 (2,206).",
-   "check": {
-    "value": 1161,
-    "line": 1750
-   },
-   "sig": "tpLeonard Fournette2014scrim"
+   "sig": "gpeakW"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Derrius Guice (LSU RB) · career rushing TDs",
+     "value": 29
+    },
+    {
+     "label": "Cheyenne O'Grady (ARK TE) · 2019 receiving TDs",
+     "value": 3
+    },
+    {
+     "label": "Joe Burrow (LSU QB) · 2019 rushing TDs",
+     "value": 5
+    },
+    {
+     "label": "Raheim Sanders (ARK RB) · career total TDs (rushing + receiving)",
+     "value": 20
+    }
+   ],
+   "sig": "mxTDCheyenne O'Grady2019 receiving TDs,Derrius Guicecareer rushing TDs,Joe Burrow2019 rushing TDs,Raheim Sanderscareer total TDs (rushing + receiving)"
   },
   {
    "type": "h2h",
@@ -97,55 +105,65 @@
    "flip": false,
    "prompt": "Who had more college receiving touchdowns (at the school shown)?",
    "A": {
-    "label": "Derrius Guice (LSU RB)",
-    "value": 3
+    "label": "Cheyenne O'Grady (ARK TE)",
+    "value": 12
    },
    "B": {
     "label": "Leonard Fournette (LSU RB)",
     "value": 1
    },
    "unit": "",
-   "note": "🚨 Upset: Derrius Guice 3 vs. Leonard Fournette 1.",
-   "sig": "urecTDLeonard FournetteDerrius Guice"
+   "note": "🚨 Upset: Cheyenne O'Grady 12 vs. Leonard Fournette 1.",
+   "sig": "urecTDLeonard FournetteCheyenne O'Grady"
   },
   {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Arkansas",
-   "a": "LSU",
-   "b": "ARK",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    1,
-    11
-   ],
-   "verified": true,
-   "sig": "glosing"
-  },
-  {
-   "type": "rank",
+   "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "Rank these players by career receiving yards (at that school), highest first.",
-   "items": [
-    {
-     "label": "Clyde Edwards-Helaire (RB) · career, LSU",
-     "value": 595
-    },
-    {
-     "label": "Justin Jefferson (WR) · career, LSU",
-     "value": 2415
-    },
-    {
-     "label": "Leonard Fournette (RB) · career, LSU",
-     "value": 526
-    },
-    {
-     "label": "Derrius Guice (RB) · career, LSU",
-     "value": 250
-    }
-   ],
-   "unit": "yds",
-   "sig": "rcar|recClyde Edwards-Helairecareer,Derrius Guicecareer,Justin Jeffersoncareer,Leonard Fournettecareer"
+   "prompt": "In 2012, did Jonathan Williams (Arkansas) have more or less than",
+   "line": "500 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Jonathan Williams had 439 yards from scrimmage in 2012.",
+   "check": {
+    "value": 439,
+    "line": 500
+   },
+   "sig": "pJonathan Williams2012scrim"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Jayden Daniels finish his LSU career with more or less than",
+   "line": "2,250 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Jayden Daniels had 2,019 rushing yards in his career.",
+   "check": {
+    "value": 2019,
+    "line": 2250
+   },
+   "sig": "pJayden Danielscareerrush"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2018,
+   "stat": "Receiving season",
+   "aSchool": "ARK",
+   "other": "LSU",
+   "aName": "Cheyenne O'Grady (TE)",
+   "bName": "Justin Jefferson (WR)",
+   "A": {
+    "big": "400",
+    "sm": "rec yds · 6 TD"
+   },
+   "B": {
+    "big": "875",
+    "sm": "rec yds · 6 TD"
+   },
+   "flip": false,
+   "sig": "drec2018Cheyenne O'Grady,Justin Jefferson"
   }
  ]
 }

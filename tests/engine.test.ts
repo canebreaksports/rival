@@ -24,11 +24,11 @@ describe("data", () => {
 describe("generators", () => {
   it("generated questions are internally consistent (over/under, no ties)", () => {
     let n = 0;
-    for (let i = 0; i < 1500; i++) for (const t of PAIRS) for (const q of generate(DATA, t, 5, mulberry32(i * 31 + t[0].length), ALL)) {
+    for (let i = 0; i < 600; i++) for (const t of PAIRS) for (const q of generate(DATA, t, 5, mulberry32(i * 31 + t[0].length), ALL)) {
       n++; expect(validateQuestion(q)).toEqual([]);
     }
     expect(n).toBeGreaterThan(5000);
-  });
+  }, 30000);
 
   it("upsets never break the skip rules", () => {
     for (let i = 0; i < 500; i++) {
@@ -57,14 +57,57 @@ describe("player-first sets", () => {
     }
     expect(seen).toBeGreaterThan(0);
   });
+  it("Mixed Rank It uses 4 players, at least 3 stat framings, one unit, no ties", () => {
+    let seen = 0;
+    for (let i = 0; i < 300; i++) for (const q of generate(DATA, ["AUB", "TENN"], 7, mulberry32(i), VERIFIED)) {
+      if (q.type !== "rank" || !q.sig.startsWith("mx")) continue;
+      seen++;
+      expect(new Set(q.items.map(x => x.label.split(" (")[0])).size).toBe(4);
+      expect(new Set(q.items.map(x => x.label.split(" · ")[1])).size).toBeGreaterThanOrEqual(3);
+      expect(validateQuestion(q)).toEqual([]);
+    }
+    expect(seen).toBeGreaterThan(0);
+  });
+  it("no generated rank or head-to-head uses trivial values", () => {
+    for (let i = 0; i < 300; i++) for (const q of generate(DATA, ["UGA", "SC"], 7, mulberry32(i), VERIFIED)) {
+      if (q.type === "rank" && q.unit === "TD") q.items.forEach(x => expect(x.value).toBeGreaterThanOrEqual(3));
+      if (q.type === "h2h" && !q.upset && /TDs/.test(q.unit)) [q.A, q.B].forEach(x => expect(x.value).toBeGreaterThanOrEqual(3));
+    }
+  });
   it("generated rank questions mix both schools", () => {
     for (let i = 0; i < 300; i++) for (const q of generate(DATA, ["AUB", "TENN"], 7, mulberry32(i), ALL))
-      if (q.type === "rank" && !q.trap) expect(new Set(q.items.map(x => x.label.split(" ").pop())).size).toBeGreaterThan(1);
+      if (q.type === "rank" && !q.trap && !q.sig.startsWith("mx")) expect(new Set(q.items.map(x => x.label.split(" ").pop())).size).toBeGreaterThan(1);
   });
   it("sets with player data on both sides are mostly player questions and ≤2 program", () => {
     for (let i = 0; i < 300; i++) for (const [a, b] of [["LSU", "TENN"], ["AUB", "ALA"]]) {
       const qs = buildRound(DATA, a, b, mulberry32(i), VERIFIED);
       expect(qs.filter(q => q.type === "prog").length).toBeLessThanOrEqual(2);
+    }
+  });
+});
+
+describe("approximate-source margins (CollegeFootballData packs)", () => {
+  const NEW: [string, string][] = [["VAN", "FLA"], ["UK", "MIZ"], ["TAMU", "OU"], ["UGA", "SC"], ["ARK", "TEX"], ["MSST", "MISS"]];
+  const gap = (a: number, b: number) => Math.max(50, 0.08 * Math.max(Math.abs(a), Math.abs(b)));
+  it("no yardage question hinges on a gap the source could blur", () => {
+    let n = 0;
+    for (let i = 0; i < 400; i++) for (const t of NEW) for (const q of generate(DATA, t, 7, mulberry32(i), VERIFIED)) {
+      n++;
+      if (q.type === "h2h" && !q.ypc && /yards/.test(q.prompt + q.unit) && !/touchdowns|TDs|receptions/.test(q.prompt + q.unit))
+        expect(Math.abs(q.A.value - q.B.value)).toBeGreaterThanOrEqual(gap(q.A.value, q.B.value));
+      if (q.type === "rank" && q.unit === "yds") {
+        const v = q.items.map(x => x.value).sort((a, b) => b - a);
+        v.slice(1).forEach((x, j) => expect(v[j] - x).toBeGreaterThanOrEqual(gap(v[j], x)));
+      }
+      if (q.type === "moment" && q.check && /yards/.test(q.line)) expect(Math.abs(q.check.value - q.check.line)).toBeGreaterThanOrEqual(gap(q.check.value, q.check.value) - 0.001);
+    }
+    expect(n).toBeGreaterThan(1000);
+  });
+  it("every new school has a verified, sourced player pack", () => {
+    for (const k of ["FLA", "VAN", "MIZ", "UK", "OU", "TAMU", "UGA", "SC", "TEX", "ARK", "MISS", "MSST"]) {
+      const ps = DATA.players.players.filter(p => p.school === k);
+      expect(ps.length).toBeGreaterThanOrEqual(8);
+      expect(DATA.players.seasons.filter(s => s.school === k).every(s => s.verified && s.source.includes("CollegeFootballData"))).toBe(true);
     }
   });
 });

@@ -6,35 +6,9 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-17T14:39:34.621Z",
- "engine": 2,
+ "generatedAt": "2026-11-17T14:53:00.694Z",
+ "engine": 3,
  "questions": [
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas vs Texas A&M",
-   "a": "TEX",
-   "b": "TAMU",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    13,
-    2
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas vs Texas A&M",
-   "a": "TEX",
-   "b": "TAMU",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    13,
-    11
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
   {
    "type": "prog",
    "label": "Program Pit · Texas vs Texas A&M",
@@ -49,6 +23,116 @@
    "sig": "gtotalW"
   },
   {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more receiving TDs in a single season?",
+   "A": {
+    "label": "Collin Johnson (WR) · 2016 TEX",
+    "value": 3
+   },
+   "B": {
+    "label": "Josh Reynolds (WR) · 2016 TAMU",
+    "value": 12
+   },
+   "unit": "receiving TDs",
+   "sig": "hCollin Johnson2016,Josh Reynolds2016recTD"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2022, did Roschon Johnson (Texas) have more or less than",
+   "line": "750 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Roschon Johnson had 682 yards from scrimmage in 2022.",
+   "check": {
+    "value": 682,
+    "line": 750
+   },
+   "sig": "pRoschon Johnson2022scrim"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "In 2018, did Keaontay Ingram (Texas) have more or less than",
+   "line": "220 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Keaontay Ingram had 170 receiving yards in 2018. 🪤 Trap: his big year was 2019 (242).",
+   "check": {
+    "value": 170,
+    "line": 220
+   },
+   "sig": "tpKeaontay Ingram2018rec"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more yards from scrimmage in a single season?",
+   "A": {
+    "label": "Trayveon Williams (RB) · 2018 TAMU",
+    "value": 2037
+   },
+   "B": {
+    "label": "Johnathan Gray (RB) · 2012 TEX",
+    "value": 852
+   },
+   "unit": "yards from scrimmage",
+   "sig": "hJohnathan Gray2012,Trayveon Williams2018scrim"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2016,
+   "stat": "Receiving season",
+   "aSchool": "TAMU",
+   "other": "TEX",
+   "aName": "Josh Reynolds (WR)",
+   "bName": "Collin Johnson (WR)",
+   "A": {
+    "big": "1,039",
+    "sm": "rec yds · 12 TD"
+   },
+   "B": {
+    "big": "315",
+    "sm": "rec yds · 3 TD"
+   },
+   "flip": true,
+   "sig": "drec2016Collin Johnson,Josh Reynolds"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Trayveon Williams (TAMU RB) · career yards from scrimmage",
+     "value": 4175
+    },
+    {
+     "label": "Bijan Robinson (TEX RB) · 2022 yards from scrimmage",
+     "value": 1892
+    },
+    {
+     "label": "Tyrone Swoopes (TEX QB) · 2014 rushing yards",
+     "value": 262
+    },
+    {
+     "label": "D'Onta Foreman (TEX RB) · career rushing yards",
+     "value": 2783
+    }
+   ],
+   "sig": "mxydsBijan Robinson2022 yards from scrimmage,D'Onta Foremancareer rushing yards,Trayveon Williamscareer yards from scrimmage,Tyrone Swoopes2014 rushing yards"
+  },
+  {
    "type": "prog",
    "label": "Program Pit · Texas vs Texas A&M",
    "a": "TEX",
@@ -60,6 +144,26 @@
    ],
    "verified": true,
    "sig": "glosing"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "A": {
+    "label": "Jordan Whittington (TEX WR)",
+    "value": 10.9
+   },
+   "B": {
+    "label": "Trayveon Williams (TAMU RB)",
+    "value": 6
+   },
+   "unit": "",
+   "ypc": true,
+   "note": "🚨 Upset: Jordan Whittington 10.9 per carry (7 carries) vs. Trayveon Williams 6.0 per carry (600 carries).",
+   "sig": "uypcTrayveon WilliamsJordan Whittington"
   }
  ]
 }

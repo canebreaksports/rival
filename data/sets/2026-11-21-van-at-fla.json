@@ -6,9 +6,30 @@
   "away": "VAN",
   "home": "FLA"
  },
- "generatedAt": "2026-11-17T14:39:34.617Z",
- "engine": 2,
+ "generatedAt": "2026-11-17T14:53:00.676Z",
+ "engine": 3,
  "questions": [
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2018,
+   "stat": "Rushing season",
+   "aSchool": "FLA",
+   "other": "VAN",
+   "aName": "Lamical Perine (RB)",
+   "bName": "Ke'Shawn Vaughn (RB)",
+   "A": {
+    "big": "826",
+    "sm": "rush yds · 7 TD"
+   },
+   "B": {
+    "big": "1,244",
+    "sm": "rush yds · 12 TD"
+   },
+   "flip": false,
+   "sig": "drush2018Ke'Shawn Vaughn,Lamical Perine"
+  },
   {
    "type": "prog",
    "label": "Program Pit · Vanderbilt vs Florida",
@@ -23,6 +44,129 @@
    "sig": "glosing"
   },
   {
+   "label": "SEC East Originals",
+   "verified": true,
+   "sig": "kSEC East Originals1",
+   "type": "moment",
+   "prompt": "Florida's biggest win over Vanderbilt came in 2001. Was the margin more or less than",
+   "line": "50.5 points",
+   "answer": "over",
+   "reveal": "Over. Florida won 71–13, a 58-point margin."
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "A": {
+    "label": "Josh Hammond (FLA WR)",
+    "value": 14.9
+   },
+   "B": {
+    "label": "Ralph Webb (VAN RB)",
+    "value": 4.5
+   },
+   "unit": "",
+   "ypc": true,
+   "note": "🚨 Upset: Josh Hammond 14.9 per carry (9 carries) vs. Ralph Webb 4.5 per carry (931 carries).",
+   "sig": "uypcRalph WebbJosh Hammond"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career rushing TDs (at that school), highest first.",
+   "items": [
+    {
+     "label": "Re'Mahn Davis (RB) · career, VAN",
+     "value": 5
+    },
+    {
+     "label": "Lamical Perine (RB) · career, FLA",
+     "value": 22
+    },
+    {
+     "label": "Kelvin Taylor (RB) · career, FLA",
+     "value": 23
+    },
+    {
+     "label": "Jordan Scarlett (RB) · career, FLA",
+     "value": 12
+    }
+   ],
+   "unit": "TD",
+   "sig": "rcar|rushTDJordan Scarlettcareer,Kelvin Taylorcareer,Lamical Perinecareer,Re'Mahn Daviscareer"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Keyon Brooks (VAN RB) · 2020 yards from scrimmage",
+     "value": 738
+    },
+    {
+     "label": "Kadarius Toney (FLA WR) · 2018 receiving yards",
+     "value": 260
+    },
+    {
+     "label": "Jordan Scarlett (FLA RB) · career rushing yards",
+     "value": 1846
+    },
+    {
+     "label": "Malik Davis (FLA RB) · 2017 rushing yards",
+     "value": 526
+    }
+   ],
+   "sig": "mxydsJordan Scarlettcareer rushing yards,Kadarius Toney2018 receiving yards,Keyon Brooks2020 yards from scrimmage,Malik Davis2017 rushing yards"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more receiving TDs in a single season?",
+   "A": {
+    "label": "Kadarius Toney (WR) · 2020 FLA",
+    "value": 10
+   },
+   "B": {
+    "label": "Trent Sherfield (WR) · 2017 VAN",
+    "value": 5
+   },
+   "unit": "receiving TDs",
+   "sig": "hKadarius Toney2020,Trent Sherfield2017recTD"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2019, did Kalija Lipscomb (Vanderbilt) have more or less than",
+   "line": "425 receiving yards",
+   "answer": "over",
+   "reveal": "More. Kalija Lipscomb had 511 receiving yards in 2019.",
+   "check": {
+    "value": 511,
+    "line": 425
+   },
+   "sig": "pKalija Lipscomb2019rec"
+  },
+  {
+   "label": "SEC East Originals",
+   "verified": true,
+   "sig": "kSEC East Originals0",
+   "type": "moment",
+   "prompt": "Florida's longest win streak over Vanderbilt is more or fewer than",
+   "line": "19.5 games",
+   "answer": "over",
+   "reveal": "Over. Florida won 22 straight from 1989 to 2012."
+  },
+  {
    "type": "prog",
    "label": "Program Pit · Vanderbilt vs Florida",
    "a": "VAN",
@@ -34,52 +178,6 @@
    ],
    "verified": true,
    "sig": "gpeakW"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Vanderbilt vs Florida",
-   "a": "VAN",
-   "b": "FLA",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    113,
-    218
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Vanderbilt vs Florida",
-   "a": "VAN",
-   "b": "FLA",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    1,
-    9
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "label": "SEC East Originals",
-   "verified": true,
-   "sig": "kSEC East Originals1",
-   "type": "moment",
-   "prompt": "Florida's biggest win over Vanderbilt came in 2001. Was the margin more or less than",
-   "line": "50.5 points",
-   "answer": "over",
-   "reveal": "Over. Florida won 71–13, a 58-point margin."
-  },
-  {
-   "label": "SEC East Originals",
-   "verified": true,
-   "sig": "kSEC East Originals0",
-   "type": "moment",
-   "prompt": "Florida's longest win streak over Vanderbilt is more or fewer than",
-   "line": "19.5 games",
-   "answer": "over",
-   "reveal": "Over. Florida won 22 straight from 1989 to 2012."
   }
  ]
 }

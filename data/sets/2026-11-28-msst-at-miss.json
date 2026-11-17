@@ -6,7 +6,135 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-17T14:39:34.624Z",
- "engine": 2,
- "questions": []
+ "generatedAt": "2026-11-17T14:53:00.702Z",
+ "engine": 3,
+ "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2022, did Quinshon Judkins (Ole Miss) have more or less than",
+   "line": "1,450 yards from scrimmage",
+   "answer": "over",
+   "reveal": "More. Quinshon Judkins had 1,699 yards from scrimmage in 2022.",
+   "check": {
+    "value": 1699,
+    "line": 1450
+   },
+   "sig": "pQuinshon Judkins2022scrim"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2013, did Jaylen Walton (Ole Miss) have more or less than",
+   "line": "975 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Jaylen Walton had 845 yards from scrimmage in 2013.",
+   "check": {
+    "value": 845,
+    "line": 975
+   },
+   "sig": "pJaylen Walton2013scrim"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by receiving yards, highest first.",
+   "items": [
+    {
+     "label": "Fred Ross (WR) · 2016 MSST",
+     "value": 917
+    },
+    {
+     "label": "Jo'quavious Marks (RB) · 2022 MSST",
+     "value": 288
+    },
+    {
+     "label": "Creed Whittemore (WR) · 2024 MSST",
+     "value": 65
+    },
+    {
+     "label": "Nick Fitzgerald (QB) · 2016 MSST",
+     "value": 9
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Fred Ross's best year was 2015 (1,007), not 2016; Jo'quavious Marks's best year was 2021 (502), not 2022.",
+   "sig": "trrecCreed Whittemore2024,Fred Ross2016,Jo'quavious Marks2022,Nick Fitzgerald2016"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2014,
+   "stat": "Rushing season",
+   "aSchool": "MSST",
+   "other": "MISS",
+   "aName": "Josh Robinson (RB)",
+   "bName": "Jaylen Walton (RB)",
+   "A": {
+    "big": "1,203",
+    "sm": "rush yds · 11 TD"
+   },
+   "B": {
+    "big": "586",
+    "sm": "rush yds · 5 TD"
+   },
+   "flip": true,
+   "sig": "drush2014Jaylen Walton,Josh Robinson"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Jaylen Walton (MISS RB)",
+    "value": 5
+   },
+   "B": {
+    "label": "Josh Robinson (MSST RB)",
+    "value": 1
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jaylen Walton 5 vs. Josh Robinson 1.",
+   "sig": "urecTDJosh RobinsonJaylen Walton"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more rushing TDs in a single season?",
+   "A": {
+    "label": "Aeris Williams (RB) · 2017 MSST",
+    "value": 6
+   },
+   "B": {
+    "label": "Jordan Wilkins (RB) · 2015 MISS",
+    "value": 4
+   },
+   "unit": "rushing TDs",
+   "sig": "hAeris Williams2017,Jordan Wilkins2015rushTD"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2015, did Jordan Wilkins (Ole Miss) have more or less than",
+   "line": "429 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Jordan Wilkins had 379 rushing yards in 2015.",
+   "check": {
+    "value": 379,
+    "line": 429
+   },
+   "sig": "pJordan Wilkins2015rush"
+  }
+ ]
 }

@@ -6,68 +6,41 @@
   "away": "AUB",
   "home": "ALA"
  },
- "generatedAt": "2026-11-17T14:39:34.623Z",
- "engine": 2,
+ "generatedAt": "2026-11-17T14:53:00.698Z",
+ "engine": 3,
  "questions": [
   {
-   "label": "Auburn",
-   "verified": true,
-   "sig": "kAuburn6",
    "type": "rank",
-   "prompt": "Rank these Auburn running backs by career rushing yards, highest first.",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
    "items": [
     {
-     "label": "James Brooks",
-     "value": 3523
-    },
-    {
-     "label": "Tre Mason",
+     "label": "Tre Mason (AUB RB) · career rushing yards",
      "value": 2979
     },
     {
-     "label": "Stephen Davis",
-     "value": 2811
+     "label": "Jalen Milroe (ALA QB) · 2023 rushing yards",
+     "value": 531
     },
     {
-     "label": "Kenny Irons",
-     "value": 2186
+     "label": "Courtney Taylor (AUB WR) · career receiving yards",
+     "value": 2098
+    },
+    {
+     "label": "Jalen Hurts (ALA QB) · 2016 rushing yards",
+     "value": 954
     }
    ],
-   "unit": "yds"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more career receiving TDs?",
-   "A": {
-    "label": "Trent Richardson (RB) · career, ALA",
-    "value": 7
-   },
-   "B": {
-    "label": "Tre Mason (RB) · career, AUB",
-    "value": 1
-   },
-   "unit": "receiving TDs",
-   "sig": "hTre Masoncareer,Trent RichardsoncareerrecTD"
-  },
-  {
-   "label": "Auburn",
-   "verified": true,
-   "sig": "kAuburn2",
-   "type": "moment",
-   "prompt": "Did Bo Jackson finish his Auburn career with more or less than",
-   "line": "4,000 rushing yards",
-   "answer": "over",
-   "reveal": "Over. Bo ran for 4,303 yards, still Auburn's career record."
+   "sig": "mxydsCourtney Taylorcareer receiving yards,Jalen Hurts2016 rushing yards,Jalen Milroe2023 rushing yards,Tre Masoncareer rushing yards"
   },
   {
    "type": "count",
    "label": "School Count",
    "a": "AUB",
    "b": "ALA",
-   "threshold": 2800,
+   "threshold": 3500,
    "A": [
     {
      "name": "Bo Jackson",
@@ -80,30 +53,6 @@
     {
      "name": "James Brooks",
      "yards": 3523
-    },
-    {
-     "name": "Jarquez Hunter",
-     "yards": 3371
-    },
-    {
-     "name": "Joe Cribbs",
-     "yards": 3368
-    },
-    {
-     "name": "Ben Tate",
-     "yards": 3321
-    },
-    {
-     "name": "Tre Mason",
-     "yards": 2979
-    },
-    {
-     "name": "Tank Bigsby",
-     "yards": 2903
-    },
-    {
-     "name": "Stephen Davis",
-     "yards": 2811
     }
    ],
    "B": [
@@ -118,34 +67,55 @@
     {
      "name": "Shaun Alexander",
      "yards": 3565
-    },
-    {
-     "name": "Bobby Humphrey",
-     "yards": 3420
-    },
-    {
-     "name": "Kenneth Darby",
-     "yards": 3324
-    },
-    {
-     "name": "T. J. Yeldon",
-     "yards": 3322
-    },
-    {
-     "name": "Mark Ingram II",
-     "yards": 3261
-    },
-    {
-     "name": "Trent Richardson",
-     "yards": 3130
-    },
-    {
-     "name": "Damien Harris",
-     "yards": 3073
     }
    ],
    "verified": true,
-   "sig": "cAUBALA2800"
+   "sig": "cAUBALA3500"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2014,
+   "stat": "Rushing season",
+   "aSchool": "AUB",
+   "other": "ALA",
+   "aName": "Nick Marshall (QB)",
+   "bName": "Derrick Henry (RB)",
+   "A": {
+    "big": "798",
+    "sm": "rush yds · 11 TD"
+   },
+   "B": {
+    "big": "990",
+    "sm": "rush yds · 11 TD"
+   },
+   "flip": false,
+   "sig": "drush2014Derrick Henry,Nick Marshall"
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn2",
+   "type": "moment",
+   "prompt": "Did Bo Jackson finish his Auburn career with more or less than",
+   "line": "4,000 rushing yards",
+   "answer": "over",
+   "reveal": "Over. Bo ran for 4,303 yards, still Auburn's career record."
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Philip Lutzenkirchen finish his Auburn career with more or less than",
+   "line": "11.5 receiving TDs",
+   "answer": "over",
+   "reveal": "More. Philip Lutzenkirchen had 14 receiving TDs in his career.",
+   "check": {
+    "value": 14,
+    "line": 11.5
+   },
+   "sig": "pPhilip LutzenkirchencareerrecTD"
   },
   {
    "type": "h2h",
@@ -169,56 +139,55 @@
   {
    "label": "Auburn",
    "verified": true,
-   "sig": "kAuburn4",
+   "sig": "kAuburn7",
+   "type": "h2h",
+   "prompt": "Who had more career rushing yards at Auburn?",
+   "A": {
+    "label": "Joe Cribbs",
+    "value": 3368
+   },
+   "B": {
+    "label": "Tank Bigsby",
+    "value": 2903
+   },
+   "unit": "rushing yds",
+   "flip": false
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn1",
+   "type": "moment",
+   "prompt": "Was Kenny Irons's best single season in yards from scrimmage more or less than",
+   "line": "1,600 yards",
+   "answer": "under",
+   "reveal": "Under. His best was 1,457 in 2005 (1,293 rushing + 164 receiving)."
+  },
+  {
    "type": "rank",
-   "prompt": "Rank these Auburn receivers by 2005 receiving yards, highest first.",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
    "items": [
     {
-     "label": "Devin Aromashodu",
-     "value": 494
+     "label": "Nick Marshall (QB) · 2014 AUB",
+     "value": 798
     },
     {
-     "label": "Ben Obomanu",
-     "value": 357
+     "label": "Najee Harris (RB) · 2020 ALA",
+     "value": 1466
     },
     {
-     "label": "Courtney Taylor",
-     "value": 278
+     "label": "Nick Marshall (QB) · 2013 AUB",
+     "value": 1068
     },
     {
-     "label": "Prechae Rodriguez",
-     "value": 240
+     "label": "Derrick Henry (RB) · 2015 ALA",
+     "value": 2219
     }
    ],
-   "unit": "yds"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2003, did Courtney Taylor (Auburn) have more or less than",
-   "line": "300 receiving yards",
-   "answer": "over",
-   "reveal": "More. Courtney Taylor had 379 receiving yards in 2003.",
-   "check": {
-    "value": 379,
-    "line": 300
-   },
-   "sig": "pCourtney Taylor2003rec"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Philip Lutzenkirchen finish his Auburn career with more or less than",
-   "line": "11.5 receiving TDs",
-   "answer": "over",
-   "reveal": "More. Philip Lutzenkirchen had 14 receiving TDs in his career.",
-   "check": {
-    "value": 14,
-    "line": 11.5
-   },
-   "sig": "pPhilip LutzenkirchencareerrecTD"
+   "unit": "yds",
+   "sig": "rsea|rushDerrick Henry2015,Najee Harris2020,Nick Marshall2013,Nick Marshall2014"
   },
   {
    "type": "moment",
@@ -233,23 +202,6 @@
     "line": 1600
    },
    "sig": "pNajee Harris2019scrim"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more career yards from scrimmage?",
-   "A": {
-    "label": "Tre Mason (RB) · career, AUB",
-    "value": 3228
-   },
-   "B": {
-    "label": "Derrick Henry (RB) · career, ALA",
-    "value": 3876
-   },
-   "unit": "yards from scrimmage",
-   "sig": "hDerrick Henrycareer,Tre Masoncareerscrim"
   }
  ]
 }

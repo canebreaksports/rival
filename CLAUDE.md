@@ -27,7 +27,7 @@ data/*.json            datasets; every record has `source` and `verified`
   sets/<slug>.json     FROZEN weekly sets (committed). Do not hand-edit.
 lib/                   engine (pure TS, shared by scripts, tests and UI)
   rng.ts               FNV-1a + mulberry32; every generator takes an Rng (no Math.random swapping)
-  generators.ts        rank, prop, h2h, trap rank, trap prop, upset, school count
+  generators.ts        rank, mixed rank, prop, h2h, duel, trap rank, trap prop, upset, school count (+ notable-value floor, source margins)
   build.ts             buildRound (caps, ≤1 trap, ≤1 upset), weeklySet, Coach free-play builders, ENGINE_VERSION
   gating.ts            Sunday 00:00 → game day 23:59 local; liveGames / nextGames
   scoring.ts names.ts validate.ts storage.ts data.ts sets.ts (server-only) summaries.ts (server-only)
@@ -39,7 +39,9 @@ scripts/               build-sets.ts, validate.ts, port-prototype.mjs (one-time 
 ## Rules the code enforces
 
 - **Weekly sets use verified content only.** Unverified records stay in the data for Coach free play, where they show an UNVERIFIED chip. A thin set beats a wrong one; fewer than 3 questions shows "Stats pack coming soon".
-- **Caps per set:** ≤4 higher/lower, ≤3 program (≤7 if either school has no verified player data), ≤3 h2h, ≤2 rank, ≤1 count, ≤2 duels, ≤1 crossover, and ≤1 trap and ≤1 upset across generated *and* curated questions.
+- **Player-first sets:** 7 generated player questions per set (props, head-to-head, Rank It, Mixed Rank It, Blind Stat Duel, upset, trap, school count). Program comparisons only fill gaps.
+- **Caps per set:** ≤4 higher/lower, ≤2 program (≤4 if either school has no verified player data), ≤3 h2h, ≤2 rank (incl. mixed), ≤1 count, ≤2 duels, ≤1 crossover, and ≤1 trap and ≤1 upset across generated *and* curated questions.
+- **No trivial values:** generated questions skip seasons under 250 yds / 3 TD and careers under 500 yds / 5 TD.
 - **School Count** only uses thresholds ≥ both schools' floor, and never one above an active player's current total (he could cross it mid-week).
 - **Progress** is saved in localStorage under `rival:<date>:<away>@<home>` right after each answer; answering the last question completes the run. Coach runs use a `preview:` prefix so testing doesn't burn the real run.
 
@@ -51,7 +53,8 @@ Questions are generated at build time by `npm run sets`, not in the browser. A s
 
 Wrong trivia kills the game. **Never write a stat from memory.** Every value needs a source fetched at the time, recorded in its `source` field. Set `verified: true` only when that's done.
 
-- Player stats: Sports Reference via `https://aws.sports-reference.com/cfb/players/<slug>.html` (main domain blocks fetches). Some slugs end in `-2`.
+- Player stats, AUB/TENN/LSU/ALA (and anyone before 2012): Sports Reference. As of Nov 2026 it sits behind a Cloudflare bot check, so new rows can't be fetched automatically.
+- Player stats, the other 12 schools: CollegeFootballData API (`scripts/fetch-cfbd.ts` caches ~50 calls, `scripts/import-cfbd.ts` builds packs). Its season stats are incomplete before 2011, so packs only include players whose first season is 2012+, seasons 2012–2025, and no active (2026) players. Its totals can differ from official ones by a few yards, so generators enforce a safety margin (`clear()` / `minGap()` in `lib/generators.ts`): yardage gaps ≥ max(50, 8%), TD gaps ≥ 1, YPC ≥ 0.5 whenever a CFBD value is involved. The free tier has a monthly call limit: reuse the cache.
 - Season records: Wikipedia "List of <School> football seasons", on-field results.
 - Career rushing: Wikipedia "<School> football statistical leaders" (top 10 only, hence the floor).
 - Series facts: Winsipedia; anything that can drift (all-time record, last meeting) needs a second source.

@@ -6,47 +6,25 @@
   "away": "UGA",
   "home": "SC"
  },
- "generatedAt": "2026-11-17T14:39:34.619Z",
- "engine": 2,
+ "generatedAt": "2026-11-17T14:53:00.684Z",
+ "engine": 3,
  "questions": [
   {
-   "type": "prog",
-   "label": "Program Pit · Georgia vs South Carolina",
-   "a": "UGA",
-   "b": "SC",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    271,
-    181
-   ],
+   "type": "h2h",
+   "label": "Fresh Mix",
    "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Georgia vs South Carolina",
-   "a": "UGA",
-   "b": "SC",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    15,
-    11
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Georgia vs South Carolina",
-   "a": "UGA",
-   "b": "SC",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
-   "values": [
-    0,
-    2
-   ],
-   "verified": true,
-   "sig": "gwin3"
+   "flip": false,
+   "prompt": "Who had more receiving yards in a single season?",
+   "A": {
+    "label": "Shi Smith (WR) · 2018 SC",
+    "value": 673
+   },
+   "B": {
+    "label": "Terry Godwin (WR) · 2016 UGA",
+    "value": 397
+   },
+   "unit": "receiving yards",
+   "sig": "hShi Smith2018,Terry Godwin2016rec"
   },
   {
    "type": "prog",
@@ -70,6 +48,135 @@
    "line": "35.5 points",
    "answer": "over",
    "reveal": "Over. Georgia won 48–7, a 41-point margin."
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Brock Bowers (UGA TE) · 2023 receiving TDs",
+     "value": 6
+    },
+    {
+     "label": "Josh Vann (SC WR) · 2021 receiving TDs",
+     "value": 5
+    },
+    {
+     "label": "Kendall Milton (UGA RB) · 2022 rushing TDs",
+     "value": 8
+    },
+    {
+     "label": "Joshua Simon (SC TE) · career receiving TDs",
+     "value": 9
+    }
+   ],
+   "sig": "mxTDBrock Bowers2023 receiving TDs,Josh Vann2021 receiving TDs,Joshua Simoncareer receiving TDs,Kendall Milton2022 rushing TDs"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2020, did Shi Smith (South Carolina) have more or less than",
+   "line": "1.5 receiving TDs",
+   "answer": "over",
+   "reveal": "More. Shi Smith had 4 receiving TDs in 2020.",
+   "check": {
+    "value": 4,
+    "line": 1.5
+   },
+   "sig": "pShi Smith2020recTD"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more receiving yards in a single season?",
+   "A": {
+    "label": "Bryan Edwards (WR) · 2018 SC",
+    "value": 846
+   },
+   "B": {
+    "label": "Ladd McConkey (WR) · 2021 UGA",
+    "value": 447
+   },
+   "unit": "receiving yards",
+   "sig": "hBryan Edwards2018,Ladd McConkey2021rec"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "A.J. Turner (SC RB) · 2018 rushing yards",
+     "value": 298
+    },
+    {
+     "label": "Zamir White (UGA RB) · career rushing yards",
+     "value": 2043
+    },
+    {
+     "label": "Mike Davis (SC RB) · career yards from scrimmage",
+     "value": 3195
+    },
+    {
+     "label": "Kendall Milton (UGA RB) · 2023 rushing yards",
+     "value": 790
+    }
+   ],
+   "sig": "mxydsA.J. Turner2018 rushing yards,Kendall Milton2023 rushing yards,Mike Daviscareer yards from scrimmage,Zamir Whitecareer rushing yards"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Joshua Simon (SC TE)",
+    "value": 9
+   },
+   "B": {
+    "label": "D'Andre Swift (UGA RB)",
+    "value": 5
+   },
+   "unit": "",
+   "note": "🚨 Upset: Joshua Simon 9 vs. D'Andre Swift 5.",
+   "sig": "urecTDD'Andre SwiftJoshua Simon"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Daijun Edwards finish his Georgia career with more or less than",
+   "line": "2,150 yards from scrimmage",
+   "answer": "over",
+   "reveal": "More. Daijun Edwards had 2,426 yards from scrimmage in his career.",
+   "check": {
+    "value": 2426,
+    "line": 2150
+   },
+   "sig": "pDaijun Edwardscareerscrim"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Georgia vs South Carolina",
+   "a": "UGA",
+   "b": "SC",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    271,
+    181
+   ],
+   "verified": true,
+   "sig": "gtotalW"
   }
  ]
 }

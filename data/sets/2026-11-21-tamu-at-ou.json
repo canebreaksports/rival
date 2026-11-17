@@ -6,34 +6,97 @@
   "away": "TAMU",
   "home": "OU"
  },
- "generatedAt": "2026-11-17T14:39:34.618Z",
- "engine": 2,
+ "generatedAt": "2026-11-17T14:53:00.683Z",
+ "engine": 3,
  "questions": [
   {
-   "type": "prog",
-   "label": "Program Pit · Texas A&M vs Oklahoma",
-   "a": "TAMU",
-   "b": "OU",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    195,
-    271
-   ],
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
    "verified": true,
-   "sig": "gtotalW"
+   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
+   "items": [
+    {
+     "label": "Joe Mixon (RB) · 2015 OU",
+     "value": 1109
+    },
+    {
+     "label": "Eric Gray (RB) · 2021 OU",
+     "value": 641
+    },
+    {
+     "label": "Trey Williams (RB) · 2013 TAMU",
+     "value": 461
+    },
+    {
+     "label": "Trayveon Williams (RB) · 2018 TAMU",
+     "value": 2037
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Joe Mixon's best year was 2016 (1,812), not 2015; Eric Gray's best year was 2022 (1,593), not 2021; Trey Williams's best year was 2014 (665), not 2013.",
+   "sig": "trscrimEric Gray2021,Joe Mixon2015,Trayveon Williams2018,Trey Williams2013"
   },
   {
    "type": "prog",
    "label": "Program Pit · Texas A&M vs Oklahoma",
    "a": "TAMU",
    "b": "OU",
-   "prompt": "Who had more losing seasons from 2000–2025?",
+   "prompt": "Whose best season since 2000 had more wins?",
    "values": [
-    5,
-    2
+    11,
+    13
    ],
    "verified": true,
-   "sig": "glosing"
+   "sig": "gpeakW"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more career receiving yards?",
+   "A": {
+    "label": "Isaiah Spiller (RB) · career, TAMU",
+    "value": 585
+   },
+   "B": {
+    "label": "Mark Andrews (TE) · career, OU",
+    "value": 1765
+   },
+   "unit": "receiving yards",
+   "sig": "hIsaiah Spillercareer,Mark Andrewscareerrec"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more receiving yards in a single season?",
+   "A": {
+    "label": "Jalen Saunders (WR) · 2013 OU",
+    "value": 729
+   },
+   "B": {
+    "label": "Christian Kirk (WR) · 2016 TAMU",
+    "value": 928
+   },
+   "unit": "receiving yards",
+   "sig": "hChristian Kirk2016,Jalen Saunders2013rec"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2019, did Isaiah Spiller (Texas A&M) have more or less than",
+   "line": "1,046 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Isaiah Spiller had 946 rushing yards in 2019.",
+   "check": {
+    "value": 946,
+    "line": 1046
+   },
+   "sig": "pIsaiah Spiller2019rush"
   },
   {
    "type": "prog",
@@ -49,6 +112,53 @@
    "sig": "gwin10"
   },
   {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2017, did Christian Kirk (Texas A&M) have more or less than",
+   "line": "844 receiving yards",
+   "answer": "over",
+   "reveal": "More. Christian Kirk had 919 receiving yards in 2017.",
+   "check": {
+    "value": 919,
+    "line": 844
+   },
+   "sig": "pChristian Kirk2017rec"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Jalen Hurts finish his Oklahoma career with more or less than",
+   "line": "1,450 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Jalen Hurts had 1,298 rushing yards in his career.",
+   "check": {
+    "value": 1298,
+    "line": 1450
+   },
+   "sig": "pJalen Hurtscareerrush"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Jalen Wydermyer (TAMU TE)",
+    "value": 1468
+   },
+   "B": {
+    "label": "Joe Mixon (OU RB)",
+    "value": 894
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jalen Wydermyer 1,468 vs. Joe Mixon 894.",
+   "sig": "urecJoe MixonJalen Wydermyer"
+  },
+  {
    "label": "Old Big 12 Foes",
    "verified": true,
    "sig": "kOld Big 12 Foes0",
@@ -57,19 +167,6 @@
    "line": "70 points",
    "answer": "over",
    "reveal": "Over. Oklahoma won 77–0."
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas A&M vs Oklahoma",
-   "a": "TAMU",
-   "b": "OU",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    11,
-    13
-   ],
-   "verified": true,
-   "sig": "gpeakW"
   }
  ]
 }

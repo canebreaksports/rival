@@ -6,22 +6,56 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-17T14:39:34.626Z",
- "engine": 2,
+ "generatedAt": "2026-11-17T14:53:00.706Z",
+ "engine": 3,
  "questions": [
   {
-   "type": "moment",
+   "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2005, did Arian Foster (Tennessee) have more or less than",
-   "line": "1,200 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. Arian Foster had 1,027 yards from scrimmage in 2005.",
-   "check": {
-    "value": 1027,
-    "line": 1200
+   "flip": false,
+   "prompt": "Who had more receiving TDs in a single season?",
+   "A": {
+    "label": "Kalija Lipscomb (WR) · 2017 VAN",
+    "value": 8
    },
-   "sig": "pArian Foster2005scrim"
+   "B": {
+    "label": "Jalin Hyatt (WR) · 2022 TENN",
+    "value": 15
+   },
+   "unit": "receiving TDs",
+   "sig": "hJalin Hyatt2022,Kalija Lipscomb2017recTD"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2024,
+   "stat": "Rushing season",
+   "aSchool": "TENN",
+   "other": "VAN",
+   "aName": "Dylan Sampson (RB)",
+   "bName": "Diego Pavia (QB)",
+   "A": {
+    "big": "1,485",
+    "sm": "rush yds · 22 TD"
+   },
+   "B": {
+    "big": "800",
+    "sm": "rush yds · 8 TD"
+   },
+   "flip": false,
+   "sig": "drush2024Diego Pavia,Dylan Sampson"
+  },
+  {
+   "label": "Tennessee",
+   "verified": true,
+   "sig": "kTennessee1",
+   "type": "moment",
+   "prompt": "Did Arian Foster finish his Tennessee career with more or less than",
+   "line": "3,000 rushing yards",
+   "answer": "under",
+   "reveal": "Under, barely. He finished with 2,964."
   },
   {
    "type": "prog",
@@ -44,54 +78,31 @@
    "flip": true,
    "prompt": "Who averaged more yards per carry in college (at the school shown)?",
    "A": {
-    "label": "Dylan Sampson (TENN RB)",
-    "value": 5.9
+    "label": "Trent Sherfield (VAN WR)",
+    "value": 12.9
    },
    "B": {
-    "label": "Jamal Lewis (TENN RB)",
-    "value": 5.5
+    "label": "Arian Foster (TENN RB)",
+    "value": 4.6
    },
    "unit": "",
    "ypc": true,
-   "note": "🚨 Upset: Dylan Sampson 5.9 per carry (420 carries) vs. Jamal Lewis 5.5 per carry (487 carries).",
-   "sig": "uypcJamal LewisDylan Sampson"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
-   "a": "TENN",
-   "b": "VAN",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    194,
-    113
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "label": "Tennessee",
-   "verified": true,
-   "sig": "kTennessee1",
-   "type": "moment",
-   "prompt": "Did Arian Foster finish his Tennessee career with more or less than",
-   "line": "3,000 rushing yards",
-   "answer": "under",
-   "reveal": "Under, barely. He finished with 2,964."
+   "note": "🚨 Upset: Trent Sherfield 12.9 per carry (22 carries) vs. Arian Foster 4.6 per carry (650 carries).",
+   "sig": "uypcArian FosterTrent Sherfield"
   },
   {
    "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2016, did Joshua Dobbs (Tennessee) have more or less than",
-   "line": "925 rushing yards",
+   "prompt": "In 2005, did Arian Foster (Tennessee) have more or less than",
+   "line": "1,200 yards from scrimmage",
    "answer": "under",
-   "reveal": "Less. Joshua Dobbs had 831 rushing yards in 2016.",
+   "reveal": "Less. Arian Foster had 1,027 yards from scrimmage in 2005.",
    "check": {
-    "value": 831,
-    "line": 925
+    "value": 1027,
+    "line": 1200
    },
-   "sig": "pJoshua Dobbs2016rush"
+   "sig": "pArian Foster2005scrim"
   },
   {
    "type": "rank",
@@ -100,77 +111,70 @@
    "prompt": "Rank these players by career receiving yards (at that school), highest first.",
    "items": [
     {
-     "label": "Jamal Lewis (RB) · career, TENN",
-     "value": 475
-    },
-    {
-     "label": "Arian Foster (RB) · career, TENN",
-     "value": 742
-    },
-    {
-     "label": "Dylan Sampson (RB) · career, TENN",
-     "value": 340
-    },
-    {
      "label": "Jalin Hyatt (WR) · career, TENN",
      "value": 1769
+    },
+    {
+     "label": "Jared Pinkney (TE) · career, VAN",
+     "value": 1560
+    },
+    {
+     "label": "Ralph Webb (RB) · career, VAN",
+     "value": 572
+    },
+    {
+     "label": "Will Sheppard (WR) · career, VAN",
+     "value": 2067
     }
    ],
    "unit": "yds",
-   "sig": "rcar|recArian Fostercareer,Dylan Sampsoncareer,Jalin Hyattcareer,Jamal Lewiscareer"
+   "sig": "rcar|recJalin Hyattcareer,Jared Pinkneycareer,Ralph Webbcareer,Will Sheppardcareer"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "In 2023, did Dylan Sampson (Tennessee) have more or less than",
+   "line": "925 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Dylan Sampson had 604 rushing yards in 2023. 🪤 Trap: his big year was 2024 (1,485).",
+   "check": {
+    "value": 604,
+    "line": 925
+   },
+   "sig": "tpDylan Sampson2023rush"
+  },
+  {
+   "label": "Tennessee",
+   "verified": true,
+   "sig": "kTennessee3",
+   "type": "h2h",
+   "prompt": "Who had more career rushing yards at Tennessee?",
+   "A": {
+    "label": "Arian Foster",
+    "value": 2964
+   },
+   "B": {
+    "label": "Jamal Lewis",
+    "value": 2677
+   },
+   "unit": "rushing yds",
+   "flip": false
   },
   {
    "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2008, did Arian Foster (Tennessee) have more or less than",
-   "line": "775 yards from scrimmage",
+   "prompt": "In 2023, did Dylan Sampson (Tennessee) have more or less than",
+   "line": "9.5 rushing TDs",
    "answer": "under",
-   "reveal": "Less. Arian Foster had 736 yards from scrimmage in 2008.",
+   "reveal": "Less. Dylan Sampson had 7 rushing TDs in 2023.",
    "check": {
-    "value": 736,
-    "line": 775
+    "value": 7,
+    "line": 9.5
    },
-   "sig": "pArian Foster2008scrim"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
-   "a": "TENN",
-   "b": "VAN",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    11,
-    10
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
-   "items": [
-    {
-     "label": "Jamal Lewis (RB) · 1999 TENN",
-     "value": 1009
-    },
-    {
-     "label": "Dylan Sampson (RB) · 2023 TENN",
-     "value": 779
-    },
-    {
-     "label": "Jamal Lewis (RB) · 1997 TENN",
-     "value": 1630
-    },
-    {
-     "label": "Arian Foster (RB) · 2008 TENN",
-     "value": 736
-    }
-   ],
-   "unit": "yds",
-   "sig": "rsea|scrimArian Foster2008,Dylan Sampson2023,Jamal Lewis1997,Jamal Lewis1999"
+   "sig": "pDylan Sampson2023rushTD"
   }
  ]
 }

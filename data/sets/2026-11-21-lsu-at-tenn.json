@@ -6,39 +6,9 @@
   "away": "LSU",
   "home": "TENN"
  },
- "generatedAt": "2026-11-17T14:39:34.620Z",
- "engine": 2,
+ "generatedAt": "2026-11-17T14:53:00.685Z",
+ "engine": 3,
  "questions": [
-  {
-   "label": "Tennessee",
-   "verified": true,
-   "sig": "kTennessee3",
-   "type": "h2h",
-   "prompt": "Who had more career rushing yards at Tennessee?",
-   "A": {
-    "label": "Arian Foster",
-    "value": 2964
-   },
-   "B": {
-    "label": "Jamal Lewis",
-    "value": 2677
-   },
-   "unit": "rushing yds",
-   "flip": true
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Tennessee",
-   "a": "LSU",
-   "b": "TENN",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    1,
-    9
-   ],
-   "verified": true,
-   "sig": "glosing"
-  },
   {
    "type": "duel",
    "label": "Fresh Mix",
@@ -59,109 +29,6 @@
    },
    "flip": true,
    "sig": "drush2016Joshua Dobbs,Leonard Fournette"
-  },
-  {
-   "type": "count",
-   "label": "School Count",
-   "a": "LSU",
-   "b": "TENN",
-   "threshold": 2500,
-   "A": [
-    {
-     "name": "Kevin Faulk",
-     "yards": 4557
-    },
-    {
-     "name": "Dalton Hilliard",
-     "yards": 4050
-    },
-    {
-     "name": "Charles Alexander",
-     "yards": 4035
-    },
-    {
-     "name": "Leonard Fournette",
-     "yards": 3830
-    },
-    {
-     "name": "Derrius Guice",
-     "yards": 3074
-    },
-    {
-     "name": "Harvey Williams",
-     "yards": 2860
-    },
-    {
-     "name": "Joseph Addai",
-     "yards": 2577
-    },
-    {
-     "name": "Terry Robiskie",
-     "yards": 2517
-    }
-   ],
-   "B": [
-    {
-     "name": "Travis Henry",
-     "yards": 3078
-    },
-    {
-     "name": "Arian Foster",
-     "yards": 2964
-    },
-    {
-     "name": "James Stewart",
-     "yards": 2890
-    },
-    {
-     "name": "Johnnie Jones",
-     "yards": 2852
-    },
-    {
-     "name": "DeSean Bishop",
-     "yards": 2694,
-     "active": true
-    },
-    {
-     "name": "Jamal Lewis",
-     "yards": 2677
-    },
-    {
-     "name": "Jalen Hurd",
-     "yards": 2638
-    },
-    {
-     "name": "Cedric Houston",
-     "yards": 2634
-    },
-    {
-     "name": "Jay Graham",
-     "yards": 2609
-    }
-   ],
-   "verified": true,
-   "sig": "cLSUTENN2500"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2022,
-   "stat": "Rushing season",
-   "aSchool": "LSU",
-   "other": "TENN",
-   "aName": "Jayden Daniels (QB)",
-   "bName": "Dylan Sampson (RB)",
-   "A": {
-    "big": "885",
-    "sm": "rush yds · 11 TD"
-   },
-   "B": {
-    "big": "397",
-    "sm": "rush yds · 6 TD"
-   },
-   "flip": true,
-   "sig": "drush2022Dylan Sampson,Jayden Daniels"
   },
   {
    "type": "rank",
@@ -196,14 +63,28 @@
    "label": "Fresh Mix",
    "verified": true,
    "prompt": "Did Justin Jefferson finish his LSU career with more or less than",
-   "line": "40 rushing yards",
+   "line": "2,900 receiving yards",
    "answer": "under",
-   "reveal": "Less. Justin Jefferson had 30 rushing yards in his career.",
+   "reveal": "Less. Justin Jefferson had 2,415 receiving yards in his career.",
    "check": {
-    "value": 30,
-    "line": 40
+    "value": 2415,
+    "line": 2900
    },
-   "sig": "pJustin Jeffersoncareerrush"
+   "sig": "pJustin Jeffersoncareerrec"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2015, did Joshua Dobbs (Tennessee) have more or less than",
+   "line": "625 rushing yards",
+   "answer": "over",
+   "reveal": "More. Joshua Dobbs had 671 rushing yards in 2015.",
+   "check": {
+    "value": 671,
+    "line": 625
+   },
+   "sig": "pJoshua Dobbs2015rush"
   },
   {
    "type": "h2h",
@@ -225,19 +106,6 @@
    "sig": "urushTDJamal LewisDylan Sampson"
   },
   {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Tennessee",
-   "a": "LSU",
-   "b": "TENN",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    249,
-    194
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
    "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
@@ -250,6 +118,68 @@
     "line": 13.5
    },
    "sig": "pArian Foster2007rushTD"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Tennessee",
+   "a": "LSU",
+   "b": "TENN",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    0,
+    1
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Tennessee",
+   "a": "LSU",
+   "b": "TENN",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    15,
+    11
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "label": "Tigers vs. Vols",
+   "verified": true,
+   "sig": "kTigers vs. Vols1",
+   "type": "moment",
+   "prompt": "LSU's biggest win over Tennessee came in 2011. Was the margin more or less than",
+   "line": "27.5 points",
+   "answer": "over",
+   "reveal": "Over. LSU won 38–7, a 31-point margin."
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Leonard Fournette (LSU RB) · 2016 yards from scrimmage",
+     "value": 989
+    },
+    {
+     "label": "Arian Foster (TENN RB) · 2005 rushing yards",
+     "value": 879
+    },
+    {
+     "label": "Jalin Hyatt (TENN WR) · 2022 receiving yards",
+     "value": 1267
+    },
+    {
+     "label": "Clyde Edwards-Helaire (LSU RB) · career yards from scrimmage",
+     "value": 2699
+    }
+   ],
+   "sig": "mxydsArian Foster2005 rushing yards,Clyde Edwards-Helairecareer yards from scrimmage,Jalin Hyatt2022 receiving yards,Leonard Fournette2016 yards from scrimmage"
   }
  ]
 }

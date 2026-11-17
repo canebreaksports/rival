@@ -2,10 +2,10 @@
 import type { CuratedItem, Dataset, FrozenSet, Game, Question, QType, SchoolKey } from "./types";
 import { pick, seededRng, shuffle, type Rng } from "./rng";
 import { PROGRAM_STATS, SCHOOL, programValue } from "./data";
-import { genCount, genDuel, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
+import { genCount, genDuel, genMixedRank, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 2; // v2: player-first sets (7 generated, program cap 2, cross-team rank, generated duels)
+export const ENGINE_VERSION = 3; // v3: Mixed Rank It, notable-value floor, approximate-source margins (v2: player-first sets)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean }
@@ -69,7 +69,7 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
   if (c.pool.length < 4) return [];
   // weighted toward the player formats: props, head-to-heads, rank, duels; traps limited below
   const gens = [() => genRank(c), () => genPOU(c), () => genPOU(c), () => genH2H(c, teams), () => genH2H(c, teams),
-    () => genDuel(c, teams), () => genTrapRank(c), () => genTrapPOU(c)];
+    () => genDuel(c, teams), () => genMixedRank(c, teams), () => genTrapRank(c), () => genTrapPOU(c)];
   const out: Question[] = [], sigs = new Set<string>();
   if (rng() < 0.7) { const u = genUpset(c); if (u) { sigs.add(u.sig); out.push(u) } }
   let trapped = rng() < 0.25;

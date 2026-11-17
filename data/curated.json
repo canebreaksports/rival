@@ -488,6 +488,31 @@
      "unit": "scrimmage yds",
      "source": "Sports Reference player pages (matches data/players.json); spec §4.5 example",
      "verified": true
+    },
+    {
+     "type": "rank",
+     "prompt": "Rank these from highest to lowest (touchdowns).",
+     "items": [
+      {
+       "label": "Arian Foster (TENN RB) · career total TDs (rushing + receiving)",
+       "value": 25
+      },
+      {
+       "label": "Cam Newton (AUB QB) · 2010 rushing TDs",
+       "value": 20
+      },
+      {
+       "label": "Josh Dobbs (TENN QB) · career rushing TDs",
+       "value": 32
+      },
+      {
+       "label": "Bo Jackson (AUB RB) · career total TDs (rushing + receiving)",
+       "value": 45
+      }
+     ],
+     "unit": "TD",
+     "source": "Values from data/players.json: Foster Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html; Newton 2010 auburntigers.com roster / Heisman page (2010: 264 carries, 1,473 yds, 20 TD); Dobbs utsports.com; Bo Jackson Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+     "verified": true
     }
    ]
   },

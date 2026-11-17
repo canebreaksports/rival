@@ -6,22 +6,9 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-17T14:39:34.625Z",
- "engine": 2,
+ "generatedAt": "2026-11-17T14:53:00.705Z",
+ "engine": 3,
  "questions": [
-  {
-   "type": "prog",
-   "label": "Program Pit · Oklahoma vs Missouri",
-   "a": "OU",
-   "b": "MIZ",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    13,
-    12
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
   {
    "type": "prog",
    "label": "Program Pit · Oklahoma vs Missouri",
@@ -36,30 +23,166 @@
    "sig": "gwin3"
   },
   {
-   "type": "prog",
-   "label": "Program Pit · Oklahoma vs Missouri",
-   "a": "OU",
-   "b": "MIZ",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    2,
-    9
-   ],
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
    "verified": true,
-   "sig": "glosing"
+   "flip": true,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Albert Okwuegbunam (MIZ TE)",
+    "value": 1187
+   },
+   "B": {
+    "label": "Joe Mixon (OU RB)",
+    "value": 894
+   },
+   "unit": "",
+   "note": "🚨 Upset: Albert Okwuegbunam 1,187 vs. Joe Mixon 894.",
+   "sig": "urecJoe MixonAlbert Okwuegbunam"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2018,
+   "stat": "Rushing season",
+   "aSchool": "OU",
+   "other": "MIZ",
+   "aName": "Kennedy Brooks (RB)",
+   "bName": "Tyler Badie (RB)",
+   "A": {
+    "big": "1,056",
+    "sm": "rush yds · 12 TD"
+   },
+   "B": {
+    "big": "436",
+    "sm": "rush yds · 2 TD"
+   },
+   "flip": true,
+   "sig": "drush2018Kennedy Brooks,Tyler Badie"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more rushing yards in a single season?",
+   "A": {
+    "label": "Joe Mixon (RB) · 2015 OU",
+    "value": 753
+   },
+   "B": {
+    "label": "Damarea Crockett (RB) · 2017 MIZ",
+    "value": 481
+   },
+   "unit": "rushing yards",
+   "sig": "hDamarea Crockett2017,Joe Mixon2015rush"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2015,
+   "stat": "Rushing season",
+   "aSchool": "OU",
+   "other": "MIZ",
+   "aName": "Samaje Perine (RB)",
+   "bName": "Ish Witter (RB)",
+   "A": {
+    "big": "1,349",
+    "sm": "rush yds · 16 TD"
+   },
+   "B": {
+    "big": "518",
+    "sm": "rush yds · 1 TD"
+   },
+   "flip": false,
+   "sig": "drush2015Ish Witter,Samaje Perine"
   },
   {
    "type": "prog",
    "label": "Program Pit · Oklahoma vs Missouri",
    "a": "OU",
    "b": "MIZ",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "prompt": "Whose best season since 2000 had more wins?",
    "values": [
-    20,
-    7
+    13,
+    12
    ],
    "verified": true,
-   "sig": "gwin10"
+   "sig": "gpeakW"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more receiving yards in a single season?",
+   "A": {
+    "label": "Tyler Badie (RB) · 2020 MIZ",
+    "value": 333
+   },
+   "B": {
+    "label": "Mark Andrews (TE) · 2017 OU",
+    "value": 958
+   },
+   "unit": "receiving yards",
+   "sig": "hMark Andrews2017,Tyler Badie2020rec"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Samaje Perine (RB) · 2015 OU",
+     "value": 1349
+    },
+    {
+     "label": "Joe Mixon (RB) · 2015 OU",
+     "value": 753
+    },
+    {
+     "label": "Larry Rountree III (RB) · 2020 MIZ",
+     "value": 972
+    },
+    {
+     "label": "Maty Mauk (QB) · 2013 MIZ",
+     "value": 229
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Samaje Perine's best year was 2014 (1,713), not 2015; Joe Mixon's best year was 2016 (1,274), not 2015; Larry Rountree III's best year was 2018 (1,216), not 2020; Maty Mauk's best year was 2014 (373), not 2013.",
+   "sig": "trrushJoe Mixon2015,Larry Rountree III2020,Maty Mauk2013,Samaje Perine2015"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by receiving yards, highest first.",
+   "items": [
+    {
+     "label": "Albert Okwuegbunam (TE) · 2018 MIZ",
+     "value": 466
+    },
+    {
+     "label": "CeeDee Lamb (WR) · 2018 OU",
+     "value": 1155
+    },
+    {
+     "label": "Johnathon Johnson (WR) · 2019 MIZ",
+     "value": 294
+    },
+    {
+     "label": "J'Mon Moore (WR) · 2015 MIZ",
+     "value": 350
+    }
+   ],
+   "unit": "yds",
+   "sig": "rsea|recAlbert Okwuegbunam2018,CeeDee Lamb2018,J'Mon Moore2015,Johnathon Johnson2019"
   }
  ]
 }
