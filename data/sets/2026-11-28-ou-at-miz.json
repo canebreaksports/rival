@@ -6,139 +6,21 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-17T16:48:48.636Z",
- "engine": 7,
+ "generatedAt": "2026-11-17T17:08:58.176Z",
+ "engine": 8,
  "questions": [
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receiving yards (at the school shown)?",
-   "A": {
-    "label": "Larry Rountree III (MIZ RB)",
-    "value": 289,
-    "school": "MIZ"
-   },
-   "B": {
-    "label": "Adrian Peterson (OU RB)",
-    "value": 198,
-    "school": "OU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Larry Rountree III 289 vs. Adrian Peterson 198.",
-   "sig": "urecAdrian PetersonLarry Rountree III"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "Rank these seasons by receiving yards, highest first.",
-   "items": [
-    {
-     "label": "Sterling Shepard (WR) · 2013 OU",
-     "value": 603,
-     "school": "OU"
-    },
-    {
-     "label": "CeeDee Lamb (WR) · 2017 OU",
-     "value": 807,
-     "school": "OU"
-    },
-    {
-     "label": "Jalen Saunders (WR) · 2013 OU",
-     "value": 729,
-     "school": "OU"
-    },
-    {
-     "label": "J'Mon Moore (WR) · 2017 MIZ",
-     "value": 1082,
-     "school": "MIZ"
-    }
-   ],
-   "unit": "yds",
-   "note": "🪤 Trap: Sterling Shepard's best year was 2015 (1,288), not 2013; CeeDee Lamb's best year was 2019 (1,327), not 2017; Jalen Saunders's best year was 2012 (829), not 2013.",
-   "sig": "trrecCeeDee Lamb2017,J'Mon Moore2017,Jalen Saunders2013,Sterling Shepard2013"
-  },
   {
    "type": "prog",
    "label": "Program Pit · Oklahoma vs Missouri",
    "a": "OU",
    "b": "MIZ",
-   "prompt": "Whose best season since 2000 had more wins?",
+   "prompt": "Who won more total games from 2000–2025?",
    "values": [
-    13,
-    12
+    271,
+    192
    ],
    "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2018,
-   "stat": "Rushing season",
-   "aSchool": "OU",
-   "other": "MIZ",
-   "aName": "Trey Sermon (RB)",
-   "bName": "Damarea Crockett (RB)",
-   "A": {
-    "big": "947",
-    "sm": "rush yds · 13 TD"
-   },
-   "B": {
-    "big": "703",
-    "sm": "rush yds · 7 TD"
-   },
-   "flip": false,
-   "sig": "drush2018Damarea Crockett,Trey Sermon"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 22, 2025",
-    "winner": "OU",
-    "loser": "MIZ",
-    "ws": 17,
-    "ls": 6,
-    "venue": "Memorial Stadium (Norman, OK)"
-   },
-   "prompt": "In this game, did John Mateer (Oklahoma) run for more or less than",
-   "line": "40 rushing yards",
-   "answer": "over",
-   "reveal": "More. John Mateer had 60 rushing yards on 18 carries and 0 TD in this game.",
-   "check": {
-    "value": 60,
-    "line": 40
-   },
-   "sig": "gm2025-11-22John Mateerrush"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2019,
-   "stat": "Rushing season",
-   "aSchool": "MIZ",
-   "other": "OU",
-   "aName": "Larry Rountree III (RB)",
-   "bName": "Kennedy Brooks (RB)",
-   "A": {
-    "big": "829",
-    "sm": "rush yds · 9 TD"
-   },
-   "B": {
-    "big": "1,011",
-    "sm": "rush yds · 6 TD"
-   },
-   "flip": true,
-   "sig": "drush2019Kennedy Brooks,Larry Rountree III"
+   "sig": "gtotalW"
   },
   {
    "type": "prog",
@@ -159,6 +41,110 @@
    "verified": true,
    "pitted": true,
    "game": {
+    "date": "Nov 22, 2025",
+    "winner": "OU",
+    "loser": "MIZ",
+    "ws": 17,
+    "ls": 6,
+    "venue": "Memorial Stadium (Norman, OK)"
+   },
+   "prompt": "In this game, did Kevin Coleman Jr. (Missouri) have more or less than",
+   "line": "90 receiving yards",
+   "answer": "over",
+   "reveal": "More. Kevin Coleman Jr. had 115 receiving yards on 7 catches and 0 TD in this game.",
+   "check": {
+    "value": 115,
+    "line": 90
+   },
+   "sig": "gm2025-11-22Kevin Coleman Jr.rec"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Samaje Perine finish his Oklahoma career with more or less than",
+   "line": "47.5 rushing TDs",
+   "answer": "over",
+   "reveal": "More. Samaje Perine had 49 rushing TDs in his career.",
+   "check": {
+    "value": 49,
+    "line": 47.5
+   },
+   "sig": "ppSamaje Perinecareer|Cody SchradercareerrushTD0",
+   "pair": "ppSamaje Perinecareer|Cody SchradercareerrushTD",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Cody Schrader finish his Missouri career with more or less than",
+   "line": "22.5 rushing TDs",
+   "answer": "over",
+   "reveal": "More. Cody Schrader had 23 rushing TDs in his career.",
+   "check": {
+    "value": 23,
+    "line": 22.5
+   },
+   "sig": "ppSamaje Perinecareer|Cody SchradercareerrushTD1",
+   "pair": "ppSamaje Perinecareer|Cody SchradercareerrushTD",
+   "pairPart": 2
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Luther Burden III (MIZ WR) · 2022 rushing TDs",
+     "value": 3,
+     "school": "MIZ"
+    },
+    {
+     "label": "Sterling Shepard (OU WR) · 2013 receiving TDs",
+     "value": 7,
+     "school": "OU"
+    },
+    {
+     "label": "J'Mon Moore (MIZ WR) · career total TDs (rushing + receiving)",
+     "value": 22,
+     "school": "MIZ"
+    },
+    {
+     "label": "Damarea Crockett (MIZ RB) · 2016 rushing TDs",
+     "value": 10,
+     "school": "MIZ"
+    }
+   ],
+   "sig": "mxTDDamarea Crockett2016 rushing TDs,J'Mon Moorecareer total TDs (rushing + receiving),Luther Burden III2022 rushing TDs,Sterling Shepard2013 receiving TDs"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more rushing yards in a single season?",
+   "A": {
+    "label": "Tyler Badie (RB) · 2018 MIZ",
+    "value": 436,
+    "school": "MIZ"
+   },
+   "B": {
+    "label": "Adrian Peterson (RB) · 2005 OU",
+    "value": 1104,
+    "school": "OU"
+   },
+   "unit": "rushing yards",
+   "sig": "hAdrian Peterson2005,Tyler Badie2018rush"
+  },
+  {
+   "type": "mc",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
     "date": "Nov 9, 2024",
     "winner": "MIZ",
     "loser": "OU",
@@ -166,36 +152,43 @@
     "ls": 23,
     "venue": "Memorial Stadium"
    },
-   "prompt": "In this game, did Theo Wease (Missouri) have more or less than",
-   "line": "50 receiving yards",
-   "answer": "over",
-   "reveal": "More. Theo Wease had 70 receiving yards on 4 catches and 2 TD in this game.",
-   "check": {
-    "value": 70,
-    "line": 50
-   },
-   "sig": "gm2024-11-09Theo Weaserec"
+   "prompt": "What was the difference in total yards in Missouri's 30–23 win over Oklahoma?",
+   "options": [
+    "Missouri +21 yards",
+    "Oklahoma +151 yards",
+    "Oklahoma +29 yards",
+    "Oklahoma +71 yards"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    2,
+    3,
+    1
+   ],
+   "reveal": "Missouri +21. Oklahoma had 257 total yards, Missouri 278.",
+   "sig": "td2024-11-09total"
   },
   {
-   "type": "duel",
+   "type": "h2h",
    "label": "Fresh Mix",
+   "upset": true,
    "verified": true,
-   "year": 2016,
-   "stat": "Rushing season",
-   "aSchool": "MIZ",
-   "other": "OU",
-   "aName": "Ish Witter (RB)",
-   "bName": "Samaje Perine (RB)",
+   "flip": true,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
    "A": {
-    "big": "750",
-    "sm": "rush yds · 6 TD"
+    "label": "Larry Rountree III (MIZ RB)",
+    "value": 289,
+    "school": "MIZ"
    },
    "B": {
-    "big": "1,060",
-    "sm": "rush yds · 12 TD"
+    "label": "Adrian Peterson (OU RB)",
+    "value": 198,
+    "school": "OU"
    },
-   "flip": true,
-   "sig": "drush2016Ish Witter,Samaje Perine"
+   "unit": "",
+   "note": "🚨 Upset: Larry Rountree III 289 vs. Adrian Peterson 198.",
+   "sig": "urecAdrian PetersonLarry Rountree III"
   }
  ]
 }

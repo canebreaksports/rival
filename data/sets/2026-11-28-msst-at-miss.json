@@ -6,96 +6,38 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-17T16:48:48.634Z",
- "engine": 7,
+ "generatedAt": "2026-11-17T17:08:58.174Z",
+ "engine": 8,
  "questions": [
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
+   "type": "mc",
+   "label": "Rivalry Game",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more rushing yards in a single season?",
-   "A": {
-    "label": "Henry Parrish Jr. (RB) · 2024 MISS",
-    "value": 693,
-    "school": "MISS"
+   "pitted": true,
+   "game": {
+    "date": "Nov 25, 2021",
+    "winner": "MISS",
+    "loser": "MSST",
+    "ws": 31,
+    "ls": 21,
+    "venue": "Davis Wade Stadium"
    },
-   "B": {
-    "label": "Dillon Johnson (RB) · 2022 MSST",
-    "value": 499,
-    "school": "MSST"
-   },
-   "unit": "rushing yards",
-   "sig": "hDillon Johnson2022,Henry Parrish Jr.2024rush"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game receiving performances in Mississippi State–Ole Miss games, highest first.",
-   "items": [
-    {
-     "label": "Jameon Lewis (MSST) · 2013",
-     "value": 68,
-     "school": "MSST"
-    },
-    {
-     "label": "Evan Engram (MISS) · 2014",
-     "value": 176,
-     "school": "MISS"
-    },
-    {
-     "label": "Damore'ea Stringfellow (MISS) · 2016",
-     "value": 97,
-     "school": "MISS"
-    },
-    {
-     "label": "Cody Core (MISS) · 2014",
-     "value": 50,
-     "school": "MISS"
-    }
+   "prompt": "What was the difference in rushing yards in Ole Miss's 31–21 win over Mississippi State?",
+   "options": [
+    "Ole Miss +70 yards",
+    "Mississippi State +40 yards",
+    "Mississippi State +140 yards",
+    "Mississippi State +20 yards"
    ],
-   "sig": "grrecCody Core2014,Damore'ea Stringfellow2016,Evan Engram2014,Jameon Lewis2013"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": false,
-   "prompt": "In Mississippi State–Ole Miss games since 2012, who had more rushing yards against the other school?",
-   "A": {
-    "label": "Jo'quavious Marks (MSST) vs. Ole Miss",
-    "value": 170,
-    "school": "MSST"
-   },
-   "B": {
-    "label": "Akeem Judd (MISS) vs. Mississippi State",
-    "value": 131,
-    "school": "MISS"
-   },
-   "unit": "rushing yds",
-   "note": "Jo'quavious Marks: 170 in 4 games. Akeem Judd: 131 in 2 games.",
-   "sig": "vsrushAkeem Judd,Jo'quavious Marks"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more rushing TDs in a single season?",
-   "A": {
-    "label": "Matt Corral (QB) · 2020 MISS",
-    "value": 4,
-    "school": "MISS"
-   },
-   "B": {
-    "label": "Dillon Johnson (RB) · 2022 MSST",
-    "value": 3,
-    "school": "MSST"
-   },
-   "unit": "rushing TDs",
-   "sig": "hDillon Johnson2022,Matt Corral2020rushTD"
+   "answer": 0,
+   "order": [
+    3,
+    2,
+    1,
+    0
+   ],
+   "reveal": "Ole Miss +70. Ole Miss had 154 rushing yards, Mississippi State 84.",
+   "sig": "td2021-11-25rush"
   },
   {
    "type": "h2h",
@@ -119,11 +61,90 @@
    "sig": "urecTDKylin HillDexter McCluster"
   },
   {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2017,
+   "stat": "Rushing season",
+   "aSchool": "MSST",
+   "other": "MISS",
+   "aName": "Aeris Williams (RB)",
+   "bName": "Jordan Wilkins (RB)",
+   "A": {
+    "big": "1,107",
+    "sm": "rush yds · 6 TD"
+   },
+   "B": {
+    "big": "1,011",
+    "sm": "rush yds · 9 TD"
+   },
+   "flip": true,
+   "sig": "drush2017Aeris Williams,Jordan Wilkins"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 29, 2024",
+    "winner": "MISS",
+    "loser": "MSST",
+    "ws": 26,
+    "ls": 14,
+    "venue": "Vaught-Hemingway Stadium"
+   },
+   "prompt": "In this game, did Kevin Coleman Jr. (Mississippi State) have more or less than",
+   "line": "160 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Kevin Coleman Jr. had 118 receiving yards on 6 catches and 1 TD in this game.",
+   "check": {
+    "value": 118,
+    "line": 160
+   },
+   "sig": "gm2024-11-29Kevin Coleman Jr.rec"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Mississippi State–Ole Miss games since 2012, who had more rushing yards against the other school?",
+   "A": {
+    "label": "Keytaon Thompson (MSST) vs. Ole Miss",
+    "value": 121,
+    "school": "MSST"
+   },
+   "B": {
+    "label": "Quinshon Judkins (MISS) vs. Mississippi State",
+    "value": 210,
+    "school": "MISS"
+   },
+   "unit": "rushing yds",
+   "note": "Keytaon Thompson: 121 in 2 games. Quinshon Judkins: 210 in 2 games.",
+   "sig": "vsrushKeytaon Thompson,Quinshon Judkins"
+  },
+  {
+   "type": "moment",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did Ole Miss beat Mississippi State more or fewer than",
+   "line": "15.5 times",
+   "answer": "under",
+   "reveal": "Fewer. Ole Miss went 15–11 against Mississippi State from 2000 to 2025 (26 meetings, on-field results).",
+   "check": {
+    "value": 15,
+    "line": 15.5
+   },
+   "sig": "scMISSMSST"
+  },
+  {
    "type": "count",
    "label": "School Count",
    "a": "MSST",
    "b": "MISS",
-   "threshold": 3500,
+   "threshold": 3000,
    "A": [
     {
      "name": "Anthony Dixon",
@@ -132,34 +153,20 @@
     {
      "name": "Nick Fitzgerald",
      "yards": 3607
+    },
+    {
+     "name": "Jerious Norwood",
+     "yards": 3212
     }
    ],
-   "B": [],
+   "B": [
+    {
+     "name": "Deuce McAllister",
+     "yards": 3060
+    }
+   ],
    "verified": true,
-   "sig": "cMSSTMISS3500"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 28, 2015",
-    "winner": "MISS",
-    "loser": "MSST",
-    "ws": 38,
-    "ls": 27,
-    "venue": "Davis Wade Stadium"
-   },
-   "prompt": "In this game, did Dak Prescott (Mississippi State) run for more or less than",
-   "line": "80 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Dak Prescott had 63 rushing yards on 21 carries and 1 TD in this game.",
-   "check": {
-    "value": 63,
-    "line": 80
-   },
-   "sig": "gm2015-11-28Dak Prescottrush"
+   "sig": "cMSSTMISS3000"
   }
  ]
 }

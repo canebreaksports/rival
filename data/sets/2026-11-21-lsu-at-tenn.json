@@ -6,100 +6,89 @@
   "away": "LSU",
   "home": "TENN"
  },
- "generatedAt": "2026-11-17T16:48:48.625Z",
- "engine": 7,
+ "generatedAt": "2026-11-17T17:08:58.164Z",
+ "engine": 8,
  "questions": [
   {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Tennessee",
-   "a": "LSU",
-   "b": "TENN",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    1,
-    9
-   ],
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
    "verified": true,
-   "sig": "glosing"
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Arian Foster (RB) · 2008 TENN",
+     "value": 570,
+     "school": "TENN"
+    },
+    {
+     "label": "Leonard Fournette (RB) · 2016 LSU",
+     "value": 843,
+     "school": "LSU"
+    },
+    {
+     "label": "Joshua Dobbs (QB) · 2015 TENN",
+     "value": 671,
+     "school": "TENN"
+    },
+    {
+     "label": "Jayden Daniels (QB) · 2023 LSU",
+     "value": 1134,
+     "school": "LSU"
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Arian Foster's best year was 2007 (1,193), not 2008; Leonard Fournette's best year was 2015 (1,953), not 2016; Joshua Dobbs's best year was 2016 (831), not 2015.",
+   "sig": "trrushArian Foster2008,Jayden Daniels2023,Joshua Dobbs2015,Leonard Fournette2016"
   },
   {
    "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "Rank these players by career yards from scrimmage (at that school), highest first.",
+   "prompt": "Rank these seasons by rushing TDs, highest first.",
    "items": [
     {
-     "label": "Clyde Edwards-Helaire (RB) · career, LSU",
-     "value": 2699,
+     "label": "Derrius Guice (RB) · 2016 LSU",
+     "value": 15,
      "school": "LSU"
     },
     {
-     "label": "Jamal Lewis (RB) · career, TENN",
-     "value": 3152,
+     "label": "Joshua Dobbs (QB) · 2016 TENN",
+     "value": 12,
      "school": "TENN"
     },
     {
-     "label": "Kevin Faulk (RB) · career, LSU",
-     "value": 5157,
+     "label": "Kevin Faulk (RB) · 1996 LSU",
+     "value": 13,
      "school": "LSU"
     },
     {
-     "label": "Leonard Fournette (RB) · career, LSU",
-     "value": 4356,
+     "label": "Jayden Daniels (QB) · 2023 LSU",
+     "value": 10,
      "school": "LSU"
     }
    ],
-   "unit": "yds",
-   "sig": "rcar|scrimClyde Edwards-Helairecareer,Jamal Lewiscareer,Kevin Faulkcareer,Leonard Fournettecareer"
-  },
-  {
-   "type": "moment",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, did Tennessee beat LSU more or fewer than",
-   "line": "1.5 times",
-   "answer": "over",
-   "reveal": "More. Tennessee went 3–7 against LSU from 2000 to 2025 (10 meetings, on-field results).",
-   "check": {
-    "value": 3,
-    "line": 1.5
-   },
-   "sig": "scTENNLSU"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Tennessee",
-   "a": "LSU",
-   "b": "TENN",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    249,
-    194
-   ],
-   "verified": true,
-   "sig": "gtotalW"
+   "unit": "TD",
+   "sig": "rsea|rushTDDerrius Guice2016,Jayden Daniels2023,Joshua Dobbs2016,Kevin Faulk1996"
   },
   {
    "type": "h2h",
    "label": "Fresh Mix",
-   "upset": true,
    "verified": true,
    "flip": false,
-   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
+   "prompt": "Who had more career yards from scrimmage?",
    "A": {
-    "label": "Joshua Dobbs (TENN QB)",
-    "value": 32,
+    "label": "Arian Foster (RB) · career, TENN",
+    "value": 3706,
     "school": "TENN"
    },
    "B": {
-    "label": "Jayden Daniels (LSU QB)",
-    "value": 21,
+    "label": "Leonard Fournette (RB) · career, LSU",
+    "value": 4356,
     "school": "LSU"
    },
-   "unit": "",
-   "note": "🚨 Upset: Joshua Dobbs 32 vs. Jayden Daniels 21.",
-   "sig": "urushTDJayden DanielsJoshua Dobbs"
+   "unit": "yards from scrimmage",
+   "sig": "hArian Fostercareer,Leonard Fournettecareerscrim"
   },
   {
    "type": "count",
@@ -184,42 +173,89 @@
    "sig": "cLSUTENN2500"
   },
   {
-   "type": "moment",
+   "type": "duel",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "Did Clyde Edwards-Helaire finish his LSU career with more or less than",
-   "line": "1,700 rushing yards",
-   "answer": "over",
-   "reveal": "More. Clyde Edwards-Helaire had 2,104 rushing yards in his career.",
-   "check": {
-    "value": 2104,
-    "line": 1700
+   "year": 2016,
+   "stat": "Rushing season",
+   "aSchool": "LSU",
+   "other": "TENN",
+   "aName": "Derrius Guice (RB)",
+   "bName": "Joshua Dobbs (QB)",
+   "A": {
+    "big": "1,387",
+    "sm": "rush yds · 15 TD"
    },
-   "sig": "ppClyde Edwards-Helairecareer|Arian Fostercareerrush0",
-   "pair": "ppClyde Edwards-Helairecareer|Arian Fostercareerrush",
-   "pairPart": 1
+   "B": {
+    "big": "831",
+    "sm": "rush yds · 12 TD"
+   },
+   "flip": true,
+   "sig": "drush2016Derrius Guice,Joshua Dobbs"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
+   "type": "prog",
+   "label": "Program Pit · LSU vs Tennessee",
+   "a": "LSU",
+   "b": "TENN",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    15,
+    11
+   ],
    "verified": true,
-   "prompt": "Did Arian Foster finish his Tennessee career with more or less than",
-   "line": "2,500 rushing yards",
-   "answer": "over",
-   "reveal": "More. Arian Foster had 2,964 rushing yards in his career.",
-   "check": {
-    "value": 2964,
-    "line": 2500
-   },
-   "sig": "ppClyde Edwards-Helairecareer|Arian Fostercareerrush1",
-   "pair": "ppClyde Edwards-Helairecareer|Arian Fostercareerrush",
-   "pairPart": 2
+   "sig": "gpeakW"
   },
   {
+   "label": "Tigers vs. Vols",
+   "verified": true,
+   "sig": "kTigers vs. Vols1",
    "type": "moment",
+   "prompt": "LSU's biggest win over Tennessee came in 2011. Was the margin more or less than",
+   "line": "27.5 points",
+   "answer": "over",
+   "reveal": "Over. LSU won 38–7, a 31-point margin."
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
+   "A": {
+    "label": "Joshua Dobbs (TENN QB)",
+    "value": 32,
+    "school": "TENN"
+   },
+   "B": {
+    "label": "Jayden Daniels (LSU QB)",
+    "value": 21,
+    "school": "LSU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Joshua Dobbs 32 vs. Jayden Daniels 21.",
+   "sig": "urushTDJayden DanielsJoshua Dobbs"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Tennessee",
+   "a": "LSU",
+   "b": "TENN",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    0,
+    1
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "rank",
    "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
+   "unit": "yds",
    "game": {
     "date": "Oct 8, 2022",
     "winner": "TENN",
@@ -228,15 +264,30 @@
     "ls": 13,
     "venue": "Tiger Stadium (LA)"
    },
-   "prompt": "In this game, did Jalin Hyatt (Tennessee) have more or less than",
-   "line": "80 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Jalin Hyatt had 63 receiving yards on 4 catches and 2 TD in this game.",
-   "check": {
-    "value": 63,
-    "line": 80
-   },
-   "sig": "gm2022-10-08Jalin Hyattrec"
+   "prompt": "In this game, rank these players by receiving yards, highest first.",
+   "items": [
+    {
+     "label": "Bru McCoy (TENN)",
+     "value": 140,
+     "school": "TENN"
+    },
+    {
+     "label": "Jaray Jenkins (LSU)",
+     "value": 44,
+     "school": "LSU"
+    },
+    {
+     "label": "Jalin Hyatt (TENN)",
+     "value": 63,
+     "school": "TENN"
+    },
+    {
+     "label": "Malik Nabers (LSU)",
+     "value": 80,
+     "school": "LSU"
+    }
+   ],
+   "sig": "gs2022-10-08rec"
   }
  ]
 }

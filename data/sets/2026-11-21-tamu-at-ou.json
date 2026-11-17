@@ -6,60 +6,102 @@
   "away": "TAMU",
   "home": "OU"
  },
- "generatedAt": "2026-11-17T16:48:48.622Z",
- "engine": 7,
+ "generatedAt": "2026-11-17T17:08:58.158Z",
+ "engine": 8,
  "questions": [
   {
-   "type": "moment",
-   "label": "Series History",
+   "type": "rank",
+   "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
-   "prompt": "From 2000 through 2025, did Oklahoma beat Texas A&M more or fewer than",
-   "line": "8.5 times",
-   "answer": "over",
-   "reveal": "More. Oklahoma went 10–3 against Texas A&M from 2000 to 2025 (13 meetings, on-field results).",
-   "check": {
-    "value": 10,
-    "line": 8.5
+   "unit": "yds",
+   "game": {
+    "date": "Jan 4, 2013",
+    "winner": "TAMU",
+    "loser": "OU",
+    "ws": 41,
+    "ls": 13,
+    "venue": "Postseason"
    },
-   "sig": "scOUTAMU"
+   "prompt": "In this game, rank these players by receiving yards, highest first.",
+   "items": [
+    {
+     "label": "Ryan Swope (TAMU)",
+     "value": 104,
+     "school": "TAMU"
+    },
+    {
+     "label": "Sterling Shepard (OU)",
+     "value": 43,
+     "school": "OU"
+    },
+    {
+     "label": "Jalen Saunders (OU)",
+     "value": 63,
+     "school": "OU"
+    },
+    {
+     "label": "EZ Nwachukwu (TAMU)",
+     "value": 81,
+     "school": "TAMU"
+    }
+   ],
+   "sig": "gs2013-01-04rec"
   },
   {
-   "type": "count",
-   "label": "School Count",
-   "a": "TAMU",
-   "b": "OU",
-   "threshold": 4000,
-   "A": [
-    {
-     "name": "Darren Lewis",
-     "yards": 5012
-    }
-   ],
-   "B": [
-    {
-     "name": "Samaje Perine",
-     "yards": 4122
-    },
-    {
-     "name": "Billy Sims",
-     "yards": 4118
-    },
-    {
-     "name": "Joe Washington",
-     "yards": 4071
-    },
-    {
-     "name": "Adrian Peterson",
-     "yards": 4045
-    },
-    {
-     "name": "Steve Owens",
-     "yards": 4041
-    }
-   ],
+   "type": "moment",
+   "label": "Rivalry Game",
    "verified": true,
-   "sig": "cTAMUOU4000"
+   "pitted": true,
+   "game": {
+    "date": "Jan 4, 2013",
+    "winner": "TAMU",
+    "loser": "OU",
+    "ws": 41,
+    "ls": 13,
+    "venue": "Postseason"
+   },
+   "prompt": "In this game, did Johnny Manziel (Texas A&M) throw for more or less than",
+   "line": "200 passing yards",
+   "answer": "over",
+   "reveal": "More. Johnny Manziel had 287 passing yards and 2 TD in this game.",
+   "check": {
+    "value": 287,
+    "line": 200
+   },
+   "sig": "gm2013-01-04Johnny Manzielpass"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Devon Achane finish his Texas A&M career with more or less than",
+   "line": "3,250 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Devon Achane had 2,930 yards from scrimmage in his career.",
+   "check": {
+    "value": 2930,
+    "line": 3250
+   },
+   "sig": "ppDevon Achanecareer|Adrian Petersoncareerscrim0",
+   "pair": "ppDevon Achanecareer|Adrian Petersoncareerscrim",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Adrian Peterson finish his Oklahoma career with more or less than",
+   "line": "4,550 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Adrian Peterson had 4,243 yards from scrimmage in his career.",
+   "check": {
+    "value": 4243,
+    "line": 4550
+   },
+   "sig": "ppDevon Achanecareer|Adrian Petersoncareerscrim1",
+   "pair": "ppDevon Achanecareer|Adrian Petersoncareerscrim",
+   "pairPart": 2
   },
   {
    "type": "h2h",
@@ -83,101 +125,6 @@
    "sig": "urecJoe MixonJalen Wydermyer"
   },
   {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2019,
-   "stat": "Rushing season",
-   "aSchool": "TAMU",
-   "other": "OU",
-   "aName": "Kellen Mond (QB)",
-   "bName": "Trey Sermon (RB)",
-   "A": {
-    "big": "501",
-    "sm": "rush yds · 8 TD"
-   },
-   "B": {
-    "big": "385",
-    "sm": "rush yds · 4 TD"
-   },
-   "flip": true,
-   "sig": "drush2019Kellen Mond,Trey Sermon"
-  },
-  {
-   "label": "Old Big 12 Foes",
-   "verified": true,
-   "sig": "kOld Big 12 Foes0",
-   "type": "moment",
-   "prompt": "Oklahoma's biggest win over Texas A&M came in 2003. Was the margin more or less than",
-   "line": "70 points",
-   "answer": "over",
-   "reveal": "Over. Oklahoma won 77–0."
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more career receiving yards?",
-   "A": {
-    "label": "Jalen Saunders (WR) · career, OU",
-    "value": 1558,
-    "school": "OU"
-   },
-   "B": {
-    "label": "Christian Kirk (WR) · career, TAMU",
-    "value": 2856,
-    "school": "TAMU"
-   },
-   "unit": "receiving yards",
-   "sig": "hChristian Kirkcareer,Jalen Saunderscareerrec"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2015, did Christian Kirk (Texas A&M) have more or less than",
-   "line": "8.5 receiving TDs",
-   "answer": "under",
-   "reveal": "Less. Christian Kirk had 7 receiving TDs in 2015.",
-   "check": {
-    "value": 7,
-    "line": 8.5
-   },
-   "sig": "ppChristian Kirk2015|Joe Mixon2016recTD0",
-   "pair": "ppChristian Kirk2015|Joe Mixon2016recTD",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2016, did Joe Mixon (Oklahoma) have more or less than",
-   "line": "6.5 receiving TDs",
-   "answer": "under",
-   "reveal": "Less. Joe Mixon had 5 receiving TDs in 2016.",
-   "check": {
-    "value": 5,
-    "line": 6.5
-   },
-   "sig": "ppChristian Kirk2015|Joe Mixon2016recTD1",
-   "pair": "ppChristian Kirk2015|Joe Mixon2016recTD",
-   "pairPart": 2
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas A&M vs Oklahoma",
-   "a": "TAMU",
-   "b": "OU",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    195,
-    271
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
    "type": "prog",
    "label": "Program Pit · Texas A&M vs Oklahoma",
    "a": "TAMU",
@@ -189,6 +136,63 @@
    ],
    "verified": true,
    "sig": "glosing"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2014,
+   "stat": "Receiving season",
+   "aSchool": "TAMU",
+   "other": "OU",
+   "aName": "Josh Reynolds (WR)",
+   "bName": "Sterling Shepard (WR)",
+   "A": {
+    "big": "842",
+    "sm": "rec yds · 13 TD"
+   },
+   "B": {
+    "big": "970",
+    "sm": "rec yds · 5 TD"
+   },
+   "flip": true,
+   "sig": "drec2014Josh Reynolds,Sterling Shepard"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Jan 4, 2013",
+    "winner": "TAMU",
+    "loser": "OU",
+    "ws": 41,
+    "ls": 13,
+    "venue": "Postseason"
+   },
+   "prompt": "In this game, did Johnny Manziel (Texas A&M) have more or fewer than",
+   "line": "0.5 rushing touchdowns",
+   "answer": "over",
+   "reveal": "More. Johnny Manziel had 229 rushing yards on 17 carries and 2 TD in this game.",
+   "check": {
+    "value": 2,
+    "line": 0.5
+   },
+   "sig": "gm2013-01-04Johnny Manzielrushtd"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs Oklahoma",
+   "a": "TAMU",
+   "b": "OU",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    11,
+    13
+   ],
+   "verified": true,
+   "sig": "gpeakW"
   }
  ]
 }

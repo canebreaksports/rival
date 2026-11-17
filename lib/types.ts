@@ -56,7 +56,8 @@ export interface Dataset {
 
 // ---- games between two schools (data/rivalry.json) ----
 export interface Perf { name: string; cat: "rush" | "rec" | "pass"; yds: number; td: number; n?: number }
-export interface RivalryGame { season: number; date: string; home: SchoolKey; away: SchoolKey; hp: number; ap: number; venue: string; neutral?: boolean; bowl?: boolean; box?: Record<SchoolKey, Perf[]> }
+export interface TeamLine { total: number; rush: number; pass: number; to: number }
+export interface RivalryGame { season: number; date: string; home: SchoolKey; away: SchoolKey; hp: number; ap: number; venue: string; neutral?: boolean; bowl?: boolean; box?: Record<SchoolKey, Perf[]>; team?: Record<SchoolKey, TeamLine> }
 export interface VsTotal { name: string; school: SchoolKey; games: number; rush: number; rushTD: number; car: number; rec: number; recTD: number; recN: number }
 export interface RivalryPair { games: RivalryGame[]; vs: VsTotal[] }
 
@@ -68,11 +69,12 @@ export type Question = QBase & (
   | { type: "prog"; a: SchoolKey; b: SchoolKey; prompt: string; values: [number, number] }
   | { type: "moment"; game?: GameBox & { loser: SchoolKey }; prompt: string; line: string; answer: "over" | "under"; reveal: string;
       check?: { value: number; line: number } }
-  | { type: "rank"; prompt: string; items: Item[]; unit: string; note?: string }
+  | { type: "rank"; prompt: string; items: Item[]; unit: string; note?: string; game?: GameBox & { loser: SchoolKey } }
   | { type: "h2h"; prompt: string; A: Item; B: Item; unit: string; ypc?: boolean; note?: string; flip: boolean }
   | { type: "count"; a: SchoolKey; b: SchoolKey; threshold: number; A: { name: string; yards: number; active?: boolean }[]; B: { name: string; yards: number; active?: boolean }[] }
   | { type: "duel"; year: number; stat: string; aSchool: SchoolKey; other: SchoolKey; aName: string; bName: string; A: { big: string; sm: string }; B: { big: string; sm: string }; flip: boolean }
   | { type: "cross"; a: SchoolKey; b: SchoolKey; prompt: string; options: string[]; answer: number; reveal: string; order: number[] }
+  | { type: "mc"; prompt: string; options: string[]; answer: number; reveal: string; order: number[]; game?: GameBox & { loser: SchoolKey } }
 );
 export type QType = Question["type"];
 

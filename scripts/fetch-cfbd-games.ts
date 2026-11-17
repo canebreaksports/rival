@@ -1,4 +1,4 @@
-// Caches game results (2000–2025) and player box scores (2012–2025) from CollegeFootballData.
+// Caches game results (2000–2025), player box scores and team box scores (2012–2025) from CollegeFootballData.
 // One request per conference per season (SEC + Big 12 cover every current SEC school's history).
 //
 //   npx tsx scripts/fetch-cfbd-games.ts <cacheDir>
@@ -20,10 +20,12 @@ async function get(file: string, url: string) {
 async function main() {
   fs.mkdirSync(path.join(cache, "games"), { recursive: true });
   fs.mkdirSync(path.join(cache, "box"), { recursive: true });
+  fs.mkdirSync(path.join(cache, "teams"), { recursive: true });
   let calls = 0;
   for (let y = 2000; y <= 2025; y++) for (const conf of ["SEC", "B12"]) {
     if (await get(path.join(cache, "games", `${y}-${conf}.json`), `https://api.collegefootballdata.com/games?year=${y}&conference=${conf}&seasonType=both`)) calls++;
     if (y >= 2012 && await get(path.join(cache, "box", `${y}-${conf}.json`), `https://api.collegefootballdata.com/games/players?year=${y}&conference=${conf}&seasonType=both`)) calls++;
+    if (y >= 2012 && await get(path.join(cache, "teams", `${y}-${conf}.json`), `https://api.collegefootballdata.com/games/teams?year=${y}&conference=${conf}&seasonType=both`)) calls++;
   }
   console.log(`done, ${calls} API calls`);
 }

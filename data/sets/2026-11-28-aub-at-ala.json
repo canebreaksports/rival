@@ -6,53 +6,9 @@
   "away": "AUB",
   "home": "ALA"
  },
- "generatedAt": "2026-11-17T16:48:48.631Z",
- "engine": 7,
+ "generatedAt": "2026-11-17T17:08:58.170Z",
+ "engine": 8,
  "questions": [
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 25, 2023",
-    "winner": "ALA",
-    "loser": "AUB",
-    "ws": 27,
-    "ls": 24,
-    "venue": "Jordan-Hare Stadium"
-   },
-   "prompt": "In this game, did Jarquez Hunter (Auburn) run for more or less than",
-   "line": "60 rushing yards",
-   "answer": "over",
-   "reveal": "More. Jarquez Hunter had 93 rushing yards on 14 carries and 0 TD in this game.",
-   "check": {
-    "value": 93,
-    "line": 60
-   },
-   "sig": "gm2023-11-25Jarquez Hunterrush"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receptions (at the school shown)?",
-   "A": {
-    "label": "Philip Lutzenkirchen (AUB TE)",
-    "value": 59,
-    "school": "AUB"
-   },
-   "B": {
-    "label": "Derrick Henry (ALA RB)",
-    "value": 17,
-    "school": "ALA"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Philip Lutzenkirchen 59 vs. Derrick Henry 17.",
-   "sig": "urecNDerrick HenryPhilip Lutzenkirchen"
-  },
   {
    "type": "count",
    "label": "School Count",
@@ -127,6 +83,25 @@
    "sig": "cAUBALA3000"
   },
   {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more rushing yards in a single season?",
+   "A": {
+    "label": "Tre Mason (RB) · 2013 AUB",
+    "value": 1816,
+    "school": "AUB"
+   },
+   "B": {
+    "label": "Jalen Hurts (QB) · 2016 ALA",
+    "value": 954,
+    "school": "ALA"
+   },
+   "unit": "rushing yards",
+   "sig": "hJalen Hurts2016,Tre Mason2013rush"
+  },
+  {
    "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
@@ -134,27 +109,65 @@
    "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
-     "label": "Kenny Irons (AUB RB) · 2006 rushing TDs",
+     "label": "Tank Bigsby (AUB RB) · career total TDs (rushing + receiving)",
+     "value": 25,
+     "school": "AUB"
+    },
+    {
+     "label": "DeVonta Smith (ALA WR) · career receiving TDs",
+     "value": 46,
+     "school": "ALA"
+    },
+    {
+     "label": "Devin Aromashodu (AUB WR) · 2005 receiving TDs",
      "value": 4,
      "school": "AUB"
     },
     {
-     "label": "DeVonta Smith (ALA WR) · 2019 receiving TDs",
-     "value": 14,
-     "school": "ALA"
-    },
-    {
-     "label": "Nick Marshall (AUB QB) · career rushing TDs",
-     "value": 23,
-     "school": "AUB"
-    },
-    {
-     "label": "Ben Obomanu (AUB WR) · 2005 receiving TDs",
-     "value": 5,
+     "label": "Cam Newton (AUB QB) · 2010 rushing TDs",
+     "value": 20,
      "school": "AUB"
     }
    ],
-   "sig": "mxTDBen Obomanu2005 receiving TDs,DeVonta Smith2019 receiving TDs,Kenny Irons2006 rushing TDs,Nick Marshallcareer rushing TDs"
+   "sig": "mxTDCam Newton2010 rushing TDs,DeVonta Smithcareer receiving TDs,Devin Aromashodu2005 receiving TDs,Tank Bigsbycareer total TDs (rushing + receiving)"
+  },
+  {
+   "type": "moment",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did Auburn beat Alabama more or fewer than",
+   "line": "11.5 times",
+   "answer": "under",
+   "reveal": "Fewer. Auburn went 11–15 against Alabama from 2000 to 2025 (26 meetings, on-field results).",
+   "check": {
+    "value": 11,
+    "line": 11.5
+   },
+   "sig": "scAUBALA"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 30, 2024",
+    "winner": "ALA",
+    "loser": "AUB",
+    "ws": 28,
+    "ls": 14,
+    "venue": "Bryant-Denny Stadium"
+   },
+   "prompt": "In this game, did Jamarion Miller (Alabama) run for more or less than",
+   "line": "100 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Jamarion Miller had 84 rushing yards on 28 carries and 0 TD in this game.",
+   "check": {
+    "value": 84,
+    "line": 100
+   },
+   "sig": "gm2024-11-30Jamarion Millerrush"
   },
   {
    "type": "rank",
@@ -189,36 +202,23 @@
   {
    "type": "h2h",
    "label": "Fresh Mix",
+   "upset": true,
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving TDs in a single season?",
+   "flip": false,
+   "prompt": "Who had more college receptions (at the school shown)?",
    "A": {
-    "label": "Philip Lutzenkirchen (TE) · 2011 AUB",
-    "value": 7,
+    "label": "Philip Lutzenkirchen (AUB TE)",
+    "value": 59,
     "school": "AUB"
    },
    "B": {
-    "label": "DeVonta Smith (WR) · 2019 ALA",
-    "value": 14,
+    "label": "Derrick Henry (ALA RB)",
+    "value": 17,
     "school": "ALA"
    },
-   "unit": "receiving TDs",
-   "sig": "hDeVonta Smith2019,Philip Lutzenkirchen2011recTD"
-  },
-  {
-   "type": "moment",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, did Auburn beat Alabama more or fewer than",
-   "line": "11.5 times",
-   "answer": "under",
-   "reveal": "Fewer. Auburn went 11–15 against Alabama from 2000 to 2025 (26 meetings, on-field results).",
-   "check": {
-    "value": 11,
-    "line": 11.5
-   },
-   "sig": "scAUBALA"
+   "unit": "",
+   "note": "🚨 Upset: Philip Lutzenkirchen 59 vs. Derrick Henry 17.",
+   "sig": "urecNDerrick HenryPhilip Lutzenkirchen"
   }
  ]
 }

@@ -106,7 +106,15 @@ function kindLabel(q: Question) {
     case "h2h": return `Head to Head · ${q.label}`;
     case "duel": return `Blind Stat Duel · ${q.year}`;
     case "cross": return `Crossover · ${SCHOOL[q.a].name} × ${SCHOOL[q.b].name}`;
+    case "mc": return q.label;
   }
+}
+
+function GameBoxView({ game }: { game?: Extract<Question, { type: "moment" }>["game"] }) {
+  if (!game) return null;
+  return <div className="game"><div className="d">{game.date}</div>
+    <div className="s"><Dot k={game.winner} /> {SCHOOL[game.winner].name} {game.ws}, {SCHOOL[game.loser].name} {game.ls}{game.ot ? " (OT)" : ""}</div>
+    <div className="v">{game.venue}</div></div>;
 }
 
 const h2hFmt = (q: Extract<Question, { type: "h2h" }>, v: number) => (q.ypc ? v.toFixed(1) + " per carry" : `${fmt(v)}${q.unit ? " " + q.unit : ""}`);
@@ -118,7 +126,7 @@ function revealText(q: Question): ReactNode {
     case "moment": return q.reveal;
     case "h2h": return <>{q.A.label}: {h2hFmt(q, q.A.value)} · {q.B.label}: {h2hFmt(q, q.B.value)}{q.note && <><br />{q.note}</>}</>;
     case "duel": return `${SCHOOL[q.aSchool].name}: ${q.aName} (${q.A.big}). ${SCHOOL[q.other].name}: ${q.bName} (${q.B.big}).`;
-    case "cross": return q.reveal;
+    case "cross": case "mc": return q.reveal;
     case "rank": return "";
   }
 }
@@ -140,9 +148,7 @@ function QuestionBody({ q, reveal, onAnswer, onRank }: { q: Question; reveal: Re
         <div className="opts" style={{ marginTop: 10 }}>{o("t", "Tied")}</div></>;
     case "moment":
       return <>{head}
-        {q.game && <div className="game"><div className="d">{q.game.date}</div>
-          <div className="s"><Dot k={q.game.winner} /> {SCHOOL[q.game.winner].name} {q.game.ws}, {SCHOOL[q.game.loser].name} {q.game.ls}{q.game.ot ? " (OT)" : ""}</div>
-          <div className="v">{q.game.venue}</div></div>}
+        <GameBoxView game={q.game} />
         <div className="prompt">{q.prompt}</div><div className="line">{q.line}</div>
         <div className="opts two">{o("over", "▲ More")}{o("under", "▼ Less")}</div></>;
     case "h2h": {
@@ -160,9 +166,10 @@ function QuestionBody({ q, reveal, onAnswer, onRank }: { q: Question; reveal: Re
         <div className="opts two">{o("x", "Player X")}{o("y", "Player Y")}</div></>;
     }
     case "cross":
-      return <>{head}<div className="prompt">{q.prompt}</div><div className="opts">{q.order.map(i => o(String(i), q.options[i]))}</div></>;
+    case "mc":
+      return <>{head}{q.type === "mc" && <GameBoxView game={q.game} />}<div className="prompt">{q.prompt}</div><div className="opts">{q.order.map(i => o(String(i), q.options[i]))}</div></>;
     case "rank":
-      return <>{head}<RankIt q={q} locked={!!reveal} onLock={onRank} /></>;
+      return <>{head}<GameBoxView game={q.game} /><RankIt q={q} locked={!!reveal} onLock={onRank} /></>;
   }
 }
 

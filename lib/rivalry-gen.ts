@@ -107,3 +107,58 @@ export function genSeriesCount(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng:
     check: { value: w, line }, sig: "sc" + x + y,
   };
 }
+
+const gameBox = (g: RivalryGame) => ({ date: longDate(g.date), winner: winner(g), loser: loser(g), ws: Math.max(g.hp, g.ap), ls: Math.min(g.hp, g.ap), venue: venue(g) });
+
+/** 5. One game, rank its players: "In this game, rank these players by receiving yards" (both schools represented). */
+export function genGameRankSingle(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
+  for (const g of shuffle(rng, pr.games.filter(g => g.box && g.hp !== g.ap)).slice(0, 12)) {
+    for (const cat of shuffle(rng, ["rec", "rush"] as const)) {
+      const perfs = Object.entries(g.box!).flatMap(([school, ps]) => ps.filter(p => p.cat === cat && p.yds >= 25).map(p => ({ school, p })));
+      if (!perfs.some(x => x.p.yds >= 60)) continue; // needs a real lead performance
+      const picks: typeof perfs = [];
+      const ok = (x: (typeof perfs)[0]) => !picks.some(y => y.p.name === x.p.name || Math.abs(y.p.yds - x.p.yds) < gameGap(y.p.yds, x.p.yds));
+      for (const s of shuffle(rng, [a, b])) { const f = shuffle(rng, perfs).find(x => x.school === s && ok(x)); if (f) picks.push(f) }
+      for (const f of shuffle(rng, perfs)) { if (picks.length === 4) break; if (ok(f)) picks.push(f) }
+      if (picks.length < 4) continue;
+      const stat = cat === "rush" ? "rushing" : "receiving";
+      return {
+        type: "rank", label: "Rivalry Game", verified: SRC_VERIFIED, pitted: true, unit: "yds", game: gameBox(g),
+        prompt: `In this game, rank these players by ${stat} yards, highest first.`,
+        items: picks.map(x => ({ label: `${x.p.name} (${x.school})`, value: x.p.yds, school: x.school })),
+        sig: "gs" + g.date + cat,
+      };
+    }
+  }
+  return null;
+}
+
+/** 6. Team stat multiple choice: "What was the difference in total yards in Auburn's 48–45 win over Alabama?" */
+export function genTeamDiffMC(pr: RivalryPair, rng: Rng): Question | null {
+  const MIN = 20; // every option at least this far from every other (and from the true answer)
+  for (const g of shuffle(rng, pr.games.filter(g => g.team && g.hp !== g.ap)).slice(0, 12)) {
+    const [x, y] = Object.keys(g.team!);
+    for (const [k, what] of shuffle(rng, [["total", "total yards"], ["rush", "rushing yards"]] as const)) {
+      const d = g.team![x][k] - g.team![y][k];
+      if (Math.abs(d) < MIN) continue; // near-even games make the flipped answer too close to call
+      const truth = d; // + means x out-gained y
+      const cands = shuffle(rng, [-truth, ...[30, 50, 70, 90, 110, 130].flatMap(j => [truth + j, truth - j, -truth + j, -truth - j])]);
+      const opts = [truth];
+      for (const c of cands) { if (opts.length === 4) break; if (Math.abs(c) >= 5 && opts.every(o => Math.abs(o - c) >= MIN)) opts.push(c) }
+      if (opts.length < 4) continue;
+      const label = (v: number) => `${name(v > 0 ? x : y)} +${fmt(Math.abs(v))} yards`;
+      const options = opts.map(label);
+      if (new Set(options).size !== 4) continue;
+      const w = winner(g), l = loser(g), ws = Math.max(g.hp, g.ap), ls = Math.min(g.hp, g.ap);
+      const more = d > 0 ? x : y;
+      return {
+        type: "mc", label: "Rivalry Game", verified: SRC_VERIFIED, pitted: true, game: gameBox(g),
+        prompt: `What was the difference in ${what} in ${name(w)}'s ${ws}–${ls} win over ${name(l)}?`,
+        options, answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
+        reveal: `${name(more)} +${fmt(Math.abs(d))}. ${name(x)} had ${fmt(g.team![x][k])} ${what}, ${name(y)} ${fmt(g.team![y][k])}.`,
+        sig: "td" + g.date + k,
+      };
+    }
+  }
+  return null;
+}

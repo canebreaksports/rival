@@ -6,41 +6,38 @@
   "away": "UK",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-17T16:48:48.620Z",
- "engine": 7,
+ "generatedAt": "2026-11-17T17:08:58.156Z",
+ "engine": 8,
  "questions": [
   {
-   "type": "prog",
-   "label": "Program Pit · Kentucky vs Missouri",
-   "a": "UK",
-   "b": "MIZ",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    14,
-    9
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing TDs, highest first.",
+   "items": [
+    {
+     "label": "Demie Sumo (RB) · 2024 UK",
+     "value": 5,
+     "school": "UK"
+    },
+    {
+     "label": "Larry Rountree III (RB) · 2019 MIZ",
+     "value": 9,
+     "school": "MIZ"
+    },
+    {
+     "label": "Damarea Crockett (RB) · 2016 MIZ",
+     "value": 10,
+     "school": "MIZ"
+    },
+    {
+     "label": "Asim Rose (RB) · 2019 UK",
+     "value": 6,
+     "school": "UK"
+    }
    ],
-   "verified": true,
-   "sig": "glosing"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": true,
-   "prompt": "In Kentucky–Missouri games since 2012, who had more rushing yards against the other school?",
-   "A": {
-    "label": "Asim Rose (UK) vs. Missouri",
-    "value": 105,
-    "school": "UK"
-   },
-   "B": {
-    "label": "Cody Schrader (MIZ) vs. Kentucky",
-    "value": 136,
-    "school": "MIZ"
-   },
-   "unit": "rushing yds",
-   "note": "Asim Rose: 105 in 3 games. Cody Schrader: 136 in 2 games.",
-   "sig": "vsrushAsim Rose,Cody Schrader"
+   "unit": "TD",
+   "sig": "rsea|rushTDAsim Rose2019,Damarea Crockett2016,Demie Sumo2024,Larry Rountree III2019"
   },
   {
    "type": "moment",
@@ -48,76 +45,29 @@
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 9, 2013",
-    "winner": "MIZ",
-    "loser": "UK",
-    "ws": 48,
-    "ls": 17,
-    "venue": "Kroger Field"
+    "date": "Oct 29, 2016",
+    "winner": "UK",
+    "loser": "MIZ",
+    "ws": 35,
+    "ls": 21,
+    "venue": "Memorial Stadium"
    },
-   "prompt": "In this game, did Maty Mauk (Missouri) throw for more or less than",
-   "line": "250 passing yards",
+   "prompt": "In this game, did Dimetrios Mason (Missouri) have more or less than",
+   "line": "120 receiving yards",
    "answer": "under",
-   "reveal": "Less. Maty Mauk had 203 passing yards and 5 TD in this game.",
+   "reveal": "Less. Dimetrios Mason had 101 receiving yards on 4 catches and 2 TD in this game.",
    "check": {
-    "value": 203,
-    "line": 250
+    "value": 101,
+    "line": 120
    },
-   "sig": "gm2013-11-09Maty Maukpass"
-  },
-  {
-   "type": "moment",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, did Kentucky beat Missouri more or fewer than",
-   "line": "6.5 times",
-   "answer": "over",
-   "reveal": "More. Kentucky went 7–5 against Missouri from 2000 to 2025 (12 meetings, on-field results).",
-   "check": {
-    "value": 7,
-    "line": 6.5
-   },
-   "sig": "scUKMIZ"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2018, did Asim Rose (Kentucky) have more or less than",
-   "line": "450 yards from scrimmage",
-   "answer": "over",
-   "reveal": "More. Asim Rose had 524 yards from scrimmage in 2018.",
-   "check": {
-    "value": 524,
-    "line": 450
-   },
-   "sig": "ppAsim Rose2018|Ish Witter2017scrim0",
-   "pair": "ppAsim Rose2018|Ish Witter2017scrim",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2017, did Ish Witter (Missouri) have more or less than",
-   "line": "950 yards from scrimmage",
-   "answer": "over",
-   "reveal": "More. Ish Witter had 1,136 yards from scrimmage in 2017.",
-   "check": {
-    "value": 1136,
-    "line": 950
-   },
-   "sig": "ppAsim Rose2018|Ish Witter2017scrim1",
-   "pair": "ppAsim Rose2018|Ish Witter2017scrim",
-   "pairPart": 2
+   "sig": "gm2016-10-29Dimetrios Masonrec"
   },
   {
    "type": "count",
    "label": "School Count",
    "a": "UK",
    "b": "MIZ",
-   "threshold": 3000,
+   "threshold": 2800,
    "A": [
     {
      "name": "Benny Snell",
@@ -134,6 +84,14 @@
     {
      "name": "Moe Williams",
      "yards": 3333
+    },
+    {
+     "name": "Rafael Little",
+     "yards": 2996
+    },
+    {
+     "name": "Mark Higgs",
+     "yards": 2892
     }
    ],
    "B": [
@@ -152,31 +110,139 @@
     {
      "name": "Brock Olivo",
      "yards": 3026
+    },
+    {
+     "name": "Devin West",
+     "yards": 2954
     }
    ],
    "verified": true,
-   "sig": "cUKMIZ3000"
+   "sig": "cUKMIZ2800"
   },
   {
-   "type": "duel",
-   "label": "Fresh Mix",
+   "type": "moment",
+   "label": "Rivalry Game",
    "verified": true,
-   "year": 2016,
-   "stat": "Receiving season",
-   "aSchool": "MIZ",
-   "other": "UK",
-   "aName": "Johnathon Johnson (WR)",
-   "bName": "Garrett Johnson (WR)",
-   "A": {
-    "big": "435",
-    "sm": "rec yds · 2 TD"
+   "pitted": true,
+   "game": {
+    "date": "Oct 26, 2019",
+    "winner": "UK",
+    "loser": "MIZ",
+    "ws": 29,
+    "ls": 7,
+    "venue": "Kroger Field"
    },
-   "B": {
-    "big": "585",
-    "sm": "rec yds · 5 TD"
+   "prompt": "In this game, did Lynn Bowden Jr. (Kentucky) run for more or less than",
+   "line": "250 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Lynn Bowden Jr. had 204 rushing yards on 21 carries and 2 TD in this game.",
+   "check": {
+    "value": 204,
+    "line": 250
    },
-   "flip": true,
-   "sig": "drec2016Garrett Johnson,Johnathon Johnson"
+   "sig": "gm2019-10-26Lynn Bowden Jr.rush"
+  },
+  {
+   "type": "rank",
+   "label": "Rivalry Games",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these single-game rushing performances in Kentucky–Missouri games, highest first.",
+   "items": [
+    {
+     "label": "Cody Schrader (MIZ) · 2022",
+     "value": 65,
+     "school": "MIZ"
+    },
+    {
+     "label": "Re'Mahn Davis (UK) · 2023",
+     "value": 128,
+     "school": "UK"
+    },
+    {
+     "label": "Ish Witter (MIZ) · 2015",
+     "value": 50,
+     "school": "MIZ"
+    },
+    {
+     "label": "Kendial Lawrence (MIZ) · 2012",
+     "value": 108,
+     "school": "MIZ"
+    }
+   ],
+   "sig": "grrushCody Schrader2022,Ish Witter2015,Kendial Lawrence2012,Re'Mahn Davis2023"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Oct 29, 2016",
+    "winner": "UK",
+    "loser": "MIZ",
+    "ws": 35,
+    "ls": 21,
+    "venue": "Memorial Stadium"
+   },
+   "prompt": "In this game, did Stanley Williams (Kentucky) run for more or less than",
+   "line": "125 rushing yards",
+   "answer": "over",
+   "reveal": "More. Stanley Williams had 182 rushing yards on 19 carries and 1 TD in this game.",
+   "check": {
+    "value": 182,
+    "line": 125
+   },
+   "sig": "gm2016-10-29Stanley Williamsrush"
+  },
+  {
+   "label": "SEC East Newcomers",
+   "verified": true,
+   "sig": "kSEC East Newcomers1",
+   "type": "moment",
+   "prompt": "Missouri's biggest win over Kentucky came in 2013. Was the margin more or less than",
+   "line": "27.5 points",
+   "answer": "over",
+   "reveal": "Over. Missouri won 48–17, a 31-point margin."
+  },
+  {
+   "type": "rank",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "game": {
+    "date": "Oct 7, 2017",
+    "winner": "UK",
+    "loser": "MIZ",
+    "ws": 40,
+    "ls": 34,
+    "venue": "Kroger Field"
+   },
+   "prompt": "In this game, rank these players by receiving yards, highest first.",
+   "items": [
+    {
+     "label": "Garrett Johnson (UK)",
+     "value": 111,
+     "school": "UK"
+    },
+    {
+     "label": "Emanuel Hall (MIZ)",
+     "value": 129,
+     "school": "MIZ"
+    },
+    {
+     "label": "J'Mon Moore (MIZ)",
+     "value": 86,
+     "school": "MIZ"
+    },
+    {
+     "label": "Lynn Bowden Jr. (UK)",
+     "value": 49,
+     "school": "UK"
+    }
+   ],
+   "sig": "gs2017-10-07rec"
   },
   {
    "type": "prog",
@@ -190,6 +256,19 @@
    ],
    "verified": true,
    "sig": "gwin3"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Missouri",
+   "a": "UK",
+   "b": "MIZ",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    10,
+    12
+   ],
+   "verified": true,
+   "sig": "gpeakW"
   }
  ]
 }

@@ -6,73 +6,53 @@
   "away": "VAN",
   "home": "FLA"
  },
- "generatedAt": "2026-11-17T16:48:48.618Z",
- "engine": 7,
+ "generatedAt": "2026-11-17T17:08:58.154Z",
+ "engine": 8,
  "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Florida",
+   "a": "VAN",
+   "b": "FLA",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    1,
+    9
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
   {
    "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving yards in a single season?",
+   "flip": false,
+   "prompt": "Who had more yards from scrimmage in a single season?",
    "A": {
-    "label": "Trent Sherfield (WR) · 2016 VAN",
-    "value": 472,
+    "label": "Re'Mahn Davis (RB) · 2022 VAN",
+    "value": 1057,
     "school": "VAN"
    },
    "B": {
-    "label": "Kadarius Toney (WR) · 2018 FLA",
-    "value": 260,
+    "label": "Lamical Perine (RB) · 2016 FLA",
+    "value": 582,
     "school": "FLA"
    },
-   "unit": "receiving yards",
-   "sig": "hKadarius Toney2018,Trent Sherfield2016rec"
+   "unit": "yards from scrimmage",
+   "sig": "hLamical Perine2016,Re'Mahn Davis2022scrim"
   },
   {
    "type": "prog",
    "label": "Program Pit · Vanderbilt vs Florida",
    "a": "VAN",
    "b": "FLA",
-   "prompt": "Who won more total games from 2000–2025?",
+   "prompt": "Who had more losing seasons from 2000–2025?",
    "values": [
-    113,
-    218
+    21,
+    6
    ],
    "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Vanderbilt vs Florida",
-   "a": "VAN",
-   "b": "FLA",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
-   "values": [
-    12,
-    0
-   ],
-   "verified": true,
-   "sig": "gwin3"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": true,
-   "prompt": "In Vanderbilt–Florida games since 2012, who had more receiving yards against the other school?",
-   "A": {
-    "label": "Will Sheppard (VAN) vs. Florida",
-    "value": 196,
-    "school": "VAN"
-   },
-   "B": {
-    "label": "Lamical Perine (FLA) vs. Vanderbilt",
-    "value": 138,
-    "school": "FLA"
-   },
-   "unit": "receiving yds",
-   "note": "Will Sheppard: 196 in 4 games. Lamical Perine: 138 in 4 games.",
-   "sig": "vsrecLamical Perine,Will Sheppard"
+   "sig": "glosing"
   },
   {
    "type": "rank",
@@ -82,27 +62,83 @@
    "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
+     "label": "Re'Mahn Davis (VAN RB) · career rushing TDs",
+     "value": 5,
+     "school": "VAN"
+    },
+    {
+     "label": "Lamical Perine (FLA RB) · 2018 rushing TDs",
+     "value": 7,
+     "school": "FLA"
+    },
+    {
      "label": "Will Sheppard (VAN WR) · 2022 receiving TDs",
      "value": 9,
      "school": "VAN"
     },
     {
-     "label": "Josh Hammond (FLA WR) · 2018 receiving TDs",
+     "label": "Kelvin Taylor (FLA RB) · 2013 rushing TDs",
      "value": 4,
      "school": "FLA"
-    },
-    {
-     "label": "Montrell Johnson (FLA RB) · 2024 rushing TDs",
-     "value": 6,
-     "school": "FLA"
-    },
-    {
-     "label": "Diego Pavia (VAN QB) · career rushing TDs",
-     "value": 18,
-     "school": "VAN"
     }
    ],
-   "sig": "mxTDDiego Paviacareer rushing TDs,Josh Hammond2018 receiving TDs,Montrell Johnson2024 rushing TDs,Will Sheppard2022 receiving TDs"
+   "sig": "mxTDKelvin Taylor2013 rushing TDs,Lamical Perine2018 rushing TDs,Re'Mahn Daviscareer rushing TDs,Will Sheppard2022 receiving TDs"
+  },
+  {
+   "label": "SEC East Originals",
+   "verified": true,
+   "sig": "kSEC East Originals0",
+   "type": "moment",
+   "prompt": "Florida's longest win streak over Vanderbilt is more or fewer than",
+   "line": "19.5 games",
+   "answer": "over",
+   "reveal": "Over. Florida won 22 straight from 1989 to 2012."
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Oct 7, 2023",
+    "winner": "FLA",
+    "loser": "VAN",
+    "ws": 38,
+    "ls": 14,
+    "venue": "Ben Hill Griffin Stadium"
+   },
+   "prompt": "In this game, did Will Sheppard (Vanderbilt) have more or less than",
+   "line": "80 receiving yards",
+   "answer": "over",
+   "reveal": "More. Will Sheppard had 107 receiving yards on 3 catches and 1 TD in this game.",
+   "check": {
+    "value": 107,
+    "line": 80
+   },
+   "sig": "gm2023-10-07Will Sheppardrec"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Oct 7, 2023",
+    "winner": "FLA",
+    "loser": "VAN",
+    "ws": 38,
+    "ls": 14,
+    "venue": "Ben Hill Griffin Stadium"
+   },
+   "prompt": "In this game, did Arlis Boardingham (Florida) have more or fewer than",
+   "line": "1.5 receiving touchdowns",
+   "answer": "over",
+   "reveal": "More. Arlis Boardingham had 99 receiving yards on 7 catches and 2 TD in this game.",
+   "check": {
+    "value": 2,
+    "line": 1.5
+   },
+   "sig": "gm2023-10-07Arlis Boardinghamrectd"
   },
   {
    "type": "count",
@@ -163,6 +199,16 @@
    "sig": "cVANFLA2500"
   },
   {
+   "label": "SEC East Originals",
+   "verified": true,
+   "sig": "kSEC East Originals1",
+   "type": "moment",
+   "prompt": "Florida's biggest win over Vanderbilt came in 2001. Was the margin more or less than",
+   "line": "50.5 points",
+   "answer": "over",
+   "reveal": "Over. Florida won 71–13, a 58-point margin."
+  },
+  {
    "type": "h2h",
    "label": "Fresh Mix",
    "upset": true,
@@ -183,67 +229,6 @@
    "ypc": true,
    "note": "🚨 Upset: Josh Hammond 14.9 per carry (9 carries) vs. Ralph Webb 4.5 per carry (931 carries).",
    "sig": "uypcRalph WebbJosh Hammond"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game receiving performances in Vanderbilt–Florida games, highest first.",
-   "items": [
-    {
-     "label": "Kalija Lipscomb (VAN) · 2017",
-     "value": 50,
-     "school": "VAN"
-    },
-    {
-     "label": "Kadarius Toney (FLA) · 2020",
-     "value": 107,
-     "school": "FLA"
-    },
-    {
-     "label": "Ke'Shawn Vaughn (VAN) · 2018",
-     "value": 75,
-     "school": "VAN"
-    },
-    {
-     "label": "Daejon Reynolds (FLA) · 2022",
-     "value": 165,
-     "school": "FLA"
-    }
-   ],
-   "sig": "grrecDaejon Reynolds2022,Kadarius Toney2020,Kalija Lipscomb2017,Ke'Shawn Vaughn2018"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2017,
-   "stat": "Rushing season",
-   "aSchool": "FLA",
-   "other": "VAN",
-   "aName": "Malik Davis (RB)",
-   "bName": "Ralph Webb (RB)",
-   "A": {
-    "big": "526",
-    "sm": "rush yds · 2 TD"
-   },
-   "B": {
-    "big": "831",
-    "sm": "rush yds · 10 TD"
-   },
-   "flip": true,
-   "sig": "drush2017Malik Davis,Ralph Webb"
-  },
-  {
-   "label": "SEC East Originals",
-   "verified": true,
-   "sig": "kSEC East Originals1",
-   "type": "moment",
-   "prompt": "Florida's biggest win over Vanderbilt came in 2001. Was the margin more or less than",
-   "line": "50.5 points",
-   "answer": "over",
-   "reveal": "Over. Florida won 71–13, a 58-point margin."
   }
  ]
 }

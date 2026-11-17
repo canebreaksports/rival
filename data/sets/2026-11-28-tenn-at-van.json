@@ -6,65 +6,9 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-17T16:48:48.637Z",
- "engine": 7,
+ "generatedAt": "2026-11-17T17:08:58.177Z",
+ "engine": 8,
  "questions": [
-  {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
-   "a": "TENN",
-   "b": "VAN",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    11,
-    10
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
-   "a": "TENN",
-   "b": "VAN",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    9,
-    21
-   ],
-   "verified": true,
-   "sig": "glosing"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Rank these players by career rushing yards (at that school), highest first.",
-   "items": [
-    {
-     "label": "Arian Foster (RB) · career, TENN",
-     "value": 2964,
-     "school": "TENN"
-    },
-    {
-     "label": "Diego Pavia (QB) · career, VAN",
-     "value": 1662,
-     "school": "VAN"
-    },
-    {
-     "label": "Dylan Sampson (RB) · career, TENN",
-     "value": 2486,
-     "school": "TENN"
-    },
-    {
-     "label": "Ke'Shawn Vaughn (RB) · career, VAN",
-     "value": 2272,
-     "school": "VAN"
-    }
-   ],
-   "unit": "yds",
-   "sig": "rcar|rushArian Fostercareer,Diego Paviacareer,Dylan Sampsoncareer,Ke'Shawn Vaughncareer"
-  },
   {
    "type": "h2h",
    "label": "Fresh Mix",
@@ -88,10 +32,11 @@
    "sig": "uypcArian FosterKalija Lipscomb"
   },
   {
-   "type": "moment",
+   "type": "rank",
    "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
+   "unit": "yds",
    "game": {
     "date": "Nov 25, 2023",
     "winner": "TENN",
@@ -100,87 +45,37 @@
     "ls": 24,
     "venue": "Neyland Stadium"
    },
-   "prompt": "In this game, did Jaylen Wright (Tennessee) run for more or less than",
-   "line": "90 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Jaylen Wright had 75 rushing yards on 11 carries and 0 TD in this game.",
-   "check": {
-    "value": 75,
-    "line": 90
-   },
-   "sig": "gm2023-11-25Jaylen Wrightrush"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": true,
-   "prompt": "In Tennessee–Vanderbilt games since 2012, who had more rushing yards against the other school?",
-   "A": {
-    "label": "Jalen Hurd (TENN) vs. Vanderbilt",
-    "value": 141,
-    "school": "TENN"
-   },
-   "B": {
-    "label": "Rocko Griffin (VAN) vs. Tennessee",
-    "value": 114,
-    "school": "VAN"
-   },
-   "unit": "rushing yds",
-   "note": "Jalen Hurd: 141 in 2 games. Rocko Griffin: 114 in 2 games.",
-   "sig": "vsrushJalen Hurd,Rocko Griffin"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "prompt": "In this game, rank these players by receiving yards, highest first.",
    "items": [
     {
-     "label": "Ralph Webb (VAN RB) · 2016 rushing TDs",
-     "value": 13,
-     "school": "VAN"
-    },
-    {
-     "label": "Jalin Hyatt (TENN WR) · 2022 receiving TDs",
-     "value": 15,
+     "label": "Squirrel White (TENN)",
+     "value": 110,
      "school": "TENN"
     },
     {
-     "label": "Ke'Shawn Vaughn (VAN RB) · career rushing TDs",
-     "value": 21,
+     "label": "Quincy Skinner Jr. (VAN)",
+     "value": 37,
      "school": "VAN"
     },
     {
-     "label": "Diego Pavia (VAN QB) · career rushing TDs",
-     "value": 18,
+     "label": "Jacob Warren (TENN)",
+     "value": 82,
+     "school": "TENN"
+    },
+    {
+     "label": "Junior Sherrill (VAN)",
+     "value": 52,
      "school": "VAN"
     }
    ],
-   "sig": "mxTDDiego Paviacareer rushing TDs,Jalin Hyatt2022 receiving TDs,Ke'Shawn Vaughncareer rushing TDs,Ralph Webb2016 rushing TDs"
-  },
-  {
-   "type": "moment",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, did Tennessee beat Vanderbilt more or fewer than",
-   "line": "18.5 times",
-   "answer": "over",
-   "reveal": "More. Tennessee went 19–7 against Vanderbilt from 2000 to 2025 (26 meetings, on-field results).",
-   "check": {
-    "value": 19,
-    "line": 18.5
-   },
-   "sig": "scTENNVAN"
+   "sig": "gs2023-11-25rec"
   },
   {
    "type": "count",
    "label": "School Count",
    "a": "TENN",
    "b": "VAN",
-   "threshold": 2500,
+   "threshold": 2250,
    "A": [
     {
      "name": "Travis Henry",
@@ -218,6 +113,30 @@
     {
      "name": "Jay Graham",
      "yards": 2609
+    },
+    {
+     "name": "Dylan Sampson",
+     "yards": 2492
+    },
+    {
+     "name": "Montario Hardesty",
+     "yards": 2391
+    },
+    {
+     "name": "Curt Watson",
+     "yards": 2364
+    },
+    {
+     "name": "Reggie Cobb",
+     "yards": 2360
+    },
+    {
+     "name": "Travis Stephens",
+     "yards": 2336
+    },
+    {
+     "name": "Jaylen Wright",
+     "yards": 2297
     }
    ],
    "B": [
@@ -232,10 +151,134 @@
     {
      "name": "Frank Mordica",
      "yards": 2632
+    },
+    {
+     "name": "Carl Woods",
+     "yards": 2490
+    },
+    {
+     "name": "Ke'Shawn Vaughn",
+     "yards": 2272
     }
    ],
    "verified": true,
-   "sig": "cTENNVAN2500"
+   "sig": "cTENNVAN2250"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Ralph Webb (VAN RB) · 2016 rushing TDs",
+     "value": 13,
+     "school": "VAN"
+    },
+    {
+     "label": "Jalin Hyatt (TENN WR) · 2022 receiving TDs",
+     "value": 15,
+     "school": "TENN"
+    },
+    {
+     "label": "Ke'Shawn Vaughn (VAN RB) · career rushing TDs",
+     "value": 21,
+     "school": "VAN"
+    },
+    {
+     "label": "Diego Pavia (VAN QB) · career rushing TDs",
+     "value": 18,
+     "school": "VAN"
+    }
+   ],
+   "sig": "mxTDDiego Paviacareer rushing TDs,Jalin Hyatt2022 receiving TDs,Ke'Shawn Vaughncareer rushing TDs,Ralph Webb2016 rushing TDs"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Joshua Dobbs (TENN QB) · 2016 rushing yards",
+     "value": 831,
+     "school": "TENN"
+    },
+    {
+     "label": "Keyon Brooks (VAN RB) · 2019 yards from scrimmage",
+     "value": 309,
+     "school": "VAN"
+    },
+    {
+     "label": "Ralph Webb (VAN RB) · career rushing yards",
+     "value": 4173,
+     "school": "VAN"
+    },
+    {
+     "label": "Ke'Shawn Vaughn (VAN RB) · 2019 rushing yards",
+     "value": 1028,
+     "school": "VAN"
+    }
+   ],
+   "sig": "mxydsJoshua Dobbs2016 rushing yards,Ke'Shawn Vaughn2019 rushing yards,Keyon Brooks2019 yards from scrimmage,Ralph Webbcareer rushing yards"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    6,
+    1
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    194,
+    113
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "moment",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did Vanderbilt beat Tennessee more or fewer than",
+   "line": "7.5 times",
+   "answer": "under",
+   "reveal": "Fewer. Vanderbilt went 7–19 against Tennessee from 2000 to 2025 (26 meetings, on-field results).",
+   "check": {
+    "value": 7,
+    "line": 7.5
+   },
+   "sig": "scVANTENN"
+  },
+  {
+   "type": "moment",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did Tennessee beat Vanderbilt more or fewer than",
+   "line": "18.5 times",
+   "answer": "over",
+   "reveal": "More. Tennessee went 19–7 against Vanderbilt from 2000 to 2025 (26 meetings, on-field results).",
+   "check": {
+    "value": 19,
+    "line": 18.5
+   },
+   "sig": "scTENNVAN"
   }
  ]
 }

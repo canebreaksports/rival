@@ -18,12 +18,16 @@ const KEY: Record<string, string> = {
 type Game = { id: number; season: number; seasonType: string; startDate: string; neutralSite: boolean; homeTeam: string; awayTeam: string; homePoints: number | null; awayPoints: number | null; venue: string | null; completed: boolean };
 type Box = { id: number; teams: { team: string; points: number; categories: { name: string; types: { name: string; athletes: { name: string; stat: string }[] }[] }[] }[] };
 export interface Perf { name: string; cat: "rush" | "rec" | "pass"; yds: number; td: number; n?: number }
-export interface RivalryGame { season: number; date: string; home: string; away: string; hp: number; ap: number; venue: string; neutral?: boolean; bowl?: boolean; box?: Record<string, Perf[]> }
+export interface TeamLine { total: number; rush: number; pass: number; to: number }
+export interface RivalryGame { season: number; date: string; home: string; away: string; hp: number; ap: number; venue: string; neutral?: boolean; bowl?: boolean; box?: Record<string, Perf[]>; team?: Record<string, TeamLine> }
 export interface VsTotal { name: string; school: string; games: number; rush: number; rushTD: number; car: number; rec: number; recTD: number; recN: number }
 
 const read = <T>(dir: string): T[] => fs.readdirSync(path.join(cache, dir)).flatMap(f => JSON.parse(fs.readFileSync(path.join(cache, dir, f), "utf8")) as T[]);
 const games = new Map<number, Game>();
 for (const g of read<Game>("games")) if (KEY[g.homeTeam] && KEY[g.awayTeam] && g.completed && g.homePoints != null && g.awayPoints != null && g.season <= 2025) games.set(g.id, g);
+type TeamBox = { id: number; teams: { team: string; points: number; stats: { category: string; stat: string }[] }[] };
+const teamBoxes = new Map<number, TeamBox>();
+for (const t of read<TeamBox>("teams")) if (games.has(t.id)) teamBoxes.set(t.id, t);
 const boxes = new Map<number, Box>();
 for (const b of read<Box>("box")) if (games.has(b.id)) boxes.set(b.id, b);
 
@@ -31,7 +35,7 @@ for (const b of read<Box>("box")) if (games.has(b.id)) boxes.set(b.id, b);
 const localDate = (iso: string) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(iso));
 
 const pairs: Record<string, { games: RivalryGame[]; vs: VsTotal[] }> = {};
-let boxKept = 0, boxRejected = 0;
+let boxKept = 0, boxRejected = 0, teamKept = 0;
 for (const g of [...games.values()].sort((x, y) => x.startDate.localeCompare(y.startDate))) {
   const h = KEY[g.homeTeam], a = KEY[g.awayTeam], key = [h, a].sort().join("|");
   const rg: RivalryGame = { season: g.season, date: localDate(g.startDate), home: h, away: a, hp: g.homePoints!, ap: g.awayPoints!, venue: g.venue ?? "",
@@ -52,9 +56,9 @@ for (const g of [...games.values()].sort((x, y) => x.startDate.localeCompare(y.s
         const num = (m: Map<string, string>, n: string) => Number(m.get(n) ?? 0) || 0;
         const top = (m: Map<string, string>, n: number) => [...m.keys()].filter(x => !/^team$/i.test(x)).sort((x, y) => num(m, y) - num(m, x)).slice(0, n);
         rg.box[k] = [
-          ...top(rushY, 2).map(n => ({ name: n, cat: "rush" as const, yds: num(rushY, n), td: num(rushT, n), n: num(car, n) })),
-          ...top(recY, 2).map(n => ({ name: n, cat: "rec" as const, yds: num(recY, n), td: num(recT, n), n: num(recN, n) })),
-          ...top(passY, 1).map(n => ({ name: n, cat: "pass" as const, yds: num(passY, n), td: num(passT, n) })),
+          ...top(rushY, 3).map(n => ({ name: n, cat: "rush" as const, yds: num(rushY, n), td: num(rushT, n), n: num(car, n) })),
+          ...top(recY, 4).map(n => ({ name: n, cat: "rec" as const, yds: num(recY, n), td: num(recT, n), n: num(recN, n) })),
+          ...top(passY, 2).map(n => ({ name: n, cat: "pass" as const, yds: num(passY, n), td: num(passT, n) })),
         ];
         // totals vs this opponent use every player in the box, not just the top performers
         for (const n of new Set([...rushY.keys(), ...recY.keys()])) {
@@ -63,6 +67,17 @@ for (const g of [...games.values()].sort((x, y) => x.startDate.localeCompare(y.s
         }
       }
     }
+  }
+  // team totals (total / rushing / passing yards, turnovers), kept only when the points match the result
+  const tb = teamBoxes.get(g.id);
+  if (tb && tb.teams.length === 2 && tb.teams.every(t => t.points === (KEY[t.team] === h ? g.homePoints : g.awayPoints))) {
+    rg.team = {};
+    for (const t of tb.teams) {
+      const st = Object.fromEntries(t.stats.map(x => [x.category, Number(x.stat)]));
+      if ([st.totalYards, st.rushingYards, st.netPassingYards].some(v => !Number.isFinite(v))) { delete rg.team; break }
+      rg.team[KEY[t.team]] = { total: st.totalYards, rush: st.rushingYards, pass: st.netPassingYards, to: Number.isFinite(st.turnovers) ? st.turnovers : 0 };
+    }
+    if (rg.team) teamKept++;
   }
   const p = (pairs[key] ??= { games: [], vs: [] });
   p.games.push(rg);
@@ -76,13 +91,13 @@ for (const g of [...games.values()].sort((x, y) => x.startDate.localeCompare(y.s
 for (const p of Object.values(pairs)) p.vs = p.vs.filter(v => v.rush >= 100 || v.rec >= 100 || v.rushTD + v.recTD >= 2).sort((x, y) => y.rush + y.rec - (x.rush + x.rec));
 
 const out = {
-  source: "CollegeFootballData API: /games (results 2000–2025) and /games/players (box scores 2012–2025), fetched 2026-11-17. Results are on-field scores. Box scores are play-by-play derived; kept only when both teams' points match the result",
+  source: "CollegeFootballData API: /games (results 2000–2025), /games/players and /games/teams (box scores 2012–2025), fetched 2026-11-17. Results are on-field scores. Box scores are play-by-play derived; kept only when both teams' points match the result",
   boxFrom: 2012,
   pairs,
 };
 fs.writeFileSync("data/rivalry.json", JSON.stringify(out) + "\n");
 const nGames = Object.values(pairs).reduce((s, p) => s + p.games.length, 0);
-console.log(`${Object.keys(pairs).length} pairs, ${nGames} games, box scores kept ${boxKept}, rejected ${boxRejected}; ${(fs.statSync("data/rivalry.json").size / 1024).toFixed(0)} KB`);
+console.log(`${Object.keys(pairs).length} pairs, ${nGames} games, box scores kept ${boxKept}, rejected ${boxRejected}, team totals ${teamKept}; ${(fs.statSync("data/rivalry.json").size / 1024).toFixed(0)} KB`);
 const lt = pairs["LSU|TENN"];
 console.log("LSU|TENN:", lt.games.map(g => `${g.season} ${g.away} ${g.ap} @ ${g.home} ${g.hp}${g.bowl ? " (bowl)" : ""}${g.box ? " ✓box" : ""}`).join("; "));
 console.log("  top vs:", lt.vs.slice(0, 5).map(v => `${v.name} (${v.school}) ${v.rush}r/${v.rec}rec in ${v.games}g`).join("; "));

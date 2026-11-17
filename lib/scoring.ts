@@ -11,7 +11,7 @@ export function correctAnswer(q: Question): string {
     case "moment": return q.answer;
     case "h2h": return q.A.value > q.B.value ? q.A.label : q.B.label;
     case "duel": return q.flip ? "y" : "x";
-    case "cross": return String(q.answer);
+    case "cross": case "mc": return String(q.answer);
     case "rank": return "";
   }
 }

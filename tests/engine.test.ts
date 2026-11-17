@@ -98,11 +98,11 @@ describe("approximate-source margins (CollegeFootballData packs)", () => {
       if (q.sig.startsWith("gm") && q.type === "moment" && q.check && /yards/.test(q.line)) // single-game margin
         expect(Math.abs(q.check.value - q.check.line)).toBeGreaterThanOrEqual(Math.max(15, 0.12 * q.check.value) - 0.001);
       if (q.sig.startsWith("vs") && q.type === "h2h") expect(Math.abs(q.A.value - q.B.value)).toBeGreaterThanOrEqual(Math.max(25, 0.1 * Math.max(q.A.value, q.B.value)));
-      if (q.sig.startsWith("gr") && q.type === "rank") {
+      if (/^g[rs]/.test(q.sig) && q.type === "rank") {
         const v = q.items.map(x => x.value).sort((x, y) => y - x);
         v.slice(1).forEach((x, j) => expect(v[j] - x).toBeGreaterThanOrEqual(Math.max(15, 0.12 * v[j]) - 0.001));
       }
-      if (/^(gm|vs|gr|sc)/.test(q.sig)) continue; // rivalry questions have their own margins (checked above)
+      if (/^(gm|vs|gr|gs|sc|td)/.test(q.sig)) continue; // rivalry questions have their own margins (checked above)
       if (q.type === "h2h" && !q.ypc && /yards/.test(q.prompt + q.unit) && !/touchdowns|TDs|receptions/.test(q.prompt + q.unit) && (approx(q.A.label) || approx(q.B.label)))
         expect(Math.abs(q.A.value - q.B.value)).toBeGreaterThanOrEqual(gap(q.A.value, q.B.value));
       if (q.type === "rank" && q.unit === "yds") { // adjacent pairs involving an approximate value
@@ -156,6 +156,18 @@ describe("pitted mode", () => {
     for (let i = 0; i < 200; i++) for (const [a, b] of [["LSU", "TENN"], ["UGA", "SC"], ["AUB", "ALA"]]) for (const q of buildRound(DATA, a, b, mulberry32(i), VERIFIED)) {
       if (q.type === "moment" && q.game && q.sig.startsWith("gm")) { seen++; expect(new Set([q.game.winner, q.game.loser])).toEqual(new Set([a, b])); expect(q.game.ws).toBeGreaterThan(q.game.ls) }
       if (q.type === "moment" && q.sig.startsWith("sc")) expect(validateQuestion(q)).toEqual([]);
+    }
+    expect(seen).toBeGreaterThan(0);
+  });
+  it("team-stat multiple choice: 4 distinct options at least 20 yards apart, one true", () => {
+    let seen = 0;
+    for (let i = 0; i < 200; i++) for (const [a, b] of [["AUB", "ALA"], ["UGA", "SC"], ["LSU", "ARK"]]) for (const q of buildRound(DATA, a, b, mulberry32(i), VERIFIED)) {
+      if (q.type !== "mc") continue;
+      seen++;
+      expect(validateQuestion(q)).toEqual([]);
+      const v = q.options.map(o => (o.startsWith(DATA.schools.find(s => s.key === a)!.name + " ") ? 1 : -1) * Number(o.replace(/[^\d]/g, "")));
+      v.forEach((x, i) => v.forEach((y, j) => { if (i < j) expect(Math.abs(x - y)).toBeGreaterThanOrEqual(20) }));
+      expect(q.game).toBeDefined();
     }
     expect(seen).toBeGreaterThan(0);
   });

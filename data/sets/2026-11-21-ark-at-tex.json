@@ -6,106 +6,175 @@
   "away": "ARK",
   "home": "TEX"
  },
- "generatedAt": "2026-11-17T16:48:48.627Z",
- "engine": 7,
+ "generatedAt": "2026-11-17T17:08:58.166Z",
+ "engine": 8,
  "questions": [
+  {
+   "label": "Southwest Conference Rivals",
+   "verified": true,
+   "sig": "kSouthwest Conference Rivals1",
+   "type": "moment",
+   "prompt": "Texas's longest win streak in the series is more or fewer than",
+   "line": "12.5 games",
+   "answer": "over",
+   "reveal": "Over. Texas won 14 straight from 1894 to 1932. Arkansas's best is 4 (1935–38)."
+  },
   {
    "type": "moment",
    "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Sep 11, 2021",
+    "date": "Dec 29, 2014",
     "winner": "ARK",
     "loser": "TEX",
-    "ws": 40,
-    "ls": 21,
-    "venue": "Razorback Stadium"
+    "ws": 31,
+    "ls": 7,
+    "venue": "NRG Stadium · Postseason"
    },
-   "prompt": "In this game, did Bijan Robinson (Texas) run for more or less than",
-   "line": "90 rushing yards",
+   "prompt": "In this game, did Brandon Allen (Arkansas) throw for more or less than",
+   "line": "200 passing yards",
    "answer": "under",
-   "reveal": "Less. Bijan Robinson had 69 rushing yards on 19 carries and 1 TD in this game.",
+   "reveal": "Less. Brandon Allen had 160 passing yards and 2 TD in this game.",
    "check": {
-    "value": 69,
-    "line": 90
+    "value": 160,
+    "line": 200
    },
-   "sig": "gm2021-09-11Bijan Robinsonrush"
+   "sig": "gm2014-12-29Brandon Allenpass"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2023,
+   "stat": "Receiving season",
+   "aSchool": "TEX",
+   "other": "ARK",
+   "aName": "Jordan Whittington (WR)",
+   "bName": "Andrew Armstrong (WR)",
+   "A": {
+    "big": "505",
+    "sm": "rec yds · 1 TD"
+   },
+   "B": {
+    "big": "764",
+    "sm": "rec yds · 5 TD"
+   },
+   "flip": false,
+   "sig": "drec2023Andrew Armstrong,Jordan Whittington"
   },
   {
    "type": "prog",
    "label": "Program Pit · Arkansas vs Texas",
    "a": "ARK",
    "b": "TEX",
-   "prompt": "Whose best season since 2000 had more wins?",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
    "values": [
-    11,
-    13
+    5,
+    0
    ],
    "verified": true,
-   "sig": "gpeakW"
+   "sig": "gwin3"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
+   "type": "mc",
+   "label": "Rivalry Game",
    "verified": true,
-   "prompt": "In 2019, did Treylon Burks (Arkansas) have more or less than",
-   "line": "525 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Treylon Burks had 475 receiving yards in 2019.",
-   "check": {
-    "value": 475,
-    "line": 525
+   "pitted": true,
+   "game": {
+    "date": "Nov 22, 2025",
+    "winner": "TEX",
+    "loser": "ARK",
+    "ws": 52,
+    "ls": 37,
+    "venue": "DKR-Texas Memorial Stadium"
    },
-   "sig": "ppTreylon Burks2019|Jordan Whittington2022rec0",
-   "pair": "ppTreylon Burks2019|Jordan Whittington2022rec",
-   "pairPart": 1
+   "prompt": "What was the difference in total yards in Texas's 52–37 win over Arkansas?",
+   "options": [
+    "Arkansas +22 yards",
+    "Arkansas +72 yards",
+    "Arkansas +92 yards",
+    "Texas +132 yards"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    0,
+    1,
+    2
+   ],
+   "reveal": "Arkansas +22. Arkansas had 512 total yards, Texas 490.",
+   "sig": "td2025-11-22total"
   },
   {
-   "type": "moment",
+   "type": "duel",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2022, did Jordan Whittington (Texas) have more or less than",
-   "line": "575 receiving yards",
-   "answer": "over",
-   "reveal": "More. Jordan Whittington had 652 receiving yards in 2022.",
-   "check": {
-    "value": 652,
-    "line": 575
+   "year": 2022,
+   "stat": "Rushing season",
+   "aSchool": "ARK",
+   "other": "TEX",
+   "aName": "Raheim Sanders (RB)",
+   "bName": "Roschon Johnson (RB)",
+   "A": {
+    "big": "1,443",
+    "sm": "rush yds · 10 TD"
    },
-   "sig": "ppTreylon Burks2019|Jordan Whittington2022rec1",
-   "pair": "ppTreylon Burks2019|Jordan Whittington2022rec",
-   "pairPart": 2
+   "B": {
+    "big": "554",
+    "sm": "rush yds · 5 TD"
+   },
+   "flip": false,
+   "sig": "drush2022Raheim Sanders,Roschon Johnson"
   },
   {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
+   "type": "count",
+   "label": "School Count",
+   "a": "ARK",
+   "b": "TEX",
+   "threshold": 3250,
+   "A": [
     {
-     "label": "Xavier Worthy (TEX WR) · 2022 receiving yards",
-     "value": 760,
-     "school": "TEX"
+     "name": "Darren McFadden",
+     "yards": 4590
     },
     {
-     "label": "Andrew Armstrong (ARK WR) · 2024 receiving yards",
-     "value": 1140,
-     "school": "ARK"
+     "name": "Alex Collins",
+     "yards": 3703
     },
     {
-     "label": "Raheim Sanders (ARK RB) · career yards from scrimmage",
-     "value": 2685,
-     "school": "ARK"
+     "name": "Ben Cowins",
+     "yards": 3570
     },
     {
-     "label": "Rashod Dubinion (ARK RB) · 2024 yards from scrimmage",
-     "value": 457,
-     "school": "ARK"
+     "name": "Dickey Morton",
+     "yards": 3317
     }
    ],
-   "sig": "mxydsAndrew Armstrong2024 receiving yards,Raheim Sanderscareer yards from scrimmage,Rashod Dubinion2024 yards from scrimmage,Xavier Worthy2022 receiving yards"
+   "B": [
+    {
+     "name": "Ricky Williams",
+     "yards": 6279
+    },
+    {
+     "name": "Cedric Benson",
+     "yards": 5540
+    },
+    {
+     "name": "Earl Campbell",
+     "yards": 4443
+    },
+    {
+     "name": "Bijan Robinson",
+     "yards": 3410
+    },
+    {
+     "name": "Jamaal Charles",
+     "yards": 3328
+    }
+   ],
+   "verified": true,
+   "sig": "cARKTEX3250"
   },
   {
    "type": "h2h",
@@ -129,78 +198,56 @@
    "sig": "urecTDRicky WilliamsCheyenne O'Grady"
   },
   {
-   "label": "Southwest Conference Rivals",
-   "verified": true,
-   "sig": "kSouthwest Conference Rivals1",
-   "type": "moment",
-   "prompt": "Texas's longest win streak in the series is more or fewer than",
-   "line": "12.5 games",
-   "answer": "over",
-   "reveal": "Over. Texas won 14 straight from 1894 to 1932. Arkansas's best is 4 (1935–38)."
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Collin Johnson (TEX WR) · 2016 receiving TDs",
-     "value": 3,
-     "school": "TEX"
-    },
-    {
-     "label": "KJ Jefferson (ARK QB) · 2022 rushing TDs",
-     "value": 9,
-     "school": "ARK"
-    },
-    {
-     "label": "Felix Jones (ARK RB) · career rushing TDs",
-     "value": 20,
-     "school": "ARK"
-    },
-    {
-     "label": "Tyrone Swoopes (TEX QB) · career rushing TDs",
-     "value": 24,
-     "school": "TEX"
-    }
-   ],
-   "sig": "mxTDCollin Johnson2016 receiving TDs,Felix Jonescareer rushing TDs,KJ Jefferson2022 rushing TDs,Tyrone Swoopescareer rushing TDs"
-  },
-  {
    "type": "prog",
    "label": "Program Pit · Arkansas vs Texas",
    "a": "ARK",
    "b": "TEX",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "prompt": "Who had more losing seasons from 2000–2025?",
    "values": [
-    3,
-    13
+    11,
+    5
    ],
    "verified": true,
-   "sig": "gwin10"
+   "sig": "glosing"
   },
   {
-   "type": "duel",
-   "label": "Fresh Mix",
+   "type": "rank",
+   "label": "Rivalry Game",
    "verified": true,
-   "year": 2020,
-   "stat": "Rushing season",
-   "aSchool": "TEX",
-   "other": "ARK",
-   "aName": "Bijan Robinson (RB)",
-   "bName": "Rakeem Boyd (RB)",
-   "A": {
-    "big": "703",
-    "sm": "rush yds · 4 TD"
+   "pitted": true,
+   "unit": "yds",
+   "game": {
+    "date": "Nov 22, 2025",
+    "winner": "TEX",
+    "loser": "ARK",
+    "ws": 52,
+    "ls": 37,
+    "venue": "DKR-Texas Memorial Stadium"
    },
-   "B": {
-    "big": "309",
-    "sm": "rush yds · 3 TD"
-   },
-   "flip": false,
-   "sig": "drush2020Bijan Robinson,Rakeem Boyd"
+   "prompt": "In this game, rank these players by receiving yards, highest first.",
+   "items": [
+    {
+     "label": "Jaden Platt (ARK)",
+     "value": 66,
+     "school": "ARK"
+    },
+    {
+     "label": "Parker Livingstone (TEX)",
+     "value": 104,
+     "school": "TEX"
+    },
+    {
+     "label": "Ryan Wingo (TEX)",
+     "value": 81,
+     "school": "TEX"
+    },
+    {
+     "label": "Michael Washington (ARK)",
+     "value": 43,
+     "school": "ARK"
+    }
+   ],
+   "sig": "gs2025-11-22rec"
   }
  ]
 }

@@ -6,39 +6,9 @@
   "away": "UGA",
   "home": "SC"
  },
- "generatedAt": "2026-11-17T16:48:48.623Z",
- "engine": 7,
+ "generatedAt": "2026-11-17T17:08:58.162Z",
+ "engine": 8,
  "questions": [
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Georgia–South Carolina games, highest first.",
-   "items": [
-    {
-     "label": "Kevin Harris (SC) · 2020",
-     "value": 53,
-     "school": "SC"
-    },
-    {
-     "label": "D'Andre Swift (UGA) · 2019",
-     "value": 113,
-     "school": "UGA"
-    },
-    {
-     "label": "Connor Shaw (SC) · 2012",
-     "value": 78,
-     "school": "SC"
-    },
-    {
-     "label": "Mike Davis (SC) · 2013",
-     "value": 149,
-     "school": "SC"
-    }
-   ],
-   "sig": "grrushConnor Shaw2012,D'Andre Swift2019,Kevin Harris2020,Mike Davis2013"
-  },
   {
    "label": "Palmetto vs. Peach",
    "verified": true,
@@ -69,39 +39,107 @@
    "flip": false,
    "prompt": "In Georgia–South Carolina games since 2012, who had more receiving yards against the other school?",
    "A": {
-    "label": "Jermaine Burton (UGA) vs. South Carolina",
-    "value": 103,
+    "label": "George Pickens (UGA) vs. South Carolina",
+    "value": 123,
     "school": "UGA"
    },
    "B": {
-    "label": "Deebo Samuel (SC) vs. Georgia",
-    "value": 143,
+    "label": "Josh Vann (SC) vs. Georgia",
+    "value": 171,
     "school": "SC"
    },
    "unit": "receiving yds",
-   "note": "Jermaine Burton: 103 in 2 games. Deebo Samuel: 143 in 3 games.",
-   "sig": "vsrecDeebo Samuel,Jermaine Burton"
+   "note": "George Pickens: 123 in 2 games. Josh Vann: 171 in 5 games.",
+   "sig": "vsrecGeorge Pickens,Josh Vann"
   },
   {
-   "type": "duel",
-   "label": "Fresh Mix",
+   "type": "moment",
+   "label": "Rivalry Game",
    "verified": true,
-   "year": 2018,
-   "stat": "Rushing season",
-   "aSchool": "UGA",
-   "other": "SC",
-   "aName": "D'Andre Swift (RB)",
-   "bName": "Rico Dowdle (RB)",
-   "A": {
-    "big": "1,049",
-    "sm": "rush yds · 10 TD"
+   "pitted": true,
+   "game": {
+    "date": "Oct 9, 2016",
+    "winner": "UGA",
+    "loser": "SC",
+    "ws": 28,
+    "ls": 14,
+    "venue": "Williams-Brice Stadium"
    },
-   "B": {
-    "big": "654",
-    "sm": "rush yds · 4 TD"
+   "prompt": "In this game, did Brian Herrien (Georgia) run for more or less than",
+   "line": "60 rushing yards",
+   "answer": "over",
+   "reveal": "More. Brian Herrien had 82 rushing yards on 9 carries and 0 TD in this game.",
+   "check": {
+    "value": 82,
+    "line": 60
    },
-   "flip": true,
-   "sig": "drush2018D'Andre Swift,Rico Dowdle"
+   "sig": "gm2016-10-09Brian Herrienrush"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Georgia vs South Carolina",
+   "a": "UGA",
+   "b": "SC",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    18,
+    3
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "mc",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Sep 8, 2018",
+    "winner": "UGA",
+    "loser": "SC",
+    "ws": 41,
+    "ls": 17,
+    "venue": "Williams-Brice Stadium"
+   },
+   "prompt": "What was the difference in rushing yards in Georgia's 41–17 win over South Carolina?",
+   "options": [
+    "Georgia +217 yards",
+    "South Carolina +307 yards",
+    "Georgia +247 yards",
+    "Georgia +307 yards"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    0,
+    2,
+    3
+   ],
+   "reveal": "Georgia +217. South Carolina had 54 rushing yards, Georgia 271.",
+   "sig": "td2018-09-08rush"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Oct 9, 2016",
+    "winner": "UGA",
+    "loser": "SC",
+    "ws": 28,
+    "ls": 14,
+    "venue": "Williams-Brice Stadium"
+   },
+   "prompt": "In this game, did Perry Orth (South Carolina) throw for more or less than",
+   "line": "225 passing yards",
+   "answer": "over",
+   "reveal": "More. Perry Orth had 288 passing yards and 0 TD in this game.",
+   "check": {
+    "value": 288,
+    "line": 225
+   },
+   "sig": "gm2016-10-09Perry Orthpass"
   },
   {
    "type": "h2h",
@@ -125,93 +163,62 @@
    "sig": "urecTDD'Andre SwiftJoshua Simon"
   },
   {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more career rushing TDs?",
+   "A": {
+    "label": "Kenny McIntosh (RB) · career, UGA",
+    "value": 16,
+    "school": "UGA"
+   },
+   "B": {
+    "label": "A.J. Turner (RB) · career, SC",
+    "value": 8,
+    "school": "SC"
+   },
+   "unit": "rushing TDs",
+   "sig": "hA.J. Turnercareer,Kenny McIntoshcareerrushTD"
+  },
+  {
    "type": "rank",
-   "label": "Rivalry Games",
+   "label": "Rivalry Game",
    "verified": true,
+   "pitted": true,
    "unit": "yds",
-   "prompt": "Rank these single-game receiving performances in Georgia–South Carolina games, highest first.",
-   "items": [
-    {
-     "label": "Brock Bowers (UGA) · 2022",
-     "value": 121,
-     "school": "UGA"
-    },
-    {
-     "label": "D.L. Moore (SC) · 2012",
-     "value": 62,
-     "school": "SC"
-    },
-    {
-     "label": "Bryan Edwards (SC) · 2019",
-     "value": 78,
-     "school": "SC"
-    },
-    {
-     "label": "George Pickens (UGA) · 2019",
-     "value": 98,
-     "school": "UGA"
-    }
-   ],
-   "sig": "grrecBrock Bowers2022,Bryan Edwards2019,D.L. Moore2012,George Pickens2019"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
    "game": {
-    "date": "Nov 4, 2017",
-    "winner": "UGA",
-    "loser": "SC",
-    "ws": 24,
-    "ls": 10,
-    "venue": "Sanford Stadium"
-   },
-   "prompt": "In this game, did Jake Bentley (South Carolina) throw for more or less than",
-   "line": "150 passing yards",
-   "answer": "over",
-   "reveal": "More. Jake Bentley had 227 passing yards and 1 TD in this game.",
-   "check": {
-    "value": 227,
-    "line": 150
-   },
-   "sig": "gm2017-11-04Jake Bentleypass"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Georgia vs South Carolina",
-   "a": "UGA",
-   "b": "SC",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    271,
-    181
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Sep 8, 2018",
+    "date": "Sep 7, 2013",
     "winner": "UGA",
     "loser": "SC",
     "ws": 41,
-    "ls": 17,
-    "venue": "Williams-Brice Stadium"
+    "ls": 30,
+    "venue": "Sanford Stadium"
    },
-   "prompt": "In this game, did Jake Fromm (Georgia) throw for more or less than",
-   "line": "225 passing yards",
-   "answer": "under",
-   "reveal": "Less. Jake Fromm had 194 passing yards and 1 TD in this game.",
-   "check": {
-    "value": 194,
-    "line": 225
-   },
-   "sig": "gm2018-09-08Jake Frommpass"
+   "prompt": "In this game, rank these players by receiving yards, highest first.",
+   "items": [
+    {
+     "label": "Keith Marshall (UGA)",
+     "value": 54,
+     "school": "UGA"
+    },
+    {
+     "label": "Nick Jones (SC)",
+     "value": 97,
+     "school": "SC"
+    },
+    {
+     "label": "Arthur Lynch (UGA)",
+     "value": 26,
+     "school": "UGA"
+    },
+    {
+     "label": "Justin Scott-Wesley (UGA)",
+     "value": 116,
+     "school": "UGA"
+    }
+   ],
+   "sig": "gs2013-09-07rec"
   }
  ]
 }

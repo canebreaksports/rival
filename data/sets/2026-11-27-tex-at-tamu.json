@@ -6,199 +6,96 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-17T16:48:48.629Z",
- "engine": 7,
+ "generatedAt": "2026-11-17T17:08:58.168Z",
+ "engine": 8,
  "questions": [
   {
-   "type": "prog",
-   "label": "Program Pit · Texas vs Texas A&M",
-   "a": "TEX",
-   "b": "TAMU",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    236,
-    195
-   ],
+   "type": "h2h",
+   "label": "Against Each Other",
    "verified": true,
-   "sig": "gtotalW"
+   "flip": false,
+   "prompt": "In Texas–Texas A&M games since 2012, who had more rushing yards against the other school?",
+   "A": {
+    "label": "Tre Wisner (TEX) vs. Texas A&M",
+    "value": 341,
+    "school": "TEX"
+   },
+   "B": {
+    "label": "Marcel Reed (TAMU) vs. Texas",
+    "value": 131,
+    "school": "TAMU"
+   },
+   "unit": "rushing yds",
+   "note": "Tre Wisner: 341 in 2 games. Marcel Reed: 131 in 2 games.",
+   "sig": "vsrushMarcel Reed,Tre Wisner"
   },
   {
-   "type": "rank",
+   "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "Rank these players by career rushing yards (at that school), highest first.",
-   "items": [
-    {
-     "label": "Tra Carson (RB) · career, TAMU",
-     "value": 2075,
-     "school": "TAMU"
-    },
-    {
-     "label": "Tyrone Swoopes (QB) · career, TEX",
-     "value": 966,
-     "school": "TEX"
-    },
-    {
-     "label": "Devon Achane (RB) · career, TAMU",
-     "value": 2376,
-     "school": "TAMU"
-    },
-    {
-     "label": "Kellen Mond (QB) · career, TAMU",
-     "value": 1616,
-     "school": "TAMU"
-    }
-   ],
-   "unit": "yds",
-   "sig": "rcar|rushDevon Achanecareer,Kellen Mondcareer,Tra Carsoncareer,Tyrone Swoopescareer"
+   "flip": true,
+   "prompt": "Who had more receiving yards in a single season?",
+   "A": {
+    "label": "Christian Kirk (WR) · 2017 TAMU",
+    "value": 919,
+    "school": "TAMU"
+   },
+   "B": {
+    "label": "Gunnar Helm (TE) · 2024 TEX",
+    "value": 786,
+    "school": "TEX"
+   },
+   "unit": "receiving yards",
+   "sig": "hChristian Kirk2017,Gunnar Helm2024rec"
   },
   {
-   "type": "moment",
+   "type": "mc",
    "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 28, 2025",
+    "date": "Nov 30, 2024",
     "winner": "TEX",
     "loser": "TAMU",
-    "ws": 27,
-    "ls": 17,
-    "venue": "DKR-Texas Memorial Stadium"
+    "ws": 17,
+    "ls": 7,
+    "venue": "Kyle Field"
    },
-   "prompt": "In this game, did Arch Manning (Texas) throw for more or less than",
-   "line": "150 passing yards",
-   "answer": "over",
-   "reveal": "More. Arch Manning had 179 passing yards and 1 TD in this game.",
-   "check": {
-    "value": 179,
-    "line": 150
-   },
-   "sig": "gm2025-11-28Arch Manningpass"
-  },
-  {
-   "type": "moment",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, did Texas A&M beat Texas more or fewer than",
-   "line": "4.5 times",
-   "answer": "under",
-   "reveal": "Fewer. Texas A&M went 3–11 against Texas from 2000 to 2025 (14 meetings, on-field results).",
-   "check": {
-    "value": 3,
-    "line": 4.5
-   },
-   "sig": "scTAMUTEX"
-  },
-  {
-   "type": "count",
-   "label": "School Count",
-   "a": "TEX",
-   "b": "TAMU",
-   "threshold": 3000,
-   "A": [
-    {
-     "name": "Ricky Williams",
-     "yards": 6279
-    },
-    {
-     "name": "Cedric Benson",
-     "yards": 5540
-    },
-    {
-     "name": "Earl Campbell",
-     "yards": 4443
-    },
-    {
-     "name": "Bijan Robinson",
-     "yards": 3410
-    },
-    {
-     "name": "Jamaal Charles",
-     "yards": 3328
-    },
-    {
-     "name": "Chris Gilbert",
-     "yards": 3231
-    },
-    {
-     "name": "Vince Young",
-     "yards": 3127
-    }
+   "prompt": "What was the difference in rushing yards in Texas's 17–7 win over Texas A&M?",
+   "options": [
+    "Texas +141 yards",
+    "Texas +171 yards",
+    "Texas A&M +271 yards",
+    "Texas +191 yards"
    ],
-   "B": [
-    {
-     "name": "Darren Lewis",
-     "yards": 5012
-    },
-    {
-     "name": "Curtis Dickey",
-     "yards": 3703
-    },
-    {
-     "name": "Trayveon Williams",
-     "yards": 3379
-    },
-    {
-     "name": "Cyrus Gray",
-     "yards": 3298
-    },
-    {
-     "name": "Greg Hill",
-     "yards": 3262
-    },
-    {
-     "name": "Rodney Thomas",
-     "yards": 3014
-    }
+   "answer": 0,
+   "order": [
+    1,
+    2,
+    0,
+    3
    ],
-   "verified": true,
-   "sig": "cTEXTAMU3000"
+   "reveal": "Texas +141. Texas A&M had 102 rushing yards, Texas 243.",
+   "sig": "td2024-11-30rush"
   },
   {
-   "type": "moment",
+   "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2023, did Xavier Worthy (Texas) have more or less than",
-   "line": "850 receiving yards",
-   "answer": "over",
-   "reveal": "More. Xavier Worthy had 1,014 receiving yards in 2023.",
-   "check": {
-    "value": 1014,
-    "line": 850
+   "flip": true,
+   "prompt": "Who had more rushing yards in a single season?",
+   "A": {
+    "label": "D'Onta Foreman (RB) · 2016 TEX",
+    "value": 2028,
+    "school": "TEX"
    },
-   "sig": "ppXavier Worthy2023|Jalen Wydermyer2020rec0",
-   "pair": "ppXavier Worthy2023|Jalen Wydermyer2020rec",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2020, did Jalen Wydermyer (Texas A&M) have more or less than",
-   "line": "575 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Jalen Wydermyer had 506 receiving yards in 2020.",
-   "check": {
-    "value": 506,
-    "line": 575
+   "B": {
+    "label": "Isaiah Spiller (RB) · 2021 TAMU",
+    "value": 1011,
+    "school": "TAMU"
    },
-   "sig": "ppXavier Worthy2023|Jalen Wydermyer2020rec1",
-   "pair": "ppXavier Worthy2023|Jalen Wydermyer2020rec",
-   "pairPart": 2
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas vs Texas A&M",
-   "a": "TEX",
-   "b": "TAMU",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    5,
-    5
-   ],
-   "verified": true,
-   "sig": "glosing"
+   "unit": "rushing yards",
+   "sig": "hD'Onta Foreman2016,Isaiah Spiller2021rush"
   },
   {
    "type": "h2h",
@@ -220,6 +117,85 @@
    "unit": "",
    "note": "🚨 Upset: Jalen Wydermyer 118 vs. Bijan Robinson 60.",
    "sig": "urecNBijan RobinsonJalen Wydermyer"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2025",
+    "winner": "TEX",
+    "loser": "TAMU",
+    "ws": 27,
+    "ls": 17,
+    "venue": "DKR-Texas Memorial Stadium"
+   },
+   "prompt": "In this game, did Marcel Reed (Texas A&M) run for more or less than",
+   "line": "90 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Marcel Reed had 71 rushing yards on 12 carries and 0 TD in this game.",
+   "check": {
+    "value": 71,
+    "line": 90
+   },
+   "sig": "gm2025-11-28Marcel Reedrush"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Texas A&M",
+   "a": "TEX",
+   "b": "TAMU",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    236,
+    195
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Texas A&M",
+   "a": "TEX",
+   "b": "TAMU",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    13,
+    2
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "mc",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 30, 2024",
+    "winner": "TEX",
+    "loser": "TAMU",
+    "ws": 17,
+    "ls": 7,
+    "venue": "Kyle Field"
+   },
+   "prompt": "What was the difference in total yards in Texas's 17–7 win over Texas A&M?",
+   "options": [
+    "Texas +213 yards",
+    "Texas A&M +323 yards",
+    "Texas +123 yards",
+    "Texas +103 yards"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    3,
+    0,
+    1
+   ],
+   "reveal": "Texas +213. Texas A&M had 248 total yards, Texas 461.",
+   "sig": "td2024-11-30total"
   }
  ]
 }

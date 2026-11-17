@@ -61,6 +61,8 @@ export function validateQuestion(q: Question): string[] {
   }
   if (q.type === "h2h" && q.A.value === q.B.value) errs.push(`${where}: tie`);
   if (q.type === "duel" && (q.A.big === q.B.big || q.aSchool === q.other)) errs.push(`${where}: duel lines or schools identical`);
+  if (q.type === "mc" && (!(q.answer >= 0 && q.answer < q.options.length) || new Set(q.options).size !== q.options.length || q.order.length !== q.options.length))
+    errs.push(`${where}: multiple choice answer out of range or duplicate options`);
   if (q.type === "count" && (q.A.some(x => x.yards < q.threshold) || q.B.some(x => x.yards < q.threshold))) errs.push(`${where}: player under threshold`);
   if (q.type !== "rank" && correctAnswer(q) === "") errs.push(`${where}: no correct answer`);
   return errs;
