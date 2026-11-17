@@ -79,3 +79,15 @@ textarea,input[type=date]{width:100%;background:#050a07;color:var(--chalk);borde
 .back{display:block;margin:18px auto 0;color:var(--dim);font-size:12px;text-align:center}
 :focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 @media (max-width:360px){.grid{grid-template-columns:1fr}.opts.two{grid-template-columns:1fr}}
+/* Name Them, one guess at a time */
+.bonus input[type=text]{flex:1;min-width:0;background:#050a07;color:var(--chalk);border:1px solid var(--line);border-radius:10px;padding:12px;font:600 16px Inter}
+.bonus form.row{margin-top:8px}
+.tally{display:flex;justify-content:space-between;font:600 13px Inter;color:var(--dim);letter-spacing:1px}
+.named{font-size:13px;color:var(--good);margin-top:6px;line-height:1.5}
+.guess{margin-top:8px;font-size:14px;line-height:1.4}
+.guess.good{color:var(--good)}.guess.bad{color:var(--bad)}.guess.info{color:var(--gold)}
+.slots{margin-top:8px;font-size:13px;line-height:1.9}
+.slots b{font-family:Oswald;letter-spacing:1px;color:var(--dim);margin-right:4px}
+.slot{display:inline-block;margin:0 4px 4px 0;padding:1px 8px;border:1px dashed var(--line);border-radius:6px;color:var(--dim)}
+.slot.ok{border:1px solid var(--good);color:var(--good)}
+.slot.hint{border-color:var(--gold);color:var(--gold)}

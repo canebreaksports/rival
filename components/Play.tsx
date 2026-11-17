@@ -5,7 +5,7 @@ import type { Progress, Question, SchoolKey } from "@/lib/types";
 import { SCHOOL } from "@/lib/schools";
 import { fmt } from "@/lib/generators";
 import { applyResult, correctAnswer, grade, POINTS, scoreRank } from "@/lib/scoring";
-import { matchNames } from "@/lib/names";
+import { matchOne } from "@/lib/names";
 import { store } from "@/lib/storage";
 import { Dot } from "./Dot";
 
@@ -203,23 +203,81 @@ function RankIt({ q, locked, onLock }: { q: Extract<Question, { type: "rank" }>;
 function hashIdx(s: string, i: number) { let h = 2166136261; for (const c of s + i) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619) } return h >>> 0 }
 
 function NameThem({ q, onDone, onNext, last }: { q: Extract<Question, { type: "count" }>; onDone: (pts: number) => void; onNext: () => void; last: boolean }) {
-  const people = [...q.A.map(x => ({ ...x, t: q.a })), ...q.B.map(x => ({ ...x, t: q.b }))];
-  const unique = [...new Map(people.map(x => [x.t + "|" + x.name, x])).values()]; // a player with two seasons counts once in the bonus
+  // Every occurrence is its own slot: a player with two qualifying seasons (or games) has to be named twice.
+  const slots = [...q.A.map(x => ({ ...x, t: q.a })), ...q.B.map(x => ({ ...x, t: q.b }))];
+  const unique = [...new Map(slots.map(x => [x.t + "|" + x.name, x])).values()];
+  const MISSES = 3;
   const [text, setText] = useState("");
-  const [hit, setHit] = useState<Set<string> | null>(null);
-  if (!people.length) return <div className="next show"><button className="btn" onClick={onNext}>{last ? "Final Whistle" : "Next Play →"}</button></div>;
-  const submit = (input: string) => { const h = matchNames(input, unique); setHit(h); onDone(h.size * POINTS.name) };
-  const list = (k: SchoolKey) => people.filter(x => x.t === k);
+  const [filled, setFilled] = useState<number[]>([]);      // slot indexes, in the order named
+  const [hinted, setHinted] = useState<number[]>([]);      // slot indexes whose year has been revealed
+  const [misses, setMisses] = useState<string[]>([]);
+  const [msg, setMsg] = useState<{ tone: "good" | "bad" | "info"; text: string } | null>(null);
+  const [over, setOver] = useState(false);
+  if (!slots.length) return <div className="next show"><button className="btn" onClick={onNext}>{last ? "Final Whistle" : "Next Play →"}</button></div>;
+  const hasYears = slots.some(x => x.season);
+  const finish = (f: number[]) => { setOver(true); onDone(f.length * POINTS.name) };
+  const openFor = (name: string, f: number[]) => slots.map((x, i) => i).filter(i => slots[i].name === name && !f.includes(i));
+  // players whose every slot is filled count as "already named"
+  const done = new Set(unique.filter(u => openFor(u.name, filled).length === 0).map(u => u.name));
+
+  // one guess at a time: hits score, repeats and "which one?" are free, 3 misses ends it
+  function guess(e: React.FormEvent) {
+    e.preventDefault();
+    if (!text.trim() || over) return;
+    const g = matchOne(text, unique, done);
+    setText("");
+    if (g.status === "hit") {
+      const open = openFor(g.name, filled);
+      const i = open.find(j => hinted.includes(j)) ?? open[0]; // fill a hinted slot first
+      const f = [...filled, i];
+      setFilled(f);
+      const left = openFor(g.name, f).length;
+      setMsg({ tone: "good", text: `✅ ${g.name}${slots[i].season ? ` (${slots[i].season})` : ""} · +${POINTS.name}${left ? ` — he's on the list ${left} more time${left > 1 ? "s" : ""}` : ""}` });
+      if (f.length === slots.length) finish(f);
+    } else if (g.status === "dup") setMsg({ tone: "info", text: `Already named every ${g.name} entry.` });
+    else if (g.status === "ambiguous") setMsg({ tone: "info", text: `Which one? Add a first name: ${g.options.join(" or ")}.` });
+    else {
+      const m = [...misses, text.trim()];
+      setMisses(m);
+      setMsg({ tone: "bad", text: `❌ “${text.trim()}” isn't on the list.` });
+      if (m.length >= MISSES) finish(filled);
+    }
+  }
+  // a hint reveals the year of one more open slot
+  const nextHint = slots.map((_, i) => i).find(i => !filled.includes(i) && !hinted.includes(i));
+  const hint = () => { if (nextHint != null) setHinted([...hinted, nextHint]) };
+
+  const bySchool = (k: SchoolKey) => slots.map((x, i) => ({ ...x, i })).filter(x => x.t === k);
+  const slotView = (x: (typeof slots)[0] & { i: number }) =>
+    filled.includes(x.i) ? <span key={x.i} className="slot ok">{x.name}{x.season ? ` ’${String(x.season).slice(2)}` : ""}</span>
+      : hinted.includes(x.i) && x.season ? <span key={x.i} className="slot hint">? · {x.season}</span>
+      : <span key={x.i} className="slot" aria-label="unnamed">▢</span>;
   return <div className="bonus">
     <div className="kind">Bonus · Name Them</div>
-    <div className="prompt" style={{ fontSize: 15, margin: "6px 0 10px" }}>Name as many of the {unique.length} players as you can, from either school. +25 each. Last names are fine.</div>
-    <textarea rows={3} value={text} disabled={!!hit} onChange={e => setText(e.target.value)} placeholder="e.g. Jackson, Fournette, ..." aria-label="Names" />
-    {!hit && <div className="row"><button className="btn ghost" onClick={() => submit("")}>Skip</button><button className="btn" onClick={() => submit(text)}>Submit</button></div>}
-    {hit && <>
-      <div className={`reveal show ${hit.size ? "good" : "bad"}`}>
-        <b>{hit.size} of {unique.length} named · +{hit.size * POINTS.name}</b>
+    <div className="prompt" style={{ fontSize: 15, margin: "6px 0 10px" }}>
+      Name all {slots.length} one at a time, from either school{hasYears && slots.length !== unique.length ? " (a player on the list twice must be named twice)" : ""}. +{POINTS.name} each. Last names are fine. {MISSES} misses and you&apos;re out.</div>
+    {!over && <>
+      <div className="tally" aria-live="polite">
+        <span>{filled.length} of {slots.length} named</span>
+        <span aria-label={`${misses.length} of ${MISSES} misses`}>{Array.from({ length: MISSES }, (_, i) => (i < misses.length ? "✗" : "○")).join(" ")}</span>
+      </div>
+      {[q.a, q.b].map(k => <div key={k} className="slots"><b>{SCHOOL[k].name}</b> {bySchool(k).length ? bySchool(k).map(slotView) : <span className="slot">none</span>}</div>)}
+      <form className="row" onSubmit={guess}>
+        <input type="text" value={text} onChange={e => setText(e.target.value)} placeholder="e.g. Fournette" aria-label="Player name"
+          autoComplete="off" autoCapitalize="words" spellCheck={false} enterKeyHint="go" autoFocus />
+        <button className="btn" type="submit" style={{ width: "auto" }}>Enter</button>
+      </form>
+      {msg && <div className={`guess ${msg.tone}`} role="status">{msg.text}</div>}
+      <div className="row">
+        {hasYears && <button className="btn ghost" disabled={nextHint == null} onClick={hint}>Hint (year)</button>}
+        <button className="btn ghost" onClick={() => finish(filled)}>I&apos;m done</button>
+      </div>
+    </>}
+    {over && <>
+      <div className={`reveal show ${filled.length ? "good" : "bad"}`}>
+        <b>{filled.length} of {slots.length} named · +{filled.length * POINTS.name}</b>
         {[q.a, q.b].map(k => <div key={k} style={{ marginTop: 10 }}><b>{SCHOOL[k].name}</b>
-          {list(k).length ? list(k).map(x => <div key={x.name + (x.season ?? "")}>{hit.has(x.name) ? "✅" : "▫️"} {x.name}{x.season ? ` ${x.season}` : ""} ({fmt(x.yards)}{x.active ? ", active" : ""})</div>) : <div>None</div>}</div>)}
+          {bySchool(k).length ? bySchool(k).map(x => <div key={x.i}>{filled.includes(x.i) ? "✅" : "▫️"} {x.name}{x.season ? ` ${x.season}` : ""} ({fmt(x.yards)}{x.active ? ", active" : ""})</div>) : <div>None</div>}</div>)}
       </div>
       <div className="next show"><button className="btn" onClick={onNext}>{last ? "Final Whistle" : "Next Play →"}</button></div>
     </>}
