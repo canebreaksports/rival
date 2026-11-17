@@ -6,7 +6,7 @@
   "away": "TAMU",
   "home": "OU"
  },
- "generatedAt": "2026-11-17T17:39:48.009Z",
+ "generatedAt": "2026-11-17T18:07:41.487Z",
  "engine": 9,
  "questions": [
   {
@@ -18,29 +18,35 @@
    "A": [
     {
      "name": "Darren Lewis",
-     "yards": 5012
+     "yards": 5012,
+     "profile": "No. 1 on Texas A&M's career rushing list"
     }
    ],
    "B": [
     {
      "name": "Samaje Perine",
-     "yards": 4122
+     "yards": 4122,
+     "profile": "Running back · Oklahoma 2014–2016 · No. 1 on Oklahoma's career rushing list · 49 career rushing TDs"
     },
     {
      "name": "Billy Sims",
-     "yards": 4118
+     "yards": 4118,
+     "profile": "No. 2 on Oklahoma's career rushing list"
     },
     {
      "name": "Joe Washington",
-     "yards": 4071
+     "yards": 4071,
+     "profile": "No. 3 on Oklahoma's career rushing list"
     },
     {
      "name": "Adrian Peterson",
-     "yards": 4045
+     "yards": 4045,
+     "profile": "Running back · Oklahoma 2004–2006 · No. 4 on Oklahoma's career rushing list · 41 career rushing TDs"
     },
     {
      "name": "Steve Owens",
-     "yards": 4041
+     "yards": 4041,
+     "profile": "No. 5 on Oklahoma's career rushing list"
     }
    ],
    "verified": true,
@@ -136,29 +142,34 @@
     {
      "name": "Kevin Concepcion",
      "yards": 919,
-     "season": 2025
+     "season": 2025,
+     "profile": "Wide receiver · 2025: 75 rushing, 919 receiving yds"
     },
     {
      "name": "Mario Craver",
      "yards": 911,
-     "season": 2025
+     "season": 2025,
+     "profile": "Wide receiver · 2025: 81 rushing, 911 receiving yds"
     }
    ],
    "B": [
     {
      "name": "Marvin Mims",
      "yards": 1083,
-     "season": 2022
+     "season": 2022,
+     "profile": "Wide receiver · 2022: 3 rushing, 1,083 receiving yds"
     },
     {
      "name": "Drake Stoops",
      "yards": 962,
-     "season": 2023
+     "season": 2023,
+     "profile": "Wide receiver · 2023: 8 rushing, 962 receiving yds"
     },
     {
      "name": "Isaiah Sategna",
      "yards": 949,
-     "season": 2025
+     "season": 2025,
+     "profile": "Wide receiver · 2025: 24 rushing, 949 receiving yds"
     }
    ],
    "sig": "tsrec8502020"

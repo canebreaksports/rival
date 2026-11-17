@@ -6,8 +6,9 @@ import type { Question, RivalryPair, SchoolKey } from "./types";
 import { pick, shuffle, type Rng } from "./rng";
 import { SCHOOL } from "./schools";
 import { fmt } from "./generators";
+import { posName, profileLine, yds } from "./profile";
 
-export interface LeaderSeason { name: string; season: number; rush: number; rec: number; margin: number }
+export interface LeaderSeason { name: string; season: number; rush: number; rec: number; margin: number; pos?: string }
 export interface SeasonLeaders { source: string; from: number; to: number; schools: Record<SchoolKey, LeaderSeason[]> }
 
 const name = (k: SchoolKey) => SCHOOL[k].name;
@@ -28,7 +29,12 @@ export function genSeasonCount(sl: SeasonLeaders, a: SchoolKey, b: SchoolKey, rn
   }
   if (!cands.length) return null;
   const { k, t, from } = pick(rng, cands);
-  const list = (L: typeof A) => L.filter(s => s.season >= from && s.season <= sl.to && s[k] >= t).map(s => ({ name: s.name, yards: s[k], season: s.season }));
+  const on = (L: typeof A) => L.filter(s => s.season >= from && s.season <= sl.to && s[k] >= t);
+  const list = (L: typeof A) => on(L).map(s => {
+    const again = on(L).filter(x => x.name === s.name && x.season !== s.season).map(x => x.season);
+    return { name: s.name, yards: s[k], season: s.season, profile: profileLine(posName(s.pos),
+      `${s.season}: ${yds(s.rush, "rushing")}, ${yds(s.rec, "receiving")} yds`, again.length && `also on this list in ${again.join(" and ")}`) };
+  });
   const what = k === "rush" ? "rushing" : "receiving";
   return {
     type: "count", label: "Since " + from, a, b, threshold: t, verified: true, pitted: true,
@@ -38,14 +44,21 @@ export function genSeasonCount(sl: SeasonLeaders, a: SchoolKey, b: SchoolKey, rn
 }
 
 /** 2. 100-yard games against the other school, over the pair's fully covered window. */
-export function genGameCount(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
+export function genGameCount(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rng, sl?: SeasonLeaders): Question | null {
   const from = pr.vsFrom;
   if (from == null) return null;
   const games = pr.games.filter(g => g.season >= from && g.box);
   for (const [cat, t] of shuffle(rng, [["rush", 100], ["rec", 100], ["rush", 150], ["pass", 300]] as const)) {
     const perfs = games.flatMap(g => Object.entries(g.box!).flatMap(([school, ps]) => ps.filter(p => p.cat === cat).map(p => ({ school, p, g }))));
     if (perfs.some(x => Math.abs(x.p.yds - t) < gameGap(t))) continue;           // nobody close enough to the line to flip it
-    const hit = (s: SchoolKey) => perfs.filter(x => x.school === s && x.p.yds >= t).map(x => ({ name: x.p.name, yards: x.p.yds, season: x.g.season }));
+    const posOf = (school: SchoolKey, n: string) => sl?.schools[school]?.find(x => x.name === n && x.pos)?.pos;
+    const unit = cat === "rush" ? ["rushing yards", "carries"] : cat === "rec" ? ["receiving yards", "catches"] : ["passing yards", ""];
+    const hit = (s: SchoolKey) => perfs.filter(x => x.school === s && x.p.yds >= t).map(x => {
+      const again = perfs.filter(y => y.school === s && y.p.yds >= t && y.p.name === x.p.name && y.g !== x.g).map(y => y.g.season);
+      return { name: x.p.name, yards: x.p.yds, season: x.g.season, profile: profileLine(posName(posOf(s, x.p.name)),
+        `${x.g.season} vs. ${name(s === a ? b : a)}: ${yds(x.p.yds, unit[0])}${x.p.n && unit[1] ? ` on ${x.p.n} ${unit[1]}` : ""}, ${x.p.td} TD`,
+        again.length && `also on this list in ${again.join(" and ")}`) };
+    });
     const n = hit(a).length + hit(b).length;
     if (n < 2 || n > 14) continue;
     const what = cat === "rush" ? "rushing" : cat === "rec" ? "receiving" : "passing";

@@ -6,7 +6,7 @@
   "away": "VAN",
   "home": "FLA"
  },
- "generatedAt": "2026-11-17T17:39:48.005Z",
+ "generatedAt": "2026-11-17T18:07:41.484Z",
  "engine": 9,
  "questions": [
   {
@@ -180,12 +180,14 @@
     {
      "name": "Kadarius Toney",
      "yards": 984,
-     "season": 2020
+     "season": 2020,
+     "profile": "Wide receiver · 2020: 161 rushing, 984 receiving yds"
     },
     {
      "name": "Ricky Pearsall",
      "yards": 970,
-     "season": 2023
+     "season": 2023,
+     "profile": "Wide receiver · 2023: 62 rushing, 970 receiving yds"
     }
    ],
    "sig": "tsrec9002020"

@@ -6,7 +6,7 @@
   "away": "UK",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-17T17:39:48.007Z",
+ "generatedAt": "2026-11-17T18:07:41.486Z",
  "engine": 9,
  "questions": [
   {
@@ -214,14 +214,16 @@
     {
      "name": "Wan'Dale Robinson",
      "yards": 1334,
-     "season": 2021
+     "season": 2021,
+     "profile": "Wide receiver · 2021: 111 rushing, 1,334 receiving yds"
     }
    ],
    "B": [
     {
      "name": "Luther Burden III",
      "yards": 1205,
-     "season": 2023
+     "season": 2023,
+     "profile": "Wide receiver · 2023: 38 rushing, 1,205 receiving yds"
     }
    ],
    "sig": "tsrec11002020"

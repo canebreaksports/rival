@@ -6,7 +6,7 @@
   "away": "AUB",
   "home": "ALA"
  },
- "generatedAt": "2026-11-17T17:39:48.018Z",
+ "generatedAt": "2026-11-17T18:07:41.499Z",
  "engine": 9,
  "questions": [
   {
@@ -122,29 +122,35 @@
    "A": [
     {
      "name": "Bo Jackson",
-     "yards": 4303
+     "yards": 4303,
+     "profile": "Running back · No. 1 on Auburn's career rushing list · 43 career rushing TDs"
     },
     {
      "name": "Carnell 'Cadillac' Williams",
-     "yards": 3831
+     "yards": 3831,
+     "profile": "Running back · No. 2 on Auburn's career rushing list · 45 career rushing TDs"
     },
     {
      "name": "James Brooks",
-     "yards": 3523
+     "yards": 3523,
+     "profile": "Running back · No. 3 on Auburn's career rushing list"
     }
    ],
    "B": [
     {
      "name": "Najee Harris",
-     "yards": 3843
+     "yards": 3843,
+     "profile": "Running back · Alabama 2019–2020 · No. 1 on Alabama's career rushing list · 46 career rushing TDs"
     },
     {
      "name": "Derrick Henry",
-     "yards": 3591
+     "yards": 3591,
+     "profile": "Running back · Alabama 2014–2015 · No. 2 on Alabama's career rushing list · 42 career rushing TDs"
     },
     {
      "name": "Shaun Alexander",
-     "yards": 3565
+     "yards": 3565,
+     "profile": "No. 3 on Alabama's career rushing list"
     }
    ],
    "verified": true,

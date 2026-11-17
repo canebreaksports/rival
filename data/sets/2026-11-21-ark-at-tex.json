@@ -6,7 +6,7 @@
   "away": "ARK",
   "home": "TEX"
  },
- "generatedAt": "2026-11-17T17:39:48.014Z",
+ "generatedAt": "2026-11-17T18:07:41.494Z",
  "engine": 9,
  "questions": [
   {
@@ -75,39 +75,46 @@
     {
      "name": "Rakeem Boyd",
      "yards": 1133,
-     "season": 2019
+     "season": 2019,
+     "profile": "Running back · 2019: 1,133 rushing, 160 receiving yds"
     },
     {
      "name": "Raheim Sanders",
      "yards": 1443,
-     "season": 2022
+     "season": 2022,
+     "profile": "Running back · 2022: 1,443 rushing, 271 receiving yds"
     },
     {
      "name": "Michael Washington",
      "yards": 1068,
-     "season": 2025
+     "season": 2025,
+     "profile": "Running back · 2025: 1,068 rushing, 226 receiving yds"
     }
    ],
    "B": [
     {
      "name": "Bijan Robinson",
      "yards": 1127,
-     "season": 2021
+     "season": 2021,
+     "profile": "Running back · 2021: 1,127 rushing, 295 receiving yds · also on this list in 2022"
     },
     {
      "name": "Bijan Robinson",
      "yards": 1578,
-     "season": 2022
+     "season": 2022,
+     "profile": "Running back · 2022: 1,578 rushing, 314 receiving yds · also on this list in 2021"
     },
     {
      "name": "Jonathon Brooks",
      "yards": 1139,
-     "season": 2023
+     "season": 2023,
+     "profile": "Running back · 2023: 1,139 rushing, 286 receiving yds"
     },
     {
      "name": "Tre Wisner",
      "yards": 1064,
-     "season": 2024
+     "season": 2024,
+     "profile": "Running back · 2024: 1,064 rushing, 311 receiving yds"
     }
    ],
    "sig": "tsrush10002018"
@@ -121,69 +128,85 @@
    "A": [
     {
      "name": "Darren McFadden",
-     "yards": 4590
+     "yards": 4590,
+     "profile": "Running back · Arkansas 2005–2007 · No. 1 on Arkansas's career rushing list · 41 career rushing TDs"
     },
     {
      "name": "Alex Collins",
-     "yards": 3703
+     "yards": 3703,
+     "profile": "Running back · Arkansas 2013–2015 · No. 2 on Arkansas's career rushing list · 36 career rushing TDs"
     },
     {
      "name": "Ben Cowins",
-     "yards": 3570
+     "yards": 3570,
+     "profile": "No. 3 on Arkansas's career rushing list"
     },
     {
      "name": "Dickey Morton",
-     "yards": 3317
+     "yards": 3317,
+     "profile": "No. 4 on Arkansas's career rushing list"
     },
     {
      "name": "Cedric Cobbs",
-     "yards": 3018
+     "yards": 3018,
+     "profile": "No. 5 on Arkansas's career rushing list"
     },
     {
      "name": "Felix Jones",
-     "yards": 2956
+     "yards": 2956,
+     "profile": "Running back · Arkansas 2005–2007 · No. 6 on Arkansas's career rushing list · 20 career rushing TDs"
     },
     {
      "name": "James Rouse",
-     "yards": 2887
+     "yards": 2887,
+     "profile": "No. 7 on Arkansas's career rushing list"
     }
    ],
    "B": [
     {
      "name": "Ricky Williams",
-     "yards": 6279
+     "yards": 6279,
+     "profile": "Running back · Texas 1995–1998 · No. 1 on Texas's career rushing list · 75 career rushing TDs"
     },
     {
      "name": "Cedric Benson",
-     "yards": 5540
+     "yards": 5540,
+     "profile": "No. 2 on Texas's career rushing list"
     },
     {
      "name": "Earl Campbell",
-     "yards": 4443
+     "yards": 4443,
+     "profile": "No. 3 on Texas's career rushing list"
     },
     {
      "name": "Bijan Robinson",
-     "yards": 3410
+     "yards": 3410,
+     "profile": "Running back · Texas 2020–2022 · No. 4 on Texas's career rushing list · 33 career rushing TDs"
     },
     {
      "name": "Jamaal Charles",
-     "yards": 3328
+     "yards": 3328,
+     "profile": "No. 5 on Texas's career rushing list"
     },
     {
      "name": "Chris Gilbert",
-     "yards": 3231
+     "yards": 3231,
+     "profile": "No. 6 on Texas's career rushing list"
     },
     {
      "name": "Vince Young",
-     "yards": 3127
+     "yards": 3127,
+     "profile": "Quarterback · Texas 2003–2005 · No. 7 on Texas's career rushing list · 37 career rushing TDs"
     },
     {
      "name": "Roosevelt Leaks",
-     "yards": 2923
+     "yards": 2923,
+     "profile": "No. 8 on Texas's career rushing list"
     },
     {
      "name": "A. J. Jones",
-     "yards": 2874
+     "yards": 2874,
+     "profile": "No. 9 on Texas's career rushing list"
     }
    ],
    "verified": true,

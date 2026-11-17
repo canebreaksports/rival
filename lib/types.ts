@@ -64,7 +64,7 @@ export interface RivalryPair { games: RivalryGame[]; vs: VsTotal[]; vsFrom?: num
 
 // ---- questions: fully self-contained so frozen sets need no data at runtime ----
 interface QBase { label: string; verified: boolean; sig: string; trap?: boolean; upset?: boolean; pair?: string; pairPart?: 1 | 2; pitted?: boolean } // pitted: about both schools by construction
-export interface CountEntry { name: string; yards: number; active?: boolean; season?: number } // season: for season/game counts
+export interface CountEntry { name: string; yards: number; active?: boolean; season?: number; profile?: string } // season: season/game counts; profile: hint 2
 export interface Item { label: string; value: number; school?: SchoolKey } // school: who the item belongs to (pitted checks)
 
 export type Question = QBase & (
@@ -89,4 +89,4 @@ export interface FrozenSet {
   questions: Question[];
 }
 
-export interface Progress { i: number; pts: number; streak: number; best: number; right: number; n: number; done: boolean }
+export interface Progress { i: number; pts: number; streak: number; best: number; right: number; n: number; done: boolean; hints?: number; marks?: string } // marks: ✅/🟨/❌ per question

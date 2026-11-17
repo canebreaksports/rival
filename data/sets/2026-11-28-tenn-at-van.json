@@ -6,7 +6,7 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-17T17:39:48.024Z",
+ "generatedAt": "2026-11-17T18:07:41.506Z",
  "engine": 9,
  "questions": [
   {
@@ -22,17 +22,20 @@
     {
      "name": "Cedric Tillman",
      "yards": 1081,
-     "season": 2021
+     "season": 2021,
+     "profile": "Wide receiver · 2021: 0 rushing, 1,081 receiving yds"
     },
     {
      "name": "Jalin Hyatt",
      "yards": 1267,
-     "season": 2022
+     "season": 2022,
+     "profile": "Wide receiver · 2022: 0 rushing, 1,267 receiving yds"
     },
     {
      "name": "Chris Brazzell II",
      "yards": 1017,
-     "season": 2025
+     "season": 2025,
+     "profile": "Wide receiver · 2025: 0 rushing, 1,017 receiving yds"
     }
    ],
    "B": [],

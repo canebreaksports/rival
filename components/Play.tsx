@@ -6,6 +6,7 @@ import { SCHOOL } from "@/lib/schools";
 import { fmt } from "@/lib/generators";
 import { applyResult, correctAnswer, grade, POINTS, scoreRank } from "@/lib/scoring";
 import { matchOne } from "@/lib/names";
+import { initials } from "@/lib/profile";
 import { store } from "@/lib/storage";
 import { Dot } from "./Dot";
 
@@ -43,7 +44,8 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
   const q = questions[p.i];
 
   function settle(ok: boolean, base: number, msg: ReactNode, correct = "", chosen = "") {
-    const np = applyResult(p, ok, base);
+    const mark = ok ? "✅" : base > 0 ? "🟨" : "❌"; // 🟨 = partial credit (rank)
+    const np = { ...applyResult(p, ok, base), marks: (p.marks ?? "") + mark };
     const last = p.i + 1 >= n;
     setP(np);
     setReveal({ ok, msg, correct, chosen });
@@ -64,9 +66,10 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
     setP(x => ({ ...x, i: x.i + 1 }));
   }
 
-  const addBonus = (pts: number) => {
-    setP(x => { const np = { ...x, pts: x.pts + pts }; save({ ...np, i: x.i + 1 >= n ? x.i : x.i + 1, done: x.i + 1 >= n }); return np });
-  };
+  // after a question is answered, progress is saved as already past it (see settle)
+  const savePast = (np: Progress) => save({ ...np, i: np.i + 1 >= n ? np.i : np.i + 1, done: np.i + 1 >= n });
+  const addBonus = (pts: number) => setP(x => { const np = { ...x, pts: x.pts + pts }; savePast(np); return np });
+  const addHint = () => setP(x => { const np = { ...x, hints: (x.hints ?? 0) + 1 }; savePast(np); return np });
 
   if (!loaded) return null;
   if (finished) return <Final p={p} n={n} weekly={mode === "weekly"} away={away} home={home} nextUnlock={nextUnlock} onExit={onExit} onAgain={onAgain} />;
@@ -87,7 +90,7 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
             <b>{reveal.ok ? "TOUCHDOWN ✓" : "FUMBLE ✗"}</b><br />{reveal.msg}
           </div>
         )}
-        {reveal && q.type === "count" ? <NameThem q={q} onDone={addBonus} onNext={next} last={p.i === n - 1} />
+        {reveal && q.type === "count" ? <NameThem q={q} onDone={addBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
           : reveal && <div className="next show"><button className="btn" onClick={next}>{p.i === n - 1 ? "Final Whistle" : "Next Play →"}</button></div>}
       </div>
       <div className="streak">{p.streak > 1 ? `🔥 ${p.streak} in a row` : `Question ${p.i + 1} of ${n}`}</div>
@@ -202,7 +205,7 @@ function RankIt({ q, locked, onLock }: { q: Extract<Question, { type: "rank" }>;
 // Stable display order for rank items (not sorted by value, same on every render and device).
 function hashIdx(s: string, i: number) { let h = 2166136261; for (const c of s + i) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619) } return h >>> 0 }
 
-function NameThem({ q, onDone, onNext, last }: { q: Extract<Question, { type: "count" }>; onDone: (pts: number) => void; onNext: () => void; last: boolean }) {
+function NameThem({ q, onDone, onHint, onNext, last }: { q: Extract<Question, { type: "count" }>; onDone: (pts: number) => void; onHint: () => void; onNext: () => void; last: boolean }) {
   // Every occurrence is its own slot: a player with two qualifying seasons (or games) has to be named twice.
   const slots = [...q.A.map(x => ({ ...x, t: q.a })), ...q.B.map(x => ({ ...x, t: q.b }))];
   const unique = [...new Map(slots.map(x => [x.t + "|" + x.name, x])).values()];
@@ -210,6 +213,8 @@ function NameThem({ q, onDone, onNext, last }: { q: Extract<Question, { type: "c
   const [text, setText] = useState("");
   const [filled, setFilled] = useState<number[]>([]);      // slot indexes, in the order named
   const [hinted, setHinted] = useState<number[]>([]);      // slot indexes whose year has been revealed
+  const [profiled, setProfiled] = useState<number[]>([]);  // slot indexes whose profile has been revealed (2nd hint)
+  const [lettered, setLettered] = useState<number[]>([]);  // slot indexes whose initials have been revealed (3rd hint)
   const [misses, setMisses] = useState<string[]>([]);
   const [msg, setMsg] = useState<{ tone: "good" | "bad" | "info"; text: string } | null>(null);
   const [over, setOver] = useState(false);
@@ -243,14 +248,22 @@ function NameThem({ q, onDone, onNext, last }: { q: Extract<Question, { type: "c
       if (m.length >= MISSES) finish(filled);
     }
   }
-  // a hint reveals the year of one more open slot
-  const nextHint = slots.map((_, i) => i).find(i => !filled.includes(i) && !hinted.includes(i));
-  const hint = () => { if (nextHint != null) setHinted([...hinted, nextHint]) };
+  // Hint 1 reveals the year of one more open slot; hint 2 adds a brief profile of that same player.
+  // No point cost: hints are counted and shown on the final screen and in shared results.
+  const open = (i: number) => !filled.includes(i);
+  const nextHint = slots.map((_, i) => i).find(i => open(i) && !hinted.includes(i) && !profiled.includes(i));
+  const profileTarget = [...hinted].reverse().find(i => open(i) && !profiled.includes(i) && slots[i].profile)
+    ?? (!hasYears ? slots.map((_, i) => i).find(i => open(i) && !profiled.includes(i) && slots[i].profile) : undefined);
+  const hint = () => { if (nextHint != null) { setHinted([...hinted, nextHint]); onHint() } };
+  const hintProfile = () => { if (profileTarget != null) { setProfiled([...profiled, profileTarget]); onHint() } };
+  const initialsTarget = [...profiled].reverse().find(i => open(i) && !lettered.includes(i));
+  const hintInitials = () => { if (initialsTarget != null) { setLettered([...lettered, initialsTarget]); onHint() } };
 
   const bySchool = (k: SchoolKey) => slots.map((x, i) => ({ ...x, i })).filter(x => x.t === k);
   const slotView = (x: (typeof slots)[0] & { i: number }) =>
     filled.includes(x.i) ? <span key={x.i} className="slot ok">{x.name}{x.season ? ` ’${String(x.season).slice(2)}` : ""}</span>
-      : hinted.includes(x.i) && x.season ? <span key={x.i} className="slot hint">? · {x.season}</span>
+      : (hinted.includes(x.i) || profiled.includes(x.i)) && x.season ? <span key={x.i} className="slot hint">? · {x.season}{profiled.includes(x.i) ? " 💡" : ""}</span>
+      : profiled.includes(x.i) ? <span key={x.i} className="slot hint">? 💡</span>
       : <span key={x.i} className="slot" aria-label="unnamed">▢</span>;
   return <div className="bonus">
     <div className="kind">Bonus · Name Them</div>
@@ -267,11 +280,14 @@ function NameThem({ q, onDone, onNext, last }: { q: Extract<Question, { type: "c
           autoComplete="off" autoCapitalize="words" spellCheck={false} enterKeyHint="go" autoFocus />
         <button className="btn" type="submit" style={{ width: "auto" }}>Enter</button>
       </form>
+      {profiled.filter(open).map(i => <div key={i} className="profile">💡 {slots[i].profile}{lettered.includes(i) ? ` · initials ${initials(slots[i].name)}` : ""}</div>)}
       {msg && <div className={`guess ${msg.tone}`} role="status">{msg.text}</div>}
       <div className="row">
-        {hasYears && <button className="btn ghost" disabled={nextHint == null} onClick={hint}>Hint (year)</button>}
-        <button className="btn ghost" onClick={() => finish(filled)}>I&apos;m done</button>
-      </div>
+        {hasYears && <button className="btn ghost" disabled={nextHint == null} onClick={hint}>Hint: year</button>}
+        <button className="btn ghost" disabled={profileTarget == null} onClick={hintProfile} title={hasYears ? "Profile of the player behind your latest year hint" : "Profile of an unnamed player"}>Hint: profile</button>
+        <button className="btn ghost" disabled={initialsTarget == null} onClick={hintInitials} title="Initials of the player behind your latest profile hint">Hint: initials</button>
+        </div>
+      <button className="btn ghost" style={{ marginTop: 10 }} onClick={() => finish(filled)}>I&apos;m done</button>
     </>}
     {over && <>
       <div className={`reveal show ${filled.length ? "good" : "bad"}`}>
@@ -285,12 +301,28 @@ function NameThem({ q, onDone, onNext, last }: { q: Extract<Question, { type: "c
 }
 
 function Final({ p, n, weekly, away, home, nextUnlock, onExit, onAgain }: { p: Progress; n: number; weekly: boolean; away?: SchoolKey | null; home?: SchoolKey | null; nextUnlock?: string | null; onExit: () => void; onAgain?: () => void }) {
+  const [shared, setShared] = useState<string | null>(null);
+  const hints = p.hints ?? 0;
+  const hintText = hints ? `💡 ${hints} hint${hints > 1 ? "s" : ""} used` : "💡 No hints";
+  async function share() {
+    const title = away && home ? `${SCHOOL[away].name} ${weekly ? "@" : "vs"} ${SCHOOL[home].name}` : "SEC Mix";
+    const text = [`RIVAL · ${title}`, p.marks ?? "", `${p.pts} pts · ${p.right}/${n} · 🔥 best streak ${p.best}`, hintText].filter(Boolean).join("\n");
+    const url = typeof window !== "undefined" ? window.location.origin : "";
+    try {
+      if (navigator.share) { await navigator.share({ title: "RIVAL", text, url }); setShared("Shared") }
+      else { await navigator.clipboard.writeText(`${text}\n${url}`); setShared("Copied to clipboard") }
+    } catch { setShared(null) } // share sheet dismissed
+  }
   return <section className="final">
     <div className="kind">Final</div>
     <div className="big">{p.pts}</div>
-    <p>{p.right}/{n} correct · best streak {p.best}<br />{grade(n ? p.right / n : 0)}
+    {p.marks && <div className="marks" aria-label="Question results">{p.marks}</div>}
+    <p>{p.right}/{n} correct · best streak {p.best}<br />{hintText}<br />{grade(n ? p.right / n : 0)}
       {weekly && away && home && <><br /><br />That&apos;s this week&apos;s set for {SCHOOL[away].name} vs {SCHOOL[home].name}.{nextUnlock ? ` New matchups unlock ${nextUnlock}.` : ""}</>}</p>
-    {!weekly && onAgain && <><button className="btn" onClick={onAgain}>Run It Back</button><div style={{ height: 10 }} /></>}
+    <button className="btn" onClick={share}>Share Results</button>
+    {shared && <div className="note" style={{ marginTop: 8 }}>{shared}</div>}
+    <div style={{ height: 10 }} />
+    {!weekly && onAgain && <><button className="btn ghost" onClick={onAgain}>Run It Back</button><div style={{ height: 10 }} /></>}
     <button className="btn ghost" onClick={onExit}>{weekly ? "Back to This Week" : "Back"}</button>
   </section>;
 }

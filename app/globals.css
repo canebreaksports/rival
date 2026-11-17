@@ -91,3 +91,6 @@ textarea,input[type=date]{width:100%;background:#050a07;color:var(--chalk);borde
 .slot{display:inline-block;margin:0 4px 4px 0;padding:1px 8px;border:1px dashed var(--line);border-radius:6px;color:var(--dim)}
 .slot.ok{border:1px solid var(--good);color:var(--good)}
 .slot.hint{border-color:var(--gold);color:var(--gold)}
+.bonus .row .btn.ghost{font-size:12px;padding:10px 6px;letter-spacing:1px}
+.profile{margin-top:8px;font-size:13px;line-height:1.45;color:var(--gold)}
+.marks{font-size:20px;letter-spacing:2px;margin:6px 0 2px}

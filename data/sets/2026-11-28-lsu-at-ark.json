@@ -6,7 +6,7 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-17T17:39:48.020Z",
+ "generatedAt": "2026-11-17T18:07:41.500Z",
  "engine": 9,
  "questions": [
   {
@@ -95,45 +95,55 @@
    "A": [
     {
      "name": "Kevin Faulk",
-     "yards": 4557
+     "yards": 4557,
+     "profile": "Running back · LSU 1995–1998 · No. 1 on LSU's career rushing list · 46 career rushing TDs"
     },
     {
      "name": "Dalton Hilliard",
-     "yards": 4050
+     "yards": 4050,
+     "profile": "No. 2 on LSU's career rushing list"
     },
     {
      "name": "Charles Alexander",
-     "yards": 4035
+     "yards": 4035,
+     "profile": "No. 3 on LSU's career rushing list"
     },
     {
      "name": "Leonard Fournette",
-     "yards": 3830
+     "yards": 3830,
+     "profile": "Running back · LSU 2014–2016 · No. 4 on LSU's career rushing list · 40 career rushing TDs"
     },
     {
      "name": "Derrius Guice",
-     "yards": 3074
+     "yards": 3074,
+     "profile": "Running back · LSU 2016–2017 · No. 5 on LSU's career rushing list · 29 career rushing TDs"
     }
    ],
    "B": [
     {
      "name": "Darren McFadden",
-     "yards": 4590
+     "yards": 4590,
+     "profile": "Running back · Arkansas 2005–2007 · No. 1 on Arkansas's career rushing list · 41 career rushing TDs"
     },
     {
      "name": "Alex Collins",
-     "yards": 3703
+     "yards": 3703,
+     "profile": "Running back · Arkansas 2013–2015 · No. 2 on Arkansas's career rushing list · 36 career rushing TDs"
     },
     {
      "name": "Ben Cowins",
-     "yards": 3570
+     "yards": 3570,
+     "profile": "No. 3 on Arkansas's career rushing list"
     },
     {
      "name": "Dickey Morton",
-     "yards": 3317
+     "yards": 3317,
+     "profile": "No. 4 on Arkansas's career rushing list"
     },
     {
      "name": "Cedric Cobbs",
-     "yards": 3018
+     "yards": 3018,
+     "profile": "No. 5 on Arkansas's career rushing list"
     }
    ],
    "verified": true,
@@ -152,29 +162,34 @@
     {
      "name": "Derrius Guice",
      "yards": 1387,
-     "season": 2016
+     "season": 2016,
+     "profile": "Running back · 2016: 1,387 rushing, 106 receiving yds · also on this list in 2017"
     },
     {
      "name": "Derrius Guice",
      "yards": 1251,
-     "season": 2017
+     "season": 2017,
+     "profile": "Running back · 2017: 1,251 rushing, 124 receiving yds · also on this list in 2016"
     },
     {
      "name": "Clyde Edwards-Helaire",
      "yards": 1414,
-     "season": 2019
+     "season": 2019,
+     "profile": "Running back · 2019: 1,414 rushing, 453 receiving yds"
     }
    ],
    "B": [
     {
      "name": "Rawleigh Williams III",
      "yards": 1360,
-     "season": 2016
+     "season": 2016,
+     "profile": "Running back · 2016: 1,360 rushing, 220 receiving yds"
     },
     {
      "name": "Raheim Sanders",
      "yards": 1443,
-     "season": 2022
+     "season": 2022,
+     "profile": "Running back · 2022: 1,443 rushing, 271 receiving yds"
     }
    ],
    "sig": "tsrush12002016"

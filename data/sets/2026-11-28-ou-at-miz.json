@@ -6,7 +6,7 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-17T17:39:48.023Z",
+ "generatedAt": "2026-11-17T18:07:41.504Z",
  "engine": 9,
  "questions": [
   {
@@ -35,24 +35,28 @@
     {
      "name": "Samaje Perine",
      "yards": 1713,
-     "season": 2014
+     "season": 2014,
+     "profile": "Running back · 2014: 1,713 rushing, 108 receiving yds"
     }
    ],
    "B": [
     {
      "name": "Tyler Badie",
      "yards": 1604,
-     "season": 2021
+     "season": 2021,
+     "profile": "Running back · 2021: 1,604 rushing, 330 receiving yds"
     },
     {
      "name": "Cody Schrader",
      "yards": 1617,
-     "season": 2023
+     "season": 2023,
+     "profile": "Running back · 2023: 1,617 rushing, 191 receiving yds"
     },
     {
      "name": "Ahmad Hardy",
      "yards": 1649,
-     "season": 2025
+     "season": 2025,
+     "profile": "Running back · 2025: 1,649 rushing, 22 receiving yds"
     }
    ],
    "sig": "tsrush15002012"

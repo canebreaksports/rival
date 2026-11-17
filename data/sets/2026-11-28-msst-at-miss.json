@@ -6,7 +6,7 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-17T17:39:48.022Z",
+ "generatedAt": "2026-11-17T18:07:41.502Z",
  "engine": 9,
  "questions": [
   {
@@ -113,25 +113,30 @@
    "A": [
     {
      "name": "Anthony Dixon",
-     "yards": 3994
+     "yards": 3994,
+     "profile": "No. 1 on Mississippi State's career rushing list"
     },
     {
      "name": "Nick Fitzgerald",
-     "yards": 3607
+     "yards": 3607,
+     "profile": "Quarterback · Mississippi State 2015–2018 · No. 2 on Mississippi State's career rushing list · 46 career rushing TDs"
     },
     {
      "name": "Jerious Norwood",
-     "yards": 3212
+     "yards": 3212,
+     "profile": "No. 3 on Mississippi State's career rushing list"
     },
     {
      "name": "Walter Packer",
-     "yards": 2820
+     "yards": 2820,
+     "profile": "No. 4 on Mississippi State's career rushing list"
     }
    ],
    "B": [
     {
      "name": "Deuce McAllister",
-     "yards": 3060
+     "yards": 3060,
+     "profile": "No. 1 on Ole Miss's career rushing list"
     }
    ],
    "verified": true,
@@ -172,24 +177,28 @@
     {
      "name": "Nick Fitzgerald",
      "yards": 1375,
-     "season": 2016
+     "season": 2016,
+     "profile": "Quarterback · 2016: 1,375 rushing, 9 receiving yds"
     },
     {
      "name": "Kylin Hill",
      "yards": 1350,
-     "season": 2019
+     "season": 2019,
+     "profile": "Running back · 2019: 1,350 rushing, 180 receiving yds"
     }
    ],
    "B": [
     {
      "name": "Quinshon Judkins",
      "yards": 1567,
-     "season": 2022
+     "season": 2022,
+     "profile": "Running back · 2022: 1,567 rushing, 132 receiving yds"
     },
     {
      "name": "Kewan Lacy",
      "yards": 1567,
-     "season": 2025
+     "season": 2025,
+     "profile": "Running back · 2025: 1,567 rushing, 177 receiving yds"
     }
    ],
    "sig": "tsrush13002014"

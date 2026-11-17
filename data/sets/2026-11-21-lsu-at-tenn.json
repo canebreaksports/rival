@@ -6,7 +6,7 @@
   "away": "LSU",
   "home": "TENN"
  },
- "generatedAt": "2026-11-17T17:39:48.012Z",
+ "generatedAt": "2026-11-17T18:07:41.492Z",
  "engine": 9,
  "questions": [
   {
@@ -22,39 +22,46 @@
     {
      "name": "Jeremy Hill",
      "yards": 1401,
-     "season": 2013
+     "season": 2013,
+     "profile": "Running back · 2013: 1,401 rushing, 181 receiving yds"
     },
     {
      "name": "Leonard Fournette",
      "yards": 1953,
-     "season": 2015
+     "season": 2015,
+     "profile": "Running back · 2015: 1,953 rushing, 253 receiving yds"
     },
     {
      "name": "Derrius Guice",
      "yards": 1387,
-     "season": 2016
+     "season": 2016,
+     "profile": "Running back · 2016: 1,387 rushing, 106 receiving yds · also on this list in 2017"
     },
     {
      "name": "Derrius Guice",
      "yards": 1251,
-     "season": 2017
+     "season": 2017,
+     "profile": "Running back · 2017: 1,251 rushing, 124 receiving yds · also on this list in 2016"
     },
     {
      "name": "Clyde Edwards-Helaire",
      "yards": 1414,
-     "season": 2019
+     "season": 2019,
+     "profile": "Running back · 2019: 1,414 rushing, 453 receiving yds"
     }
    ],
    "B": [
     {
      "name": "Jalen Hurd",
      "yards": 1288,
-     "season": 2015
+     "season": 2015,
+     "profile": "Running back · 2015: 1,288 rushing, 190 receiving yds"
     },
     {
      "name": "Dylan Sampson",
      "yards": 1491,
-     "season": 2024
+     "season": 2024,
+     "profile": "Running back · 2024: 1,491 rushing, 143 receiving yds"
     }
    ],
    "sig": "tsrush12002012"

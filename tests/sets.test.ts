@@ -11,6 +11,10 @@ describe("frozen sets", () => {
     const have = new Set(sets.map(s => s.slug));
     expect(DATA.schedule.games.map(weekSlug).filter(s => !have.has(s))).toEqual([]);
   });
+  it("count entries from this week on carry a profile hint, and profiles never give away initials", () => {
+    for (const s of sets.filter(s => s.game.date >= "2026-11-21")) for (const q of s.questions) if (q.type === "count")
+      for (const e of [...q.A, ...q.B]) { expect(e.profile).toBeTruthy(); expect(e.profile).not.toMatch(/initials|\b[A-Z]\.[A-Z]\./) }
+  });
   it("are valid, verified-only, and within limits", () => {
     for (const s of sets) {
       expect(s.questions.length).toBeLessThanOrEqual(WEEKLY_N);

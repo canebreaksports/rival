@@ -6,7 +6,7 @@
   "away": "UGA",
   "home": "SC"
  },
- "generatedAt": "2026-11-17T17:39:48.011Z",
+ "generatedAt": "2026-11-17T18:07:41.489Z",
  "engine": 9,
  "questions": [
   {
@@ -181,21 +181,25 @@
    "A": [
     {
      "name": "Herschel Walker",
-     "yards": 5259
+     "yards": 5259,
+     "profile": "Running back · Georgia 1980–1982 · No. 1 on Georgia's career rushing list · 49 career rushing TDs"
     },
     {
      "name": "Nick Chubb",
-     "yards": 4769
+     "yards": 4769,
+     "profile": "No. 2 on Georgia's career rushing list"
     },
     {
      "name": "Sony Michel",
-     "yards": 3638
+     "yards": 3638,
+     "profile": "No. 3 on Georgia's career rushing list"
     }
    ],
    "B": [
     {
      "name": "George Rogers",
-     "yards": 5204
+     "yards": 5204,
+     "profile": "No. 1 on South Carolina's career rushing list"
     }
    ],
    "verified": true,

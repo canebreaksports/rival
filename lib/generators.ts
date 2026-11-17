@@ -1,5 +1,6 @@
 // Question generators (spec §4). All randomness comes from the Rng argument.
-import type { Dataset, Item, Player, PlayerSeason, Pos, Question, SchoolKey, StatKey } from "./types";
+import type { CareerList, Dataset, Item, Player, PlayerSeason, Pos, Question, SchoolKey, StatKey } from "./types";
+import { posName, profileLine } from "./profile";
 import { pick, shuffle, type Rng } from "./rng";
 import { SCHOOL } from "./schools";
 
@@ -307,7 +308,16 @@ export function genCount(data: Dataset, a: SchoolKey, b: SchoolKey, rng: Rng, ve
   const ths = COUNT_THRESHOLDS.filter(t => t >= floor && activeYds.every(y => y >= t) && cnt(A, t).length + cnt(B, t).length >= 2);
   if (!ths.length) return null;
   const t = pick(rng, ths);
-  return { type: "count", label: "School Count", a, b, threshold: t, A: cnt(A, t), B: cnt(B, t), verified: A.verified && B.verified, sig: "c" + a + b + t };
+  const prof = (k: SchoolKey) => (x: CareerList["list"][0]) => {
+    const pl = data.players.players.find(p => p.school === k && p.name === x.name);
+    const car = data.players.seasons.find(s => s.school === k && s.name === x.name && s.year === "career" && s.verified);
+    const yrs = data.players.seasons.filter(s => s.school === k && s.name === x.name && typeof s.year === "number" && s.verified).map(s => s.year as number);
+    const rank = data.career[k].list.findIndex(y => y.name === x.name) + 1;
+    return { ...x, profile: profileLine(posName(pl?.pos), yrs.length && `${SCHOOL[k].name} ${Math.min(...yrs)}–${Math.max(...yrs)}`,
+      rank > 0 && `No. ${rank} on ${SCHOOL[k].name}'s career rushing list`,
+      car?.rushTD != null && `${car.rushTD} career rushing TDs`, x.active && "still active") };
+  };
+  return { type: "count", label: "School Count", a, b, threshold: t, A: cnt(A, t).map(prof(a)), B: cnt(B, t).map(prof(b)), verified: A.verified && B.verified, sig: "c" + a + b + t };
 }
 
 // ---- blind stat duel from player data (spec §4.9): two unnamed same-season lines, one per school ----

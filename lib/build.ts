@@ -90,7 +90,7 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
     const [a, b] = teams, rv0 = data.rivalry?.pairs[pairKey(a, b)];
     const tries = shuffle(rng, [
       () => (data.leaders ? genSeasonCount(data.leaders, a, b, rng) : null),
-      () => (rv0 ? genGameCount(rv0, a, b, rng) : null),
+      () => (rv0 ? genGameCount(rv0, a, b, rng, data.leaders) : null),
       () => (rv0 ? genVsLeaderMC(rv0, a, b, rng) : null),
     ]);
     for (const f of tries) { if (out.length >= 2) break; const q = f(); if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q) } }

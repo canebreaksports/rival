@@ -18,18 +18,18 @@ const KEY: Record<string, string> = {
   Tennessee: "TENN", Texas: "TEX", "Texas A&M": "TAMU", Vanderbilt: "VAN",
 };
 const nkey = (n: string) => n.toLowerCase().replace(/[’'.]/g, "").replace(/\b(jr|sr|ii|iii|iv)\b/g, "").replace(/\s+/g, " ").trim();
-type Row = { season: number; playerId: string; player: string; team: string; category: string; statType: string; stat: string };
+type Row = { season: number; playerId: string; player: string; position?: string; team: string; category: string; statType: string; stat: string };
 const rows: Row[] = fs.readdirSync(cache).flatMap(f => JSON.parse(fs.readFileSync(path.join(cache, f), "utf8")));
 const players = JSON.parse(fs.readFileSync("data/players.json", "utf8")) as { seasons: PlayerSeason[] };
 
-export interface LeaderSeason { name: string; season: number; rush: number; rec: number; margin: number }
+export interface LeaderSeason { name: string; season: number; rush: number; rec: number; margin: number; pos?: string }
 const out: Record<string, LeaderSeason[]> = {};
 const agg = new Map<string, LeaderSeason & { school: string }>();
 for (const r of rows) {
   const k = KEY[r.team];
   if (!k || r.season < 2012 || r.season > 2025 || r.statType !== "YDS" || (r.category !== "rushing" && r.category !== "receiving")) continue;
   const id = `${k}|${r.playerId}|${r.season}`;
-  const a = agg.get(id) ?? { name: r.player, school: k, season: r.season, rush: 0, rec: 0, margin: 50 };
+  const a = agg.get(id) ?? { name: r.player, school: k, season: r.season, rush: 0, rec: 0, margin: 50, ...(r.position && r.position !== "?" ? { pos: r.position } : {}) };
   a[r.category === "rushing" ? "rush" : "rec"] = Number(r.stat) || 0;
   agg.set(id, a);
 }
@@ -45,7 +45,7 @@ for (const a of agg.values()) {
       for (const f of ["rush", "rec"] as const) if (s[f] != null && Math.abs((s[f] ?? 0) - a[f]) > 50) { a.margin = 250; flagged++; }
     }
   }
-  (out[a.school] ??= []).push({ name: a.name, season: a.season, rush: a.rush, rec: a.rec, margin: a.margin });
+  (out[a.school] ??= []).push({ name: a.name, season: a.season, rush: a.rush, rec: a.rec, margin: a.margin, ...(a.pos ? { pos: a.pos } : {}) });
 }
 for (const k of Object.keys(out)) out[k].sort((x, y) => x.season - y.season || y.rush + y.rec - (x.rush + x.rec));
 fs.writeFileSync("data/season-leaders.json", JSON.stringify({

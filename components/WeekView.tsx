@@ -44,7 +44,7 @@ function Card({ g, live, linkBase, storagePrefix }: { g: GameSummary; live: bool
   const w = windowOf(g.game), ready = g.n >= 3, sv = store.get(storagePrefix + g.key), played = !!sv?.done;
   const open = live && ready && !played;
   const status = !live ? (ready ? `🔒 Unlocks ${dfmt(w.start)} · ${g.n} questions` : `🔒 Unlocks ${dfmt(w.start)} · Stats pack coming soon`)
-    : played ? `✓ ${sv!.pts.toLocaleString("en-US")} pts · ${sv!.right}/${sv!.n} · back next week`
+    : played ? `✓ ${sv!.pts.toLocaleString("en-US")} pts · ${sv!.right}/${sv!.n}${sv!.hints ? ` · 💡${sv!.hints}` : ""} · back next week`
     : !ready ? `${dfmt(w.day)} · Stats pack coming soon`
     : sv ? `Resume · Q${sv.i + 1} of ${g.n}` : `${dfmt(w.day)} · ${g.n} questions`;
   const { away, home, site } = g.game;

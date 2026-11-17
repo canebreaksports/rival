@@ -6,7 +6,7 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-17T17:39:48.017Z",
+ "generatedAt": "2026-11-17T18:07:41.497Z",
  "engine": 9,
  "questions": [
   {
@@ -174,14 +174,16 @@
     {
      "name": "Bijan Robinson",
      "yards": 1578,
-     "season": 2022
+     "season": 2022,
+     "profile": "Running back · 2022: 1,578 rushing, 314 receiving yds"
     }
    ],
    "B": [
     {
      "name": "Trayveon Williams",
      "yards": 1760,
-     "season": 2018
+     "season": 2018,
+     "profile": "Running back · 2018: 1,760 rushing, 277 receiving yds"
     }
    ],
    "sig": "tsrush15002018"
@@ -195,57 +197,70 @@
    "A": [
     {
      "name": "Ricky Williams",
-     "yards": 6279
+     "yards": 6279,
+     "profile": "Running back · Texas 1995–1998 · No. 1 on Texas's career rushing list · 75 career rushing TDs"
     },
     {
      "name": "Cedric Benson",
-     "yards": 5540
+     "yards": 5540,
+     "profile": "No. 2 on Texas's career rushing list"
     },
     {
      "name": "Earl Campbell",
-     "yards": 4443
+     "yards": 4443,
+     "profile": "No. 3 on Texas's career rushing list"
     },
     {
      "name": "Bijan Robinson",
-     "yards": 3410
+     "yards": 3410,
+     "profile": "Running back · Texas 2020–2022 · No. 4 on Texas's career rushing list · 33 career rushing TDs"
     },
     {
      "name": "Jamaal Charles",
-     "yards": 3328
+     "yards": 3328,
+     "profile": "No. 5 on Texas's career rushing list"
     },
     {
      "name": "Chris Gilbert",
-     "yards": 3231
+     "yards": 3231,
+     "profile": "No. 6 on Texas's career rushing list"
     },
     {
      "name": "Vince Young",
-     "yards": 3127
+     "yards": 3127,
+     "profile": "Quarterback · Texas 2003–2005 · No. 7 on Texas's career rushing list · 37 career rushing TDs"
     }
    ],
    "B": [
     {
      "name": "Darren Lewis",
-     "yards": 5012
+     "yards": 5012,
+     "profile": "No. 1 on Texas A&M's career rushing list"
     },
     {
      "name": "Curtis Dickey",
-     "yards": 3703
+     "yards": 3703,
+     "profile": "No. 2 on Texas A&M's career rushing list"
     },
     {
      "name": "Trayveon Williams",
-     "yards": 3379
+     "yards": 3379,
+     "profile": "Running back · No. 3 on Texas A&M's career rushing list · 34 career rushing TDs"
     },
     {
      "name": "Cyrus Gray",
-     "yards": 3298
+     "yards": 3298,
+     "profile": "No. 4 on Texas A&M's career rushing list"
     },
     {
      "name": "Greg Hill",
-     "yards": 3262
+     "yards": 3262,
+     "profile": "No. 5 on Texas A&M's career rushing list"
     },
     {
      "name": "Rodney Thomas",
-     "yards": 3014
+     "yards": 3014,
+     "profile": "No. 6 on Texas A&M's career rushing list"
     }
    ],
    "verified": true,
