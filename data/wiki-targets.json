@@ -1,0 +1,28 @@
+{
+ "note": "Players imported from Wikipedia college statistics tables by scripts/import-wiki.ts. title = Wikipedia article title.",
+ "targets": [
+  { "title": "Ronnie Brown", "name": "Ronnie Brown", "school": "AUB", "pos": "RB" },
+  { "title": "Mark Ingram II", "name": "Mark Ingram II", "school": "ALA", "pos": "RB", "star": true },
+  { "title": "Darren McFadden", "name": "Darren McFadden", "school": "ARK", "pos": "RB", "star": true },
+  { "title": "Felix Jones", "name": "Felix Jones", "school": "ARK", "pos": "RB" },
+  { "title": "Tim Tebow", "name": "Tim Tebow", "school": "FLA", "pos": "QB", "star": true },
+  { "title": "Percy Harvin", "name": "Percy Harvin", "school": "FLA", "pos": "WR", "star": true },
+  { "title": "Knowshon Moreno", "name": "Knowshon Moreno", "school": "UGA", "pos": "RB", "star": true },
+  { "title": "Herschel Walker", "name": "Herschel Walker", "school": "UGA", "pos": "RB", "star": true },
+  { "title": "Randall Cobb", "name": "Randall Cobb", "school": "UK", "pos": "WR", "star": true },
+  { "title": "Kevin Faulk", "name": "Kevin Faulk", "school": "LSU", "pos": "RB", "star": true },
+  { "title": "Deuce McAllister", "name": "Deuce McAllister", "school": "MISS", "pos": "RB", "star": true },
+  { "title": "Dexter McCluster", "name": "Dexter McCluster", "school": "MISS", "pos": "RB" },
+  { "title": "Jerious Norwood", "name": "Jerious Norwood", "school": "MSST", "pos": "RB" },
+  { "title": "Brad Smith (wide receiver)", "name": "Brad Smith", "school": "MIZ", "pos": "QB" },
+  { "title": "Jeremy Maclin", "name": "Jeremy Maclin", "school": "MIZ", "pos": "WR", "star": true },
+  { "title": "Adrian Peterson", "name": "Adrian Peterson", "school": "OU", "pos": "RB", "star": true },
+  { "title": "Marcus Lattimore", "name": "Marcus Lattimore", "school": "SC", "pos": "RB", "star": true },
+  { "title": "Travis Henry", "name": "Travis Henry", "school": "TENN", "pos": "RB" },
+  { "title": "Jamal Lewis", "name": "Jamal Lewis", "school": "TENN", "pos": "RB", "star": true },
+  { "title": "Ricky Williams", "name": "Ricky Williams", "school": "TEX", "pos": "RB", "star": true },
+  { "title": "Vince Young", "name": "Vince Young", "school": "TEX", "pos": "QB", "star": true },
+  { "title": "Cyrus Gray", "name": "Cyrus Gray", "school": "TAMU", "pos": "RB" },
+  { "title": "Zac Stacy", "name": "Zac Stacy", "school": "VAN", "pos": "RB" }
+ ]
+}

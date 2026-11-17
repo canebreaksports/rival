@@ -502,16 +502,16 @@
        "value": 20
       },
       {
-       "label": "Josh Dobbs (TENN QB) · career rushing TDs",
-       "value": 32
+       "label": "Ronnie Brown (AUB RB) · career total TDs (rushing + receiving)",
+       "value": 30
       },
       {
-       "label": "Bo Jackson (AUB RB) · career total TDs (rushing + receiving)",
-       "value": 45
+       "label": "Josh Dobbs (TENN QB) · career rushing TDs",
+       "value": 32
       }
      ],
      "unit": "TD",
-     "source": "Values from data/players.json: Foster Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html; Newton 2010 auburntigers.com roster / Heisman page (2010: 264 carries, 1,473 yds, 20 TD); Dobbs utsports.com; Bo Jackson Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+     "source": "Values from data/players.json: Foster Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html; Newton 2010 auburntigers.com roster / Heisman page (2010: 264 carries, 1,473 yds, 20 TD); Ronnie Brown Wikipedia \"Ronnie Brown\" college statistics table (revision 1385420105), fetched 2026-11-17; seasons checked against the career line; Dobbs utsports.com",
      "verified": true
     }
    ]

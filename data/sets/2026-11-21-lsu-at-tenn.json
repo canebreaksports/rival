@@ -6,8 +6,8 @@
   "away": "LSU",
   "home": "TENN"
  },
- "generatedAt": "2026-11-17T14:53:00.685Z",
- "engine": 3,
+ "generatedAt": "2026-11-17T16:17:15.368Z",
+ "engine": 4,
  "questions": [
   {
    "type": "duel",
@@ -15,20 +15,34 @@
    "verified": true,
    "year": 2016,
    "stat": "Rushing season",
-   "aSchool": "TENN",
-   "other": "LSU",
-   "aName": "Joshua Dobbs (QB)",
-   "bName": "Leonard Fournette (RB)",
+   "aSchool": "LSU",
+   "other": "TENN",
+   "aName": "Leonard Fournette (RB)",
+   "bName": "Joshua Dobbs (QB)",
    "A": {
-    "big": "831",
-    "sm": "rush yds · 12 TD"
-   },
-   "B": {
     "big": "843",
     "sm": "rush yds · 8 TD"
    },
-   "flip": true,
+   "B": {
+    "big": "831",
+    "sm": "rush yds · 12 TD"
+   },
+   "flip": false,
    "sig": "drush2016Joshua Dobbs,Leonard Fournette"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Jayden Daniels finish his LSU career with more or less than",
+   "line": "21.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. Jayden Daniels had 21 rushing TDs in his career.",
+   "check": {
+    "value": 21,
+    "line": 21.5
+   },
+   "sig": "pJayden DanielscareerrushTD"
   },
   {
    "type": "rank",
@@ -38,99 +52,121 @@
    "prompt": "Rank these seasons by yards from scrimmage, highest first.",
    "items": [
     {
-     "label": "Arian Foster (RB) · 2008 TENN",
-     "value": 736
+     "label": "Jamal Lewis (RB) · 1999 TENN",
+     "value": 1009
+    },
+    {
+     "label": "Leonard Fournette (RB) · 2016 LSU",
+     "value": 989
+    },
+    {
+     "label": "Derrius Guice (RB) · 2016 LSU",
+     "value": 1493
     },
     {
      "label": "Dylan Sampson (RB) · 2022 TENN",
      "value": 421
-    },
-    {
-     "label": "Derrius Guice (RB) · 2017 LSU",
-     "value": 1375
-    },
-    {
-     "label": "Leonard Fournette (RB) · 2014 LSU",
-     "value": 1161
     }
    ],
    "unit": "yds",
-   "note": "🪤 Trap: Arian Foster's best year was 2007 (1,533), not 2008; Dylan Sampson's best year was 2024 (1,626), not 2022; Derrius Guice's best year was 2016 (1,493), not 2017; Leonard Fournette's best year was 2015 (2,206), not 2014.",
-   "sig": "trscrimArian Foster2008,Derrius Guice2017,Dylan Sampson2022,Leonard Fournette2014"
+   "note": "🪤 Trap: Jamal Lewis's best year was 1997 (1,630), not 1999; Leonard Fournette's best year was 2015 (2,206), not 2016; Dylan Sampson's best year was 2024 (1,626), not 2022.",
+   "sig": "trscrimDerrius Guice2016,Dylan Sampson2022,Jamal Lewis1999,Leonard Fournette2016"
   },
   {
    "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "Did Justin Jefferson finish his LSU career with more or less than",
-   "line": "2,900 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Justin Jefferson had 2,415 receiving yards in his career.",
-   "check": {
-    "value": 2415,
-    "line": 2900
-   },
-   "sig": "pJustin Jeffersoncareerrec"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2015, did Joshua Dobbs (Tennessee) have more or less than",
-   "line": "625 rushing yards",
+   "prompt": "In 2014, did Leonard Fournette (LSU) have more or less than",
+   "line": "8.5 rushing TDs",
    "answer": "over",
-   "reveal": "More. Joshua Dobbs had 671 rushing yards in 2015.",
+   "reveal": "More. Leonard Fournette had 10 rushing TDs in 2014.",
    "check": {
-    "value": 671,
-    "line": 625
+    "value": 10,
+    "line": 8.5
    },
-   "sig": "pJoshua Dobbs2015rush"
+   "sig": "pLeonard Fournette2014rushTD"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
-   "A": {
-    "label": "Dylan Sampson (TENN RB)",
-    "value": 35
-   },
-   "B": {
-    "label": "Jamal Lewis (TENN RB)",
-    "value": 17
-   },
-   "unit": "",
-   "note": "🚨 Upset: Dylan Sampson 35 vs. Jamal Lewis 17.",
-   "sig": "urushTDJamal LewisDylan Sampson"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2007, did Arian Foster (Tennessee) have more or less than",
-   "line": "13.5 rushing TDs",
-   "answer": "under",
-   "reveal": "Less. Arian Foster had 12 rushing TDs in 2007.",
-   "check": {
-    "value": 12,
-    "line": 13.5
-   },
-   "sig": "pArian Foster2007rushTD"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Tennessee",
+   "type": "count",
+   "label": "School Count",
    "a": "LSU",
    "b": "TENN",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
-   "values": [
-    0,
-    1
+   "threshold": 2500,
+   "A": [
+    {
+     "name": "Kevin Faulk",
+     "yards": 4557
+    },
+    {
+     "name": "Dalton Hilliard",
+     "yards": 4050
+    },
+    {
+     "name": "Charles Alexander",
+     "yards": 4035
+    },
+    {
+     "name": "Leonard Fournette",
+     "yards": 3830
+    },
+    {
+     "name": "Derrius Guice",
+     "yards": 3074
+    },
+    {
+     "name": "Harvey Williams",
+     "yards": 2860
+    },
+    {
+     "name": "Joseph Addai",
+     "yards": 2577
+    },
+    {
+     "name": "Terry Robiskie",
+     "yards": 2517
+    }
+   ],
+   "B": [
+    {
+     "name": "Travis Henry",
+     "yards": 3078
+    },
+    {
+     "name": "Arian Foster",
+     "yards": 2964
+    },
+    {
+     "name": "James Stewart",
+     "yards": 2890
+    },
+    {
+     "name": "Johnnie Jones",
+     "yards": 2852
+    },
+    {
+     "name": "DeSean Bishop",
+     "yards": 2694,
+     "active": true
+    },
+    {
+     "name": "Jamal Lewis",
+     "yards": 2677
+    },
+    {
+     "name": "Jalen Hurd",
+     "yards": 2638
+    },
+    {
+     "name": "Cedric Houston",
+     "yards": 2634
+    },
+    {
+     "name": "Jay Graham",
+     "yards": 2609
+    }
    ],
    "verified": true,
-   "sig": "gwin3"
+   "sig": "cLSUTENN2500"
   },
   {
    "type": "prog",
@@ -146,40 +182,60 @@
    "sig": "gpeakW"
   },
   {
-   "label": "Tigers vs. Vols",
+   "label": "Tennessee",
    "verified": true,
-   "sig": "kTigers vs. Vols1",
+   "sig": "kTennessee1",
    "type": "moment",
-   "prompt": "LSU's biggest win over Tennessee came in 2011. Was the margin more or less than",
-   "line": "27.5 points",
-   "answer": "over",
-   "reveal": "Over. LSU won 38–7, a 31-point margin."
+   "prompt": "Did Arian Foster finish his Tennessee career with more or less than",
+   "line": "3,000 rushing yards",
+   "answer": "under",
+   "reveal": "Under, barely. He finished with 2,964."
   },
   {
-   "type": "rank",
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
+   "A": {
+    "label": "Joshua Dobbs (TENN QB)",
+    "value": 32
+   },
+   "B": {
+    "label": "Jamal Lewis (TENN RB)",
+    "value": 17
+   },
+   "unit": "",
+   "note": "🚨 Upset: Joshua Dobbs 32 vs. Jamal Lewis 17.",
+   "sig": "urushTDJamal LewisJoshua Dobbs"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Tennessee",
+   "a": "LSU",
+   "b": "TENN",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    249,
+    194
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Leonard Fournette (LSU RB) · 2016 yards from scrimmage",
-     "value": 989
-    },
-    {
-     "label": "Arian Foster (TENN RB) · 2005 rushing yards",
-     "value": 879
-    },
-    {
-     "label": "Jalin Hyatt (TENN WR) · 2022 receiving yards",
-     "value": 1267
-    },
-    {
-     "label": "Clyde Edwards-Helaire (LSU RB) · career yards from scrimmage",
-     "value": 2699
-    }
-   ],
-   "sig": "mxydsArian Foster2005 rushing yards,Clyde Edwards-Helairecareer yards from scrimmage,Jalin Hyatt2022 receiving yards,Leonard Fournette2016 yards from scrimmage"
+   "prompt": "Did Jalin Hyatt finish his Tennessee career with more or less than",
+   "line": "21.5 receiving TDs",
+   "answer": "under",
+   "reveal": "Less. Jalin Hyatt had 19 receiving TDs in his career.",
+   "check": {
+    "value": 19,
+    "line": 21.5
+   },
+   "sig": "pJalin HyattcareerrecTD"
   }
  ]
 }

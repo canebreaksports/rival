@@ -56,12 +56,14 @@ Wrong trivia kills the game. **Never write a stat from memory.** Every value nee
 - Player stats, AUB/TENN/LSU/ALA (and anyone before 2012): Sports Reference. As of Nov 2026 it sits behind a Cloudflare bot check, so new rows can't be fetched automatically.
 - Player stats, the other 12 schools: CollegeFootballData API (`scripts/fetch-cfbd.ts` caches ~50 calls, `scripts/import-cfbd.ts` builds packs). Its season stats are incomplete before 2011, so packs only include players whose first season is 2012+, seasons 2012–2025, and no active (2026) players. Its totals can differ from official ones by a few yards, so generators enforce a safety margin (`clear()` / `minGap()` in `lib/generators.ts`): yardage gaps ≥ max(50, 8%), TD gaps ≥ 1, YPC ≥ 0.5 whenever a CFBD value is involved. The free tier has a monthly call limit: reuse the cache.
 - Season records: Wikipedia "List of <School> football seasons", on-field results.
-- Career rushing: Wikipedia "<School> football statistical leaders" (top 10 only, hence the floor).
+- Pre-2012 players / extra players: Wikipedia player articles' college stats tables (`scripts/import-wiki.ts`, targets in `data/wiki-targets.json`). Imported only if the school's seasons add up to the table's career line and agree with existing data and the school's career list. Many articles only have NFL tables; those players are reported and skipped.
+- Career rushing lists (School Count): Wikipedia "<School> football statistical leaders" career table, which cites the school record book (`scripts/import-leaders.ts`), top 10. Tennessee's list is 18 deep from its official 2024 record book PDF plus later players. Floor = last listed total. **The school list is the authority for career rushing yards:** when a player's career row disagrees, the importer replaces it with the list's total and drops carries; a CollegeFootballData player more than 50 yards off gets his seasons marked unverified (Trayveon Williams).
+- Wikipedia rate-limits by network address and cloud sessions share one, so `scripts/wiki-fetch.ts` paces requests, honors Retry-After and caches articles. Expect a few minutes per dozen pages.
 - Series facts: Winsipedia; anything that can drift (all-time record, last meeting) needs a second source.
 - Game moments: a box score.
 - Program stats: re-verify (spec §8.4) and then set `programVerified: true` per school.
 
-The network allowlist for this repo's cloud environment includes www.winsipedia.com, en.wikipedia.org and aws.sports-reference.com.
+The cloud environment allows www.winsipedia.com, en.wikipedia.org, aws.sports-reference.com, www.sports-reference.com (Cloudflare-blocked) and s3.us-east-2.amazonaws.com (school record book PDFs), and holds keys for api.collegefootballdata.com and api.vercel.com.
 
 ## Adding a school's player pack
 

@@ -6,61 +6,104 @@
   "away": "ARK",
   "home": "TEX"
  },
- "generatedAt": "2026-11-17T14:53:00.690Z",
- "engine": 3,
+ "generatedAt": "2026-11-17T16:17:15.371Z",
+ "engine": 4,
  "questions": [
   {
    "type": "prog",
    "label": "Program Pit · Arkansas vs Texas",
    "a": "ARK",
    "b": "TEX",
-   "prompt": "Who won more total games from 2000–2025?",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
    "values": [
-    161,
-    236
+    5,
+    0
    ],
    "verified": true,
-   "sig": "gtotalW"
+   "sig": "gwin3"
   },
   {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
+   "type": "count",
+   "label": "School Count",
+   "a": "ARK",
+   "b": "TEX",
+   "threshold": 4000,
+   "A": [
     {
-     "label": "Treylon Burks (ARK WR) · career total TDs (rushing + receiving)",
-     "value": 19
-    },
-    {
-     "label": "Roschon Johnson (TEX RB) · 2019 rushing TDs",
-     "value": 7
-    },
-    {
-     "label": "Xavier Worthy (TEX WR) · 2022 receiving TDs",
-     "value": 9
-    },
-    {
-     "label": "Collin Johnson (TEX WR) · 2019 receiving TDs",
-     "value": 3
+     "name": "Darren McFadden",
+     "yards": 4590
     }
    ],
-   "sig": "mxTDCollin Johnson2019 receiving TDs,Roschon Johnson2019 rushing TDs,Treylon Burkscareer total TDs (rushing + receiving),Xavier Worthy2022 receiving TDs"
+   "B": [
+    {
+     "name": "Ricky Williams",
+     "yards": 6279
+    },
+    {
+     "name": "Cedric Benson",
+     "yards": 5540
+    },
+    {
+     "name": "Earl Campbell",
+     "yards": 4443
+    }
+   ],
+   "verified": true,
+   "sig": "cARKTEX4000"
   },
   {
    "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2024, did Andrew Armstrong (Arkansas) have more or less than",
-   "line": "950 receiving yards",
-   "answer": "over",
-   "reveal": "More. Andrew Armstrong had 1,140 receiving yards in 2024.",
+   "prompt": "Did D'Onta Foreman finish his Texas career with more or less than",
+   "line": "3,178 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. D'Onta Foreman had 2,928 yards from scrimmage in his career.",
    "check": {
-    "value": 1140,
-    "line": 950
+    "value": 2928,
+    "line": 3178
    },
-   "sig": "pAndrew Armstrong2024rec"
+   "sig": "pD'Onta Foremancareerscrim"
+  },
+  {
+   "label": "Southwest Conference Rivals",
+   "verified": true,
+   "sig": "kSouthwest Conference Rivals1",
+   "type": "moment",
+   "prompt": "Texas's longest win streak in the series is more or fewer than",
+   "line": "12.5 games",
+   "answer": "over",
+   "reveal": "Over. Texas won 14 straight from 1894 to 1932. Arkansas's best is 4 (1935–38)."
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Arkansas vs Texas",
+   "a": "ARK",
+   "b": "TEX",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    11,
+    5
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more receiving TDs in a single season?",
+   "A": {
+    "label": "Collin Johnson (WR) · 2016 TEX",
+    "value": 3
+   },
+   "B": {
+    "label": "Treylon Burks (WR) · 2021 ARK",
+    "value": 11
+   },
+   "unit": "receiving TDs",
+   "sig": "hCollin Johnson2016,Treylon Burks2021recTD"
   },
   {
    "type": "duel",
@@ -86,88 +129,28 @@
   {
    "type": "rank",
    "label": "Fresh Mix",
-   "trap": true,
    "verified": true,
-   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
-     "label": "Roschon Johnson (RB) · 2020 TEX",
-     "value": 417
+     "label": "Felix Jones (ARK RB) · career rushing TDs",
+     "value": 20
     },
     {
-     "label": "Tyrone Swoopes (QB) · 2013 TEX",
-     "value": 79
+     "label": "Collin Johnson (TEX WR) · career receiving TDs",
+     "value": 15
     },
     {
-     "label": "Rashod Dubinion (RB) · 2024 ARK",
-     "value": 335
+     "label": "Jonathan Williams (ARK RB) · career total TDs (rushing + receiving)",
+     "value": 22
     },
     {
-     "label": "Raheim Sanders (RB) · 2023 ARK",
-     "value": 209
+     "label": "Keaontay Ingram (TEX RB) · 2019 rushing TDs",
+     "value": 7
     }
    ],
-   "unit": "yds",
-   "note": "🪤 Trap: Roschon Johnson's best year was 2019 (649), not 2020; Tyrone Swoopes's best year was 2015 (451), not 2013; Raheim Sanders's best year was 2022 (1,443), not 2023.",
-   "sig": "trrushRaheim Sanders2023,Rashod Dubinion2024,Roschon Johnson2020,Tyrone Swoopes2013"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2022,
-   "stat": "Rushing season",
-   "aSchool": "TEX",
-   "other": "ARK",
-   "aName": "Bijan Robinson (RB)",
-   "bName": "Raheim Sanders (RB)",
-   "A": {
-    "big": "1,578",
-    "sm": "rush yds · 18 TD"
-   },
-   "B": {
-    "big": "1,443",
-    "sm": "rush yds · 10 TD"
-   },
-   "flip": true,
-   "sig": "drush2022Bijan Robinson,Raheim Sanders"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Arkansas vs Texas",
-   "a": "ARK",
-   "b": "TEX",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    11,
-    13
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2016, did D'Onta Foreman (Texas) have more or less than",
-   "line": "2,303 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. D'Onta Foreman had 2,103 yards from scrimmage in 2016.",
-   "check": {
-    "value": 2103,
-    "line": 2303
-   },
-   "sig": "pD'Onta Foreman2016scrim"
-  },
-  {
-   "label": "Southwest Conference Rivals",
-   "verified": true,
-   "sig": "kSouthwest Conference Rivals1",
-   "type": "moment",
-   "prompt": "Texas's longest win streak in the series is more or fewer than",
-   "line": "12.5 games",
-   "answer": "over",
-   "reveal": "Over. Texas won 14 straight from 1894 to 1932. Arkansas's best is 4 (1935–38)."
+   "sig": "mxTDCollin Johnsoncareer receiving TDs,Felix Jonescareer rushing TDs,Jonathan Williamscareer total TDs (rushing + receiving),Keaontay Ingram2019 rushing TDs"
   },
   {
    "type": "h2h",
@@ -175,18 +158,44 @@
    "upset": true,
    "verified": true,
    "flip": true,
-   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
    "A": {
-    "label": "Cheyenne O'Grady (ARK TE)",
-    "value": 967
+    "label": "Gunnar Helm (TEX TE)",
+    "value": 9
    },
    "B": {
-    "label": "Bijan Robinson (TEX RB)",
-    "value": 805
+    "label": "Ricky Williams (TEX RB)",
+    "value": 4
    },
    "unit": "",
-   "note": "🚨 Upset: Cheyenne O'Grady 967 vs. Bijan Robinson 805.",
-   "sig": "urecBijan RobinsonCheyenne O'Grady"
+   "note": "🚨 Upset: Gunnar Helm 9 vs. Ricky Williams 4.",
+   "sig": "urecTDRicky WilliamsGunnar Helm"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Cheyenne O'Grady (ARK TE) · 2018 receiving TDs",
+     "value": 6
+    },
+    {
+     "label": "D'Onta Foreman (TEX RB) · 2015 rushing TDs",
+     "value": 5
+    },
+    {
+     "label": "Rakeem Boyd (ARK RB) · career rushing TDs",
+     "value": 13
+    },
+    {
+     "label": "Vince Young (TEX QB) · 2004 rushing TDs",
+     "value": 14
+    }
+   ],
+   "sig": "mxTDCheyenne O'Grady2018 receiving TDs,D'Onta Foreman2015 rushing TDs,Rakeem Boydcareer rushing TDs,Vince Young2004 rushing TDs"
   }
  ]
 }

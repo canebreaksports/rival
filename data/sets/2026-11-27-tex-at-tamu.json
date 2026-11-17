@@ -6,8 +6,8 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-17T14:53:00.694Z",
- "engine": 3,
+ "generatedAt": "2026-11-17T16:17:15.374Z",
+ "engine": 4,
  "questions": [
   {
    "type": "prog",
@@ -21,6 +21,157 @@
    ],
    "verified": true,
    "sig": "gtotalW"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2025, did Kevin Concepcion (Texas A&M) have more or less than",
+   "line": "844 receiving yards",
+   "answer": "over",
+   "reveal": "More. Kevin Concepcion had 919 receiving yards in 2025.",
+   "check": {
+    "value": 919,
+    "line": 844
+   },
+   "sig": "pKevin Concepcion2025rec"
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "TEX",
+   "b": "TAMU",
+   "threshold": 3250,
+   "A": [
+    {
+     "name": "Ricky Williams",
+     "yards": 6279
+    },
+    {
+     "name": "Cedric Benson",
+     "yards": 5540
+    },
+    {
+     "name": "Earl Campbell",
+     "yards": 4443
+    },
+    {
+     "name": "Bijan Robinson",
+     "yards": 3410
+    },
+    {
+     "name": "Jamaal Charles",
+     "yards": 3328
+    }
+   ],
+   "B": [
+    {
+     "name": "Darren Lewis",
+     "yards": 5012
+    },
+    {
+     "name": "Curtis Dickey",
+     "yards": 3703
+    },
+    {
+     "name": "Trayveon Williams",
+     "yards": 3379
+    },
+    {
+     "name": "Cyrus Gray",
+     "yards": 3298
+    },
+    {
+     "name": "Greg Hill",
+     "yards": 3262
+    }
+   ],
+   "verified": true,
+   "sig": "cTEXTAMU3250"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by receiving yards, highest first.",
+   "items": [
+    {
+     "label": "Jordan Whittington (WR) · 2021 TEX",
+     "value": 377
+    },
+    {
+     "label": "Collin Johnson (WR) · 2017 TEX",
+     "value": 765
+    },
+    {
+     "label": "Josh Reynolds (WR) · 2015 TAMU",
+     "value": 907
+    },
+    {
+     "label": "Bijan Robinson (RB) · 2022 TEX",
+     "value": 314
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Jordan Whittington's best year was 2022 (652), not 2021; Collin Johnson's best year was 2018 (988), not 2017; Josh Reynolds's best year was 2016 (1,039), not 2015.",
+   "sig": "trrecBijan Robinson2022,Collin Johnson2017,Jordan Whittington2021,Josh Reynolds2015"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more rushing TDs in a single season?",
+   "A": {
+    "label": "Devon Achane (RB) · 2022 TAMU",
+    "value": 8
+   },
+   "B": {
+    "label": "Roschon Johnson (RB) · 2022 TEX",
+    "value": 5
+   },
+   "unit": "rushing TDs",
+   "sig": "hDevon Achane2022,Roschon Johnson2022rushTD"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Texas A&M",
+   "a": "TEX",
+   "b": "TAMU",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    5,
+    5
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing TDs, highest first.",
+   "items": [
+    {
+     "label": "D'Onta Foreman (RB) · 2016 TEX",
+     "value": 15
+    },
+    {
+     "label": "Trey Williams (RB) · 2012 TAMU",
+     "value": 5
+    },
+    {
+     "label": "Sam Ehlinger (QB) · 2020 TEX",
+     "value": 8
+    },
+    {
+     "label": "Tyrone Swoopes (QB) · 2015 TEX",
+     "value": 12
+    }
+   ],
+   "unit": "TD",
+   "sig": "rsea|rushTDD'Onta Foreman2016,Sam Ehlinger2020,Trey Williams2012,Tyrone Swoopes2015"
   },
   {
    "type": "h2h",
@@ -40,130 +191,23 @@
    "sig": "hCollin Johnson2016,Josh Reynolds2016recTD"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2022, did Roschon Johnson (Texas) have more or less than",
-   "line": "750 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. Roschon Johnson had 682 yards from scrimmage in 2022.",
-   "check": {
-    "value": 682,
-    "line": 750
-   },
-   "sig": "pRoschon Johnson2022scrim"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "In 2018, did Keaontay Ingram (Texas) have more or less than",
-   "line": "220 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Keaontay Ingram had 170 receiving yards in 2018. 🪤 Trap: his big year was 2019 (242).",
-   "check": {
-    "value": 170,
-    "line": 220
-   },
-   "sig": "tpKeaontay Ingram2018rec"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more yards from scrimmage in a single season?",
-   "A": {
-    "label": "Trayveon Williams (RB) · 2018 TAMU",
-    "value": 2037
-   },
-   "B": {
-    "label": "Johnathan Gray (RB) · 2012 TEX",
-    "value": 852
-   },
-   "unit": "yards from scrimmage",
-   "sig": "hJohnathan Gray2012,Trayveon Williams2018scrim"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2016,
-   "stat": "Receiving season",
-   "aSchool": "TAMU",
-   "other": "TEX",
-   "aName": "Josh Reynolds (WR)",
-   "bName": "Collin Johnson (WR)",
-   "A": {
-    "big": "1,039",
-    "sm": "rec yds · 12 TD"
-   },
-   "B": {
-    "big": "315",
-    "sm": "rec yds · 3 TD"
-   },
-   "flip": true,
-   "sig": "drec2016Collin Johnson,Josh Reynolds"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Trayveon Williams (TAMU RB) · career yards from scrimmage",
-     "value": 4175
-    },
-    {
-     "label": "Bijan Robinson (TEX RB) · 2022 yards from scrimmage",
-     "value": 1892
-    },
-    {
-     "label": "Tyrone Swoopes (TEX QB) · 2014 rushing yards",
-     "value": 262
-    },
-    {
-     "label": "D'Onta Foreman (TEX RB) · career rushing yards",
-     "value": 2783
-    }
-   ],
-   "sig": "mxydsBijan Robinson2022 yards from scrimmage,D'Onta Foremancareer rushing yards,Trayveon Williamscareer yards from scrimmage,Tyrone Swoopes2014 rushing yards"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas vs Texas A&M",
-   "a": "TEX",
-   "b": "TAMU",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    5,
-    5
-   ],
-   "verified": true,
-   "sig": "glosing"
-  },
-  {
    "type": "h2h",
    "label": "Fresh Mix",
    "upset": true,
    "verified": true,
    "flip": false,
-   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "prompt": "Who had more college receptions (at the school shown)?",
    "A": {
-    "label": "Jordan Whittington (TEX WR)",
-    "value": 10.9
+    "label": "Keaontay Ingram (TEX RB)",
+    "value": 67
    },
    "B": {
-    "label": "Trayveon Williams (TAMU RB)",
-    "value": 6
+    "label": "Bijan Robinson (TEX RB)",
+    "value": 60
    },
    "unit": "",
-   "ypc": true,
-   "note": "🚨 Upset: Jordan Whittington 10.9 per carry (7 carries) vs. Trayveon Williams 6.0 per carry (600 carries).",
-   "sig": "uypcTrayveon WilliamsJordan Whittington"
+   "note": "🚨 Upset: Keaontay Ingram 67 vs. Bijan Robinson 60.",
+   "sig": "urecNBijan RobinsonKeaontay Ingram"
   }
  ]
 }

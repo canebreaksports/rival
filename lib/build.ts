@@ -5,7 +5,7 @@ import { PROGRAM_STATS, SCHOOL, programValue } from "./data";
 import { genCount, genDuel, genMixedRank, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 3; // v3: Mixed Rank It, notable-value floor, approximate-source margins (v2: player-first sets)
+export const ENGINE_VERSION = 4; // v4: deeper career lists, 2,000/2,250-yard counts (v3: mixed rank, notable floor, source margins)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean }

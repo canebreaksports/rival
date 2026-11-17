@@ -6,41 +6,9 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-17T14:53:00.705Z",
- "engine": 3,
+ "generatedAt": "2026-11-17T16:17:15.381Z",
+ "engine": 4,
  "questions": [
-  {
-   "type": "prog",
-   "label": "Program Pit · Oklahoma vs Missouri",
-   "a": "OU",
-   "b": "MIZ",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
-   "values": [
-    0,
-    1
-   ],
-   "verified": true,
-   "sig": "gwin3"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receiving yards (at the school shown)?",
-   "A": {
-    "label": "Albert Okwuegbunam (MIZ TE)",
-    "value": 1187
-   },
-   "B": {
-    "label": "Joe Mixon (OU RB)",
-    "value": 894
-   },
-   "unit": "",
-   "note": "🚨 Upset: Albert Okwuegbunam 1,187 vs. Joe Mixon 894.",
-   "sig": "urecJoe MixonAlbert Okwuegbunam"
-  },
   {
    "type": "duel",
    "label": "Fresh Mix",
@@ -63,42 +31,145 @@
    "sig": "drush2018Kennedy Brooks,Tyler Badie"
   },
   {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
+   "items": [
+    {
+     "label": "Damarea Crockett (RB) · 2017 MIZ",
+     "value": 516
+    },
+    {
+     "label": "Tyler Badie (RB) · 2020 MIZ",
+     "value": 575
+    },
+    {
+     "label": "Trey Sermon (RB) · 2017 OU",
+     "value": 883
+    },
+    {
+     "label": "Joe Mixon (RB) · 2015 OU",
+     "value": 1109
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Damarea Crockett's best year was 2016 (1,076), not 2017; Tyler Badie's best year was 2021 (1,934), not 2020; Trey Sermon's best year was 2018 (1,124), not 2017; Joe Mixon's best year was 2016 (1,812), not 2015.",
+   "sig": "trscrimDamarea Crockett2017,Joe Mixon2015,Trey Sermon2017,Tyler Badie2020"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Oklahoma vs Missouri",
+   "a": "OU",
+   "b": "MIZ",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    0,
+    1
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "OU",
+   "b": "MIZ",
+   "threshold": 3250,
+   "A": [
+    {
+     "name": "Samaje Perine",
+     "yards": 4122
+    },
+    {
+     "name": "Billy Sims",
+     "yards": 4118
+    },
+    {
+     "name": "Joe Washington",
+     "yards": 4071
+    },
+    {
+     "name": "Adrian Peterson",
+     "yards": 4045
+    },
+    {
+     "name": "Steve Owens",
+     "yards": 4041
+    },
+    {
+     "name": "Quentin Griffin",
+     "yards": 3938
+    },
+    {
+     "name": "DeMarco Murray",
+     "yards": 3685
+    },
+    {
+     "name": "De'Mond Parker",
+     "yards": 3403
+    },
+    {
+     "name": "Kennedy Brooks",
+     "yards": 3320
+    }
+   ],
+   "B": [
+    {
+     "name": "Brad Smith",
+     "yards": 4289
+    },
+    {
+     "name": "Larry Rountree III",
+     "yards": 3720
+    }
+   ],
+   "verified": true,
+   "sig": "cOUMIZ3250"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
+   "items": [
+    {
+     "label": "Trey Sermon (RB) · 2017 OU",
+     "value": 883
+    },
+    {
+     "label": "Damarea Crockett (RB) · 2017 MIZ",
+     "value": 516
+    },
+    {
+     "label": "Kennedy Brooks (RB) · 2018 OU",
+     "value": 1113
+    },
+    {
+     "label": "Tyler Badie (RB) · 2020 MIZ",
+     "value": 575
+    }
+   ],
+   "unit": "yds",
+   "sig": "rsea|scrimDamarea Crockett2017,Kennedy Brooks2018,Trey Sermon2017,Tyler Badie2020"
+  },
+  {
    "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
    "flip": false,
-   "prompt": "Who had more rushing yards in a single season?",
+   "prompt": "Who had more yards from scrimmage in a single season?",
    "A": {
-    "label": "Joe Mixon (RB) · 2015 OU",
-    "value": 753
-   },
-   "B": {
     "label": "Damarea Crockett (RB) · 2017 MIZ",
-    "value": 481
-   },
-   "unit": "rushing yards",
-   "sig": "hDamarea Crockett2017,Joe Mixon2015rush"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2015,
-   "stat": "Rushing season",
-   "aSchool": "OU",
-   "other": "MIZ",
-   "aName": "Samaje Perine (RB)",
-   "bName": "Ish Witter (RB)",
-   "A": {
-    "big": "1,349",
-    "sm": "rush yds · 16 TD"
+    "value": 516
    },
    "B": {
-    "big": "518",
-    "sm": "rush yds · 1 TD"
+    "label": "Joe Mixon (RB) · 2016 OU",
+    "value": 1812
    },
-   "flip": false,
-   "sig": "drush2015Ish Witter,Samaje Perine"
+   "unit": "yards from scrimmage",
+   "sig": "hDamarea Crockett2017,Joe Mixon2016scrim"
   },
   {
    "type": "prog",
@@ -116,73 +187,35 @@
   {
    "type": "h2h",
    "label": "Fresh Mix",
+   "upset": true,
    "verified": true,
    "flip": true,
-   "prompt": "Who had more receiving yards in a single season?",
+   "prompt": "Who had more college receiving yards (at the school shown)?",
    "A": {
-    "label": "Tyler Badie (RB) · 2020 MIZ",
-    "value": 333
+    "label": "Mark Andrews (OU TE)",
+    "value": 1765
    },
    "B": {
-    "label": "Mark Andrews (TE) · 2017 OU",
-    "value": 958
+    "label": "Joe Mixon (OU RB)",
+    "value": 894
    },
-   "unit": "receiving yards",
-   "sig": "hMark Andrews2017,Tyler Badie2020rec"
+   "unit": "",
+   "note": "🚨 Upset: Mark Andrews 1,765 vs. Joe Mixon 894.",
+   "sig": "urecJoe MixonMark Andrews"
   },
   {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "Rank these seasons by rushing yards, highest first.",
-   "items": [
-    {
-     "label": "Samaje Perine (RB) · 2015 OU",
-     "value": 1349
-    },
-    {
-     "label": "Joe Mixon (RB) · 2015 OU",
-     "value": 753
-    },
-    {
-     "label": "Larry Rountree III (RB) · 2020 MIZ",
-     "value": 972
-    },
-    {
-     "label": "Maty Mauk (QB) · 2013 MIZ",
-     "value": 229
-    }
-   ],
-   "unit": "yds",
-   "note": "🪤 Trap: Samaje Perine's best year was 2014 (1,713), not 2015; Joe Mixon's best year was 2016 (1,274), not 2015; Larry Rountree III's best year was 2018 (1,216), not 2020; Maty Mauk's best year was 2014 (373), not 2013.",
-   "sig": "trrushJoe Mixon2015,Larry Rountree III2020,Maty Mauk2013,Samaje Perine2015"
-  },
-  {
-   "type": "rank",
+   "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "Rank these seasons by receiving yards, highest first.",
-   "items": [
-    {
-     "label": "Albert Okwuegbunam (TE) · 2018 MIZ",
-     "value": 466
-    },
-    {
-     "label": "CeeDee Lamb (WR) · 2018 OU",
-     "value": 1155
-    },
-    {
-     "label": "Johnathon Johnson (WR) · 2019 MIZ",
-     "value": 294
-    },
-    {
-     "label": "J'Mon Moore (WR) · 2015 MIZ",
-     "value": 350
-    }
-   ],
-   "unit": "yds",
-   "sig": "rsea|recAlbert Okwuegbunam2018,CeeDee Lamb2018,J'Mon Moore2015,Johnathon Johnson2019"
+   "prompt": "Did Luther Burden III finish his Missouri career with more or less than",
+   "line": "21.5 receiving TDs",
+   "answer": "under",
+   "reveal": "Less. Luther Burden III had 20 receiving TDs in his career.",
+   "check": {
+    "value": 20,
+    "line": 21.5
+   },
+   "sig": "pLuther Burden IIIcareerrecTD"
   }
  ]
 }

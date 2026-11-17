@@ -6,49 +6,119 @@
   "away": "TAMU",
   "home": "OU"
  },
- "generatedAt": "2026-11-17T14:53:00.683Z",
- "engine": 3,
+ "generatedAt": "2026-11-17T16:17:15.363Z",
+ "engine": 4,
  "questions": [
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Jalen Wydermyer (TAMU TE)",
+    "value": 1468
+   },
+   "B": {
+    "label": "Samaje Perine (OU RB)",
+    "value": 321
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jalen Wydermyer 1,468 vs. Samaje Perine 321.",
+   "sig": "urecSamaje PerineJalen Wydermyer"
+  },
   {
    "type": "rank",
    "label": "Fresh Mix",
    "trap": true,
    "verified": true,
-   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
+   "prompt": "Rank these seasons by rushing yards, highest first.",
    "items": [
     {
-     "label": "Joe Mixon (RB) · 2015 OU",
-     "value": 1109
+     "label": "Tra Carson (RB) · 2014 TAMU",
+     "value": 581
     },
     {
-     "label": "Eric Gray (RB) · 2021 OU",
-     "value": 641
+     "label": "Trey Sermon (RB) · 2017 OU",
+     "value": 744
     },
     {
-     "label": "Trey Williams (RB) · 2013 TAMU",
-     "value": 461
+     "label": "Kennedy Brooks (RB) · 2019 OU",
+     "value": 1011
     },
     {
-     "label": "Trayveon Williams (RB) · 2018 TAMU",
-     "value": 2037
+     "label": "Joe Mixon (RB) · 2016 OU",
+     "value": 1274
     }
    ],
    "unit": "yds",
-   "note": "🪤 Trap: Joe Mixon's best year was 2016 (1,812), not 2015; Eric Gray's best year was 2022 (1,593), not 2021; Trey Williams's best year was 2014 (665), not 2013.",
-   "sig": "trscrimEric Gray2021,Joe Mixon2015,Trayveon Williams2018,Trey Williams2013"
+   "note": "🪤 Trap: Tra Carson's best year was 2015 (1,165), not 2014; Trey Sermon's best year was 2018 (947), not 2017; Kennedy Brooks's best year was 2021 (1,253), not 2019.",
+   "sig": "trrushJoe Mixon2016,Kennedy Brooks2019,Tra Carson2014,Trey Sermon2017"
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "TAMU",
+   "b": "OU",
+   "threshold": 4000,
+   "A": [
+    {
+     "name": "Darren Lewis",
+     "yards": 5012
+    }
+   ],
+   "B": [
+    {
+     "name": "Samaje Perine",
+     "yards": 4122
+    },
+    {
+     "name": "Billy Sims",
+     "yards": 4118
+    },
+    {
+     "name": "Joe Washington",
+     "yards": 4071
+    },
+    {
+     "name": "Adrian Peterson",
+     "yards": 4045
+    },
+    {
+     "name": "Steve Owens",
+     "yards": 4041
+    }
+   ],
+   "verified": true,
+   "sig": "cTAMUOU4000"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2015, did Josh Reynolds (Texas A&M) have more or less than",
+   "line": "832 receiving yards",
+   "answer": "over",
+   "reveal": "More. Josh Reynolds had 907 receiving yards in 2015.",
+   "check": {
+    "value": 907,
+    "line": 832
+   },
+   "sig": "pJosh Reynolds2015rec"
   },
   {
    "type": "prog",
    "label": "Program Pit · Texas A&M vs Oklahoma",
    "a": "TAMU",
    "b": "OU",
-   "prompt": "Whose best season since 2000 had more wins?",
+   "prompt": "Who had more losing seasons from 2000–2025?",
    "values": [
-    11,
-    13
+    5,
+    2
    ],
    "verified": true,
-   "sig": "gpeakW"
+   "sig": "glosing"
   },
   {
    "type": "h2h",
@@ -68,95 +138,34 @@
    "sig": "hIsaiah Spillercareer,Mark Andrewscareerrec"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more receiving yards in a single season?",
-   "A": {
-    "label": "Jalen Saunders (WR) · 2013 OU",
-    "value": 729
-   },
-   "B": {
-    "label": "Christian Kirk (WR) · 2016 TAMU",
-    "value": 928
-   },
-   "unit": "receiving yards",
-   "sig": "hChristian Kirk2016,Jalen Saunders2013rec"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2019, did Isaiah Spiller (Texas A&M) have more or less than",
-   "line": "1,046 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Isaiah Spiller had 946 rushing yards in 2019.",
-   "check": {
-    "value": 946,
-    "line": 1046
-   },
-   "sig": "pIsaiah Spiller2019rush"
-  },
-  {
    "type": "prog",
    "label": "Program Pit · Texas A&M vs Oklahoma",
    "a": "TAMU",
    "b": "OU",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "prompt": "Whose best season since 2000 had more wins?",
    "values": [
-    2,
-    20
+    11,
+    13
    ],
    "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2017, did Christian Kirk (Texas A&M) have more or less than",
-   "line": "844 receiving yards",
-   "answer": "over",
-   "reveal": "More. Christian Kirk had 919 receiving yards in 2017.",
-   "check": {
-    "value": 919,
-    "line": 844
-   },
-   "sig": "pChristian Kirk2017rec"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Jalen Hurts finish his Oklahoma career with more or less than",
-   "line": "1,450 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Jalen Hurts had 1,298 rushing yards in his career.",
-   "check": {
-    "value": 1298,
-    "line": 1450
-   },
-   "sig": "pJalen Hurtscareerrush"
+   "sig": "gpeakW"
   },
   {
    "type": "h2h",
    "label": "Fresh Mix",
-   "upset": true,
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "flip": true,
+   "prompt": "Who had more receiving yards in a single season?",
    "A": {
-    "label": "Jalen Wydermyer (TAMU TE)",
-    "value": 1468
+    "label": "Sterling Shepard (WR) · 2015 OU",
+    "value": 1288
    },
    "B": {
-    "label": "Joe Mixon (OU RB)",
-    "value": 894
+    "label": "Jalen Wydermyer (TE) · 2021 TAMU",
+    "value": 515
    },
-   "unit": "",
-   "note": "🚨 Upset: Jalen Wydermyer 1,468 vs. Joe Mixon 894.",
-   "sig": "urecJoe MixonJalen Wydermyer"
+   "unit": "receiving yards",
+   "sig": "hJalen Wydermyer2021,Sterling Shepard2015rec"
   },
   {
    "label": "Old Big 12 Foes",

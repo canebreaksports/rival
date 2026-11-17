@@ -6,85 +6,25 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-17T14:53:00.702Z",
- "engine": 3,
+ "generatedAt": "2026-11-17T16:17:15.379Z",
+ "engine": 4,
  "questions": [
   {
-   "type": "moment",
+   "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2022, did Quinshon Judkins (Ole Miss) have more or less than",
-   "line": "1,450 yards from scrimmage",
-   "answer": "over",
-   "reveal": "More. Quinshon Judkins had 1,699 yards from scrimmage in 2022.",
-   "check": {
-    "value": 1699,
-    "line": 1450
-   },
-   "sig": "pQuinshon Judkins2022scrim"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2013, did Jaylen Walton (Ole Miss) have more or less than",
-   "line": "975 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. Jaylen Walton had 845 yards from scrimmage in 2013.",
-   "check": {
-    "value": 845,
-    "line": 975
-   },
-   "sig": "pJaylen Walton2013scrim"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "Rank these seasons by receiving yards, highest first.",
-   "items": [
-    {
-     "label": "Fred Ross (WR) · 2016 MSST",
-     "value": 917
-    },
-    {
-     "label": "Jo'quavious Marks (RB) · 2022 MSST",
-     "value": 288
-    },
-    {
-     "label": "Creed Whittemore (WR) · 2024 MSST",
-     "value": 65
-    },
-    {
-     "label": "Nick Fitzgerald (QB) · 2016 MSST",
-     "value": 9
-    }
-   ],
-   "unit": "yds",
-   "note": "🪤 Trap: Fred Ross's best year was 2015 (1,007), not 2016; Jo'quavious Marks's best year was 2021 (502), not 2022.",
-   "sig": "trrecCreed Whittemore2024,Fred Ross2016,Jo'quavious Marks2022,Nick Fitzgerald2016"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2014,
-   "stat": "Rushing season",
-   "aSchool": "MSST",
-   "other": "MISS",
-   "aName": "Josh Robinson (RB)",
-   "bName": "Jaylen Walton (RB)",
+   "flip": true,
+   "prompt": "Who had more career yards from scrimmage?",
    "A": {
-    "big": "1,203",
-    "sm": "rush yds · 11 TD"
+    "label": "Jordan Wilkins (RB) · career, MISS",
+    "value": 2073
    },
    "B": {
-    "big": "586",
-    "sm": "rush yds · 5 TD"
+    "label": "Josh Robinson (RB) · career, MSST",
+    "value": 2490
    },
-   "flip": true,
-   "sig": "drush2014Jaylen Walton,Josh Robinson"
+   "unit": "yards from scrimmage",
+   "sig": "hJordan Wilkinscareer,Josh Robinsoncareerscrim"
   },
   {
    "type": "h2h",
@@ -106,35 +46,77 @@
    "sig": "urecTDJosh RobinsonJaylen Walton"
   },
   {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Aeris Williams finish his Mississippi State career with more or less than",
+   "line": "3,112 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Aeris Williams had 2,862 yards from scrimmage in his career.",
+   "check": {
+    "value": 2862,
+    "line": 3112
+   },
+   "sig": "pAeris Williamscareerscrim"
+  },
+  {
    "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
    "flip": false,
-   "prompt": "Who had more rushing TDs in a single season?",
+   "prompt": "Who had more career receiving yards?",
    "A": {
-    "label": "Aeris Williams (RB) · 2017 MSST",
-    "value": 6
+    "label": "Cody Core (WR) · career, MISS",
+    "value": 1297
    },
    "B": {
-    "label": "Jordan Wilkins (RB) · 2015 MISS",
-    "value": 4
+    "label": "Dillon Johnson (RB) · career, MSST",
+    "value": 853
    },
-   "unit": "rushing TDs",
-   "sig": "hAeris Williams2017,Jordan Wilkins2015rushTD"
+   "unit": "receiving yards",
+   "sig": "hCody Corecareer,Dillon Johnsoncareerrec"
   },
   {
    "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2015, did Jordan Wilkins (Ole Miss) have more or less than",
-   "line": "429 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Jordan Wilkins had 379 rushing yards in 2015.",
+   "prompt": "In 2022, did Quinshon Judkins (Ole Miss) have more or less than",
+   "line": "1,450 yards from scrimmage",
+   "answer": "over",
+   "reveal": "More. Quinshon Judkins had 1,699 yards from scrimmage in 2022.",
    "check": {
-    "value": 379,
-    "line": 429
+    "value": 1699,
+    "line": 1450
    },
-   "sig": "pJordan Wilkins2015rush"
+   "sig": "pQuinshon Judkins2022scrim"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
+   "items": [
+    {
+     "label": "Jerrion Ealy (RB) · 2019 MISS",
+     "value": 894
+    },
+    {
+     "label": "Jordan Wilkins (RB) · 2014 MISS",
+     "value": 367
+    },
+    {
+     "label": "Kylin Hill (RB) · 2019 MSST",
+     "value": 1530
+    },
+    {
+     "label": "Henry Parrish Jr. (RB) · 2024 MISS",
+     "value": 775
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Jerrion Ealy's best year was 2021 (986), not 2019; Jordan Wilkins's best year was 2017 (1,252), not 2014.",
+   "sig": "trscrimHenry Parrish Jr.2024,Jerrion Ealy2019,Jordan Wilkins2014,Kylin Hill2019"
   }
  ]
 }

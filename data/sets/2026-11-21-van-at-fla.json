@@ -6,42 +6,105 @@
   "away": "VAN",
   "home": "FLA"
  },
- "generatedAt": "2026-11-17T14:53:00.676Z",
- "engine": 3,
+ "generatedAt": "2026-11-17T16:17:15.357Z",
+ "engine": 4,
  "questions": [
   {
-   "type": "duel",
+   "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "year": 2018,
-   "stat": "Rushing season",
-   "aSchool": "FLA",
-   "other": "VAN",
-   "aName": "Lamical Perine (RB)",
-   "bName": "Ke'Shawn Vaughn (RB)",
+   "flip": true,
+   "prompt": "Who had more yards from scrimmage in a single season?",
    "A": {
-    "big": "826",
-    "sm": "rush yds · 7 TD"
+    "label": "Ralph Webb (RB) · 2014 VAN",
+    "value": 937
    },
    "B": {
-    "big": "1,244",
-    "sm": "rush yds · 12 TD"
+    "label": "Malik Davis (RB) · 2020 FLA",
+    "value": 687
    },
+   "unit": "yards from scrimmage",
+   "sig": "hMalik Davis2020,Ralph Webb2014scrim"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
    "flip": false,
-   "sig": "drush2018Ke'Shawn Vaughn,Lamical Perine"
+   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "A": {
+    "label": "Kalija Lipscomb (VAN WR)",
+    "value": 6.2
+   },
+   "B": {
+    "label": "Ralph Webb (VAN RB)",
+    "value": 4.5
+   },
+   "unit": "",
+   "ypc": true,
+   "note": "🚨 Upset: Kalija Lipscomb 6.2 per carry (24 carries) vs. Ralph Webb 4.5 per carry (931 carries).",
+   "sig": "uypcRalph WebbKalija Lipscomb"
   },
   {
    "type": "prog",
    "label": "Program Pit · Vanderbilt vs Florida",
    "a": "VAN",
    "b": "FLA",
-   "prompt": "Who had more losing seasons from 2000–2025?",
+   "prompt": "Whose best season since 2000 had more wins?",
    "values": [
-    21,
-    6
+    10,
+    13
    ],
    "verified": true,
-   "sig": "glosing"
+   "sig": "gpeakW"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2022,
+   "stat": "Rushing season",
+   "aSchool": "VAN",
+   "other": "FLA",
+   "aName": "Re'Mahn Davis (RB)",
+   "bName": "Anthony Richardson (QB)",
+   "A": {
+    "big": "926",
+    "sm": "rush yds · 4 TD"
+   },
+   "B": {
+    "big": "654",
+    "sm": "rush yds · 9 TD"
+   },
+   "flip": false,
+   "sig": "drush2022Anthony Richardson,Re'Mahn Davis"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing TDs, highest first.",
+   "items": [
+    {
+     "label": "Lamical Perine (RB) · 2017 FLA",
+     "value": 8
+    },
+    {
+     "label": "Re'Mahn Davis (RB) · 2022 VAN",
+     "value": 4
+    },
+    {
+     "label": "Jordan Scarlett (RB) · 2016 FLA",
+     "value": 6
+    },
+    {
+     "label": "Tim Tebow (QB) · 2007 FLA",
+     "value": 23
+    }
+   ],
+   "unit": "TD",
+   "sig": "rsea|rushTDJordan Scarlett2016,Lamical Perine2017,Re'Mahn Davis2022,Tim Tebow2007"
   },
   {
    "label": "SEC East Originals",
@@ -56,128 +119,72 @@
   {
    "type": "h2h",
    "label": "Fresh Mix",
-   "upset": true,
    "verified": true,
    "flip": false,
-   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "prompt": "Who had more career rushing yards?",
    "A": {
-    "label": "Josh Hammond (FLA WR)",
-    "value": 14.9
+    "label": "Jordan Scarlett (RB) · career, FLA",
+    "value": 1846
    },
    "B": {
-    "label": "Ralph Webb (VAN RB)",
-    "value": 4.5
+    "label": "Ke'Shawn Vaughn (RB) · career, VAN",
+    "value": 2272
    },
-   "unit": "",
-   "ypc": true,
-   "note": "🚨 Upset: Josh Hammond 14.9 per carry (9 carries) vs. Ralph Webb 4.5 per carry (931 carries).",
-   "sig": "uypcRalph WebbJosh Hammond"
+   "unit": "rushing yards",
+   "sig": "hJordan Scarlettcareer,Ke'Shawn Vaughncareerrush"
   },
   {
    "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "Rank these players by career rushing TDs (at that school), highest first.",
+   "prompt": "Rank these players by career rushing yards (at that school), highest first.",
    "items": [
     {
-     "label": "Re'Mahn Davis (RB) · career, VAN",
-     "value": 5
+     "label": "Keyon Brooks (RB) · career, VAN",
+     "value": 730
     },
     {
-     "label": "Lamical Perine (RB) · career, FLA",
-     "value": 22
+     "label": "Emory Jones (QB) · career, FLA",
+     "value": 1266
     },
     {
-     "label": "Kelvin Taylor (RB) · career, FLA",
-     "value": 23
+     "label": "Diego Pavia (QB) · career, VAN",
+     "value": 1662
     },
     {
-     "label": "Jordan Scarlett (RB) · career, FLA",
-     "value": 12
+     "label": "Tim Tebow (QB) · career, FLA",
+     "value": 2947
     }
    ],
-   "unit": "TD",
-   "sig": "rcar|rushTDJordan Scarlettcareer,Kelvin Taylorcareer,Lamical Perinecareer,Re'Mahn Daviscareer"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
    "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Keyon Brooks (VAN RB) · 2020 yards from scrimmage",
-     "value": 738
-    },
-    {
-     "label": "Kadarius Toney (FLA WR) · 2018 receiving yards",
-     "value": 260
-    },
-    {
-     "label": "Jordan Scarlett (FLA RB) · career rushing yards",
-     "value": 1846
-    },
-    {
-     "label": "Malik Davis (FLA RB) · 2017 rushing yards",
-     "value": 526
-    }
-   ],
-   "sig": "mxydsJordan Scarlettcareer rushing yards,Kadarius Toney2018 receiving yards,Keyon Brooks2020 yards from scrimmage,Malik Davis2017 rushing yards"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving TDs in a single season?",
-   "A": {
-    "label": "Kadarius Toney (WR) · 2020 FLA",
-    "value": 10
-   },
-   "B": {
-    "label": "Trent Sherfield (WR) · 2017 VAN",
-    "value": 5
-   },
-   "unit": "receiving TDs",
-   "sig": "hKadarius Toney2020,Trent Sherfield2017recTD"
+   "sig": "rcar|rushDiego Paviacareer,Emory Jonescareer,Keyon Brookscareer,Tim Tebowcareer"
   },
   {
    "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2019, did Kalija Lipscomb (Vanderbilt) have more or less than",
-   "line": "425 receiving yards",
+   "prompt": "In 2019, did Lamical Perine (Florida) have more or less than",
+   "line": "550 rushing yards",
    "answer": "over",
-   "reveal": "More. Kalija Lipscomb had 511 receiving yards in 2019.",
+   "reveal": "More. Lamical Perine had 676 rushing yards in 2019.",
    "check": {
-    "value": 511,
-    "line": 425
+    "value": 676,
+    "line": 550
    },
-   "sig": "pKalija Lipscomb2019rec"
-  },
-  {
-   "label": "SEC East Originals",
-   "verified": true,
-   "sig": "kSEC East Originals0",
-   "type": "moment",
-   "prompt": "Florida's longest win streak over Vanderbilt is more or fewer than",
-   "line": "19.5 games",
-   "answer": "over",
-   "reveal": "Over. Florida won 22 straight from 1989 to 2012."
+   "sig": "pLamical Perine2019rush"
   },
   {
    "type": "prog",
    "label": "Program Pit · Vanderbilt vs Florida",
    "a": "VAN",
    "b": "FLA",
-   "prompt": "Whose best season since 2000 had more wins?",
+   "prompt": "Who had more losing seasons from 2000–2025?",
    "values": [
-    10,
-    13
+    21,
+    6
    ],
    "verified": true,
-   "sig": "gpeakW"
+   "sig": "glosing"
   }
  ]
 }

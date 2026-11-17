@@ -30,9 +30,9 @@ export function validateData(d: Dataset): string[] {
   }
   for (const [k, c] of Object.entries(d.career)) {
     hasSource(c, `career rushing ${k}`);
-    if (c.list.length !== 10) errs.push(`career rushing ${k}: ${c.list.length} entries, expected top 10`);
+    if (c.list.length < 10) errs.push(`career rushing ${k}: ${c.list.length} entries, expected at least a top 10`);
     if (c.list.some((x, i) => i && x.yards > c.list[i - 1].yards)) errs.push(`career rushing ${k}: not sorted`);
-    if (c.list.length && c.floor !== c.list[c.list.length - 1].yards) errs.push(`career rushing ${k}: floor ${c.floor} ≠ 10th place`);
+    if (c.list.length && c.floor !== c.list[c.list.length - 1].yards) errs.push(`career rushing ${k}: floor ${c.floor} ≠ last listed total`);
   }
   const allItems = [...d.curated.matchups.flatMap(m => m.items.map(i => ({ i, w: m.name }))), ...Object.entries(d.curated.teamPacks).flatMap(([k, l]) => l.map(i => ({ i, w: k })))];
   for (const m of d.curated.matchups) for (const k of [m.a, m.b]) if (!schools.has(k)) errs.push(`matchup ${m.name}: unknown school ${k}`);

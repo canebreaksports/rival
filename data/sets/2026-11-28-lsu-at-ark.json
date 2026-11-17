@@ -6,57 +6,38 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-17T14:53:00.700Z",
- "engine": 3,
+ "generatedAt": "2026-11-17T16:17:15.377Z",
+ "engine": 4,
  "questions": [
   {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "In 2018, did Clyde Edwards-Helaire (LSU) have more or less than",
-   "line": "1,400 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. Clyde Edwards-Helaire had 754 yards from scrimmage in 2018. 🪤 Trap: his big year was 2019 (1,868).",
-   "check": {
-    "value": 754,
-    "line": 1400
-   },
-   "sig": "tpClyde Edwards-Helaire2018scrim"
-  },
-  {
-   "type": "duel",
+   "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "year": 2022,
-   "stat": "Rushing season",
-   "aSchool": "LSU",
-   "other": "ARK",
-   "aName": "Jayden Daniels (QB)",
-   "bName": "Raheim Sanders (RB)",
+   "flip": true,
+   "prompt": "Who had more rushing yards in a single season?",
    "A": {
-    "big": "885",
-    "sm": "rush yds · 11 TD"
+    "label": "Darren McFadden (RB) · 2007 ARK",
+    "value": 1830
    },
    "B": {
-    "big": "1,443",
-    "sm": "rush yds · 10 TD"
+    "label": "Derrius Guice (RB) · 2017 LSU",
+    "value": 1251
    },
-   "flip": false,
-   "sig": "drush2022Jayden Daniels,Raheim Sanders"
+   "unit": "rushing yards",
+   "sig": "hDarren McFadden2007,Derrius Guice2017rush"
   },
   {
    "type": "prog",
    "label": "Program Pit · LSU vs Arkansas",
    "a": "LSU",
    "b": "ARK",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "prompt": "Who had more losing seasons from 2000–2025?",
    "values": [
-    0,
-    5
+    1,
+    11
    ],
    "verified": true,
-   "sig": "gwin3"
+   "sig": "glosing"
   },
   {
    "type": "prog",
@@ -72,32 +53,6 @@
    "sig": "gpeakW"
   },
   {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Derrius Guice (LSU RB) · career rushing TDs",
-     "value": 29
-    },
-    {
-     "label": "Cheyenne O'Grady (ARK TE) · 2019 receiving TDs",
-     "value": 3
-    },
-    {
-     "label": "Joe Burrow (LSU QB) · 2019 rushing TDs",
-     "value": 5
-    },
-    {
-     "label": "Raheim Sanders (ARK RB) · career total TDs (rushing + receiving)",
-     "value": 20
-    }
-   ],
-   "sig": "mxTDCheyenne O'Grady2019 receiving TDs,Derrius Guicecareer rushing TDs,Joe Burrow2019 rushing TDs,Raheim Sanderscareer total TDs (rushing + receiving)"
-  },
-  {
    "type": "h2h",
    "label": "Fresh Mix",
    "upset": true,
@@ -105,65 +60,140 @@
    "flip": false,
    "prompt": "Who had more college receiving touchdowns (at the school shown)?",
    "A": {
-    "label": "Cheyenne O'Grady (ARK TE)",
-    "value": 12
+    "label": "Rashod Dubinion (ARK RB)",
+    "value": 2
    },
    "B": {
     "label": "Leonard Fournette (LSU RB)",
     "value": 1
    },
    "unit": "",
-   "note": "🚨 Upset: Cheyenne O'Grady 12 vs. Leonard Fournette 1.",
-   "sig": "urecTDLeonard FournetteCheyenne O'Grady"
+   "note": "🚨 Upset: Rashod Dubinion 2 vs. Leonard Fournette 1.",
+   "sig": "urecTDLeonard FournetteRashod Dubinion"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career rushing yards (at that school), highest first.",
+   "items": [
+    {
+     "label": "Alex Collins (RB) · career, ARK",
+     "value": 3703
+    },
+    {
+     "label": "Clyde Edwards-Helaire (RB) · career, LSU",
+     "value": 2104
+    },
+    {
+     "label": "Rashod Dubinion (RB) · career, ARK",
+     "value": 888
+    },
+    {
+     "label": "Taylen Green (QB) · career, ARK",
+     "value": 1381
+    }
+   ],
+   "unit": "yds",
+   "sig": "rcar|rushAlex Collinscareer,Clyde Edwards-Helairecareer,Rashod Dubinioncareer,Taylen Greencareer"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more career rushing yards?",
+   "A": {
+    "label": "Alex Collins (RB) · career, ARK",
+    "value": 3703
+   },
+   "B": {
+    "label": "Jayden Daniels (QB) · career, LSU",
+    "value": 2019
+   },
+   "unit": "rushing yards",
+   "sig": "hAlex Collinscareer,Jayden Danielscareerrush"
   },
   {
    "type": "moment",
    "label": "Fresh Mix",
+   "trap": true,
    "verified": true,
-   "prompt": "In 2012, did Jonathan Williams (Arkansas) have more or less than",
-   "line": "500 yards from scrimmage",
+   "prompt": "In 2018, did Clyde Edwards-Helaire (LSU) have more or less than",
+   "line": "1,100 rushing yards",
    "answer": "under",
-   "reveal": "Less. Jonathan Williams had 439 yards from scrimmage in 2012.",
+   "reveal": "Less. Clyde Edwards-Helaire had 658 rushing yards in 2018. 🪤 Trap: his big year was 2019 (1,415).",
    "check": {
-    "value": 439,
-    "line": 500
+    "value": 658,
+    "line": 1100
    },
-   "sig": "pJonathan Williams2012scrim"
+   "sig": "tpClyde Edwards-Helaire2018rush"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
+   "type": "count",
+   "label": "School Count",
+   "a": "LSU",
+   "b": "ARK",
+   "threshold": 3250,
+   "A": [
+    {
+     "name": "Kevin Faulk",
+     "yards": 4557
+    },
+    {
+     "name": "Dalton Hilliard",
+     "yards": 4050
+    },
+    {
+     "name": "Charles Alexander",
+     "yards": 4035
+    },
+    {
+     "name": "Leonard Fournette",
+     "yards": 3830
+    }
+   ],
+   "B": [
+    {
+     "name": "Darren McFadden",
+     "yards": 4590
+    },
+    {
+     "name": "Alex Collins",
+     "yards": 3703
+    },
+    {
+     "name": "Ben Cowins",
+     "yards": 3570
+    },
+    {
+     "name": "Dickey Morton",
+     "yards": 3317
+    }
+   ],
    "verified": true,
-   "prompt": "Did Jayden Daniels finish his LSU career with more or less than",
-   "line": "2,250 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Jayden Daniels had 2,019 rushing yards in his career.",
-   "check": {
-    "value": 2019,
-    "line": 2250
-   },
-   "sig": "pJayden Danielscareerrush"
+   "sig": "cLSUARK3250"
   },
   {
    "type": "duel",
    "label": "Fresh Mix",
    "verified": true,
-   "year": 2018,
-   "stat": "Receiving season",
+   "year": 2022,
+   "stat": "Rushing season",
    "aSchool": "ARK",
    "other": "LSU",
-   "aName": "Cheyenne O'Grady (TE)",
-   "bName": "Justin Jefferson (WR)",
+   "aName": "KJ Jefferson (QB)",
+   "bName": "Jayden Daniels (QB)",
    "A": {
-    "big": "400",
-    "sm": "rec yds · 6 TD"
+    "big": "640",
+    "sm": "rush yds · 9 TD"
    },
    "B": {
-    "big": "875",
-    "sm": "rec yds · 6 TD"
+    "big": "885",
+    "sm": "rush yds · 11 TD"
    },
    "flip": false,
-   "sig": "drec2018Cheyenne O'Grady,Justin Jefferson"
+   "sig": "drush2022Jayden Daniels,KJ Jefferson"
   }
  ]
 }

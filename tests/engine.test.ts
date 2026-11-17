@@ -89,17 +89,19 @@ describe("player-first sets", () => {
 describe("approximate-source margins (CollegeFootballData packs)", () => {
   const NEW: [string, string][] = [["VAN", "FLA"], ["UK", "MIZ"], ["TAMU", "OU"], ["UGA", "SC"], ["ARK", "TEX"], ["MSST", "MISS"]];
   const gap = (a: number, b: number) => Math.max(50, 0.08 * Math.max(Math.abs(a), Math.abs(b)));
+  // the margin applies only when a CollegeFootballData value is involved
+  const approx = (label: string) => DATA.players.seasons.some(s => s.name === label.split(" (")[0] && s.source.startsWith("CollegeFootballData"));
   it("no yardage question hinges on a gap the source could blur", () => {
     let n = 0;
     for (let i = 0; i < 400; i++) for (const t of NEW) for (const q of generate(DATA, t, 7, mulberry32(i), VERIFIED)) {
       n++;
-      if (q.type === "h2h" && !q.ypc && /yards/.test(q.prompt + q.unit) && !/touchdowns|TDs|receptions/.test(q.prompt + q.unit))
+      if (q.type === "h2h" && !q.ypc && /yards/.test(q.prompt + q.unit) && !/touchdowns|TDs|receptions/.test(q.prompt + q.unit) && (approx(q.A.label) || approx(q.B.label)))
         expect(Math.abs(q.A.value - q.B.value)).toBeGreaterThanOrEqual(gap(q.A.value, q.B.value));
-      if (q.type === "rank" && q.unit === "yds") {
-        const v = q.items.map(x => x.value).sort((a, b) => b - a);
-        v.slice(1).forEach((x, j) => expect(v[j] - x).toBeGreaterThanOrEqual(gap(v[j], x)));
+      if (q.type === "rank" && q.unit === "yds") { // adjacent pairs involving an approximate value
+        const v = [...q.items].sort((a, b) => b.value - a.value);
+        v.slice(1).forEach((x, j) => { if (approx(x.label) || approx(v[j].label)) expect(v[j].value - x.value).toBeGreaterThanOrEqual(gap(v[j].value, x.value)) });
       }
-      if (q.type === "moment" && q.check && /yards/.test(q.line)) expect(Math.abs(q.check.value - q.check.line)).toBeGreaterThanOrEqual(gap(q.check.value, q.check.value) - 0.001);
+      if (q.type === "moment" && q.check && /yards/.test(q.line) && approx(q.prompt.replace(/^(In \d{4}, did|Did) /, ""))) expect(Math.abs(q.check.value - q.check.line)).toBeGreaterThanOrEqual(gap(q.check.value, q.check.value) - 0.001);
     }
     expect(n).toBeGreaterThan(1000);
   });
@@ -107,7 +109,9 @@ describe("approximate-source margins (CollegeFootballData packs)", () => {
     for (const k of ["FLA", "VAN", "MIZ", "UK", "OU", "TAMU", "UGA", "SC", "TEX", "ARK", "MISS", "MSST"]) {
       const ps = DATA.players.players.filter(p => p.school === k);
       expect(ps.length).toBeGreaterThanOrEqual(8);
-      expect(DATA.players.seasons.filter(s => s.school === k).every(s => s.verified && s.source.includes("CollegeFootballData"))).toBe(true);
+      const rows = DATA.players.seasons.filter(s => s.school === k);
+      expect(rows.every(s => /CollegeFootballData|Wikipedia/.test(s.source))).toBe(true);
+      expect(new Set(rows.filter(s => s.verified).map(s => s.name)).size).toBeGreaterThanOrEqual(8);
     }
   });
 });

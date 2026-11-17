@@ -42,9 +42,10 @@ export function minGap(kind: Kind, a: number, b: number, approx: boolean) {
 }
 /** True when a and b differ by more than the source can blur. */
 export const clear = (k: string, a: number, b: number, approx: boolean) => a !== b && Math.abs(a - b) >= minGap(kindOf(k), a, b, approx);
-const sortedClear = (k: string, vals: number[], approx: boolean) => {
-  const v = [...vals].sort((x, y) => y - x);
-  return v.every((x, i) => i === 0 || clear(k, v[i - 1], x, approx));
+/** Pairwise version: the margin applies to adjacent values when either comes from an approximate source. */
+const ranksClear = (k: string, ps: PlayerSeason[], val: (p: PlayerSeason) => number) => {
+  const v = [...ps].sort((x, y) => val(y) - val(x));
+  return v.every((x, i) => i === 0 || clear(k, val(v[i - 1]), val(x), isApprox(v[i - 1]) || isApprox(x)));
 };
 
 const pos = (c: Ctx, p: PlayerSeason): Pos => c.info.get(p.name + "|" + p.school)?.pos ?? "RB";
@@ -74,7 +75,7 @@ export function genRank(c: Ctx): Question | null {
   const arr = shuffle(c.rng, g[key]), schools = [...new Set(arr.map(p => p.school))];
   if (schools.length > 1) for (const t of schools) { const p = arr.find(x => x.school === t && !seen.has(x[k]!)); if (p) add(p) } // at least one from each school
   arr.forEach(add);
-  if (picks.length < 4 || !sortedClear(k, picks.map(p => p[k]!), picks.some(isApprox))) return null;
+  if (picks.length < 4 || !ranksClear(k, picks, p => p[k]!)) return null;
   return {
     type: "rank", label: c.label, verified: allVerified(...picks),
     prompt: sc === "car" ? `Rank these players by career ${ST[k][0]} (at that school), highest first.` : `Rank these seasons by ${ST[k][0]}, highest first.`,
@@ -190,13 +191,13 @@ function trapNote(c: Ctx, recs: PlayerSeason[], k: PeakStat) {
 
 export function genTrapRank(c: Ctx): Question | null {
   for (const k of shuffle(c.rng, PEAK_STATS)) {
-    const sea = c.pool.filter(p => p.year !== "career" && p[k] != null), offs = shuffle(c.rng, sea.filter(p => isOff(c, p, k)));
+    const sea = c.pool.filter(p => p.year !== "career" && p[k] != null && notable(k, p[k]!, false)), offs = shuffle(c.rng, sea.filter(p => isOff(c, p, k)));
     if (offs.length < 2) continue;
     const picks: PlayerSeason[] = [], names = new Set<string>(), vals = new Set<number>();
     const add = (p: PlayerSeason) => { if (picks.length < 4 && !names.has(p.name) && !vals.has(p[k]!)) { picks.push(p); names.add(p.name); vals.add(p[k]!) } };
     offs.slice(0, 2 + Math.floor(c.rng() * 2)).forEach(add); // 2–3 off-years
     shuffle(c.rng, sea).forEach(add);                         // fill with anything else
-    if (picks.length < 4 || !sortedClear(k, picks.map(p => p[k]!), picks.some(isApprox))) continue;
+    if (picks.length < 4 || !ranksClear(k, picks, p => p[k]!)) continue;
     return {
       type: "rank", label: c.label, trap: true, verified: allVerified(...picks),
       prompt: `Rank these seasons by ${ST[k][0]}, highest first.`, items: picks.map(p => ({ label: tag(c, p), value: p[k]! })),
@@ -208,7 +209,7 @@ export function genTrapRank(c: Ctx): Question | null {
 
 export function genTrapPOU(c: Ctx): Question | null {
   const cands: [PlayerSeason, PeakStat][] = [];
-  for (const p of c.pool) for (const k of PEAK_STATS) if (isOff(c, p, k) && peak(c, p, k)[k]! > p[k]! * 1.3) cands.push([p, k]);
+  for (const p of c.pool) for (const k of PEAK_STATS) if (notable(k, p[k] ?? 0, false) && isOff(c, p, k) && peak(c, p, k)[k]! > p[k]! * 1.3) cands.push([p, k]);
   if (!cands.length) return null;
   const [p, k] = pick(c.rng, cands), b = peak(c, p, k), v = p[k]!, step = v >= 1000 ? 50 : 25;
   // the line sits 35–65% of the way from the off-year to the peak: anyone thinking of the peak says "more"
@@ -270,7 +271,7 @@ export function genUpset(c: Ctx): Question | null {
 }
 
 // ---- school count (spec §4.8) ----
-export const COUNT_THRESHOLDS = [2500, 2750, 2800, 3000, 3250, 3500, 4000];
+export const COUNT_THRESHOLDS = [2000, 2250, 2500, 2750, 2800, 3000, 3250, 3500, 4000]; // each only used at or above both schools' floors
 export function genCount(data: Dataset, a: SchoolKey, b: SchoolKey, rng: Rng, verifiedOnly: boolean): Question | null {
   const A = data.career[a], B = data.career[b];
   if (!A || !B || (verifiedOnly && !(A.verified && B.verified))) return null;
