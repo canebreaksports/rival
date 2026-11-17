@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { FrozenSet, Game } from "@/lib/types";
-import { dfmt, isLive, nextGames, windowOf } from "@/lib/gating";
+import { isLive, nextGames, unlockFmt, windowOf } from "@/lib/gating";
 import { PREVIEW_PREFIX } from "@/lib/storage";
 import { Play } from "./Play";
 
@@ -17,13 +17,13 @@ export function WeeklyRun({ set, games, preview = false }: { set: FrozenSet; gam
   if (!preview && !isLive(set.game, now)) {
     const w = windowOf(set.game);
     return <section className="final"><div className="kind">Locked</div>
-      <p>{now < w.start ? `This matchup unlocks ${dfmt(w.start)}.` : "This matchup's week is over."}</p>
+      <p>{now < w.start ? `This matchup unlocks ${unlockFmt(w.start)}.` : "This matchup's week is over."}</p>
       <Link className="btn ghost" href="/" style={{ display: "block", textDecoration: "none" }}>Back to This Week</Link></section>;
   }
   if (set.questions.length < 3) return <section className="final"><p>Stats pack coming soon for this matchup.</p>
     <Link className="back" href={home}>Back</Link></section>;
   const N = nextGames(games, now);
   return <Play questions={set.questions} away={set.game.away} home={set.game.home} mode="weekly"
-    storageKey={(preview ? PREVIEW_PREFIX : "") + set.key} nextUnlock={N.length ? dfmt(windowOf(N[0]).start) : null}
+    storageKey={(preview ? PREVIEW_PREFIX : "") + set.key} nextUnlock={N.length ? unlockFmt(windowOf(N[0]).start) : null}
     onExit={() => router.push(home)} />;
 }

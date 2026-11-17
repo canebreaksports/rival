@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { Game } from "@/lib/types";
-import { dfmt, liveGames, nextGames, windowOf } from "@/lib/gating";
+import { dfmt, liveGames, nextGames, unlockFmt, windowOf } from "@/lib/gating";
 import { SCHOOL } from "@/lib/schools";
 import { store } from "@/lib/storage";
 import { Dot } from "./Dot";
@@ -43,7 +43,7 @@ export function WeekView({ games, now: fixedNow, linkBase = "/play", storagePref
 function Card({ g, live, linkBase, storagePrefix }: { g: GameSummary; live: boolean; linkBase: string; storagePrefix: string }) {
   const w = windowOf(g.game), ready = g.n >= 3, sv = store.get(storagePrefix + g.key), played = !!sv?.done;
   const open = live && ready && !played;
-  const status = !live ? (ready ? `🔒 Unlocks ${dfmt(w.start)} · ${g.n} questions` : `🔒 Unlocks ${dfmt(w.start)} · Stats pack coming soon`)
+  const status = !live ? (ready ? `🔒 Unlocks ${unlockFmt(w.start)} · ${g.n} questions` : `🔒 Unlocks ${unlockFmt(w.start)} · Stats pack coming soon`)
     : played ? `✓ ${sv!.pts.toLocaleString("en-US")} pts · ${sv!.right}/${sv!.n}${sv!.hints ? ` · 💡${sv!.hints}` : ""} · back next week`
     : !ready ? `${dfmt(w.day)} · Stats pack coming soon`
     : sv ? `Resume · Q${sv.i + 1} of ${g.n}` : `${dfmt(w.day)} · ${g.n} questions`;

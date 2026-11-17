@@ -2,7 +2,7 @@
   "name": "rival",
   "version": "1.0.0",
   "private": true,
-  "description": "RIVAL — weekly SEC college football trivia",
+  "description": "RIVAL \u2014 weekly SEC college football trivia",
   "scripts": {
     "dev": "next dev",
     "build": "npm run validate && next build",
@@ -10,7 +10,8 @@
     "validate": "tsx scripts/validate.ts",
     "sets": "tsx scripts/build-sets.ts",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "review": "tsx scripts/review.ts"
   },
   "dependencies": {
     "next": "^16.4.6",

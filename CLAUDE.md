@@ -9,6 +9,7 @@ Next.js 16 (App Router, TypeScript) on Vercel. Stage 1 is fully static: no datab
 - `npm run dev`: local server at http://localhost:3000. Coach (Preview Mode) is at `/coach`.
 - `npm test`: vitest (data, generators, caps, determinism, gating, names, scoring, frozen sets).
 - `npm run sets`: build weekly sets into `data/sets/` (see Freezing).
+- `npm run review -- [YYYY-MM-DD]`: writes `review/<week>.md` with every question and answer for a game week (default: the next one). Also in the app at `/coach/review`.
 - `npm run validate`: data + frozen-set checks. `npm run build` runs it first, so a bad data change fails the Vercel deploy.
 - `npm run typecheck`
 
@@ -30,7 +31,8 @@ lib/                   engine (pure TS, shared by scripts, tests and UI)
   rng.ts               FNV-1a + mulberry32; every generator takes an Rng (no Math.random swapping)
   generators.ts        rank, mixed rank, prop, h2h, duel, trap rank, trap prop, upset, school count (+ notable-value floor, source margins)
   build.ts             buildRound (caps, ≤1 trap, ≤1 upset), weeklySet, Coach free-play builders, ENGINE_VERSION
-  gating.ts            Sunday 00:00 → game day 23:59 local; liveGames / nextGames
+  gating.ts            unlock Sunday 7:00 AM Central → lock 11:59 PM Central game day (DST-aware); liveGames / nextGames
+  review.ts            answer-key formatting for /coach/review and npm run review
   scoring.ts names.ts validate.ts storage.ts data.ts sets.ts (server-only) summaries.ts (server-only)
 app/                   / (home), /play/[slug], /coach, /coach/play/[slug]
 components/            Play (question flow + final), WeekView (cards), WeeklyRun (gating), CoachClient

@@ -94,3 +94,10 @@ textarea,input[type=date]{width:100%;background:#050a07;color:var(--chalk);borde
 .bonus .row .btn.ghost{font-size:12px;padding:10px 6px;letter-spacing:1px}
 .profile{margin-top:8px;font-size:13px;line-height:1.45;color:var(--gold)}
 .marks{font-size:20px;letter-spacing:2px;margin:6px 0 2px}
+/* Coach review */
+.review ol{list-style:none;display:grid;gap:10px}
+.review .qcard{padding:14px}
+.review .rq{font-size:15px;font-weight:600;line-height:1.4;margin:8px 0 6px}
+.review .ro{font-size:12px;color:var(--dim)}
+.review .ra{font-weight:800;color:var(--gold);margin-top:6px;font-size:14px;line-height:1.5;white-space:pre-line}
+.review .rd{font-size:12px;color:var(--dim);margin-top:6px;white-space:pre-line;line-height:1.5}

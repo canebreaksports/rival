@@ -1,12 +1,39 @@
-// Game-week gating (spec §2): unlocks 00:00 local on the Sunday of game week, locks 23:59 local on game day.
+// Game-week gating: a matchup unlocks Sunday 7:00 AM Central of its game week (same moment for everyone) and
+// locks 11:59 PM Central on game day. Friday games share the Sunday unlock. DST-aware via Intl.
 import type { Game } from "./types";
+
+export const TZ = "America/Chicago";
+export const UNLOCK_HOUR = 7;
 
 export const dateOf = (s: string) => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d) };
 
+/** Sunday (YYYY-MM-DD) of the week containing a YYYY-MM-DD date, by calendar arithmetic (time-zone free). */
+export function sundayOf(date: string) {
+  const [y, m, d] = date.split("-").map(Number);
+  const t = Date.UTC(y, m - 1, d), dow = new Date(t).getUTCDay();
+  return new Date(t - dow * 86400e3).toISOString().slice(0, 10);
+}
+
+/** Offset of a time zone from UTC at an instant, in ms (e.g. −6h for CST). */
+function tzOffset(t: number, tz: string) {
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: tz, hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit" })
+    .formatToParts(new Date(t)).filter(x => x.type !== "literal").map(x => [x.type, Number(x.value)]));
+  return Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute, p.second) - Math.floor(t / 1000) * 1000;
+}
+
+/** The instant that is YYYY-MM-DD hh:mm wall-clock time in a time zone. */
+export function zonedInstant(date: string, h: number, m: number, tz = TZ): Date {
+  const [y, mo, d] = date.split("-").map(Number);
+  const wall = Date.UTC(y, mo - 1, d, h, m);
+  let t = wall - tzOffset(wall, tz);
+  t = wall - tzOffset(t, tz); // second pass settles DST edges
+  return new Date(t);
+}
+
 export function windowOf(g: Game) {
-  const day = dateOf(g.date);
-  const start = new Date(day); start.setDate(day.getDate() - day.getDay()); // Sunday 00:00 (Friday games share it)
-  const end = new Date(day); end.setHours(23, 59, 59, 999);
+  const start = zonedInstant(sundayOf(g.date), UNLOCK_HOUR, 0);
+  const end = new Date(zonedInstant(g.date, 23, 59).getTime() + 59_999);
+  const day = new Date(g.date + "T12:00:00Z"); // for display: noon UTC is the same calendar day across US time zones
   return { start, end, day };
 }
 
@@ -20,4 +47,7 @@ export function nextGames(games: Game[], now: Date): Game[] {
   return up.filter(g => windowOf(g).start.getTime() === first);
 }
 
-export const dfmt = (d: Date) => d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+export const dfmt = (d: Date) => d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: TZ });
+/** Unlock moment in Central time, e.g. "Sun, Nov 22 · 7 AM CT". */
+export const unlockFmt = (d: Date) =>
+  `${dfmt(d)} · ${d.toLocaleTimeString("en-US", { hour: "numeric", minute: d.getMinutes() ? "2-digit" : undefined, timeZone: TZ }).replace(":00", "")} CT`;
