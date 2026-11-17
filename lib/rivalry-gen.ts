@@ -49,7 +49,9 @@ export function genGameMoment(pr: RivalryPair, rng: Rng): Question | null {
 }
 
 /** 2. Against each other: one player per school, totals in games vs the other school (box-score era). */
-export function genVsH2H(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rng, boxFrom: number): Question | null {
+export function genVsH2H(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rng, _boxFrom?: number): Question | null {
+  const since = pr.vsFrom;
+  if (since == null) return null; // only when every game in the span has a box score
   for (const k of shuffle(rng, ["rush", "rec"] as const)) {
     const side = (t: SchoolKey) => shuffle(rng, pr.vs.filter(v => v.school === t && v[k] >= 100));
     const A = side(a), B = side(b);
@@ -61,7 +63,7 @@ export function genVsH2H(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rng, 
       const games = (v: VsTotal) => `${v.games} game${v.games > 1 ? "s" : ""}`;
       return {
         type: "h2h", label: "Against Each Other", verified: SRC_VERIFIED, flip: rng() < 0.5,
-        prompt: `In ${name(a)}–${name(b)} games since ${boxFrom}, who had more ${k === "rush" ? "rushing" : "receiving"} yards against the other school?`,
+        prompt: `In ${name(a)}–${name(b)} games since ${since}, who had more ${k === "rush" ? "rushing" : "receiving"} yards against the other school?`,
         A: item(x), B: item(y), unit: k === "rush" ? "rushing yds" : "receiving yds",
         note: `${x.name}: ${fmt(x[k])} in ${games(x)}. ${y.name}: ${fmt(y[k])} in ${games(y)}.`,
         sig: "vs" + k + [x.name, y.name].sort(),

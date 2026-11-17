@@ -6,9 +6,29 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-17T17:08:58.176Z",
+ "generatedAt": "2026-11-17T17:22:31.575Z",
  "engine": 8,
  "questions": [
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Oklahoma–Missouri games since 2006, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Malcolm Kelly (OU) vs. Missouri",
+    "value": 170,
+    "school": "OU"
+   },
+   "B": {
+    "label": "Kevin Coleman Jr. (MIZ) vs. Oklahoma",
+    "value": 115,
+    "school": "MIZ"
+   },
+   "unit": "receiving yds",
+   "note": "Malcolm Kelly: 170 in 3 games. Kevin Coleman Jr.: 115 in 1 game.",
+   "sig": "vsrecKevin Coleman Jr.,Malcolm Kelly"
+  },
   {
    "type": "prog",
    "label": "Program Pit · Oklahoma vs Missouri",
@@ -23,151 +43,109 @@
    "sig": "gtotalW"
   },
   {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Dec 1, 2007",
+    "winner": "OU",
+    "loser": "MIZ",
+    "ws": 38,
+    "ls": 17,
+    "venue": "Alamodome"
+   },
+   "prompt": "In this game, did Allen Patrick (Oklahoma) run for more or less than",
+   "line": "120 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Allen Patrick had 88 rushing yards on 13 carries and 1 TD in this game.",
+   "check": {
+    "value": 88,
+    "line": 120
+   },
+   "sig": "gm2007-12-01Allen Patrickrush"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": false,
+   "prompt": "In Oklahoma–Missouri games since 2006, who had more rushing yards against the other school?",
+   "A": {
+    "label": "Mossis Madu (OU) vs. Missouri",
+    "value": 114,
+    "school": "OU"
+   },
+   "B": {
+    "label": "Henry Josey (MIZ) vs. Oklahoma",
+    "value": 197,
+    "school": "MIZ"
+   },
+   "unit": "rushing yds",
+   "note": "Mossis Madu: 114 in 2 games. Henry Josey: 197 in 2 games.",
+   "sig": "vsrushHenry Josey,Mossis Madu"
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "OU",
+   "b": "MIZ",
+   "threshold": 3500,
+   "A": [
+    {
+     "name": "Samaje Perine",
+     "yards": 4122
+    },
+    {
+     "name": "Billy Sims",
+     "yards": 4118
+    },
+    {
+     "name": "Joe Washington",
+     "yards": 4071
+    },
+    {
+     "name": "Adrian Peterson",
+     "yards": 4045
+    },
+    {
+     "name": "Steve Owens",
+     "yards": 4041
+    },
+    {
+     "name": "Quentin Griffin",
+     "yards": 3938
+    },
+    {
+     "name": "DeMarco Murray",
+     "yards": 3685
+    }
+   ],
+   "B": [
+    {
+     "name": "Brad Smith",
+     "yards": 4289
+    },
+    {
+     "name": "Larry Rountree III",
+     "yards": 3720
+    }
+   ],
+   "verified": true,
+   "sig": "cOUMIZ3500"
+  },
+  {
    "type": "prog",
    "label": "Program Pit · Oklahoma vs Missouri",
    "a": "OU",
    "b": "MIZ",
-   "prompt": "Who had more losing seasons from 2000–2025?",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
    "values": [
-    2,
-    9
+    20,
+    7
    ],
    "verified": true,
-   "sig": "glosing"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 22, 2025",
-    "winner": "OU",
-    "loser": "MIZ",
-    "ws": 17,
-    "ls": 6,
-    "venue": "Memorial Stadium (Norman, OK)"
-   },
-   "prompt": "In this game, did Kevin Coleman Jr. (Missouri) have more or less than",
-   "line": "90 receiving yards",
-   "answer": "over",
-   "reveal": "More. Kevin Coleman Jr. had 115 receiving yards on 7 catches and 0 TD in this game.",
-   "check": {
-    "value": 115,
-    "line": 90
-   },
-   "sig": "gm2025-11-22Kevin Coleman Jr.rec"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Samaje Perine finish his Oklahoma career with more or less than",
-   "line": "47.5 rushing TDs",
-   "answer": "over",
-   "reveal": "More. Samaje Perine had 49 rushing TDs in his career.",
-   "check": {
-    "value": 49,
-    "line": 47.5
-   },
-   "sig": "ppSamaje Perinecareer|Cody SchradercareerrushTD0",
-   "pair": "ppSamaje Perinecareer|Cody SchradercareerrushTD",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Cody Schrader finish his Missouri career with more or less than",
-   "line": "22.5 rushing TDs",
-   "answer": "over",
-   "reveal": "More. Cody Schrader had 23 rushing TDs in his career.",
-   "check": {
-    "value": 23,
-    "line": 22.5
-   },
-   "sig": "ppSamaje Perinecareer|Cody SchradercareerrushTD1",
-   "pair": "ppSamaje Perinecareer|Cody SchradercareerrushTD",
-   "pairPart": 2
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Luther Burden III (MIZ WR) · 2022 rushing TDs",
-     "value": 3,
-     "school": "MIZ"
-    },
-    {
-     "label": "Sterling Shepard (OU WR) · 2013 receiving TDs",
-     "value": 7,
-     "school": "OU"
-    },
-    {
-     "label": "J'Mon Moore (MIZ WR) · career total TDs (rushing + receiving)",
-     "value": 22,
-     "school": "MIZ"
-    },
-    {
-     "label": "Damarea Crockett (MIZ RB) · 2016 rushing TDs",
-     "value": 10,
-     "school": "MIZ"
-    }
-   ],
-   "sig": "mxTDDamarea Crockett2016 rushing TDs,J'Mon Moorecareer total TDs (rushing + receiving),Luther Burden III2022 rushing TDs,Sterling Shepard2013 receiving TDs"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more rushing yards in a single season?",
-   "A": {
-    "label": "Tyler Badie (RB) · 2018 MIZ",
-    "value": 436,
-    "school": "MIZ"
-   },
-   "B": {
-    "label": "Adrian Peterson (RB) · 2005 OU",
-    "value": 1104,
-    "school": "OU"
-   },
-   "unit": "rushing yards",
-   "sig": "hAdrian Peterson2005,Tyler Badie2018rush"
-  },
-  {
-   "type": "mc",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 9, 2024",
-    "winner": "MIZ",
-    "loser": "OU",
-    "ws": 30,
-    "ls": 23,
-    "venue": "Memorial Stadium"
-   },
-   "prompt": "What was the difference in total yards in Missouri's 30–23 win over Oklahoma?",
-   "options": [
-    "Missouri +21 yards",
-    "Oklahoma +151 yards",
-    "Oklahoma +29 yards",
-    "Oklahoma +71 yards"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    2,
-    3,
-    1
-   ],
-   "reveal": "Missouri +21. Oklahoma had 257 total yards, Missouri 278.",
-   "sig": "td2024-11-09total"
+   "sig": "gwin10"
   },
   {
    "type": "h2h",
@@ -189,6 +167,38 @@
    "unit": "",
    "note": "🚨 Upset: Larry Rountree III 289 vs. Adrian Peterson 198.",
    "sig": "urecAdrian PetersonLarry Rountree III"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Eric Gray finish his Oklahoma career with more or less than",
+   "line": "1,800 yards from scrimmage",
+   "answer": "over",
+   "reveal": "More. Eric Gray had 2,234 yards from scrimmage in his career.",
+   "check": {
+    "value": 2234,
+    "line": 1800
+   },
+   "sig": "ppEric Graycareer|Larry Rountree IIIcareerscrim0",
+   "pair": "ppEric Graycareer|Larry Rountree IIIcareerscrim",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Larry Rountree III finish his Missouri career with more or less than",
+   "line": "4,550 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Larry Rountree III had 4,009 yards from scrimmage in his career.",
+   "check": {
+    "value": 4009,
+    "line": 4550
+   },
+   "sig": "ppEric Graycareer|Larry Rountree IIIcareerscrim1",
+   "pair": "ppEric Graycareer|Larry Rountree IIIcareerscrim",
+   "pairPart": 2
   }
  ]
 }

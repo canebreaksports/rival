@@ -6,30 +6,38 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-17T17:08:58.177Z",
+ "generatedAt": "2026-11-17T17:22:31.577Z",
  "engine": 8,
  "questions": [
   {
-   "type": "h2h",
+   "type": "rank",
    "label": "Fresh Mix",
-   "upset": true,
    "verified": true,
-   "flip": true,
-   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
-   "A": {
-    "label": "Kalija Lipscomb (VAN WR)",
-    "value": 6.2,
-    "school": "VAN"
-   },
-   "B": {
-    "label": "Arian Foster (TENN RB)",
-    "value": 4.6,
-    "school": "TENN"
-   },
-   "unit": "",
-   "ypc": true,
-   "note": "🚨 Upset: Kalija Lipscomb 6.2 per carry (24 carries) vs. Arian Foster 4.6 per carry (650 carries).",
-   "sig": "uypcArian FosterKalija Lipscomb"
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Joshua Dobbs (TENN QB) · 2016 rushing yards",
+     "value": 831,
+     "school": "TENN"
+    },
+    {
+     "label": "Keyon Brooks (VAN RB) · 2019 yards from scrimmage",
+     "value": 309,
+     "school": "VAN"
+    },
+    {
+     "label": "Ralph Webb (VAN RB) · career rushing yards",
+     "value": 4173,
+     "school": "VAN"
+    },
+    {
+     "label": "Ke'Shawn Vaughn (VAN RB) · 2019 rushing yards",
+     "value": 1028,
+     "school": "VAN"
+    }
+   ],
+   "sig": "mxydsJoshua Dobbs2016 rushing yards,Ke'Shawn Vaughn2019 rushing yards,Keyon Brooks2019 yards from scrimmage,Ralph Webbcareer rushing yards"
   },
   {
    "type": "rank",
@@ -38,44 +46,87 @@
    "pitted": true,
    "unit": "yds",
    "game": {
-    "date": "Nov 25, 2023",
+    "date": "Nov 17, 2007",
     "winner": "TENN",
     "loser": "VAN",
-    "ws": 48,
+    "ws": 25,
     "ls": 24,
     "venue": "Neyland Stadium"
    },
    "prompt": "In this game, rank these players by receiving yards, highest first.",
    "items": [
     {
-     "label": "Squirrel White (TENN)",
-     "value": 110,
-     "school": "TENN"
-    },
-    {
-     "label": "Quincy Skinner Jr. (VAN)",
-     "value": 37,
+     "label": "Earl Bennett (VAN)",
+     "value": 26,
      "school": "VAN"
     },
     {
-     "label": "Jacob Warren (TENN)",
-     "value": 82,
+     "label": "Lucas Taylor (TENN)",
+     "value": 90,
      "school": "TENN"
     },
     {
-     "label": "Junior Sherrill (VAN)",
-     "value": 52,
+     "label": "Austin Rogers (TENN)",
+     "value": 60,
+     "school": "TENN"
+    },
+    {
+     "label": "Alex Washington (VAN)",
+     "value": 45,
      "school": "VAN"
     }
    ],
-   "sig": "gs2023-11-25rec"
+   "sig": "gs2007-11-17rec"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Ralph Webb (VAN RB) · 2016 rushing TDs",
+     "value": 13,
+     "school": "VAN"
+    },
+    {
+     "label": "Jalin Hyatt (TENN WR) · 2022 receiving TDs",
+     "value": 15,
+     "school": "TENN"
+    },
+    {
+     "label": "Ke'Shawn Vaughn (VAN RB) · career rushing TDs",
+     "value": 21,
+     "school": "VAN"
+    },
+    {
+     "label": "Diego Pavia (VAN QB) · career rushing TDs",
+     "value": 18,
+     "school": "VAN"
+    }
+   ],
+   "sig": "mxTDDiego Paviacareer rushing TDs,Jalin Hyatt2022 receiving TDs,Ke'Shawn Vaughncareer rushing TDs,Ralph Webb2016 rushing TDs"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    11,
+    10
+   ],
+   "verified": true,
+   "sig": "gpeakW"
   },
   {
    "type": "count",
    "label": "School Count",
    "a": "TENN",
    "b": "VAN",
-   "threshold": 2250,
+   "threshold": 2500,
    "A": [
     {
      "name": "Travis Henry",
@@ -113,30 +164,6 @@
     {
      "name": "Jay Graham",
      "yards": 2609
-    },
-    {
-     "name": "Dylan Sampson",
-     "yards": 2492
-    },
-    {
-     "name": "Montario Hardesty",
-     "yards": 2391
-    },
-    {
-     "name": "Curt Watson",
-     "yards": 2364
-    },
-    {
-     "name": "Reggie Cobb",
-     "yards": 2360
-    },
-    {
-     "name": "Travis Stephens",
-     "yards": 2336
-    },
-    {
-     "name": "Jaylen Wright",
-     "yards": 2297
     }
    ],
    "B": [
@@ -151,104 +178,10 @@
     {
      "name": "Frank Mordica",
      "yards": 2632
-    },
-    {
-     "name": "Carl Woods",
-     "yards": 2490
-    },
-    {
-     "name": "Ke'Shawn Vaughn",
-     "yards": 2272
     }
    ],
    "verified": true,
-   "sig": "cTENNVAN2250"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Ralph Webb (VAN RB) · 2016 rushing TDs",
-     "value": 13,
-     "school": "VAN"
-    },
-    {
-     "label": "Jalin Hyatt (TENN WR) · 2022 receiving TDs",
-     "value": 15,
-     "school": "TENN"
-    },
-    {
-     "label": "Ke'Shawn Vaughn (VAN RB) · career rushing TDs",
-     "value": 21,
-     "school": "VAN"
-    },
-    {
-     "label": "Diego Pavia (VAN QB) · career rushing TDs",
-     "value": 18,
-     "school": "VAN"
-    }
-   ],
-   "sig": "mxTDDiego Paviacareer rushing TDs,Jalin Hyatt2022 receiving TDs,Ke'Shawn Vaughncareer rushing TDs,Ralph Webb2016 rushing TDs"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Joshua Dobbs (TENN QB) · 2016 rushing yards",
-     "value": 831,
-     "school": "TENN"
-    },
-    {
-     "label": "Keyon Brooks (VAN RB) · 2019 yards from scrimmage",
-     "value": 309,
-     "school": "VAN"
-    },
-    {
-     "label": "Ralph Webb (VAN RB) · career rushing yards",
-     "value": 4173,
-     "school": "VAN"
-    },
-    {
-     "label": "Ke'Shawn Vaughn (VAN RB) · 2019 rushing yards",
-     "value": 1028,
-     "school": "VAN"
-    }
-   ],
-   "sig": "mxydsJoshua Dobbs2016 rushing yards,Ke'Shawn Vaughn2019 rushing yards,Keyon Brooks2019 yards from scrimmage,Ralph Webbcareer rushing yards"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
-   "a": "TENN",
-   "b": "VAN",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    6,
-    1
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
-   "a": "TENN",
-   "b": "VAN",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    194,
-    113
-   ],
-   "verified": true,
-   "sig": "gtotalW"
+   "sig": "cTENNVAN2500"
   },
   {
    "type": "moment",
@@ -264,6 +197,41 @@
     "line": 7.5
    },
    "sig": "scVANTENN"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "A": {
+    "label": "Kalija Lipscomb (VAN WR)",
+    "value": 6.2,
+    "school": "VAN"
+   },
+   "B": {
+    "label": "Arian Foster (TENN RB)",
+    "value": 4.6,
+    "school": "TENN"
+   },
+   "unit": "",
+   "ypc": true,
+   "note": "🚨 Upset: Kalija Lipscomb 6.2 per carry (24 carries) vs. Arian Foster 4.6 per carry (650 carries).",
+   "sig": "uypcArian FosterKalija Lipscomb"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    194,
+    113
+   ],
+   "verified": true,
+   "sig": "gtotalW"
   },
   {
    "type": "moment",

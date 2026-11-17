@@ -6,18 +6,86 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-17T17:08:58.168Z",
+ "generatedAt": "2026-11-17T17:22:31.562Z",
  "engine": 8,
  "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Texas A&M",
+   "a": "TEX",
+   "b": "TAMU",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    236,
+    195
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Texas A&M",
+   "a": "TEX",
+   "b": "TAMU",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    5,
+    5
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more rushing yards in a single season?",
+   "A": {
+    "label": "D'Onta Foreman (RB) · 2016 TEX",
+    "value": 2028,
+    "school": "TEX"
+   },
+   "B": {
+    "label": "Isaiah Spiller (RB) · 2021 TAMU",
+    "value": 1011,
+    "school": "TAMU"
+   },
+   "unit": "rushing yards",
+   "sig": "hD'Onta Foreman2016,Isaiah Spiller2021rush"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 30, 2024",
+    "winner": "TEX",
+    "loser": "TAMU",
+    "ws": 17,
+    "ls": 7,
+    "venue": "Kyle Field"
+   },
+   "prompt": "In this game, did Quinn Ewers (Texas) throw for more or less than",
+   "line": "275 passing yards",
+   "answer": "under",
+   "reveal": "Less. Quinn Ewers had 218 passing yards and 1 TD in this game.",
+   "check": {
+    "value": 218,
+    "line": 275
+   },
+   "sig": "gm2024-11-30Quinn Ewerspass"
+  },
   {
    "type": "h2h",
    "label": "Against Each Other",
    "verified": true,
    "flip": false,
-   "prompt": "In Texas–Texas A&M games since 2012, who had more rushing yards against the other school?",
+   "prompt": "In Texas–Texas A&M games since 2005, who had more rushing yards against the other school?",
    "A": {
-    "label": "Tre Wisner (TEX) vs. Texas A&M",
-    "value": 341,
+    "label": "Ramonce Taylor (TEX) vs. Texas A&M",
+    "value": 102,
     "school": "TEX"
    },
    "B": {
@@ -26,8 +94,52 @@
     "school": "TAMU"
    },
    "unit": "rushing yds",
-   "note": "Tre Wisner: 341 in 2 games. Marcel Reed: 131 in 2 games.",
-   "sig": "vsrushMarcel Reed,Tre Wisner"
+   "note": "Ramonce Taylor: 102 in 1 game. Marcel Reed: 131 in 2 games.",
+   "sig": "vsrushMarcel Reed,Ramonce Taylor"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 25, 2010",
+    "winner": "TAMU",
+    "loser": "TEX",
+    "ws": 24,
+    "ls": 17,
+    "venue": "DKR-Texas Memorial Stadium"
+   },
+   "prompt": "In this game, did Kenric McNeal (Texas A&M) have more or less than",
+   "line": "40 receiving yards",
+   "answer": "over",
+   "reveal": "More. Kenric McNeal had 64 receiving yards on 6 catches and 0 TD in this game.",
+   "check": {
+    "value": 64,
+    "line": 40
+   },
+   "sig": "gm2010-11-25Kenric McNealrec"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receptions (at the school shown)?",
+   "A": {
+    "label": "Jalen Wydermyer (TAMU TE)",
+    "value": 118,
+    "school": "TAMU"
+   },
+   "B": {
+    "label": "Bijan Robinson (TEX RB)",
+    "value": 60,
+    "school": "TEX"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jalen Wydermyer 118 vs. Bijan Robinson 60.",
+   "sig": "urecNBijan RobinsonJalen Wydermyer"
   },
   {
    "type": "h2h",
@@ -54,148 +166,29 @@
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 30, 2024",
-    "winner": "TEX",
-    "loser": "TAMU",
-    "ws": 17,
+    "date": "Nov 24, 2006",
+    "winner": "TAMU",
+    "loser": "TEX",
+    "ws": 12,
     "ls": 7,
-    "venue": "Kyle Field"
-   },
-   "prompt": "What was the difference in rushing yards in Texas's 17–7 win over Texas A&M?",
-   "options": [
-    "Texas +141 yards",
-    "Texas +171 yards",
-    "Texas A&M +271 yards",
-    "Texas +191 yards"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    2,
-    0,
-    3
-   ],
-   "reveal": "Texas +141. Texas A&M had 102 rushing yards, Texas 243.",
-   "sig": "td2024-11-30rush"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more rushing yards in a single season?",
-   "A": {
-    "label": "D'Onta Foreman (RB) · 2016 TEX",
-    "value": 2028,
-    "school": "TEX"
-   },
-   "B": {
-    "label": "Isaiah Spiller (RB) · 2021 TAMU",
-    "value": 1011,
-    "school": "TAMU"
-   },
-   "unit": "rushing yards",
-   "sig": "hD'Onta Foreman2016,Isaiah Spiller2021rush"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receptions (at the school shown)?",
-   "A": {
-    "label": "Jalen Wydermyer (TAMU TE)",
-    "value": 118,
-    "school": "TAMU"
-   },
-   "B": {
-    "label": "Bijan Robinson (TEX RB)",
-    "value": 60,
-    "school": "TEX"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Jalen Wydermyer 118 vs. Bijan Robinson 60.",
-   "sig": "urecNBijan RobinsonJalen Wydermyer"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 28, 2025",
-    "winner": "TEX",
-    "loser": "TAMU",
-    "ws": 27,
-    "ls": 17,
     "venue": "DKR-Texas Memorial Stadium"
    },
-   "prompt": "In this game, did Marcel Reed (Texas A&M) run for more or less than",
-   "line": "90 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Marcel Reed had 71 rushing yards on 12 carries and 0 TD in this game.",
-   "check": {
-    "value": 71,
-    "line": 90
-   },
-   "sig": "gm2025-11-28Marcel Reedrush"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas vs Texas A&M",
-   "a": "TEX",
-   "b": "TAMU",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    236,
-    195
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas vs Texas A&M",
-   "a": "TEX",
-   "b": "TAMU",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    13,
-    2
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "mc",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 30, 2024",
-    "winner": "TEX",
-    "loser": "TAMU",
-    "ws": 17,
-    "ls": 7,
-    "venue": "Kyle Field"
-   },
-   "prompt": "What was the difference in total yards in Texas's 17–7 win over Texas A&M?",
+   "prompt": "What was the difference in total yards in Texas A&M's 12–7 win over Texas?",
    "options": [
-    "Texas +213 yards",
-    "Texas A&M +323 yards",
-    "Texas +123 yards",
-    "Texas +103 yards"
+    "Texas A&M +72 yards",
+    "Texas A&M +22 yards",
+    "Texas +122 yards",
+    "Texas +162 yards"
    ],
    "answer": 0,
    "order": [
     2,
+    1,
     3,
-    0,
-    1
+    0
    ],
-   "reveal": "Texas +213. Texas A&M had 248 total yards, Texas 461.",
-   "sig": "td2024-11-30total"
+   "reveal": "Texas A&M +72. Texas A&M had 302 total yards, Texas 230.",
+   "sig": "td2006-11-24total"
   }
  ]
 }

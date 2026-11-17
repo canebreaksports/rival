@@ -6,18 +6,92 @@
   "away": "UGA",
   "home": "SC"
  },
- "generatedAt": "2026-11-17T17:08:58.162Z",
+ "generatedAt": "2026-11-17T17:22:31.553Z",
  "engine": 8,
  "questions": [
   {
-   "label": "Palmetto vs. Peach",
-   "verified": true,
-   "sig": "kPalmetto vs. Peach0",
    "type": "moment",
-   "prompt": "Georgia's biggest win over South Carolina came in 2022. Was the margin more or less than",
-   "line": "35.5 points",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Oct 6, 2012",
+    "winner": "SC",
+    "loser": "UGA",
+    "ws": 35,
+    "ls": 7,
+    "venue": "Williams-Brice Stadium"
+   },
+   "prompt": "In this game, did Connor Shaw (South Carolina) throw for more or less than",
+   "line": "200 passing yards",
+   "answer": "under",
+   "reveal": "Less. Connor Shaw had 162 passing yards and 2 TD in this game.",
+   "check": {
+    "value": 162,
+    "line": 200
+   },
+   "sig": "gm2012-10-06Connor Shawpass"
+  },
+  {
+   "type": "moment",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did South Carolina beat Georgia more or fewer than",
+   "line": "9.5 times",
+   "answer": "under",
+   "reveal": "Fewer. South Carolina went 8–16 against Georgia from 2000 to 2025 (24 meetings, on-field results).",
+   "check": {
+    "value": 8,
+    "line": 9.5
+   },
+   "sig": "scSCUGA"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Sep 7, 2013",
+    "winner": "UGA",
+    "loser": "SC",
+    "ws": 41,
+    "ls": 30,
+    "venue": "Sanford Stadium"
+   },
+   "prompt": "In this game, did Aaron Murray (Georgia) have more or fewer than",
+   "line": "2.5 touchdown passes",
    "answer": "over",
-   "reveal": "Over. Georgia won 48–7, a 41-point margin."
+   "reveal": "More. Aaron Murray had 309 passing yards and 4 TD in this game.",
+   "check": {
+    "value": 4,
+    "line": 2.5
+   },
+   "sig": "gm2013-09-07Aaron Murraypasstd"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Sep 7, 2013",
+    "winner": "UGA",
+    "loser": "SC",
+    "ws": 41,
+    "ls": 30,
+    "venue": "Sanford Stadium"
+   },
+   "prompt": "In this game, did Mike Davis (South Carolina) run for more or less than",
+   "line": "120 rushing yards",
+   "answer": "over",
+   "reveal": "More. Mike Davis had 149 rushing yards on 16 carries and 1 TD in this game.",
+   "check": {
+    "value": 149,
+    "line": 120
+   },
+   "sig": "gm2013-09-07Mike Davisrush"
   },
   {
    "type": "prog",
@@ -33,49 +107,6 @@
    "sig": "gwin3"
   },
   {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": false,
-   "prompt": "In Georgia–South Carolina games since 2012, who had more receiving yards against the other school?",
-   "A": {
-    "label": "George Pickens (UGA) vs. South Carolina",
-    "value": 123,
-    "school": "UGA"
-   },
-   "B": {
-    "label": "Josh Vann (SC) vs. Georgia",
-    "value": 171,
-    "school": "SC"
-   },
-   "unit": "receiving yds",
-   "note": "George Pickens: 123 in 2 games. Josh Vann: 171 in 5 games.",
-   "sig": "vsrecGeorge Pickens,Josh Vann"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Oct 9, 2016",
-    "winner": "UGA",
-    "loser": "SC",
-    "ws": 28,
-    "ls": 14,
-    "venue": "Williams-Brice Stadium"
-   },
-   "prompt": "In this game, did Brian Herrien (Georgia) run for more or less than",
-   "line": "60 rushing yards",
-   "answer": "over",
-   "reveal": "More. Brian Herrien had 82 rushing yards on 9 carries and 0 TD in this game.",
-   "check": {
-    "value": 82,
-    "line": 60
-   },
-   "sig": "gm2016-10-09Brian Herrienrush"
-  },
-  {
    "type": "prog",
    "label": "Program Pit · Georgia vs South Carolina",
    "a": "UGA",
@@ -87,80 +118,6 @@
    ],
    "verified": true,
    "sig": "gwin10"
-  },
-  {
-   "type": "mc",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Sep 8, 2018",
-    "winner": "UGA",
-    "loser": "SC",
-    "ws": 41,
-    "ls": 17,
-    "venue": "Williams-Brice Stadium"
-   },
-   "prompt": "What was the difference in rushing yards in Georgia's 41–17 win over South Carolina?",
-   "options": [
-    "Georgia +217 yards",
-    "South Carolina +307 yards",
-    "Georgia +247 yards",
-    "Georgia +307 yards"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    0,
-    2,
-    3
-   ],
-   "reveal": "Georgia +217. South Carolina had 54 rushing yards, Georgia 271.",
-   "sig": "td2018-09-08rush"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Oct 9, 2016",
-    "winner": "UGA",
-    "loser": "SC",
-    "ws": 28,
-    "ls": 14,
-    "venue": "Williams-Brice Stadium"
-   },
-   "prompt": "In this game, did Perry Orth (South Carolina) throw for more or less than",
-   "line": "225 passing yards",
-   "answer": "over",
-   "reveal": "More. Perry Orth had 288 passing yards and 0 TD in this game.",
-   "check": {
-    "value": 288,
-    "line": 225
-   },
-   "sig": "gm2016-10-09Perry Orthpass"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
-   "A": {
-    "label": "Joshua Simon (SC TE)",
-    "value": 9,
-    "school": "SC"
-   },
-   "B": {
-    "label": "D'Andre Swift (UGA RB)",
-    "value": 5,
-    "school": "UGA"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Joshua Simon 9 vs. D'Andre Swift 5.",
-   "sig": "urecTDD'Andre SwiftJoshua Simon"
   },
   {
    "type": "h2h",
@@ -182,43 +139,25 @@
    "sig": "hA.J. Turnercareer,Kenny McIntoshcareerrushTD"
   },
   {
-   "type": "rank",
-   "label": "Rivalry Game",
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
    "verified": true,
-   "pitted": true,
-   "unit": "yds",
-   "game": {
-    "date": "Sep 7, 2013",
-    "winner": "UGA",
-    "loser": "SC",
-    "ws": 41,
-    "ls": 30,
-    "venue": "Sanford Stadium"
+   "flip": false,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Joshua Simon (SC TE)",
+    "value": 9,
+    "school": "SC"
    },
-   "prompt": "In this game, rank these players by receiving yards, highest first.",
-   "items": [
-    {
-     "label": "Keith Marshall (UGA)",
-     "value": 54,
-     "school": "UGA"
-    },
-    {
-     "label": "Nick Jones (SC)",
-     "value": 97,
-     "school": "SC"
-    },
-    {
-     "label": "Arthur Lynch (UGA)",
-     "value": 26,
-     "school": "UGA"
-    },
-    {
-     "label": "Justin Scott-Wesley (UGA)",
-     "value": 116,
-     "school": "UGA"
-    }
-   ],
-   "sig": "gs2013-09-07rec"
+   "B": {
+    "label": "D'Andre Swift (UGA RB)",
+    "value": 5,
+    "school": "UGA"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Joshua Simon 9 vs. D'Andre Swift 5.",
+   "sig": "urecTDD'Andre SwiftJoshua Simon"
   }
  ]
 }

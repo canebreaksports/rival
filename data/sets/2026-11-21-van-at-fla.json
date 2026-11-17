@@ -6,40 +6,23 @@
   "away": "VAN",
   "home": "FLA"
  },
- "generatedAt": "2026-11-17T17:08:58.154Z",
+ "generatedAt": "2026-11-17T17:22:31.544Z",
  "engine": 8,
  "questions": [
   {
-   "type": "prog",
-   "label": "Program Pit · Vanderbilt vs Florida",
-   "a": "VAN",
-   "b": "FLA",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    1,
-    9
-   ],
+   "type": "moment",
+   "label": "Series History",
    "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more yards from scrimmage in a single season?",
-   "A": {
-    "label": "Re'Mahn Davis (RB) · 2022 VAN",
-    "value": 1057,
-    "school": "VAN"
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did Florida beat Vanderbilt more or fewer than",
+   "line": "23.5 times",
+   "answer": "under",
+   "reveal": "Fewer. Florida went 22–2 against Vanderbilt from 2000 to 2025 (24 meetings, on-field results).",
+   "check": {
+    "value": 22,
+    "line": 23.5
    },
-   "B": {
-    "label": "Lamical Perine (RB) · 2016 FLA",
-    "value": 582,
-    "school": "FLA"
-   },
-   "unit": "yards from scrimmage",
-   "sig": "hLamical Perine2016,Re'Mahn Davis2022scrim"
+   "sig": "scFLAVAN"
   },
   {
    "type": "prog",
@@ -55,34 +38,116 @@
    "sig": "glosing"
   },
   {
-   "type": "rank",
+   "type": "duel",
    "label": "Fresh Mix",
    "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "year": 2024,
+   "stat": "Rushing season",
+   "aSchool": "VAN",
+   "other": "FLA",
+   "aName": "Diego Pavia (QB)",
+   "bName": "Montrell Johnson (RB)",
+   "A": {
+    "big": "800",
+    "sm": "rush yds · 8 TD"
+   },
+   "B": {
+    "big": "593",
+    "sm": "rush yds · 6 TD"
+   },
+   "flip": false,
+   "sig": "drush2024Diego Pavia,Montrell Johnson"
+  },
+  {
+   "type": "rank",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "game": {
+    "date": "Nov 5, 2005",
+    "winner": "FLA",
+    "loser": "VAN",
+    "ws": 49,
+    "ls": 42,
+    "venue": "Ben Hill Griffin Stadium"
+   },
+   "prompt": "In this game, rank these players by receiving yards, highest first.",
    "items": [
     {
-     "label": "Re'Mahn Davis (VAN RB) · career rushing TDs",
-     "value": 5,
-     "school": "VAN"
-    },
-    {
-     "label": "Lamical Perine (FLA RB) · 2018 rushing TDs",
-     "value": 7,
+     "label": "Jemalle Cornelius (FLA)",
+     "value": 34,
      "school": "FLA"
     },
     {
-     "label": "Will Sheppard (VAN WR) · 2022 receiving TDs",
-     "value": 9,
+     "label": "Earl Bennett (VAN)",
+     "value": 75,
      "school": "VAN"
     },
     {
-     "label": "Kelvin Taylor (FLA RB) · 2013 rushing TDs",
-     "value": 4,
+     "label": "Erik Davis (VAN)",
+     "value": 127,
+     "school": "VAN"
+    },
+    {
+     "label": "Chad Jackson (FLA)",
+     "value": 53,
      "school": "FLA"
     }
    ],
-   "sig": "mxTDKelvin Taylor2013 rushing TDs,Lamical Perine2018 rushing TDs,Re'Mahn Daviscareer rushing TDs,Will Sheppard2022 receiving TDs"
+   "sig": "gs2005-11-05rec"
+  },
+  {
+   "type": "mc",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 9, 2013",
+    "winner": "VAN",
+    "loser": "FLA",
+    "ws": 34,
+    "ls": 17,
+    "venue": "Ben Hill Griffin Stadium"
+   },
+   "prompt": "What was the difference in rushing yards in Vanderbilt's 34–17 win over Florida?",
+   "options": [
+    "Vanderbilt +87 yards",
+    "Florida +17 yards",
+    "Florida +217 yards",
+    "Vanderbilt +197 yards"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    2,
+    3,
+    0
+   ],
+   "reveal": "Vanderbilt +87. Florida had 39 rushing yards, Vanderbilt 126.",
+   "sig": "td2013-11-09rush"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "A": {
+    "label": "Josh Hammond (FLA WR)",
+    "value": 14.9,
+    "school": "FLA"
+   },
+   "B": {
+    "label": "Ralph Webb (VAN RB)",
+    "value": 4.5,
+    "school": "VAN"
+   },
+   "unit": "",
+   "ypc": true,
+   "note": "🚨 Upset: Josh Hammond 14.9 per carry (9 carries) vs. Ralph Webb 4.5 per carry (931 carries).",
+   "sig": "uypcRalph WebbJosh Hammond"
   },
   {
    "label": "SEC East Originals",
@@ -95,50 +160,47 @@
    "reveal": "Over. Florida won 22 straight from 1989 to 2012."
   },
   {
-   "type": "moment",
-   "label": "Rivalry Game",
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Florida",
+   "a": "VAN",
+   "b": "FLA",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    113,
+    218
+   ],
    "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Oct 7, 2023",
-    "winner": "FLA",
-    "loser": "VAN",
-    "ws": 38,
-    "ls": 14,
-    "venue": "Ben Hill Griffin Stadium"
-   },
-   "prompt": "In this game, did Will Sheppard (Vanderbilt) have more or less than",
-   "line": "80 receiving yards",
-   "answer": "over",
-   "reveal": "More. Will Sheppard had 107 receiving yards on 3 catches and 1 TD in this game.",
-   "check": {
-    "value": 107,
-    "line": 80
-   },
-   "sig": "gm2023-10-07Will Sheppardrec"
+   "sig": "gtotalW"
   },
   {
-   "type": "moment",
+   "type": "mc",
    "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Oct 7, 2023",
+    "date": "Nov 7, 2009",
     "winner": "FLA",
     "loser": "VAN",
-    "ws": 38,
-    "ls": 14,
+    "ws": 27,
+    "ls": 3,
     "venue": "Ben Hill Griffin Stadium"
    },
-   "prompt": "In this game, did Arlis Boardingham (Florida) have more or fewer than",
-   "line": "1.5 receiving touchdowns",
-   "answer": "over",
-   "reveal": "More. Arlis Boardingham had 99 receiving yards on 7 catches and 2 TD in this game.",
-   "check": {
-    "value": 2,
-    "line": 1.5
-   },
-   "sig": "gm2023-10-07Arlis Boardinghamrectd"
+   "prompt": "What was the difference in rushing yards in Florida's 27–3 win over Vanderbilt?",
+   "options": [
+    "Florida +49 yards",
+    "Florida +119 yards",
+    "Vanderbilt +179 yards",
+    "Florida +19 yards"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    1,
+    3,
+    2
+   ],
+   "reveal": "Florida +49. Vanderbilt had 99 rushing yards, Florida 148.",
+   "sig": "td2009-11-07rush"
   },
   {
    "type": "count",
@@ -197,38 +259,6 @@
    ],
    "verified": true,
    "sig": "cVANFLA2500"
-  },
-  {
-   "label": "SEC East Originals",
-   "verified": true,
-   "sig": "kSEC East Originals1",
-   "type": "moment",
-   "prompt": "Florida's biggest win over Vanderbilt came in 2001. Was the margin more or less than",
-   "line": "50.5 points",
-   "answer": "over",
-   "reveal": "Over. Florida won 71–13, a 58-point margin."
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
-   "A": {
-    "label": "Josh Hammond (FLA WR)",
-    "value": 14.9,
-    "school": "FLA"
-   },
-   "B": {
-    "label": "Ralph Webb (VAN RB)",
-    "value": 4.5,
-    "school": "VAN"
-   },
-   "unit": "",
-   "ypc": true,
-   "note": "🚨 Upset: Josh Hammond 14.9 per carry (9 carries) vs. Ralph Webb 4.5 per carry (931 carries).",
-   "sig": "uypcRalph WebbJosh Hammond"
   }
  ]
 }

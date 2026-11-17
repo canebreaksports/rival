@@ -59,7 +59,7 @@ export interface Perf { name: string; cat: "rush" | "rec" | "pass"; yds: number;
 export interface TeamLine { total: number; rush: number; pass: number; to: number }
 export interface RivalryGame { season: number; date: string; home: SchoolKey; away: SchoolKey; hp: number; ap: number; venue: string; neutral?: boolean; bowl?: boolean; box?: Record<SchoolKey, Perf[]>; team?: Record<SchoolKey, TeamLine> }
 export interface VsTotal { name: string; school: SchoolKey; games: number; rush: number; rushTD: number; car: number; rec: number; recTD: number; recN: number }
-export interface RivalryPair { games: RivalryGame[]; vs: VsTotal[] }
+export interface RivalryPair { games: RivalryGame[]; vs: VsTotal[]; vsFrom?: number } // vsFrom: every game since then has a box score
 
 // ---- questions: fully self-contained so frozen sets need no data at runtime ----
 interface QBase { label: string; verified: boolean; sig: string; trap?: boolean; upset?: boolean; pair?: string; pairPart?: 1 | 2; pitted?: boolean } // pitted: about both schools by construction

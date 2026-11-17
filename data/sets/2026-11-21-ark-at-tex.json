@@ -6,105 +6,31 @@
   "away": "ARK",
   "home": "TEX"
  },
- "generatedAt": "2026-11-17T17:08:58.166Z",
+ "generatedAt": "2026-11-17T17:22:31.559Z",
  "engine": 8,
  "questions": [
   {
-   "label": "Southwest Conference Rivals",
-   "verified": true,
-   "sig": "kSouthwest Conference Rivals1",
-   "type": "moment",
-   "prompt": "Texas's longest win streak in the series is more or fewer than",
-   "line": "12.5 games",
-   "answer": "over",
-   "reveal": "Over. Texas won 14 straight from 1894 to 1932. Arkansas's best is 4 (1935–38)."
-  },
-  {
    "type": "moment",
    "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Dec 29, 2014",
-    "winner": "ARK",
-    "loser": "TEX",
-    "ws": 31,
-    "ls": 7,
-    "venue": "NRG Stadium · Postseason"
-   },
-   "prompt": "In this game, did Brandon Allen (Arkansas) throw for more or less than",
-   "line": "200 passing yards",
-   "answer": "under",
-   "reveal": "Less. Brandon Allen had 160 passing yards and 2 TD in this game.",
-   "check": {
-    "value": 160,
-    "line": 200
-   },
-   "sig": "gm2014-12-29Brandon Allenpass"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2023,
-   "stat": "Receiving season",
-   "aSchool": "TEX",
-   "other": "ARK",
-   "aName": "Jordan Whittington (WR)",
-   "bName": "Andrew Armstrong (WR)",
-   "A": {
-    "big": "505",
-    "sm": "rec yds · 1 TD"
-   },
-   "B": {
-    "big": "764",
-    "sm": "rec yds · 5 TD"
-   },
-   "flip": false,
-   "sig": "drec2023Andrew Armstrong,Jordan Whittington"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Arkansas vs Texas",
-   "a": "ARK",
-   "b": "TEX",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
-   "values": [
-    5,
-    0
-   ],
-   "verified": true,
-   "sig": "gwin3"
-  },
-  {
-   "type": "mc",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 22, 2025",
+    "date": "Sep 27, 2008",
     "winner": "TEX",
     "loser": "ARK",
     "ws": 52,
-    "ls": 37,
+    "ls": 10,
     "venue": "DKR-Texas Memorial Stadium"
    },
-   "prompt": "What was the difference in total yards in Texas's 52–37 win over Arkansas?",
-   "options": [
-    "Arkansas +22 yards",
-    "Arkansas +72 yards",
-    "Arkansas +92 yards",
-    "Texas +132 yards"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    0,
-    1,
-    2
-   ],
-   "reveal": "Arkansas +22. Arkansas had 512 total yards, Texas 490.",
-   "sig": "td2025-11-22total"
+   "prompt": "In this game, did Quan Cosby (Texas) have more or less than",
+   "line": "50 receiving yards",
+   "answer": "over",
+   "reveal": "More. Quan Cosby had 67 receiving yards on 5 catches and 1 TD in this game.",
+   "check": {
+    "value": 67,
+    "line": 50
+   },
+   "sig": "gm2008-09-27Quan Cosbyrec"
   },
   {
    "type": "duel",
@@ -128,53 +54,40 @@
    "sig": "drush2022Raheim Sanders,Roschon Johnson"
   },
   {
-   "type": "count",
-   "label": "School Count",
+   "label": "Southwest Conference Rivals",
+   "verified": true,
+   "sig": "kSouthwest Conference Rivals1",
+   "type": "moment",
+   "prompt": "Texas's longest win streak in the series is more or fewer than",
+   "line": "12.5 games",
+   "answer": "over",
+   "reveal": "Over. Texas won 14 straight from 1894 to 1932. Arkansas's best is 4 (1935–38)."
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Arkansas vs Texas",
    "a": "ARK",
    "b": "TEX",
-   "threshold": 3250,
-   "A": [
-    {
-     "name": "Darren McFadden",
-     "yards": 4590
-    },
-    {
-     "name": "Alex Collins",
-     "yards": 3703
-    },
-    {
-     "name": "Ben Cowins",
-     "yards": 3570
-    },
-    {
-     "name": "Dickey Morton",
-     "yards": 3317
-    }
-   ],
-   "B": [
-    {
-     "name": "Ricky Williams",
-     "yards": 6279
-    },
-    {
-     "name": "Cedric Benson",
-     "yards": 5540
-    },
-    {
-     "name": "Earl Campbell",
-     "yards": 4443
-    },
-    {
-     "name": "Bijan Robinson",
-     "yards": 3410
-    },
-    {
-     "name": "Jamaal Charles",
-     "yards": 3328
-    }
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    11,
+    13
    ],
    "verified": true,
-   "sig": "cARKTEX3250"
+   "sig": "gpeakW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Arkansas vs Texas",
+   "a": "ARK",
+   "b": "TEX",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    5,
+    0
+   ],
+   "verified": true,
+   "sig": "gwin3"
   },
   {
    "type": "h2h",
@@ -198,17 +111,65 @@
    "sig": "urecTDRicky WilliamsCheyenne O'Grady"
   },
   {
-   "type": "prog",
-   "label": "Program Pit · Arkansas vs Texas",
+   "type": "count",
+   "label": "School Count",
    "a": "ARK",
    "b": "TEX",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    11,
-    5
+   "threshold": 3000,
+   "A": [
+    {
+     "name": "Darren McFadden",
+     "yards": 4590
+    },
+    {
+     "name": "Alex Collins",
+     "yards": 3703
+    },
+    {
+     "name": "Ben Cowins",
+     "yards": 3570
+    },
+    {
+     "name": "Dickey Morton",
+     "yards": 3317
+    },
+    {
+     "name": "Cedric Cobbs",
+     "yards": 3018
+    }
+   ],
+   "B": [
+    {
+     "name": "Ricky Williams",
+     "yards": 6279
+    },
+    {
+     "name": "Cedric Benson",
+     "yards": 5540
+    },
+    {
+     "name": "Earl Campbell",
+     "yards": 4443
+    },
+    {
+     "name": "Bijan Robinson",
+     "yards": 3410
+    },
+    {
+     "name": "Jamaal Charles",
+     "yards": 3328
+    },
+    {
+     "name": "Chris Gilbert",
+     "yards": 3231
+    },
+    {
+     "name": "Vince Young",
+     "yards": 3127
+    }
    ],
    "verified": true,
-   "sig": "glosing"
+   "sig": "cARKTEX3000"
   },
   {
    "type": "rank",
@@ -227,8 +188,8 @@
    "prompt": "In this game, rank these players by receiving yards, highest first.",
    "items": [
     {
-     "label": "Jaden Platt (ARK)",
-     "value": 66,
+     "label": "Raylen Sharpe (ARK)",
+     "value": 65,
      "school": "ARK"
     },
     {
@@ -248,6 +209,38 @@
     }
    ],
    "sig": "gs2025-11-22rec"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Alex Collins finish his Arkansas career with more or less than",
+   "line": "3,550 yards from scrimmage",
+   "answer": "over",
+   "reveal": "More. Alex Collins had 3,870 yards from scrimmage in his career.",
+   "check": {
+    "value": 3870,
+    "line": 3550
+   },
+   "sig": "ppAlex Collinscareer|Ricky Williamscareerscrim0",
+   "pair": "ppAlex Collinscareer|Ricky Williamscareerscrim",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Ricky Williams finish his Texas career with more or less than",
+   "line": "7,900 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Ricky Williams had 7,267 yards from scrimmage in his career.",
+   "check": {
+    "value": 7267,
+    "line": 7900
+   },
+   "sig": "ppAlex Collinscareer|Ricky Williamscareerscrim1",
+   "pair": "ppAlex Collinscareer|Ricky Williamscareerscrim",
+   "pairPart": 2
   }
  ]
 }

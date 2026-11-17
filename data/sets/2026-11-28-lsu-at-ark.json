@@ -6,28 +6,38 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-17T17:08:58.172Z",
+ "generatedAt": "2026-11-17T17:22:31.569Z",
  "engine": 8,
  "questions": [
   {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Arkansas",
-   "a": "LSU",
-   "b": "ARK",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
-   "values": [
-    0,
-    5
-   ],
+   "type": "moment",
+   "label": "Rivalry Game",
    "verified": true,
-   "sig": "gwin3"
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2009",
+    "winner": "LSU",
+    "loser": "ARK",
+    "ws": 33,
+    "ls": 30,
+    "venue": "Tiger Stadium (LA)"
+   },
+   "prompt": "In this game, did Jordan Jefferson (LSU) throw for more or less than",
+   "line": "225 passing yards",
+   "answer": "under",
+   "reveal": "Less. Jordan Jefferson had 179 passing yards and 2 TD in this game.",
+   "check": {
+    "value": 179,
+    "line": 225
+   },
+   "sig": "gm2009-11-28Jordan Jeffersonpass"
   },
   {
    "type": "count",
    "label": "School Count",
    "a": "LSU",
    "b": "ARK",
-   "threshold": 3000,
+   "threshold": 2800,
    "A": [
     {
      "name": "Kevin Faulk",
@@ -48,6 +58,10 @@
     {
      "name": "Derrius Guice",
      "yards": 3074
+    },
+    {
+     "name": "Harvey Williams",
+     "yards": 2860
     }
    ],
    "B": [
@@ -70,29 +84,76 @@
     {
      "name": "Cedric Cobbs",
      "yards": 3018
+    },
+    {
+     "name": "Felix Jones",
+     "yards": 2956
+    },
+    {
+     "name": "James Rouse",
+     "yards": 2887
     }
    ],
    "verified": true,
-   "sig": "cLSUARK3000"
+   "sig": "cLSUARK2800"
   },
   {
-   "type": "h2h",
+   "type": "rank",
    "label": "Fresh Mix",
+   "trap": true,
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more career yards from scrimmage?",
-   "A": {
-    "label": "Alex Collins (RB) · career, ARK",
-    "value": 3870,
-    "school": "ARK"
-   },
-   "B": {
-    "label": "Leonard Fournette (RB) · career, LSU",
-    "value": 4356,
-    "school": "LSU"
-   },
-   "unit": "yards from scrimmage",
-   "sig": "hAlex Collinscareer,Leonard Fournettecareerscrim"
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Alex Collins (RB) · 2014 ARK",
+     "value": 1100,
+     "school": "ARK"
+    },
+    {
+     "label": "Kevin Faulk (RB) · 1998 LSU",
+     "value": 1279,
+     "school": "LSU"
+    },
+    {
+     "label": "Clyde Edwards-Helaire (RB) · 2018 LSU",
+     "value": 658,
+     "school": "LSU"
+    },
+    {
+     "label": "Taylen Green (QB) · 2024 ARK",
+     "value": 602,
+     "school": "ARK"
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Alex Collins's best year was 2015 (1,577), not 2014; Kevin Faulk's best year was 1996 (1,282), not 1998; Clyde Edwards-Helaire's best year was 2019 (1,415), not 2018; Taylen Green's best year was 2025 (779), not 2024.",
+   "sig": "trrushAlex Collins2014,Clyde Edwards-Helaire2018,Kevin Faulk1998,Taylen Green2024"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Arkansas",
+   "a": "LSU",
+   "b": "ARK",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    13,
+    3
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Arkansas",
+   "a": "LSU",
+   "b": "ARK",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    15,
+    11
+   ],
+   "verified": true,
+   "sig": "gpeakW"
   },
   {
    "type": "moment",
@@ -115,49 +176,6 @@
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 23, 2019",
-    "winner": "LSU",
-    "loser": "ARK",
-    "ws": 56,
-    "ls": 20,
-    "venue": "Tiger Stadium (LA)"
-   },
-   "prompt": "What was the difference in rushing yards in LSU's 56–20 win over Arkansas?",
-   "options": [
-    "LSU +146 yards",
-    "Arkansas +276 yards",
-    "LSU +36 yards",
-    "Arkansas +36 yards"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    1,
-    3,
-    0
-   ],
-   "reveal": "LSU +146. LSU had 260 rushing yards, Arkansas 114.",
-   "sig": "td2019-11-23rush"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Arkansas",
-   "a": "LSU",
-   "b": "ARK",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    249,
-    161
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "mc",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
     "date": "Nov 11, 2017",
     "winner": "LSU",
     "loser": "ARK",
@@ -168,38 +186,19 @@
    "prompt": "What was the difference in total yards in LSU's 33–10 win over Arkansas?",
    "options": [
     "LSU +97 yards",
-    "LSU +33 yards",
-    "LSU +7 yards",
-    "Arkansas +207 yards"
+    "Arkansas +167 yards",
+    "LSU +47 yards",
+    "Arkansas +47 yards"
    ],
    "answer": 0,
    "order": [
     2,
     1,
-    3,
-    0
+    0,
+    3
    ],
    "reveal": "LSU +97. LSU had 415 total yards, Arkansas 318.",
    "sig": "td2017-11-11total"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more career rushing TDs?",
-   "A": {
-    "label": "Joe Burrow (QB) · career, LSU",
-    "value": 12,
-    "school": "LSU"
-   },
-   "B": {
-    "label": "Rakeem Boyd (RB) · career, ARK",
-    "value": 13,
-    "school": "ARK"
-   },
-   "unit": "rushing TDs",
-   "sig": "hJoe Burrowcareer,Rakeem BoydcareerrushTD"
   },
   {
    "type": "h2h",
@@ -221,6 +220,36 @@
    "unit": "",
    "note": "🚨 Upset: Cheyenne O'Grady 12 vs. Leonard Fournette 1.",
    "sig": "urecTDLeonard FournetteCheyenne O'Grady"
+  },
+  {
+   "type": "mc",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 14, 2015",
+    "winner": "ARK",
+    "loser": "LSU",
+    "ws": 31,
+    "ls": 14,
+    "venue": "Tiger Stadium (LA)"
+   },
+   "prompt": "What was the difference in rushing yards in Arkansas's 31–14 win over LSU?",
+   "options": [
+    "Arkansas +240 yards",
+    "Arkansas +330 yards",
+    "Arkansas +130 yards",
+    "LSU +190 yards"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    3,
+    2,
+    1
+   ],
+   "reveal": "Arkansas +240. LSU had 59 rushing yards, Arkansas 299.",
+   "sig": "td2015-11-14rush"
   }
  ]
 }

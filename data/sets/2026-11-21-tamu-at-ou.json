@@ -6,47 +6,86 @@
   "away": "TAMU",
   "home": "OU"
  },
- "generatedAt": "2026-11-17T17:08:58.158Z",
+ "generatedAt": "2026-11-17T17:22:31.550Z",
  "engine": 8,
  "questions": [
   {
-   "type": "rank",
+   "type": "moment",
    "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
-   "unit": "yds",
    "game": {
-    "date": "Jan 4, 2013",
-    "winner": "TAMU",
-    "loser": "OU",
-    "ws": 41,
-    "ls": 13,
-    "venue": "Postseason"
+    "date": "Nov 14, 2009",
+    "winner": "OU",
+    "loser": "TAMU",
+    "ws": 65,
+    "ls": 10,
+    "venue": "Memorial Stadium (Norman, OK)"
    },
-   "prompt": "In this game, rank these players by receiving yards, highest first.",
-   "items": [
-    {
-     "label": "Ryan Swope (TAMU)",
-     "value": 104,
-     "school": "TAMU"
-    },
-    {
-     "label": "Sterling Shepard (OU)",
-     "value": 43,
-     "school": "OU"
-    },
-    {
-     "label": "Jalen Saunders (OU)",
-     "value": 63,
-     "school": "OU"
-    },
-    {
-     "label": "EZ Nwachukwu (TAMU)",
-     "value": 81,
-     "school": "TAMU"
-    }
+   "prompt": "In this game, did Adron Tennell (Oklahoma) have more or less than",
+   "line": "60 receiving yards",
+   "answer": "over",
+   "reveal": "More. Adron Tennell had 76 receiving yards on 5 catches and 2 TD in this game.",
+   "check": {
+    "value": 76,
+    "line": 60
+   },
+   "sig": "gm2009-11-14Adron Tennellrec"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Jalen Wydermyer (TAMU TE)",
+    "value": 1468,
+    "school": "TAMU"
+   },
+   "B": {
+    "label": "Joe Mixon (OU RB)",
+    "value": 894,
+    "school": "OU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jalen Wydermyer 1,468 vs. Joe Mixon 894.",
+   "sig": "urecJoe MixonJalen Wydermyer"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2014,
+   "stat": "Receiving season",
+   "aSchool": "TAMU",
+   "other": "OU",
+   "aName": "Josh Reynolds (WR)",
+   "bName": "Sterling Shepard (WR)",
+   "A": {
+    "big": "842",
+    "sm": "rec yds · 13 TD"
+   },
+   "B": {
+    "big": "970",
+    "sm": "rec yds · 5 TD"
+   },
+   "flip": true,
+   "sig": "drec2014Josh Reynolds,Sterling Shepard"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs Oklahoma",
+   "a": "TAMU",
+   "b": "OU",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    5,
+    2
    ],
-   "sig": "gs2013-01-04rec"
+   "verified": true,
+   "sig": "glosing"
   },
   {
    "type": "moment",
@@ -54,22 +93,22 @@
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Jan 4, 2013",
-    "winner": "TAMU",
-    "loser": "OU",
-    "ws": 41,
-    "ls": 13,
-    "venue": "Postseason"
+    "date": "Nov 6, 2004",
+    "winner": "OU",
+    "loser": "TAMU",
+    "ws": 42,
+    "ls": 35,
+    "venue": "Kyle Field"
    },
-   "prompt": "In this game, did Johnny Manziel (Texas A&M) throw for more or less than",
-   "line": "200 passing yards",
+   "prompt": "In this game, did Chad Schroeder (Texas A&M) have more or less than",
+   "line": "40 receiving yards",
    "answer": "over",
-   "reveal": "More. Johnny Manziel had 287 passing yards and 2 TD in this game.",
+   "reveal": "More. Chad Schroeder had 63 receiving yards on 2 catches and 1 TD in this game.",
    "check": {
-    "value": 287,
-    "line": 200
+    "value": 63,
+    "line": 40
    },
-   "sig": "gm2013-01-04Johnny Manzielpass"
+   "sig": "gm2004-11-06Chad Schroederrec"
   },
   {
    "type": "moment",
@@ -105,94 +144,36 @@
   },
   {
    "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
+   "label": "Against Each Other",
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "flip": true,
+   "prompt": "In Texas A&M–Oklahoma games since 2004, who had more rushing yards against the other school?",
    "A": {
-    "label": "Jalen Wydermyer (TAMU TE)",
-    "value": 1468,
+    "label": "Johnny Manziel (TAMU) vs. Oklahoma",
+    "value": 229,
     "school": "TAMU"
    },
    "B": {
-    "label": "Joe Mixon (OU RB)",
-    "value": 894,
+    "label": "Allen Patrick (OU) vs. Texas A&M",
+    "value": 285,
     "school": "OU"
    },
-   "unit": "",
-   "note": "🚨 Upset: Jalen Wydermyer 1,468 vs. Joe Mixon 894.",
-   "sig": "urecJoe MixonJalen Wydermyer"
+   "unit": "rushing yds",
+   "note": "Johnny Manziel: 229 in 1 game. Allen Patrick: 285 in 3 games.",
+   "sig": "vsrushAllen Patrick,Johnny Manziel"
   },
   {
    "type": "prog",
    "label": "Program Pit · Texas A&M vs Oklahoma",
    "a": "TAMU",
    "b": "OU",
-   "prompt": "Who had more losing seasons from 2000–2025?",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
    "values": [
-    5,
-    2
+    2,
+    20
    ],
    "verified": true,
-   "sig": "glosing"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2014,
-   "stat": "Receiving season",
-   "aSchool": "TAMU",
-   "other": "OU",
-   "aName": "Josh Reynolds (WR)",
-   "bName": "Sterling Shepard (WR)",
-   "A": {
-    "big": "842",
-    "sm": "rec yds · 13 TD"
-   },
-   "B": {
-    "big": "970",
-    "sm": "rec yds · 5 TD"
-   },
-   "flip": true,
-   "sig": "drec2014Josh Reynolds,Sterling Shepard"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Jan 4, 2013",
-    "winner": "TAMU",
-    "loser": "OU",
-    "ws": 41,
-    "ls": 13,
-    "venue": "Postseason"
-   },
-   "prompt": "In this game, did Johnny Manziel (Texas A&M) have more or fewer than",
-   "line": "0.5 rushing touchdowns",
-   "answer": "over",
-   "reveal": "More. Johnny Manziel had 229 rushing yards on 17 carries and 2 TD in this game.",
-   "check": {
-    "value": 2,
-    "line": 0.5
-   },
-   "sig": "gm2013-01-04Johnny Manzielrushtd"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas A&M vs Oklahoma",
-   "a": "TAMU",
-   "b": "OU",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    11,
-    13
-   ],
-   "verified": true,
-   "sig": "gpeakW"
+   "sig": "gwin10"
   }
  ]
 }
