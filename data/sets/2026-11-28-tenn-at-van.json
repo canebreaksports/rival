@@ -6,68 +6,143 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-17T16:17:15.382Z",
- "engine": 4,
+ "generatedAt": "2026-11-17T16:37:59.390Z",
+ "engine": 5,
  "questions": [
   {
    "type": "h2h",
    "label": "Fresh Mix",
+   "upset": true,
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more receiving TDs in a single season?",
+   "flip": true,
+   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
    "A": {
-    "label": "Kalija Lipscomb (WR) · 2017 VAN",
-    "value": 8
+    "label": "Kalija Lipscomb (VAN WR)",
+    "value": 6.2,
+    "school": "VAN"
    },
    "B": {
-    "label": "Jalin Hyatt (WR) · 2022 TENN",
-    "value": 15
+    "label": "Arian Foster (TENN RB)",
+    "value": 4.6,
+    "school": "TENN"
    },
-   "unit": "receiving TDs",
-   "sig": "hJalin Hyatt2022,Kalija Lipscomb2017recTD"
+   "unit": "",
+   "ypc": true,
+   "note": "🚨 Upset: Kalija Lipscomb 6.2 per carry (24 carries) vs. Arian Foster 4.6 per carry (650 carries).",
+   "sig": "uypcArian FosterKalija Lipscomb"
   },
   {
-   "label": "Tennessee",
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    1,
+    12
+   ],
    "verified": true,
-   "sig": "kTennessee3",
-   "type": "h2h",
-   "prompt": "Who had more career rushing yards at Tennessee?",
-   "A": {
-    "label": "Arian Foster",
-    "value": 2964
-   },
-   "B": {
-    "label": "Jamal Lewis",
-    "value": 2677
-   },
-   "unit": "rushing yds",
-   "flip": true
+   "sig": "gwin3"
   },
   {
    "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "Rank these players by career receiving yards (at that school), highest first.",
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
-     "label": "Jalin Hyatt (WR) · career, TENN",
-     "value": 1769
+     "label": "Re'Mahn Davis (VAN RB) · career total TDs (rushing + receiving)",
+     "value": 7,
+     "school": "VAN"
     },
     {
-     "label": "Jared Pinkney (TE) · career, VAN",
-     "value": 1560
+     "label": "Dylan Sampson (TENN RB) · 2024 rushing TDs",
+     "value": 22,
+     "school": "TENN"
     },
     {
-     "label": "Ralph Webb (RB) · career, VAN",
-     "value": 572
+     "label": "Trent Sherfield (VAN WR) · 2017 receiving TDs",
+     "value": 5,
+     "school": "VAN"
     },
     {
-     "label": "Will Sheppard (WR) · career, VAN",
-     "value": 2067
+     "label": "Kalija Lipscomb (VAN WR) · 2017 receiving TDs",
+     "value": 8,
+     "school": "VAN"
+    }
+   ],
+   "sig": "mxTDDylan Sampson2024 rushing TDs,Kalija Lipscomb2017 receiving TDs,Re'Mahn Daviscareer total TDs (rushing + receiving),Trent Sherfield2017 receiving TDs"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
+   "items": [
+    {
+     "label": "Arian Foster (RB) · 2008 TENN",
+     "value": 736,
+     "school": "TENN"
+    },
+    {
+     "label": "Jamal Lewis (RB) · 1999 TENN",
+     "value": 1009,
+     "school": "TENN"
+    },
+    {
+     "label": "Dylan Sampson (RB) · 2023 TENN",
+     "value": 779,
+     "school": "TENN"
+    },
+    {
+     "label": "Ralph Webb (RB) · 2016 VAN",
+     "value": 1449,
+     "school": "VAN"
     }
    ],
    "unit": "yds",
-   "sig": "rcar|recJalin Hyattcareer,Jared Pinkneycareer,Ralph Webbcareer,Will Sheppardcareer"
+   "note": "🪤 Trap: Arian Foster's best year was 2007 (1,533), not 2008; Jamal Lewis's best year was 1997 (1,630), not 1999; Dylan Sampson's best year was 2024 (1,626), not 2023.",
+   "sig": "trscrimArian Foster2008,Dylan Sampson2023,Jamal Lewis1999,Ralph Webb2016"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more rushing yards in a single season?",
+   "A": {
+    "label": "Arian Foster (RB) · 2008 TENN",
+    "value": 570,
+    "school": "TENN"
+   },
+   "B": {
+    "label": "Ralph Webb (RB) · 2014 VAN",
+    "value": 907,
+    "school": "VAN"
+   },
+   "unit": "rushing yards",
+   "sig": "hArian Foster2008,Ralph Webb2014rush"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more career receiving TDs?",
+   "A": {
+    "label": "Jalin Hyatt (WR) · career, TENN",
+    "value": 19,
+    "school": "TENN"
+   },
+   "B": {
+    "label": "Will Sheppard (WR) · career, VAN",
+    "value": 21,
+    "school": "VAN"
+   },
+   "unit": "receiving TDs",
+   "sig": "hJalin Hyattcareer,Will SheppardcareerrecTD"
   },
   {
    "type": "prog",
@@ -81,151 +156,6 @@
    ],
    "verified": true,
    "sig": "gtotalW"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
-   "A": {
-    "label": "Trent Sherfield (VAN WR)",
-    "value": 12.9
-   },
-   "B": {
-    "label": "Arian Foster (TENN RB)",
-    "value": 4.6
-   },
-   "unit": "",
-   "ypc": true,
-   "note": "🚨 Upset: Trent Sherfield 12.9 per carry (22 carries) vs. Arian Foster 4.6 per carry (650 carries).",
-   "sig": "uypcArian FosterTrent Sherfield"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2024,
-   "stat": "Rushing season",
-   "aSchool": "TENN",
-   "other": "VAN",
-   "aName": "Dylan Sampson (RB)",
-   "bName": "Diego Pavia (QB)",
-   "A": {
-    "big": "1,485",
-    "sm": "rush yds · 22 TD"
-   },
-   "B": {
-    "big": "800",
-    "sm": "rush yds · 8 TD"
-   },
-   "flip": false,
-   "sig": "drush2024Diego Pavia,Dylan Sampson"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
-   "a": "TENN",
-   "b": "VAN",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    11,
-    10
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2005, did Arian Foster (Tennessee) have more or less than",
-   "line": "1,200 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. Arian Foster had 1,027 yards from scrimmage in 2005.",
-   "check": {
-    "value": 1027,
-    "line": 1200
-   },
-   "sig": "pArian Foster2005scrim"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "In 2022, did Dylan Sampson (Tennessee) have more or less than",
-   "line": "800 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Dylan Sampson had 397 rushing yards in 2022. 🪤 Trap: his big year was 2024 (1,485).",
-   "check": {
-    "value": 397,
-    "line": 800
-   },
-   "sig": "tpDylan Sampson2022rush"
-  },
-  {
-   "type": "count",
-   "label": "School Count",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 2500,
-   "A": [
-    {
-     "name": "Travis Henry",
-     "yards": 3078
-    },
-    {
-     "name": "Arian Foster",
-     "yards": 2964
-    },
-    {
-     "name": "James Stewart",
-     "yards": 2890
-    },
-    {
-     "name": "Johnnie Jones",
-     "yards": 2852
-    },
-    {
-     "name": "DeSean Bishop",
-     "yards": 2694,
-     "active": true
-    },
-    {
-     "name": "Jamal Lewis",
-     "yards": 2677
-    },
-    {
-     "name": "Jalen Hurd",
-     "yards": 2638
-    },
-    {
-     "name": "Cedric Houston",
-     "yards": 2634
-    },
-    {
-     "name": "Jay Graham",
-     "yards": 2609
-    }
-   ],
-   "B": [
-    {
-     "name": "Ralph Webb",
-     "yards": 4173
-    },
-    {
-     "name": "Zac Stacy",
-     "yards": 3143
-    },
-    {
-     "name": "Frank Mordica",
-     "yards": 2632
-    }
-   ],
-   "verified": true,
-   "sig": "cTENNVAN2500"
   }
  ]
 }

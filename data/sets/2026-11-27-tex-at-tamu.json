@@ -6,133 +6,161 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-17T16:17:15.374Z",
- "engine": 4,
+ "generatedAt": "2026-11-17T16:37:59.380Z",
+ "engine": 5,
  "questions": [
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas vs Texas A&M",
-   "a": "TEX",
-   "b": "TAMU",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    236,
-    195
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2025, did Kevin Concepcion (Texas A&M) have more or less than",
-   "line": "844 receiving yards",
-   "answer": "over",
-   "reveal": "More. Kevin Concepcion had 919 receiving yards in 2025.",
-   "check": {
-    "value": 919,
-    "line": 844
-   },
-   "sig": "pKevin Concepcion2025rec"
-  },
-  {
-   "type": "count",
-   "label": "School Count",
-   "a": "TEX",
-   "b": "TAMU",
-   "threshold": 3250,
-   "A": [
-    {
-     "name": "Ricky Williams",
-     "yards": 6279
-    },
-    {
-     "name": "Cedric Benson",
-     "yards": 5540
-    },
-    {
-     "name": "Earl Campbell",
-     "yards": 4443
-    },
-    {
-     "name": "Bijan Robinson",
-     "yards": 3410
-    },
-    {
-     "name": "Jamaal Charles",
-     "yards": 3328
-    }
-   ],
-   "B": [
-    {
-     "name": "Darren Lewis",
-     "yards": 5012
-    },
-    {
-     "name": "Curtis Dickey",
-     "yards": 3703
-    },
-    {
-     "name": "Trayveon Williams",
-     "yards": 3379
-    },
-    {
-     "name": "Cyrus Gray",
-     "yards": 3298
-    },
-    {
-     "name": "Greg Hill",
-     "yards": 3262
-    }
-   ],
-   "verified": true,
-   "sig": "cTEXTAMU3250"
-  },
   {
    "type": "rank",
    "label": "Fresh Mix",
-   "trap": true,
    "verified": true,
-   "prompt": "Rank these seasons by receiving yards, highest first.",
+   "prompt": "Rank these seasons by rushing TDs, highest first.",
    "items": [
     {
-     "label": "Jordan Whittington (WR) · 2021 TEX",
-     "value": 377
+     "label": "D'Onta Foreman (RB) · 2016 TEX",
+     "value": 15,
+     "school": "TEX"
     },
     {
-     "label": "Collin Johnson (WR) · 2017 TEX",
-     "value": 765
+     "label": "Trey Williams (RB) · 2012 TAMU",
+     "value": 5,
+     "school": "TAMU"
     },
     {
-     "label": "Josh Reynolds (WR) · 2015 TAMU",
-     "value": 907
+     "label": "Sam Ehlinger (QB) · 2020 TEX",
+     "value": 8,
+     "school": "TEX"
     },
     {
-     "label": "Bijan Robinson (RB) · 2022 TEX",
-     "value": 314
+     "label": "Tyrone Swoopes (QB) · 2015 TEX",
+     "value": 12,
+     "school": "TEX"
     }
    ],
-   "unit": "yds",
-   "note": "🪤 Trap: Jordan Whittington's best year was 2022 (652), not 2021; Collin Johnson's best year was 2018 (988), not 2017; Josh Reynolds's best year was 2016 (1,039), not 2015.",
-   "sig": "trrecBijan Robinson2022,Collin Johnson2017,Jordan Whittington2021,Josh Reynolds2015"
+   "unit": "TD",
+   "sig": "rsea|rushTDD'Onta Foreman2016,Sam Ehlinger2020,Trey Williams2012,Tyrone Swoopes2015"
   },
   {
    "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
    "flip": false,
-   "prompt": "Who had more rushing TDs in a single season?",
+   "prompt": "Who had more career rushing yards?",
    "A": {
-    "label": "Devon Achane (RB) · 2022 TAMU",
-    "value": 8
+    "label": "Johnathan Gray (RB) · career, TEX",
+    "value": 2606,
+    "school": "TEX"
    },
    "B": {
-    "label": "Roschon Johnson (RB) · 2022 TEX",
-    "value": 5
+    "label": "Trayveon Williams (RB) · career, TAMU",
+    "value": 3379,
+    "school": "TAMU"
    },
-   "unit": "rushing TDs",
-   "sig": "hDevon Achane2022,Roschon Johnson2022rushTD"
+   "unit": "rushing yards",
+   "sig": "hJohnathan Graycareer,Trayveon Williamscareerrush"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receptions (at the school shown)?",
+   "A": {
+    "label": "Jalen Wydermyer (TAMU TE)",
+    "value": 118,
+    "school": "TAMU"
+   },
+   "B": {
+    "label": "Bijan Robinson (TEX RB)",
+    "value": 60,
+    "school": "TEX"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jalen Wydermyer 118 vs. Bijan Robinson 60.",
+   "sig": "urecNBijan RobinsonJalen Wydermyer"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Texas A&M",
+   "a": "TEX",
+   "b": "TAMU",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    13,
+    2
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Tra Carson (TAMU RB) · 2013 rushing yards",
+     "value": 329,
+     "school": "TAMU"
+    },
+    {
+     "label": "Bijan Robinson (TEX RB) · career yards from scrimmage",
+     "value": 4215,
+     "school": "TEX"
+    },
+    {
+     "label": "Roschon Johnson (TEX RB) · 2020 yards from scrimmage",
+     "value": 468,
+     "school": "TEX"
+    },
+    {
+     "label": "Josh Reynolds (TAMU WR) · 2014 receiving yards",
+     "value": 842,
+     "school": "TAMU"
+    }
+   ],
+   "sig": "mxydsBijan Robinsoncareer yards from scrimmage,Josh Reynolds2014 receiving yards,Roschon Johnson2020 yards from scrimmage,Tra Carson2013 rushing yards"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2019,
+   "stat": "Rushing season",
+   "aSchool": "TEX",
+   "other": "TAMU",
+   "aName": "Sam Ehlinger (QB)",
+   "bName": "Isaiah Spiller (RB)",
+   "A": {
+    "big": "663",
+    "sm": "rush yds · 7 TD"
+   },
+   "B": {
+    "big": "946",
+    "sm": "rush yds · 10 TD"
+   },
+   "flip": true,
+   "sig": "drush2019Isaiah Spiller,Sam Ehlinger"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more receiving TDs in a single season?",
+   "A": {
+    "label": "Collin Johnson (WR) · 2016 TEX",
+    "value": 3,
+    "school": "TEX"
+   },
+   "B": {
+    "label": "Josh Reynolds (WR) · 2016 TAMU",
+    "value": 12,
+    "school": "TAMU"
+   },
+   "unit": "receiving TDs",
+   "sig": "hCollin Johnson2016,Josh Reynolds2016recTD"
   },
   {
    "type": "prog",
@@ -146,68 +174,6 @@
    ],
    "verified": true,
    "sig": "glosing"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Rank these seasons by rushing TDs, highest first.",
-   "items": [
-    {
-     "label": "D'Onta Foreman (RB) · 2016 TEX",
-     "value": 15
-    },
-    {
-     "label": "Trey Williams (RB) · 2012 TAMU",
-     "value": 5
-    },
-    {
-     "label": "Sam Ehlinger (QB) · 2020 TEX",
-     "value": 8
-    },
-    {
-     "label": "Tyrone Swoopes (QB) · 2015 TEX",
-     "value": 12
-    }
-   ],
-   "unit": "TD",
-   "sig": "rsea|rushTDD'Onta Foreman2016,Sam Ehlinger2020,Trey Williams2012,Tyrone Swoopes2015"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more receiving TDs in a single season?",
-   "A": {
-    "label": "Collin Johnson (WR) · 2016 TEX",
-    "value": 3
-   },
-   "B": {
-    "label": "Josh Reynolds (WR) · 2016 TAMU",
-    "value": 12
-   },
-   "unit": "receiving TDs",
-   "sig": "hCollin Johnson2016,Josh Reynolds2016recTD"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receptions (at the school shown)?",
-   "A": {
-    "label": "Keaontay Ingram (TEX RB)",
-    "value": 67
-   },
-   "B": {
-    "label": "Bijan Robinson (TEX RB)",
-    "value": 60
-   },
-   "unit": "",
-   "note": "🚨 Upset: Keaontay Ingram 67 vs. Bijan Robinson 60.",
-   "sig": "urecNBijan RobinsonKeaontay Ingram"
   }
  ]
 }

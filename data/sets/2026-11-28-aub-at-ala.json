@@ -6,87 +6,9 @@
   "away": "AUB",
   "home": "ALA"
  },
- "generatedAt": "2026-11-17T16:17:15.375Z",
- "engine": 4,
+ "generatedAt": "2026-11-17T16:37:59.383Z",
+ "engine": 5,
  "questions": [
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2019, did DeVonta Smith (Alabama) have more or less than",
-   "line": "1,300 receiving yards",
-   "answer": "under",
-   "reveal": "Less. DeVonta Smith had 1,256 receiving yards in 2019.",
-   "check": {
-    "value": 1256,
-    "line": 1300
-   },
-   "sig": "pDeVonta Smith2019rec"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2010,
-   "stat": "Rushing season",
-   "aSchool": "ALA",
-   "other": "AUB",
-   "aName": "Trent Richardson (RB)",
-   "bName": "Cam Newton (QB)",
-   "A": {
-    "big": "700",
-    "sm": "rush yds · 6 TD"
-   },
-   "B": {
-    "big": "1,473",
-    "sm": "rush yds · 20 TD"
-   },
-   "flip": true,
-   "sig": "drush2010Cam Newton,Trent Richardson"
-  },
-  {
-   "label": "Auburn",
-   "verified": true,
-   "sig": "kAuburn7",
-   "type": "h2h",
-   "prompt": "Who had more career rushing yards at Auburn?",
-   "A": {
-    "label": "Joe Cribbs",
-    "value": 3368
-   },
-   "B": {
-    "label": "Tank Bigsby",
-    "value": 2903
-   },
-   "unit": "rushing yds",
-   "flip": true
-  },
-  {
-   "label": "Auburn",
-   "verified": true,
-   "sig": "kAuburn4",
-   "type": "rank",
-   "prompt": "Rank these Auburn receivers by 2005 receiving yards, highest first.",
-   "items": [
-    {
-     "label": "Devin Aromashodu",
-     "value": 494
-    },
-    {
-     "label": "Ben Obomanu",
-     "value": 357
-    },
-    {
-     "label": "Courtney Taylor",
-     "value": 278
-    },
-    {
-     "label": "Prechae Rodriguez",
-     "value": 240
-    }
-   ],
-   "unit": "yds"
-  },
   {
    "type": "duel",
    "label": "Fresh Mix",
@@ -105,72 +27,161 @@
     "big": "990",
     "sm": "rush yds · 11 TD"
    },
-   "flip": false,
+   "flip": true,
    "sig": "drush2014Derrick Henry,Nick Marshall"
   },
   {
-   "type": "moment",
+   "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2019, did DeVonta Smith (Alabama) have more or less than",
-   "line": "15.5 receiving TDs",
-   "answer": "under",
-   "reveal": "Less. DeVonta Smith had 14 receiving TDs in 2019.",
-   "check": {
-    "value": 14,
-    "line": 15.5
+   "flip": false,
+   "prompt": "Who had more career yards from scrimmage?",
+   "A": {
+    "label": "Trent Richardson (RB) · career, ALA",
+    "value": 3860,
+    "school": "ALA"
    },
-   "sig": "pDeVonta Smith2019recTD"
+   "B": {
+    "label": "Ronnie Brown (RB) · career, AUB",
+    "value": 3375,
+    "school": "AUB"
+   },
+   "unit": "yards from scrimmage",
+   "sig": "hRonnie Browncareer,Trent Richardsoncareerscrim"
   },
   {
-   "type": "moment",
+   "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "Did Courtney Taylor finish his Auburn career with more or less than",
-   "line": "6.5 receiving TDs",
-   "answer": "over",
-   "reveal": "More. Courtney Taylor had 9 receiving TDs in his career.",
-   "check": {
-    "value": 9,
-    "line": 6.5
+   "flip": true,
+   "prompt": "Who had more rushing yards in a single season?",
+   "A": {
+    "label": "Trent Richardson (RB) · 2011 ALA",
+    "value": 1679,
+    "school": "ALA"
    },
-   "sig": "pCourtney TaylorcareerrecTD"
+   "B": {
+    "label": "Ronnie Brown (RB) · 2002 AUB",
+    "value": 1008,
+    "school": "AUB"
+   },
+   "unit": "rushing yards",
+   "sig": "hRonnie Brown2002,Trent Richardson2011rush"
   },
   {
    "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
-     "label": "Ronnie Brown (RB) · 2002 AUB",
-     "value": 1008
+     "label": "Trent Richardson (ALA RB) · career total TDs (rushing + receiving)",
+     "value": 42,
+     "school": "ALA"
     },
     {
-     "label": "Jalen Hurts (QB) · 2017 ALA",
-     "value": 855
+     "label": "Ben Obomanu (AUB WR) · career receiving TDs",
+     "value": 18,
+     "school": "AUB"
     },
     {
-     "label": "Derrick Henry (RB) · 2014 ALA",
-     "value": 990
+     "label": "Najee Harris (ALA RB) · 2019 receiving TDs",
+     "value": 7,
+     "school": "ALA"
     },
     {
-     "label": "Najee Harris (RB) · 2020 ALA",
-     "value": 1466
+     "label": "Devin Aromashodu (AUB WR) · 2004 receiving TDs",
+     "value": 4,
+     "school": "AUB"
     }
    ],
-   "unit": "yds",
-   "sig": "rsea|rushDerrick Henry2014,Jalen Hurts2017,Najee Harris2020,Ronnie Brown2002"
+   "sig": "mxTDBen Obomanucareer receiving TDs,Devin Aromashodu2004 receiving TDs,Najee Harris2019 receiving TDs,Trent Richardsoncareer total TDs (rushing + receiving)"
   },
   {
-   "label": "Auburn",
+   "type": "count",
+   "label": "School Count",
+   "a": "AUB",
+   "b": "ALA",
+   "threshold": 2800,
+   "A": [
+    {
+     "name": "Bo Jackson",
+     "yards": 4303
+    },
+    {
+     "name": "Carnell 'Cadillac' Williams",
+     "yards": 3831
+    },
+    {
+     "name": "James Brooks",
+     "yards": 3523
+    },
+    {
+     "name": "Jarquez Hunter",
+     "yards": 3371
+    },
+    {
+     "name": "Joe Cribbs",
+     "yards": 3368
+    },
+    {
+     "name": "Ben Tate",
+     "yards": 3321
+    },
+    {
+     "name": "Tre Mason",
+     "yards": 2979
+    },
+    {
+     "name": "Tank Bigsby",
+     "yards": 2903
+    },
+    {
+     "name": "Stephen Davis",
+     "yards": 2811
+    }
+   ],
+   "B": [
+    {
+     "name": "Najee Harris",
+     "yards": 3843
+    },
+    {
+     "name": "Derrick Henry",
+     "yards": 3591
+    },
+    {
+     "name": "Shaun Alexander",
+     "yards": 3565
+    },
+    {
+     "name": "Bobby Humphrey",
+     "yards": 3420
+    },
+    {
+     "name": "Kenneth Darby",
+     "yards": 3324
+    },
+    {
+     "name": "T. J. Yeldon",
+     "yards": 3322
+    },
+    {
+     "name": "Mark Ingram II",
+     "yards": 3261
+    },
+    {
+     "name": "Trent Richardson",
+     "yards": 3130
+    },
+    {
+     "name": "Damien Harris",
+     "yards": 3073
+    }
+   ],
    "verified": true,
-   "sig": "kAuburn2",
-   "type": "moment",
-   "prompt": "Did Bo Jackson finish his Auburn career with more or less than",
-   "line": "4,000 rushing yards",
-   "answer": "over",
-   "reveal": "Over. Bo ran for 4,303 yards, still Auburn's career record."
+   "sig": "cAUBALA2800"
   },
   {
    "type": "h2h",
@@ -180,16 +191,18 @@
    "flip": false,
    "prompt": "Who had more college receptions (at the school shown)?",
    "A": {
-    "label": "Tank Bigsby (AUB RB)",
-    "value": 62
+    "label": "Philip Lutzenkirchen (AUB TE)",
+    "value": 59,
+    "school": "AUB"
    },
    "B": {
-    "label": "Tre Mason (AUB RB)",
-    "value": 19
+    "label": "Derrick Henry (ALA RB)",
+    "value": 17,
+    "school": "ALA"
    },
    "unit": "",
-   "note": "🚨 Upset: Tank Bigsby 62 vs. Tre Mason 19.",
-   "sig": "urecNTre MasonTank Bigsby"
+   "note": "🚨 Upset: Philip Lutzenkirchen 59 vs. Derrick Henry 17.",
+   "sig": "urecNDerrick HenryPhilip Lutzenkirchen"
   }
  ]
 }

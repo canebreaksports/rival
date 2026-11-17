@@ -41,6 +41,7 @@ scripts/               build-sets.ts, validate.ts, port-prototype.mjs (one-time 
 - **Weekly sets use verified content only.** Unverified records stay in the data for Coach free play, where they show an UNVERIFIED chip. A thin set beats a wrong one; fewer than 3 questions shows "Stats pack coming soon".
 - **Player-first sets:** 7 generated player questions per set (props, head-to-head, Rank It, Mixed Rank It, Blind Stat Duel, upset, trap, school count). Program comparisons only fill gaps.
 - **Caps per set:** ≤4 higher/lower, ≤2 program (≤4 if either school has no verified player data), ≤3 h2h, ≤2 rank (incl. mixed), ≤1 count, ≤2 duels, ≤1 crossover, and ≤1 trap and ≤1 upset across generated *and* curated questions.
+- **Pitted mode = both schools in every question** (`involvesBoth()` in `lib/build.ts`): head-to-heads and upsets pair one player from each school, every Rank It includes both, and team packs and single-player props are Team Deep Dive only.
 - **No trivial values:** generated questions skip seasons under 250 yds / 3 TD and careers under 500 yds / 5 TD.
 - **School Count** only uses thresholds ≥ both schools' floor, and never one above an active player's current total (he could cross it mid-week).
 - **Progress** is saved in localStorage under `rival:<date>:<away>@<home>` right after each answer; answering the last question completes the run. Coach runs use a `preview:` prefix so testing doesn't burn the real run.

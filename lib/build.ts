@@ -5,7 +5,7 @@ import { PROGRAM_STATS, SCHOOL, programValue } from "./data";
 import { genCount, genDuel, genMixedRank, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 4; // v4: deeper career lists, 2,000/2,250-yard counts (v3: mixed rank, notable floor, source margins)
+export const ENGINE_VERSION = 5; // v5: pitted sets only use questions involving both schools (v4: deeper career lists)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean }
@@ -68,12 +68,14 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
   const c = makeCtx(data, teams, rng, o.verifiedOnly);
   if (c.pool.length < 4) return [];
   // weighted toward the player formats: props, head-to-heads, rank, duels; traps limited below
-  const gens = [() => genRank(c), () => genPOU(c), () => genPOU(c), () => genH2H(c, teams), () => genH2H(c, teams),
-    () => genDuel(c, teams), () => genMixedRank(c, teams), () => genTrapRank(c), () => genTrapPOU(c)];
+  // Pitted (two schools): only formats that involve both. Single-player props stay in Team Deep Dive.
+  const gens = teams.length > 1
+    ? [() => genRank(c), () => genH2H(c, teams), () => genH2H(c, teams), () => genDuel(c, teams), () => genMixedRank(c, teams), () => genMixedRank(c, teams), () => genTrapRank(c)]
+    : [() => genRank(c), () => genPOU(c), () => genPOU(c), () => genH2H(c, teams), () => genTrapRank(c), () => genTrapPOU(c)];
   const out: Question[] = [], sigs = new Set<string>();
   if (rng() < 0.7) { const u = genUpset(c); if (u) { sigs.add(u.sig); out.push(u) } }
   let trapped = rng() < 0.25;
-  for (let t = 0; t < n * 8 && out.length < n; t++) {
+  for (let t = 0; t < n * 20 && out.length < n; t++) { // pitted formats fail often (both-schools rule), so try harder
     const q = pick(rng, gens)();
     if (!q || sigs.has(q.sig) || (q.trap && trapped)) continue;
     if (q.trap) trapped = true;
@@ -91,6 +93,24 @@ export function hasPlayerData(data: Dataset, k: SchoolKey, o: BuildOpts) {
   return data.players.seasons.some(s => s.school === k && (!o.verifiedOnly || s.verified));
 }
 
+/** School an answer item belongs to: its tag, or a school code in its label ("(AUB)", "· 2015 LSU"). */
+function itemSchool(it: { label: string; school?: SchoolKey }, a: SchoolKey, b: SchoolKey): SchoolKey | null {
+  if (it.school) return it.school;
+  const hit = [a, b].filter(k => new RegExp(`\\b${k.replace("&", "\\&")}\\b`).test(it.label));
+  return hit.length === 1 ? hit[0] : null;
+}
+
+/** Pitted mode: true when a question involves both schools (spec: "only questions involving both schools or programs"). */
+export function involvesBoth(q: Question, a: SchoolKey, b: SchoolKey): boolean {
+  const both = (schools: (SchoolKey | null)[]) => schools.includes(a) && schools.includes(b);
+  switch (q.type) {
+    case "prog": case "count": case "duel": case "cross": return true;
+    case "moment": return !q.check; // curated matchup moments/series facts; generated single-player props are not
+    case "h2h": return both([itemSchool(q.A, a, b), itemSchool(q.B, a, b)]);
+    case "rank": return both(q.items.map(x => itemSchool(x, a, b)));
+  }
+}
+
 export function buildRound(data: Dataset, a: SchoolKey, b: SchoolKey, rng: Rng, o: BuildOpts): Question[] {
   const m = findMatchup(data, a, b);
   const gen = generate(data, [a, b], PLAYER_QS, rng, o);
@@ -99,14 +119,14 @@ export function buildRound(data: Dataset, a: SchoolKey, b: SchoolKey, rng: Rng, 
   const rest = shuffle(rng, [
     ...programQs(data, a, b, o),
     ...(m ? curatedQs(m.items, m.name, rng, o, [m.a, m.b]) : []),
-    ...teamQs(data, a, rng, o), ...teamQs(data, b, rng, o),
-  ]);
+  ]); // team packs are single-school: Team Deep Dive only
   // Player stats lead. Program comparisons are capped at 2, or 4 while a school still has no player pack.
   const cap = caps(hasPlayerData(data, a, o) && hasPlayerData(data, b, o) ? 2 : 4);
   const used: Partial<Record<QType, number>> = {}, out: Question[] = [];
   let traps = 0, upsets = 0;
   for (const q of [...gen, ...rest]) {
     if (out.length >= WEEKLY_N) break;
+    if (!involvesBoth(q, a, b)) continue;
     if ((used[q.type] ?? 0) >= cap[q.type]) continue;
     if (q.trap && traps >= 1) continue;
     if (q.upset && upsets >= 1) continue;

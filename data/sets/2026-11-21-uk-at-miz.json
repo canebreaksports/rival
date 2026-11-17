@@ -6,25 +6,133 @@
   "away": "UK",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-17T16:17:15.360Z",
- "engine": 4,
+ "generatedAt": "2026-11-17T16:37:59.370Z",
+ "engine": 5,
  "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Missouri",
+   "a": "UK",
+   "b": "MIZ",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    2,
+    7
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
   {
    "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
    "flip": true,
-   "prompt": "Who had more career receiving yards?",
+   "prompt": "Who had more receiving TDs in a single season?",
    "A": {
-    "label": "Johnathon Johnson (WR) · career, MIZ",
-    "value": 2190
+    "label": "C.J. Conrad (TE) · 2017 UK",
+    "value": 4,
+    "school": "UK"
    },
    "B": {
-    "label": "Wan'Dale Robinson (WR) · career, UK",
-    "value": 1334
+    "label": "Luther Burden III (WR) · 2023 MIZ",
+    "value": 9,
+    "school": "MIZ"
    },
-   "unit": "receiving yards",
-   "sig": "hJohnathon Johnsoncareer,Wan'Dale Robinsoncareerrec"
+   "unit": "receiving TDs",
+   "sig": "hC.J. Conrad2017,Luther Burden III2023recTD"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more yards from scrimmage in a single season?",
+   "A": {
+    "label": "Asim Rose (RB) · 2019 UK",
+    "value": 893,
+    "school": "UK"
+   },
+   "B": {
+    "label": "Ish Witter (RB) · 2017 MIZ",
+    "value": 1136,
+    "school": "MIZ"
+   },
+   "unit": "yards from scrimmage",
+   "sig": "hAsim Rose2019,Ish Witter2017scrim"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Larry Rountree III (MIZ RB) · career rushing yards",
+     "value": 3720,
+     "school": "MIZ"
+    },
+    {
+     "label": "Garrett Johnson (UK WR) · 2015 receiving yards",
+     "value": 694,
+     "school": "UK"
+    },
+    {
+     "label": "Asim Rose (UK RB) · career yards from scrimmage",
+     "value": 2204,
+     "school": "UK"
+    },
+    {
+     "label": "Tyler Badie (MIZ RB) · 2021 yards from scrimmage",
+     "value": 1934,
+     "school": "MIZ"
+    }
+   ],
+   "sig": "mxydsAsim Rosecareer yards from scrimmage,Garrett Johnson2015 receiving yards,Larry Rountree IIIcareer rushing yards,Tyler Badie2021 yards from scrimmage"
+  },
+  {
+   "label": "SEC East Newcomers",
+   "verified": true,
+   "sig": "kSEC East Newcomers0",
+   "type": "moment",
+   "prompt": "Kentucky's longest win streak over Missouri is more or fewer than",
+   "line": "4.5 games",
+   "answer": "over",
+   "reveal": "Over. Kentucky won 5 straight from 2015 to 2019."
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2017,
+   "stat": "Rushing season",
+   "aSchool": "MIZ",
+   "other": "UK",
+   "aName": "Larry Rountree III (RB)",
+   "bName": "Stephen Johnson (QB)",
+   "A": {
+    "big": "703",
+    "sm": "rush yds · 6 TD"
+   },
+   "B": {
+    "big": "375",
+    "sm": "rush yds · 5 TD"
+   },
+   "flip": false,
+   "sig": "drush2017Larry Rountree III,Stephen Johnson"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Missouri",
+   "a": "UK",
+   "b": "MIZ",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    14,
+    9
+   ],
+   "verified": true,
+   "sig": "glosing"
   },
   {
    "type": "count",
@@ -60,136 +168,57 @@
    "sig": "cUKMIZ3500"
   },
   {
-   "type": "rank",
+   "type": "duel",
    "label": "Fresh Mix",
    "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Larry Rountree III (MIZ RB) · career rushing yards",
-     "value": 3720
-    },
-    {
-     "label": "Garrett Johnson (UK WR) · 2015 receiving yards",
-     "value": 694
-    },
-    {
-     "label": "Asim Rose (UK RB) · career yards from scrimmage",
-     "value": 2204
-    },
-    {
-     "label": "Tyler Badie (MIZ RB) · 2021 yards from scrimmage",
-     "value": 1934
-    }
-   ],
-   "sig": "mxydsAsim Rosecareer yards from scrimmage,Garrett Johnson2015 receiving yards,Larry Rountree IIIcareer rushing yards,Tyler Badie2021 yards from scrimmage"
+   "year": 2019,
+   "stat": "Rushing season",
+   "aSchool": "MIZ",
+   "other": "UK",
+   "aName": "Larry Rountree III (RB)",
+   "bName": "Chris Rodriguez Jr. (RB)",
+   "A": {
+    "big": "829",
+    "sm": "rush yds · 9 TD"
+   },
+   "B": {
+    "big": "533",
+    "sm": "rush yds · 6 TD"
+   },
+   "flip": true,
+   "sig": "drush2019Chris Rodriguez Jr.,Larry Rountree III"
   },
   {
    "type": "rank",
    "label": "Fresh Mix",
+   "trap": true,
    "verified": true,
-   "prompt": "Rank these seasons by rushing TDs, highest first.",
+   "prompt": "Rank these seasons by rushing yards, highest first.",
    "items": [
+    {
+     "label": "Chris Rodriguez Jr. (RB) · 2022 UK",
+     "value": 903,
+     "school": "UK"
+    },
+    {
+     "label": "Stanley Williams (RB) · 2014 UK",
+     "value": 488,
+     "school": "UK"
+    },
     {
      "label": "Brady Cook (QB) · 2023 MIZ",
-     "value": 8
+     "value": 319,
+     "school": "MIZ"
     },
     {
-     "label": "Asim Rose (RB) · 2019 UK",
-     "value": 6
-    },
-    {
-     "label": "Demie Sumo (RB) · 2024 UK",
-     "value": 5
-    },
-    {
-     "label": "Cody Schrader (RB) · 2022 MIZ",
-     "value": 9
+     "label": "Damarea Crockett (RB) · 2018 MIZ",
+     "value": 703,
+     "school": "MIZ"
     }
    ],
-   "unit": "TD",
-   "sig": "rsea|rushTDAsim Rose2019,Brady Cook2023,Cody Schrader2022,Demie Sumo2024"
-  },
-  {
-   "label": "SEC East Newcomers",
-   "verified": true,
-   "sig": "kSEC East Newcomers1",
-   "type": "moment",
-   "prompt": "Missouri's biggest win over Kentucky came in 2013. Was the margin more or less than",
-   "line": "27.5 points",
-   "answer": "over",
-   "reveal": "Over. Missouri won 48–17, a 31-point margin."
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Kentucky vs Missouri",
-   "a": "UK",
-   "b": "MIZ",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    14,
-    9
-   ],
-   "verified": true,
-   "sig": "glosing"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving yards in a single season?",
-   "A": {
-    "label": "J'Mon Moore (WR) · 2015 MIZ",
-    "value": 350
-   },
-   "B": {
-    "label": "Garrett Johnson (WR) · 2014 UK",
-    "value": 271
-   },
-   "unit": "receiving yards",
-   "sig": "hGarrett Johnson2014,J'Mon Moore2015rec"
-  },
-  {
-   "label": "SEC East Newcomers",
-   "verified": true,
-   "sig": "kSEC East Newcomers0",
-   "type": "moment",
-   "prompt": "Kentucky's longest win streak over Missouri is more or fewer than",
-   "line": "4.5 games",
-   "answer": "over",
-   "reveal": "Over. Kentucky won 5 straight from 2015 to 2019."
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Kentucky vs Missouri",
-   "a": "UK",
-   "b": "MIZ",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    145,
-    192
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more yards from scrimmage in a single season?",
-   "A": {
-    "label": "Benny Snell Jr. (RB) · 2018 UK",
-    "value": 1539
-   },
-   "B": {
-    "label": "Larry Rountree III (RB) · 2017 MIZ",
-    "value": 760
-   },
-   "unit": "yards from scrimmage",
-   "sig": "hBenny Snell Jr.2018,Larry Rountree III2017scrim"
+   "unit": "yds",
+   "note": "🪤 Trap: Chris Rodriguez Jr.'s best year was 2021 (1,379), not 2022; Stanley Williams's best year was 2016 (1,170), not 2014; Brady Cook's best year was 2022 (590), not 2023; Damarea Crockett's best year was 2016 (1,062), not 2018.",
+   "sig": "trrushBrady Cook2023,Chris Rodriguez Jr.2022,Damarea Crockett2018,Stanley Williams2014"
   }
  ]
 }

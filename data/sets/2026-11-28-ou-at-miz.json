@@ -6,171 +6,9 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-17T16:17:15.381Z",
- "engine": 4,
+ "generatedAt": "2026-11-17T16:37:59.388Z",
+ "engine": 5,
  "questions": [
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2018,
-   "stat": "Rushing season",
-   "aSchool": "OU",
-   "other": "MIZ",
-   "aName": "Kennedy Brooks (RB)",
-   "bName": "Tyler Badie (RB)",
-   "A": {
-    "big": "1,056",
-    "sm": "rush yds · 12 TD"
-   },
-   "B": {
-    "big": "436",
-    "sm": "rush yds · 2 TD"
-   },
-   "flip": true,
-   "sig": "drush2018Kennedy Brooks,Tyler Badie"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
-   "items": [
-    {
-     "label": "Damarea Crockett (RB) · 2017 MIZ",
-     "value": 516
-    },
-    {
-     "label": "Tyler Badie (RB) · 2020 MIZ",
-     "value": 575
-    },
-    {
-     "label": "Trey Sermon (RB) · 2017 OU",
-     "value": 883
-    },
-    {
-     "label": "Joe Mixon (RB) · 2015 OU",
-     "value": 1109
-    }
-   ],
-   "unit": "yds",
-   "note": "🪤 Trap: Damarea Crockett's best year was 2016 (1,076), not 2017; Tyler Badie's best year was 2021 (1,934), not 2020; Trey Sermon's best year was 2018 (1,124), not 2017; Joe Mixon's best year was 2016 (1,812), not 2015.",
-   "sig": "trscrimDamarea Crockett2017,Joe Mixon2015,Trey Sermon2017,Tyler Badie2020"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Oklahoma vs Missouri",
-   "a": "OU",
-   "b": "MIZ",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
-   "values": [
-    0,
-    1
-   ],
-   "verified": true,
-   "sig": "gwin3"
-  },
-  {
-   "type": "count",
-   "label": "School Count",
-   "a": "OU",
-   "b": "MIZ",
-   "threshold": 3250,
-   "A": [
-    {
-     "name": "Samaje Perine",
-     "yards": 4122
-    },
-    {
-     "name": "Billy Sims",
-     "yards": 4118
-    },
-    {
-     "name": "Joe Washington",
-     "yards": 4071
-    },
-    {
-     "name": "Adrian Peterson",
-     "yards": 4045
-    },
-    {
-     "name": "Steve Owens",
-     "yards": 4041
-    },
-    {
-     "name": "Quentin Griffin",
-     "yards": 3938
-    },
-    {
-     "name": "DeMarco Murray",
-     "yards": 3685
-    },
-    {
-     "name": "De'Mond Parker",
-     "yards": 3403
-    },
-    {
-     "name": "Kennedy Brooks",
-     "yards": 3320
-    }
-   ],
-   "B": [
-    {
-     "name": "Brad Smith",
-     "yards": 4289
-    },
-    {
-     "name": "Larry Rountree III",
-     "yards": 3720
-    }
-   ],
-   "verified": true,
-   "sig": "cOUMIZ3250"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
-   "items": [
-    {
-     "label": "Trey Sermon (RB) · 2017 OU",
-     "value": 883
-    },
-    {
-     "label": "Damarea Crockett (RB) · 2017 MIZ",
-     "value": 516
-    },
-    {
-     "label": "Kennedy Brooks (RB) · 2018 OU",
-     "value": 1113
-    },
-    {
-     "label": "Tyler Badie (RB) · 2020 MIZ",
-     "value": 575
-    }
-   ],
-   "unit": "yds",
-   "sig": "rsea|scrimDamarea Crockett2017,Kennedy Brooks2018,Trey Sermon2017,Tyler Badie2020"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more yards from scrimmage in a single season?",
-   "A": {
-    "label": "Damarea Crockett (RB) · 2017 MIZ",
-    "value": 516
-   },
-   "B": {
-    "label": "Joe Mixon (RB) · 2016 OU",
-    "value": 1812
-   },
-   "unit": "yards from scrimmage",
-   "sig": "hDamarea Crockett2017,Joe Mixon2016scrim"
-  },
   {
    "type": "prog",
    "label": "Program Pit · Oklahoma vs Missouri",
@@ -185,6 +23,66 @@
    "sig": "gpeakW"
   },
   {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing TDs, highest first.",
+   "items": [
+    {
+     "label": "Larry Rountree III (RB) · 2019 MIZ",
+     "value": 9,
+     "school": "MIZ"
+    },
+    {
+     "label": "Eric Gray (RB) · 2022 OU",
+     "value": 11,
+     "school": "OU"
+    },
+    {
+     "label": "Damarea Crockett (RB) · 2018 MIZ",
+     "value": 7,
+     "school": "MIZ"
+    },
+    {
+     "label": "Larry Rountree III (RB) · 2020 MIZ",
+     "value": 14,
+     "school": "MIZ"
+    }
+   ],
+   "unit": "TD",
+   "sig": "rsea|rushTDDamarea Crockett2018,Eric Gray2022,Larry Rountree III2019,Larry Rountree III2020"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Trey Sermon (OU RB) · career total TDs (rushing + receiving)",
+     "value": 25,
+     "school": "OU"
+    },
+    {
+     "label": "Brady Cook (MIZ QB) · 2022 rushing TDs",
+     "value": 6,
+     "school": "MIZ"
+    },
+    {
+     "label": "Albert Okwuegbunam (MIZ TE) · 2017 receiving TDs",
+     "value": 11,
+     "school": "MIZ"
+    },
+    {
+     "label": "Kyler Murray (OU QB) · 2018 rushing TDs",
+     "value": 12,
+     "school": "OU"
+    }
+   ],
+   "sig": "mxTDAlbert Okwuegbunam2017 receiving TDs,Brady Cook2022 rushing TDs,Kyler Murray2018 rushing TDs,Trey Sermoncareer total TDs (rushing + receiving)"
+  },
+  {
    "type": "h2h",
    "label": "Fresh Mix",
    "upset": true,
@@ -192,30 +90,31 @@
    "flip": true,
    "prompt": "Who had more college receiving yards (at the school shown)?",
    "A": {
-    "label": "Mark Andrews (OU TE)",
-    "value": 1765
+    "label": "Larry Rountree III (MIZ RB)",
+    "value": 289,
+    "school": "MIZ"
    },
    "B": {
-    "label": "Joe Mixon (OU RB)",
-    "value": 894
+    "label": "Adrian Peterson (OU RB)",
+    "value": 198,
+    "school": "OU"
    },
    "unit": "",
-   "note": "🚨 Upset: Mark Andrews 1,765 vs. Joe Mixon 894.",
-   "sig": "urecJoe MixonMark Andrews"
+   "note": "🚨 Upset: Larry Rountree III 289 vs. Adrian Peterson 198.",
+   "sig": "urecAdrian PetersonLarry Rountree III"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
+   "type": "prog",
+   "label": "Program Pit · Oklahoma vs Missouri",
+   "a": "OU",
+   "b": "MIZ",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    271,
+    192
+   ],
    "verified": true,
-   "prompt": "Did Luther Burden III finish his Missouri career with more or less than",
-   "line": "21.5 receiving TDs",
-   "answer": "under",
-   "reveal": "Less. Luther Burden III had 20 receiving TDs in his career.",
-   "check": {
-    "value": 20,
-    "line": 21.5
-   },
-   "sig": "pLuther Burden IIIcareerrecTD"
+   "sig": "gtotalW"
   }
  ]
 }

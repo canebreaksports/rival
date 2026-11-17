@@ -6,25 +6,21 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-17T16:17:15.377Z",
- "engine": 4,
+ "generatedAt": "2026-11-17T16:37:59.385Z",
+ "engine": 5,
  "questions": [
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
+   "type": "prog",
+   "label": "Program Pit · LSU vs Arkansas",
+   "a": "LSU",
+   "b": "ARK",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    13,
+    3
+   ],
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more rushing yards in a single season?",
-   "A": {
-    "label": "Darren McFadden (RB) · 2007 ARK",
-    "value": 1830
-   },
-   "B": {
-    "label": "Derrius Guice (RB) · 2017 LSU",
-    "value": 1251
-   },
-   "unit": "rushing yards",
-   "sig": "hDarren McFadden2007,Derrius Guice2017rush"
+   "sig": "gwin10"
   },
   {
    "type": "prog",
@@ -40,17 +36,95 @@
    "sig": "glosing"
   },
   {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Arkansas",
-   "a": "LSU",
-   "b": "ARK",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    15,
-    11
-   ],
+   "type": "duel",
+   "label": "Fresh Mix",
    "verified": true,
-   "sig": "gpeakW"
+   "year": 2023,
+   "stat": "Rushing season",
+   "aSchool": "ARK",
+   "other": "LSU",
+   "aName": "KJ Jefferson (QB)",
+   "bName": "Jayden Daniels (QB)",
+   "A": {
+    "big": "447",
+    "sm": "rush yds · 2 TD"
+   },
+   "B": {
+    "big": "1,134",
+    "sm": "rush yds · 10 TD"
+   },
+   "flip": false,
+   "sig": "drush2023Jayden Daniels,KJ Jefferson"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career rushing TDs (at that school), highest first.",
+   "items": [
+    {
+     "label": "Joe Burrow (QB) · career, LSU",
+     "value": 12,
+     "school": "LSU"
+    },
+    {
+     "label": "Rakeem Boyd (RB) · career, ARK",
+     "value": 13,
+     "school": "ARK"
+    },
+    {
+     "label": "Derrius Guice (RB) · career, LSU",
+     "value": 29,
+     "school": "LSU"
+    },
+    {
+     "label": "Raheim Sanders (RB) · career, ARK",
+     "value": 17,
+     "school": "ARK"
+    }
+   ],
+   "unit": "TD",
+   "sig": "rcar|rushTDDerrius Guicecareer,Joe Burrowcareer,Raheim Sanderscareer,Rakeem Boydcareer"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2019,
+   "stat": "Rushing season",
+   "aSchool": "LSU",
+   "other": "ARK",
+   "aName": "Joe Burrow (QB)",
+   "bName": "Rakeem Boyd (RB)",
+   "A": {
+    "big": "368",
+    "sm": "rush yds · 5 TD"
+   },
+   "B": {
+    "big": "1,133",
+    "sm": "rush yds · 8 TD"
+   },
+   "flip": false,
+   "sig": "drush2019Joe Burrow,Rakeem Boyd"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more rushing TDs in a single season?",
+   "A": {
+    "label": "Darren McFadden (RB) · 2007 ARK",
+    "value": 16,
+    "school": "ARK"
+   },
+   "B": {
+    "label": "Derrius Guice (RB) · 2017 LSU",
+    "value": 11,
+    "school": "LSU"
+   },
+   "unit": "rushing TDs",
+   "sig": "hDarren McFadden2007,Derrius Guice2017rushTD"
   },
   {
    "type": "h2h",
@@ -60,74 +134,50 @@
    "flip": false,
    "prompt": "Who had more college receiving touchdowns (at the school shown)?",
    "A": {
-    "label": "Rashod Dubinion (ARK RB)",
-    "value": 2
+    "label": "Cheyenne O'Grady (ARK TE)",
+    "value": 12,
+    "school": "ARK"
    },
    "B": {
     "label": "Leonard Fournette (LSU RB)",
-    "value": 1
+    "value": 1,
+    "school": "LSU"
    },
    "unit": "",
-   "note": "🚨 Upset: Rashod Dubinion 2 vs. Leonard Fournette 1.",
-   "sig": "urecTDLeonard FournetteRashod Dubinion"
+   "note": "🚨 Upset: Cheyenne O'Grady 12 vs. Leonard Fournette 1.",
+   "sig": "urecTDLeonard FournetteCheyenne O'Grady"
   },
   {
    "type": "rank",
    "label": "Fresh Mix",
+   "trap": true,
    "verified": true,
-   "prompt": "Rank these players by career rushing yards (at that school), highest first.",
+   "prompt": "Rank these seasons by receiving yards, highest first.",
    "items": [
     {
-     "label": "Alex Collins (RB) · career, ARK",
-     "value": 3703
+     "label": "Treylon Burks (WR) · 2019 ARK",
+     "value": 475,
+     "school": "ARK"
     },
     {
-     "label": "Clyde Edwards-Helaire (RB) · career, LSU",
-     "value": 2104
+     "label": "Justin Jefferson (WR) · 2018 LSU",
+     "value": 875,
+     "school": "LSU"
     },
     {
-     "label": "Rashod Dubinion (RB) · career, ARK",
-     "value": 888
+     "label": "Cheyenne O'Grady (TE) · 2019 ARK",
+     "value": 372,
+     "school": "ARK"
     },
     {
-     "label": "Taylen Green (QB) · career, ARK",
-     "value": 1381
+     "label": "Andrew Armstrong (WR) · 2024 ARK",
+     "value": 1140,
+     "school": "ARK"
     }
    ],
    "unit": "yds",
-   "sig": "rcar|rushAlex Collinscareer,Clyde Edwards-Helairecareer,Rashod Dubinioncareer,Taylen Greencareer"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more career rushing yards?",
-   "A": {
-    "label": "Alex Collins (RB) · career, ARK",
-    "value": 3703
-   },
-   "B": {
-    "label": "Jayden Daniels (QB) · career, LSU",
-    "value": 2019
-   },
-   "unit": "rushing yards",
-   "sig": "hAlex Collinscareer,Jayden Danielscareerrush"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "In 2018, did Clyde Edwards-Helaire (LSU) have more or less than",
-   "line": "1,100 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Clyde Edwards-Helaire had 658 rushing yards in 2018. 🪤 Trap: his big year was 2019 (1,415).",
-   "check": {
-    "value": 658,
-    "line": 1100
-   },
-   "sig": "tpClyde Edwards-Helaire2018rush"
+   "note": "🪤 Trap: Treylon Burks's best year was 2021 (1,104), not 2019; Justin Jefferson's best year was 2019 (1,540), not 2018.",
+   "sig": "trrecAndrew Armstrong2024,Cheyenne O'Grady2019,Justin Jefferson2018,Treylon Burks2019"
   },
   {
    "type": "count",
@@ -173,27 +223,6 @@
    ],
    "verified": true,
    "sig": "cLSUARK3250"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2022,
-   "stat": "Rushing season",
-   "aSchool": "ARK",
-   "other": "LSU",
-   "aName": "KJ Jefferson (QB)",
-   "bName": "Jayden Daniels (QB)",
-   "A": {
-    "big": "640",
-    "sm": "rush yds · 9 TD"
-   },
-   "B": {
-    "big": "885",
-    "sm": "rush yds · 11 TD"
-   },
-   "flip": false,
-   "sig": "drush2022Jayden Daniels,KJ Jefferson"
   }
  ]
 }

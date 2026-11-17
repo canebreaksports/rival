@@ -19,6 +19,7 @@ export interface Ctx {
   info: Map<string, Player>;     // name|school → player
   label: string;
   seasonsOf: Map<string, PlayerSeason[]>; // name|school → that player's season rows (no career row)
+  teams: SchoolKey[];
   memo: Map<string, unknown>;
 }
 
@@ -27,7 +28,7 @@ export function makeCtx(data: Dataset, teams: SchoolKey[], rng: Rng, verifiedOnl
   const info = new Map(data.players.players.map(p => [p.name + "|" + p.school, p]));
   const seasonsOf = new Map<string, PlayerSeason[]>();
   for (const s of pool) if (s.year !== "career") { const k = s.name + "|" + s.school; (seasonsOf.get(k) ?? seasonsOf.set(k, []).get(k)!).push(s) }
-  return { rng, pool, info, label, seasonsOf, memo: new Map() };
+  return { rng, pool, info, label, seasonsOf, memo: new Map(), teams };
 }
 
 // ---- safety margin for approximate sources ----
@@ -47,6 +48,9 @@ const ranksClear = (k: string, ps: PlayerSeason[], val: (p: PlayerSeason) => num
   const v = [...ps].sort((x, y) => val(y) - val(x));
   return v.every((x, i) => i === 0 || clear(k, val(v[i - 1]), val(x), isApprox(v[i - 1]) || isApprox(x)));
 };
+
+/** In a matchup (two schools), a multi-player question must include players from both. */
+const bothSchools = (c: Ctx, ps: PlayerSeason[]) => c.teams.length < 2 || c.teams.every(t => ps.some(p => p.school === t));
 
 const pos = (c: Ctx, p: PlayerSeason): Pos => c.info.get(p.name + "|" + p.school)?.pos ?? "RB";
 const isStar = (c: Ctx, p: PlayerSeason) => !!c.info.get(p.name + "|" + p.school)?.star;
@@ -75,11 +79,11 @@ export function genRank(c: Ctx): Question | null {
   const arr = shuffle(c.rng, g[key]), schools = [...new Set(arr.map(p => p.school))];
   if (schools.length > 1) for (const t of schools) { const p = arr.find(x => x.school === t && !seen.has(x[k]!)); if (p) add(p) } // at least one from each school
   arr.forEach(add);
-  if (picks.length < 4 || !ranksClear(k, picks, p => p[k]!)) return null;
+  if (picks.length < 4 || !ranksClear(k, picks, p => p[k]!) || !bothSchools(c, picks)) return null;
   return {
     type: "rank", label: c.label, verified: allVerified(...picks),
     prompt: sc === "car" ? `Rank these players by career ${ST[k][0]} (at that school), highest first.` : `Rank these seasons by ${ST[k][0]}, highest first.`,
-    items: picks.map(p => ({ label: tag(c, p), value: p[k]! })), unit: ST[k][1],
+    items: picks.map(p => ({ label: tag(c, p), value: p[k]!, school: p.school })), unit: ST[k][1],
     sig: "r" + key + picks.map(p => p.name + p.year).sort(),
   };
 }
@@ -121,7 +125,7 @@ export function genH2H(c: Ctx, teams: SchoolKey[]): Question | null {
     return {
       type: "h2h", label: c.label, verified: allVerified(a, b), flip: c.rng() < 0.5,
       prompt: sc === "car" ? `Who had more career ${ST[k][0]}?` : `Who had more ${ST[k][0]} in a single season?`,
-      A: { label: tag(c, a), value: a[k]! }, B: { label: tag(c, b), value: b[k]! }, unit: ST[k][0],
+      A: { label: tag(c, a), value: a[k]!, school: a.school }, B: { label: tag(c, b), value: b[k]!, school: b.school }, unit: ST[k][0],
       sig: "h" + [a.name + a.year, b.name + b.year].sort() + k,
     };
   }
@@ -157,11 +161,11 @@ export function genMixedRank(c: Ctx, teams: SchoolKey[]): Question | null {
     const ok = (f: Fact) => !picks.some(x => x.p.name === f.p.name || !clear(unit === "TD" ? "rushTD" : "rush", x.value, f.value, isApprox(x.p) || isApprox(f.p)));
     for (const team of shuffle(c.rng, teams)) { const f = all.find(x => x.p.school === team && ok(x)); if (f) picks.push(f) } // both schools
     for (const f of shuffle(c.rng, all)) { if (picks.length === 4) break; if (ok(f) && !picks.some(x => x.kind === f.kind && picks.length < 3)) picks.push(f) }
-    if (picks.length < 4 || new Set(picks.map(x => x.kind)).size < 3) continue; // at least 3 different stat framings
+    if (picks.length < 4 || new Set(picks.map(x => x.kind)).size < 3 || !bothSchools(c, picks.map(f => f.p))) continue; // ≥3 stat framings
     return {
       type: "rank", label: c.label, verified: picks.every(f => f.p.verified), unit,
       prompt: `Rank these from highest to lowest (${unit === "TD" ? "touchdowns" : "yards"}).`,
-      items: picks.map(f => ({ label: `${f.p.name} (${f.p.school} ${pos(c, f.p)}) · ${f.what}`, value: f.value })),
+      items: picks.map(f => ({ label: `${f.p.name} (${f.p.school} ${pos(c, f.p)}) · ${f.what}`, value: f.value, school: f.p.school })),
       sig: "mx" + unit + picks.map(f => f.p.name + f.what).sort(),
     };
   }
@@ -197,10 +201,10 @@ export function genTrapRank(c: Ctx): Question | null {
     const add = (p: PlayerSeason) => { if (picks.length < 4 && !names.has(p.name) && !vals.has(p[k]!)) { picks.push(p); names.add(p.name); vals.add(p[k]!) } };
     offs.slice(0, 2 + Math.floor(c.rng() * 2)).forEach(add); // 2–3 off-years
     shuffle(c.rng, sea).forEach(add);                         // fill with anything else
-    if (picks.length < 4 || !ranksClear(k, picks, p => p[k]!)) continue;
+    if (picks.length < 4 || !ranksClear(k, picks, p => p[k]!) || !bothSchools(c, picks)) continue;
     return {
       type: "rank", label: c.label, trap: true, verified: allVerified(...picks),
-      prompt: `Rank these seasons by ${ST[k][0]}, highest first.`, items: picks.map(p => ({ label: tag(c, p), value: p[k]! })),
+      prompt: `Rank these seasons by ${ST[k][0]}, highest first.`, items: picks.map(p => ({ label: tag(c, p), value: p[k]!, school: p.school })),
       unit: ST[k][1], note: trapNote(c, picks, k), sig: "tr" + k + picks.map(p => p.name + p.year).sort(),
     };
   }
@@ -245,7 +249,7 @@ export function genUpset(c: Ctx): Question | null {
   const car = c.pool.filter(p => p.year === "career");
   const cands: { k: string; s: PlayerSeason; o: PlayerSeason; vs: number; vo: number; w: number }[] = [];
   for (const [k, u] of Object.entries(UP)) for (const s of car) if (isStar(c, s)) for (const o of car) {
-    if (isStar(c, o) || o.name === s.name) continue;
+    if (isStar(c, o) || o.name === s.name || (c.teams.length > 1 && o.school === s.school)) continue;
     const vs = u.g(c, s), vo = u.g(c, o);
     if (vs == null || vo == null || vo <= vs || !clear(k === "peakRush" || k === "peakScrim" ? "rush" : k, vo, vs, isApprox(s) || isApprox(o))) continue;
     const ps = pos(c, s), po = pos(c, o), recv = RECV.has(k);
@@ -264,7 +268,7 @@ export function genUpset(c: Ctx): Question | null {
   const carries = (p: PlayerSeason) => (u.ypc ? ` (${p.att} carries)` : "");
   return {
     type: "h2h", label: c.label, upset: true, verified: allVerified(x.s, x.o), flip: c.rng() < 0.5,
-    prompt: u.q, A: { label: lab(x.o), value: x.vo }, B: { label: lab(x.s), value: x.vs }, unit: "", ...(u.ypc ? { ypc: true } : {}),
+    prompt: u.q, A: { label: lab(x.o), value: x.vo, school: x.o.school }, B: { label: lab(x.s), value: x.vs, school: x.s.school }, unit: "", ...(u.ypc ? { ypc: true } : {}),
     note: `🚨 Upset: ${x.o.name} ${f(x.vo)}${carries(x.o)} vs. ${x.s.name} ${f(x.vs)}${carries(x.s)}.`,
     sig: "u" + x.k + x.s.name + x.o.name,
   };

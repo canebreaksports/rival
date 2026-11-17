@@ -6,25 +6,68 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-17T16:17:15.379Z",
- "engine": 4,
+ "generatedAt": "2026-11-17T16:37:59.387Z",
+ "engine": 5,
  "questions": [
   {
-   "type": "h2h",
+   "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more career yards from scrimmage?",
-   "A": {
-    "label": "Jordan Wilkins (RB) · career, MISS",
-    "value": 2073
-   },
-   "B": {
-    "label": "Josh Robinson (RB) · career, MSST",
-    "value": 2490
-   },
-   "unit": "yards from scrimmage",
-   "sig": "hJordan Wilkinscareer,Josh Robinsoncareerscrim"
+   "prompt": "Rank these players by career yards from scrimmage (at that school), highest first.",
+   "items": [
+    {
+     "label": "Dexter McCluster (RB) · career, MISS",
+     "value": 3658,
+     "school": "MISS"
+    },
+    {
+     "label": "Dillon Johnson (RB) · career, MSST",
+     "value": 2062,
+     "school": "MSST"
+    },
+    {
+     "label": "Henry Parrish Jr. (RB) · career, MISS",
+     "value": 1823,
+     "school": "MISS"
+    },
+    {
+     "label": "Quinshon Judkins (RB) · career, MISS",
+     "value": 3006,
+     "school": "MISS"
+    }
+   ],
+   "unit": "yds",
+   "sig": "rcar|scrimDexter McClustercareer,Dillon Johnsoncareer,Henry Parrish Jr.career,Quinshon Judkinscareer"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing TDs, highest first.",
+   "items": [
+    {
+     "label": "Matt Corral (QB) · 2020 MISS",
+     "value": 4,
+     "school": "MISS"
+    },
+    {
+     "label": "Dillon Johnson (RB) · 2022 MSST",
+     "value": 3,
+     "school": "MSST"
+    },
+    {
+     "label": "Josh Robinson (RB) · 2014 MSST",
+     "value": 11,
+     "school": "MSST"
+    },
+    {
+     "label": "Jerrion Ealy (RB) · 2021 MISS",
+     "value": 5,
+     "school": "MISS"
+    }
+   ],
+   "unit": "TD",
+   "sig": "rsea|rushTDDillon Johnson2022,Jerrion Ealy2021,Josh Robinson2014,Matt Corral2020"
   },
   {
    "type": "h2h",
@@ -34,89 +77,57 @@
    "flip": true,
    "prompt": "Who had more college receiving touchdowns (at the school shown)?",
    "A": {
-    "label": "Jaylen Walton (MISS RB)",
-    "value": 5
+    "label": "Dexter McCluster (MISS RB)",
+    "value": 7,
+    "school": "MISS"
    },
    "B": {
-    "label": "Josh Robinson (MSST RB)",
-    "value": 1
+    "label": "Kylin Hill (MSST RB)",
+    "value": 6,
+    "school": "MSST"
    },
    "unit": "",
-   "note": "🚨 Upset: Jaylen Walton 5 vs. Josh Robinson 1.",
-   "sig": "urecTDJosh RobinsonJaylen Walton"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Aeris Williams finish his Mississippi State career with more or less than",
-   "line": "3,112 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. Aeris Williams had 2,862 yards from scrimmage in his career.",
-   "check": {
-    "value": 2862,
-    "line": 3112
-   },
-   "sig": "pAeris Williamscareerscrim"
+   "note": "🚨 Upset: Dexter McCluster 7 vs. Kylin Hill 6.",
+   "sig": "urecTDKylin HillDexter McCluster"
   },
   {
    "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more career receiving yards?",
+   "flip": true,
+   "prompt": "Who had more rushing yards in a single season?",
    "A": {
-    "label": "Cody Core (WR) · career, MISS",
-    "value": 1297
+    "label": "Henry Parrish Jr. (RB) · 2024 MISS",
+    "value": 693,
+    "school": "MISS"
    },
    "B": {
-    "label": "Dillon Johnson (RB) · career, MSST",
-    "value": 853
+    "label": "Dillon Johnson (RB) · 2022 MSST",
+    "value": 499,
+    "school": "MSST"
    },
-   "unit": "receiving yards",
-   "sig": "hCody Corecareer,Dillon Johnsoncareerrec"
+   "unit": "rushing yards",
+   "sig": "hDillon Johnson2022,Henry Parrish Jr.2024rush"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2022, did Quinshon Judkins (Ole Miss) have more or less than",
-   "line": "1,450 yards from scrimmage",
-   "answer": "over",
-   "reveal": "More. Quinshon Judkins had 1,699 yards from scrimmage in 2022.",
-   "check": {
-    "value": 1699,
-    "line": 1450
-   },
-   "sig": "pQuinshon Judkins2022scrim"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
-   "items": [
+   "type": "count",
+   "label": "School Count",
+   "a": "MSST",
+   "b": "MISS",
+   "threshold": 3500,
+   "A": [
     {
-     "label": "Jerrion Ealy (RB) · 2019 MISS",
-     "value": 894
+     "name": "Anthony Dixon",
+     "yards": 3994
     },
     {
-     "label": "Jordan Wilkins (RB) · 2014 MISS",
-     "value": 367
-    },
-    {
-     "label": "Kylin Hill (RB) · 2019 MSST",
-     "value": 1530
-    },
-    {
-     "label": "Henry Parrish Jr. (RB) · 2024 MISS",
-     "value": 775
+     "name": "Nick Fitzgerald",
+     "yards": 3607
     }
    ],
-   "unit": "yds",
-   "note": "🪤 Trap: Jerrion Ealy's best year was 2021 (986), not 2019; Jordan Wilkins's best year was 2017 (1,252), not 2014.",
-   "sig": "trscrimHenry Parrish Jr.2024,Jerrion Ealy2019,Jordan Wilkins2014,Kylin Hill2019"
+   "B": [],
+   "verified": true,
+   "sig": "cMSSTMISS3500"
   }
  ]
 }

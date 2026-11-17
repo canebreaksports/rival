@@ -6,22 +6,9 @@
   "away": "UGA",
   "home": "SC"
  },
- "generatedAt": "2026-11-17T16:17:15.367Z",
- "engine": 4,
+ "generatedAt": "2026-11-17T16:37:59.374Z",
+ "engine": 5,
  "questions": [
-  {
-   "type": "prog",
-   "label": "Program Pit · Georgia vs South Carolina",
-   "a": "UGA",
-   "b": "SC",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    18,
-    3
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
   {
    "type": "h2h",
    "label": "Fresh Mix",
@@ -30,14 +17,67 @@
    "prompt": "Who had more career receiving yards?",
    "A": {
     "label": "Josh Vann (WR) · career, SC",
-    "value": 1346
+    "value": 1346,
+    "school": "SC"
    },
    "B": {
     "label": "Kenny McIntosh (RB) · career, UGA",
-    "value": 860
+    "value": 860,
+    "school": "UGA"
    },
    "unit": "receiving yards",
    "sig": "hJosh Vanncareer,Kenny McIntoshcareerrec"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Stetson Bennett (UGA QB) · career rushing TDs",
+     "value": 14,
+     "school": "UGA"
+    },
+    {
+     "label": "Rico Dowdle (SC RB) · 2016 rushing TDs",
+     "value": 6,
+     "school": "SC"
+    },
+    {
+     "label": "Zamir White (UGA RB) · career total TDs (rushing + receiving)",
+     "value": 25,
+     "school": "UGA"
+    },
+    {
+     "label": "Brock Bowers (UGA TE) · career total TDs (rushing + receiving)",
+     "value": 31,
+     "school": "UGA"
+    }
+   ],
+   "sig": "mxTDBrock Bowerscareer total TDs (rushing + receiving),Rico Dowdle2016 rushing TDs,Stetson Bennettcareer rushing TDs,Zamir Whitecareer total TDs (rushing + receiving)"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2020,
+   "stat": "Rushing season",
+   "aSchool": "UGA",
+   "other": "SC",
+   "aName": "Zamir White (RB)",
+   "bName": "Kevin Harris (RB)",
+   "A": {
+    "big": "779",
+    "sm": "rush yds · 11 TD"
+   },
+   "B": {
+    "big": "1,054",
+    "sm": "rush yds · 14 TD"
+   },
+   "flip": false,
+   "sig": "drush2020Kevin Harris,Zamir White"
   },
   {
    "type": "h2h",
@@ -48,15 +88,46 @@
    "prompt": "Who had more college receiving touchdowns (at the school shown)?",
    "A": {
     "label": "Joshua Simon (SC TE)",
-    "value": 9
+    "value": 9,
+    "school": "SC"
    },
    "B": {
     "label": "D'Andre Swift (UGA RB)",
-    "value": 5
+    "value": 5,
+    "school": "UGA"
    },
    "unit": "",
    "note": "🚨 Upset: Joshua Simon 9 vs. D'Andre Swift 5.",
    "sig": "urecTDD'Andre SwiftJoshua Simon"
+  },
+  {
+   "label": "Palmetto vs. Peach",
+   "verified": true,
+   "sig": "kPalmetto vs. Peach0",
+   "type": "moment",
+   "prompt": "Georgia's biggest win over South Carolina came in 2022. Was the margin more or less than",
+   "line": "35.5 points",
+   "answer": "over",
+   "reveal": "Over. Georgia won 48–7, a 41-point margin."
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more receiving yards in a single season?",
+   "A": {
+    "label": "Kenny McIntosh (RB) · 2022 UGA",
+    "value": 504,
+    "school": "UGA"
+   },
+   "B": {
+    "label": "Mike Davis (RB) · 2014 SC",
+    "value": 368,
+    "school": "SC"
+   },
+   "unit": "receiving yards",
+   "sig": "hKenny McIntosh2022,Mike Davis2014rec"
   },
   {
    "type": "prog",
@@ -75,75 +146,65 @@
    "type": "duel",
    "label": "Fresh Mix",
    "verified": true,
-   "year": 2020,
-   "stat": "Rushing season",
+   "year": 2019,
+   "stat": "Receiving season",
    "aSchool": "SC",
    "other": "UGA",
-   "aName": "Kevin Harris (RB)",
-   "bName": "Zamir White (RB)",
+   "aName": "Shi Smith (WR)",
+   "bName": "Demetris Robertson (WR)",
    "A": {
-    "big": "1,054",
-    "sm": "rush yds · 14 TD"
+    "big": "489",
+    "sm": "rec yds · 2 TD"
    },
    "B": {
-    "big": "779",
-    "sm": "rush yds · 11 TD"
+    "big": "333",
+    "sm": "rec yds · 3 TD"
    },
-   "flip": true,
-   "sig": "drush2020Kevin Harris,Zamir White"
+   "flip": false,
+   "sig": "drec2019Demetris Robertson,Shi Smith"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
+   "type": "prog",
+   "label": "Program Pit · Georgia vs South Carolina",
+   "a": "UGA",
+   "b": "SC",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    15,
+    11
+   ],
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving yards in a single season?",
-   "A": {
-    "label": "Kenny McIntosh (RB) · 2022 UGA",
-    "value": 504
-   },
-   "B": {
-    "label": "Mike Davis (RB) · 2014 SC",
-    "value": 368
-   },
-   "unit": "receiving yards",
-   "sig": "hKenny McIntosh2022,Mike Davis2014rec"
+   "sig": "gpeakW"
   },
   {
    "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
    "items": [
     {
-     "label": "Terry Godwin (UGA WR) · 2017 receiving TDs",
-     "value": 6
+     "label": "Rico Dowdle (SC RB) · career yards from scrimmage",
+     "value": 2650,
+     "school": "SC"
     },
     {
-     "label": "Joshua Simon (SC TE) · career receiving TDs",
-     "value": 9
+     "label": "D'Andre Swift (UGA RB) · 2018 yards from scrimmage",
+     "value": 1346,
+     "school": "UGA"
     },
     {
-     "label": "Daijun Edwards (UGA RB) · career total TDs (rushing + receiving)",
-     "value": 24
+     "label": "Brock Bowers (UGA TE) · 2023 receiving yards",
+     "value": 714,
+     "school": "UGA"
     },
     {
-     "label": "Brock Bowers (UGA TE) · career total TDs (rushing + receiving)",
-     "value": 31
+     "label": "Shi Smith (SC WR) · 2020 receiving yards",
+     "value": 621,
+     "school": "SC"
     }
    ],
-   "sig": "mxTDBrock Bowerscareer total TDs (rushing + receiving),Daijun Edwardscareer total TDs (rushing + receiving),Joshua Simoncareer receiving TDs,Terry Godwin2017 receiving TDs"
-  },
-  {
-   "label": "Palmetto vs. Peach",
-   "verified": true,
-   "sig": "kPalmetto vs. Peach0",
-   "type": "moment",
-   "prompt": "Georgia's biggest win over South Carolina came in 2022. Was the margin more or less than",
-   "line": "35.5 points",
-   "answer": "over",
-   "reveal": "Over. Georgia won 48–7, a 41-point margin."
+   "sig": "mxydsBrock Bowers2023 receiving yards,D'Andre Swift2018 yards from scrimmage,Rico Dowdlecareer yards from scrimmage,Shi Smith2020 receiving yards"
   }
  ]
 }

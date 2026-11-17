@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { DATA } from "@/lib/data";
-import { buildRound, generate, weeklySet, WEEKLY_N, weekKey, findMatchup } from "@/lib/build";
+import { buildRound, generate, weeklySet, WEEKLY_N, weekKey, findMatchup, involvesBoth } from "@/lib/build";
 import { seededRng, mulberry32 } from "@/lib/rng";
 import { validateData, validateQuestion } from "@/lib/validate";
 import { liveGames, nextGames, dateOf, windowOf } from "@/lib/gating";
@@ -113,6 +113,23 @@ describe("approximate-source margins (CollegeFootballData packs)", () => {
       expect(rows.every(s => /CollegeFootballData|Wikipedia/.test(s.source))).toBe(true);
       expect(new Set(rows.filter(s => s.verified).map(s => s.name)).size).toBeGreaterThanOrEqual(8);
     }
+  });
+});
+
+describe("pitted mode", () => {
+  it("every question in a matchup involves both schools", () => {
+    for (let i = 0; i < 300; i++) for (const [a, b] of [["LSU", "TENN"], ["AUB", "TENN"], ["UGA", "SC"], ["ARK", "TEX"], ["MSST", "MISS"]]) {
+      for (const q of buildRound(DATA, a, b, mulberry32(i), VERIFIED)) {
+        expect(involvesBoth(q, a, b)).toBe(true);
+        if (q.type === "h2h") expect(new Set([q.A.school, q.B.school]).size).toBe(q.A.school ? 2 : 1);
+        if (q.type === "moment") expect(q.check).toBeUndefined();
+      }
+    }
+  });
+  it("team packs never appear in matchups", () => {
+    const pack = new Set(Object.values(DATA.curated.teamPacks).flat().map(i => ("prompt" in i ? i.prompt : "")));
+    for (let i = 0; i < 200; i++) for (const q of buildRound(DATA, "LSU", "TENN", mulberry32(i), ALL))
+      expect(pack.has("prompt" in q ? q.prompt : "")).toBe(false);
   });
 });
 

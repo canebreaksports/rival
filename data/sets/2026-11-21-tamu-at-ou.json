@@ -6,9 +6,60 @@
   "away": "TAMU",
   "home": "OU"
  },
- "generatedAt": "2026-11-17T16:17:15.363Z",
- "engine": 4,
+ "generatedAt": "2026-11-17T16:37:59.372Z",
+ "engine": 5,
  "questions": [
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2015,
+   "stat": "Receiving season",
+   "aSchool": "TAMU",
+   "other": "OU",
+   "aName": "Josh Reynolds (WR)",
+   "bName": "Sterling Shepard (WR)",
+   "A": {
+    "big": "907",
+    "sm": "rec yds · 5 TD"
+   },
+   "B": {
+    "big": "1,288",
+    "sm": "rec yds · 11 TD"
+   },
+   "flip": false,
+   "sig": "drec2015Josh Reynolds,Sterling Shepard"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Jalen Wydermyer (TAMU TE) · 2019 receiving TDs",
+     "value": 6,
+     "school": "TAMU"
+    },
+    {
+     "label": "Sterling Shepard (OU WR) · career total TDs (rushing + receiving)",
+     "value": 27,
+     "school": "OU"
+    },
+    {
+     "label": "Trey Sermon (OU RB) · career rushing TDs",
+     "value": 22,
+     "school": "OU"
+    },
+    {
+     "label": "Devon Achane (TAMU RB) · 2022 rushing TDs",
+     "value": 8,
+     "school": "TAMU"
+    }
+   ],
+   "sig": "mxTDDevon Achane2022 rushing TDs,Jalen Wydermyer2019 receiving TDs,Sterling Shepardcareer total TDs (rushing + receiving),Trey Sermoncareer rushing TDs"
+  },
   {
    "type": "h2h",
    "label": "Fresh Mix",
@@ -18,107 +69,60 @@
    "prompt": "Who had more college receiving yards (at the school shown)?",
    "A": {
     "label": "Jalen Wydermyer (TAMU TE)",
-    "value": 1468
+    "value": 1468,
+    "school": "TAMU"
    },
    "B": {
-    "label": "Samaje Perine (OU RB)",
-    "value": 321
+    "label": "Joe Mixon (OU RB)",
+    "value": 894,
+    "school": "OU"
    },
    "unit": "",
-   "note": "🚨 Upset: Jalen Wydermyer 1,468 vs. Samaje Perine 321.",
-   "sig": "urecSamaje PerineJalen Wydermyer"
+   "note": "🚨 Upset: Jalen Wydermyer 1,468 vs. Joe Mixon 894.",
+   "sig": "urecJoe MixonJalen Wydermyer"
   },
   {
    "type": "rank",
    "label": "Fresh Mix",
-   "trap": true,
    "verified": true,
-   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
-     "label": "Tra Carson (RB) · 2014 TAMU",
-     "value": 581
+     "label": "Joe Mixon (OU RB) · 2015 receiving TDs",
+     "value": 4,
+     "school": "OU"
     },
     {
-     "label": "Trey Sermon (RB) · 2017 OU",
-     "value": 744
+     "label": "Tra Carson (TAMU RB) · career rushing TDs",
+     "value": 19,
+     "school": "TAMU"
     },
     {
-     "label": "Kennedy Brooks (RB) · 2019 OU",
-     "value": 1011
+     "label": "Kennedy Brooks (OU RB) · 2021 rushing TDs",
+     "value": 13,
+     "school": "OU"
     },
     {
-     "label": "Joe Mixon (RB) · 2016 OU",
-     "value": 1274
+     "label": "Mark Andrews (OU TE) · 2016 receiving TDs",
+     "value": 7,
+     "school": "OU"
     }
    ],
-   "unit": "yds",
-   "note": "🪤 Trap: Tra Carson's best year was 2015 (1,165), not 2014; Trey Sermon's best year was 2018 (947), not 2017; Kennedy Brooks's best year was 2021 (1,253), not 2019.",
-   "sig": "trrushJoe Mixon2016,Kennedy Brooks2019,Tra Carson2014,Trey Sermon2017"
-  },
-  {
-   "type": "count",
-   "label": "School Count",
-   "a": "TAMU",
-   "b": "OU",
-   "threshold": 4000,
-   "A": [
-    {
-     "name": "Darren Lewis",
-     "yards": 5012
-    }
-   ],
-   "B": [
-    {
-     "name": "Samaje Perine",
-     "yards": 4122
-    },
-    {
-     "name": "Billy Sims",
-     "yards": 4118
-    },
-    {
-     "name": "Joe Washington",
-     "yards": 4071
-    },
-    {
-     "name": "Adrian Peterson",
-     "yards": 4045
-    },
-    {
-     "name": "Steve Owens",
-     "yards": 4041
-    }
-   ],
-   "verified": true,
-   "sig": "cTAMUOU4000"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2015, did Josh Reynolds (Texas A&M) have more or less than",
-   "line": "832 receiving yards",
-   "answer": "over",
-   "reveal": "More. Josh Reynolds had 907 receiving yards in 2015.",
-   "check": {
-    "value": 907,
-    "line": 832
-   },
-   "sig": "pJosh Reynolds2015rec"
+   "sig": "mxTDJoe Mixon2015 receiving TDs,Kennedy Brooks2021 rushing TDs,Mark Andrews2016 receiving TDs,Tra Carsoncareer rushing TDs"
   },
   {
    "type": "prog",
    "label": "Program Pit · Texas A&M vs Oklahoma",
    "a": "TAMU",
    "b": "OU",
-   "prompt": "Who had more losing seasons from 2000–2025?",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
    "values": [
-    5,
-    2
+    2,
+    20
    ],
    "verified": true,
-   "sig": "glosing"
+   "sig": "gwin10"
   },
   {
    "type": "h2h",
@@ -127,45 +131,36 @@
    "flip": true,
    "prompt": "Who had more career receiving yards?",
    "A": {
-    "label": "Isaiah Spiller (RB) · career, TAMU",
-    "value": 585
+    "label": "Jalen Saunders (WR) · career, OU",
+    "value": 1558,
+    "school": "OU"
    },
    "B": {
-    "label": "Mark Andrews (TE) · career, OU",
-    "value": 1765
+    "label": "Christian Kirk (WR) · career, TAMU",
+    "value": 2856,
+    "school": "TAMU"
    },
    "unit": "receiving yards",
-   "sig": "hIsaiah Spillercareer,Mark Andrewscareerrec"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas A&M vs Oklahoma",
-   "a": "TAMU",
-   "b": "OU",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    11,
-    13
-   ],
-   "verified": true,
-   "sig": "gpeakW"
+   "sig": "hChristian Kirkcareer,Jalen Saunderscareerrec"
   },
   {
    "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving yards in a single season?",
+   "flip": false,
+   "prompt": "Who had more receiving TDs in a single season?",
    "A": {
     "label": "Sterling Shepard (WR) · 2015 OU",
-    "value": 1288
+    "value": 11,
+    "school": "OU"
    },
    "B": {
-    "label": "Jalen Wydermyer (TE) · 2021 TAMU",
-    "value": 515
+    "label": "Christian Kirk (WR) · 2017 TAMU",
+    "value": 10,
+    "school": "TAMU"
    },
-   "unit": "receiving yards",
-   "sig": "hJalen Wydermyer2021,Sterling Shepard2015rec"
+   "unit": "receiving TDs",
+   "sig": "hChristian Kirk2017,Sterling Shepard2015recTD"
   },
   {
    "label": "Old Big 12 Foes",
@@ -176,6 +171,19 @@
    "line": "70 points",
    "answer": "over",
    "reveal": "Over. Oklahoma won 77–0."
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs Oklahoma",
+   "a": "TAMU",
+   "b": "OU",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    195,
+    271
+   ],
+   "verified": true,
+   "sig": "gtotalW"
   }
  ]
 }
