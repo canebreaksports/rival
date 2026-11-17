@@ -2,10 +2,10 @@
 import type { CuratedItem, Dataset, FrozenSet, Game, Question, QType, SchoolKey } from "./types";
 import { pick, seededRng, shuffle, type Rng } from "./rng";
 import { PROGRAM_STATS, SCHOOL, programValue } from "./data";
-import { genCount, genDuel, genMixedRank, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
+import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 5; // v5: pitted sets only use questions involving both schools (v4: deeper career lists)
+export const ENGINE_VERSION = 6; // v6: paired props, higher pitted caps (v5: both-schools rule)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean }
@@ -67,26 +67,31 @@ export const PLAYER_QS = 7;
 export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng, o: BuildOpts): Question[] {
   const c = makeCtx(data, teams, rng, o.verifiedOnly);
   if (c.pool.length < 4) return [];
-  // weighted toward the player formats: props, head-to-heads, rank, duels; traps limited below
-  // Pitted (two schools): only formats that involve both. Single-player props stay in Team Deep Dive.
-  const gens = teams.length > 1
-    ? [() => genRank(c), () => genH2H(c, teams), () => genH2H(c, teams), () => genDuel(c, teams), () => genMixedRank(c, teams), () => genMixedRank(c, teams), () => genTrapRank(c)]
+  // Pitted (two schools): only formats that involve both, incl. paired props (one player per school, back to back).
+  // Single-player props and trap props stay in Team Deep Dive.
+  type Gen = () => Question | Question[] | null;
+  const gens: Gen[] = teams.length > 1
+    ? [() => genRank(c), () => genH2H(c, teams), () => genH2H(c, teams), () => genDuel(c, teams), () => genMixedRank(c, teams), () => genMixedRank(c, teams),
+       () => genTrapRank(c), () => genPropPair(c, teams), () => genPropPair(c, teams)]
     : [() => genRank(c), () => genPOU(c), () => genPOU(c), () => genH2H(c, teams), () => genTrapRank(c), () => genTrapPOU(c)];
   const out: Question[] = [], sigs = new Set<string>();
   if (rng() < 0.7) { const u = genUpset(c); if (u) { sigs.add(u.sig); out.push(u) } }
   let trapped = rng() < 0.25;
   for (let t = 0; t < n * 20 && out.length < n; t++) { // pitted formats fail often (both-schools rule), so try harder
-    const q = pick(rng, gens)();
-    if (!q || sigs.has(q.sig) || (q.trap && trapped)) continue;
-    if (q.trap) trapped = true;
-    sigs.add(q.sig); out.push(q);
+    const r = pick(rng, gens)();
+    const qs = !r ? [] : Array.isArray(r) ? r : [r];
+    if (!qs.length || qs.some(q => sigs.has(q.sig)) || (qs[0].trap && trapped)) continue;
+    if (qs[0].trap) trapped = true;
+    for (const q of qs) { sigs.add(q.sig); out.push(q) }
   }
   return out;
 }
 
 /** Per-set caps (spec §2). Trap and upset limits apply across generated and curated questions. */
-export function caps(progCap: number): Record<QType, number> {
-  return { moment: 4, prog: progCap, h2h: 3, rank: 2, count: 1, duel: 2, cross: 1 };
+export function caps(progCap: number, pitted = false): Record<QType, number> {
+  // Pitted sets lean on cross-school formats, so they get more room (owner's call, Nov 2026).
+  return pitted ? { moment: 4, prog: progCap, h2h: 4, rank: 3, count: 1, duel: 3, cross: 1 }
+    : { moment: 4, prog: progCap, h2h: 3, rank: 2, count: 1, duel: 2, cross: 1 };
 }
 
 export function hasPlayerData(data: Dataset, k: SchoolKey, o: BuildOpts) {
@@ -105,7 +110,7 @@ export function involvesBoth(q: Question, a: SchoolKey, b: SchoolKey): boolean {
   const both = (schools: (SchoolKey | null)[]) => schools.includes(a) && schools.includes(b);
   switch (q.type) {
     case "prog": case "count": case "duel": case "cross": return true;
-    case "moment": return !q.check; // curated matchup moments/series facts; generated single-player props are not
+    case "moment": return !q.check || !!q.pair; // curated moments/series facts, or a paired prop (one per school)
     case "h2h": return both([itemSchool(q.A, a, b), itemSchool(q.B, a, b)]);
     case "rank": return both(q.items.map(x => itemSchool(x, a, b)));
   }
@@ -121,21 +126,27 @@ export function buildRound(data: Dataset, a: SchoolKey, b: SchoolKey, rng: Rng, 
     ...(m ? curatedQs(m.items, m.name, rng, o, [m.a, m.b]) : []),
   ]); // team packs are single-school: Team Deep Dive only
   // Player stats lead. Program comparisons are capped at 2, or 4 while a school still has no player pack.
-  const cap = caps(hasPlayerData(data, a, o) && hasPlayerData(data, b, o) ? 2 : 4);
-  const used: Partial<Record<QType, number>> = {}, out: Question[] = [];
-  let traps = 0, upsets = 0;
-  for (const q of [...gen, ...rest]) {
-    if (out.length >= WEEKLY_N) break;
-    if (!involvesBoth(q, a, b)) continue;
-    if ((used[q.type] ?? 0) >= cap[q.type]) continue;
-    if (q.trap && traps >= 1) continue;
-    if (q.upset && upsets >= 1) continue;
-    used[q.type] = (used[q.type] ?? 0) + 1;
-    if (q.trap) traps++;
-    if (q.upset) upsets++;
-    out.push(q);
+  const cap = caps(hasPlayerData(data, a, o) && hasPlayerData(data, b, o) ? 2 : 4, true);
+  // Paired props travel as one unit: both halves or neither, always adjacent.
+  const all = [...gen, ...rest], units: Question[][] = [];
+  for (const q of all) {
+    if (!q.pair) units.push([q]);
+    else if (q.pairPart === 1) { const mate = all.find(x => x.pair === q.pair && x.pairPart === 2); if (mate) units.push([q, mate]) }
   }
-  return shuffle(rng, out);
+  const used: Partial<Record<QType, number>> = {}, picked: Question[][] = [];
+  let n = 0, traps = 0, upsets = 0;
+  for (const u of units) {
+    if (n + u.length > WEEKLY_N) continue;
+    if (!u.every(q => involvesBoth(q, a, b))) continue;
+    if ((used[u[0].type] ?? 0) + u.length > cap[u[0].type]) continue;
+    if (u[0].trap && traps >= 1) continue;
+    if (u[0].upset && upsets >= 1) continue;
+    used[u[0].type] = (used[u[0].type] ?? 0) + u.length;
+    if (u[0].trap) traps++;
+    if (u[0].upset) upsets++;
+    picked.push(u); n += u.length;
+  }
+  return shuffle(rng, picked).flat();
 }
 
 // ---- weekly sets ----

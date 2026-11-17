@@ -122,14 +122,32 @@ describe("pitted mode", () => {
       for (const q of buildRound(DATA, a, b, mulberry32(i), VERIFIED)) {
         expect(involvesBoth(q, a, b)).toBe(true);
         if (q.type === "h2h") expect(new Set([q.A.school, q.B.school]).size).toBe(q.A.school ? 2 : 1);
-        if (q.type === "moment") expect(q.check).toBeUndefined();
+        if (q.type === "moment" && q.check) expect(q.pair).toBeDefined(); // only paired props, never a lone single-player prop
       }
     }
   });
+  it("paired props appear whole, back to back, one player per school", () => {
+    let pairs = 0;
+    for (let i = 0; i < 300; i++) for (const [a, b] of [["LSU", "TENN"], ["UGA", "SC"], ["TEX", "TAMU"]]) {
+      const qs = buildRound(DATA, a, b, mulberry32(i), VERIFIED);
+      qs.forEach((q, j) => {
+        if (q.pairPart !== 1) return;
+        pairs++;
+        const mate = qs[j + 1];
+        expect(mate?.pair).toBe(q.pair);
+        expect(mate?.pairPart).toBe(2);
+        const schoolOf = (x: typeof q) => DATA.schools.find(s => x.type === "moment" && x.prompt.includes(`(${s.name})`) || x.type === "moment" && x.prompt.includes(`his ${s.name} career`))?.key;
+        expect(new Set([schoolOf(q), schoolOf(mate!)]).size).toBe(2);
+      });
+      expect(qs.filter(q => q.pair).length % 2).toBe(0);
+    }
+    expect(pairs).toBeGreaterThan(0);
+  });
   it("team packs never appear in matchups", () => {
-    const pack = new Set(Object.values(DATA.curated.teamPacks).flat().map(i => ("prompt" in i ? i.prompt : "")));
+    const key = (x: object) => JSON.stringify(["prompt", "line", "reveal", "items", "A"].map(k => (x as Record<string, unknown>)[k]));
+    const pack = new Set(Object.values(DATA.curated.teamPacks).flat().map(key));
     for (let i = 0; i < 200; i++) for (const q of buildRound(DATA, "LSU", "TENN", mulberry32(i), ALL))
-      expect(pack.has("prompt" in q ? q.prompt : "")).toBe(false);
+      expect(pack.has(key(q))).toBe(false);
   });
 });
 
@@ -142,8 +160,9 @@ describe("sets", () => {
       expect(count(qs, q => q.trap)).toBeLessThanOrEqual(1);
       expect(count(qs, q => q.upset)).toBeLessThanOrEqual(1);
       expect(count(qs, q => q.type === "moment")).toBeLessThanOrEqual(4);
-      expect(count(qs, q => q.type === "h2h")).toBeLessThanOrEqual(3);
-      expect(count(qs, q => q.type === "rank")).toBeLessThanOrEqual(2);
+      expect(count(qs, q => q.type === "h2h")).toBeLessThanOrEqual(4);   // pitted caps
+      expect(count(qs, q => q.type === "rank")).toBeLessThanOrEqual(3);
+      expect(count(qs, q => q.type === "duel")).toBeLessThanOrEqual(3);
       expect(count(qs, q => q.type === "count")).toBeLessThanOrEqual(1);
       for (const q of qs) expect(validateQuestion(q)).toEqual([]);
     }

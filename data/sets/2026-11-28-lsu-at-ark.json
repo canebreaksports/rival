@@ -6,9 +6,71 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-17T16:37:59.385Z",
- "engine": 5,
+ "generatedAt": "2026-11-17T16:40:42.734Z",
+ "engine": 6,
  "questions": [
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Alex Collins (RB) · 2013 ARK",
+     "value": 1026,
+     "school": "ARK"
+    },
+    {
+     "label": "Kevin Faulk (RB) · 1998 LSU",
+     "value": 1279,
+     "school": "LSU"
+    },
+    {
+     "label": "Darren McFadden (RB) · 2007 ARK",
+     "value": 1830,
+     "school": "ARK"
+    },
+    {
+     "label": "Felix Jones (RB) · 2007 ARK",
+     "value": 1160,
+     "school": "ARK"
+    }
+   ],
+   "unit": "yds",
+   "sig": "rsea|rushAlex Collins2013,Darren McFadden2007,Felix Jones2007,Kevin Faulk1998"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Justin Jefferson finish his LSU career with more or less than",
+   "line": "22.5 receiving TDs",
+   "answer": "over",
+   "reveal": "More. Justin Jefferson had 24 receiving TDs in his career.",
+   "check": {
+    "value": 24,
+    "line": 22.5
+   },
+   "sig": "ppJustin Jeffersoncareer|Andrew ArmstrongcareerrecTD0",
+   "pair": "ppJustin Jeffersoncareer|Andrew ArmstrongcareerrecTD",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Andrew Armstrong finish his Arkansas career with more or less than",
+   "line": "5.5 receiving TDs",
+   "answer": "over",
+   "reveal": "More. Andrew Armstrong had 6 receiving TDs in his career.",
+   "check": {
+    "value": 6,
+    "line": 5.5
+   },
+   "sig": "ppJustin Jeffersoncareer|Andrew ArmstrongcareerrecTD1",
+   "pair": "ppJustin Jeffersoncareer|Andrew ArmstrongcareerrecTD",
+   "pairPart": 2
+  },
   {
    "type": "prog",
    "label": "Program Pit · LSU vs Arkansas",
@@ -23,108 +85,34 @@
    "sig": "gwin10"
   },
   {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Arkansas",
-   "a": "LSU",
-   "b": "ARK",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    1,
-    11
-   ],
-   "verified": true,
-   "sig": "glosing"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2023,
-   "stat": "Rushing season",
-   "aSchool": "ARK",
-   "other": "LSU",
-   "aName": "KJ Jefferson (QB)",
-   "bName": "Jayden Daniels (QB)",
-   "A": {
-    "big": "447",
-    "sm": "rush yds · 2 TD"
-   },
-   "B": {
-    "big": "1,134",
-    "sm": "rush yds · 10 TD"
-   },
-   "flip": false,
-   "sig": "drush2023Jayden Daniels,KJ Jefferson"
-  },
-  {
    "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "Rank these players by career rushing TDs (at that school), highest first.",
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
    "items": [
     {
-     "label": "Joe Burrow (QB) · career, LSU",
-     "value": 12,
+     "label": "Clyde Edwards-Helaire (LSU RB) · career receiving yards",
+     "value": 595,
      "school": "LSU"
     },
     {
-     "label": "Rakeem Boyd (RB) · career, ARK",
-     "value": 13,
+     "label": "Darren McFadden (ARK RB) · 2007 yards from scrimmage",
+     "value": 1994,
      "school": "ARK"
     },
     {
-     "label": "Derrius Guice (RB) · career, LSU",
-     "value": 29,
+     "label": "Leonard Fournette (LSU RB) · career yards from scrimmage",
+     "value": 4356,
      "school": "LSU"
     },
     {
-     "label": "Raheim Sanders (RB) · career, ARK",
-     "value": 17,
-     "school": "ARK"
+     "label": "Kevin Faulk (LSU RB) · 1998 rushing yards",
+     "value": 1279,
+     "school": "LSU"
     }
    ],
-   "unit": "TD",
-   "sig": "rcar|rushTDDerrius Guicecareer,Joe Burrowcareer,Raheim Sanderscareer,Rakeem Boydcareer"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2019,
-   "stat": "Rushing season",
-   "aSchool": "LSU",
-   "other": "ARK",
-   "aName": "Joe Burrow (QB)",
-   "bName": "Rakeem Boyd (RB)",
-   "A": {
-    "big": "368",
-    "sm": "rush yds · 5 TD"
-   },
-   "B": {
-    "big": "1,133",
-    "sm": "rush yds · 8 TD"
-   },
-   "flip": false,
-   "sig": "drush2019Joe Burrow,Rakeem Boyd"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more rushing TDs in a single season?",
-   "A": {
-    "label": "Darren McFadden (RB) · 2007 ARK",
-    "value": 16,
-    "school": "ARK"
-   },
-   "B": {
-    "label": "Derrius Guice (RB) · 2017 LSU",
-    "value": 11,
-    "school": "LSU"
-   },
-   "unit": "rushing TDs",
-   "sig": "hDarren McFadden2007,Derrius Guice2017rushTD"
+   "sig": "mxydsClyde Edwards-Helairecareer receiving yards,Darren McFadden2007 yards from scrimmage,Kevin Faulk1998 rushing yards,Leonard Fournettecareer yards from scrimmage"
   },
   {
    "type": "h2h",
@@ -148,81 +136,66 @@
    "sig": "urecTDLeonard FournetteCheyenne O'Grady"
   },
   {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more receiving yards in a single season?",
+   "A": {
+    "label": "Andrew Armstrong (WR) · 2023 ARK",
+    "value": 764,
+    "school": "ARK"
+   },
+   "B": {
+    "label": "Justin Jefferson (WR) · 2018 LSU",
+    "value": 875,
+    "school": "LSU"
+   },
+   "unit": "receiving yards",
+   "sig": "hAndrew Armstrong2023,Justin Jefferson2018rec"
+  },
+  {
    "type": "rank",
    "label": "Fresh Mix",
-   "trap": true,
    "verified": true,
-   "prompt": "Rank these seasons by receiving yards, highest first.",
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
-     "label": "Treylon Burks (WR) · 2019 ARK",
-     "value": 475,
+     "label": "Taylen Green (ARK QB) · 2025 rushing TDs",
+     "value": 8,
      "school": "ARK"
     },
     {
-     "label": "Justin Jefferson (WR) · 2018 LSU",
-     "value": 875,
+     "label": "Kevin Faulk (LSU RB) · 1995 rushing TDs",
+     "value": 6,
      "school": "LSU"
     },
     {
-     "label": "Cheyenne O'Grady (TE) · 2019 ARK",
-     "value": 372,
-     "school": "ARK"
+     "label": "Clyde Edwards-Helaire (LSU RB) · career rushing TDs",
+     "value": 23,
+     "school": "LSU"
     },
     {
-     "label": "Andrew Armstrong (WR) · 2024 ARK",
-     "value": 1140,
+     "label": "Cheyenne O'Grady (ARK TE) · career receiving TDs",
+     "value": 12,
      "school": "ARK"
     }
    ],
-   "unit": "yds",
-   "note": "🪤 Trap: Treylon Burks's best year was 2021 (1,104), not 2019; Justin Jefferson's best year was 2019 (1,540), not 2018.",
-   "sig": "trrecAndrew Armstrong2024,Cheyenne O'Grady2019,Justin Jefferson2018,Treylon Burks2019"
+   "sig": "mxTDCheyenne O'Gradycareer receiving TDs,Clyde Edwards-Helairecareer rushing TDs,Kevin Faulk1995 rushing TDs,Taylen Green2025 rushing TDs"
   },
   {
-   "type": "count",
-   "label": "School Count",
+   "type": "prog",
+   "label": "Program Pit · LSU vs Arkansas",
    "a": "LSU",
    "b": "ARK",
-   "threshold": 3250,
-   "A": [
-    {
-     "name": "Kevin Faulk",
-     "yards": 4557
-    },
-    {
-     "name": "Dalton Hilliard",
-     "yards": 4050
-    },
-    {
-     "name": "Charles Alexander",
-     "yards": 4035
-    },
-    {
-     "name": "Leonard Fournette",
-     "yards": 3830
-    }
-   ],
-   "B": [
-    {
-     "name": "Darren McFadden",
-     "yards": 4590
-    },
-    {
-     "name": "Alex Collins",
-     "yards": 3703
-    },
-    {
-     "name": "Ben Cowins",
-     "yards": 3570
-    },
-    {
-     "name": "Dickey Morton",
-     "yards": 3317
-    }
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    1,
+    11
    ],
    "verified": true,
-   "sig": "cLSUARK3250"
+   "sig": "glosing"
   }
  ]
 }

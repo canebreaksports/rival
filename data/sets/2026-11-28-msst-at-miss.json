@@ -6,68 +6,77 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-17T16:37:59.387Z",
- "engine": 5,
+ "generatedAt": "2026-11-17T16:40:42.736Z",
+ "engine": 6,
  "questions": [
   {
    "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "Rank these players by career yards from scrimmage (at that school), highest first.",
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
-     "label": "Dexter McCluster (RB) · career, MISS",
-     "value": 3658,
+     "label": "Jordan Wilkins (MISS RB) · 2017 rushing TDs",
+     "value": 9,
      "school": "MISS"
     },
     {
-     "label": "Dillon Johnson (RB) · career, MSST",
-     "value": 2062,
+     "label": "Jo'quavious Marks (MSST RB) · career total TDs (rushing + receiving)",
+     "value": 27,
      "school": "MSST"
     },
     {
-     "label": "Henry Parrish Jr. (RB) · career, MISS",
-     "value": 1823,
+     "label": "Evan Engram (MISS TE) · 2016 receiving TDs",
+     "value": 8,
      "school": "MISS"
     },
     {
-     "label": "Quinshon Judkins (RB) · career, MISS",
-     "value": 3006,
+     "label": "Matt Corral (MISS QB) · career total TDs (rushing + receiving)",
+     "value": 18,
      "school": "MISS"
     }
    ],
-   "unit": "yds",
-   "sig": "rcar|scrimDexter McClustercareer,Dillon Johnsoncareer,Henry Parrish Jr.career,Quinshon Judkinscareer"
+   "sig": "mxTDEvan Engram2016 receiving TDs,Jo'quavious Markscareer total TDs (rushing + receiving),Jordan Wilkins2017 rushing TDs,Matt Corralcareer total TDs (rushing + receiving)"
   },
   {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Rank these seasons by rushing TDs, highest first.",
-   "items": [
+   "type": "count",
+   "label": "School Count",
+   "a": "MSST",
+   "b": "MISS",
+   "threshold": 3250,
+   "A": [
     {
-     "label": "Matt Corral (QB) · 2020 MISS",
-     "value": 4,
-     "school": "MISS"
+     "name": "Anthony Dixon",
+     "yards": 3994
     },
     {
-     "label": "Dillon Johnson (RB) · 2022 MSST",
-     "value": 3,
-     "school": "MSST"
-    },
-    {
-     "label": "Josh Robinson (RB) · 2014 MSST",
-     "value": 11,
-     "school": "MSST"
-    },
-    {
-     "label": "Jerrion Ealy (RB) · 2021 MISS",
-     "value": 5,
-     "school": "MISS"
+     "name": "Nick Fitzgerald",
+     "yards": 3607
     }
    ],
-   "unit": "TD",
-   "sig": "rsea|rushTDDillon Johnson2022,Jerrion Ealy2021,Josh Robinson2014,Matt Corral2020"
+   "B": [],
+   "verified": true,
+   "sig": "cMSSTMISS3250"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more rushing yards in a single season?",
+   "A": {
+    "label": "Henry Parrish Jr. (RB) · 2024 MISS",
+    "value": 693,
+    "school": "MISS"
+   },
+   "B": {
+    "label": "Dillon Johnson (RB) · 2022 MSST",
+    "value": 499,
+    "school": "MSST"
+   },
+   "unit": "rushing yards",
+   "sig": "hDillon Johnson2022,Henry Parrish Jr.2024rush"
   },
   {
    "type": "h2h",
@@ -95,39 +104,38 @@
    "label": "Fresh Mix",
    "verified": true,
    "flip": true,
-   "prompt": "Who had more rushing yards in a single season?",
+   "prompt": "Who had more rushing TDs in a single season?",
    "A": {
-    "label": "Henry Parrish Jr. (RB) · 2024 MISS",
-    "value": 693,
+    "label": "Matt Corral (QB) · 2020 MISS",
+    "value": 4,
     "school": "MISS"
    },
    "B": {
     "label": "Dillon Johnson (RB) · 2022 MSST",
-    "value": 499,
+    "value": 3,
     "school": "MSST"
    },
-   "unit": "rushing yards",
-   "sig": "hDillon Johnson2022,Henry Parrish Jr.2024rush"
+   "unit": "rushing TDs",
+   "sig": "hDillon Johnson2022,Matt Corral2020rushTD"
   },
   {
-   "type": "count",
-   "label": "School Count",
-   "a": "MSST",
-   "b": "MISS",
-   "threshold": 3500,
-   "A": [
-    {
-     "name": "Anthony Dixon",
-     "yards": 3994
-    },
-    {
-     "name": "Nick Fitzgerald",
-     "yards": 3607
-    }
-   ],
-   "B": [],
+   "type": "h2h",
+   "label": "Fresh Mix",
    "verified": true,
-   "sig": "cMSSTMISS3500"
+   "flip": false,
+   "prompt": "Who had more rushing yards in a single season?",
+   "A": {
+    "label": "Jo'quavious Marks (RB) · 2020 MSST",
+    "value": 312,
+    "school": "MSST"
+   },
+   "B": {
+    "label": "Jerrion Ealy (RB) · 2020 MISS",
+    "value": 745,
+    "school": "MISS"
+   },
+   "unit": "rushing yards",
+   "sig": "hJerrion Ealy2020,Jo'quavious Marks2020rush"
   }
  ]
 }

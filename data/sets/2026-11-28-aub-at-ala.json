@@ -6,49 +6,9 @@
   "away": "AUB",
   "home": "ALA"
  },
- "generatedAt": "2026-11-17T16:37:59.383Z",
- "engine": 5,
+ "generatedAt": "2026-11-17T16:40:42.732Z",
+ "engine": 6,
  "questions": [
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2014,
-   "stat": "Rushing season",
-   "aSchool": "AUB",
-   "other": "ALA",
-   "aName": "Nick Marshall (QB)",
-   "bName": "Derrick Henry (RB)",
-   "A": {
-    "big": "798",
-    "sm": "rush yds · 11 TD"
-   },
-   "B": {
-    "big": "990",
-    "sm": "rush yds · 11 TD"
-   },
-   "flip": true,
-   "sig": "drush2014Derrick Henry,Nick Marshall"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more career yards from scrimmage?",
-   "A": {
-    "label": "Trent Richardson (RB) · career, ALA",
-    "value": 3860,
-    "school": "ALA"
-   },
-   "B": {
-    "label": "Ronnie Brown (RB) · career, AUB",
-    "value": 3375,
-    "school": "AUB"
-   },
-   "unit": "yards from scrimmage",
-   "sig": "hRonnie Browncareer,Trent Richardsoncareerscrim"
-  },
   {
    "type": "h2h",
    "label": "Fresh Mix",
@@ -69,34 +29,44 @@
    "sig": "hRonnie Brown2002,Trent Richardson2011rush"
   },
   {
-   "type": "rank",
+   "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Trent Richardson (ALA RB) · career total TDs (rushing + receiving)",
-     "value": 42,
-     "school": "ALA"
-    },
-    {
-     "label": "Ben Obomanu (AUB WR) · career receiving TDs",
-     "value": 18,
-     "school": "AUB"
-    },
-    {
-     "label": "Najee Harris (ALA RB) · 2019 receiving TDs",
-     "value": 7,
-     "school": "ALA"
-    },
-    {
-     "label": "Devin Aromashodu (AUB WR) · 2004 receiving TDs",
-     "value": 4,
-     "school": "AUB"
-    }
-   ],
-   "sig": "mxTDBen Obomanucareer receiving TDs,Devin Aromashodu2004 receiving TDs,Najee Harris2019 receiving TDs,Trent Richardsoncareer total TDs (rushing + receiving)"
+   "flip": false,
+   "prompt": "Who had more yards from scrimmage in a single season?",
+   "A": {
+    "label": "Ronnie Brown (RB) · 2002 AUB",
+    "value": 1174,
+    "school": "AUB"
+   },
+   "B": {
+    "label": "Derrick Henry (RB) · 2015 ALA",
+    "value": 2310,
+    "school": "ALA"
+   },
+   "unit": "yards from scrimmage",
+   "sig": "hDerrick Henry2015,Ronnie Brown2002scrim"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receptions (at the school shown)?",
+   "A": {
+    "label": "Philip Lutzenkirchen (AUB TE)",
+    "value": 59,
+    "school": "AUB"
+   },
+   "B": {
+    "label": "Derrick Henry (ALA RB)",
+    "value": 17,
+    "school": "ALA"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Philip Lutzenkirchen 59 vs. Derrick Henry 17.",
+   "sig": "urecNDerrick HenryPhilip Lutzenkirchen"
   },
   {
    "type": "count",
@@ -186,23 +156,81 @@
   {
    "type": "h2h",
    "label": "Fresh Mix",
-   "upset": true,
    "verified": true,
    "flip": false,
-   "prompt": "Who had more college receptions (at the school shown)?",
+   "prompt": "Who had more career yards from scrimmage?",
    "A": {
-    "label": "Philip Lutzenkirchen (AUB TE)",
-    "value": 59,
-    "school": "AUB"
-   },
-   "B": {
-    "label": "Derrick Henry (ALA RB)",
-    "value": 17,
+    "label": "Trent Richardson (RB) · career, ALA",
+    "value": 3860,
     "school": "ALA"
    },
-   "unit": "",
-   "note": "🚨 Upset: Philip Lutzenkirchen 59 vs. Derrick Henry 17.",
-   "sig": "urecNDerrick HenryPhilip Lutzenkirchen"
+   "B": {
+    "label": "Ronnie Brown (RB) · career, AUB",
+    "value": 3375,
+    "school": "AUB"
+   },
+   "unit": "yards from scrimmage",
+   "sig": "hRonnie Browncareer,Trent Richardsoncareerscrim"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Philip Lutzenkirchen (AUB TE) · 2011 receiving TDs",
+     "value": 7,
+     "school": "AUB"
+    },
+    {
+     "label": "Najee Harris (ALA RB) · career receiving TDs",
+     "value": 11,
+     "school": "ALA"
+    },
+    {
+     "label": "Cam Newton (AUB QB) · career rushing TDs",
+     "value": 20,
+     "school": "AUB"
+    },
+    {
+     "label": "Ronnie Brown (AUB RB) · 2004 rushing TDs",
+     "value": 8,
+     "school": "AUB"
+    }
+   ],
+   "sig": "mxTDCam Newtoncareer rushing TDs,Najee Harriscareer receiving TDs,Philip Lutzenkirchen2011 receiving TDs,Ronnie Brown2004 rushing TDs"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Trent Richardson (ALA RB) · career total TDs (rushing + receiving)",
+     "value": 42,
+     "school": "ALA"
+    },
+    {
+     "label": "Ben Obomanu (AUB WR) · career receiving TDs",
+     "value": 18,
+     "school": "AUB"
+    },
+    {
+     "label": "Najee Harris (ALA RB) · 2019 receiving TDs",
+     "value": 7,
+     "school": "ALA"
+    },
+    {
+     "label": "Devin Aromashodu (AUB WR) · 2004 receiving TDs",
+     "value": 4,
+     "school": "AUB"
+    }
+   ],
+   "sig": "mxTDBen Obomanucareer receiving TDs,Devin Aromashodu2004 receiving TDs,Najee Harris2019 receiving TDs,Trent Richardsoncareer total TDs (rushing + receiving)"
   }
  ]
 }

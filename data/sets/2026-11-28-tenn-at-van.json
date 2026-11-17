@@ -6,9 +6,28 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-17T16:37:59.390Z",
- "engine": 5,
+ "generatedAt": "2026-11-17T16:40:42.740Z",
+ "engine": 6,
  "questions": [
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more rushing yards in a single season?",
+   "A": {
+    "label": "Arian Foster (RB) · 2008 TENN",
+    "value": 570,
+    "school": "TENN"
+   },
+   "B": {
+    "label": "Ralph Webb (RB) · 2014 VAN",
+    "value": 907,
+    "school": "VAN"
+   },
+   "unit": "rushing yards",
+   "sig": "hArian Foster2008,Ralph Webb2014rush"
+  },
   {
    "type": "h2h",
    "label": "Fresh Mix",
@@ -30,19 +49,6 @@
    "ypc": true,
    "note": "🚨 Upset: Kalija Lipscomb 6.2 per carry (24 carries) vs. Arian Foster 4.6 per carry (650 carries).",
    "sig": "uypcArian FosterKalija Lipscomb"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
-   "a": "TENN",
-   "b": "VAN",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
-   "values": [
-    1,
-    12
-   ],
-   "verified": true,
-   "sig": "gwin3"
   },
   {
    "type": "rank",
@@ -75,87 +81,156 @@
    "sig": "mxTDDylan Sampson2024 rushing TDs,Kalija Lipscomb2017 receiving TDs,Re'Mahn Daviscareer total TDs (rushing + receiving),Trent Sherfield2017 receiving TDs"
   },
   {
-   "type": "rank",
+   "type": "moment",
    "label": "Fresh Mix",
-   "trap": true,
    "verified": true,
-   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
-   "items": [
+   "prompt": "In 2022, did Jalin Hyatt (Tennessee) have more or less than",
+   "line": "1,050 receiving yards",
+   "answer": "over",
+   "reveal": "More. Jalin Hyatt had 1,267 receiving yards in 2022.",
+   "check": {
+    "value": 1267,
+    "line": 1050
+   },
+   "sig": "ppJalin Hyatt2022|Will Sheppard2021rec0",
+   "pair": "ppJalin Hyatt2022|Will Sheppard2021rec",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2021, did Will Sheppard (Vanderbilt) have more or less than",
+   "line": "650 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Will Sheppard had 577 receiving yards in 2021.",
+   "check": {
+    "value": 577,
+    "line": 650
+   },
+   "sig": "ppJalin Hyatt2022|Will Sheppard2021rec1",
+   "pair": "ppJalin Hyatt2022|Will Sheppard2021rec",
+   "pairPart": 2
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "TENN",
+   "b": "VAN",
+   "threshold": 2250,
+   "A": [
     {
-     "label": "Arian Foster (RB) · 2008 TENN",
-     "value": 736,
-     "school": "TENN"
+     "name": "Travis Henry",
+     "yards": 3078
     },
     {
-     "label": "Jamal Lewis (RB) · 1999 TENN",
-     "value": 1009,
-     "school": "TENN"
+     "name": "Arian Foster",
+     "yards": 2964
     },
     {
-     "label": "Dylan Sampson (RB) · 2023 TENN",
-     "value": 779,
-     "school": "TENN"
+     "name": "James Stewart",
+     "yards": 2890
     },
     {
-     "label": "Ralph Webb (RB) · 2016 VAN",
-     "value": 1449,
-     "school": "VAN"
+     "name": "Johnnie Jones",
+     "yards": 2852
+    },
+    {
+     "name": "DeSean Bishop",
+     "yards": 2694,
+     "active": true
+    },
+    {
+     "name": "Jamal Lewis",
+     "yards": 2677
+    },
+    {
+     "name": "Jalen Hurd",
+     "yards": 2638
+    },
+    {
+     "name": "Cedric Houston",
+     "yards": 2634
+    },
+    {
+     "name": "Jay Graham",
+     "yards": 2609
+    },
+    {
+     "name": "Dylan Sampson",
+     "yards": 2492
+    },
+    {
+     "name": "Montario Hardesty",
+     "yards": 2391
+    },
+    {
+     "name": "Curt Watson",
+     "yards": 2364
+    },
+    {
+     "name": "Reggie Cobb",
+     "yards": 2360
+    },
+    {
+     "name": "Travis Stephens",
+     "yards": 2336
+    },
+    {
+     "name": "Jaylen Wright",
+     "yards": 2297
     }
    ],
-   "unit": "yds",
-   "note": "🪤 Trap: Arian Foster's best year was 2007 (1,533), not 2008; Jamal Lewis's best year was 1997 (1,630), not 1999; Dylan Sampson's best year was 2024 (1,626), not 2023.",
-   "sig": "trscrimArian Foster2008,Dylan Sampson2023,Jamal Lewis1999,Ralph Webb2016"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
+   "B": [
+    {
+     "name": "Ralph Webb",
+     "yards": 4173
+    },
+    {
+     "name": "Zac Stacy",
+     "yards": 3143
+    },
+    {
+     "name": "Frank Mordica",
+     "yards": 2632
+    },
+    {
+     "name": "Carl Woods",
+     "yards": 2490
+    },
+    {
+     "name": "Ke'Shawn Vaughn",
+     "yards": 2272
+    }
+   ],
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more rushing yards in a single season?",
-   "A": {
-    "label": "Arian Foster (RB) · 2008 TENN",
-    "value": 570,
-    "school": "TENN"
-   },
-   "B": {
-    "label": "Ralph Webb (RB) · 2014 VAN",
-    "value": 907,
-    "school": "VAN"
-   },
-   "unit": "rushing yards",
-   "sig": "hArian Foster2008,Ralph Webb2014rush"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more career receiving TDs?",
-   "A": {
-    "label": "Jalin Hyatt (WR) · career, TENN",
-    "value": 19,
-    "school": "TENN"
-   },
-   "B": {
-    "label": "Will Sheppard (WR) · career, VAN",
-    "value": 21,
-    "school": "VAN"
-   },
-   "unit": "receiving TDs",
-   "sig": "hJalin Hyattcareer,Will SheppardcareerrecTD"
+   "sig": "cTENNVAN2250"
   },
   {
    "type": "prog",
    "label": "Program Pit · Tennessee vs Vanderbilt",
    "a": "TENN",
    "b": "VAN",
-   "prompt": "Who won more total games from 2000–2025?",
+   "prompt": "Whose best season since 2000 had more wins?",
    "values": [
-    194,
-    113
+    11,
+    10
    ],
    "verified": true,
-   "sig": "gtotalW"
+   "sig": "gpeakW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    1,
+    12
+   ],
+   "verified": true,
+   "sig": "gwin3"
   }
  ]
 }

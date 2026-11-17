@@ -91,7 +91,12 @@ export function genRank(c: Ctx): Question | null {
 export function genPOU(c: Ctx): Question | null {
   const p = pick(c.rng, c.pool); if (!p) return null;
   const ks = GEN_STATS.filter(k => p[k] != null && notable(k, p[k]!, p.year === "career")); if (!ks.length) return null;
-  const k = pick(c.rng, ks), v = p[k]!, dir = c.rng() < 0.5 ? -1 : 1;
+  return propFor(c, p, pick(c.rng, ks));
+}
+
+/** Higher/lower on one player's stat: line 5–20% off the true value, rounded, outside the source margin. */
+function propFor(c: Ctx, p: PlayerSeason, k: GenStat): Question | null {
+  const v = p[k]!, dir = c.rng() < 0.5 ? -1 : 1;
   let line: number;
   if (ST[k][1] === "TD") line = Math.max(0.5, v + dir * Math.floor(c.rng() * 3) + dir * 0.5);
   else {
@@ -113,6 +118,22 @@ export function genPOU(c: Ctx): Question | null {
     reveal: `${answer === "over" ? "More" : "Less"}. ${p.name} had ${fmt(v)} ${ST[k][0]}${p.year === "career" ? " in his career" : " in " + p.year}.`,
     check: { value: v, line }, sig: "p" + p.name + p.year + k,
   };
+}
+
+/** Paired props (pitted): the same stat and time frame for one player from each school, asked back to back. */
+export function genPropPair(c: Ctx, teams: SchoolKey[]): Question[] | null {
+  if (teams.length < 2) return null;
+  const g = groups(c.pool);
+  const keys = shuffle(c.rng, Object.keys(g).filter(key => teams.every(t => g[key].some(p => p.school === t))));
+  for (const key of keys) {
+    const k = key.split("|")[1] as GenStat;
+    const sides = teams.map(t => pick(c.rng, g[key].filter(p => p.school === t)));
+    const qs = sides.map(p => propFor(c, p, k));
+    if (qs.some(q => !q)) continue;
+    const id = "pp" + sides.map(p => p.name + p.year).join("|") + k;
+    return qs.map((q, i) => ({ ...q!, sig: id + i, pair: id, pairPart: (i + 1) as 1 | 2 } as Question));
+  }
+  return null;
 }
 
 export function genH2H(c: Ctx, teams: SchoolKey[]): Question | null {

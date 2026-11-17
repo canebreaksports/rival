@@ -54,7 +54,7 @@ export interface Dataset {
 }
 
 // ---- questions: fully self-contained so frozen sets need no data at runtime ----
-interface QBase { label: string; verified: boolean; sig: string; trap?: boolean; upset?: boolean }
+interface QBase { label: string; verified: boolean; sig: string; trap?: boolean; upset?: boolean; pair?: string; pairPart?: 1 | 2 }
 export interface Item { label: string; value: number; school?: SchoolKey } // school: who the item belongs to (pitted checks)
 
 export type Question = QBase & (

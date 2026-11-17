@@ -101,7 +101,7 @@ function kindLabel(q: Question) {
   switch (q.type) {
     case "prog": return `Program Pit · ${SCHOOL[q.a].name} vs ${SCHOOL[q.b].name}`;
     case "count": return `School Count · ${SCHOOL[q.a].name} vs ${SCHOOL[q.b].name}`;
-    case "moment": return `Higher or Lower · ${q.label}`;
+    case "moment": return q.pair ? `Higher or Lower · Side by Side ${q.pairPart} of 2` : `Higher or Lower · ${q.label}`;
     case "rank": return `Rank It · ${q.label}`;
     case "h2h": return `Head to Head · ${q.label}`;
     case "duel": return `Blind Stat Duel · ${q.year}`;

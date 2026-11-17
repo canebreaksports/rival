@@ -6,147 +6,9 @@
   "away": "ARK",
   "home": "TEX"
  },
- "generatedAt": "2026-11-17T16:37:59.378Z",
- "engine": 5,
+ "generatedAt": "2026-11-17T16:40:42.728Z",
+ "engine": 6,
  "questions": [
-  {
-   "type": "count",
-   "label": "School Count",
-   "a": "ARK",
-   "b": "TEX",
-   "threshold": 3000,
-   "A": [
-    {
-     "name": "Darren McFadden",
-     "yards": 4590
-    },
-    {
-     "name": "Alex Collins",
-     "yards": 3703
-    },
-    {
-     "name": "Ben Cowins",
-     "yards": 3570
-    },
-    {
-     "name": "Dickey Morton",
-     "yards": 3317
-    },
-    {
-     "name": "Cedric Cobbs",
-     "yards": 3018
-    }
-   ],
-   "B": [
-    {
-     "name": "Ricky Williams",
-     "yards": 6279
-    },
-    {
-     "name": "Cedric Benson",
-     "yards": 5540
-    },
-    {
-     "name": "Earl Campbell",
-     "yards": 4443
-    },
-    {
-     "name": "Bijan Robinson",
-     "yards": 3410
-    },
-    {
-     "name": "Jamaal Charles",
-     "yards": 3328
-    },
-    {
-     "name": "Chris Gilbert",
-     "yards": 3231
-    },
-    {
-     "name": "Vince Young",
-     "yards": 3127
-    }
-   ],
-   "verified": true,
-   "sig": "cARKTEX3000"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Arkansas vs Texas",
-   "a": "ARK",
-   "b": "TEX",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    11,
-    13
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
-   "A": {
-    "label": "Cheyenne O'Grady (ARK TE)",
-    "value": 12,
-    "school": "ARK"
-   },
-   "B": {
-    "label": "Ricky Williams (TEX RB)",
-    "value": 4,
-    "school": "TEX"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Cheyenne O'Grady 12 vs. Ricky Williams 4.",
-   "sig": "urecTDRicky WilliamsCheyenne O'Grady"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Arkansas vs Texas",
-   "a": "ARK",
-   "b": "TEX",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    161,
-    236
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Johnathan Gray (TEX RB) · 2012 rushing TDs",
-     "value": 3,
-     "school": "TEX"
-    },
-    {
-     "label": "Darren McFadden (ARK RB) · 2005 rushing TDs",
-     "value": 11,
-     "school": "ARK"
-    },
-    {
-     "label": "Jonathan Nance (ARK WR) · career receiving TDs",
-     "value": 5,
-     "school": "ARK"
-    },
-    {
-     "label": "Alex Collins (ARK RB) · career total TDs (rushing + receiving)",
-     "value": 36,
-     "school": "ARK"
-    }
-   ],
-   "sig": "mxTDAlex Collinscareer total TDs (rushing + receiving),Darren McFadden2005 rushing TDs,Johnathan Gray2012 rushing TDs,Jonathan Nancecareer receiving TDs"
-  },
   {
    "type": "rank",
    "label": "Fresh Mix",
@@ -186,6 +48,184 @@
    "line": "12.5 games",
    "answer": "over",
    "reveal": "Over. Texas won 14 straight from 1894 to 1932. Arkansas's best is 4 (1935–38)."
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Cheyenne O'Grady (ARK TE)",
+    "value": 12,
+    "school": "ARK"
+   },
+   "B": {
+    "label": "Ricky Williams (TEX RB)",
+    "value": 4,
+    "school": "TEX"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Cheyenne O'Grady 12 vs. Ricky Williams 4.",
+   "sig": "urecTDRicky WilliamsCheyenne O'Grady"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Arkansas vs Texas",
+   "a": "ARK",
+   "b": "TEX",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    161,
+    236
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more receiving TDs in a single season?",
+   "A": {
+    "label": "Jonathan Nance (WR) · 2017 ARK",
+    "value": 5,
+    "school": "ARK"
+   },
+   "B": {
+    "label": "Xavier Worthy (WR) · 2021 TEX",
+    "value": 12,
+    "school": "TEX"
+   },
+   "unit": "receiving TDs",
+   "sig": "hJonathan Nance2017,Xavier Worthy2021recTD"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by receiving yards, highest first.",
+   "items": [
+    {
+     "label": "Jordan Whittington (WR) · 2021 TEX",
+     "value": 377,
+     "school": "TEX"
+    },
+    {
+     "label": "Treylon Burks (WR) · 2020 ARK",
+     "value": 820,
+     "school": "ARK"
+    },
+    {
+     "label": "Xavier Worthy (WR) · 2021 TEX",
+     "value": 981,
+     "school": "TEX"
+    },
+    {
+     "label": "Raheim Sanders (RB) · 2022 ARK",
+     "value": 271,
+     "school": "ARK"
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Jordan Whittington's best year was 2022 (652), not 2021; Treylon Burks's best year was 2021 (1,104), not 2020.",
+   "sig": "trrecJordan Whittington2021,Raheim Sanders2022,Treylon Burks2020,Xavier Worthy2021"
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "ARK",
+   "b": "TEX",
+   "threshold": 4000,
+   "A": [
+    {
+     "name": "Darren McFadden",
+     "yards": 4590
+    }
+   ],
+   "B": [
+    {
+     "name": "Ricky Williams",
+     "yards": 6279
+    },
+    {
+     "name": "Cedric Benson",
+     "yards": 5540
+    },
+    {
+     "name": "Earl Campbell",
+     "yards": 4443
+    }
+   ],
+   "verified": true,
+   "sig": "cARKTEX4000"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Johnathan Gray (TEX RB) · 2012 rushing TDs",
+     "value": 3,
+     "school": "TEX"
+    },
+    {
+     "label": "Darren McFadden (ARK RB) · 2005 rushing TDs",
+     "value": 11,
+     "school": "ARK"
+    },
+    {
+     "label": "Jonathan Nance (ARK WR) · career receiving TDs",
+     "value": 5,
+     "school": "ARK"
+    },
+    {
+     "label": "Alex Collins (ARK RB) · career total TDs (rushing + receiving)",
+     "value": 36,
+     "school": "ARK"
+    }
+   ],
+   "sig": "mxTDAlex Collinscareer total TDs (rushing + receiving),Darren McFadden2005 rushing TDs,Johnathan Gray2012 rushing TDs,Jonathan Nancecareer receiving TDs"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2019,
+   "stat": "Rushing season",
+   "aSchool": "TEX",
+   "other": "ARK",
+   "aName": "Sam Ehlinger (QB)",
+   "bName": "Rakeem Boyd (RB)",
+   "A": {
+    "big": "663",
+    "sm": "rush yds · 7 TD"
+   },
+   "B": {
+    "big": "1,133",
+    "sm": "rush yds · 8 TD"
+   },
+   "flip": false,
+   "sig": "drush2019Rakeem Boyd,Sam Ehlinger"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Arkansas vs Texas",
+   "a": "ARK",
+   "b": "TEX",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    11,
+    5
+   ],
+   "verified": true,
+   "sig": "glosing"
   }
  ]
 }

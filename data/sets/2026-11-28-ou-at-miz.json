@@ -6,82 +6,9 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-17T16:37:59.388Z",
- "engine": 5,
+ "generatedAt": "2026-11-17T16:40:42.738Z",
+ "engine": 6,
  "questions": [
-  {
-   "type": "prog",
-   "label": "Program Pit · Oklahoma vs Missouri",
-   "a": "OU",
-   "b": "MIZ",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    13,
-    12
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Rank these seasons by rushing TDs, highest first.",
-   "items": [
-    {
-     "label": "Larry Rountree III (RB) · 2019 MIZ",
-     "value": 9,
-     "school": "MIZ"
-    },
-    {
-     "label": "Eric Gray (RB) · 2022 OU",
-     "value": 11,
-     "school": "OU"
-    },
-    {
-     "label": "Damarea Crockett (RB) · 2018 MIZ",
-     "value": 7,
-     "school": "MIZ"
-    },
-    {
-     "label": "Larry Rountree III (RB) · 2020 MIZ",
-     "value": 14,
-     "school": "MIZ"
-    }
-   ],
-   "unit": "TD",
-   "sig": "rsea|rushTDDamarea Crockett2018,Eric Gray2022,Larry Rountree III2019,Larry Rountree III2020"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Trey Sermon (OU RB) · career total TDs (rushing + receiving)",
-     "value": 25,
-     "school": "OU"
-    },
-    {
-     "label": "Brady Cook (MIZ QB) · 2022 rushing TDs",
-     "value": 6,
-     "school": "MIZ"
-    },
-    {
-     "label": "Albert Okwuegbunam (MIZ TE) · 2017 receiving TDs",
-     "value": 11,
-     "school": "MIZ"
-    },
-    {
-     "label": "Kyler Murray (OU QB) · 2018 rushing TDs",
-     "value": 12,
-     "school": "OU"
-    }
-   ],
-   "sig": "mxTDAlbert Okwuegbunam2017 receiving TDs,Brady Cook2022 rushing TDs,Kyler Murray2018 rushing TDs,Trey Sermoncareer total TDs (rushing + receiving)"
-  },
   {
    "type": "h2h",
    "label": "Fresh Mix",
@@ -115,6 +42,187 @@
    ],
    "verified": true,
    "sig": "gtotalW"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more receiving TDs in a single season?",
+   "A": {
+    "label": "J'Mon Moore (WR) · 2015 MIZ",
+    "value": 3,
+    "school": "MIZ"
+   },
+   "B": {
+    "label": "CeeDee Lamb (WR) · 2018 OU",
+    "value": 11,
+    "school": "OU"
+   },
+   "unit": "receiving TDs",
+   "sig": "hCeeDee Lamb2018,J'Mon Moore2015recTD"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Oklahoma vs Missouri",
+   "a": "OU",
+   "b": "MIZ",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    20,
+    7
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more career rushing yards?",
+   "A": {
+    "label": "Ish Witter (RB) · career, MIZ",
+    "value": 2418,
+    "school": "MIZ"
+   },
+   "B": {
+    "label": "Kyler Murray (QB) · career, OU",
+    "value": 1143,
+    "school": "OU"
+   },
+   "unit": "rushing yards",
+   "sig": "hIsh Wittercareer,Kyler Murraycareerrush"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more rushing TDs in a single season?",
+   "A": {
+    "label": "Larry Rountree III (RB) · 2019 MIZ",
+    "value": 9,
+    "school": "MIZ"
+   },
+   "B": {
+    "label": "Eric Gray (RB) · 2022 OU",
+    "value": 11,
+    "school": "OU"
+   },
+   "unit": "rushing TDs",
+   "sig": "hEric Gray2022,Larry Rountree III2019rushTD"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by receiving yards, highest first.",
+   "items": [
+    {
+     "label": "Joe Mixon (RB) · 2015 OU",
+     "value": 356,
+     "school": "OU"
+    },
+    {
+     "label": "Sterling Shepard (WR) · 2013 OU",
+     "value": 603,
+     "school": "OU"
+    },
+    {
+     "label": "Mark Andrews (TE) · 2016 OU",
+     "value": 489,
+     "school": "OU"
+    },
+    {
+     "label": "J'Mon Moore (WR) · 2016 MIZ",
+     "value": 1012,
+     "school": "MIZ"
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Joe Mixon's best year was 2016 (538), not 2015; Sterling Shepard's best year was 2015 (1,288), not 2013; Mark Andrews's best year was 2017 (958), not 2016.",
+   "sig": "trrecJ'Mon Moore2016,Joe Mixon2015,Mark Andrews2016,Sterling Shepard2013"
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "OU",
+   "b": "MIZ",
+   "threshold": 3500,
+   "A": [
+    {
+     "name": "Samaje Perine",
+     "yards": 4122
+    },
+    {
+     "name": "Billy Sims",
+     "yards": 4118
+    },
+    {
+     "name": "Joe Washington",
+     "yards": 4071
+    },
+    {
+     "name": "Adrian Peterson",
+     "yards": 4045
+    },
+    {
+     "name": "Steve Owens",
+     "yards": 4041
+    },
+    {
+     "name": "Quentin Griffin",
+     "yards": 3938
+    },
+    {
+     "name": "DeMarco Murray",
+     "yards": 3685
+    }
+   ],
+   "B": [
+    {
+     "name": "Brad Smith",
+     "yards": 4289
+    },
+    {
+     "name": "Larry Rountree III",
+     "yards": 3720
+    }
+   ],
+   "verified": true,
+   "sig": "cOUMIZ3500"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Trey Sermon (OU RB) · career total TDs (rushing + receiving)",
+     "value": 25,
+     "school": "OU"
+    },
+    {
+     "label": "Brady Cook (MIZ QB) · 2022 rushing TDs",
+     "value": 6,
+     "school": "MIZ"
+    },
+    {
+     "label": "Albert Okwuegbunam (MIZ TE) · 2017 receiving TDs",
+     "value": 11,
+     "school": "MIZ"
+    },
+    {
+     "label": "Kyler Murray (OU QB) · 2018 rushing TDs",
+     "value": 12,
+     "school": "OU"
+    }
+   ],
+   "sig": "mxTDAlbert Okwuegbunam2017 receiving TDs,Brady Cook2022 rushing TDs,Kyler Murray2018 rushing TDs,Trey Sermoncareer total TDs (rushing + receiving)"
   }
  ]
 }
