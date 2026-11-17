@@ -6,22 +6,9 @@
   "away": "ARK",
   "home": "TEX"
  },
- "generatedAt": "2026-11-17T03:28:39.869Z",
- "engine": 1,
+ "generatedAt": "2026-11-17T14:39:34.620Z",
+ "engine": 2,
  "questions": [
-  {
-   "type": "prog",
-   "label": "Program Pit · Arkansas vs Texas",
-   "a": "ARK",
-   "b": "TEX",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    11,
-    13
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
   {
    "type": "prog",
    "label": "Program Pit · Arkansas vs Texas",

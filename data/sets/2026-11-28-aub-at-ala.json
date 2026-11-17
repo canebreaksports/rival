@@ -6,37 +6,9 @@
   "away": "AUB",
   "home": "ALA"
  },
- "generatedAt": "2026-11-17T03:28:39.870Z",
- "engine": 1,
+ "generatedAt": "2026-11-17T14:39:34.623Z",
+ "engine": 2,
  "questions": [
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Philip Lutzenkirchen finish his Auburn career with more or less than",
-   "line": "11.5 receiving TDs",
-   "answer": "over",
-   "reveal": "More. Philip Lutzenkirchen had 14 receiving TDs in his career.",
-   "check": {
-    "value": 14,
-    "line": 11.5
-   },
-   "sig": "pPhilip LutzenkirchencareerrecTD"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2019, did Najee Harris (Alabama) have more or less than",
-   "line": "1,600 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. Najee Harris had 1,528 yards from scrimmage in 2019.",
-   "check": {
-    "value": 1528,
-    "line": 1600
-   },
-   "sig": "pNajee Harris2019scrim"
-  },
   {
    "label": "Auburn",
    "verified": true,
@@ -68,31 +40,112 @@
    "label": "Fresh Mix",
    "verified": true,
    "flip": false,
-   "prompt": "Who had more career yards from scrimmage?",
+   "prompt": "Who had more career receiving TDs?",
    "A": {
-    "label": "Tre Mason (RB) · career, AUB",
-    "value": 3228
+    "label": "Trent Richardson (RB) · career, ALA",
+    "value": 7
    },
    "B": {
-    "label": "Derrick Henry (RB) · career, ALA",
-    "value": 3876
+    "label": "Tre Mason (RB) · career, AUB",
+    "value": 1
    },
-   "unit": "yards from scrimmage",
-   "sig": "hDerrick Henrycareer,Tre Masoncareerscrim"
+   "unit": "receiving TDs",
+   "sig": "hTre Masoncareer,Trent RichardsoncareerrecTD"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
+   "label": "Auburn",
    "verified": true,
-   "prompt": "In 2003, did Courtney Taylor (Auburn) have more or less than",
-   "line": "300 receiving yards",
+   "sig": "kAuburn2",
+   "type": "moment",
+   "prompt": "Did Bo Jackson finish his Auburn career with more or less than",
+   "line": "4,000 rushing yards",
    "answer": "over",
-   "reveal": "More. Courtney Taylor had 379 receiving yards in 2003.",
-   "check": {
-    "value": 379,
-    "line": 300
-   },
-   "sig": "pCourtney Taylor2003rec"
+   "reveal": "Over. Bo ran for 4,303 yards, still Auburn's career record."
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "AUB",
+   "b": "ALA",
+   "threshold": 2800,
+   "A": [
+    {
+     "name": "Bo Jackson",
+     "yards": 4303
+    },
+    {
+     "name": "Carnell 'Cadillac' Williams",
+     "yards": 3831
+    },
+    {
+     "name": "James Brooks",
+     "yards": 3523
+    },
+    {
+     "name": "Jarquez Hunter",
+     "yards": 3371
+    },
+    {
+     "name": "Joe Cribbs",
+     "yards": 3368
+    },
+    {
+     "name": "Ben Tate",
+     "yards": 3321
+    },
+    {
+     "name": "Tre Mason",
+     "yards": 2979
+    },
+    {
+     "name": "Tank Bigsby",
+     "yards": 2903
+    },
+    {
+     "name": "Stephen Davis",
+     "yards": 2811
+    }
+   ],
+   "B": [
+    {
+     "name": "Najee Harris",
+     "yards": 3843
+    },
+    {
+     "name": "Derrick Henry",
+     "yards": 3591
+    },
+    {
+     "name": "Shaun Alexander",
+     "yards": 3565
+    },
+    {
+     "name": "Bobby Humphrey",
+     "yards": 3420
+    },
+    {
+     "name": "Kenneth Darby",
+     "yards": 3324
+    },
+    {
+     "name": "T. J. Yeldon",
+     "yards": 3322
+    },
+    {
+     "name": "Mark Ingram II",
+     "yards": 3261
+    },
+    {
+     "name": "Trent Richardson",
+     "yards": 3130
+    },
+    {
+     "name": "Damien Harris",
+     "yards": 3073
+    }
+   ],
+   "verified": true,
+   "sig": "cAUBALA2800"
   },
   {
    "type": "h2h",
@@ -140,31 +193,63 @@
    "unit": "yds"
   },
   {
-   "label": "Auburn",
-   "verified": true,
-   "sig": "kAuburn0",
    "type": "moment",
-   "prompt": "Was Kenny Irons's best single-season rushing total at Auburn more or less than",
-   "line": "1,200 yards",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2003, did Courtney Taylor (Auburn) have more or less than",
+   "line": "300 receiving yards",
    "answer": "over",
-   "reveal": "Over. He ran for 1,293 yards and 13 TDs in 2005."
+   "reveal": "More. Courtney Taylor had 379 receiving yards in 2003.",
+   "check": {
+    "value": 379,
+    "line": 300
+   },
+   "sig": "pCourtney Taylor2003rec"
   },
   {
-   "label": "Auburn",
+   "type": "moment",
+   "label": "Fresh Mix",
    "verified": true,
-   "sig": "kAuburn7",
+   "prompt": "Did Philip Lutzenkirchen finish his Auburn career with more or less than",
+   "line": "11.5 receiving TDs",
+   "answer": "over",
+   "reveal": "More. Philip Lutzenkirchen had 14 receiving TDs in his career.",
+   "check": {
+    "value": 14,
+    "line": 11.5
+   },
+   "sig": "pPhilip LutzenkirchencareerrecTD"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2019, did Najee Harris (Alabama) have more or less than",
+   "line": "1,600 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Najee Harris had 1,528 yards from scrimmage in 2019.",
+   "check": {
+    "value": 1528,
+    "line": 1600
+   },
+   "sig": "pNajee Harris2019scrim"
+  },
+  {
    "type": "h2h",
-   "prompt": "Who had more career rushing yards at Auburn?",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more career yards from scrimmage?",
    "A": {
-    "label": "Joe Cribbs",
-    "value": 3368
+    "label": "Tre Mason (RB) · career, AUB",
+    "value": 3228
    },
    "B": {
-    "label": "Tank Bigsby",
-    "value": 2903
+    "label": "Derrick Henry (RB) · career, ALA",
+    "value": 3876
    },
-   "unit": "rushing yds",
-   "flip": false
+   "unit": "yards from scrimmage",
+   "sig": "hDerrick Henrycareer,Tre Masoncareerscrim"
   }
  ]
 }

@@ -6,35 +6,9 @@
   "away": "UGA",
   "home": "SC"
  },
- "generatedAt": "2026-11-17T03:28:39.868Z",
- "engine": 1,
+ "generatedAt": "2026-11-17T14:39:34.619Z",
+ "engine": 2,
  "questions": [
-  {
-   "type": "prog",
-   "label": "Program Pit · Georgia vs South Carolina",
-   "a": "UGA",
-   "b": "SC",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    1,
-    8
-   ],
-   "verified": true,
-   "sig": "glosing"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Georgia vs South Carolina",
-   "a": "UGA",
-   "b": "SC",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    18,
-    3
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
   {
    "type": "prog",
    "label": "Program Pit · Georgia vs South Carolina",
@@ -53,6 +27,19 @@
    "label": "Program Pit · Georgia vs South Carolina",
    "a": "UGA",
    "b": "SC",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    15,
+    11
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Georgia vs South Carolina",
+   "a": "UGA",
+   "b": "SC",
    "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
    "values": [
     0,
@@ -60,6 +47,19 @@
    ],
    "verified": true,
    "sig": "gwin3"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Georgia vs South Carolina",
+   "a": "UGA",
+   "b": "SC",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    18,
+    3
+   ],
+   "verified": true,
+   "sig": "gwin10"
   },
   {
    "label": "Palmetto vs. Peach",
@@ -70,19 +70,6 @@
    "line": "35.5 points",
    "answer": "over",
    "reveal": "Over. Georgia won 48–7, a 41-point margin."
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Georgia vs South Carolina",
-   "a": "UGA",
-   "b": "SC",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    15,
-    11
-   ],
-   "verified": true,
-   "sig": "gpeakW"
   }
  ]
 }

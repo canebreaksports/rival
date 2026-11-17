@@ -48,6 +48,27 @@ describe("generators", () => {
   });
 });
 
+describe("player-first sets", () => {
+  it("generated duels pair one same-season line from each school", () => {
+    let seen = 0;
+    for (let i = 0; i < 400; i++) for (const q of generate(DATA, ["LSU", "ALA"], 7, mulberry32(i), ALL)) {
+      if (q.type !== "duel" || !q.sig.startsWith("d")) continue;
+      seen++; expect(new Set([q.aSchool, q.other])).toEqual(new Set(["LSU", "ALA"])); expect(q.A.big).not.toBe(q.B.big);
+    }
+    expect(seen).toBeGreaterThan(0);
+  });
+  it("generated rank questions mix both schools", () => {
+    for (let i = 0; i < 300; i++) for (const q of generate(DATA, ["AUB", "TENN"], 7, mulberry32(i), ALL))
+      if (q.type === "rank" && !q.trap) expect(new Set(q.items.map(x => x.label.split(" ").pop())).size).toBeGreaterThan(1);
+  });
+  it("sets with player data on both sides are mostly player questions and ≤2 program", () => {
+    for (let i = 0; i < 300; i++) for (const [a, b] of [["LSU", "TENN"], ["AUB", "ALA"]]) {
+      const qs = buildRound(DATA, a, b, mulberry32(i), VERIFIED);
+      expect(qs.filter(q => q.type === "prog").length).toBeLessThanOrEqual(2);
+    }
+  });
+});
+
 describe("sets", () => {
   const count = (qs: Question[], f: (q: Question) => boolean | undefined) => qs.filter(f).length;
   it("respect caps, ≤1 trap, ≤1 upset, ≤10 questions", () => {

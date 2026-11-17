@@ -6,45 +6,9 @@
   "away": "LSU",
   "home": "TENN"
  },
- "generatedAt": "2026-11-17T03:28:39.868Z",
- "engine": 1,
+ "generatedAt": "2026-11-17T14:39:34.620Z",
+ "engine": 2,
  "questions": [
-  {
-   "label": "Tennessee",
-   "verified": true,
-   "sig": "kTennessee2",
-   "type": "moment",
-   "prompt": "In 2024, did Dylan Sampson score more or fewer than",
-   "line": "19.5 rushing TDs",
-   "answer": "over",
-   "reveal": "Over. He had 22 rushing TDs and 1,485 yards."
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Rank these players by career rushing TDs (at that school), highest first.",
-   "items": [
-    {
-     "label": "Jalin Hyatt (WR) · career, TENN",
-     "value": 0
-    },
-    {
-     "label": "Derrius Guice (RB) · career, LSU",
-     "value": 29
-    },
-    {
-     "label": "Joe Burrow (QB) · career, LSU",
-     "value": 12
-    },
-    {
-     "label": "Joshua Dobbs (QB) · career, TENN",
-     "value": 32
-    }
-   ],
-   "unit": "TD",
-   "sig": "rcar|rushTDDerrius Guicecareer,Jalin Hyattcareer,Joe Burrowcareer,Joshua Dobbscareer"
-  },
   {
    "label": "Tennessee",
    "verified": true,
@@ -67,36 +31,137 @@
    "label": "Program Pit · LSU vs Tennessee",
    "a": "LSU",
    "b": "TENN",
-   "prompt": "Who won more total games from 2000–2025?",
+   "prompt": "Who had more losing seasons from 2000–2025?",
    "values": [
-    249,
-    194
+    1,
+    9
    ],
    "verified": true,
-   "sig": "gtotalW"
+   "sig": "glosing"
   },
   {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Tennessee",
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2016,
+   "stat": "Rushing season",
+   "aSchool": "TENN",
+   "other": "LSU",
+   "aName": "Joshua Dobbs (QB)",
+   "bName": "Leonard Fournette (RB)",
+   "A": {
+    "big": "831",
+    "sm": "rush yds · 12 TD"
+   },
+   "B": {
+    "big": "843",
+    "sm": "rush yds · 8 TD"
+   },
+   "flip": true,
+   "sig": "drush2016Joshua Dobbs,Leonard Fournette"
+  },
+  {
+   "type": "count",
+   "label": "School Count",
    "a": "LSU",
    "b": "TENN",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
-   "values": [
-    0,
-    1
+   "threshold": 2500,
+   "A": [
+    {
+     "name": "Kevin Faulk",
+     "yards": 4557
+    },
+    {
+     "name": "Dalton Hilliard",
+     "yards": 4050
+    },
+    {
+     "name": "Charles Alexander",
+     "yards": 4035
+    },
+    {
+     "name": "Leonard Fournette",
+     "yards": 3830
+    },
+    {
+     "name": "Derrius Guice",
+     "yards": 3074
+    },
+    {
+     "name": "Harvey Williams",
+     "yards": 2860
+    },
+    {
+     "name": "Joseph Addai",
+     "yards": 2577
+    },
+    {
+     "name": "Terry Robiskie",
+     "yards": 2517
+    }
+   ],
+   "B": [
+    {
+     "name": "Travis Henry",
+     "yards": 3078
+    },
+    {
+     "name": "Arian Foster",
+     "yards": 2964
+    },
+    {
+     "name": "James Stewart",
+     "yards": 2890
+    },
+    {
+     "name": "Johnnie Jones",
+     "yards": 2852
+    },
+    {
+     "name": "DeSean Bishop",
+     "yards": 2694,
+     "active": true
+    },
+    {
+     "name": "Jamal Lewis",
+     "yards": 2677
+    },
+    {
+     "name": "Jalen Hurd",
+     "yards": 2638
+    },
+    {
+     "name": "Cedric Houston",
+     "yards": 2634
+    },
+    {
+     "name": "Jay Graham",
+     "yards": 2609
+    }
    ],
    "verified": true,
-   "sig": "gwin3"
+   "sig": "cLSUTENN2500"
   },
   {
-   "label": "Tennessee",
+   "type": "duel",
+   "label": "Fresh Mix",
    "verified": true,
-   "sig": "kTennessee1",
-   "type": "moment",
-   "prompt": "Did Arian Foster finish his Tennessee career with more or less than",
-   "line": "3,000 rushing yards",
-   "answer": "under",
-   "reveal": "Under, barely. He finished with 2,964."
+   "year": 2022,
+   "stat": "Rushing season",
+   "aSchool": "LSU",
+   "other": "TENN",
+   "aName": "Jayden Daniels (QB)",
+   "bName": "Dylan Sampson (RB)",
+   "A": {
+    "big": "885",
+    "sm": "rush yds · 11 TD"
+   },
+   "B": {
+    "big": "397",
+    "sm": "rush yds · 6 TD"
+   },
+   "flip": true,
+   "sig": "drush2022Dylan Sampson,Jayden Daniels"
   },
   {
    "type": "rank",
@@ -130,15 +195,15 @@
    "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2007, did Arian Foster (Tennessee) have more or less than",
-   "line": "13.5 rushing TDs",
+   "prompt": "Did Justin Jefferson finish his LSU career with more or less than",
+   "line": "40 rushing yards",
    "answer": "under",
-   "reveal": "Less. Arian Foster had 12 rushing TDs in 2007.",
+   "reveal": "Less. Justin Jefferson had 30 rushing yards in his career.",
    "check": {
-    "value": 12,
-    "line": 13.5
+    "value": 30,
+    "line": 40
    },
-   "sig": "pArian Foster2007rushTD"
+   "sig": "pJustin Jeffersoncareerrush"
   },
   {
    "type": "h2h",
@@ -164,13 +229,27 @@
    "label": "Program Pit · LSU vs Tennessee",
    "a": "LSU",
    "b": "TENN",
-   "prompt": "Who had more losing seasons from 2000–2025?",
+   "prompt": "Who won more total games from 2000–2025?",
    "values": [
-    1,
-    9
+    249,
+    194
    ],
    "verified": true,
-   "sig": "glosing"
+   "sig": "gtotalW"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2007, did Arian Foster (Tennessee) have more or less than",
+   "line": "13.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. Arian Foster had 12 rushing TDs in 2007.",
+   "check": {
+    "value": 12,
+    "line": 13.5
+   },
+   "sig": "pArian Foster2007rushTD"
   }
  ]
 }

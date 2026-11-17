@@ -6,35 +6,9 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-17T03:28:39.871Z",
- "engine": 1,
+ "generatedAt": "2026-11-17T14:39:34.625Z",
+ "engine": 2,
  "questions": [
-  {
-   "type": "prog",
-   "label": "Program Pit · Oklahoma vs Missouri",
-   "a": "OU",
-   "b": "MIZ",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    20,
-    7
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Oklahoma vs Missouri",
-   "a": "OU",
-   "b": "MIZ",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    271,
-    192
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
   {
    "type": "prog",
    "label": "Program Pit · Oklahoma vs Missouri",
@@ -47,6 +21,19 @@
    ],
    "verified": true,
    "sig": "gpeakW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Oklahoma vs Missouri",
+   "a": "OU",
+   "b": "MIZ",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    0,
+    1
+   ],
+   "verified": true,
+   "sig": "gwin3"
   },
   {
    "type": "prog",
@@ -66,13 +53,13 @@
    "label": "Program Pit · Oklahoma vs Missouri",
    "a": "OU",
    "b": "MIZ",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
    "values": [
-    0,
-    1
+    20,
+    7
    ],
    "verified": true,
-   "sig": "gwin3"
+   "sig": "gwin10"
   }
  ]
 }

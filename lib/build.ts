@@ -2,10 +2,10 @@
 import type { CuratedItem, Dataset, FrozenSet, Game, Question, QType, SchoolKey } from "./types";
 import { pick, seededRng, shuffle, type Rng } from "./rng";
 import { PROGRAM_STATS, SCHOOL, programValue } from "./data";
-import { genCount, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
+import { genCount, genDuel, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 1;
+export const ENGINE_VERSION = 2; // v2: player-first sets (7 generated, program cap 2, cross-team rank, generated duels)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean }
@@ -60,11 +60,16 @@ export function curatedQs(items: CuratedItem[], label: string, rng: Rng, o: Buil
 const teamQs = (data: Dataset, k: SchoolKey, rng: Rng, o: BuildOpts) =>
   data.curated.teamPacks[k] ? curatedQs(data.curated.teamPacks[k], SCHOOL[k].name, rng, o) : [];
 
+/** Generated player questions per set. Program comparisons only fill gaps. */
+export const PLAYER_QS = 7;
+
 /** About n generated player questions: ≤1 upset (attempted first 70% of the time), ≤1 trap (allowed 75% of the time). */
 export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng, o: BuildOpts): Question[] {
   const c = makeCtx(data, teams, rng, o.verifiedOnly);
   if (c.pool.length < 4) return [];
-  const gens = [() => genRank(c), () => genPOU(c), () => genPOU(c), () => genH2H(c, teams), () => genTrapRank(c), () => genTrapPOU(c)];
+  // weighted toward the player formats: props, head-to-heads, rank, duels; traps limited below
+  const gens = [() => genRank(c), () => genPOU(c), () => genPOU(c), () => genH2H(c, teams), () => genH2H(c, teams),
+    () => genDuel(c, teams), () => genTrapRank(c), () => genTrapPOU(c)];
   const out: Question[] = [], sigs = new Set<string>();
   if (rng() < 0.7) { const u = genUpset(c); if (u) { sigs.add(u.sig); out.push(u) } }
   let trapped = rng() < 0.25;
@@ -88,7 +93,7 @@ export function hasPlayerData(data: Dataset, k: SchoolKey, o: BuildOpts) {
 
 export function buildRound(data: Dataset, a: SchoolKey, b: SchoolKey, rng: Rng, o: BuildOpts): Question[] {
   const m = findMatchup(data, a, b);
-  const gen = generate(data, [a, b], 5, rng, o);
+  const gen = generate(data, [a, b], PLAYER_QS, rng, o);
   const cq = genCount(data, a, b, rng, o.verifiedOnly);
   if (cq && rng() < 0.6) gen.splice(gen.length ? gen.length - 1 : 0, 1, cq);
   const rest = shuffle(rng, [
@@ -96,7 +101,8 @@ export function buildRound(data: Dataset, a: SchoolKey, b: SchoolKey, rng: Rng, 
     ...(m ? curatedQs(m.items, m.name, rng, o, [m.a, m.b]) : []),
     ...teamQs(data, a, rng, o), ...teamQs(data, b, rng, o),
   ]);
-  const cap = caps(hasPlayerData(data, a, o) && hasPlayerData(data, b, o) ? 3 : 7);
+  // Player stats lead. Program comparisons are capped at 2, or 4 while a school still has no player pack.
+  const cap = caps(hasPlayerData(data, a, o) && hasPlayerData(data, b, o) ? 2 : 4);
   const used: Partial<Record<QType, number>> = {}, out: Question[] = [];
   let traps = 0, upsets = 0;
   for (const q of [...gen, ...rest]) {

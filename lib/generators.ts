@@ -43,7 +43,11 @@ export function genRank(c: Ctx): Question | null {
   if (!keys.length) return null;
   const key = pick(c.rng, keys), [sc, k] = key.split("|") as ["car" | "sea", GenStat];
   const picks: PlayerSeason[] = [], seen = new Set<number>();
-  for (const p of shuffle(c.rng, g[key])) { if (!seen.has(p[k]!)) { seen.add(p[k]!); picks.push(p) } if (picks.length === 4) break }
+  const add = (p: PlayerSeason) => { if (picks.length < 4 && !seen.has(p[k]!)) { seen.add(p[k]!); picks.push(p) } };
+  const arr = shuffle(c.rng, g[key]), schools = [...new Set(arr.map(p => p.school))];
+  if (schools.length > 1) for (const t of schools) { const p = arr.find(x => x.school === t && !seen.has(x[k]!)); if (p) add(p) } // at least one from each school
+  arr.forEach(add);
+  if (picks.length < 4) return null;
   return {
     type: "rank", label: c.label, verified: allVerified(...picks),
     prompt: sc === "car" ? `Rank these players by career ${ST[k][0]} (at that school), highest first.` : `Rank these seasons by ${ST[k][0]}, highest first.`,
@@ -198,6 +202,30 @@ export function genCount(data: Dataset, a: SchoolKey, b: SchoolKey, rng: Rng, ve
   if (!ths.length) return null;
   const t = pick(rng, ths);
   return { type: "count", label: "School Count", a, b, threshold: t, A: cnt(A, t), B: cnt(B, t), verified: A.verified && B.verified, sig: "c" + a + b + t };
+}
+
+// ---- blind stat duel from player data (spec §4.9): two unnamed same-season lines, one per school ----
+const DUEL: Record<"rush" | "rec", { stat: string; td: "rushTD" | "recTD"; unit: string }> = {
+  rush: { stat: "Rushing season", td: "rushTD", unit: "rush yds" },
+  rec: { stat: "Receiving season", td: "recTD", unit: "rec yds" },
+};
+export function genDuel(c: Ctx, teams: SchoolKey[]): Question | null {
+  if (teams.length < 2) return null;
+  const [ta, tb] = teams, cands: [PlayerSeason, PlayerSeason, "rush" | "rec"][] = [];
+  for (const k of ["rush", "rec"] as const) {
+    const sea = c.pool.filter(p => p.year !== "career" && (p[k] ?? 0) >= 300 && p[DUEL[k].td] != null);
+    for (const a of sea) if (a.school === ta) for (const b of sea)
+      if (b.school === tb && b.year === a.year && b[k] !== a[k]) cands.push([a, b, k]);
+  }
+  if (!cands.length) return null;
+  const [a, b, k] = pick(c.rng, cands), d = DUEL[k];
+  const line = (p: PlayerSeason) => ({ big: fmt(p[k]!), sm: `${d.unit} · ${p[d.td]} TD` });
+  const aFirst = c.rng() < 0.5, [x, y] = aFirst ? [a, b] : [b, a]; // which school the prompt asks about
+  return {
+    type: "duel", label: c.label, verified: allVerified(a, b), year: a.year as number, stat: d.stat,
+    aSchool: x.school, other: y.school, aName: `${x.name} (${pos(c, x)})`, bName: `${y.name} (${pos(c, y)})`,
+    A: line(x), B: line(y), flip: c.rng() < 0.5, sig: "d" + k + a.year + [a.name, b.name].sort(),
+  };
 }
 
 export type { Item };

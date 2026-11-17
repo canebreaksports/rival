@@ -6,8 +6,8 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-17T03:28:39.871Z",
- "engine": 1,
+ "generatedAt": "2026-11-17T14:39:34.626Z",
+ "engine": 2,
  "questions": [
   {
    "type": "moment",
@@ -28,23 +28,13 @@
    "label": "Program Pit · Tennessee vs Vanderbilt",
    "a": "TENN",
    "b": "VAN",
-   "prompt": "Whose best season since 2000 had more wins?",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
    "values": [
-    11,
-    10
+    1,
+    12
    ],
    "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "label": "Tennessee",
-   "verified": true,
-   "sig": "kTennessee1",
-   "type": "moment",
-   "prompt": "Did Arian Foster finish his Tennessee career with more or less than",
-   "line": "3,000 rushing yards",
-   "answer": "under",
-   "reveal": "Under, barely. He finished with 2,964."
+   "sig": "gwin3"
   },
   {
    "type": "h2h",
@@ -67,20 +57,6 @@
    "sig": "uypcJamal LewisDylan Sampson"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2008, did Arian Foster (Tennessee) have more or less than",
-   "line": "675 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Arian Foster had 570 rushing yards in 2008.",
-   "check": {
-    "value": 570,
-    "line": 675
-   },
-   "sig": "pArian Foster2008rush"
-  },
-  {
    "type": "prog",
    "label": "Program Pit · Tennessee vs Vanderbilt",
    "a": "TENN",
@@ -94,74 +70,107 @@
    "sig": "gtotalW"
   },
   {
+   "label": "Tennessee",
+   "verified": true,
+   "sig": "kTennessee1",
+   "type": "moment",
+   "prompt": "Did Arian Foster finish his Tennessee career with more or less than",
+   "line": "3,000 rushing yards",
+   "answer": "under",
+   "reveal": "Under, barely. He finished with 2,964."
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2016, did Joshua Dobbs (Tennessee) have more or less than",
+   "line": "925 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Joshua Dobbs had 831 rushing yards in 2016.",
+   "check": {
+    "value": 831,
+    "line": 925
+   },
+   "sig": "pJoshua Dobbs2016rush"
+  },
+  {
    "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "Rank these players by career receiving TDs (at that school), highest first.",
+   "prompt": "Rank these players by career receiving yards (at that school), highest first.",
    "items": [
     {
      "label": "Jamal Lewis (RB) · career, TENN",
-     "value": 4
-    },
-    {
-     "label": "Dylan Sampson (RB) · career, TENN",
-     "value": 1
-    },
-    {
-     "label": "Jalin Hyatt (WR) · career, TENN",
-     "value": 19
+     "value": 475
     },
     {
      "label": "Arian Foster (RB) · career, TENN",
-     "value": 2
+     "value": 742
+    },
+    {
+     "label": "Dylan Sampson (RB) · career, TENN",
+     "value": 340
+    },
+    {
+     "label": "Jalin Hyatt (WR) · career, TENN",
+     "value": 1769
     }
    ],
-   "unit": "TD",
-   "sig": "rcar|recTDArian Fostercareer,Dylan Sampsoncareer,Jalin Hyattcareer,Jamal Lewiscareer"
+   "unit": "yds",
+   "sig": "rcar|recArian Fostercareer,Dylan Sampsoncareer,Jalin Hyattcareer,Jamal Lewiscareer"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2008, did Arian Foster (Tennessee) have more or less than",
+   "line": "775 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Arian Foster had 736 yards from scrimmage in 2008.",
+   "check": {
+    "value": 736,
+    "line": 775
+   },
+   "sig": "pArian Foster2008scrim"
   },
   {
    "type": "prog",
    "label": "Program Pit · Tennessee vs Vanderbilt",
    "a": "TENN",
    "b": "VAN",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "prompt": "Whose best season since 2000 had more wins?",
    "values": [
-    1,
-    12
+    11,
+    10
    ],
    "verified": true,
-   "sig": "gwin3"
+   "sig": "gpeakW"
   },
   {
-   "label": "Tennessee",
-   "verified": true,
-   "sig": "kTennessee3",
-   "type": "h2h",
-   "prompt": "Who had more career rushing yards at Tennessee?",
-   "A": {
-    "label": "Arian Foster",
-    "value": 2964
-   },
-   "B": {
-    "label": "Jamal Lewis",
-    "value": 2677
-   },
-   "unit": "rushing yds",
-   "flip": true
-  },
-  {
-   "type": "moment",
+   "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2015, did Joshua Dobbs (Tennessee) have more or less than",
-   "line": "550 rushing yards",
-   "answer": "over",
-   "reveal": "More. Joshua Dobbs had 671 rushing yards in 2015.",
-   "check": {
-    "value": 671,
-    "line": 550
-   },
-   "sig": "pJoshua Dobbs2015rush"
+   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
+   "items": [
+    {
+     "label": "Jamal Lewis (RB) · 1999 TENN",
+     "value": 1009
+    },
+    {
+     "label": "Dylan Sampson (RB) · 2023 TENN",
+     "value": 779
+    },
+    {
+     "label": "Jamal Lewis (RB) · 1997 TENN",
+     "value": 1630
+    },
+    {
+     "label": "Arian Foster (RB) · 2008 TENN",
+     "value": 736
+    }
+   ],
+   "unit": "yds",
+   "sig": "rsea|scrimArian Foster2008,Dylan Sampson2023,Jamal Lewis1997,Jamal Lewis1999"
   }
  ]
 }

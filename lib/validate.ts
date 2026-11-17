@@ -60,6 +60,7 @@ export function validateQuestion(q: Question): string[] {
     if (rankOrder(q).length !== q.items.length) errs.push(`${where}: bad order`);
   }
   if (q.type === "h2h" && q.A.value === q.B.value) errs.push(`${where}: tie`);
+  if (q.type === "duel" && (q.A.big === q.B.big || q.aSchool === q.other)) errs.push(`${where}: duel lines or schools identical`);
   if (q.type === "count" && (q.A.some(x => x.yards < q.threshold) || q.B.some(x => x.yards < q.threshold))) errs.push(`${where}: player under threshold`);
   if (q.type !== "rank" && correctAnswer(q) === "") errs.push(`${where}: no correct answer`);
   return errs;

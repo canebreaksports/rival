@@ -6,77 +6,9 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-17T03:28:39.870Z",
- "engine": 1,
+ "generatedAt": "2026-11-17T14:39:34.624Z",
+ "engine": 2,
  "questions": [
-  {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Arkansas",
-   "a": "LSU",
-   "b": "ARK",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    13,
-    3
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Arkansas",
-   "a": "LSU",
-   "b": "ARK",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    15,
-    11
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2016, did Derrius Guice (LSU) have more or less than",
-   "line": "1,550 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Derrius Guice had 1,387 rushing yards in 2016.",
-   "check": {
-    "value": 1387,
-    "line": 1550
-   },
-   "sig": "pDerrius Guice2016rush"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Arkansas",
-   "a": "LSU",
-   "b": "ARK",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    249,
-    161
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "In 2014, did Leonard Fournette (LSU) have more or less than",
-   "line": "1,750 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. Leonard Fournette had 1,161 yards from scrimmage in 2014. 🪤 Trap: his big year was 2015 (2,206).",
-   "check": {
-    "value": 1161,
-    "line": 1750
-   },
-   "sig": "tpLeonard Fournette2014scrim"
-  },
   {
    "type": "rank",
    "label": "Fresh Mix",
@@ -108,13 +40,54 @@
    "label": "Program Pit · LSU vs Arkansas",
    "a": "LSU",
    "b": "ARK",
-   "prompt": "Who had more losing seasons from 2000–2025?",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
    "values": [
-    1,
+    13,
+    3
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Arkansas",
+   "a": "LSU",
+   "b": "ARK",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    15,
     11
    ],
    "verified": true,
-   "sig": "glosing"
+   "sig": "gpeakW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Arkansas",
+   "a": "LSU",
+   "b": "ARK",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    0,
+    5
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "In 2014, did Leonard Fournette (LSU) have more or less than",
+   "line": "1,750 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Leonard Fournette had 1,161 yards from scrimmage in 2014. 🪤 Trap: his big year was 2015 (2,206).",
+   "check": {
+    "value": 1161,
+    "line": 1750
+   },
+   "sig": "tpLeonard Fournette2014scrim"
   },
   {
    "type": "h2h",
@@ -136,31 +109,43 @@
    "sig": "urecTDLeonard FournetteDerrius Guice"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2016, did Derrius Guice (LSU) have more or less than",
-   "line": "1,400 yards from scrimmage",
-   "answer": "over",
-   "reveal": "More. Derrius Guice had 1,493 yards from scrimmage in 2016.",
-   "check": {
-    "value": 1493,
-    "line": 1400
-   },
-   "sig": "pDerrius Guice2016scrim"
-  },
-  {
    "type": "prog",
    "label": "Program Pit · LSU vs Arkansas",
    "a": "LSU",
    "b": "ARK",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "prompt": "Who had more losing seasons from 2000–2025?",
    "values": [
-    0,
-    5
+    1,
+    11
    ],
    "verified": true,
-   "sig": "gwin3"
+   "sig": "glosing"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career receiving yards (at that school), highest first.",
+   "items": [
+    {
+     "label": "Clyde Edwards-Helaire (RB) · career, LSU",
+     "value": 595
+    },
+    {
+     "label": "Justin Jefferson (WR) · career, LSU",
+     "value": 2415
+    },
+    {
+     "label": "Leonard Fournette (RB) · career, LSU",
+     "value": 526
+    },
+    {
+     "label": "Derrius Guice (RB) · career, LSU",
+     "value": 250
+    }
+   ],
+   "unit": "yds",
+   "sig": "rcar|recClyde Edwards-Helairecareer,Derrius Guicecareer,Justin Jeffersoncareer,Leonard Fournettecareer"
   }
  ]
 }
