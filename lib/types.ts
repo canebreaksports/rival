@@ -51,10 +51,17 @@ export interface Dataset {
   career: Record<SchoolKey, CareerList>;
   schedule: { source: string; games: Game[] };
   curated: { matchups: Matchup[]; teamPacks: Record<SchoolKey, CuratedItem[]> };
+  rivalry?: { source: string; boxFrom: number; pairs: Record<string, RivalryPair> };
 }
 
+// ---- games between two schools (data/rivalry.json) ----
+export interface Perf { name: string; cat: "rush" | "rec" | "pass"; yds: number; td: number; n?: number }
+export interface RivalryGame { season: number; date: string; home: SchoolKey; away: SchoolKey; hp: number; ap: number; venue: string; neutral?: boolean; bowl?: boolean; box?: Record<SchoolKey, Perf[]> }
+export interface VsTotal { name: string; school: SchoolKey; games: number; rush: number; rushTD: number; car: number; rec: number; recTD: number; recN: number }
+export interface RivalryPair { games: RivalryGame[]; vs: VsTotal[] }
+
 // ---- questions: fully self-contained so frozen sets need no data at runtime ----
-interface QBase { label: string; verified: boolean; sig: string; trap?: boolean; upset?: boolean; pair?: string; pairPart?: 1 | 2 }
+interface QBase { label: string; verified: boolean; sig: string; trap?: boolean; upset?: boolean; pair?: string; pairPart?: 1 | 2; pitted?: boolean } // pitted: about both schools by construction
 export interface Item { label: string; value: number; school?: SchoolKey } // school: who the item belongs to (pitted checks)
 
 export type Question = QBase & (

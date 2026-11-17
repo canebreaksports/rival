@@ -5,11 +5,12 @@ import players from "@/data/players.json";
 import career from "@/data/career-rushing.json";
 import schedule from "@/data/schedule.json";
 import curated from "@/data/curated.json";
+import rivalry from "@/data/rivalry.json";
 import type { Dataset, School, SchoolKey } from "./types";
 
-export const DATA = { schools, seasons, players, career, schedule, curated } as unknown as Dataset;
+export const DATA = { schools, seasons, players, career, schedule, curated, rivalry } as unknown as Dataset;
 
-export const SCHOOL: Record<SchoolKey, School> = Object.fromEntries(DATA.schools.map(s => [s.key, s]));
+export { SCHOOL } from "./schools";
 
 export interface ProgramStat { key: string; prompt: string; window: string }
 // Spec §4.1, in this order.

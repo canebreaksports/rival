@@ -6,57 +6,48 @@
   "away": "UGA",
   "home": "SC"
  },
- "generatedAt": "2026-11-17T16:40:42.724Z",
- "engine": 6,
+ "generatedAt": "2026-11-17T16:48:48.623Z",
+ "engine": 7,
  "questions": [
   {
    "type": "rank",
-   "label": "Fresh Mix",
+   "label": "Rivalry Games",
    "verified": true,
-   "prompt": "Rank these players by career rushing TDs (at that school), highest first.",
+   "unit": "yds",
+   "prompt": "Rank these single-game rushing performances in Georgia–South Carolina games, highest first.",
    "items": [
     {
-     "label": "Kenny McIntosh (RB) · career, UGA",
-     "value": 16,
-     "school": "UGA"
-    },
-    {
-     "label": "A.J. Turner (RB) · career, SC",
-     "value": 8,
+     "label": "Kevin Harris (SC) · 2020",
+     "value": 53,
      "school": "SC"
     },
     {
-     "label": "Daijun Edwards (RB) · career, UGA",
-     "value": 24,
+     "label": "D'Andre Swift (UGA) · 2019",
+     "value": 113,
      "school": "UGA"
     },
     {
-     "label": "Kevin Harris (RB) · career, SC",
-     "value": 22,
+     "label": "Connor Shaw (SC) · 2012",
+     "value": 78,
+     "school": "SC"
+    },
+    {
+     "label": "Mike Davis (SC) · 2013",
+     "value": 149,
      "school": "SC"
     }
    ],
-   "unit": "TD",
-   "sig": "rcar|rushTDA.J. Turnercareer,Daijun Edwardscareer,Kenny McIntoshcareer,Kevin Harriscareer"
+   "sig": "grrushConnor Shaw2012,D'Andre Swift2019,Kevin Harris2020,Mike Davis2013"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
+   "label": "Palmetto vs. Peach",
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more career receiving yards?",
-   "A": {
-    "label": "Marcus Lattimore (RB) · career, SC",
-    "value": 767,
-    "school": "SC"
-   },
-   "B": {
-    "label": "Terry Godwin (WR) · career, UGA",
-    "value": 1788,
-    "school": "UGA"
-   },
-   "unit": "receiving yards",
-   "sig": "hMarcus Lattimorecareer,Terry Godwincareerrec"
+   "sig": "kPalmetto vs. Peach0",
+   "type": "moment",
+   "prompt": "Georgia's biggest win over South Carolina came in 2022. Was the margin more or less than",
+   "line": "35.5 points",
+   "answer": "over",
+   "reveal": "Over. Georgia won 48–7, a 41-point margin."
   },
   {
    "type": "prog",
@@ -72,35 +63,45 @@
    "sig": "gwin3"
   },
   {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": false,
+   "prompt": "In Georgia–South Carolina games since 2012, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Jermaine Burton (UGA) vs. South Carolina",
+    "value": 103,
+    "school": "UGA"
+   },
+   "B": {
+    "label": "Deebo Samuel (SC) vs. Georgia",
+    "value": 143,
+    "school": "SC"
+   },
+   "unit": "receiving yds",
+   "note": "Jermaine Burton: 103 in 2 games. Deebo Samuel: 143 in 3 games.",
+   "sig": "vsrecDeebo Samuel,Jermaine Burton"
+  },
+  {
    "type": "duel",
    "label": "Fresh Mix",
    "verified": true,
-   "year": 2021,
+   "year": 2018,
    "stat": "Rushing season",
    "aSchool": "UGA",
    "other": "SC",
-   "aName": "Kenny McIntosh (RB)",
-   "bName": "Kevin Harris (RB)",
+   "aName": "D'Andre Swift (RB)",
+   "bName": "Rico Dowdle (RB)",
    "A": {
-    "big": "328",
-    "sm": "rush yds · 3 TD"
+    "big": "1,049",
+    "sm": "rush yds · 10 TD"
    },
    "B": {
-    "big": "660",
+    "big": "654",
     "sm": "rush yds · 4 TD"
    },
    "flip": true,
-   "sig": "drush2021Kenny McIntosh,Kevin Harris"
-  },
-  {
-   "label": "Palmetto vs. Peach",
-   "verified": true,
-   "sig": "kPalmetto vs. Peach0",
-   "type": "moment",
-   "prompt": "Georgia's biggest win over South Carolina came in 2022. Was the margin more or less than",
-   "line": "35.5 points",
-   "answer": "over",
-   "reveal": "Over. Georgia won 48–7, a 41-point margin."
+   "sig": "drush2018D'Andre Swift,Rico Dowdle"
   },
   {
    "type": "h2h",
@@ -124,36 +125,57 @@
    "sig": "urecTDD'Andre SwiftJoshua Simon"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
+   "type": "rank",
+   "label": "Rivalry Games",
    "verified": true,
-   "prompt": "In 2018, did D'Andre Swift (Georgia) have more or less than",
-   "line": "1,150 rushing yards",
-   "answer": "under",
-   "reveal": "Less. D'Andre Swift had 1,049 rushing yards in 2018.",
-   "check": {
-    "value": 1049,
-    "line": 1150
-   },
-   "sig": "ppD'Andre Swift2018|Rico Dowdle2018rush0",
-   "pair": "ppD'Andre Swift2018|Rico Dowdle2018rush",
-   "pairPart": 1
+   "unit": "yds",
+   "prompt": "Rank these single-game receiving performances in Georgia–South Carolina games, highest first.",
+   "items": [
+    {
+     "label": "Brock Bowers (UGA) · 2022",
+     "value": 121,
+     "school": "UGA"
+    },
+    {
+     "label": "D.L. Moore (SC) · 2012",
+     "value": 62,
+     "school": "SC"
+    },
+    {
+     "label": "Bryan Edwards (SC) · 2019",
+     "value": 78,
+     "school": "SC"
+    },
+    {
+     "label": "George Pickens (UGA) · 2019",
+     "value": 98,
+     "school": "UGA"
+    }
+   ],
+   "sig": "grrecBrock Bowers2022,Bryan Edwards2019,D.L. Moore2012,George Pickens2019"
   },
   {
    "type": "moment",
-   "label": "Fresh Mix",
+   "label": "Rivalry Game",
    "verified": true,
-   "prompt": "In 2018, did Rico Dowdle (South Carolina) have more or less than",
-   "line": "750 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Rico Dowdle had 654 rushing yards in 2018.",
-   "check": {
-    "value": 654,
-    "line": 750
+   "pitted": true,
+   "game": {
+    "date": "Nov 4, 2017",
+    "winner": "UGA",
+    "loser": "SC",
+    "ws": 24,
+    "ls": 10,
+    "venue": "Sanford Stadium"
    },
-   "sig": "ppD'Andre Swift2018|Rico Dowdle2018rush1",
-   "pair": "ppD'Andre Swift2018|Rico Dowdle2018rush",
-   "pairPart": 2
+   "prompt": "In this game, did Jake Bentley (South Carolina) throw for more or less than",
+   "line": "150 passing yards",
+   "answer": "over",
+   "reveal": "More. Jake Bentley had 227 passing yards and 1 TD in this game.",
+   "check": {
+    "value": 227,
+    "line": 150
+   },
+   "sig": "gm2017-11-04Jake Bentleypass"
   },
   {
    "type": "prog",
@@ -169,23 +191,27 @@
    "sig": "gtotalW"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
+   "type": "moment",
+   "label": "Rivalry Game",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more rushing yards in a single season?",
-   "A": {
-    "label": "D'Andre Swift (RB) · 2018 UGA",
-    "value": 1049,
-    "school": "UGA"
+   "pitted": true,
+   "game": {
+    "date": "Sep 8, 2018",
+    "winner": "UGA",
+    "loser": "SC",
+    "ws": 41,
+    "ls": 17,
+    "venue": "Williams-Brice Stadium"
    },
-   "B": {
-    "label": "Marcus Lattimore (RB) · 2010 SC",
-    "value": 1197,
-    "school": "SC"
+   "prompt": "In this game, did Jake Fromm (Georgia) throw for more or less than",
+   "line": "225 passing yards",
+   "answer": "under",
+   "reveal": "Less. Jake Fromm had 194 passing yards and 1 TD in this game.",
+   "check": {
+    "value": 194,
+    "line": 225
    },
-   "unit": "rushing yards",
-   "sig": "hD'Andre Swift2018,Marcus Lattimore2010rush"
+   "sig": "gm2018-09-08Jake Frommpass"
   }
  ]
 }

@@ -6,28 +6,107 @@
   "away": "LSU",
   "home": "TENN"
  },
- "generatedAt": "2026-11-17T16:40:42.726Z",
- "engine": 6,
+ "generatedAt": "2026-11-17T16:48:48.625Z",
+ "engine": 7,
  "questions": [
   {
    "type": "prog",
    "label": "Program Pit · LSU vs Tennessee",
    "a": "LSU",
    "b": "TENN",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "prompt": "Who had more losing seasons from 2000–2025?",
    "values": [
-    0,
-    1
+    1,
+    9
    ],
    "verified": true,
-   "sig": "gwin3"
+   "sig": "glosing"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career yards from scrimmage (at that school), highest first.",
+   "items": [
+    {
+     "label": "Clyde Edwards-Helaire (RB) · career, LSU",
+     "value": 2699,
+     "school": "LSU"
+    },
+    {
+     "label": "Jamal Lewis (RB) · career, TENN",
+     "value": 3152,
+     "school": "TENN"
+    },
+    {
+     "label": "Kevin Faulk (RB) · career, LSU",
+     "value": 5157,
+     "school": "LSU"
+    },
+    {
+     "label": "Leonard Fournette (RB) · career, LSU",
+     "value": 4356,
+     "school": "LSU"
+    }
+   ],
+   "unit": "yds",
+   "sig": "rcar|scrimClyde Edwards-Helairecareer,Jamal Lewiscareer,Kevin Faulkcareer,Leonard Fournettecareer"
+  },
+  {
+   "type": "moment",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did Tennessee beat LSU more or fewer than",
+   "line": "1.5 times",
+   "answer": "over",
+   "reveal": "More. Tennessee went 3–7 against LSU from 2000 to 2025 (10 meetings, on-field results).",
+   "check": {
+    "value": 3,
+    "line": 1.5
+   },
+   "sig": "scTENNLSU"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Tennessee",
+   "a": "LSU",
+   "b": "TENN",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    249,
+    194
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
+   "A": {
+    "label": "Joshua Dobbs (TENN QB)",
+    "value": 32,
+    "school": "TENN"
+   },
+   "B": {
+    "label": "Jayden Daniels (LSU QB)",
+    "value": 21,
+    "school": "LSU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Joshua Dobbs 32 vs. Jayden Daniels 21.",
+   "sig": "urushTDJayden DanielsJoshua Dobbs"
   },
   {
    "type": "count",
    "label": "School Count",
    "a": "LSU",
    "b": "TENN",
-   "threshold": 2250,
+   "threshold": 2500,
    "A": [
     {
      "name": "Kevin Faulk",
@@ -60,10 +139,6 @@
     {
      "name": "Terry Robiskie",
      "yards": 2517
-    },
-    {
-     "name": "Charles Scott",
-     "yards": 2317
     }
    ],
    "B": [
@@ -103,162 +178,65 @@
     {
      "name": "Jay Graham",
      "yards": 2609
-    },
-    {
-     "name": "Dylan Sampson",
-     "yards": 2492
-    },
-    {
-     "name": "Montario Hardesty",
-     "yards": 2391
-    },
-    {
-     "name": "Curt Watson",
-     "yards": 2364
-    },
-    {
-     "name": "Reggie Cobb",
-     "yards": 2360
-    },
-    {
-     "name": "Travis Stephens",
-     "yards": 2336
-    },
-    {
-     "name": "Jaylen Wright",
-     "yards": 2297
     }
    ],
    "verified": true,
-   "sig": "cLSUTENN2250"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Jamal Lewis (TENN RB) · 1999 yards from scrimmage",
-     "value": 1009,
-     "school": "TENN"
-    },
-    {
-     "label": "Leonard Fournette (LSU RB) · 2015 rushing yards",
-     "value": 1953,
-     "school": "LSU"
-    },
-    {
-     "label": "Derrius Guice (LSU RB) · career yards from scrimmage",
-     "value": 3324,
-     "school": "LSU"
-    },
-    {
-     "label": "Joe Burrow (LSU QB) · career rushing yards",
-     "value": 767,
-     "school": "LSU"
-    }
-   ],
-   "sig": "mxydsDerrius Guicecareer yards from scrimmage,Jamal Lewis1999 yards from scrimmage,Joe Burrowcareer rushing yards,Leonard Fournette2015 rushing yards"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Tennessee",
-   "a": "LSU",
-   "b": "TENN",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    249,
-    194
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
-   "A": {
-    "label": "Joshua Dobbs (TENN QB)",
-    "value": 32,
-    "school": "TENN"
-   },
-   "B": {
-    "label": "Jayden Daniels (LSU QB)",
-    "value": 21,
-    "school": "LSU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Joshua Dobbs 32 vs. Jayden Daniels 21.",
-   "sig": "urushTDJayden DanielsJoshua Dobbs"
+   "sig": "cLSUTENN2500"
   },
   {
    "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2014, did Leonard Fournette (LSU) have more or less than",
-   "line": "9.5 rushing TDs",
+   "prompt": "Did Clyde Edwards-Helaire finish his LSU career with more or less than",
+   "line": "1,700 rushing yards",
    "answer": "over",
-   "reveal": "More. Leonard Fournette had 10 rushing TDs in 2014.",
+   "reveal": "More. Clyde Edwards-Helaire had 2,104 rushing yards in his career.",
    "check": {
-    "value": 10,
-    "line": 9.5
+    "value": 2104,
+    "line": 1700
    },
-   "sig": "ppLeonard Fournette2014|Joshua Dobbs2016rushTD0",
-   "pair": "ppLeonard Fournette2014|Joshua Dobbs2016rushTD",
+   "sig": "ppClyde Edwards-Helairecareer|Arian Fostercareerrush0",
+   "pair": "ppClyde Edwards-Helairecareer|Arian Fostercareerrush",
    "pairPart": 1
   },
   {
    "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2016, did Joshua Dobbs (Tennessee) have more or less than",
-   "line": "9.5 rushing TDs",
+   "prompt": "Did Arian Foster finish his Tennessee career with more or less than",
+   "line": "2,500 rushing yards",
    "answer": "over",
-   "reveal": "More. Joshua Dobbs had 12 rushing TDs in 2016.",
+   "reveal": "More. Arian Foster had 2,964 rushing yards in his career.",
    "check": {
-    "value": 12,
-    "line": 9.5
+    "value": 2964,
+    "line": 2500
    },
-   "sig": "ppLeonard Fournette2014|Joshua Dobbs2016rushTD1",
-   "pair": "ppLeonard Fournette2014|Joshua Dobbs2016rushTD",
+   "sig": "ppClyde Edwards-Helairecareer|Arian Fostercareerrush1",
+   "pair": "ppClyde Edwards-Helairecareer|Arian Fostercareerrush",
    "pairPart": 2
   },
   {
    "type": "moment",
-   "label": "Fresh Mix",
+   "label": "Rivalry Game",
    "verified": true,
-   "prompt": "In 2018, did Justin Jefferson (LSU) have more or less than",
-   "line": "7.5 receiving TDs",
+   "pitted": true,
+   "game": {
+    "date": "Oct 8, 2022",
+    "winner": "TENN",
+    "loser": "LSU",
+    "ws": 40,
+    "ls": 13,
+    "venue": "Tiger Stadium (LA)"
+   },
+   "prompt": "In this game, did Jalin Hyatt (Tennessee) have more or less than",
+   "line": "80 receiving yards",
    "answer": "under",
-   "reveal": "Less. Justin Jefferson had 6 receiving TDs in 2018.",
+   "reveal": "Less. Jalin Hyatt had 63 receiving yards on 4 catches and 2 TD in this game.",
    "check": {
-    "value": 6,
-    "line": 7.5
+    "value": 63,
+    "line": 80
    },
-   "sig": "ppJustin Jefferson2018|Jalin Hyatt2022recTD0",
-   "pair": "ppJustin Jefferson2018|Jalin Hyatt2022recTD",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2022, did Jalin Hyatt (Tennessee) have more or less than",
-   "line": "12.5 receiving TDs",
-   "answer": "over",
-   "reveal": "More. Jalin Hyatt had 15 receiving TDs in 2022.",
-   "check": {
-    "value": 15,
-    "line": 12.5
-   },
-   "sig": "ppJustin Jefferson2018|Jalin Hyatt2022recTD1",
-   "pair": "ppJustin Jefferson2018|Jalin Hyatt2022recTD",
-   "pairPart": 2
+   "sig": "gm2022-10-08Jalin Hyattrec"
   }
  ]
 }

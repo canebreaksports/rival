@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { Game } from "@/lib/types";
 import { dfmt, liveGames, nextGames, windowOf } from "@/lib/gating";
-import { SCHOOL } from "@/lib/data";
+import { SCHOOL } from "@/lib/schools";
 import { store } from "@/lib/storage";
 import { Dot } from "./Dot";
 

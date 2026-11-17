@@ -6,9 +6,200 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-17T16:40:42.730Z",
- "engine": 6,
+ "generatedAt": "2026-11-17T16:48:48.629Z",
+ "engine": 7,
  "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Texas A&M",
+   "a": "TEX",
+   "b": "TAMU",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    236,
+    195
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career rushing yards (at that school), highest first.",
+   "items": [
+    {
+     "label": "Tra Carson (RB) · career, TAMU",
+     "value": 2075,
+     "school": "TAMU"
+    },
+    {
+     "label": "Tyrone Swoopes (QB) · career, TEX",
+     "value": 966,
+     "school": "TEX"
+    },
+    {
+     "label": "Devon Achane (RB) · career, TAMU",
+     "value": 2376,
+     "school": "TAMU"
+    },
+    {
+     "label": "Kellen Mond (QB) · career, TAMU",
+     "value": 1616,
+     "school": "TAMU"
+    }
+   ],
+   "unit": "yds",
+   "sig": "rcar|rushDevon Achanecareer,Kellen Mondcareer,Tra Carsoncareer,Tyrone Swoopescareer"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2025",
+    "winner": "TEX",
+    "loser": "TAMU",
+    "ws": 27,
+    "ls": 17,
+    "venue": "DKR-Texas Memorial Stadium"
+   },
+   "prompt": "In this game, did Arch Manning (Texas) throw for more or less than",
+   "line": "150 passing yards",
+   "answer": "over",
+   "reveal": "More. Arch Manning had 179 passing yards and 1 TD in this game.",
+   "check": {
+    "value": 179,
+    "line": 150
+   },
+   "sig": "gm2025-11-28Arch Manningpass"
+  },
+  {
+   "type": "moment",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did Texas A&M beat Texas more or fewer than",
+   "line": "4.5 times",
+   "answer": "under",
+   "reveal": "Fewer. Texas A&M went 3–11 against Texas from 2000 to 2025 (14 meetings, on-field results).",
+   "check": {
+    "value": 3,
+    "line": 4.5
+   },
+   "sig": "scTAMUTEX"
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "TEX",
+   "b": "TAMU",
+   "threshold": 3000,
+   "A": [
+    {
+     "name": "Ricky Williams",
+     "yards": 6279
+    },
+    {
+     "name": "Cedric Benson",
+     "yards": 5540
+    },
+    {
+     "name": "Earl Campbell",
+     "yards": 4443
+    },
+    {
+     "name": "Bijan Robinson",
+     "yards": 3410
+    },
+    {
+     "name": "Jamaal Charles",
+     "yards": 3328
+    },
+    {
+     "name": "Chris Gilbert",
+     "yards": 3231
+    },
+    {
+     "name": "Vince Young",
+     "yards": 3127
+    }
+   ],
+   "B": [
+    {
+     "name": "Darren Lewis",
+     "yards": 5012
+    },
+    {
+     "name": "Curtis Dickey",
+     "yards": 3703
+    },
+    {
+     "name": "Trayveon Williams",
+     "yards": 3379
+    },
+    {
+     "name": "Cyrus Gray",
+     "yards": 3298
+    },
+    {
+     "name": "Greg Hill",
+     "yards": 3262
+    },
+    {
+     "name": "Rodney Thomas",
+     "yards": 3014
+    }
+   ],
+   "verified": true,
+   "sig": "cTEXTAMU3000"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2023, did Xavier Worthy (Texas) have more or less than",
+   "line": "850 receiving yards",
+   "answer": "over",
+   "reveal": "More. Xavier Worthy had 1,014 receiving yards in 2023.",
+   "check": {
+    "value": 1014,
+    "line": 850
+   },
+   "sig": "ppXavier Worthy2023|Jalen Wydermyer2020rec0",
+   "pair": "ppXavier Worthy2023|Jalen Wydermyer2020rec",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2020, did Jalen Wydermyer (Texas A&M) have more or less than",
+   "line": "575 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Jalen Wydermyer had 506 receiving yards in 2020.",
+   "check": {
+    "value": 506,
+    "line": 575
+   },
+   "sig": "ppXavier Worthy2023|Jalen Wydermyer2020rec1",
+   "pair": "ppXavier Worthy2023|Jalen Wydermyer2020rec",
+   "pairPart": 2
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Texas A&M",
+   "a": "TEX",
+   "b": "TAMU",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    5,
+    5
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
   {
    "type": "h2h",
    "label": "Fresh Mix",
@@ -29,186 +220,6 @@
    "unit": "",
    "note": "🚨 Upset: Jalen Wydermyer 118 vs. Bijan Robinson 60.",
    "sig": "urecNBijan RobinsonJalen Wydermyer"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2016,
-   "stat": "Receiving season",
-   "aSchool": "TAMU",
-   "other": "TEX",
-   "aName": "Josh Reynolds (WR)",
-   "bName": "Collin Johnson (WR)",
-   "A": {
-    "big": "1,039",
-    "sm": "rec yds · 12 TD"
-   },
-   "B": {
-    "big": "315",
-    "sm": "rec yds · 3 TD"
-   },
-   "flip": true,
-   "sig": "drec2016Collin Johnson,Josh Reynolds"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas vs Texas A&M",
-   "a": "TEX",
-   "b": "TAMU",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    236,
-    195
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
-   "items": [
-    {
-     "label": "Ricky Williams (RB) · 1997 TEX",
-     "value": 2043,
-     "school": "TEX"
-    },
-    {
-     "label": "Devon Achane (RB) · 2021 TAMU",
-     "value": 1171,
-     "school": "TAMU"
-    },
-    {
-     "label": "Roschon Johnson (RB) · 2020 TEX",
-     "value": 468,
-     "school": "TEX"
-    },
-    {
-     "label": "Keaontay Ingram (RB) · 2020 TEX",
-     "value": 353,
-     "school": "TEX"
-    }
-   ],
-   "unit": "yds",
-   "note": "🪤 Trap: Ricky Williams's best year was 1998 (2,634), not 1997; Devon Achane's best year was 2022 (1,298), not 2021; Roschon Johnson's best year was 2019 (807), not 2020; Keaontay Ingram's best year was 2019 (1,095), not 2020.",
-   "sig": "trscrimDevon Achane2021,Keaontay Ingram2020,Ricky Williams1997,Roschon Johnson2020"
-  },
-  {
-   "type": "count",
-   "label": "School Count",
-   "a": "TEX",
-   "b": "TAMU",
-   "threshold": 3500,
-   "A": [
-    {
-     "name": "Ricky Williams",
-     "yards": 6279
-    },
-    {
-     "name": "Cedric Benson",
-     "yards": 5540
-    },
-    {
-     "name": "Earl Campbell",
-     "yards": 4443
-    }
-   ],
-   "B": [
-    {
-     "name": "Darren Lewis",
-     "yards": 5012
-    },
-    {
-     "name": "Curtis Dickey",
-     "yards": 3703
-    }
-   ],
-   "verified": true,
-   "sig": "cTEXTAMU3500"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving yards in a single season?",
-   "A": {
-    "label": "Christian Kirk (WR) · 2017 TAMU",
-    "value": 919,
-    "school": "TAMU"
-   },
-   "B": {
-    "label": "Gunnar Helm (TE) · 2024 TEX",
-    "value": 786,
-    "school": "TEX"
-   },
-   "unit": "receiving yards",
-   "sig": "hChristian Kirk2017,Gunnar Helm2024rec"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more rushing yards in a single season?",
-   "A": {
-    "label": "D'Onta Foreman (RB) · 2016 TEX",
-    "value": 2028,
-    "school": "TEX"
-   },
-   "B": {
-    "label": "Isaiah Spiller (RB) · 2021 TAMU",
-    "value": 1011,
-    "school": "TAMU"
-   },
-   "unit": "rushing yards",
-   "sig": "hD'Onta Foreman2016,Isaiah Spiller2021rush"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas vs Texas A&M",
-   "a": "TEX",
-   "b": "TAMU",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    5,
-    5
-   ],
-   "verified": true,
-   "sig": "glosing"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Jalen Wydermyer (TAMU TE) · 2021 receiving yards",
-     "value": 515,
-     "school": "TAMU"
-    },
-    {
-     "label": "Keaontay Ingram (TEX RB) · 2020 rushing yards",
-     "value": 250,
-     "school": "TEX"
-    },
-    {
-     "label": "Devon Achane (TAMU RB) · 2020 yards from scrimmage",
-     "value": 461,
-     "school": "TAMU"
-    },
-    {
-     "label": "Bijan Robinson (TEX RB) · 2022 rushing yards",
-     "value": 1578,
-     "school": "TEX"
-    }
-   ],
-   "sig": "mxydsBijan Robinson2022 rushing yards,Devon Achane2020 yards from scrimmage,Jalen Wydermyer2021 receiving yards,Keaontay Ingram2020 rushing yards"
   }
  ]
 }

@@ -6,27 +6,64 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-17T16:40:42.740Z",
- "engine": 6,
+ "generatedAt": "2026-11-17T16:48:48.637Z",
+ "engine": 7,
  "questions": [
   {
-   "type": "h2h",
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    11,
+    10
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    9,
+    21
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more rushing yards in a single season?",
-   "A": {
-    "label": "Arian Foster (RB) · 2008 TENN",
-    "value": 570,
-    "school": "TENN"
-   },
-   "B": {
-    "label": "Ralph Webb (RB) · 2014 VAN",
-    "value": 907,
-    "school": "VAN"
-   },
-   "unit": "rushing yards",
-   "sig": "hArian Foster2008,Ralph Webb2014rush"
+   "prompt": "Rank these players by career rushing yards (at that school), highest first.",
+   "items": [
+    {
+     "label": "Arian Foster (RB) · career, TENN",
+     "value": 2964,
+     "school": "TENN"
+    },
+    {
+     "label": "Diego Pavia (QB) · career, VAN",
+     "value": 1662,
+     "school": "VAN"
+    },
+    {
+     "label": "Dylan Sampson (RB) · career, TENN",
+     "value": 2486,
+     "school": "TENN"
+    },
+    {
+     "label": "Ke'Shawn Vaughn (RB) · career, VAN",
+     "value": 2272,
+     "school": "VAN"
+    }
+   ],
+   "unit": "yds",
+   "sig": "rcar|rushArian Fostercareer,Diego Paviacareer,Dylan Sampsoncareer,Ke'Shawn Vaughncareer"
   },
   {
    "type": "h2h",
@@ -51,6 +88,49 @@
    "sig": "uypcArian FosterKalija Lipscomb"
   },
   {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 25, 2023",
+    "winner": "TENN",
+    "loser": "VAN",
+    "ws": 48,
+    "ls": 24,
+    "venue": "Neyland Stadium"
+   },
+   "prompt": "In this game, did Jaylen Wright (Tennessee) run for more or less than",
+   "line": "90 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Jaylen Wright had 75 rushing yards on 11 carries and 0 TD in this game.",
+   "check": {
+    "value": 75,
+    "line": 90
+   },
+   "sig": "gm2023-11-25Jaylen Wrightrush"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Tennessee–Vanderbilt games since 2012, who had more rushing yards against the other school?",
+   "A": {
+    "label": "Jalen Hurd (TENN) vs. Vanderbilt",
+    "value": 141,
+    "school": "TENN"
+   },
+   "B": {
+    "label": "Rocko Griffin (VAN) vs. Tennessee",
+    "value": 114,
+    "school": "VAN"
+   },
+   "unit": "rushing yds",
+   "note": "Jalen Hurd: 141 in 2 games. Rocko Griffin: 114 in 2 games.",
+   "sig": "vsrushJalen Hurd,Rocko Griffin"
+  },
+  {
    "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
@@ -58,66 +138,49 @@
    "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
-     "label": "Re'Mahn Davis (VAN RB) · career total TDs (rushing + receiving)",
-     "value": 7,
+     "label": "Ralph Webb (VAN RB) · 2016 rushing TDs",
+     "value": 13,
      "school": "VAN"
     },
     {
-     "label": "Dylan Sampson (TENN RB) · 2024 rushing TDs",
-     "value": 22,
+     "label": "Jalin Hyatt (TENN WR) · 2022 receiving TDs",
+     "value": 15,
      "school": "TENN"
     },
     {
-     "label": "Trent Sherfield (VAN WR) · 2017 receiving TDs",
-     "value": 5,
+     "label": "Ke'Shawn Vaughn (VAN RB) · career rushing TDs",
+     "value": 21,
      "school": "VAN"
     },
     {
-     "label": "Kalija Lipscomb (VAN WR) · 2017 receiving TDs",
-     "value": 8,
+     "label": "Diego Pavia (VAN QB) · career rushing TDs",
+     "value": 18,
      "school": "VAN"
     }
    ],
-   "sig": "mxTDDylan Sampson2024 rushing TDs,Kalija Lipscomb2017 receiving TDs,Re'Mahn Daviscareer total TDs (rushing + receiving),Trent Sherfield2017 receiving TDs"
+   "sig": "mxTDDiego Paviacareer rushing TDs,Jalin Hyatt2022 receiving TDs,Ke'Shawn Vaughncareer rushing TDs,Ralph Webb2016 rushing TDs"
   },
   {
    "type": "moment",
-   "label": "Fresh Mix",
+   "label": "Series History",
    "verified": true,
-   "prompt": "In 2022, did Jalin Hyatt (Tennessee) have more or less than",
-   "line": "1,050 receiving yards",
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did Tennessee beat Vanderbilt more or fewer than",
+   "line": "18.5 times",
    "answer": "over",
-   "reveal": "More. Jalin Hyatt had 1,267 receiving yards in 2022.",
+   "reveal": "More. Tennessee went 19–7 against Vanderbilt from 2000 to 2025 (26 meetings, on-field results).",
    "check": {
-    "value": 1267,
-    "line": 1050
+    "value": 19,
+    "line": 18.5
    },
-   "sig": "ppJalin Hyatt2022|Will Sheppard2021rec0",
-   "pair": "ppJalin Hyatt2022|Will Sheppard2021rec",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2021, did Will Sheppard (Vanderbilt) have more or less than",
-   "line": "650 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Will Sheppard had 577 receiving yards in 2021.",
-   "check": {
-    "value": 577,
-    "line": 650
-   },
-   "sig": "ppJalin Hyatt2022|Will Sheppard2021rec1",
-   "pair": "ppJalin Hyatt2022|Will Sheppard2021rec",
-   "pairPart": 2
+   "sig": "scTENNVAN"
   },
   {
    "type": "count",
    "label": "School Count",
    "a": "TENN",
    "b": "VAN",
-   "threshold": 2250,
+   "threshold": 2500,
    "A": [
     {
      "name": "Travis Henry",
@@ -155,30 +218,6 @@
     {
      "name": "Jay Graham",
      "yards": 2609
-    },
-    {
-     "name": "Dylan Sampson",
-     "yards": 2492
-    },
-    {
-     "name": "Montario Hardesty",
-     "yards": 2391
-    },
-    {
-     "name": "Curt Watson",
-     "yards": 2364
-    },
-    {
-     "name": "Reggie Cobb",
-     "yards": 2360
-    },
-    {
-     "name": "Travis Stephens",
-     "yards": 2336
-    },
-    {
-     "name": "Jaylen Wright",
-     "yards": 2297
     }
    ],
    "B": [
@@ -193,44 +232,10 @@
     {
      "name": "Frank Mordica",
      "yards": 2632
-    },
-    {
-     "name": "Carl Woods",
-     "yards": 2490
-    },
-    {
-     "name": "Ke'Shawn Vaughn",
-     "yards": 2272
     }
    ],
    "verified": true,
-   "sig": "cTENNVAN2250"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
-   "a": "TENN",
-   "b": "VAN",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    11,
-    10
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
-   "a": "TENN",
-   "b": "VAN",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
-   "values": [
-    1,
-    12
-   ],
-   "verified": true,
-   "sig": "gwin3"
+   "sig": "cTENNVAN2500"
   }
  ]
 }

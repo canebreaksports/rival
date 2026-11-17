@@ -6,9 +6,104 @@
   "away": "VAN",
   "home": "FLA"
  },
- "generatedAt": "2026-11-17T16:40:42.719Z",
- "engine": 6,
+ "generatedAt": "2026-11-17T16:48:48.618Z",
+ "engine": 7,
  "questions": [
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more receiving yards in a single season?",
+   "A": {
+    "label": "Trent Sherfield (WR) · 2016 VAN",
+    "value": 472,
+    "school": "VAN"
+   },
+   "B": {
+    "label": "Kadarius Toney (WR) · 2018 FLA",
+    "value": 260,
+    "school": "FLA"
+   },
+   "unit": "receiving yards",
+   "sig": "hKadarius Toney2018,Trent Sherfield2016rec"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Florida",
+   "a": "VAN",
+   "b": "FLA",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    113,
+    218
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Florida",
+   "a": "VAN",
+   "b": "FLA",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    12,
+    0
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Vanderbilt–Florida games since 2012, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Will Sheppard (VAN) vs. Florida",
+    "value": 196,
+    "school": "VAN"
+   },
+   "B": {
+    "label": "Lamical Perine (FLA) vs. Vanderbilt",
+    "value": 138,
+    "school": "FLA"
+   },
+   "unit": "receiving yds",
+   "note": "Will Sheppard: 196 in 4 games. Lamical Perine: 138 in 4 games.",
+   "sig": "vsrecLamical Perine,Will Sheppard"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Will Sheppard (VAN WR) · 2022 receiving TDs",
+     "value": 9,
+     "school": "VAN"
+    },
+    {
+     "label": "Josh Hammond (FLA WR) · 2018 receiving TDs",
+     "value": 4,
+     "school": "FLA"
+    },
+    {
+     "label": "Montrell Johnson (FLA RB) · 2024 rushing TDs",
+     "value": 6,
+     "school": "FLA"
+    },
+    {
+     "label": "Diego Pavia (VAN QB) · career rushing TDs",
+     "value": 18,
+     "school": "VAN"
+    }
+   ],
+   "sig": "mxTDDiego Paviacareer rushing TDs,Josh Hammond2018 receiving TDs,Montrell Johnson2024 rushing TDs,Will Sheppard2022 receiving TDs"
+  },
   {
    "type": "count",
    "label": "School Count",
@@ -68,51 +163,6 @@
    "sig": "cVANFLA2500"
   },
   {
-   "type": "prog",
-   "label": "Program Pit · Vanderbilt vs Florida",
-   "a": "VAN",
-   "b": "FLA",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    1,
-    9
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2019, did Kalija Lipscomb (Vanderbilt) have more or less than",
-   "line": "1.5 receiving TDs",
-   "answer": "over",
-   "reveal": "More. Kalija Lipscomb had 3 receiving TDs in 2019.",
-   "check": {
-    "value": 3,
-    "line": 1.5
-   },
-   "sig": "ppKalija Lipscomb2019|Ricky Pearsall2023recTD0",
-   "pair": "ppKalija Lipscomb2019|Ricky Pearsall2023recTD",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2023, did Ricky Pearsall (Florida) have more or less than",
-   "line": "6.5 receiving TDs",
-   "answer": "under",
-   "reveal": "Less. Ricky Pearsall had 4 receiving TDs in 2023.",
-   "check": {
-    "value": 4,
-    "line": 6.5
-   },
-   "sig": "ppKalija Lipscomb2019|Ricky Pearsall2023recTD1",
-   "pair": "ppKalija Lipscomb2019|Ricky Pearsall2023recTD",
-   "pairPart": 2
-  },
-  {
    "type": "h2h",
    "label": "Fresh Mix",
    "upset": true,
@@ -135,68 +185,65 @@
    "sig": "uypcRalph WebbJosh Hammond"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
+   "type": "rank",
+   "label": "Rivalry Games",
    "verified": true,
-   "prompt": "Did Ke'Shawn Vaughn finish his Vanderbilt career with more or less than",
-   "line": "3,150 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. Ke'Shawn Vaughn had 2,712 yards from scrimmage in his career.",
-   "check": {
-    "value": 2712,
-    "line": 3150
-   },
-   "sig": "ppKe'Shawn Vaughncareer|Montrell Johnsoncareerscrim0",
-   "pair": "ppKe'Shawn Vaughncareer|Montrell Johnsoncareerscrim",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Montrell Johnson finish his Florida career with more or less than",
-   "line": "2,300 yards from scrimmage",
-   "answer": "over",
-   "reveal": "More. Montrell Johnson had 2,609 yards from scrimmage in his career.",
-   "check": {
-    "value": 2609,
-    "line": 2300
-   },
-   "sig": "ppKe'Shawn Vaughncareer|Montrell Johnsoncareerscrim1",
-   "pair": "ppKe'Shawn Vaughncareer|Montrell Johnsoncareerscrim",
-   "pairPart": 2
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Vanderbilt vs Florida",
-   "a": "VAN",
-   "b": "FLA",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
-   "values": [
-    12,
-    0
+   "unit": "yds",
+   "prompt": "Rank these single-game receiving performances in Vanderbilt–Florida games, highest first.",
+   "items": [
+    {
+     "label": "Kalija Lipscomb (VAN) · 2017",
+     "value": 50,
+     "school": "VAN"
+    },
+    {
+     "label": "Kadarius Toney (FLA) · 2020",
+     "value": 107,
+     "school": "FLA"
+    },
+    {
+     "label": "Ke'Shawn Vaughn (VAN) · 2018",
+     "value": 75,
+     "school": "VAN"
+    },
+    {
+     "label": "Daejon Reynolds (FLA) · 2022",
+     "value": 165,
+     "school": "FLA"
+    }
    ],
-   "verified": true,
-   "sig": "gwin3"
+   "sig": "grrecDaejon Reynolds2022,Kadarius Toney2020,Kalija Lipscomb2017,Ke'Shawn Vaughn2018"
   },
   {
-   "type": "h2h",
+   "type": "duel",
    "label": "Fresh Mix",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more career receiving yards?",
+   "year": 2017,
+   "stat": "Rushing season",
+   "aSchool": "FLA",
+   "other": "VAN",
+   "aName": "Malik Davis (RB)",
+   "bName": "Ralph Webb (RB)",
    "A": {
-    "label": "Will Sheppard (WR) · career, VAN",
-    "value": 2067,
-    "school": "VAN"
+    "big": "526",
+    "sm": "rush yds · 2 TD"
    },
    "B": {
-    "label": "Lamical Perine (RB) · career, FLA",
-    "value": 674,
-    "school": "FLA"
+    "big": "831",
+    "sm": "rush yds · 10 TD"
    },
-   "unit": "receiving yards",
-   "sig": "hLamical Perinecareer,Will Sheppardcareerrec"
+   "flip": true,
+   "sig": "drush2017Malik Davis,Ralph Webb"
+  },
+  {
+   "label": "SEC East Originals",
+   "verified": true,
+   "sig": "kSEC East Originals1",
+   "type": "moment",
+   "prompt": "Florida's biggest win over Vanderbilt came in 2001. Was the margin more or less than",
+   "line": "50.5 points",
+   "answer": "over",
+   "reveal": "Over. Florida won 71–13, a 58-point margin."
   }
  ]
 }

@@ -2,10 +2,11 @@
 import type { CuratedItem, Dataset, FrozenSet, Game, Question, QType, SchoolKey } from "./types";
 import { pick, seededRng, shuffle, type Rng } from "./rng";
 import { PROGRAM_STATS, SCHOOL, programValue } from "./data";
+import { genGameMoment, genGameRank, genSeriesCount, genVsH2H, pairKey } from "./rivalry-gen";
 import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 6; // v6: paired props, higher pitted caps (v5: both-schools rule)
+export const ENGINE_VERSION = 7; // v7: rivalry questions from games between the two schools (v6: paired props)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean }
@@ -72,8 +73,15 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
   type Gen = () => Question | Question[] | null;
   const gens: Gen[] = teams.length > 1
     ? [() => genRank(c), () => genH2H(c, teams), () => genH2H(c, teams), () => genDuel(c, teams), () => genMixedRank(c, teams), () => genMixedRank(c, teams),
-       () => genTrapRank(c), () => genPropPair(c, teams), () => genPropPair(c, teams)]
+       () => genTrapRank(c), () => genPropPair(c, teams)]
     : [() => genRank(c), () => genPOU(c), () => genPOU(c), () => genH2H(c, teams), () => genTrapRank(c), () => genTrapPOU(c)];
+  // Rivalry questions: games the two schools played against each other (weighted up: the heart of pitted mode)
+  const rv = teams.length > 1 ? data.rivalry?.pairs[pairKey(teams[0], teams[1])] : undefined;
+  if (rv) {
+    const [a, b] = teams, from = data.rivalry!.boxFrom;
+    const gm = () => genGameMoment(rv, rng), vs = () => genVsH2H(rv, a, b, rng, from), gr = () => genGameRank(rv, a, b, rng);
+    gens.push(gm, gm, gm, gm, vs, vs, vs, gr, gr, () => genSeriesCount(rv, a, b, rng));
+  }
   const out: Question[] = [], sigs = new Set<string>();
   if (rng() < 0.7) { const u = genUpset(c); if (u) { sigs.add(u.sig); out.push(u) } }
   let trapped = rng() < 0.25;
@@ -81,6 +89,7 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
     const r = pick(rng, gens)();
     const qs = !r ? [] : Array.isArray(r) ? r : [r];
     if (!qs.length || qs.some(q => sigs.has(q.sig)) || (qs[0].trap && trapped)) continue;
+    if (qs[0].pair && out.some(q => q.pair)) continue; // at most one paired prop per set, so rivalry games get the higher/lower slots
     if (qs[0].trap) trapped = true;
     for (const q of qs) { sigs.add(q.sig); out.push(q) }
   }
@@ -110,7 +119,7 @@ export function involvesBoth(q: Question, a: SchoolKey, b: SchoolKey): boolean {
   const both = (schools: (SchoolKey | null)[]) => schools.includes(a) && schools.includes(b);
   switch (q.type) {
     case "prog": case "count": case "duel": case "cross": return true;
-    case "moment": return !q.check || !!q.pair; // curated moments/series facts, or a paired prop (one per school)
+    case "moment": return !q.check || !!q.pair || !!q.pitted; // curated moments/series facts, paired props, rivalry games/series
     case "h2h": return both([itemSchool(q.A, a, b), itemSchool(q.B, a, b)]);
     case "rank": return both(q.items.map(x => itemSchool(x, a, b)));
   }

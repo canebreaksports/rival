@@ -6,160 +6,34 @@
   "away": "TAMU",
   "home": "OU"
  },
- "generatedAt": "2026-11-17T16:40:42.723Z",
- "engine": 6,
+ "generatedAt": "2026-11-17T16:48:48.622Z",
+ "engine": 7,
  "questions": [
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receiving yards (at the school shown)?",
-   "A": {
-    "label": "Jalen Wydermyer (TAMU TE)",
-    "value": 1468,
-    "school": "TAMU"
-   },
-   "B": {
-    "label": "Joe Mixon (OU RB)",
-    "value": 894,
-    "school": "OU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Jalen Wydermyer 1,468 vs. Joe Mixon 894.",
-   "sig": "urecJoe MixonJalen Wydermyer"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Trey Sermon (OU RB) · 2017 rushing TDs",
-     "value": 5,
-     "school": "OU"
-    },
-    {
-     "label": "Trey Williams (TAMU RB) · 2013 rushing TDs",
-     "value": 6,
-     "school": "TAMU"
-    },
-    {
-     "label": "Jalen Wydermyer (TAMU TE) · career receiving TDs",
-     "value": 16,
-     "school": "TAMU"
-    },
-    {
-     "label": "CeeDee Lamb (OU WR) · 2019 receiving TDs",
-     "value": 14,
-     "school": "OU"
-    }
-   ],
-   "sig": "mxTDCeeDee Lamb2019 receiving TDs,Jalen Wydermyercareer receiving TDs,Trey Sermon2017 rushing TDs,Trey Williams2013 rushing TDs"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more career receiving yards?",
-   "A": {
-    "label": "Jalen Saunders (WR) · career, OU",
-    "value": 1558,
-    "school": "OU"
-   },
-   "B": {
-    "label": "Christian Kirk (WR) · career, TAMU",
-    "value": 2856,
-    "school": "TAMU"
-   },
-   "unit": "receiving yards",
-   "sig": "hChristian Kirkcareer,Jalen Saunderscareerrec"
-  },
-  {
-   "label": "Old Big 12 Foes",
-   "verified": true,
-   "sig": "kOld Big 12 Foes0",
    "type": "moment",
-   "prompt": "Oklahoma's biggest win over Texas A&M came in 2003. Was the margin more or less than",
-   "line": "70 points",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did Oklahoma beat Texas A&M more or fewer than",
+   "line": "8.5 times",
    "answer": "over",
-   "reveal": "Over. Oklahoma won 77–0."
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas A&M vs Oklahoma",
-   "a": "TAMU",
-   "b": "OU",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    195,
-    271
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "Rank these seasons by rushing yards, highest first.",
-   "items": [
-    {
-     "label": "Trey Williams (RB) · 2012 TAMU",
-     "value": 376,
-     "school": "TAMU"
-    },
-    {
-     "label": "Devon Achane (RB) · 2021 TAMU",
-     "value": 910,
-     "school": "TAMU"
-    },
-    {
-     "label": "Adrian Peterson (RB) · 2006 OU",
-     "value": 1012,
-     "school": "OU"
-    },
-    {
-     "label": "Joe Mixon (RB) · 2016 OU",
-     "value": 1274,
-     "school": "OU"
-    }
-   ],
-   "unit": "yds",
-   "note": "🪤 Trap: Trey Williams's best year was 2014 (560), not 2012; Devon Achane's best year was 2022 (1,102), not 2021; Adrian Peterson's best year was 2004 (1,925), not 2006.",
-   "sig": "trrushAdrian Peterson2006,Devon Achane2021,Joe Mixon2016,Trey Williams2012"
+   "reveal": "More. Oklahoma went 10–3 against Texas A&M from 2000 to 2025 (13 meetings, on-field results).",
+   "check": {
+    "value": 10,
+    "line": 8.5
+   },
+   "sig": "scOUTAMU"
   },
   {
    "type": "count",
    "label": "School Count",
    "a": "TAMU",
    "b": "OU",
-   "threshold": 3250,
+   "threshold": 4000,
    "A": [
     {
      "name": "Darren Lewis",
      "yards": 5012
-    },
-    {
-     "name": "Curtis Dickey",
-     "yards": 3703
-    },
-    {
-     "name": "Trayveon Williams",
-     "yards": 3379
-    },
-    {
-     "name": "Cyrus Gray",
-     "yards": 3298
-    },
-    {
-     "name": "Greg Hill",
-     "yards": 3262
     }
    ],
    "B": [
@@ -182,26 +56,126 @@
     {
      "name": "Steve Owens",
      "yards": 4041
-    },
-    {
-     "name": "Quentin Griffin",
-     "yards": 3938
-    },
-    {
-     "name": "DeMarco Murray",
-     "yards": 3685
-    },
-    {
-     "name": "De'Mond Parker",
-     "yards": 3403
-    },
-    {
-     "name": "Kennedy Brooks",
-     "yards": 3320
     }
    ],
    "verified": true,
-   "sig": "cTAMUOU3250"
+   "sig": "cTAMUOU4000"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Jalen Wydermyer (TAMU TE)",
+    "value": 1468,
+    "school": "TAMU"
+   },
+   "B": {
+    "label": "Joe Mixon (OU RB)",
+    "value": 894,
+    "school": "OU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jalen Wydermyer 1,468 vs. Joe Mixon 894.",
+   "sig": "urecJoe MixonJalen Wydermyer"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2019,
+   "stat": "Rushing season",
+   "aSchool": "TAMU",
+   "other": "OU",
+   "aName": "Kellen Mond (QB)",
+   "bName": "Trey Sermon (RB)",
+   "A": {
+    "big": "501",
+    "sm": "rush yds · 8 TD"
+   },
+   "B": {
+    "big": "385",
+    "sm": "rush yds · 4 TD"
+   },
+   "flip": true,
+   "sig": "drush2019Kellen Mond,Trey Sermon"
+  },
+  {
+   "label": "Old Big 12 Foes",
+   "verified": true,
+   "sig": "kOld Big 12 Foes0",
+   "type": "moment",
+   "prompt": "Oklahoma's biggest win over Texas A&M came in 2003. Was the margin more or less than",
+   "line": "70 points",
+   "answer": "over",
+   "reveal": "Over. Oklahoma won 77–0."
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more career receiving yards?",
+   "A": {
+    "label": "Jalen Saunders (WR) · career, OU",
+    "value": 1558,
+    "school": "OU"
+   },
+   "B": {
+    "label": "Christian Kirk (WR) · career, TAMU",
+    "value": 2856,
+    "school": "TAMU"
+   },
+   "unit": "receiving yards",
+   "sig": "hChristian Kirkcareer,Jalen Saunderscareerrec"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2015, did Christian Kirk (Texas A&M) have more or less than",
+   "line": "8.5 receiving TDs",
+   "answer": "under",
+   "reveal": "Less. Christian Kirk had 7 receiving TDs in 2015.",
+   "check": {
+    "value": 7,
+    "line": 8.5
+   },
+   "sig": "ppChristian Kirk2015|Joe Mixon2016recTD0",
+   "pair": "ppChristian Kirk2015|Joe Mixon2016recTD",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2016, did Joe Mixon (Oklahoma) have more or less than",
+   "line": "6.5 receiving TDs",
+   "answer": "under",
+   "reveal": "Less. Joe Mixon had 5 receiving TDs in 2016.",
+   "check": {
+    "value": 5,
+    "line": 6.5
+   },
+   "sig": "ppChristian Kirk2015|Joe Mixon2016recTD1",
+   "pair": "ppChristian Kirk2015|Joe Mixon2016recTD",
+   "pairPart": 2
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs Oklahoma",
+   "a": "TAMU",
+   "b": "OU",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    195,
+    271
+   ],
+   "verified": true,
+   "sig": "gtotalW"
   },
   {
    "type": "prog",
@@ -215,38 +189,6 @@
    ],
    "verified": true,
    "sig": "glosing"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Kellen Mond finish his Texas A&M career with more or less than",
-   "line": "21.5 rushing TDs",
-   "answer": "over",
-   "reveal": "More. Kellen Mond had 22 rushing TDs in his career.",
-   "check": {
-    "value": 22,
-    "line": 21.5
-   },
-   "sig": "ppKellen Mondcareer|Joe MixoncareerrushTD0",
-   "pair": "ppKellen Mondcareer|Joe MixoncareerrushTD",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Joe Mixon finish his Oklahoma career with more or less than",
-   "line": "18.5 rushing TDs",
-   "answer": "under",
-   "reveal": "Less. Joe Mixon had 17 rushing TDs in his career.",
-   "check": {
-    "value": 17,
-    "line": 18.5
-   },
-   "sig": "ppKellen Mondcareer|Joe MixoncareerrushTD1",
-   "pair": "ppKellen Mondcareer|Joe MixoncareerrushTD",
-   "pairPart": 2
   }
  ]
 }

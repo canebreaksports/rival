@@ -6,8 +6,8 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-17T16:40:42.738Z",
- "engine": 6,
+ "generatedAt": "2026-11-17T16:48:48.636Z",
+ "engine": 7,
  "questions": [
   {
    "type": "h2h",
@@ -31,89 +31,6 @@
    "sig": "urecAdrian PetersonLarry Rountree III"
   },
   {
-   "type": "prog",
-   "label": "Program Pit · Oklahoma vs Missouri",
-   "a": "OU",
-   "b": "MIZ",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    271,
-    192
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving TDs in a single season?",
-   "A": {
-    "label": "J'Mon Moore (WR) · 2015 MIZ",
-    "value": 3,
-    "school": "MIZ"
-   },
-   "B": {
-    "label": "CeeDee Lamb (WR) · 2018 OU",
-    "value": 11,
-    "school": "OU"
-   },
-   "unit": "receiving TDs",
-   "sig": "hCeeDee Lamb2018,J'Mon Moore2015recTD"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Oklahoma vs Missouri",
-   "a": "OU",
-   "b": "MIZ",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    20,
-    7
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more career rushing yards?",
-   "A": {
-    "label": "Ish Witter (RB) · career, MIZ",
-    "value": 2418,
-    "school": "MIZ"
-   },
-   "B": {
-    "label": "Kyler Murray (QB) · career, OU",
-    "value": 1143,
-    "school": "OU"
-   },
-   "unit": "rushing yards",
-   "sig": "hIsh Wittercareer,Kyler Murraycareerrush"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more rushing TDs in a single season?",
-   "A": {
-    "label": "Larry Rountree III (RB) · 2019 MIZ",
-    "value": 9,
-    "school": "MIZ"
-   },
-   "B": {
-    "label": "Eric Gray (RB) · 2022 OU",
-    "value": 11,
-    "school": "OU"
-   },
-   "unit": "rushing TDs",
-   "sig": "hEric Gray2022,Larry Rountree III2019rushTD"
-  },
-  {
    "type": "rank",
    "label": "Fresh Mix",
    "trap": true,
@@ -121,108 +38,164 @@
    "prompt": "Rank these seasons by receiving yards, highest first.",
    "items": [
     {
-     "label": "Joe Mixon (RB) · 2015 OU",
-     "value": 356,
-     "school": "OU"
-    },
-    {
      "label": "Sterling Shepard (WR) · 2013 OU",
      "value": 603,
      "school": "OU"
     },
     {
-     "label": "Mark Andrews (TE) · 2016 OU",
-     "value": 489,
+     "label": "CeeDee Lamb (WR) · 2017 OU",
+     "value": 807,
      "school": "OU"
     },
     {
-     "label": "J'Mon Moore (WR) · 2016 MIZ",
-     "value": 1012,
+     "label": "Jalen Saunders (WR) · 2013 OU",
+     "value": 729,
+     "school": "OU"
+    },
+    {
+     "label": "J'Mon Moore (WR) · 2017 MIZ",
+     "value": 1082,
      "school": "MIZ"
     }
    ],
    "unit": "yds",
-   "note": "🪤 Trap: Joe Mixon's best year was 2016 (538), not 2015; Sterling Shepard's best year was 2015 (1,288), not 2013; Mark Andrews's best year was 2017 (958), not 2016.",
-   "sig": "trrecJ'Mon Moore2016,Joe Mixon2015,Mark Andrews2016,Sterling Shepard2013"
+   "note": "🪤 Trap: Sterling Shepard's best year was 2015 (1,288), not 2013; CeeDee Lamb's best year was 2019 (1,327), not 2017; Jalen Saunders's best year was 2012 (829), not 2013.",
+   "sig": "trrecCeeDee Lamb2017,J'Mon Moore2017,Jalen Saunders2013,Sterling Shepard2013"
   },
   {
-   "type": "count",
-   "label": "School Count",
+   "type": "prog",
+   "label": "Program Pit · Oklahoma vs Missouri",
    "a": "OU",
    "b": "MIZ",
-   "threshold": 3500,
-   "A": [
-    {
-     "name": "Samaje Perine",
-     "yards": 4122
-    },
-    {
-     "name": "Billy Sims",
-     "yards": 4118
-    },
-    {
-     "name": "Joe Washington",
-     "yards": 4071
-    },
-    {
-     "name": "Adrian Peterson",
-     "yards": 4045
-    },
-    {
-     "name": "Steve Owens",
-     "yards": 4041
-    },
-    {
-     "name": "Quentin Griffin",
-     "yards": 3938
-    },
-    {
-     "name": "DeMarco Murray",
-     "yards": 3685
-    }
-   ],
-   "B": [
-    {
-     "name": "Brad Smith",
-     "yards": 4289
-    },
-    {
-     "name": "Larry Rountree III",
-     "yards": 3720
-    }
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    13,
+    12
    ],
    "verified": true,
-   "sig": "cOUMIZ3500"
+   "sig": "gpeakW"
   },
   {
-   "type": "rank",
+   "type": "duel",
    "label": "Fresh Mix",
    "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Trey Sermon (OU RB) · career total TDs (rushing + receiving)",
-     "value": 25,
-     "school": "OU"
-    },
-    {
-     "label": "Brady Cook (MIZ QB) · 2022 rushing TDs",
-     "value": 6,
-     "school": "MIZ"
-    },
-    {
-     "label": "Albert Okwuegbunam (MIZ TE) · 2017 receiving TDs",
-     "value": 11,
-     "school": "MIZ"
-    },
-    {
-     "label": "Kyler Murray (OU QB) · 2018 rushing TDs",
-     "value": 12,
-     "school": "OU"
-    }
+   "year": 2018,
+   "stat": "Rushing season",
+   "aSchool": "OU",
+   "other": "MIZ",
+   "aName": "Trey Sermon (RB)",
+   "bName": "Damarea Crockett (RB)",
+   "A": {
+    "big": "947",
+    "sm": "rush yds · 13 TD"
+   },
+   "B": {
+    "big": "703",
+    "sm": "rush yds · 7 TD"
+   },
+   "flip": false,
+   "sig": "drush2018Damarea Crockett,Trey Sermon"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 22, 2025",
+    "winner": "OU",
+    "loser": "MIZ",
+    "ws": 17,
+    "ls": 6,
+    "venue": "Memorial Stadium (Norman, OK)"
+   },
+   "prompt": "In this game, did John Mateer (Oklahoma) run for more or less than",
+   "line": "40 rushing yards",
+   "answer": "over",
+   "reveal": "More. John Mateer had 60 rushing yards on 18 carries and 0 TD in this game.",
+   "check": {
+    "value": 60,
+    "line": 40
+   },
+   "sig": "gm2025-11-22John Mateerrush"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2019,
+   "stat": "Rushing season",
+   "aSchool": "MIZ",
+   "other": "OU",
+   "aName": "Larry Rountree III (RB)",
+   "bName": "Kennedy Brooks (RB)",
+   "A": {
+    "big": "829",
+    "sm": "rush yds · 9 TD"
+   },
+   "B": {
+    "big": "1,011",
+    "sm": "rush yds · 6 TD"
+   },
+   "flip": true,
+   "sig": "drush2019Kennedy Brooks,Larry Rountree III"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Oklahoma vs Missouri",
+   "a": "OU",
+   "b": "MIZ",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    2,
+    9
    ],
-   "sig": "mxTDAlbert Okwuegbunam2017 receiving TDs,Brady Cook2022 rushing TDs,Kyler Murray2018 rushing TDs,Trey Sermoncareer total TDs (rushing + receiving)"
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 9, 2024",
+    "winner": "MIZ",
+    "loser": "OU",
+    "ws": 30,
+    "ls": 23,
+    "venue": "Memorial Stadium"
+   },
+   "prompt": "In this game, did Theo Wease (Missouri) have more or less than",
+   "line": "50 receiving yards",
+   "answer": "over",
+   "reveal": "More. Theo Wease had 70 receiving yards on 4 catches and 2 TD in this game.",
+   "check": {
+    "value": 70,
+    "line": 50
+   },
+   "sig": "gm2024-11-09Theo Weaserec"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2016,
+   "stat": "Rushing season",
+   "aSchool": "MIZ",
+   "other": "OU",
+   "aName": "Ish Witter (RB)",
+   "bName": "Samaje Perine (RB)",
+   "A": {
+    "big": "750",
+    "sm": "rush yds · 6 TD"
+   },
+   "B": {
+    "big": "1,060",
+    "sm": "rush yds · 12 TD"
+   },
+   "flip": true,
+   "sig": "drush2016Ish Witter,Samaje Perine"
   }
  ]
 }

@@ -6,18 +6,156 @@
   "away": "UK",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-17T16:40:42.721Z",
- "engine": 6,
+ "generatedAt": "2026-11-17T16:48:48.620Z",
+ "engine": 7,
  "questions": [
   {
-   "label": "SEC East Newcomers",
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Missouri",
+   "a": "UK",
+   "b": "MIZ",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    14,
+    9
+   ],
    "verified": true,
-   "sig": "kSEC East Newcomers0",
+   "sig": "glosing"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Kentucky–Missouri games since 2012, who had more rushing yards against the other school?",
+   "A": {
+    "label": "Asim Rose (UK) vs. Missouri",
+    "value": 105,
+    "school": "UK"
+   },
+   "B": {
+    "label": "Cody Schrader (MIZ) vs. Kentucky",
+    "value": 136,
+    "school": "MIZ"
+   },
+   "unit": "rushing yds",
+   "note": "Asim Rose: 105 in 3 games. Cody Schrader: 136 in 2 games.",
+   "sig": "vsrushAsim Rose,Cody Schrader"
+  },
+  {
    "type": "moment",
-   "prompt": "Kentucky's longest win streak over Missouri is more or fewer than",
-   "line": "4.5 games",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 9, 2013",
+    "winner": "MIZ",
+    "loser": "UK",
+    "ws": 48,
+    "ls": 17,
+    "venue": "Kroger Field"
+   },
+   "prompt": "In this game, did Maty Mauk (Missouri) throw for more or less than",
+   "line": "250 passing yards",
+   "answer": "under",
+   "reveal": "Less. Maty Mauk had 203 passing yards and 5 TD in this game.",
+   "check": {
+    "value": 203,
+    "line": 250
+   },
+   "sig": "gm2013-11-09Maty Maukpass"
+  },
+  {
+   "type": "moment",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did Kentucky beat Missouri more or fewer than",
+   "line": "6.5 times",
    "answer": "over",
-   "reveal": "Over. Kentucky won 5 straight from 2015 to 2019."
+   "reveal": "More. Kentucky went 7–5 against Missouri from 2000 to 2025 (12 meetings, on-field results).",
+   "check": {
+    "value": 7,
+    "line": 6.5
+   },
+   "sig": "scUKMIZ"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2018, did Asim Rose (Kentucky) have more or less than",
+   "line": "450 yards from scrimmage",
+   "answer": "over",
+   "reveal": "More. Asim Rose had 524 yards from scrimmage in 2018.",
+   "check": {
+    "value": 524,
+    "line": 450
+   },
+   "sig": "ppAsim Rose2018|Ish Witter2017scrim0",
+   "pair": "ppAsim Rose2018|Ish Witter2017scrim",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2017, did Ish Witter (Missouri) have more or less than",
+   "line": "950 yards from scrimmage",
+   "answer": "over",
+   "reveal": "More. Ish Witter had 1,136 yards from scrimmage in 2017.",
+   "check": {
+    "value": 1136,
+    "line": 950
+   },
+   "sig": "ppAsim Rose2018|Ish Witter2017scrim1",
+   "pair": "ppAsim Rose2018|Ish Witter2017scrim",
+   "pairPart": 2
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "UK",
+   "b": "MIZ",
+   "threshold": 3000,
+   "A": [
+    {
+     "name": "Benny Snell",
+     "yards": 3873
+    },
+    {
+     "name": "Sonny Collins",
+     "yards": 3835
+    },
+    {
+     "name": "Chris Rodriguez Jr.",
+     "yards": 3644
+    },
+    {
+     "name": "Moe Williams",
+     "yards": 3333
+    }
+   ],
+   "B": [
+    {
+     "name": "Brad Smith",
+     "yards": 4289
+    },
+    {
+     "name": "Larry Rountree III",
+     "yards": 3720
+    },
+    {
+     "name": "Zack Abron",
+     "yards": 3198
+    },
+    {
+     "name": "Brock Olivo",
+     "yards": 3026
+    }
+   ],
+   "verified": true,
+   "sig": "cUKMIZ3000"
   },
   {
    "type": "duel",
@@ -27,178 +165,31 @@
    "stat": "Receiving season",
    "aSchool": "MIZ",
    "other": "UK",
-   "aName": "J'Mon Moore (WR)",
+   "aName": "Johnathon Johnson (WR)",
    "bName": "Garrett Johnson (WR)",
    "A": {
-    "big": "1,012",
-    "sm": "rec yds · 8 TD"
+    "big": "435",
+    "sm": "rec yds · 2 TD"
    },
    "B": {
     "big": "585",
     "sm": "rec yds · 5 TD"
    },
    "flip": true,
-   "sig": "drec2016Garrett Johnson,J'Mon Moore"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Garrett Johnson (UK WR) · career receiving TDs",
-     "value": 11,
-     "school": "UK"
-    },
-    {
-     "label": "Tyler Badie (MIZ RB) · 2020 rushing TDs",
-     "value": 4,
-     "school": "MIZ"
-    },
-    {
-     "label": "J'Mon Moore (MIZ WR) · 2017 receiving TDs",
-     "value": 10,
-     "school": "MIZ"
-    },
-    {
-     "label": "Larry Rountree III (MIZ RB) · career total TDs (rushing + receiving)",
-     "value": 40,
-     "school": "MIZ"
-    }
-   ],
-   "sig": "mxTDGarrett Johnsoncareer receiving TDs,J'Mon Moore2017 receiving TDs,Larry Rountree IIIcareer total TDs (rushing + receiving),Tyler Badie2020 rushing TDs"
+   "sig": "drec2016Garrett Johnson,Johnathon Johnson"
   },
   {
    "type": "prog",
    "label": "Program Pit · Kentucky vs Missouri",
    "a": "UK",
    "b": "MIZ",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
    "values": [
-    2,
-    7
+    6,
+    1
    ],
    "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Kentucky vs Missouri",
-   "a": "UK",
-   "b": "MIZ",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    10,
-    12
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "Rank these seasons by rushing yards, highest first.",
-   "items": [
-    {
-     "label": "Stanley Williams (RB) · 2015 UK",
-     "value": 855,
-     "school": "UK"
-    },
-    {
-     "label": "Larry Rountree III (RB) · 2020 MIZ",
-     "value": 972,
-     "school": "MIZ"
-    },
-    {
-     "label": "Ish Witter (RB) · 2016 MIZ",
-     "value": 750,
-     "school": "MIZ"
-    },
-    {
-     "label": "Demie Sumo (RB) · 2024 UK",
-     "value": 586,
-     "school": "UK"
-    }
-   ],
-   "unit": "yds",
-   "note": "🪤 Trap: Stanley Williams's best year was 2016 (1,170), not 2015; Larry Rountree III's best year was 2018 (1,216), not 2020; Ish Witter's best year was 2017 (1,049), not 2016.",
-   "sig": "trrushDemie Sumo2024,Ish Witter2016,Larry Rountree III2020,Stanley Williams2015"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2017,
-   "stat": "Rushing season",
-   "aSchool": "MIZ",
-   "other": "UK",
-   "aName": "Larry Rountree III (RB)",
-   "bName": "Stephen Johnson (QB)",
-   "A": {
-    "big": "703",
-    "sm": "rush yds · 6 TD"
-   },
-   "B": {
-    "big": "375",
-    "sm": "rush yds · 5 TD"
-   },
-   "flip": false,
-   "sig": "drush2017Larry Rountree III,Stephen Johnson"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Wan'Dale Robinson finish his Kentucky career with more or less than",
-   "line": "1,484 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Wan'Dale Robinson had 1,334 receiving yards in his career.",
-   "check": {
-    "value": 1334,
-    "line": 1484
-   },
-   "sig": "ppWan'Dale Robinsoncareer|Luther Burden IIIcareerrec0",
-   "pair": "ppWan'Dale Robinsoncareer|Luther Burden IIIcareerrec",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Luther Burden III finish his Missouri career with more or less than",
-   "line": "1,950 receiving yards",
-   "answer": "over",
-   "reveal": "More. Luther Burden III had 2,248 receiving yards in his career.",
-   "check": {
-    "value": 2248,
-    "line": 1950
-   },
-   "sig": "ppWan'Dale Robinsoncareer|Luther Burden IIIcareerrec1",
-   "pair": "ppWan'Dale Robinsoncareer|Luther Burden IIIcareerrec",
-   "pairPart": 2
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more receiving yards in a single season?",
-   "A": {
-    "label": "Wan'Dale Robinson (WR) · 2021 UK",
-    "value": 1334,
-    "school": "UK"
-   },
-   "B": {
-    "label": "Albert Okwuegbunam (TE) · 2017 MIZ",
-    "value": 415,
-    "school": "MIZ"
-   },
-   "unit": "receiving yards",
-   "sig": "hAlbert Okwuegbunam2017,Wan'Dale Robinson2021rec"
+   "sig": "gwin3"
   }
  ]
 }

@@ -24,6 +24,7 @@ data/*.json            datasets; every record has `source` and `verified`
   career-rushing.json  top-10 career rushing per school, floor = 10th place, active players flagged
   schedule.json        2026 SEC games
   curated.json         matchups (moments, duels, crossovers, series facts, rank/h2h) + team packs
+  rivalry.json         games between SEC schools 2000–2025, top performers per game (2012+), players' totals vs. each opponent
   sets/<slug>.json     FROZEN weekly sets (committed). Do not hand-edit.
 lib/                   engine (pure TS, shared by scripts, tests and UI)
   rng.ts               FNV-1a + mulberry32; every generator takes an Rng (no Math.random swapping)
@@ -42,6 +43,7 @@ scripts/               build-sets.ts, validate.ts, port-prototype.mjs (one-time 
 - **Player-first sets:** 7 generated player questions per set (props, head-to-head, Rank It, Mixed Rank It, Blind Stat Duel, upset, trap, school count). Program comparisons only fill gaps.
 - **Caps per set:** ≤4 higher/lower, ≤2 program (≤4 if either school has no verified player data), ≤3 h2h, ≤2 rank (incl. mixed), ≤1 count, ≤2 duels, ≤1 crossover, and ≤1 trap and ≤1 upset across generated *and* curated questions.
 - **Pitted mode = both schools in every question** (`involvesBoth()` in `lib/build.ts`): head-to-heads and upsets pair one player from each school, every Rank It includes both, and team packs and single-player props are Team Deep Dive only.
+- **Rivalry questions** (`lib/rivalry-gen.ts`, data `data/rivalry.json` built by `scripts/fetch-cfbd-games.ts` + `scripts/import-rivalry.ts`): game moments from real games between the two schools (scoreboard + a player's line in that game), head-to-heads on players' totals against each other, ranked single-game performances in the series, and series wins since 2000. Results 2000–2025 (on-field), box scores 2012–2025, kept only when the box score's points match the result. Margins: single-game yards ≥ max(15, 12%), totals vs. the opponent ≥ max(25, 10%). Weighted up; at most one paired prop per set so they get the higher/lower slots.
 - **No trivial values:** generated questions skip seasons under 250 yds / 3 TD and careers under 500 yds / 5 TD.
 - **School Count** only uses thresholds ≥ both schools' floor, and never one above an active player's current total (he could cross it mid-week).
 - **Progress** is saved in localStorage under `rival:<date>:<away>@<home>` right after each answer; answering the last question completes the run. Coach runs use a `preview:` prefix so testing doesn't burn the real run.

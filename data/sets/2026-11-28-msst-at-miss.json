@@ -6,59 +6,9 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-17T16:40:42.736Z",
- "engine": 6,
+ "generatedAt": "2026-11-17T16:48:48.634Z",
+ "engine": 7,
  "questions": [
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Jordan Wilkins (MISS RB) · 2017 rushing TDs",
-     "value": 9,
-     "school": "MISS"
-    },
-    {
-     "label": "Jo'quavious Marks (MSST RB) · career total TDs (rushing + receiving)",
-     "value": 27,
-     "school": "MSST"
-    },
-    {
-     "label": "Evan Engram (MISS TE) · 2016 receiving TDs",
-     "value": 8,
-     "school": "MISS"
-    },
-    {
-     "label": "Matt Corral (MISS QB) · career total TDs (rushing + receiving)",
-     "value": 18,
-     "school": "MISS"
-    }
-   ],
-   "sig": "mxTDEvan Engram2016 receiving TDs,Jo'quavious Markscareer total TDs (rushing + receiving),Jordan Wilkins2017 rushing TDs,Matt Corralcareer total TDs (rushing + receiving)"
-  },
-  {
-   "type": "count",
-   "label": "School Count",
-   "a": "MSST",
-   "b": "MISS",
-   "threshold": 3250,
-   "A": [
-    {
-     "name": "Anthony Dixon",
-     "yards": 3994
-    },
-    {
-     "name": "Nick Fitzgerald",
-     "yards": 3607
-    }
-   ],
-   "B": [],
-   "verified": true,
-   "sig": "cMSSTMISS3250"
-  },
   {
    "type": "h2h",
    "label": "Fresh Mix",
@@ -79,25 +29,54 @@
    "sig": "hDillon Johnson2022,Henry Parrish Jr.2024rush"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
+   "type": "rank",
+   "label": "Rivalry Games",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "unit": "yds",
+   "prompt": "Rank these single-game receiving performances in Mississippi State–Ole Miss games, highest first.",
+   "items": [
+    {
+     "label": "Jameon Lewis (MSST) · 2013",
+     "value": 68,
+     "school": "MSST"
+    },
+    {
+     "label": "Evan Engram (MISS) · 2014",
+     "value": 176,
+     "school": "MISS"
+    },
+    {
+     "label": "Damore'ea Stringfellow (MISS) · 2016",
+     "value": 97,
+     "school": "MISS"
+    },
+    {
+     "label": "Cody Core (MISS) · 2014",
+     "value": 50,
+     "school": "MISS"
+    }
+   ],
+   "sig": "grrecCody Core2014,Damore'ea Stringfellow2016,Evan Engram2014,Jameon Lewis2013"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": false,
+   "prompt": "In Mississippi State–Ole Miss games since 2012, who had more rushing yards against the other school?",
    "A": {
-    "label": "Dexter McCluster (MISS RB)",
-    "value": 7,
-    "school": "MISS"
-   },
-   "B": {
-    "label": "Kylin Hill (MSST RB)",
-    "value": 6,
+    "label": "Jo'quavious Marks (MSST) vs. Ole Miss",
+    "value": 170,
     "school": "MSST"
    },
-   "unit": "",
-   "note": "🚨 Upset: Dexter McCluster 7 vs. Kylin Hill 6.",
-   "sig": "urecTDKylin HillDexter McCluster"
+   "B": {
+    "label": "Akeem Judd (MISS) vs. Mississippi State",
+    "value": 131,
+    "school": "MISS"
+   },
+   "unit": "rushing yds",
+   "note": "Jo'quavious Marks: 170 in 4 games. Akeem Judd: 131 in 2 games.",
+   "sig": "vsrushAkeem Judd,Jo'quavious Marks"
   },
   {
    "type": "h2h",
@@ -121,21 +100,66 @@
   {
    "type": "h2h",
    "label": "Fresh Mix",
+   "upset": true,
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more rushing yards in a single season?",
+   "flip": true,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
    "A": {
-    "label": "Jo'quavious Marks (RB) · 2020 MSST",
-    "value": 312,
-    "school": "MSST"
-   },
-   "B": {
-    "label": "Jerrion Ealy (RB) · 2020 MISS",
-    "value": 745,
+    "label": "Dexter McCluster (MISS RB)",
+    "value": 7,
     "school": "MISS"
    },
-   "unit": "rushing yards",
-   "sig": "hJerrion Ealy2020,Jo'quavious Marks2020rush"
+   "B": {
+    "label": "Kylin Hill (MSST RB)",
+    "value": 6,
+    "school": "MSST"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Dexter McCluster 7 vs. Kylin Hill 6.",
+   "sig": "urecTDKylin HillDexter McCluster"
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "MSST",
+   "b": "MISS",
+   "threshold": 3500,
+   "A": [
+    {
+     "name": "Anthony Dixon",
+     "yards": 3994
+    },
+    {
+     "name": "Nick Fitzgerald",
+     "yards": 3607
+    }
+   ],
+   "B": [],
+   "verified": true,
+   "sig": "cMSSTMISS3500"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2015",
+    "winner": "MISS",
+    "loser": "MSST",
+    "ws": 38,
+    "ls": 27,
+    "venue": "Davis Wade Stadium"
+   },
+   "prompt": "In this game, did Dak Prescott (Mississippi State) run for more or less than",
+   "line": "80 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Dak Prescott had 63 rushing yards on 21 carries and 1 TD in this game.",
+   "check": {
+    "value": 63,
+    "line": 80
+   },
+   "sig": "gm2015-11-28Dak Prescottrush"
   }
  ]
 }

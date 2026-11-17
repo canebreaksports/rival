@@ -1,7 +1,7 @@
 // Question generators (spec §4). All randomness comes from the Rng argument.
 import type { Dataset, Item, Player, PlayerSeason, Pos, Question, SchoolKey, StatKey } from "./types";
 import { pick, shuffle, type Rng } from "./rng";
-import { SCHOOL } from "./data";
+import { SCHOOL } from "./schools";
 
 type GenStat = "rush" | "scrim" | "rec" | "rushTD" | "recTD";
 export const ST: Record<GenStat, [string, "yds" | "TD"]> = {
@@ -106,7 +106,7 @@ function propFor(c: Ctx, p: PlayerSeason, k: GenStat): Question | null {
     line = Math.max(step, line);
     if (line === v) line = v + step;
     const gap = minGap("yds", v, v, isApprox(p));
-    if (Math.abs(line - v) < gap) line = v + (line >= v ? 1 : -1) * Math.ceil(gap / step) * step;
+    if (Math.abs(line - v) < gap) { const d = line >= v ? 1 : -1; line = d > 0 ? Math.ceil((v + gap) / step) * step : Math.floor((v - gap) / step) * step }
     if (line <= 0) return null;
   }
   const answer = v > line ? "over" : "under";

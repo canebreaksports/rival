@@ -2,7 +2,7 @@
 // The play screen (spec §3 Play + Final). Works for frozen weekly sets (with saved progress) and Coach free play.
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import type { Progress, Question, SchoolKey } from "@/lib/types";
-import { SCHOOL } from "@/lib/data";
+import { SCHOOL } from "@/lib/schools";
 import { fmt } from "@/lib/generators";
 import { applyResult, correctAnswer, grade, POINTS, scoreRank } from "@/lib/scoring";
 import { matchNames } from "@/lib/names";

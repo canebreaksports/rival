@@ -6,113 +6,28 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-17T16:40:42.734Z",
- "engine": 6,
+ "generatedAt": "2026-11-17T16:48:48.632Z",
+ "engine": 7,
  "questions": [
   {
-   "type": "rank",
-   "label": "Fresh Mix",
+   "type": "h2h",
+   "label": "Against Each Other",
    "verified": true,
-   "prompt": "Rank these seasons by rushing yards, highest first.",
-   "items": [
-    {
-     "label": "Alex Collins (RB) · 2013 ARK",
-     "value": 1026,
-     "school": "ARK"
-    },
-    {
-     "label": "Kevin Faulk (RB) · 1998 LSU",
-     "value": 1279,
-     "school": "LSU"
-    },
-    {
-     "label": "Darren McFadden (RB) · 2007 ARK",
-     "value": 1830,
-     "school": "ARK"
-    },
-    {
-     "label": "Felix Jones (RB) · 2007 ARK",
-     "value": 1160,
-     "school": "ARK"
-    }
-   ],
-   "unit": "yds",
-   "sig": "rsea|rushAlex Collins2013,Darren McFadden2007,Felix Jones2007,Kevin Faulk1998"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Justin Jefferson finish his LSU career with more or less than",
-   "line": "22.5 receiving TDs",
-   "answer": "over",
-   "reveal": "More. Justin Jefferson had 24 receiving TDs in his career.",
-   "check": {
-    "value": 24,
-    "line": 22.5
+   "flip": false,
+   "prompt": "In LSU–Arkansas games since 2012, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Travin Dural (LSU) vs. Arkansas",
+    "value": 156,
+    "school": "LSU"
    },
-   "sig": "ppJustin Jeffersoncareer|Andrew ArmstrongcareerrecTD0",
-   "pair": "ppJustin Jeffersoncareer|Andrew ArmstrongcareerrecTD",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Andrew Armstrong finish his Arkansas career with more or less than",
-   "line": "5.5 receiving TDs",
-   "answer": "over",
-   "reveal": "More. Andrew Armstrong had 6 receiving TDs in his career.",
-   "check": {
-    "value": 6,
-    "line": 5.5
+   "B": {
+    "label": "Hunter Henry (ARK) vs. LSU",
+    "value": 116,
+    "school": "ARK"
    },
-   "sig": "ppJustin Jeffersoncareer|Andrew ArmstrongcareerrecTD1",
-   "pair": "ppJustin Jeffersoncareer|Andrew ArmstrongcareerrecTD",
-   "pairPart": 2
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Arkansas",
-   "a": "LSU",
-   "b": "ARK",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    13,
-    3
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Clyde Edwards-Helaire (LSU RB) · career receiving yards",
-     "value": 595,
-     "school": "LSU"
-    },
-    {
-     "label": "Darren McFadden (ARK RB) · 2007 yards from scrimmage",
-     "value": 1994,
-     "school": "ARK"
-    },
-    {
-     "label": "Leonard Fournette (LSU RB) · career yards from scrimmage",
-     "value": 4356,
-     "school": "LSU"
-    },
-    {
-     "label": "Kevin Faulk (LSU RB) · 1998 rushing yards",
-     "value": 1279,
-     "school": "LSU"
-    }
-   ],
-   "sig": "mxydsClyde Edwards-Helairecareer receiving yards,Darren McFadden2007 yards from scrimmage,Kevin Faulk1998 rushing yards,Leonard Fournettecareer yards from scrimmage"
+   "unit": "receiving yds",
+   "note": "Travin Dural: 156 in 4 games. Hunter Henry: 116 in 3 games.",
+   "sig": "vsrecHunter Henry,Travin Dural"
   },
   {
    "type": "h2h",
@@ -136,25 +51,6 @@
    "sig": "urecTDLeonard FournetteCheyenne O'Grady"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving yards in a single season?",
-   "A": {
-    "label": "Andrew Armstrong (WR) · 2023 ARK",
-    "value": 764,
-    "school": "ARK"
-   },
-   "B": {
-    "label": "Justin Jefferson (WR) · 2018 LSU",
-    "value": 875,
-    "school": "LSU"
-   },
-   "unit": "receiving yards",
-   "sig": "hAndrew Armstrong2023,Justin Jefferson2018rec"
-  },
-  {
    "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
@@ -162,40 +58,163 @@
    "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
-     "label": "Taylen Green (ARK QB) · 2025 rushing TDs",
+     "label": "Leonard Fournette (LSU RB) · 2016 rushing TDs",
      "value": 8,
-     "school": "ARK"
-    },
-    {
-     "label": "Kevin Faulk (LSU RB) · 1995 rushing TDs",
-     "value": 6,
      "school": "LSU"
     },
     {
-     "label": "Clyde Edwards-Helaire (LSU RB) · career rushing TDs",
-     "value": 23,
-     "school": "LSU"
+     "label": "Jonathan Nance (ARK WR) · 2017 receiving TDs",
+     "value": 5,
+     "school": "ARK"
     },
     {
-     "label": "Cheyenne O'Grady (ARK TE) · career receiving TDs",
-     "value": 12,
+     "label": "Treylon Burks (ARK WR) · career total TDs (rushing + receiving)",
+     "value": 19,
      "school": "ARK"
+    },
+    {
+     "label": "Derrius Guice (LSU RB) · 2017 rushing TDs",
+     "value": 11,
+     "school": "LSU"
     }
    ],
-   "sig": "mxTDCheyenne O'Gradycareer receiving TDs,Clyde Edwards-Helairecareer rushing TDs,Kevin Faulk1995 rushing TDs,Taylen Green2025 rushing TDs"
+   "sig": "mxTDDerrius Guice2017 rushing TDs,Jonathan Nance2017 receiving TDs,Leonard Fournette2016 rushing TDs,Treylon Burkscareer total TDs (rushing + receiving)"
+  },
+  {
+   "type": "moment",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did LSU beat Arkansas more or fewer than",
+   "line": "19.5 times",
+   "answer": "under",
+   "reveal": "Fewer. LSU went 18–8 against Arkansas from 2000 to 2025 (26 meetings, on-field results).",
+   "check": {
+    "value": 18,
+    "line": 19.5
+   },
+   "sig": "scLSUARK"
+  },
+  {
+   "type": "rank",
+   "label": "Rivalry Games",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these single-game rushing performances in LSU–Arkansas games, highest first.",
+   "items": [
+    {
+     "label": "Tyrion Davis-Price (LSU) · 2020",
+     "value": 104,
+     "school": "LSU"
+    },
+    {
+     "label": "Jonathan Williams (ARK) · 2014",
+     "value": 55,
+     "school": "ARK"
+    },
+    {
+     "label": "Josh Williams (LSU) · 2022",
+     "value": 122,
+     "school": "LSU"
+    },
+    {
+     "label": "Jeremy Hill (LSU) · 2013",
+     "value": 145,
+     "school": "LSU"
+    }
+   ],
+   "sig": "grrushJeremy Hill2013,Jonathan Williams2014,Josh Williams2022,Tyrion Davis-Price2020"
   },
   {
    "type": "prog",
    "label": "Program Pit · LSU vs Arkansas",
    "a": "LSU",
    "b": "ARK",
-   "prompt": "Who had more losing seasons from 2000–2025?",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
    "values": [
-    1,
+    13,
+    3
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": false,
+   "prompt": "In LSU–Arkansas games since 2012, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Jarvis Landry (LSU) vs. Arkansas",
+    "value": 188,
+    "school": "LSU"
+   },
+   "B": {
+    "label": "Luke Hasz (ARK) vs. LSU",
+    "value": 138,
+    "school": "ARK"
+   },
+   "unit": "receiving yds",
+   "note": "Jarvis Landry: 188 in 2 games. Luke Hasz: 138 in 2 games.",
+   "sig": "vsrecJarvis Landry,Luke Hasz"
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "LSU",
+   "b": "ARK",
+   "threshold": 3250,
+   "A": [
+    {
+     "name": "Kevin Faulk",
+     "yards": 4557
+    },
+    {
+     "name": "Dalton Hilliard",
+     "yards": 4050
+    },
+    {
+     "name": "Charles Alexander",
+     "yards": 4035
+    },
+    {
+     "name": "Leonard Fournette",
+     "yards": 3830
+    }
+   ],
+   "B": [
+    {
+     "name": "Darren McFadden",
+     "yards": 4590
+    },
+    {
+     "name": "Alex Collins",
+     "yards": 3703
+    },
+    {
+     "name": "Ben Cowins",
+     "yards": 3570
+    },
+    {
+     "name": "Dickey Morton",
+     "yards": 3317
+    }
+   ],
+   "verified": true,
+   "sig": "cLSUARK3250"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Arkansas",
+   "a": "LSU",
+   "b": "ARK",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    15,
     11
    ],
    "verified": true,
-   "sig": "glosing"
+   "sig": "gpeakW"
   }
  ]
 }

@@ -6,46 +6,31 @@
   "away": "AUB",
   "home": "ALA"
  },
- "generatedAt": "2026-11-17T16:40:42.732Z",
- "engine": 6,
+ "generatedAt": "2026-11-17T16:48:48.631Z",
+ "engine": 7,
  "questions": [
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
+   "type": "moment",
+   "label": "Rivalry Game",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more rushing yards in a single season?",
-   "A": {
-    "label": "Trent Richardson (RB) · 2011 ALA",
-    "value": 1679,
-    "school": "ALA"
+   "pitted": true,
+   "game": {
+    "date": "Nov 25, 2023",
+    "winner": "ALA",
+    "loser": "AUB",
+    "ws": 27,
+    "ls": 24,
+    "venue": "Jordan-Hare Stadium"
    },
-   "B": {
-    "label": "Ronnie Brown (RB) · 2002 AUB",
-    "value": 1008,
-    "school": "AUB"
+   "prompt": "In this game, did Jarquez Hunter (Auburn) run for more or less than",
+   "line": "60 rushing yards",
+   "answer": "over",
+   "reveal": "More. Jarquez Hunter had 93 rushing yards on 14 carries and 0 TD in this game.",
+   "check": {
+    "value": 93,
+    "line": 60
    },
-   "unit": "rushing yards",
-   "sig": "hRonnie Brown2002,Trent Richardson2011rush"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more yards from scrimmage in a single season?",
-   "A": {
-    "label": "Ronnie Brown (RB) · 2002 AUB",
-    "value": 1174,
-    "school": "AUB"
-   },
-   "B": {
-    "label": "Derrick Henry (RB) · 2015 ALA",
-    "value": 2310,
-    "school": "ALA"
-   },
-   "unit": "yards from scrimmage",
-   "sig": "hDerrick Henry2015,Ronnie Brown2002scrim"
+   "sig": "gm2023-11-25Jarquez Hunterrush"
   },
   {
    "type": "h2h",
@@ -73,7 +58,7 @@
    "label": "School Count",
    "a": "AUB",
    "b": "ALA",
-   "threshold": 2800,
+   "threshold": 3000,
    "A": [
     {
      "name": "Bo Jackson",
@@ -98,18 +83,6 @@
     {
      "name": "Ben Tate",
      "yards": 3321
-    },
-    {
-     "name": "Tre Mason",
-     "yards": 2979
-    },
-    {
-     "name": "Tank Bigsby",
-     "yards": 2903
-    },
-    {
-     "name": "Stephen Davis",
-     "yards": 2811
     }
    ],
    "B": [
@@ -151,86 +124,101 @@
     }
    ],
    "verified": true,
-   "sig": "cAUBALA2800"
+   "sig": "cAUBALA3000"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Kenny Irons (AUB RB) · 2006 rushing TDs",
+     "value": 4,
+     "school": "AUB"
+    },
+    {
+     "label": "DeVonta Smith (ALA WR) · 2019 receiving TDs",
+     "value": 14,
+     "school": "ALA"
+    },
+    {
+     "label": "Nick Marshall (AUB QB) · career rushing TDs",
+     "value": 23,
+     "school": "AUB"
+    },
+    {
+     "label": "Ben Obomanu (AUB WR) · 2005 receiving TDs",
+     "value": 5,
+     "school": "AUB"
+    }
+   ],
+   "sig": "mxTDBen Obomanu2005 receiving TDs,DeVonta Smith2019 receiving TDs,Kenny Irons2006 rushing TDs,Nick Marshallcareer rushing TDs"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Cam Newton (AUB QB) · 2010 rushing yards",
+     "value": 1473,
+     "school": "AUB"
+    },
+    {
+     "label": "Trent Richardson (ALA RB) · 2010 yards from scrimmage",
+     "value": 966,
+     "school": "ALA"
+    },
+    {
+     "label": "Ronnie Brown (AUB RB) · career yards from scrimmage",
+     "value": 3375,
+     "school": "AUB"
+    },
+    {
+     "label": "Tank Bigsby (AUB RB) · career rushing yards",
+     "value": 2903,
+     "school": "AUB"
+    }
+   ],
+   "sig": "mxydsCam Newton2010 rushing yards,Ronnie Browncareer yards from scrimmage,Tank Bigsbycareer rushing yards,Trent Richardson2010 yards from scrimmage"
   },
   {
    "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more career yards from scrimmage?",
+   "flip": true,
+   "prompt": "Who had more receiving TDs in a single season?",
    "A": {
-    "label": "Trent Richardson (RB) · career, ALA",
-    "value": 3860,
-    "school": "ALA"
-   },
-   "B": {
-    "label": "Ronnie Brown (RB) · career, AUB",
-    "value": 3375,
+    "label": "Philip Lutzenkirchen (TE) · 2011 AUB",
+    "value": 7,
     "school": "AUB"
    },
-   "unit": "yards from scrimmage",
-   "sig": "hRonnie Browncareer,Trent Richardsoncareerscrim"
+   "B": {
+    "label": "DeVonta Smith (WR) · 2019 ALA",
+    "value": 14,
+    "school": "ALA"
+   },
+   "unit": "receiving TDs",
+   "sig": "hDeVonta Smith2019,Philip Lutzenkirchen2011recTD"
   },
   {
-   "type": "rank",
-   "label": "Fresh Mix",
+   "type": "moment",
+   "label": "Series History",
    "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Philip Lutzenkirchen (AUB TE) · 2011 receiving TDs",
-     "value": 7,
-     "school": "AUB"
-    },
-    {
-     "label": "Najee Harris (ALA RB) · career receiving TDs",
-     "value": 11,
-     "school": "ALA"
-    },
-    {
-     "label": "Cam Newton (AUB QB) · career rushing TDs",
-     "value": 20,
-     "school": "AUB"
-    },
-    {
-     "label": "Ronnie Brown (AUB RB) · 2004 rushing TDs",
-     "value": 8,
-     "school": "AUB"
-    }
-   ],
-   "sig": "mxTDCam Newtoncareer rushing TDs,Najee Harriscareer receiving TDs,Philip Lutzenkirchen2011 receiving TDs,Ronnie Brown2004 rushing TDs"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Trent Richardson (ALA RB) · career total TDs (rushing + receiving)",
-     "value": 42,
-     "school": "ALA"
-    },
-    {
-     "label": "Ben Obomanu (AUB WR) · career receiving TDs",
-     "value": 18,
-     "school": "AUB"
-    },
-    {
-     "label": "Najee Harris (ALA RB) · 2019 receiving TDs",
-     "value": 7,
-     "school": "ALA"
-    },
-    {
-     "label": "Devin Aromashodu (AUB WR) · 2004 receiving TDs",
-     "value": 4,
-     "school": "AUB"
-    }
-   ],
-   "sig": "mxTDBen Obomanucareer receiving TDs,Devin Aromashodu2004 receiving TDs,Najee Harris2019 receiving TDs,Trent Richardsoncareer total TDs (rushing + receiving)"
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did Auburn beat Alabama more or fewer than",
+   "line": "11.5 times",
+   "answer": "under",
+   "reveal": "Fewer. Auburn went 11–15 against Alabama from 2000 to 2025 (26 meetings, on-field results).",
+   "check": {
+    "value": 11,
+    "line": 11.5
+   },
+   "sig": "scAUBALA"
   }
  ]
 }
