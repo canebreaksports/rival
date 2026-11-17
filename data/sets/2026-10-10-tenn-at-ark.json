@@ -1,0 +1,166 @@
+{
+ "key": "rival:2026-10-10:TENN@ARK",
+ "slug": "2026-10-10-tenn-at-ark",
+ "game": {
+  "date": "2026-10-10",
+  "away": "TENN",
+  "home": "ARK"
+ },
+ "generatedAt": "2026-11-17T03:28:39.853Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Whose best college season had more yards from scrimmage?",
+   "A": {
+    "label": "Dylan Sampson (TENN RB)",
+    "value": 1626
+   },
+   "B": {
+    "label": "Arian Foster (TENN RB)",
+    "value": 1533
+   },
+   "unit": "",
+   "note": "🚨 Upset: Dylan Sampson 1,626 vs. Arian Foster 1,533.",
+   "sig": "upeakScrimArian FosterDylan Sampson"
+  },
+  {
+   "label": "Tennessee",
+   "verified": true,
+   "sig": "kTennessee1",
+   "type": "moment",
+   "prompt": "Did Arian Foster finish his Tennessee career with more or less than",
+   "line": "3,000 rushing yards",
+   "answer": "under",
+   "reveal": "Under, barely. He finished with 2,964."
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career receiving TDs (at that school), highest first.",
+   "items": [
+    {
+     "label": "Dylan Sampson (RB) · career, TENN",
+     "value": 1
+    },
+    {
+     "label": "Jalin Hyatt (WR) · career, TENN",
+     "value": 19
+    },
+    {
+     "label": "Jamal Lewis (RB) · career, TENN",
+     "value": 4
+    },
+    {
+     "label": "Arian Foster (RB) · career, TENN",
+     "value": 2
+    }
+   ],
+   "unit": "TD",
+   "sig": "rcar|recTDArian Fostercareer,Dylan Sampsoncareer,Jalin Hyattcareer,Jamal Lewiscareer"
+  },
+  {
+   "label": "Tennessee",
+   "verified": true,
+   "sig": "kTennessee3",
+   "type": "h2h",
+   "prompt": "Who had more career rushing yards at Tennessee?",
+   "A": {
+    "label": "Arian Foster",
+    "value": 2964
+   },
+   "B": {
+    "label": "Jamal Lewis",
+    "value": 2677
+   },
+   "unit": "rushing yds",
+   "flip": true
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2022, did Jalin Hyatt (Tennessee) have more or less than",
+   "line": "14.5 receiving TDs",
+   "answer": "over",
+   "reveal": "More. Jalin Hyatt had 15 receiving TDs in 2022.",
+   "check": {
+    "value": 15,
+    "line": 14.5
+   },
+   "sig": "pJalin Hyatt2022recTD"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Arkansas",
+   "a": "TENN",
+   "b": "ARK",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    6,
+    3
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2022, did Dylan Sampson (Tennessee) have more or less than",
+   "line": "350 yards from scrimmage",
+   "answer": "over",
+   "reveal": "More. Dylan Sampson had 421 yards from scrimmage in 2022.",
+   "check": {
+    "value": 421,
+    "line": 350
+   },
+   "sig": "pDylan Sampson2022scrim"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2016, did Joshua Dobbs (Tennessee) have more or less than",
+   "line": "12.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. Joshua Dobbs had 12 rushing TDs in 2016.",
+   "check": {
+    "value": 12,
+    "line": 12.5
+   },
+   "sig": "pJoshua Dobbs2016rushTD"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Arkansas",
+   "a": "TENN",
+   "b": "ARK",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    1,
+    5
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Arkansas",
+   "a": "TENN",
+   "b": "ARK",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    194,
+    161
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  }
+ ]
+}

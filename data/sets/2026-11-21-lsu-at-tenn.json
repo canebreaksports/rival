@@ -1,0 +1,176 @@
+{
+ "key": "rival:2026-11-21:LSU@TENN",
+ "slug": "2026-11-21-lsu-at-tenn",
+ "game": {
+  "date": "2026-11-21",
+  "away": "LSU",
+  "home": "TENN"
+ },
+ "generatedAt": "2026-11-17T03:28:39.868Z",
+ "engine": 1,
+ "questions": [
+  {
+   "label": "Tennessee",
+   "verified": true,
+   "sig": "kTennessee2",
+   "type": "moment",
+   "prompt": "In 2024, did Dylan Sampson score more or fewer than",
+   "line": "19.5 rushing TDs",
+   "answer": "over",
+   "reveal": "Over. He had 22 rushing TDs and 1,485 yards."
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career rushing TDs (at that school), highest first.",
+   "items": [
+    {
+     "label": "Jalin Hyatt (WR) · career, TENN",
+     "value": 0
+    },
+    {
+     "label": "Derrius Guice (RB) · career, LSU",
+     "value": 29
+    },
+    {
+     "label": "Joe Burrow (QB) · career, LSU",
+     "value": 12
+    },
+    {
+     "label": "Joshua Dobbs (QB) · career, TENN",
+     "value": 32
+    }
+   ],
+   "unit": "TD",
+   "sig": "rcar|rushTDDerrius Guicecareer,Jalin Hyattcareer,Joe Burrowcareer,Joshua Dobbscareer"
+  },
+  {
+   "label": "Tennessee",
+   "verified": true,
+   "sig": "kTennessee3",
+   "type": "h2h",
+   "prompt": "Who had more career rushing yards at Tennessee?",
+   "A": {
+    "label": "Arian Foster",
+    "value": 2964
+   },
+   "B": {
+    "label": "Jamal Lewis",
+    "value": 2677
+   },
+   "unit": "rushing yds",
+   "flip": true
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Tennessee",
+   "a": "LSU",
+   "b": "TENN",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    249,
+    194
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Tennessee",
+   "a": "LSU",
+   "b": "TENN",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    0,
+    1
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "label": "Tennessee",
+   "verified": true,
+   "sig": "kTennessee1",
+   "type": "moment",
+   "prompt": "Did Arian Foster finish his Tennessee career with more or less than",
+   "line": "3,000 rushing yards",
+   "answer": "under",
+   "reveal": "Under, barely. He finished with 2,964."
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
+   "items": [
+    {
+     "label": "Arian Foster (RB) · 2008 TENN",
+     "value": 736
+    },
+    {
+     "label": "Dylan Sampson (RB) · 2022 TENN",
+     "value": 421
+    },
+    {
+     "label": "Derrius Guice (RB) · 2017 LSU",
+     "value": 1375
+    },
+    {
+     "label": "Leonard Fournette (RB) · 2014 LSU",
+     "value": 1161
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Arian Foster's best year was 2007 (1,533), not 2008; Dylan Sampson's best year was 2024 (1,626), not 2022; Derrius Guice's best year was 2016 (1,493), not 2017; Leonard Fournette's best year was 2015 (2,206), not 2014.",
+   "sig": "trscrimArian Foster2008,Derrius Guice2017,Dylan Sampson2022,Leonard Fournette2014"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2007, did Arian Foster (Tennessee) have more or less than",
+   "line": "13.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. Arian Foster had 12 rushing TDs in 2007.",
+   "check": {
+    "value": 12,
+    "line": 13.5
+   },
+   "sig": "pArian Foster2007rushTD"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
+   "A": {
+    "label": "Dylan Sampson (TENN RB)",
+    "value": 35
+   },
+   "B": {
+    "label": "Jamal Lewis (TENN RB)",
+    "value": 17
+   },
+   "unit": "",
+   "note": "🚨 Upset: Dylan Sampson 35 vs. Jamal Lewis 17.",
+   "sig": "urushTDJamal LewisDylan Sampson"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Tennessee",
+   "a": "LSU",
+   "b": "TENN",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    1,
+    9
+   ],
+   "verified": true,
+   "sig": "glosing"
+  }
+ ]
+}

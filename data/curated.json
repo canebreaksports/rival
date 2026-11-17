@@ -1,0 +1,1149 @@
+{
+ "matchups": [
+  {
+   "a": "ALA",
+   "b": "AUB",
+   "name": "Iron Bowl",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "Chris Davis returned Alabama's missed field goal for the 'Kick Six.' Was that field-goal attempt longer or shorter than",
+     "line": "55 yards",
+     "answer": "over",
+     "reveal": "It was a 57-yard attempt. Davis caught it in the end zone and ran it all the way back with no time left.",
+     "game": {
+      "date": "Nov 30, 2013",
+      "winner": "AUB",
+      "ws": 34,
+      "ls": 28,
+      "venue": "Jordan-Hare Stadium"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "moment",
+     "prompt": "Cam Newton and Auburn came from behind to win. Was the biggest deficit they overcame more or less than",
+     "line": "25 points",
+     "answer": "under",
+     "reveal": "Auburn was down 24–0 in the second quarter, then came back to win by one.",
+     "game": {
+      "date": "Nov 26, 2010",
+      "winner": "AUB",
+      "ws": 28,
+      "ls": 27,
+      "venue": "Bryant-Denny Stadium"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "moment",
+     "prompt": "Derrick Henry carried the load. Did he have more or fewer than",
+     "line": "50 carries",
+     "answer": "under",
+     "reveal": "He had 46 carries, a school record, for 271 yards.",
+     "game": {
+      "date": "Nov 28, 2015",
+      "winner": "ALA",
+      "ws": 29,
+      "ls": 13,
+      "venue": "Bryant-Denny Stadium"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "moment",
+     "prompt": "Jalen Milroe threw the winning TD to Isaiah Bond on fourth down. Was the distance to go more or less than",
+     "line": "4th & 25",
+     "answer": "over",
+     "reveal": "It was 4th-and-31, a 31-yard touchdown with 32 seconds left.",
+     "game": {
+      "date": "Nov 25, 2023",
+      "winner": "ALA",
+      "ws": 27,
+      "ls": 24,
+      "venue": "Jordan-Hare Stadium"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "duel",
+     "year": 2010,
+     "stat": "Leading rusher",
+     "aSchool": "AUB",
+     "A": {
+      "big": "1,473",
+      "sm": "rushing yds"
+     },
+     "B": {
+      "big": "875",
+      "sm": "rushing yds"
+     },
+     "aName": "Cam Newton",
+     "bName": "Mark Ingram",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "ALA",
+   "b": "LSU",
+   "name": "First Saturday in November",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "The '#1 vs #2 Game of the Century.' Were there more or fewer than",
+     "line": "0.5 touchdowns",
+     "answer": "under",
+     "reveal": "Zero touchdowns. Every point came on a field goal, five in all.",
+     "game": {
+      "date": "Nov 5, 2011",
+      "winner": "LSU",
+      "ws": 9,
+      "ls": 6,
+      "ot": true,
+      "venue": "Bryant-Denny Stadium"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "moment",
+     "prompt": "The rematch. Did LSU have more or less total offense than",
+     "line": "150 yards",
+     "answer": "under",
+     "reveal": "LSU gained 92 total yards and crossed midfield only once.",
+     "game": {
+      "date": "Jan 9, 2012",
+      "winner": "ALA",
+      "ws": 21,
+      "ls": 0,
+      "venue": "Superdome · BCS Title"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "moment",
+     "prompt": "Did Joe Burrow throw for more or less than",
+     "line": "400 yards",
+     "answer": "under",
+     "reveal": "Burrow threw for 393 yards and 3 TDs, just under.",
+     "game": {
+      "date": "Nov 9, 2019",
+      "winner": "LSU",
+      "ws": 46,
+      "ls": 41,
+      "venue": "Bryant-Denny Stadium"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "duel",
+     "year": 2015,
+     "stat": "Leading rusher",
+     "aSchool": "ALA",
+     "A": {
+      "big": "2,219",
+      "sm": "yds · 28 TD"
+     },
+     "B": {
+      "big": "1,953",
+      "sm": "yds · 22 TD"
+     },
+     "aName": "Derrick Henry",
+     "bName": "Leonard Fournette",
+     "source": "Sports Reference player pages (derrick-henry-2, Leonard Fournette); spec §4.9 example",
+     "verified": true
+    },
+    {
+     "type": "duel",
+     "year": 2019,
+     "stat": "Starting QB",
+     "aSchool": "LSU",
+     "A": {
+      "big": "5,671",
+      "sm": "pass yds · 60 TD"
+     },
+     "B": {
+      "big": "2,840",
+      "sm": "pass yds · 33 TD"
+     },
+     "aName": "Joe Burrow",
+     "bName": "Tua Tagovailoa",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "duel",
+     "year": 2023,
+     "stat": "Starting QB",
+     "aSchool": "LSU",
+     "A": {
+      "big": "3,812",
+      "sm": "pass yds"
+     },
+     "B": {
+      "big": "2,834",
+      "sm": "pass yds"
+     },
+     "aName": "Jayden Daniels",
+     "bName": "Jalen Milroe",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "cross",
+     "prompt": "This head coach won a national title at both schools.",
+     "options": [
+      "Nick Saban",
+      "Les Miles",
+      "Ed Orgeron",
+      "Gene Stallings"
+     ],
+     "answer": 0,
+     "reveal": "Nick Saban won it all at LSU in 2003, then six more at Alabama.",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7). Passing stats and coaching facts are not in any verified dataset",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "ALA",
+   "b": "TENN",
+   "name": "Third Saturday in October",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "Did Jalin Hyatt catch more or fewer than",
+     "line": "3.5 TDs",
+     "answer": "over",
+     "reveal": "Hyatt caught 5 TDs for 207 yards. The win ended Alabama's 15-game streak in the series.",
+     "game": {
+      "date": "Oct 15, 2022",
+      "winner": "TENN",
+      "ws": 52,
+      "ls": 49,
+      "venue": "Neyland Stadium"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "cross",
+     "prompt": "Head coach at one school for a season, then offensive coordinator at the other for three.",
+     "options": [
+      "Lane Kiffin",
+      "Jeremy Pruitt",
+      "Phillip Fulmer",
+      "Steve Sarkisian"
+     ],
+     "answer": 0,
+     "reveal": "Lane Kiffin coached Tennessee in 2009 and was Alabama's OC from 2014 to 2016.",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7). Passing stats and coaching facts are not in any verified dataset",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "ALA",
+   "b": "UGA",
+   "name": "Title-Game Wars",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "Tua's walk-off TD to DeVonta Smith came on 2nd down. Was the distance more or less than",
+     "line": "2nd & 30",
+     "answer": "under",
+     "reveal": "It was 2nd-and-26, a 41-yard touchdown in overtime.",
+     "game": {
+      "date": "Jan 8, 2018",
+      "winner": "ALA",
+      "ws": 26,
+      "ls": 23,
+      "ot": true,
+      "venue": "Mercedes-Benz Stadium · CFP Title"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "moment",
+     "prompt": "Did Bryce Young throw for more or less than",
+     "line": "400 yards",
+     "answer": "over",
+     "reveal": "Young threw for 421 yards and 3 TDs against the nation's top defense.",
+     "game": {
+      "date": "Dec 4, 2021",
+      "winner": "ALA",
+      "ws": 41,
+      "ls": 24,
+      "venue": "Mercedes-Benz Stadium · SEC Title"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "moment",
+     "prompt": "Kelee Ringo's pick-six sealed it. Was the return more or less than",
+     "line": "85 yards",
+     "answer": "under",
+     "reveal": "It was a 79-yard return. That was Georgia's first national title since 1980.",
+     "game": {
+      "date": "Jan 10, 2022",
+      "winner": "UGA",
+      "ws": 33,
+      "ls": 18,
+      "venue": "Lucas Oil Stadium · CFP Title"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "moment",
+     "prompt": "Ryan Williams scored the go-ahead touchdown. Was the play more or less than",
+     "line": "80 yards",
+     "answer": "under",
+     "reveal": "It was a 75-yard catch-and-run by the 17-year-old freshman.",
+     "game": {
+      "date": "Sep 28, 2024",
+      "winner": "ALA",
+      "ws": 41,
+      "ls": 34,
+      "venue": "Bryant-Denny Stadium"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "ALA",
+   "b": "FLA",
+   "name": "SEC Title Clash",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "Did Tim Tebow throw more or fewer than",
+     "line": "2.5 TD passes",
+     "answer": "over",
+     "reveal": "Tebow threw 3 TDs and ended unbeaten Alabama's run at #1.",
+     "game": {
+      "date": "Dec 6, 2008",
+      "winner": "FLA",
+      "ws": 31,
+      "ls": 20,
+      "venue": "Georgia Dome · SEC Title"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "ALA",
+   "b": "TAMU",
+   "name": "The Upset",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "Did Johnny Manziel run for more or less than",
+     "line": "100 yards",
+     "answer": "under",
+     "reveal": "He ran for 92 yards and threw for 253 against the #1 team. That game helped win him the Heisman.",
+     "game": {
+      "date": "Nov 10, 2012",
+      "winner": "TAMU",
+      "ws": 29,
+      "ls": 24,
+      "venue": "Bryant-Denny Stadium"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "duel",
+     "year": 2012,
+     "stat": "Starting QB",
+     "aSchool": "TAMU",
+     "A": {
+      "big": "3,706",
+      "sm": "pass yds · 26 TD"
+     },
+     "B": {
+      "big": "2,933",
+      "sm": "pass yds · 30 TD"
+     },
+     "aName": "Johnny Manziel",
+     "bName": "AJ McCarron",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "AUB",
+   "b": "TENN",
+   "name": "Old Rivals",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "Did Nick Marshall throw for more or less than",
+     "line": "75 passing yards",
+     "answer": "under",
+     "reveal": "Marshall went 3-of-7 for 35 yards, but he ran for 214. Auburn piled up 444 rushing yards.",
+     "game": {
+      "date": "Nov 9, 2013",
+      "winner": "AUB",
+      "ws": 55,
+      "ls": 23,
+      "venue": "Neyland Stadium"
+     },
+     "source": "Box score: auburntigers.com / utsports.com stats (spec §4.2, §8.7)",
+     "verified": true
+    },
+    {
+     "type": "rank",
+     "prompt": "Rank these single seasons by rushing yards, highest first.",
+     "items": [
+      {
+       "label": "Kenny Irons · 2005 AUB",
+       "value": 1293
+      },
+      {
+       "label": "Tre Mason · 2012 AUB",
+       "value": 1002
+      },
+      {
+       "label": "Arian Foster · 2008 TENN",
+       "value": 570
+      },
+      {
+       "label": "Dylan Sampson · 2022 TENN",
+       "value": 397
+      }
+     ],
+     "unit": "yds",
+     "trap": true,
+     "note": "🪤 Trap: Mason's big year was 2013 (1,816), Foster's was 2007 (1,193), and Sampson's was 2024 (1,485).",
+     "source": "Sports Reference player pages (matches data/players.json)",
+     "verified": true
+    },
+    {
+     "type": "rank",
+     "prompt": "Rank these single seasons by rushing yards, highest first.",
+     "items": [
+      {
+       "label": "Tre Mason · 2013 AUB",
+       "value": 1816
+      },
+      {
+       "label": "Dylan Sampson · 2024 TENN",
+       "value": 1485
+      },
+      {
+       "label": "Jamal Lewis · 1997 TENN",
+       "value": 1364
+      },
+      {
+       "label": "Kenny Irons · 2005 AUB",
+       "value": 1293
+      }
+     ],
+     "unit": "yds",
+     "source": "Sports Reference player pages (matches data/players.json)",
+     "verified": true
+    },
+    {
+     "type": "h2h",
+     "prompt": "Who had more career receiving touchdowns?",
+     "A": {
+      "label": "Philip Lutzenkirchen (AUB)",
+      "value": 14
+     },
+     "B": {
+      "label": "Jamal Lewis (TENN)",
+      "value": 4
+     },
+     "unit": "rec TD",
+     "source": "Sports Reference player pages (matches data/players.json); spec §4.5 example",
+     "verified": true
+    },
+    {
+     "type": "h2h",
+     "prompt": "Who had more career yards from scrimmage?",
+     "A": {
+      "label": "Arian Foster (TENN)",
+      "value": 3706
+     },
+     "B": {
+      "label": "Tre Mason (AUB)",
+      "value": 3228
+     },
+     "unit": "scrimmage yds",
+     "source": "Sports Reference player pages (matches data/players.json); spec §4.5 example",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "a": "UGA",
+   "b": "AUB",
+   "name": "Deep South's Oldest",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "The 'Prayer at Jordan-Hare': Ricardo Louis's tipped TD on 4th-and-18. Was it more or less than",
+     "line": "75 yards",
+     "answer": "under",
+     "reveal": "It was a 73-yard touchdown with 25 seconds left.",
+     "game": {
+      "date": "Nov 16, 2013",
+      "winner": "AUB",
+      "ws": 43,
+      "ls": 38,
+      "venue": "Jordan-Hare Stadium"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "duel",
+     "year": 2017,
+     "stat": "Leading rusher",
+     "aSchool": "AUB",
+     "A": {
+      "big": "1,391",
+      "sm": "rushing yds"
+     },
+     "B": {
+      "big": "1,345",
+      "sm": "rushing yds"
+     },
+     "aName": "Kerryon Johnson",
+     "bName": "Nick Chubb",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "UGA",
+   "b": "FLA",
+   "name": "World's Largest Cocktail Party",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "Did Florida score more or fewer than",
+     "line": "10.5 points",
+     "answer": "under",
+     "reveal": "Florida scored 7. Georgia's defense took over on the way to a national title.",
+     "game": {
+      "date": "Oct 30, 2021",
+      "winner": "UGA",
+      "ws": 34,
+      "ls": 7,
+      "venue": "Jacksonville"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "duel",
+     "year": 2007,
+     "stat": "Leading rusher",
+     "aSchool": "UGA",
+     "A": {
+      "big": "1,334",
+      "sm": "rushing yds"
+     },
+     "B": {
+      "big": "895",
+      "sm": "rushing yds · 23 TD"
+     },
+     "aName": "Knowshon Moreno",
+     "bName": "Tim Tebow (a QB led Florida in rushing!)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "UGA",
+   "b": "TENN",
+   "name": "Border Battle",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "Josh Dobbs hit Jauan Jennings on a walk-off Hail Mary. Was it more or less than",
+     "line": "40 yards",
+     "answer": "over",
+     "reveal": "It was a 43-yard Hail Mary as time ran out.",
+     "game": {
+      "date": "Oct 1, 2016",
+      "winner": "TENN",
+      "ws": 34,
+      "ls": 31,
+      "venue": "Sanford Stadium"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "duel",
+     "year": 2022,
+     "stat": "Starting QB",
+     "aSchool": "UGA",
+     "A": {
+      "big": "4,127",
+      "sm": "pass yds"
+     },
+     "B": {
+      "big": "3,135",
+      "sm": "pass yds"
+     },
+     "aName": "Stetson Bennett",
+     "bName": "Hendon Hooker",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "FLA",
+   "b": "TENN",
+   "name": "Third Saturday in September",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "Did Travis Stephens rush for more or less than",
+     "line": "200 yards",
+     "answer": "over",
+     "reveal": "Stephens ran for 226 yards and knocked Florida out of the national title race.",
+     "game": {
+      "date": "Dec 1, 2001",
+      "winner": "TENN",
+      "ws": 34,
+      "ls": 32,
+      "venue": "Ben Hill Griffin Stadium"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "FLA",
+   "b": "AUB",
+   "name": "Crossover Classic",
+   "items": [
+    {
+     "type": "cross",
+     "prompt": "Started his career at one school, then won the Heisman at the other. Heisman-year line: 2,854 pass yds · 30 pass TD · 1,473 rush yds · 20 rush TD.",
+     "options": [
+      "Cam Newton",
+      "Tim Tebow",
+      "Nick Marshall",
+      "Jarrett Stidham"
+     ],
+     "answer": 0,
+     "reveal": "Cam Newton began at Florida behind Tebow. He won the 2010 Heisman and national title at Auburn.",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7). Passing stats and coaching facts are not in any verified dataset",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "FLA",
+   "b": "SC",
+   "name": "Ball Coach Bowl",
+   "items": [
+    {
+     "type": "cross",
+     "prompt": "Won the Heisman as a player at one school and became the other school's all-time winningest coach.",
+     "options": [
+      "Steve Spurrier",
+      "Lou Holtz",
+      "Urban Meyer",
+      "Shane Beamer"
+     ],
+     "answer": 0,
+     "reveal": "Steve Spurrier won the 1966 Heisman at Florida and later became South Carolina's winningest coach.",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7). Passing stats and coaching facts are not in any verified dataset",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "LSU",
+   "b": "TAMU",
+   "name": "7-OT Madness",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "Were the combined points more or less than",
+     "line": "140",
+     "answer": "over",
+     "reveal": "146 combined points, an FBS record at the time, over seven overtimes.",
+     "game": {
+      "date": "Nov 24, 2018",
+      "winner": "TAMU",
+      "ws": 74,
+      "ls": 72,
+      "ot": true,
+      "venue": "Kyle Field · 7 OT"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "TEX",
+   "b": "OU",
+   "name": "Red River Rivalry",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "Was the margin of victory more or less than",
+     "line": "3.5 points",
+     "answer": "over",
+     "reveal": "Oklahoma won by 4 on a Dillon Gabriel TD drive in the final minute.",
+     "game": {
+      "date": "Oct 7, 2023",
+      "winner": "OU",
+      "ws": 34,
+      "ls": 30,
+      "venue": "Cotton Bowl"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    },
+    {
+     "type": "moment",
+     "prompt": "Did Oklahoma score more or fewer than",
+     "line": "6.5 points",
+     "answer": "under",
+     "reveal": "Oklahoma scored only a field goal in the first Red River game as SEC opponents.",
+     "game": {
+      "date": "Oct 12, 2024",
+      "winner": "TEX",
+      "ws": 34,
+      "ls": 3,
+      "venue": "Cotton Bowl · First as SEC foes"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "TEX",
+   "b": "TAMU",
+   "name": "Lone Star Showdown",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "The rivalry came back after a long break. How many years since the last meeting: more or less than",
+     "line": "10 years",
+     "answer": "over",
+     "reveal": "13 years. The last game before this was Texas's 27–25 win on Thanksgiving 2011.",
+     "game": {
+      "date": "Nov 30, 2024",
+      "winner": "TEX",
+      "ws": 17,
+      "ls": 7,
+      "venue": "Kyle Field"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "ALA",
+   "b": "OU",
+   "name": "Hurts Bowl",
+   "items": [
+    {
+     "type": "cross",
+     "prompt": "Went 26–2 as the starter at one school, then threw for 3,851 yards and ran for 1,298 at the other.",
+     "options": [
+      "Jalen Hurts",
+      "Kyler Murray",
+      "Baker Mayfield",
+      "Spencer Rattler"
+     ],
+     "answer": 0,
+     "reveal": "Jalen Hurts went from Alabama to Oklahoma in 2019 and finished second in Heisman voting.",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7). Passing stats and coaching facts are not in any verified dataset",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "ALA",
+   "b": "TEX",
+   "name": "Sark Connection",
+   "items": [
+    {
+     "type": "cross",
+     "prompt": "Called plays for one school's national title team, then became the other school's head coach.",
+     "options": [
+      "Steve Sarkisian",
+      "Lane Kiffin",
+      "Tom Herman",
+      "Charlie Strong"
+     ],
+     "answer": 0,
+     "reveal": "Steve Sarkisian was Alabama's OC for the 2020 title team, then took the Texas job in 2021.",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7). Passing stats and coaching facts are not in any verified dataset",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "LSU",
+   "b": "TENN",
+   "name": "Tigers vs. Vols",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "All-time series: does Tennessee have more or fewer than",
+     "line": "20.5 wins over LSU",
+     "answer": "over",
+     "reveal": "Over. Tennessee leads 21–10–3. The teams last met in 2022.",
+     "source": "Winsipedia LSU vs Tennessee matchup page (spec §8.5). All-time record / last meeting can drift: confirm with a second source",
+     "verified": false
+    },
+    {
+     "type": "moment",
+     "prompt": "LSU's biggest win over Tennessee came in 2011. Was the margin more or less than",
+     "line": "27.5 points",
+     "answer": "over",
+     "reveal": "Over. LSU won 38–7, a 31-point margin.",
+     "source": "Winsipedia LSU vs Tennessee matchup page (spec §8.5)",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "a": "TAMU",
+   "b": "OU",
+   "name": "Old Big 12 Foes",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "Oklahoma's biggest win over Texas A&M came in 2003. Was the margin more or less than",
+     "line": "70 points",
+     "answer": "over",
+     "reveal": "Over. Oklahoma won 77–0.",
+     "source": "Winsipedia Texas A&M vs Oklahoma matchup page (spec §8.5)",
+     "verified": true
+    },
+    {
+     "type": "moment",
+     "prompt": "All-time series: does Oklahoma have more or fewer than",
+     "line": "18.5 wins over Texas A&M",
+     "answer": "over",
+     "reveal": "Over. Oklahoma leads 19–12. Before 2026, their last meeting was the 2013 Cotton Bowl after the 2012 season.",
+     "source": "Winsipedia Texas A&M vs Oklahoma matchup page (spec §8.5). All-time record / last meeting can drift: confirm with a second source",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "a": "ARK",
+   "b": "TEX",
+   "name": "Southwest Conference Rivals",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "All-time series: does Texas have more or fewer than",
+     "line": "55.5 wins over Arkansas",
+     "answer": "over",
+     "reveal": "Over. Texas leads 58–23 through 2025.",
+     "source": "Winsipedia Arkansas vs Texas matchup page (spec §8.5). All-time record / last meeting can drift: confirm with a second source",
+     "verified": false
+    },
+    {
+     "type": "moment",
+     "prompt": "Texas's longest win streak in the series is more or fewer than",
+     "line": "12.5 games",
+     "answer": "over",
+     "reveal": "Over. Texas won 14 straight from 1894 to 1932. Arkansas's best is 4 (1935–38).",
+     "source": "Winsipedia Arkansas vs Texas matchup page (spec §8.5)",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "a": "VAN",
+   "b": "FLA",
+   "name": "SEC East Originals",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "Florida's longest win streak over Vanderbilt is more or fewer than",
+     "line": "19.5 games",
+     "answer": "over",
+     "reveal": "Over. Florida won 22 straight from 1989 to 2012.",
+     "source": "Winsipedia Vanderbilt vs Florida matchup page (spec §8.5)",
+     "verified": true
+    },
+    {
+     "type": "moment",
+     "prompt": "Florida's biggest win over Vanderbilt came in 2001. Was the margin more or less than",
+     "line": "50.5 points",
+     "answer": "over",
+     "reveal": "Over. Florida won 71–13, a 58-point margin.",
+     "source": "Winsipedia Vanderbilt vs Florida matchup page (spec §8.5)",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "a": "UK",
+   "b": "MIZ",
+   "name": "SEC East Newcomers",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "Kentucky's longest win streak over Missouri is more or fewer than",
+     "line": "4.5 games",
+     "answer": "over",
+     "reveal": "Over. Kentucky won 5 straight from 2015 to 2019.",
+     "source": "Winsipedia Kentucky vs Missouri matchup page (spec §8.5)",
+     "verified": true
+    },
+    {
+     "type": "moment",
+     "prompt": "Missouri's biggest win over Kentucky came in 2013. Was the margin more or less than",
+     "line": "27.5 points",
+     "answer": "over",
+     "reveal": "Over. Missouri won 48–17, a 31-point margin.",
+     "source": "Winsipedia Kentucky vs Missouri matchup page (spec §8.5)",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "a": "UGA",
+   "b": "SC",
+   "name": "Palmetto vs. Peach",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "Georgia's biggest win over South Carolina came in 2022. Was the margin more or less than",
+     "line": "35.5 points",
+     "answer": "over",
+     "reveal": "Over. Georgia won 48–7, a 41-point margin.",
+     "source": "Winsipedia Georgia vs South Carolina matchup page (spec §8.5)",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "a": "MISS",
+   "b": "MSST",
+   "name": "Egg Bowl",
+   "items": [
+    {
+     "type": "moment",
+     "prompt": "Ole Miss's tying extra point was pushed back by a celebration penalty. Was the kick longer or shorter than",
+     "line": "30 yards",
+     "answer": "over",
+     "reveal": "A 35-yard try, and it was missed. Mississippi State won by one.",
+     "game": {
+      "date": "Nov 28, 2019",
+      "winner": "MSST",
+      "ws": 21,
+      "ls": 20,
+      "venue": "Vaught-Hemingway Stadium"
+     },
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
+     "verified": false
+    }
+   ]
+  }
+ ],
+ "teamPacks": {
+  "AUB": [
+   {
+    "type": "moment",
+    "prompt": "Was Kenny Irons's best single-season rushing total at Auburn more or less than",
+    "line": "1,200 yards",
+    "answer": "over",
+    "reveal": "Over. He ran for 1,293 yards and 13 TDs in 2005.",
+    "source": "Sports Reference player pages / school record book (matches data/players.json and data/career-rushing.json)",
+    "verified": true
+   },
+   {
+    "type": "moment",
+    "prompt": "Was Kenny Irons's best single season in yards from scrimmage more or less than",
+    "line": "1,600 yards",
+    "answer": "under",
+    "reveal": "Under. His best was 1,457 in 2005 (1,293 rushing + 164 receiving).",
+    "source": "Sports Reference player pages / school record book (matches data/players.json and data/career-rushing.json)",
+    "verified": true
+   },
+   {
+    "type": "moment",
+    "prompt": "Did Bo Jackson finish his Auburn career with more or less than",
+    "line": "4,000 rushing yards",
+    "answer": "over",
+    "reveal": "Over. Bo ran for 4,303 yards, still Auburn's career record.",
+    "source": "Sports Reference player pages / school record book (matches data/players.json and data/career-rushing.json)",
+    "verified": true
+   },
+   {
+    "type": "moment",
+    "prompt": "In 2013, did Tre Mason score more or fewer than",
+    "line": "20.5 rushing TDs",
+    "answer": "over",
+    "reveal": "Over. He had 23 rushing TDs and 1,816 yards, Auburn's single-season rushing record.",
+    "source": "Reveal claims a school single-season record, which no verified dataset covers",
+    "verified": false
+   },
+   {
+    "type": "rank",
+    "prompt": "Rank these Auburn receivers by 2005 receiving yards, highest first.",
+    "items": [
+     {
+      "label": "Devin Aromashodu",
+      "value": 494
+     },
+     {
+      "label": "Ben Obomanu",
+      "value": 357
+     },
+     {
+      "label": "Courtney Taylor",
+      "value": 278
+     },
+     {
+      "label": "Prechae Rodriguez",
+      "value": 240
+     }
+    ],
+    "unit": "yds",
+    "source": "Sports Reference player pages / school record book (matches data/players.json and data/career-rushing.json)",
+    "verified": true
+   },
+   {
+    "type": "rank",
+    "prompt": "Rank these Auburn running backs by career rushing yards, highest first.",
+    "items": [
+     {
+      "label": "Bo Jackson",
+      "value": 4303
+     },
+     {
+      "label": "Carnell 'Cadillac' Williams",
+      "value": 3831
+     },
+     {
+      "label": "Ben Tate",
+      "value": 3321
+     },
+     {
+      "label": "Ronnie Brown",
+      "value": 2707
+     }
+    ],
+    "unit": "yds",
+    "source": "Ronnie Brown's career total has no recorded source",
+    "verified": false
+   },
+   {
+    "type": "rank",
+    "prompt": "Rank these Auburn running backs by career rushing yards, highest first.",
+    "items": [
+     {
+      "label": "James Brooks",
+      "value": 3523
+     },
+     {
+      "label": "Tre Mason",
+      "value": 2979
+     },
+     {
+      "label": "Stephen Davis",
+      "value": 2811
+     },
+     {
+      "label": "Kenny Irons",
+      "value": 2186
+     }
+    ],
+    "unit": "yds",
+    "source": "Sports Reference player pages / school record book (matches data/players.json and data/career-rushing.json)",
+    "verified": true
+   },
+   {
+    "type": "h2h",
+    "prompt": "Who had more career rushing yards at Auburn?",
+    "A": {
+     "label": "Joe Cribbs",
+     "value": 3368
+    },
+    "B": {
+     "label": "Tank Bigsby",
+     "value": 2903
+    },
+    "unit": "rushing yds",
+    "source": "Sports Reference player pages / school record book (matches data/players.json and data/career-rushing.json)",
+    "verified": true
+   }
+  ],
+  "TENN": [
+   {
+    "type": "moment",
+    "prompt": "As a freshman in 1997, did Jamal Lewis run for more or less than",
+    "line": "1,300 yards",
+    "answer": "over",
+    "reveal": "Over. He ran for 1,364 yards and was named SEC Freshman of the Year.",
+    "source": "Reveal claims an SEC Freshman of the Year award, which no verified dataset covers",
+    "verified": false
+   },
+   {
+    "type": "moment",
+    "prompt": "Did Arian Foster finish his Tennessee career with more or less than",
+    "line": "3,000 rushing yards",
+    "answer": "under",
+    "reveal": "Under, barely. He finished with 2,964.",
+    "source": "Sports Reference player pages / school record book (matches data/players.json and data/career-rushing.json)",
+    "verified": true
+   },
+   {
+    "type": "moment",
+    "prompt": "In 2024, did Dylan Sampson score more or fewer than",
+    "line": "19.5 rushing TDs",
+    "answer": "over",
+    "reveal": "Over. He had 22 rushing TDs and 1,485 yards.",
+    "source": "Sports Reference player pages / school record book (matches data/players.json and data/career-rushing.json)",
+    "verified": true
+   },
+   {
+    "type": "h2h",
+    "prompt": "Who had more career rushing yards at Tennessee?",
+    "A": {
+     "label": "Arian Foster",
+     "value": 2964
+    },
+    "B": {
+     "label": "Jamal Lewis",
+     "value": 2677
+    },
+    "unit": "rushing yds",
+    "source": "Sports Reference player pages / school record book (matches data/players.json and data/career-rushing.json)",
+    "verified": true
+   }
+  ]
+ }
+}

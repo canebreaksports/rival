@@ -1,0 +1,78 @@
+{
+ "key": "rival:2026-10-31:SC@OU",
+ "slug": "2026-10-31-sc-at-ou",
+ "game": {
+  "date": "2026-10-31",
+  "away": "SC",
+  "home": "OU"
+ },
+ "generatedAt": "2026-11-17T03:28:39.862Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · South Carolina vs Oklahoma",
+   "a": "SC",
+   "b": "OU",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    11,
+    13
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · South Carolina vs Oklahoma",
+   "a": "SC",
+   "b": "OU",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    8,
+    2
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · South Carolina vs Oklahoma",
+   "a": "SC",
+   "b": "OU",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    3,
+    20
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · South Carolina vs Oklahoma",
+   "a": "SC",
+   "b": "OU",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    181,
+    271
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · South Carolina vs Oklahoma",
+   "a": "SC",
+   "b": "OU",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    2,
+    0
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  }
+ ]
+}

@@ -1,0 +1,154 @@
+{
+ "key": "rival:2026-10-17:AUB@UGA",
+ "slug": "2026-10-17-aub-at-uga",
+ "game": {
+  "date": "2026-10-17",
+  "away": "AUB",
+  "home": "UGA"
+ },
+ "generatedAt": "2026-11-17T03:28:39.856Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "In 2012, did Tre Mason (Auburn) have more or less than",
+   "line": "1,650 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Tre Mason had 1,088 yards from scrimmage in 2012. 🪤 Trap: his big year was 2013 (1,979).",
+   "check": {
+    "value": 1088,
+    "line": 1650
+   },
+   "sig": "tpTre Mason2012scrim"
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn7",
+   "type": "h2h",
+   "prompt": "Who had more career rushing yards at Auburn?",
+   "A": {
+    "label": "Joe Cribbs",
+    "value": 3368
+   },
+   "B": {
+    "label": "Tank Bigsby",
+    "value": 2903
+   },
+   "unit": "rushing yds",
+   "flip": true
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn2",
+   "type": "moment",
+   "prompt": "Did Bo Jackson finish his Auburn career with more or less than",
+   "line": "4,000 rushing yards",
+   "answer": "over",
+   "reveal": "Over. Bo ran for 4,303 yards, still Auburn's career record."
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Tank Bigsby finish his Auburn career with more or less than",
+   "line": "27.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. Tank Bigsby had 25 rushing TDs in his career.",
+   "check": {
+    "value": 25,
+    "line": 27.5
+   },
+   "sig": "pTank BigsbycareerrushTD"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receptions (at the school shown)?",
+   "A": {
+    "label": "Kenny Irons (AUB RB)",
+    "value": 24
+   },
+   "B": {
+    "label": "Tre Mason (AUB RB)",
+    "value": 19
+   },
+   "unit": "",
+   "note": "🚨 Upset: Kenny Irons 24 vs. Tre Mason 19.",
+   "sig": "urecNTre MasonKenny Irons"
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn6",
+   "type": "rank",
+   "prompt": "Rank these Auburn running backs by career rushing yards, highest first.",
+   "items": [
+    {
+     "label": "James Brooks",
+     "value": 3523
+    },
+    {
+     "label": "Tre Mason",
+     "value": 2979
+    },
+    {
+     "label": "Stephen Davis",
+     "value": 2811
+    },
+    {
+     "label": "Kenny Irons",
+     "value": 2186
+    }
+   ],
+   "unit": "yds"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Tre Mason (RB) · 2013 AUB",
+     "value": 1816
+    },
+    {
+     "label": "Kenny Irons (RB) · 2006 AUB",
+     "value": 893
+    },
+    {
+     "label": "Cam Newton (QB) · 2010 AUB",
+     "value": 1473
+    },
+    {
+     "label": "Kenny Irons (RB) · 2005 AUB",
+     "value": 1293
+    }
+   ],
+   "unit": "yds",
+   "sig": "rsea|rushCam Newton2010,Kenny Irons2005,Kenny Irons2006,Tre Mason2013"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2013, did Nick Marshall (Auburn) have more or less than",
+   "line": "11.5 rushing TDs",
+   "answer": "over",
+   "reveal": "More. Nick Marshall had 12 rushing TDs in 2013.",
+   "check": {
+    "value": 12,
+    "line": 11.5
+   },
+   "sig": "pNick Marshall2013rushTD"
+  }
+ ]
+}

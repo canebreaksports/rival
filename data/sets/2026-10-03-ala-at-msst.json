@@ -1,0 +1,113 @@
+{
+ "key": "rival:2026-10-03:ALA@MSST",
+ "slug": "2026-10-03-ala-at-msst",
+ "game": {
+  "date": "2026-10-03",
+  "away": "ALA",
+  "home": "MSST"
+ },
+ "generatedAt": "2026-11-17T03:28:39.848Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by receiving yards, highest first.",
+   "items": [
+    {
+     "label": "Najee Harris (RB) · 2020 ALA",
+     "value": 425
+    },
+    {
+     "label": "DeVonta Smith (WR) · 2019 ALA",
+     "value": 1256
+    },
+    {
+     "label": "Najee Harris (RB) · 2019 ALA",
+     "value": 304
+    },
+    {
+     "label": "DeVonta Smith (WR) · 2020 ALA",
+     "value": 1856
+    }
+   ],
+   "unit": "yds",
+   "sig": "rsea|recDeVonta Smith2019,DeVonta Smith2020,Najee Harris2019,Najee Harris2020"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2015, did Derrick Henry (Alabama) have more or less than",
+   "line": "25.5 rushing TDs",
+   "answer": "over",
+   "reveal": "More. Derrick Henry had 28 rushing TDs in 2015.",
+   "check": {
+    "value": 28,
+    "line": 25.5
+   },
+   "sig": "pDerrick Henry2015rushTD"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
+   "A": {
+    "label": "Jalen Milroe (ALA QB)",
+    "value": 33
+   },
+   "B": {
+    "label": "Jalen Hurts (ALA QB)",
+    "value": 23
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jalen Milroe 33 vs. Jalen Hurts 23.",
+   "sig": "urushTDJalen HurtsJalen Milroe"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "In 2019, did DeVonta Smith (Alabama) have more or less than",
+   "line": "1,500 receiving yards",
+   "answer": "under",
+   "reveal": "Less. DeVonta Smith had 1,256 receiving yards in 2019. 🪤 Trap: his big year was 2020 (1,856).",
+   "check": {
+    "value": 1256,
+    "line": 1500
+   },
+   "sig": "tpDeVonta Smith2019rec"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
+   "items": [
+    {
+     "label": "Trent Richardson (RB) · 2011 ALA",
+     "value": 2017
+    },
+    {
+     "label": "Najee Harris (RB) · 2020 ALA",
+     "value": 1891
+    },
+    {
+     "label": "Trent Richardson (RB) · 2010 ALA",
+     "value": 966
+    },
+    {
+     "label": "Derrick Henry (RB) · 2015 ALA",
+     "value": 2310
+    }
+   ],
+   "unit": "yds",
+   "sig": "rsea|scrimDerrick Henry2015,Najee Harris2020,Trent Richardson2010,Trent Richardson2011"
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "key": "rival:2026-09-26:TEX@TENN",
+ "slug": "2026-09-26-tex-at-tenn",
+ "game": {
+  "date": "2026-09-26",
+  "away": "TEX",
+  "home": "TENN"
+ },
+ "generatedAt": "2026-11-17T03:28:39.847Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "In 2008, did Arian Foster (Tennessee) have more or less than",
+   "line": "1,050 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Arian Foster had 736 yards from scrimmage in 2008. 🪤 Trap: his big year was 2007 (1,533).",
+   "check": {
+    "value": 736,
+    "line": 1050
+   },
+   "sig": "tpArian Foster2008scrim"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Arian Foster finish his Tennessee career with more or less than",
+   "line": "2,600 rushing yards",
+   "answer": "over",
+   "reveal": "More. Arian Foster had 2,964 rushing yards in his career.",
+   "check": {
+    "value": 2964,
+    "line": 2600
+   },
+   "sig": "pArian Fostercareerrush"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Tennessee",
+   "a": "TEX",
+   "b": "TENN",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    13,
+    11
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Tennessee",
+   "a": "TEX",
+   "b": "TENN",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    5,
+    9
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2008, did Arian Foster (Tennessee) have more or less than",
+   "line": "625 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Arian Foster had 570 rushing yards in 2008.",
+   "check": {
+    "value": 570,
+    "line": 625
+   },
+   "sig": "pArian Foster2008rush"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
+   "A": {
+    "label": "Joshua Dobbs (TENN QB)",
+    "value": 32
+   },
+   "B": {
+    "label": "Jamal Lewis (TENN RB)",
+    "value": 17
+   },
+   "unit": "",
+   "note": "🚨 Upset: Joshua Dobbs 32 vs. Jamal Lewis 17.",
+   "sig": "urushTDJamal LewisJoshua Dobbs"
+  },
+  {
+   "label": "Tennessee",
+   "verified": true,
+   "sig": "kTennessee3",
+   "type": "h2h",
+   "prompt": "Who had more career rushing yards at Tennessee?",
+   "A": {
+    "label": "Arian Foster",
+    "value": 2964
+   },
+   "B": {
+    "label": "Jamal Lewis",
+    "value": 2677
+   },
+   "unit": "rushing yds",
+   "flip": true
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 1999, did Jamal Lewis (Tennessee) have more or less than",
+   "line": "975 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Jamal Lewis had 816 rushing yards in 1999.",
+   "check": {
+    "value": 816,
+    "line": 975
+   },
+   "sig": "pJamal Lewis1999rush"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Tennessee",
+   "a": "TEX",
+   "b": "TENN",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    0,
+    1
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Tennessee",
+   "a": "TEX",
+   "b": "TENN",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    13,
+    6
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  }
+ ]
+}

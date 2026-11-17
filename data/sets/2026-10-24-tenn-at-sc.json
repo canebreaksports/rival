@@ -1,0 +1,178 @@
+{
+ "key": "rival:2026-10-24:TENN@SC",
+ "slug": "2026-10-24-tenn-at-sc",
+ "game": {
+  "date": "2026-10-24",
+  "away": "TENN",
+  "home": "SC"
+ },
+ "generatedAt": "2026-11-17T03:28:39.861Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs South Carolina",
+   "a": "TENN",
+   "b": "SC",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    6,
+    3
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 1999, did Jamal Lewis (Tennessee) have more or less than",
+   "line": "975 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Jamal Lewis had 816 rushing yards in 1999.",
+   "check": {
+    "value": 816,
+    "line": 975
+   },
+   "sig": "pJamal Lewis1999rush"
+  },
+  {
+   "label": "Tennessee",
+   "verified": true,
+   "sig": "kTennessee3",
+   "type": "h2h",
+   "prompt": "Who had more career rushing yards at Tennessee?",
+   "A": {
+    "label": "Arian Foster",
+    "value": 2964
+   },
+   "B": {
+    "label": "Jamal Lewis",
+    "value": 2677
+   },
+   "unit": "rushing yds",
+   "flip": false
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career receiving yards (at that school), highest first.",
+   "items": [
+    {
+     "label": "Jamal Lewis (RB) · career, TENN",
+     "value": 475
+    },
+    {
+     "label": "Dylan Sampson (RB) · career, TENN",
+     "value": 340
+    },
+    {
+     "label": "Jalin Hyatt (WR) · career, TENN",
+     "value": 1769
+    },
+    {
+     "label": "Arian Foster (RB) · career, TENN",
+     "value": 742
+    }
+   ],
+   "unit": "yds",
+   "sig": "rcar|recArian Fostercareer,Dylan Sampsoncareer,Jalin Hyattcareer,Jamal Lewiscareer"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs South Carolina",
+   "a": "TENN",
+   "b": "SC",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    9,
+    8
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "label": "Tennessee",
+   "verified": true,
+   "sig": "kTennessee1",
+   "type": "moment",
+   "prompt": "Did Arian Foster finish his Tennessee career with more or less than",
+   "line": "3,000 rushing yards",
+   "answer": "under",
+   "reveal": "Under, barely. He finished with 2,964."
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs South Carolina",
+   "a": "TENN",
+   "b": "SC",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    194,
+    181
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
+   "A": {
+    "label": "Joshua Dobbs (TENN QB)",
+    "value": 32
+   },
+   "B": {
+    "label": "Jamal Lewis (TENN RB)",
+    "value": 17
+   },
+   "unit": "",
+   "note": "🚨 Upset: Joshua Dobbs 32 vs. Jamal Lewis 17.",
+   "sig": "urushTDJamal LewisJoshua Dobbs"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Joshua Dobbs finish his Tennessee career with more or less than",
+   "line": "32.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. Joshua Dobbs had 32 rushing TDs in his career.",
+   "check": {
+    "value": 32,
+    "line": 32.5
+   },
+   "sig": "pJoshua DobbscareerrushTD"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Jamal Lewis (RB) · 1999 TENN",
+     "value": 816
+    },
+    {
+     "label": "Dylan Sampson (RB) · 2024 TENN",
+     "value": 1485
+    },
+    {
+     "label": "Arian Foster (RB) · 2005 TENN",
+     "value": 879
+    },
+    {
+     "label": "Dylan Sampson (RB) · 2022 TENN",
+     "value": 397
+    }
+   ],
+   "unit": "yds",
+   "sig": "rsea|rushArian Foster2005,Dylan Sampson2022,Dylan Sampson2024,Jamal Lewis1999"
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "key": "rival:2026-11-21:VAN@FLA",
+ "slug": "2026-11-21-van-at-fla",
+ "game": {
+  "date": "2026-11-21",
+  "away": "VAN",
+  "home": "FLA"
+ },
+ "generatedAt": "2026-11-17T03:28:39.867Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Florida",
+   "a": "VAN",
+   "b": "FLA",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    1,
+    9
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Florida",
+   "a": "VAN",
+   "b": "FLA",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    113,
+    218
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Florida",
+   "a": "VAN",
+   "b": "FLA",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    10,
+    13
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "label": "SEC East Originals",
+   "verified": true,
+   "sig": "kSEC East Originals1",
+   "type": "moment",
+   "prompt": "Florida's biggest win over Vanderbilt came in 2001. Was the margin more or less than",
+   "line": "50.5 points",
+   "answer": "over",
+   "reveal": "Over. Florida won 71–13, a 58-point margin."
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Florida",
+   "a": "VAN",
+   "b": "FLA",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    12,
+    0
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Florida",
+   "a": "VAN",
+   "b": "FLA",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    21,
+    6
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "label": "SEC East Originals",
+   "verified": true,
+   "sig": "kSEC East Originals0",
+   "type": "moment",
+   "prompt": "Florida's longest win streak over Vanderbilt is more or fewer than",
+   "line": "19.5 games",
+   "answer": "over",
+   "reveal": "Over. Florida won 22 straight from 1989 to 2012."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "key": "rival:2026-11-07:TEX@MIZ",
+ "slug": "2026-11-07-tex-at-miz",
+ "game": {
+  "date": "2026-11-07",
+  "away": "TEX",
+  "home": "MIZ"
+ },
+ "generatedAt": "2026-11-17T03:28:39.864Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Missouri",
+   "a": "TEX",
+   "b": "MIZ",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    13,
+    12
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Missouri",
+   "a": "TEX",
+   "b": "MIZ",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    236,
+    192
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Missouri",
+   "a": "TEX",
+   "b": "MIZ",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    0,
+    1
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Missouri",
+   "a": "TEX",
+   "b": "MIZ",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    5,
+    9
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Missouri",
+   "a": "TEX",
+   "b": "MIZ",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    13,
+    7
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  }
+ ]
+}

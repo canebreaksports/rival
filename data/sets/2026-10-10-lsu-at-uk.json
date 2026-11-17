@@ -1,0 +1,177 @@
+{
+ "key": "rival:2026-10-10:LSU@UK",
+ "slug": "2026-10-10-lsu-at-uk",
+ "game": {
+  "date": "2026-10-10",
+  "away": "LSU",
+  "home": "UK"
+ },
+ "generatedAt": "2026-11-17T03:28:39.854Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2018, did Justin Jefferson (LSU) have more or less than",
+   "line": "6.5 receiving TDs",
+   "answer": "under",
+   "reveal": "Less. Justin Jefferson had 6 receiving TDs in 2018.",
+   "check": {
+    "value": 6,
+    "line": 6.5
+   },
+   "sig": "pJustin Jefferson2018recTD"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Kentucky",
+   "a": "LSU",
+   "b": "UK",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    249,
+    145
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Kentucky",
+   "a": "LSU",
+   "b": "UK",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    0,
+    6
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing TDs, highest first.",
+   "items": [
+    {
+     "label": "Leonard Fournette (RB) · 2014 LSU",
+     "value": 10
+    },
+    {
+     "label": "Leonard Fournette (RB) · 2016 LSU",
+     "value": 8
+    },
+    {
+     "label": "Leonard Fournette (RB) · 2015 LSU",
+     "value": 22
+    },
+    {
+     "label": "Jayden Daniels (QB) · 2022 LSU",
+     "value": 11
+    }
+   ],
+   "unit": "TD",
+   "sig": "rsea|rushTDJayden Daniels2022,Leonard Fournette2014,Leonard Fournette2015,Leonard Fournette2016"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receptions (at the school shown)?",
+   "A": {
+    "label": "Clyde Edwards-Helaire (LSU RB)",
+    "value": 69
+   },
+   "B": {
+    "label": "Leonard Fournette (LSU RB)",
+    "value": 41
+   },
+   "unit": "",
+   "note": "🚨 Upset: Clyde Edwards-Helaire 69 vs. Leonard Fournette 41.",
+   "sig": "urecNLeonard FournetteClyde Edwards-Helaire"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2015, did Leonard Fournette (LSU) have more or less than",
+   "line": "1,900 yards from scrimmage",
+   "answer": "over",
+   "reveal": "More. Leonard Fournette had 2,206 yards from scrimmage in 2015.",
+   "check": {
+    "value": 2206,
+    "line": 1900
+   },
+   "sig": "pLeonard Fournette2015scrim"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Kentucky",
+   "a": "LSU",
+   "b": "UK",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    15,
+    10
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Kentucky",
+   "a": "LSU",
+   "b": "UK",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    13,
+    2
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Kentucky",
+   "a": "LSU",
+   "b": "UK",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    1,
+    14
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
+   "items": [
+    {
+     "label": "Derrius Guice (RB) · 2016 LSU",
+     "value": 1493
+    },
+    {
+     "label": "Clyde Edwards-Helaire (RB) · 2019 LSU",
+     "value": 1868
+    },
+    {
+     "label": "Leonard Fournette (RB) · 2015 LSU",
+     "value": 2206
+    },
+    {
+     "label": "Leonard Fournette (RB) · 2016 LSU",
+     "value": 989
+    }
+   ],
+   "unit": "yds",
+   "sig": "rsea|scrimClyde Edwards-Helaire2019,Derrius Guice2016,Leonard Fournette2015,Leonard Fournette2016"
+  }
+ ]
+}

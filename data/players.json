@@ -1,0 +1,1137 @@
+{
+ "players": [
+  {
+   "name": "Kenny Irons",
+   "school": "AUB",
+   "pos": "RB"
+  },
+  {
+   "name": "Tre Mason",
+   "school": "AUB",
+   "pos": "RB",
+   "star": true
+  },
+  {
+   "name": "Devin Aromashodu",
+   "school": "AUB",
+   "pos": "WR"
+  },
+  {
+   "name": "Ben Obomanu",
+   "school": "AUB",
+   "pos": "WR"
+  },
+  {
+   "name": "Courtney Taylor",
+   "school": "AUB",
+   "pos": "WR"
+  },
+  {
+   "name": "Prechae Rodriguez",
+   "school": "AUB",
+   "pos": "WR"
+  },
+  {
+   "name": "Philip Lutzenkirchen",
+   "school": "AUB",
+   "pos": "TE"
+  },
+  {
+   "name": "Bo Jackson",
+   "school": "AUB",
+   "pos": "RB",
+   "star": true
+  },
+  {
+   "name": "Carnell 'Cadillac' Williams",
+   "school": "AUB",
+   "pos": "RB",
+   "star": true
+  },
+  {
+   "name": "James Brooks",
+   "school": "AUB",
+   "pos": "RB"
+  },
+  {
+   "name": "Joe Cribbs",
+   "school": "AUB",
+   "pos": "RB"
+  },
+  {
+   "name": "Ben Tate",
+   "school": "AUB",
+   "pos": "RB"
+  },
+  {
+   "name": "Tank Bigsby",
+   "school": "AUB",
+   "pos": "RB"
+  },
+  {
+   "name": "Stephen Davis",
+   "school": "AUB",
+   "pos": "RB"
+  },
+  {
+   "name": "Brent Fullwood",
+   "school": "AUB",
+   "pos": "RB"
+  },
+  {
+   "name": "Ronnie Brown",
+   "school": "AUB",
+   "pos": "RB"
+  },
+  {
+   "name": "Cam Newton",
+   "school": "AUB",
+   "pos": "QB",
+   "star": true
+  },
+  {
+   "name": "Nick Marshall",
+   "school": "AUB",
+   "pos": "QB"
+  },
+  {
+   "name": "Arian Foster",
+   "school": "TENN",
+   "pos": "RB",
+   "star": true
+  },
+  {
+   "name": "Jamal Lewis",
+   "school": "TENN",
+   "pos": "RB",
+   "star": true
+  },
+  {
+   "name": "Dylan Sampson",
+   "school": "TENN",
+   "pos": "RB"
+  },
+  {
+   "name": "Jalin Hyatt",
+   "school": "TENN",
+   "pos": "WR"
+  },
+  {
+   "name": "Joshua Dobbs",
+   "school": "TENN",
+   "pos": "QB"
+  },
+  {
+   "name": "Leonard Fournette",
+   "school": "LSU",
+   "pos": "RB",
+   "star": true
+  },
+  {
+   "name": "Derrius Guice",
+   "school": "LSU",
+   "pos": "RB"
+  },
+  {
+   "name": "Clyde Edwards-Helaire",
+   "school": "LSU",
+   "pos": "RB"
+  },
+  {
+   "name": "Justin Jefferson",
+   "school": "LSU",
+   "pos": "WR",
+   "star": true
+  },
+  {
+   "name": "Jayden Daniels",
+   "school": "LSU",
+   "pos": "QB",
+   "star": true
+  },
+  {
+   "name": "Joe Burrow",
+   "school": "LSU",
+   "pos": "QB",
+   "star": true
+  },
+  {
+   "name": "Derrick Henry",
+   "school": "ALA",
+   "pos": "RB",
+   "star": true
+  },
+  {
+   "name": "Najee Harris",
+   "school": "ALA",
+   "pos": "RB",
+   "star": true
+  },
+  {
+   "name": "Trent Richardson",
+   "school": "ALA",
+   "pos": "RB",
+   "star": true
+  },
+  {
+   "name": "DeVonta Smith",
+   "school": "ALA",
+   "pos": "WR",
+   "star": true
+  },
+  {
+   "name": "Jalen Hurts",
+   "school": "ALA",
+   "pos": "QB",
+   "star": true
+  },
+  {
+   "name": "Jalen Milroe",
+   "school": "ALA",
+   "pos": "QB"
+  }
+ ],
+ "seasons": [
+  {
+   "name": "Kenny Irons",
+   "school": "AUB",
+   "year": 2005,
+   "rush": 1293,
+   "rushTD": 13,
+   "scrim": 1457,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Kenny Irons",
+   "school": "AUB",
+   "year": 2006,
+   "rush": 893,
+   "rushTD": 4,
+   "scrim": 971,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Tre Mason",
+   "school": "AUB",
+   "year": 2012,
+   "rush": 1002,
+   "rushTD": 8,
+   "scrim": 1088,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Tre Mason",
+   "school": "AUB",
+   "year": 2013,
+   "rush": 1816,
+   "rushTD": 23,
+   "scrim": 1979,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Devin Aromashodu",
+   "school": "AUB",
+   "year": 2002,
+   "rec": 304,
+   "recTD": 1,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Devin Aromashodu",
+   "school": "AUB",
+   "year": 2003,
+   "rec": 22,
+   "recTD": 0,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Devin Aromashodu",
+   "school": "AUB",
+   "year": 2004,
+   "rec": 513,
+   "recTD": 4,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Devin Aromashodu",
+   "school": "AUB",
+   "year": 2005,
+   "rec": 494,
+   "recTD": 4,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Ben Obomanu",
+   "school": "AUB",
+   "year": 2002,
+   "rec": 224,
+   "recTD": 3,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Ben Obomanu",
+   "school": "AUB",
+   "year": 2003,
+   "rec": 373,
+   "recTD": 3,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Ben Obomanu",
+   "school": "AUB",
+   "year": 2004,
+   "rec": 359,
+   "recTD": 7,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Ben Obomanu",
+   "school": "AUB",
+   "year": 2005,
+   "rec": 357,
+   "recTD": 5,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Courtney Taylor",
+   "school": "AUB",
+   "year": 2003,
+   "rec": 379,
+   "recTD": 0,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/courtney-taylor-1.html",
+   "verified": true
+  },
+  {
+   "name": "Courtney Taylor",
+   "school": "AUB",
+   "year": 2004,
+   "rec": 737,
+   "recTD": 6,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/courtney-taylor-1.html",
+   "verified": true
+  },
+  {
+   "name": "Courtney Taylor",
+   "school": "AUB",
+   "year": 2005,
+   "rec": 278,
+   "recTD": 1,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/courtney-taylor-1.html",
+   "verified": true
+  },
+  {
+   "name": "Courtney Taylor",
+   "school": "AUB",
+   "year": 2006,
+   "rec": 704,
+   "recTD": 2,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/courtney-taylor-1.html",
+   "verified": true
+  },
+  {
+   "name": "Prechae Rodriguez",
+   "school": "AUB",
+   "year": 2005,
+   "rec": 240,
+   "recTD": 1,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Philip Lutzenkirchen",
+   "school": "AUB",
+   "year": 2011,
+   "rec": 238,
+   "recTD": 7,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Bo Jackson",
+   "school": "AUB",
+   "year": "career",
+   "rush": 4303,
+   "rushTD": 43,
+   "scrim": 4575,
+   "att": 650,
+   "recN": 26,
+   "rec": 272,
+   "recTD": 2,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Carnell 'Cadillac' Williams",
+   "school": "AUB",
+   "year": "career",
+   "rush": 3831,
+   "rushTD": 45,
+   "att": 741,
+   "rec": 342,
+   "source": "Rivals and Saturday Down South (career)",
+   "verified": true
+  },
+  {
+   "name": "James Brooks",
+   "school": "AUB",
+   "year": "career",
+   "rush": 3523,
+   "source": "Wikipedia \"Auburn football statistical leaders\" (school record book)",
+   "verified": true
+  },
+  {
+   "name": "Joe Cribbs",
+   "school": "AUB",
+   "year": "career",
+   "rush": 3368,
+   "source": "Wikipedia \"Auburn football statistical leaders\" (school record book)",
+   "verified": true
+  },
+  {
+   "name": "Ben Tate",
+   "school": "AUB",
+   "year": "career",
+   "rush": 3321,
+   "source": "Wikipedia \"Auburn football statistical leaders\" (school record book)",
+   "verified": true
+  },
+  {
+   "name": "Tre Mason",
+   "school": "AUB",
+   "year": "career",
+   "rush": 2979,
+   "rushTD": 32,
+   "scrim": 3228,
+   "att": 516,
+   "recN": 19,
+   "rec": 249,
+   "recTD": 1,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Tank Bigsby",
+   "school": "AUB",
+   "year": "career",
+   "rush": 2903,
+   "rushTD": 25,
+   "scrim": 3351,
+   "att": 540,
+   "recN": 62,
+   "rec": 448,
+   "recTD": 0,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Stephen Davis",
+   "school": "AUB",
+   "year": "career",
+   "rush": 2811,
+   "source": "Wikipedia \"Auburn football statistical leaders\" (school record book)",
+   "verified": true
+  },
+  {
+   "name": "Brent Fullwood",
+   "school": "AUB",
+   "year": "career",
+   "rush": 2789,
+   "source": "Wikipedia \"Auburn football statistical leaders\" (school record book)",
+   "verified": true
+  },
+  {
+   "name": "Ronnie Brown",
+   "school": "AUB",
+   "year": "career",
+   "rush": 2707,
+   "source": "Unknown: prototype value with no recorded source",
+   "verified": false
+  },
+  {
+   "name": "Kenny Irons",
+   "school": "AUB",
+   "year": "career",
+   "rush": 2186,
+   "scrim": 2428,
+   "att": 454,
+   "recN": 24,
+   "rec": 242,
+   "recTD": 0,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Philip Lutzenkirchen",
+   "school": "AUB",
+   "year": "career",
+   "rec": 628,
+   "recTD": 14,
+   "recN": 59,
+   "source": "Wikipedia and Auburn sources (career 59 rec, 628 yds, 14 TD)",
+   "verified": true
+  },
+  {
+   "name": "Ben Obomanu",
+   "school": "AUB",
+   "year": "career",
+   "rec": 1313,
+   "recTD": 18,
+   "recN": 97,
+   "rush": 154,
+   "rushTD": 2,
+   "att": 8,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Devin Aromashodu",
+   "school": "AUB",
+   "year": "career",
+   "rec": 1333,
+   "recTD": 9,
+   "recN": 71,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Courtney Taylor",
+   "school": "AUB",
+   "year": "career",
+   "rec": 2098,
+   "recTD": 9,
+   "recN": 153,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/courtney-taylor-1.html",
+   "verified": true
+  },
+  {
+   "name": "Cam Newton",
+   "school": "AUB",
+   "year": 2010,
+   "rush": 1473,
+   "rushTD": 20,
+   "source": "auburntigers.com roster / Heisman page (2010: 264 carries, 1,473 yds, 20 TD)",
+   "verified": true
+  },
+  {
+   "name": "Cam Newton",
+   "school": "AUB",
+   "year": "career",
+   "rush": 1473,
+   "rushTD": 20,
+   "att": 264,
+   "source": "auburntigers.com roster / Heisman page (2010: 264 carries, 1,473 yds, 20 TD)",
+   "verified": true
+  },
+  {
+   "name": "Nick Marshall",
+   "school": "AUB",
+   "year": 2013,
+   "rush": 1068,
+   "rushTD": 12,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/nick-marshall-2.html",
+   "verified": true
+  },
+  {
+   "name": "Nick Marshall",
+   "school": "AUB",
+   "year": 2014,
+   "rush": 798,
+   "rushTD": 11,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/nick-marshall-2.html",
+   "verified": true
+  },
+  {
+   "name": "Nick Marshall",
+   "school": "AUB",
+   "year": "career",
+   "rush": 1866,
+   "rushTD": 23,
+   "att": 325,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/nick-marshall-2.html",
+   "verified": true
+  },
+  {
+   "name": "Arian Foster",
+   "school": "TENN",
+   "year": 2005,
+   "rush": 879,
+   "rushTD": 5,
+   "scrim": 1027,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Arian Foster",
+   "school": "TENN",
+   "year": 2007,
+   "rush": 1193,
+   "rushTD": 12,
+   "scrim": 1533,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Arian Foster",
+   "school": "TENN",
+   "year": 2008,
+   "rush": 570,
+   "rushTD": 1,
+   "scrim": 736,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Jamal Lewis",
+   "school": "TENN",
+   "year": 1997,
+   "rush": 1364,
+   "rushTD": 7,
+   "scrim": 1630,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/jamal-lewis-2.html",
+   "verified": true
+  },
+  {
+   "name": "Jamal Lewis",
+   "school": "TENN",
+   "year": 1999,
+   "rush": 816,
+   "rushTD": 7,
+   "scrim": 1009,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/jamal-lewis-2.html",
+   "verified": true
+  },
+  {
+   "name": "Dylan Sampson",
+   "school": "TENN",
+   "year": 2022,
+   "rush": 397,
+   "rushTD": 6,
+   "scrim": 421,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Dylan Sampson",
+   "school": "TENN",
+   "year": 2023,
+   "rush": 604,
+   "rushTD": 7,
+   "scrim": 779,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Dylan Sampson",
+   "school": "TENN",
+   "year": 2024,
+   "rush": 1485,
+   "rushTD": 22,
+   "scrim": 1626,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Jalin Hyatt",
+   "school": "TENN",
+   "year": 2022,
+   "rec": 1267,
+   "recTD": 15,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Arian Foster",
+   "school": "TENN",
+   "year": "career",
+   "rush": 2964,
+   "rushTD": 23,
+   "scrim": 3706,
+   "recTD": 2,
+   "att": 650,
+   "recN": 83,
+   "rec": 742,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Jamal Lewis",
+   "school": "TENN",
+   "year": "career",
+   "rush": 2677,
+   "rushTD": 17,
+   "scrim": 3152,
+   "recTD": 4,
+   "att": 487,
+   "recN": 39,
+   "rec": 475,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/jamal-lewis-2.html",
+   "verified": true
+  },
+  {
+   "name": "Dylan Sampson",
+   "school": "TENN",
+   "year": "career",
+   "rush": 2486,
+   "rushTD": 35,
+   "scrim": 2826,
+   "recTD": 1,
+   "att": 420,
+   "recN": 39,
+   "rec": 340,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Jalin Hyatt",
+   "school": "TENN",
+   "year": "career",
+   "rec": 1769,
+   "recTD": 19,
+   "recN": 108,
+   "rush": 13,
+   "rushTD": 0,
+   "att": 3,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Joshua Dobbs",
+   "school": "TENN",
+   "year": 2015,
+   "rush": 671,
+   "source": "utsports.com",
+   "verified": true
+  },
+  {
+   "name": "Joshua Dobbs",
+   "school": "TENN",
+   "year": 2016,
+   "rush": 831,
+   "rushTD": 12,
+   "source": "utsports.com",
+   "verified": true
+  },
+  {
+   "name": "Joshua Dobbs",
+   "school": "TENN",
+   "year": "career",
+   "rush": 2160,
+   "rushTD": 32,
+   "source": "utsports.com",
+   "verified": true
+  },
+  {
+   "name": "Leonard Fournette",
+   "school": "LSU",
+   "year": 2014,
+   "rush": 1034,
+   "rushTD": 10,
+   "scrim": 1161,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Leonard Fournette",
+   "school": "LSU",
+   "year": 2015,
+   "rush": 1953,
+   "rushTD": 22,
+   "scrim": 2206,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Leonard Fournette",
+   "school": "LSU",
+   "year": 2016,
+   "rush": 843,
+   "rushTD": 8,
+   "scrim": 989,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Derrius Guice",
+   "school": "LSU",
+   "year": 2016,
+   "rush": 1387,
+   "rushTD": 15,
+   "scrim": 1493,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Derrius Guice",
+   "school": "LSU",
+   "year": 2017,
+   "rush": 1251,
+   "rushTD": 11,
+   "scrim": 1375,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Clyde Edwards-Helaire",
+   "school": "LSU",
+   "year": 2018,
+   "rush": 658,
+   "rushTD": 7,
+   "scrim": 754,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Clyde Edwards-Helaire",
+   "school": "LSU",
+   "year": 2019,
+   "rush": 1415,
+   "rushTD": 16,
+   "scrim": 1868,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Justin Jefferson",
+   "school": "LSU",
+   "year": 2018,
+   "rec": 875,
+   "recTD": 6,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Justin Jefferson",
+   "school": "LSU",
+   "year": 2019,
+   "rec": 1540,
+   "recTD": 18,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Leonard Fournette",
+   "school": "LSU",
+   "year": "career",
+   "rush": 3830,
+   "rushTD": 40,
+   "scrim": 4356,
+   "recTD": 1,
+   "att": 616,
+   "recN": 41,
+   "rec": 526,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Derrius Guice",
+   "school": "LSU",
+   "year": "career",
+   "rush": 3074,
+   "rushTD": 29,
+   "scrim": 3324,
+   "recTD": 3,
+   "att": 471,
+   "recN": 32,
+   "rec": 250,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Clyde Edwards-Helaire",
+   "school": "LSU",
+   "year": "career",
+   "rush": 2104,
+   "rushTD": 23,
+   "scrim": 2699,
+   "recTD": 1,
+   "att": 370,
+   "recN": 69,
+   "rec": 595,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Justin Jefferson",
+   "school": "LSU",
+   "year": "career",
+   "rec": 2415,
+   "recTD": 24,
+   "recN": 165,
+   "rush": 30,
+   "rushTD": 0,
+   "att": 6,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Jayden Daniels",
+   "school": "LSU",
+   "year": 2022,
+   "rush": 885,
+   "rushTD": 11,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Jayden Daniels",
+   "school": "LSU",
+   "year": 2023,
+   "rush": 1134,
+   "rushTD": 10,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Jayden Daniels",
+   "school": "LSU",
+   "year": "career",
+   "rush": 2019,
+   "rushTD": 21,
+   "att": 321,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Joe Burrow",
+   "school": "LSU",
+   "year": 2018,
+   "rush": 399,
+   "rushTD": 7,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Joe Burrow",
+   "school": "LSU",
+   "year": 2019,
+   "rush": 368,
+   "rushTD": 5,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Joe Burrow",
+   "school": "LSU",
+   "year": "career",
+   "rush": 767,
+   "rushTD": 12,
+   "att": 243,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Derrick Henry",
+   "school": "ALA",
+   "year": 2014,
+   "rush": 990,
+   "rushTD": 11,
+   "scrim": 1123,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/derrick-henry-2.html",
+   "verified": true
+  },
+  {
+   "name": "Derrick Henry",
+   "school": "ALA",
+   "year": 2015,
+   "rush": 2219,
+   "rushTD": 28,
+   "scrim": 2310,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/derrick-henry-2.html",
+   "verified": true
+  },
+  {
+   "name": "Najee Harris",
+   "school": "ALA",
+   "year": 2019,
+   "rush": 1224,
+   "rushTD": 13,
+   "scrim": 1528,
+   "rec": 304,
+   "recTD": 7,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Najee Harris",
+   "school": "ALA",
+   "year": 2020,
+   "rush": 1466,
+   "rushTD": 26,
+   "scrim": 1891,
+   "rec": 425,
+   "recTD": 4,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Trent Richardson",
+   "school": "ALA",
+   "year": 2010,
+   "rush": 700,
+   "rushTD": 6,
+   "scrim": 966,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Trent Richardson",
+   "school": "ALA",
+   "year": 2011,
+   "rush": 1679,
+   "rushTD": 21,
+   "scrim": 2017,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "DeVonta Smith",
+   "school": "ALA",
+   "year": 2019,
+   "rec": 1256,
+   "recTD": 14,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "DeVonta Smith",
+   "school": "ALA",
+   "year": 2020,
+   "rec": 1856,
+   "recTD": 23,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Derrick Henry",
+   "school": "ALA",
+   "year": "career",
+   "rush": 3591,
+   "rushTD": 42,
+   "scrim": 3876,
+   "recTD": 3,
+   "att": 602,
+   "recN": 17,
+   "rec": 285,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/derrick-henry-2.html",
+   "verified": true
+  },
+  {
+   "name": "Najee Harris",
+   "school": "ALA",
+   "year": "career",
+   "rush": 3843,
+   "rushTD": 46,
+   "scrim": 4624,
+   "recTD": 11,
+   "att": 638,
+   "recN": 80,
+   "rec": 781,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Trent Richardson",
+   "school": "ALA",
+   "year": "career",
+   "rush": 3130,
+   "rushTD": 35,
+   "scrim": 3860,
+   "recTD": 7,
+   "att": 540,
+   "recN": 68,
+   "rec": 730,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "DeVonta Smith",
+   "school": "ALA",
+   "year": "career",
+   "rec": 3965,
+   "recTD": 46,
+   "recN": 235,
+   "rush": 6,
+   "rushTD": 1,
+   "att": 4,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Jalen Hurts",
+   "school": "ALA",
+   "year": 2016,
+   "rush": 954,
+   "rushTD": 13,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Jalen Hurts",
+   "school": "ALA",
+   "year": 2017,
+   "rush": 855,
+   "rushTD": 8,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Jalen Hurts",
+   "school": "ALA",
+   "year": 2018,
+   "rush": 167,
+   "rushTD": 2,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Jalen Hurts",
+   "school": "ALA",
+   "year": "career",
+   "rush": 1976,
+   "rushTD": 23,
+   "att": 381,
+   "source": "Sports Reference player page via aws.sports-reference.com/cfb/players/<slug>.html",
+   "verified": true
+  },
+  {
+   "name": "Jalen Milroe",
+   "school": "ALA",
+   "year": 2023,
+   "rush": 531,
+   "rushTD": 12,
+   "source": "NCAA.com",
+   "verified": true
+  },
+  {
+   "name": "Jalen Milroe",
+   "school": "ALA",
+   "year": 2024,
+   "rush": 726,
+   "rushTD": 20,
+   "source": "NCAA.com",
+   "verified": true
+  },
+  {
+   "name": "Jalen Milroe",
+   "school": "ALA",
+   "year": "career",
+   "rush": 1577,
+   "rushTD": 33,
+   "att": 375,
+   "source": "NCAA.com",
+   "verified": true
+  }
+ ]
+}

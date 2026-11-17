@@ -1,0 +1,139 @@
+{
+ "key": "rival:2026-11-07:ARK@AUB",
+ "slug": "2026-11-07-ark-at-aub",
+ "game": {
+  "date": "2026-11-07",
+  "away": "ARK",
+  "home": "AUB"
+ },
+ "generatedAt": "2026-11-17T03:28:39.863Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2010, did Cam Newton (Auburn) have more or less than",
+   "line": "18.5 rushing TDs",
+   "answer": "over",
+   "reveal": "More. Cam Newton had 20 rushing TDs in 2010.",
+   "check": {
+    "value": 20,
+    "line": 18.5
+   },
+   "sig": "pCam Newton2010rushTD"
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn7",
+   "type": "h2h",
+   "prompt": "Who had more career rushing yards at Auburn?",
+   "A": {
+    "label": "Joe Cribbs",
+    "value": 3368
+   },
+   "B": {
+    "label": "Tank Bigsby",
+    "value": 2903
+   },
+   "unit": "rushing yds",
+   "flip": true
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn4",
+   "type": "rank",
+   "prompt": "Rank these Auburn receivers by 2005 receiving yards, highest first.",
+   "items": [
+    {
+     "label": "Devin Aromashodu",
+     "value": 494
+    },
+    {
+     "label": "Ben Obomanu",
+     "value": 357
+    },
+    {
+     "label": "Courtney Taylor",
+     "value": 278
+    },
+    {
+     "label": "Prechae Rodriguez",
+     "value": 240
+    }
+   ],
+   "unit": "yds"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Joe Cribbs finish his Auburn career with more or less than",
+   "line": "2,850 rushing yards",
+   "answer": "over",
+   "reveal": "More. Joe Cribbs had 3,368 rushing yards in his career.",
+   "check": {
+    "value": 3368,
+    "line": 2850
+   },
+   "sig": "pJoe Cribbscareerrush"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2006, did Courtney Taylor (Auburn) have more or less than",
+   "line": "625 receiving yards",
+   "answer": "over",
+   "reveal": "More. Courtney Taylor had 704 receiving yards in 2006.",
+   "check": {
+    "value": 704,
+    "line": 625
+   },
+   "sig": "pCourtney Taylor2006rec"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "In 2006, did Kenny Irons (Auburn) have more or less than",
+   "line": "1,100 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Kenny Irons had 893 rushing yards in 2006. 🪤 Trap: his big year was 2005 (1,293).",
+   "check": {
+    "value": 893,
+    "line": 1100
+   },
+   "sig": "tpKenny Irons2006rush"
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn6",
+   "type": "rank",
+   "prompt": "Rank these Auburn running backs by career rushing yards, highest first.",
+   "items": [
+    {
+     "label": "James Brooks",
+     "value": 3523
+    },
+    {
+     "label": "Tre Mason",
+     "value": 2979
+    },
+    {
+     "label": "Stephen Davis",
+     "value": 2811
+    },
+    {
+     "label": "Kenny Irons",
+     "value": 2186
+    }
+   ],
+   "unit": "yds"
+  }
+ ]
+}

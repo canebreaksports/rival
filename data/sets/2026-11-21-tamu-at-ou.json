@@ -1,0 +1,75 @@
+{
+ "key": "rival:2026-11-21:TAMU@OU",
+ "slug": "2026-11-21-tamu-at-ou",
+ "game": {
+  "date": "2026-11-21",
+  "away": "TAMU",
+  "home": "OU"
+ },
+ "generatedAt": "2026-11-17T03:28:39.868Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs Oklahoma",
+   "a": "TAMU",
+   "b": "OU",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    195,
+    271
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs Oklahoma",
+   "a": "TAMU",
+   "b": "OU",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    5,
+    2
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs Oklahoma",
+   "a": "TAMU",
+   "b": "OU",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    2,
+    20
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "label": "Old Big 12 Foes",
+   "verified": true,
+   "sig": "kOld Big 12 Foes0",
+   "type": "moment",
+   "prompt": "Oklahoma's biggest win over Texas A&M came in 2003. Was the margin more or less than",
+   "line": "70 points",
+   "answer": "over",
+   "reveal": "Over. Oklahoma won 77–0."
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs Oklahoma",
+   "a": "TAMU",
+   "b": "OU",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    11,
+    13
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  }
+ ]
+}

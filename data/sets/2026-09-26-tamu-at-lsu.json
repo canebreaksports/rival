@@ -1,0 +1,153 @@
+{
+ "key": "rival:2026-09-26:TAMU@LSU",
+ "slug": "2026-09-26-tamu-at-lsu",
+ "game": {
+  "date": "2026-09-26",
+  "away": "TAMU",
+  "home": "LSU"
+ },
+ "generatedAt": "2026-11-17T03:28:39.846Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs LSU",
+   "a": "TAMU",
+   "b": "LSU",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    195,
+    249
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs LSU",
+   "a": "TAMU",
+   "b": "LSU",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    11,
+    15
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career receiving yards (at that school), highest first.",
+   "items": [
+    {
+     "label": "Clyde Edwards-Helaire (RB) · career, LSU",
+     "value": 595
+    },
+    {
+     "label": "Justin Jefferson (WR) · career, LSU",
+     "value": 2415
+    },
+    {
+     "label": "Derrius Guice (RB) · career, LSU",
+     "value": 250
+    },
+    {
+     "label": "Leonard Fournette (RB) · career, LSU",
+     "value": 526
+    }
+   ],
+   "unit": "yds",
+   "sig": "rcar|recClyde Edwards-Helairecareer,Derrius Guicecareer,Justin Jeffersoncareer,Leonard Fournettecareer"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Justin Jefferson finish his LSU career with more or less than",
+   "line": "23.5 receiving TDs",
+   "answer": "over",
+   "reveal": "More. Justin Jefferson had 24 receiving TDs in his career.",
+   "check": {
+    "value": 24,
+    "line": 23.5
+   },
+   "sig": "pJustin JeffersoncareerrecTD"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs LSU",
+   "a": "TAMU",
+   "b": "LSU",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    5,
+    1
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs LSU",
+   "a": "TAMU",
+   "b": "LSU",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    2,
+    13
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "In 2018, did Clyde Edwards-Helaire (LSU) have more or less than",
+   "line": "1,100 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Clyde Edwards-Helaire had 658 rushing yards in 2018. 🪤 Trap: his big year was 2019 (1,415).",
+   "check": {
+    "value": 658,
+    "line": 1100
+   },
+   "sig": "tpClyde Edwards-Helaire2018rush"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2016, did Derrius Guice (LSU) have more or less than",
+   "line": "1,300 rushing yards",
+   "answer": "over",
+   "reveal": "More. Derrius Guice had 1,387 rushing yards in 2016.",
+   "check": {
+    "value": 1387,
+    "line": 1300
+   },
+   "sig": "pDerrius Guice2016rush"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Clyde Edwards-Helaire (LSU RB)",
+    "value": 595
+   },
+   "B": {
+    "label": "Leonard Fournette (LSU RB)",
+    "value": 526
+   },
+   "unit": "",
+   "note": "🚨 Upset: Clyde Edwards-Helaire 595 vs. Leonard Fournette 526.",
+   "sig": "urecLeonard FournetteClyde Edwards-Helaire"
+  }
+ ]
+}

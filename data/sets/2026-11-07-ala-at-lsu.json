@@ -1,0 +1,136 @@
+{
+ "key": "rival:2026-11-07:ALA@LSU",
+ "slug": "2026-11-07-ala-at-lsu",
+ "game": {
+  "date": "2026-11-07",
+  "away": "ALA",
+  "home": "LSU"
+ },
+ "generatedAt": "2026-11-17T03:28:39.864Z",
+ "engine": 1,
+ "questions": [
+  {
+   "label": "First Saturday in November",
+   "verified": true,
+   "sig": "kFirst Saturday in November3",
+   "type": "duel",
+   "year": 2015,
+   "stat": "Leading rusher",
+   "aSchool": "ALA",
+   "other": "LSU",
+   "aName": "Derrick Henry",
+   "bName": "Leonard Fournette",
+   "A": {
+    "big": "2,219",
+    "sm": "yds · 28 TD"
+   },
+   "B": {
+    "big": "1,953",
+    "sm": "yds · 22 TD"
+   },
+   "flip": true
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Derrius Guice (LSU RB)",
+    "value": 3
+   },
+   "B": {
+    "label": "Leonard Fournette (LSU RB)",
+    "value": 1
+   },
+   "unit": "",
+   "note": "🚨 Upset: Derrius Guice 3 vs. Leonard Fournette 1.",
+   "sig": "urecTDLeonard FournetteDerrius Guice"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more career yards from scrimmage?",
+   "A": {
+    "label": "Najee Harris (RB) · career, ALA",
+    "value": 4624
+   },
+   "B": {
+    "label": "Leonard Fournette (RB) · career, LSU",
+    "value": 4356
+   },
+   "unit": "yards from scrimmage",
+   "sig": "hLeonard Fournettecareer,Najee Harriscareerscrim"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2016, did Leonard Fournette (LSU) have more or less than",
+   "line": "7.5 rushing TDs",
+   "answer": "over",
+   "reveal": "More. Leonard Fournette had 8 rushing TDs in 2016.",
+   "check": {
+    "value": 8,
+    "line": 7.5
+   },
+   "sig": "pLeonard Fournette2016rushTD"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by receiving yards, highest first.",
+   "items": [
+    {
+     "label": "DeVonta Smith (WR) · 2019 ALA",
+     "value": 1256
+    },
+    {
+     "label": "DeVonta Smith (WR) · 2020 ALA",
+     "value": 1856
+    },
+    {
+     "label": "Najee Harris (RB) · 2020 ALA",
+     "value": 425
+    },
+    {
+     "label": "Justin Jefferson (WR) · 2019 LSU",
+     "value": 1540
+    }
+   ],
+   "unit": "yds",
+   "sig": "rsea|recDeVonta Smith2019,DeVonta Smith2020,Justin Jefferson2019,Najee Harris2020"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career rushing TDs (at that school), highest first.",
+   "items": [
+    {
+     "label": "Jalen Hurts (QB) · career, ALA",
+     "value": 23
+    },
+    {
+     "label": "Justin Jefferson (WR) · career, LSU",
+     "value": 0
+    },
+    {
+     "label": "Trent Richardson (RB) · career, ALA",
+     "value": 35
+    },
+    {
+     "label": "Joe Burrow (QB) · career, LSU",
+     "value": 12
+    }
+   ],
+   "unit": "TD",
+   "sig": "rcar|rushTDJalen Hurtscareer,Joe Burrowcareer,Justin Jeffersoncareer,Trent Richardsoncareer"
+  }
+ ]
+}

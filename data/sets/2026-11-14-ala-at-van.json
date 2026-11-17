@@ -1,0 +1,97 @@
+{
+ "key": "rival:2026-11-14:ALA@VAN",
+ "slug": "2026-11-14-ala-at-van",
+ "game": {
+  "date": "2026-11-14",
+  "away": "ALA",
+  "home": "VAN"
+ },
+ "generatedAt": "2026-11-17T03:28:39.867Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Najee Harris finish his Alabama career with more or less than",
+   "line": "900 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Najee Harris had 781 receiving yards in his career.",
+   "check": {
+    "value": 781,
+    "line": 900
+   },
+   "sig": "pNajee Harriscareerrec"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2020, did DeVonta Smith (Alabama) have more or less than",
+   "line": "20.5 receiving TDs",
+   "answer": "over",
+   "reveal": "More. DeVonta Smith had 23 receiving TDs in 2020.",
+   "check": {
+    "value": 23,
+    "line": 20.5
+   },
+   "sig": "pDeVonta Smith2020recTD"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Jalen Hurts (QB) · 2017 ALA",
+     "value": 855
+    },
+    {
+     "label": "Najee Harris (RB) · 2019 ALA",
+     "value": 1224
+    },
+    {
+     "label": "Trent Richardson (RB) · 2011 ALA",
+     "value": 1679
+    },
+    {
+     "label": "Jalen Milroe (QB) · 2024 ALA",
+     "value": 726
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Jalen Hurts's best year was 2016 (954), not 2017; Najee Harris's best year was 2020 (1,466), not 2019.",
+   "sig": "trrushJalen Hurts2017,Jalen Milroe2024,Najee Harris2019,Trent Richardson2011"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Derrick Henry finish his Alabama career with more or less than",
+   "line": "4.5 receiving TDs",
+   "answer": "under",
+   "reveal": "Less. Derrick Henry had 3 receiving TDs in his career.",
+   "check": {
+    "value": 3,
+    "line": 4.5
+   },
+   "sig": "pDerrick HenrycareerrecTD"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did DeVonta Smith finish his Alabama career with more or less than",
+   "line": "3.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. DeVonta Smith had 1 rushing TDs in his career.",
+   "check": {
+    "value": 1,
+    "line": 3.5
+   },
+   "sig": "pDeVonta SmithcareerrushTD"
+  }
+ ]
+}

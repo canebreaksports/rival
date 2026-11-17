@@ -1,0 +1,152 @@
+{
+ "key": "rival:2026-11-14:TEX@LSU",
+ "slug": "2026-11-14-tex-at-lsu",
+ "game": {
+  "date": "2026-11-14",
+  "away": "TEX",
+  "home": "LSU"
+ },
+ "generatedAt": "2026-11-17T03:28:39.866Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2016, did Leonard Fournette (LSU) have more or less than",
+   "line": "900 yards from scrimmage",
+   "answer": "over",
+   "reveal": "More. Leonard Fournette had 989 yards from scrimmage in 2016.",
+   "check": {
+    "value": 989,
+    "line": 900
+   },
+   "sig": "pLeonard Fournette2016scrim"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs LSU",
+   "a": "TEX",
+   "b": "LSU",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    13,
+    15
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs LSU",
+   "a": "TEX",
+   "b": "LSU",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    5,
+    1
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Derrius Guice (RB) · 2017 LSU",
+     "value": 1251
+    },
+    {
+     "label": "Clyde Edwards-Helaire (RB) · 2018 LSU",
+     "value": 658
+    },
+    {
+     "label": "Jayden Daniels (QB) · 2023 LSU",
+     "value": 1134
+    },
+    {
+     "label": "Joe Burrow (QB) · 2019 LSU",
+     "value": 368
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Derrius Guice's best year was 2016 (1,387), not 2017; Clyde Edwards-Helaire's best year was 2019 (1,415), not 2018; Joe Burrow's best year was 2018 (399), not 2019.",
+   "sig": "trrushClyde Edwards-Helaire2018,Derrius Guice2017,Jayden Daniels2023,Joe Burrow2019"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receptions (at the school shown)?",
+   "A": {
+    "label": "Clyde Edwards-Helaire (LSU RB)",
+    "value": 69
+   },
+   "B": {
+    "label": "Leonard Fournette (LSU RB)",
+    "value": 41
+   },
+   "unit": "",
+   "note": "🚨 Upset: Clyde Edwards-Helaire 69 vs. Leonard Fournette 41.",
+   "sig": "urecNLeonard FournetteClyde Edwards-Helaire"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs LSU",
+   "a": "TEX",
+   "b": "LSU",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    236,
+    249
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing TDs, highest first.",
+   "items": [
+    {
+     "label": "Leonard Fournette (RB) · 2014 LSU",
+     "value": 10
+    },
+    {
+     "label": "Leonard Fournette (RB) · 2015 LSU",
+     "value": 22
+    },
+    {
+     "label": "Jayden Daniels (QB) · 2022 LSU",
+     "value": 11
+    },
+    {
+     "label": "Clyde Edwards-Helaire (RB) · 2018 LSU",
+     "value": 7
+    }
+   ],
+   "unit": "TD",
+   "sig": "rsea|rushTDClyde Edwards-Helaire2018,Jayden Daniels2022,Leonard Fournette2014,Leonard Fournette2015"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs LSU",
+   "a": "TEX",
+   "b": "LSU",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    13,
+    13
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  }
+ ]
+}

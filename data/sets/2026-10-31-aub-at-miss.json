@@ -1,0 +1,155 @@
+{
+ "key": "rival:2026-10-31:AUB@MISS",
+ "slug": "2026-10-31-aub-at-miss",
+ "game": {
+  "date": "2026-10-31",
+  "away": "AUB",
+  "home": "MISS"
+ },
+ "generatedAt": "2026-11-17T03:28:39.862Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Philip Lutzenkirchen (AUB TE)",
+    "value": 628
+   },
+   "B": {
+    "label": "Tre Mason (AUB RB)",
+    "value": 249
+   },
+   "unit": "",
+   "note": "🚨 Upset: Philip Lutzenkirchen 628 vs. Tre Mason 249.",
+   "sig": "urecTre MasonPhilip Lutzenkirchen"
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn6",
+   "type": "rank",
+   "prompt": "Rank these Auburn running backs by career rushing yards, highest first.",
+   "items": [
+    {
+     "label": "James Brooks",
+     "value": 3523
+    },
+    {
+     "label": "Tre Mason",
+     "value": 2979
+    },
+    {
+     "label": "Stephen Davis",
+     "value": 2811
+    },
+    {
+     "label": "Kenny Irons",
+     "value": 2186
+    }
+   ],
+   "unit": "yds"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Bo Jackson finish his Auburn career with more or less than",
+   "line": "42.5 rushing TDs",
+   "answer": "over",
+   "reveal": "More. Bo Jackson had 43 rushing TDs in his career.",
+   "check": {
+    "value": 43,
+    "line": 42.5
+   },
+   "sig": "pBo JacksoncareerrushTD"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2005, did Prechae Rodriguez (Auburn) have more or less than",
+   "line": "280 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Prechae Rodriguez had 240 receiving yards in 2005.",
+   "check": {
+    "value": 240,
+    "line": 280
+   },
+   "sig": "pPrechae Rodriguez2005rec"
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn7",
+   "type": "h2h",
+   "prompt": "Who had more career rushing yards at Auburn?",
+   "A": {
+    "label": "Joe Cribbs",
+    "value": 3368
+   },
+   "B": {
+    "label": "Tank Bigsby",
+    "value": 2903
+   },
+   "unit": "rushing yds",
+   "flip": false
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2004, did Devin Aromashodu (Auburn) have more or less than",
+   "line": "600 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Devin Aromashodu had 513 receiving yards in 2004.",
+   "check": {
+    "value": 513,
+    "line": 600
+   },
+   "sig": "pDevin Aromashodu2004rec"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Kenny Irons (RB) · 2006 AUB",
+     "value": 893
+    },
+    {
+     "label": "Tre Mason (RB) · 2012 AUB",
+     "value": 1002
+    },
+    {
+     "label": "Nick Marshall (QB) · 2014 AUB",
+     "value": 798
+    },
+    {
+     "label": "Cam Newton (QB) · 2010 AUB",
+     "value": 1473
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Kenny Irons's best year was 2005 (1,293), not 2006; Tre Mason's best year was 2013 (1,816), not 2012; Nick Marshall's best year was 2013 (1,068), not 2014.",
+   "sig": "trrushCam Newton2010,Kenny Irons2006,Nick Marshall2014,Tre Mason2012"
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn0",
+   "type": "moment",
+   "prompt": "Was Kenny Irons's best single-season rushing total at Auburn more or less than",
+   "line": "1,200 yards",
+   "answer": "over",
+   "reveal": "Over. He ran for 1,293 yards and 13 TDs in 2005."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "key": "rival:2026-11-14:FLA@UK",
+ "slug": "2026-11-14-fla-at-uk",
+ "game": {
+  "date": "2026-11-14",
+  "away": "FLA",
+  "home": "UK"
+ },
+ "generatedAt": "2026-11-17T03:28:39.865Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · Florida vs Kentucky",
+   "a": "FLA",
+   "b": "UK",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    9,
+    2
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Florida vs Kentucky",
+   "a": "FLA",
+   "b": "UK",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    13,
+    10
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Florida vs Kentucky",
+   "a": "FLA",
+   "b": "UK",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    218,
+    145
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Florida vs Kentucky",
+   "a": "FLA",
+   "b": "UK",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    6,
+    14
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Florida vs Kentucky",
+   "a": "FLA",
+   "b": "UK",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    0,
+    6
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  }
+ ]
+}

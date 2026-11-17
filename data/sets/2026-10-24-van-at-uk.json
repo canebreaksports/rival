@@ -1,0 +1,78 @@
+{
+ "key": "rival:2026-10-24:VAN@UK",
+ "slug": "2026-10-24-van-at-uk",
+ "game": {
+  "date": "2026-10-24",
+  "away": "VAN",
+  "home": "UK"
+ },
+ "generatedAt": "2026-11-17T03:28:39.861Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Kentucky",
+   "a": "VAN",
+   "b": "UK",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    10,
+    10
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Kentucky",
+   "a": "VAN",
+   "b": "UK",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    1,
+    2
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Kentucky",
+   "a": "VAN",
+   "b": "UK",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    12,
+    6
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Kentucky",
+   "a": "VAN",
+   "b": "UK",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    113,
+    145
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Kentucky",
+   "a": "VAN",
+   "b": "UK",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    21,
+    14
+   ],
+   "verified": true,
+   "sig": "glosing"
+  }
+ ]
+}

@@ -1,0 +1,151 @@
+{
+ "key": "rival:2026-09-19:FLA@AUB",
+ "slug": "2026-09-19-fla-at-aub",
+ "game": {
+  "date": "2026-09-19",
+  "away": "FLA",
+  "home": "AUB"
+ },
+ "generatedAt": "2026-11-17T03:28:39.841Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2014, did Nick Marshall (Auburn) have more or less than",
+   "line": "11.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. Nick Marshall had 11 rushing TDs in 2014.",
+   "check": {
+    "value": 11,
+    "line": 11.5
+   },
+   "sig": "pNick Marshall2014rushTD"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career receiving yards (at that school), highest first.",
+   "items": [
+    {
+     "label": "Devin Aromashodu (WR) · career, AUB",
+     "value": 1333
+    },
+    {
+     "label": "Courtney Taylor (WR) · career, AUB",
+     "value": 2098
+    },
+    {
+     "label": "Bo Jackson (RB) · career, AUB",
+     "value": 272
+    },
+    {
+     "label": "Tank Bigsby (RB) · career, AUB",
+     "value": 448
+    }
+   ],
+   "unit": "yds",
+   "sig": "rcar|recBo Jacksoncareer,Courtney Taylorcareer,Devin Aromashoducareer,Tank Bigsbycareer"
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn1",
+   "type": "moment",
+   "prompt": "Was Kenny Irons's best single season in yards from scrimmage more or less than",
+   "line": "1,600 yards",
+   "answer": "under",
+   "reveal": "Under. His best was 1,457 in 2005 (1,293 rushing + 164 receiving)."
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by receiving yards, highest first.",
+   "items": [
+    {
+     "label": "Ben Obomanu (WR) · 2005 AUB",
+     "value": 357
+    },
+    {
+     "label": "Devin Aromashodu (WR) · 2003 AUB",
+     "value": 22
+    },
+    {
+     "label": "Courtney Taylor (WR) · 2006 AUB",
+     "value": 704
+    },
+    {
+     "label": "Prechae Rodriguez (WR) · 2005 AUB",
+     "value": 240
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Ben Obomanu's best year was 2003 (373), not 2005; Devin Aromashodu's best year was 2004 (513), not 2003; Courtney Taylor's best year was 2004 (737), not 2006.",
+   "sig": "trrecBen Obomanu2005,Courtney Taylor2006,Devin Aromashodu2003,Prechae Rodriguez2005"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Tank Bigsby (AUB RB)",
+    "value": 448
+   },
+   "B": {
+    "label": "Carnell 'Cadillac' Williams (AUB RB)",
+    "value": 342
+   },
+   "unit": "",
+   "note": "🚨 Upset: Tank Bigsby 448 vs. Carnell 'Cadillac' Williams 342.",
+   "sig": "urecCarnell 'Cadillac' WilliamsTank Bigsby"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Stephen Davis finish his Auburn career with more or less than",
+   "line": "2,650 rushing yards",
+   "answer": "over",
+   "reveal": "More. Stephen Davis had 2,811 rushing yards in his career.",
+   "check": {
+    "value": 2811,
+    "line": 2650
+   },
+   "sig": "pStephen Daviscareerrush"
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn7",
+   "type": "h2h",
+   "prompt": "Who had more career rushing yards at Auburn?",
+   "A": {
+    "label": "Joe Cribbs",
+    "value": 3368
+   },
+   "B": {
+    "label": "Tank Bigsby",
+    "value": 2903
+   },
+   "unit": "rushing yds",
+   "flip": false
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn2",
+   "type": "moment",
+   "prompt": "Did Bo Jackson finish his Auburn career with more or less than",
+   "line": "4,000 rushing yards",
+   "answer": "over",
+   "reveal": "Over. Bo ran for 4,303 yards, still Auburn's career record."
+  }
+ ]
+}

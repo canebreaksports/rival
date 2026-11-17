@@ -1,0 +1,167 @@
+{
+ "key": "rival:2026-11-28:TENN@VAN",
+ "slug": "2026-11-28-tenn-at-van",
+ "game": {
+  "date": "2026-11-28",
+  "away": "TENN",
+  "home": "VAN"
+ },
+ "generatedAt": "2026-11-17T03:28:39.871Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2005, did Arian Foster (Tennessee) have more or less than",
+   "line": "1,200 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Arian Foster had 1,027 yards from scrimmage in 2005.",
+   "check": {
+    "value": 1027,
+    "line": 1200
+   },
+   "sig": "pArian Foster2005scrim"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    11,
+    10
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "label": "Tennessee",
+   "verified": true,
+   "sig": "kTennessee1",
+   "type": "moment",
+   "prompt": "Did Arian Foster finish his Tennessee career with more or less than",
+   "line": "3,000 rushing yards",
+   "answer": "under",
+   "reveal": "Under, barely. He finished with 2,964."
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "A": {
+    "label": "Dylan Sampson (TENN RB)",
+    "value": 5.9
+   },
+   "B": {
+    "label": "Jamal Lewis (TENN RB)",
+    "value": 5.5
+   },
+   "unit": "",
+   "ypc": true,
+   "note": "🚨 Upset: Dylan Sampson 5.9 per carry (420 carries) vs. Jamal Lewis 5.5 per carry (487 carries).",
+   "sig": "uypcJamal LewisDylan Sampson"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2008, did Arian Foster (Tennessee) have more or less than",
+   "line": "675 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Arian Foster had 570 rushing yards in 2008.",
+   "check": {
+    "value": 570,
+    "line": 675
+   },
+   "sig": "pArian Foster2008rush"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    194,
+    113
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career receiving TDs (at that school), highest first.",
+   "items": [
+    {
+     "label": "Jamal Lewis (RB) · career, TENN",
+     "value": 4
+    },
+    {
+     "label": "Dylan Sampson (RB) · career, TENN",
+     "value": 1
+    },
+    {
+     "label": "Jalin Hyatt (WR) · career, TENN",
+     "value": 19
+    },
+    {
+     "label": "Arian Foster (RB) · career, TENN",
+     "value": 2
+    }
+   ],
+   "unit": "TD",
+   "sig": "rcar|recTDArian Fostercareer,Dylan Sampsoncareer,Jalin Hyattcareer,Jamal Lewiscareer"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    1,
+    12
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "label": "Tennessee",
+   "verified": true,
+   "sig": "kTennessee3",
+   "type": "h2h",
+   "prompt": "Who had more career rushing yards at Tennessee?",
+   "A": {
+    "label": "Arian Foster",
+    "value": 2964
+   },
+   "B": {
+    "label": "Jamal Lewis",
+    "value": 2677
+   },
+   "unit": "rushing yds",
+   "flip": true
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2015, did Joshua Dobbs (Tennessee) have more or less than",
+   "line": "550 rushing yards",
+   "answer": "over",
+   "reveal": "More. Joshua Dobbs had 671 rushing yards in 2015.",
+   "check": {
+    "value": 671,
+    "line": 550
+   },
+   "sig": "pJoshua Dobbs2015rush"
+  }
+ ]
+}

@@ -1,0 +1,114 @@
+{
+ "key": "rival:2026-10-17:ALA@TENN",
+ "slug": "2026-10-17-ala-at-tenn",
+ "game": {
+  "date": "2026-10-17",
+  "away": "ALA",
+  "home": "TENN"
+ },
+ "generatedAt": "2026-11-17T03:28:39.858Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Trent Richardson finish his Alabama career with more or less than",
+   "line": "800 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Trent Richardson had 730 receiving yards in his career.",
+   "check": {
+    "value": 730,
+    "line": 800
+   },
+   "sig": "pTrent Richardsoncareerrec"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Dylan Sampson finish his Tennessee career with more or less than",
+   "line": "32.5 rushing TDs",
+   "answer": "over",
+   "reveal": "More. Dylan Sampson had 35 rushing TDs in his career.",
+   "check": {
+    "value": 35,
+    "line": 32.5
+   },
+   "sig": "pDylan SampsoncareerrushTD"
+  },
+  {
+   "label": "Tennessee",
+   "verified": true,
+   "sig": "kTennessee3",
+   "type": "h2h",
+   "prompt": "Who had more career rushing yards at Tennessee?",
+   "A": {
+    "label": "Arian Foster",
+    "value": 2964
+   },
+   "B": {
+    "label": "Jamal Lewis",
+    "value": 2677
+   },
+   "unit": "rushing yds",
+   "flip": false
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2022, did Dylan Sampson (Tennessee) have more or less than",
+   "line": "350 rushing yards",
+   "answer": "over",
+   "reveal": "More. Dylan Sampson had 397 rushing yards in 2022.",
+   "check": {
+    "value": 397,
+    "line": 350
+   },
+   "sig": "pDylan Sampson2022rush"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Najee Harris (RB) · 2019 ALA",
+     "value": 1224
+    },
+    {
+     "label": "Arian Foster (RB) · 2008 TENN",
+     "value": 570
+    },
+    {
+     "label": "Dylan Sampson (RB) · 2022 TENN",
+     "value": 397
+    },
+    {
+     "label": "Jalen Milroe (QB) · 2023 ALA",
+     "value": 531
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Najee Harris's best year was 2020 (1,466), not 2019; Arian Foster's best year was 2007 (1,193), not 2008; Dylan Sampson's best year was 2024 (1,485), not 2022; Jalen Milroe's best year was 2024 (726), not 2023.",
+   "sig": "trrushArian Foster2008,Dylan Sampson2022,Jalen Milroe2023,Najee Harris2019"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2019, did Najee Harris (Alabama) have more or less than",
+   "line": "15.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. Najee Harris had 13 rushing TDs in 2019.",
+   "check": {
+    "value": 13,
+    "line": 15.5
+   },
+   "sig": "pNajee Harris2019rushTD"
+  }
+ ]
+}

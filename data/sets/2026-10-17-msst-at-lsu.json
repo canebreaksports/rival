@@ -1,0 +1,100 @@
+{
+ "key": "rival:2026-10-17:MSST@LSU",
+ "slug": "2026-10-17-msst-at-lsu",
+ "game": {
+  "date": "2026-10-17",
+  "away": "MSST",
+  "home": "LSU"
+ },
+ "generatedAt": "2026-11-17T03:28:39.857Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2016, did Leonard Fournette (LSU) have more or less than",
+   "line": "925 yards from scrimmage",
+   "answer": "over",
+   "reveal": "More. Leonard Fournette had 989 yards from scrimmage in 2016.",
+   "check": {
+    "value": 989,
+    "line": 925
+   },
+   "sig": "pLeonard Fournette2016scrim"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Derrius Guice (LSU RB)",
+    "value": 3
+   },
+   "B": {
+    "label": "Leonard Fournette (LSU RB)",
+    "value": 1
+   },
+   "unit": "",
+   "note": "🚨 Upset: Derrius Guice 3 vs. Leonard Fournette 1.",
+   "sig": "urecTDLeonard FournetteDerrius Guice"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career rushing yards (at that school), highest first.",
+   "items": [
+    {
+     "label": "Justin Jefferson (WR) · career, LSU",
+     "value": 30
+    },
+    {
+     "label": "Jayden Daniels (QB) · career, LSU",
+     "value": 2019
+    },
+    {
+     "label": "Clyde Edwards-Helaire (RB) · career, LSU",
+     "value": 2104
+    },
+    {
+     "label": "Derrius Guice (RB) · career, LSU",
+     "value": 3074
+    }
+   ],
+   "unit": "yds",
+   "sig": "rcar|rushClyde Edwards-Helairecareer,Derrius Guicecareer,Jayden Danielscareer,Justin Jeffersoncareer"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2018, did Clyde Edwards-Helaire (LSU) have more or less than",
+   "line": "7.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. Clyde Edwards-Helaire had 7 rushing TDs in 2018.",
+   "check": {
+    "value": 7,
+    "line": 7.5
+   },
+   "sig": "pClyde Edwards-Helaire2018rushTD"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Derrius Guice finish his LSU career with more or less than",
+   "line": "2.5 receiving TDs",
+   "answer": "over",
+   "reveal": "More. Derrius Guice had 3 receiving TDs in his career.",
+   "check": {
+    "value": 3,
+    "line": 2.5
+   },
+   "sig": "pDerrius GuicecareerrecTD"
+  }
+ ]
+}

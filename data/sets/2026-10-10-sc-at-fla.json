@@ -1,0 +1,78 @@
+{
+ "key": "rival:2026-10-10:SC@FLA",
+ "slug": "2026-10-10-sc-at-fla",
+ "game": {
+  "date": "2026-10-10",
+  "away": "SC",
+  "home": "FLA"
+ },
+ "generatedAt": "2026-11-17T03:28:39.853Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · South Carolina vs Florida",
+   "a": "SC",
+   "b": "FLA",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    181,
+    218
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · South Carolina vs Florida",
+   "a": "SC",
+   "b": "FLA",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    8,
+    6
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · South Carolina vs Florida",
+   "a": "SC",
+   "b": "FLA",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    3,
+    9
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · South Carolina vs Florida",
+   "a": "SC",
+   "b": "FLA",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    2,
+    0
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · South Carolina vs Florida",
+   "a": "SC",
+   "b": "FLA",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    11,
+    13
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  }
+ ]
+}

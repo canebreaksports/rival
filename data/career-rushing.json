@@ -1,0 +1,191 @@
+{
+ "AUB": {
+  "floor": 2789,
+  "verified": true,
+  "source": "Wikipedia \"Auburn football statistical leaders\" (school record book), top 10",
+  "list": [
+   {
+    "name": "Bo Jackson",
+    "yards": 4303
+   },
+   {
+    "name": "Carnell 'Cadillac' Williams",
+    "yards": 3831
+   },
+   {
+    "name": "James Brooks",
+    "yards": 3523
+   },
+   {
+    "name": "Jarquez Hunter",
+    "yards": 3371
+   },
+   {
+    "name": "Joe Cribbs",
+    "yards": 3368
+   },
+   {
+    "name": "Ben Tate",
+    "yards": 3321
+   },
+   {
+    "name": "Tre Mason",
+    "yards": 2979
+   },
+   {
+    "name": "Tank Bigsby",
+    "yards": 2903
+   },
+   {
+    "name": "Stephen Davis",
+    "yards": 2811
+   },
+   {
+    "name": "Brent Fullwood",
+    "yards": 2789
+   }
+  ]
+ },
+ "TENN": {
+  "floor": 2492,
+  "verified": true,
+  "source": "Wikipedia \"Tennessee football statistical leaders\" (school record book), top 10",
+  "list": [
+   {
+    "name": "Travis Henry",
+    "yards": 3078
+   },
+   {
+    "name": "Arian Foster",
+    "yards": 2964
+   },
+   {
+    "name": "James Stewart",
+    "yards": 2890
+   },
+   {
+    "name": "Johnnie Jones",
+    "yards": 2852
+   },
+   {
+    "name": "DeSean Bishop",
+    "yards": 2694,
+    "active": true
+   },
+   {
+    "name": "Jamal Lewis",
+    "yards": 2677
+   },
+   {
+    "name": "Jalen Hurd",
+    "yards": 2638
+   },
+   {
+    "name": "Cedric Houston",
+    "yards": 2634
+   },
+   {
+    "name": "Jay Graham",
+    "yards": 2609
+   },
+   {
+    "name": "Dylan Sampson",
+    "yards": 2492
+   }
+  ]
+ },
+ "LSU": {
+  "floor": 2238,
+  "verified": true,
+  "source": "Wikipedia \"LSU football statistical leaders\" (school record book), top 10",
+  "list": [
+   {
+    "name": "Kevin Faulk",
+    "yards": 4557
+   },
+   {
+    "name": "Dalton Hilliard",
+    "yards": 4050
+   },
+   {
+    "name": "Charles Alexander",
+    "yards": 4035
+   },
+   {
+    "name": "Leonard Fournette",
+    "yards": 3830
+   },
+   {
+    "name": "Derrius Guice",
+    "yards": 3074
+   },
+   {
+    "name": "Harvey Williams",
+    "yards": 2860
+   },
+   {
+    "name": "Joseph Addai",
+    "yards": 2577
+   },
+   {
+    "name": "Terry Robiskie",
+    "yards": 2517
+   },
+   {
+    "name": "Charles Scott",
+    "yards": 2317
+   },
+   {
+    "name": "Rondell Mealey",
+    "yards": 2238
+   }
+  ]
+ },
+ "ALA": {
+  "floor": 2741,
+  "verified": true,
+  "source": "Wikipedia \"Alabama football statistical leaders\" (school record book), top 10",
+  "list": [
+   {
+    "name": "Najee Harris",
+    "yards": 3843
+   },
+   {
+    "name": "Derrick Henry",
+    "yards": 3591
+   },
+   {
+    "name": "Shaun Alexander",
+    "yards": 3565
+   },
+   {
+    "name": "Bobby Humphrey",
+    "yards": 3420
+   },
+   {
+    "name": "Kenneth Darby",
+    "yards": 3324
+   },
+   {
+    "name": "T. J. Yeldon",
+    "yards": 3322
+   },
+   {
+    "name": "Mark Ingram II",
+    "yards": 3261
+   },
+   {
+    "name": "Trent Richardson",
+    "yards": 3130
+   },
+   {
+    "name": "Damien Harris",
+    "yards": 3073
+   },
+   {
+    "name": "Johnny Musso",
+    "yards": 2741
+   }
+  ]
+ }
+}

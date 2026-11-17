@@ -1,0 +1,78 @@
+{
+ "key": "rival:2026-11-14:MIZ@UGA",
+ "slug": "2026-11-14-miz-at-uga",
+ "game": {
+  "date": "2026-11-14",
+  "away": "MIZ",
+  "home": "UGA"
+ },
+ "generatedAt": "2026-11-17T03:28:39.865Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · Missouri vs Georgia",
+   "a": "MIZ",
+   "b": "UGA",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    12,
+    15
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Missouri vs Georgia",
+   "a": "MIZ",
+   "b": "UGA",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    9,
+    1
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Missouri vs Georgia",
+   "a": "MIZ",
+   "b": "UGA",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    1,
+    0
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Missouri vs Georgia",
+   "a": "MIZ",
+   "b": "UGA",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    7,
+    18
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Missouri vs Georgia",
+   "a": "MIZ",
+   "b": "UGA",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    192,
+    271
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  }
+ ]
+}

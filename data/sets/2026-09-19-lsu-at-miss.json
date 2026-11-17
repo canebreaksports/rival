@@ -1,0 +1,108 @@
+{
+ "key": "rival:2026-09-19:LSU@MISS",
+ "slug": "2026-09-19-lsu-at-miss",
+ "game": {
+  "date": "2026-09-19",
+  "away": "LSU",
+  "home": "MISS"
+ },
+ "generatedAt": "2026-11-17T03:28:39.842Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2023, did Jayden Daniels (LSU) have more or less than",
+   "line": "8.5 rushing TDs",
+   "answer": "over",
+   "reveal": "More. Jayden Daniels had 10 rushing TDs in 2023.",
+   "check": {
+    "value": 10,
+    "line": 8.5
+   },
+   "sig": "pJayden Daniels2023rushTD"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
+   "items": [
+    {
+     "label": "Leonard Fournette (RB) · 2015 LSU",
+     "value": 2206
+    },
+    {
+     "label": "Clyde Edwards-Helaire (RB) · 2018 LSU",
+     "value": 754
+    },
+    {
+     "label": "Leonard Fournette (RB) · 2014 LSU",
+     "value": 1161
+    },
+    {
+     "label": "Derrius Guice (RB) · 2016 LSU",
+     "value": 1493
+    }
+   ],
+   "unit": "yds",
+   "sig": "rsea|scrimClyde Edwards-Helaire2018,Derrius Guice2016,Leonard Fournette2014,Leonard Fournette2015"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing TDs, highest first.",
+   "items": [
+    {
+     "label": "Clyde Edwards-Helaire (RB) · 2019 LSU",
+     "value": 16
+    },
+    {
+     "label": "Leonard Fournette (RB) · 2015 LSU",
+     "value": 22
+    },
+    {
+     "label": "Clyde Edwards-Helaire (RB) · 2018 LSU",
+     "value": 7
+    },
+    {
+     "label": "Jayden Daniels (QB) · 2023 LSU",
+     "value": 10
+    }
+   ],
+   "unit": "TD",
+   "sig": "rsea|rushTDClyde Edwards-Helaire2018,Clyde Edwards-Helaire2019,Jayden Daniels2023,Leonard Fournette2015"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "In 2014, did Leonard Fournette (LSU) have more or less than",
+   "line": "1,550 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Leonard Fournette had 1,034 rushing yards in 2014. 🪤 Trap: his big year was 2015 (1,953).",
+   "check": {
+    "value": 1034,
+    "line": 1550
+   },
+   "sig": "tpLeonard Fournette2014rush"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2016, did Leonard Fournette (LSU) have more or less than",
+   "line": "9.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. Leonard Fournette had 8 rushing TDs in 2016.",
+   "check": {
+    "value": 8,
+    "line": 9.5
+   },
+   "sig": "pLeonard Fournette2016rushTD"
+  }
+ ]
+}

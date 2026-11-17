@@ -1,0 +1,191 @@
+{
+ "key": "rival:2026-10-24:LSU@AUB",
+ "slug": "2026-10-24-lsu-at-aub",
+ "game": {
+  "date": "2026-10-24",
+  "away": "LSU",
+  "home": "AUB"
+ },
+ "generatedAt": "2026-11-17T03:28:39.860Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "A": {
+    "label": "Ben Obomanu (AUB WR)",
+    "value": 19.3
+   },
+   "B": {
+    "label": "Tre Mason (AUB RB)",
+    "value": 5.8
+   },
+   "unit": "",
+   "ypc": true,
+   "note": "🚨 Upset: Ben Obomanu 19.3 per carry (8 carries) vs. Tre Mason 5.8 per carry (516 carries).",
+   "sig": "uypcTre MasonBen Obomanu"
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn0",
+   "type": "moment",
+   "prompt": "Was Kenny Irons's best single-season rushing total at Auburn more or less than",
+   "line": "1,200 yards",
+   "answer": "over",
+   "reveal": "Over. He ran for 1,293 yards and 13 TDs in 2005."
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn1",
+   "type": "moment",
+   "prompt": "Was Kenny Irons's best single season in yards from scrimmage more or less than",
+   "line": "1,600 yards",
+   "answer": "under",
+   "reveal": "Under. His best was 1,457 in 2005 (1,293 rushing + 164 receiving)."
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "LSU",
+   "b": "AUB",
+   "threshold": 3500,
+   "A": [
+    {
+     "name": "Kevin Faulk",
+     "yards": 4557
+    },
+    {
+     "name": "Dalton Hilliard",
+     "yards": 4050
+    },
+    {
+     "name": "Charles Alexander",
+     "yards": 4035
+    },
+    {
+     "name": "Leonard Fournette",
+     "yards": 3830
+    }
+   ],
+   "B": [
+    {
+     "name": "Bo Jackson",
+     "yards": 4303
+    },
+    {
+     "name": "Carnell 'Cadillac' Williams",
+     "yards": 3831
+    },
+    {
+     "name": "James Brooks",
+     "yards": 3523
+    }
+   ],
+   "verified": true,
+   "sig": "cLSUAUB3500"
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn6",
+   "type": "rank",
+   "prompt": "Rank these Auburn running backs by career rushing yards, highest first.",
+   "items": [
+    {
+     "label": "James Brooks",
+     "value": 3523
+    },
+    {
+     "label": "Tre Mason",
+     "value": 2979
+    },
+    {
+     "label": "Stephen Davis",
+     "value": 2811
+    },
+    {
+     "label": "Kenny Irons",
+     "value": 2186
+    }
+   ],
+   "unit": "yds"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career rushing TDs (at that school), highest first.",
+   "items": [
+    {
+     "label": "Justin Jefferson (WR) · career, LSU",
+     "value": 0
+    },
+    {
+     "label": "Clyde Edwards-Helaire (RB) · career, LSU",
+     "value": 23
+    },
+    {
+     "label": "Leonard Fournette (RB) · career, LSU",
+     "value": 40
+    },
+    {
+     "label": "Carnell 'Cadillac' Williams (RB) · career, AUB",
+     "value": 45
+    }
+   ],
+   "unit": "TD",
+   "sig": "rcar|rushTDCarnell 'Cadillac' Williamscareer,Clyde Edwards-Helairecareer,Justin Jeffersoncareer,Leonard Fournettecareer"
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn7",
+   "type": "h2h",
+   "prompt": "Who had more career rushing yards at Auburn?",
+   "A": {
+    "label": "Joe Cribbs",
+    "value": 3368
+   },
+   "B": {
+    "label": "Tank Bigsby",
+    "value": 2903
+   },
+   "unit": "rushing yds",
+   "flip": true
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2005, did Kenny Irons (Auburn) have more or less than",
+   "line": "1,550 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Kenny Irons had 1,457 yards from scrimmage in 2005.",
+   "check": {
+    "value": 1457,
+    "line": 1550
+   },
+   "sig": "pKenny Irons2005scrim"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Carnell 'Cadillac' Williams finish his Auburn career with more or less than",
+   "line": "300 receiving yards",
+   "answer": "over",
+   "reveal": "More. Carnell 'Cadillac' Williams had 342 receiving yards in his career.",
+   "check": {
+    "value": 342,
+    "line": 300
+   },
+   "sig": "pCarnell 'Cadillac' Williamscareerrec"
+  }
+ ]
+}

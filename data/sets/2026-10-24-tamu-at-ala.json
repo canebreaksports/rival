@@ -1,0 +1,109 @@
+{
+ "key": "rival:2026-10-24:TAMU@ALA",
+ "slug": "2026-10-24-tamu-at-ala",
+ "game": {
+  "date": "2026-10-24",
+  "away": "TAMU",
+  "home": "ALA"
+ },
+ "generatedAt": "2026-11-17T03:28:39.859Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2020, did Najee Harris (Alabama) have more or less than",
+   "line": "1,750 yards from scrimmage",
+   "answer": "over",
+   "reveal": "More. Najee Harris had 1,891 yards from scrimmage in 2020.",
+   "check": {
+    "value": 1891,
+    "line": 1750
+   },
+   "sig": "pNajee Harris2020scrim"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Jalen Milroe finish his Alabama career with more or less than",
+   "line": "31.5 rushing TDs",
+   "answer": "over",
+   "reveal": "More. Jalen Milroe had 33 rushing TDs in his career.",
+   "check": {
+    "value": 33,
+    "line": 31.5
+   },
+   "sig": "pJalen MilroecareerrushTD"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by receiving TDs, highest first.",
+   "items": [
+    {
+     "label": "DeVonta Smith (WR) · 2020 ALA",
+     "value": 23
+    },
+    {
+     "label": "Najee Harris (RB) · 2020 ALA",
+     "value": 4
+    },
+    {
+     "label": "Najee Harris (RB) · 2019 ALA",
+     "value": 7
+    },
+    {
+     "label": "DeVonta Smith (WR) · 2019 ALA",
+     "value": 14
+    }
+   ],
+   "unit": "TD",
+   "sig": "rsea|recTDDeVonta Smith2019,DeVonta Smith2020,Najee Harris2019,Najee Harris2020"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Jalen Hurts (QB) · 2017 ALA",
+     "value": 855
+    },
+    {
+     "label": "Trent Richardson (RB) · 2010 ALA",
+     "value": 700
+    },
+    {
+     "label": "Najee Harris (RB) · 2019 ALA",
+     "value": 1224
+    },
+    {
+     "label": "Derrick Henry (RB) · 2015 ALA",
+     "value": 2219
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Jalen Hurts's best year was 2016 (954), not 2017; Trent Richardson's best year was 2011 (1,679), not 2010; Najee Harris's best year was 2020 (1,466), not 2019.",
+   "sig": "trrushDerrick Henry2015,Jalen Hurts2017,Najee Harris2019,Trent Richardson2010"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2023, did Jalen Milroe (Alabama) have more or less than",
+   "line": "450 rushing yards",
+   "answer": "over",
+   "reveal": "More. Jalen Milroe had 531 rushing yards in 2023.",
+   "check": {
+    "value": 531,
+    "line": 450
+   },
+   "sig": "pJalen Milroe2023rush"
+  }
+ ]
+}

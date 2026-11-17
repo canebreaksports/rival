@@ -1,0 +1,113 @@
+{
+ "key": "rival:2026-09-12:ALA@UK",
+ "slug": "2026-09-12-ala-at-uk",
+ "game": {
+  "date": "2026-09-12",
+  "away": "ALA",
+  "home": "UK"
+ },
+ "generatedAt": "2026-11-17T03:28:39.837Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Najee Harris (RB) · 2020 ALA",
+     "value": 1466
+    },
+    {
+     "label": "Derrick Henry (RB) · 2015 ALA",
+     "value": 2219
+    },
+    {
+     "label": "Najee Harris (RB) · 2019 ALA",
+     "value": 1224
+    },
+    {
+     "label": "Trent Richardson (RB) · 2011 ALA",
+     "value": 1679
+    }
+   ],
+   "unit": "yds",
+   "sig": "rsea|rushDerrick Henry2015,Najee Harris2019,Najee Harris2020,Trent Richardson2011"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "In 2014, did Derrick Henry (Alabama) have more or less than",
+   "line": "1,525 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Derrick Henry had 990 rushing yards in 2014. 🪤 Trap: his big year was 2015 (2,219).",
+   "check": {
+    "value": 990,
+    "line": 1525
+   },
+   "sig": "tpDerrick Henry2014rush"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career receiving yards (at that school), highest first.",
+   "items": [
+    {
+     "label": "Trent Richardson (RB) · career, ALA",
+     "value": 730
+    },
+    {
+     "label": "Najee Harris (RB) · career, ALA",
+     "value": 781
+    },
+    {
+     "label": "Derrick Henry (RB) · career, ALA",
+     "value": 285
+    },
+    {
+     "label": "DeVonta Smith (WR) · career, ALA",
+     "value": 3965
+    }
+   ],
+   "unit": "yds",
+   "sig": "rcar|recDeVonta Smithcareer,Derrick Henrycareer,Najee Harriscareer,Trent Richardsoncareer"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
+   "A": {
+    "label": "Jalen Milroe (ALA QB)",
+    "value": 33
+   },
+   "B": {
+    "label": "Jalen Hurts (ALA QB)",
+    "value": 23
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jalen Milroe 33 vs. Jalen Hurts 23.",
+   "sig": "urushTDJalen HurtsJalen Milroe"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Trent Richardson finish his Alabama career with more or less than",
+   "line": "35.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. Trent Richardson had 35 rushing TDs in his career.",
+   "check": {
+    "value": 35,
+    "line": 35.5
+   },
+   "sig": "pTrent RichardsoncareerrushTD"
+  }
+ ]
+}

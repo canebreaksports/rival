@@ -1,0 +1,98 @@
+{
+ "key": "rival:2026-11-21:UK@MIZ",
+ "slug": "2026-11-21-uk-at-miz",
+ "game": {
+  "date": "2026-11-21",
+  "away": "UK",
+  "home": "MIZ"
+ },
+ "generatedAt": "2026-11-17T03:28:39.868Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Missouri",
+   "a": "UK",
+   "b": "MIZ",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    6,
+    1
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Missouri",
+   "a": "UK",
+   "b": "MIZ",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    10,
+    12
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Missouri",
+   "a": "UK",
+   "b": "MIZ",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    14,
+    9
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Missouri",
+   "a": "UK",
+   "b": "MIZ",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    2,
+    7
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "label": "SEC East Newcomers",
+   "verified": true,
+   "sig": "kSEC East Newcomers1",
+   "type": "moment",
+   "prompt": "Missouri's biggest win over Kentucky came in 2013. Was the margin more or less than",
+   "line": "27.5 points",
+   "answer": "over",
+   "reveal": "Over. Missouri won 48–17, a 31-point margin."
+  },
+  {
+   "label": "SEC East Newcomers",
+   "verified": true,
+   "sig": "kSEC East Newcomers0",
+   "type": "moment",
+   "prompt": "Kentucky's longest win streak over Missouri is more or fewer than",
+   "line": "4.5 games",
+   "answer": "over",
+   "reveal": "Over. Kentucky won 5 straight from 2015 to 2019."
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Missouri",
+   "a": "UK",
+   "b": "MIZ",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    145,
+    192
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  }
+ ]
+}

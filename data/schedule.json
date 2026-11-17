@@ -1,0 +1,367 @@
+{
+ "source": "2026 SEC schedule: SI week-by-week composite grid, cross-checked with ESPN's weekly SEC schedule (spec §8.6)",
+ "games": [
+  {
+   "date": "2026-09-12",
+   "away": "ALA",
+   "home": "UK"
+  },
+  {
+   "date": "2026-09-19",
+   "away": "UGA",
+   "home": "ARK"
+  },
+  {
+   "date": "2026-09-19",
+   "away": "FLA",
+   "home": "AUB"
+  },
+  {
+   "date": "2026-09-19",
+   "away": "LSU",
+   "home": "MISS"
+  },
+  {
+   "date": "2026-09-19",
+   "away": "MSST",
+   "home": "SC"
+  },
+  {
+   "date": "2026-09-19",
+   "away": "UK",
+   "home": "TAMU"
+  },
+  {
+   "date": "2026-09-26",
+   "away": "SC",
+   "home": "ALA"
+  },
+  {
+   "date": "2026-09-26",
+   "away": "VAN",
+   "home": "AUB"
+  },
+  {
+   "date": "2026-09-26",
+   "away": "MISS",
+   "home": "FLA"
+  },
+  {
+   "date": "2026-09-26",
+   "away": "OU",
+   "home": "UGA"
+  },
+  {
+   "date": "2026-09-26",
+   "away": "TAMU",
+   "home": "LSU"
+  },
+  {
+   "date": "2026-09-26",
+   "away": "MIZ",
+   "home": "MSST"
+  },
+  {
+   "date": "2026-09-26",
+   "away": "TEX",
+   "home": "TENN"
+  },
+  {
+   "date": "2026-10-03",
+   "away": "VAN",
+   "home": "UGA"
+  },
+  {
+   "date": "2026-10-03",
+   "away": "ALA",
+   "home": "MSST"
+  },
+  {
+   "date": "2026-10-03",
+   "away": "FLA",
+   "home": "MIZ"
+  },
+  {
+   "date": "2026-10-03",
+   "away": "UK",
+   "home": "SC"
+  },
+  {
+   "date": "2026-10-03",
+   "away": "AUB",
+   "home": "TENN"
+  },
+  {
+   "date": "2026-10-03",
+   "away": "ARK",
+   "home": "TAMU"
+  },
+  {
+   "date": "2026-10-10",
+   "away": "UGA",
+   "home": "ALA"
+  },
+  {
+   "date": "2026-10-10",
+   "away": "TENN",
+   "home": "ARK"
+  },
+  {
+   "date": "2026-10-10",
+   "away": "SC",
+   "home": "FLA"
+  },
+  {
+   "date": "2026-10-10",
+   "away": "LSU",
+   "home": "UK"
+  },
+  {
+   "date": "2026-10-10",
+   "away": "TAMU",
+   "home": "MIZ"
+  },
+  {
+   "date": "2026-10-10",
+   "away": "TEX",
+   "home": "OU",
+   "site": "Dallas"
+  },
+  {
+   "date": "2026-10-10",
+   "away": "MISS",
+   "home": "VAN"
+  },
+  {
+   "date": "2026-10-17",
+   "away": "AUB",
+   "home": "UGA"
+  },
+  {
+   "date": "2026-10-17",
+   "away": "MSST",
+   "home": "LSU"
+  },
+  {
+   "date": "2026-10-17",
+   "away": "MIZ",
+   "home": "MISS"
+  },
+  {
+   "date": "2026-10-17",
+   "away": "UK",
+   "home": "OU"
+  },
+  {
+   "date": "2026-10-17",
+   "away": "ALA",
+   "home": "TENN"
+  },
+  {
+   "date": "2026-10-17",
+   "away": "FLA",
+   "home": "TEX"
+  },
+  {
+   "date": "2026-10-17",
+   "away": "ARK",
+   "home": "VAN"
+  },
+  {
+   "date": "2026-10-24",
+   "away": "TAMU",
+   "home": "ALA"
+  },
+  {
+   "date": "2026-10-24",
+   "away": "LSU",
+   "home": "AUB"
+  },
+  {
+   "date": "2026-10-24",
+   "away": "VAN",
+   "home": "UK"
+  },
+  {
+   "date": "2026-10-24",
+   "away": "OU",
+   "home": "MSST"
+  },
+  {
+   "date": "2026-10-24",
+   "away": "TENN",
+   "home": "SC"
+  },
+  {
+   "date": "2026-10-24",
+   "away": "MISS",
+   "home": "TEX"
+  },
+  {
+   "date": "2026-10-31",
+   "away": "MIZ",
+   "home": "ARK"
+  },
+  {
+   "date": "2026-10-31",
+   "away": "FLA",
+   "home": "UGA",
+   "site": "Atlanta"
+  },
+  {
+   "date": "2026-10-31",
+   "away": "AUB",
+   "home": "MISS"
+  },
+  {
+   "date": "2026-10-31",
+   "away": "SC",
+   "home": "OU"
+  },
+  {
+   "date": "2026-10-31",
+   "away": "MSST",
+   "home": "TEX"
+  },
+  {
+   "date": "2026-11-07",
+   "away": "ARK",
+   "home": "AUB"
+  },
+  {
+   "date": "2026-11-07",
+   "away": "OU",
+   "home": "FLA"
+  },
+  {
+   "date": "2026-11-07",
+   "away": "ALA",
+   "home": "LSU"
+  },
+  {
+   "date": "2026-11-07",
+   "away": "UGA",
+   "home": "MISS"
+  },
+  {
+   "date": "2026-11-07",
+   "away": "VAN",
+   "home": "MSST"
+  },
+  {
+   "date": "2026-11-07",
+   "away": "TEX",
+   "home": "MIZ"
+  },
+  {
+   "date": "2026-11-07",
+   "away": "TAMU",
+   "home": "SC"
+  },
+  {
+   "date": "2026-11-07",
+   "away": "UK",
+   "home": "TENN"
+  },
+  {
+   "date": "2026-11-14",
+   "away": "SC",
+   "home": "ARK"
+  },
+  {
+   "date": "2026-11-14",
+   "away": "MIZ",
+   "home": "UGA"
+  },
+  {
+   "date": "2026-11-14",
+   "away": "FLA",
+   "home": "UK"
+  },
+  {
+   "date": "2026-11-14",
+   "away": "TEX",
+   "home": "LSU"
+  },
+  {
+   "date": "2026-11-14",
+   "away": "AUB",
+   "home": "MSST"
+  },
+  {
+   "date": "2026-11-14",
+   "away": "MISS",
+   "home": "OU"
+  },
+  {
+   "date": "2026-11-14",
+   "away": "TENN",
+   "home": "TAMU"
+  },
+  {
+   "date": "2026-11-14",
+   "away": "ALA",
+   "home": "VAN"
+  },
+  {
+   "date": "2026-11-21",
+   "away": "VAN",
+   "home": "FLA"
+  },
+  {
+   "date": "2026-11-21",
+   "away": "UK",
+   "home": "MIZ"
+  },
+  {
+   "date": "2026-11-21",
+   "away": "TAMU",
+   "home": "OU"
+  },
+  {
+   "date": "2026-11-21",
+   "away": "UGA",
+   "home": "SC"
+  },
+  {
+   "date": "2026-11-21",
+   "away": "LSU",
+   "home": "TENN"
+  },
+  {
+   "date": "2026-11-21",
+   "away": "ARK",
+   "home": "TEX"
+  },
+  {
+   "date": "2026-11-27",
+   "away": "TEX",
+   "home": "TAMU"
+  },
+  {
+   "date": "2026-11-28",
+   "away": "AUB",
+   "home": "ALA"
+  },
+  {
+   "date": "2026-11-28",
+   "away": "LSU",
+   "home": "ARK"
+  },
+  {
+   "date": "2026-11-28",
+   "away": "MSST",
+   "home": "MISS"
+  },
+  {
+   "date": "2026-11-28",
+   "away": "OU",
+   "home": "MIZ"
+  },
+  {
+   "date": "2026-11-28",
+   "away": "TENN",
+   "home": "VAN"
+  }
+ ]
+}

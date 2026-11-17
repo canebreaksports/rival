@@ -1,0 +1,150 @@
+{
+ "key": "rival:2026-09-26:VAN@AUB",
+ "slug": "2026-09-26-van-at-aub",
+ "game": {
+  "date": "2026-09-26",
+  "away": "VAN",
+  "home": "AUB"
+ },
+ "generatedAt": "2026-11-17T03:28:39.844Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2003, did Ben Obomanu (Auburn) have more or less than",
+   "line": "5.5 receiving TDs",
+   "answer": "under",
+   "reveal": "Less. Ben Obomanu had 3 receiving TDs in 2003.",
+   "check": {
+    "value": 3,
+    "line": 5.5
+   },
+   "sig": "pBen Obomanu2003recTD"
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn1",
+   "type": "moment",
+   "prompt": "Was Kenny Irons's best single season in yards from scrimmage more or less than",
+   "line": "1,600 yards",
+   "answer": "under",
+   "reveal": "Under. His best was 1,457 in 2005 (1,293 rushing + 164 receiving)."
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career rushing yards (at that school), highest first.",
+   "items": [
+    {
+     "label": "Tank Bigsby (RB) · career, AUB",
+     "value": 2903
+    },
+    {
+     "label": "Cam Newton (QB) · career, AUB",
+     "value": 1473
+    },
+    {
+     "label": "Ben Obomanu (WR) · career, AUB",
+     "value": 154
+    },
+    {
+     "label": "Tre Mason (RB) · career, AUB",
+     "value": 2979
+    }
+   ],
+   "unit": "yds",
+   "sig": "rcar|rushBen Obomanucareer,Cam Newtoncareer,Tank Bigsbycareer,Tre Masoncareer"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receptions (at the school shown)?",
+   "A": {
+    "label": "Philip Lutzenkirchen (AUB TE)",
+    "value": 59
+   },
+   "B": {
+    "label": "Tre Mason (AUB RB)",
+    "value": 19
+   },
+   "unit": "",
+   "note": "🚨 Upset: Philip Lutzenkirchen 59 vs. Tre Mason 19.",
+   "sig": "urecNTre MasonPhilip Lutzenkirchen"
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn7",
+   "type": "h2h",
+   "prompt": "Who had more career rushing yards at Auburn?",
+   "A": {
+    "label": "Joe Cribbs",
+    "value": 3368
+   },
+   "B": {
+    "label": "Tank Bigsby",
+    "value": 2903
+   },
+   "unit": "rushing yds",
+   "flip": true
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "In 2003, did Courtney Taylor (Auburn) have more or less than",
+   "line": "600 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Courtney Taylor had 379 receiving yards in 2003. 🪤 Trap: his big year was 2004 (737).",
+   "check": {
+    "value": 379,
+    "line": 600
+   },
+   "sig": "tpCourtney Taylor2003rec"
+  },
+  {
+   "label": "Auburn",
+   "verified": true,
+   "sig": "kAuburn2",
+   "type": "moment",
+   "prompt": "Did Bo Jackson finish his Auburn career with more or less than",
+   "line": "4,000 rushing yards",
+   "answer": "over",
+   "reveal": "Over. Bo ran for 4,303 yards, still Auburn's career record."
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing TDs, highest first.",
+   "items": [
+    {
+     "label": "Nick Marshall (QB) · 2013 AUB",
+     "value": 12
+    },
+    {
+     "label": "Cam Newton (QB) · 2010 AUB",
+     "value": 20
+    },
+    {
+     "label": "Nick Marshall (QB) · 2014 AUB",
+     "value": 11
+    },
+    {
+     "label": "Tre Mason (RB) · 2013 AUB",
+     "value": 23
+    }
+   ],
+   "unit": "TD",
+   "sig": "rsea|rushTDCam Newton2010,Nick Marshall2013,Nick Marshall2014,Tre Mason2013"
+  }
+ ]
+}

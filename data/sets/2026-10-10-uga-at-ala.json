@@ -1,0 +1,108 @@
+{
+ "key": "rival:2026-10-10:UGA@ALA",
+ "slug": "2026-10-10-uga-at-ala",
+ "game": {
+  "date": "2026-10-10",
+  "away": "UGA",
+  "home": "ALA"
+ },
+ "generatedAt": "2026-11-17T03:28:39.852Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2014, did Derrick Henry (Alabama) have more or less than",
+   "line": "1,125 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Derrick Henry had 990 rushing yards in 2014.",
+   "check": {
+    "value": 990,
+    "line": 1125
+   },
+   "sig": "pDerrick Henry2014rush"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "In 2019, did DeVonta Smith (Alabama) have more or less than",
+   "line": "1,550 receiving yards",
+   "answer": "under",
+   "reveal": "Less. DeVonta Smith had 1,256 receiving yards in 2019. 🪤 Trap: his big year was 2020 (1,856).",
+   "check": {
+    "value": 1256,
+    "line": 1550
+   },
+   "sig": "tpDeVonta Smith2019rec"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Jalen Hurts (QB) · 2017 ALA",
+     "value": 855
+    },
+    {
+     "label": "Derrick Henry (RB) · 2015 ALA",
+     "value": 2219
+    },
+    {
+     "label": "Najee Harris (RB) · 2019 ALA",
+     "value": 1224
+    },
+    {
+     "label": "Najee Harris (RB) · 2020 ALA",
+     "value": 1466
+    }
+   ],
+   "unit": "yds",
+   "sig": "rsea|rushDerrick Henry2015,Jalen Hurts2017,Najee Harris2019,Najee Harris2020"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by receiving TDs, highest first.",
+   "items": [
+    {
+     "label": "Najee Harris (RB) · 2019 ALA",
+     "value": 7
+    },
+    {
+     "label": "Najee Harris (RB) · 2020 ALA",
+     "value": 4
+    },
+    {
+     "label": "DeVonta Smith (WR) · 2019 ALA",
+     "value": 14
+    },
+    {
+     "label": "DeVonta Smith (WR) · 2020 ALA",
+     "value": 23
+    }
+   ],
+   "unit": "TD",
+   "sig": "rsea|recTDDeVonta Smith2019,DeVonta Smith2020,Najee Harris2019,Najee Harris2020"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2010, did Trent Richardson (Alabama) have more or less than",
+   "line": "4.5 rushing TDs",
+   "answer": "over",
+   "reveal": "More. Trent Richardson had 6 rushing TDs in 2010.",
+   "check": {
+    "value": 6,
+    "line": 4.5
+   },
+   "sig": "pTrent Richardson2010rushTD"
+  }
+ ]
+}

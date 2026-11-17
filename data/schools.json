@@ -1,0 +1,210 @@
+[
+ {
+  "key": "ALA",
+  "name": "Alabama",
+  "color": "#9e1b32",
+  "program": {
+   "heisman": 4,
+   "sec": 9,
+   "natl": 6,
+   "unbeaten": 2
+  },
+  "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
+  "programVerified": false
+ },
+ {
+  "key": "ARK",
+  "name": "Arkansas",
+  "color": "#9d2235",
+  "program": {
+   "heisman": 0,
+   "sec": 0,
+   "natl": 0,
+   "unbeaten": 0
+  },
+  "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
+  "programVerified": false
+ },
+ {
+  "key": "AUB",
+  "name": "Auburn",
+  "color": "#f26522",
+  "program": {
+   "heisman": 3,
+   "sec": 3,
+   "natl": 1,
+   "unbeaten": 2
+  },
+  "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
+  "programVerified": false
+ },
+ {
+  "key": "FLA",
+  "name": "Florida",
+  "color": "#0021a5",
+  "program": {
+   "heisman": 3,
+   "sec": 3,
+   "natl": 2,
+   "unbeaten": 0
+  },
+  "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
+  "programVerified": false
+ },
+ {
+  "key": "UGA",
+  "name": "Georgia",
+  "color": "#ba0c2f",
+  "program": {
+   "heisman": 2,
+   "sec": 5,
+   "natl": 2,
+   "unbeaten": 1
+  },
+  "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
+  "programVerified": false
+ },
+ {
+  "key": "UK",
+  "name": "Kentucky",
+  "color": "#0033a0",
+  "program": {
+   "heisman": 0,
+   "sec": 0,
+   "natl": 0,
+   "unbeaten": 0
+  },
+  "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
+  "programVerified": false
+ },
+ {
+  "key": "LSU",
+  "name": "LSU",
+  "color": "#fdd023",
+  "program": {
+   "heisman": 3,
+   "sec": 5,
+   "natl": 3,
+   "unbeaten": 1
+  },
+  "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
+  "programVerified": false
+ },
+ {
+  "key": "MSST",
+  "name": "Mississippi State",
+  "color": "#7a0019",
+  "program": {
+   "heisman": 0,
+   "sec": 0,
+   "natl": 0,
+   "unbeaten": 0
+  },
+  "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
+  "programVerified": false
+ },
+ {
+  "key": "MIZ",
+  "name": "Missouri",
+  "color": "#f1b82d",
+  "program": {
+   "heisman": 0,
+   "sec": 0,
+   "natl": 0,
+   "unbeaten": 0
+  },
+  "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
+  "programVerified": false
+ },
+ {
+  "key": "OU",
+  "name": "Oklahoma",
+  "color": "#841617",
+  "program": {
+   "heisman": 7,
+   "sec": 0,
+   "natl": 1,
+   "unbeaten": 1
+  },
+  "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
+  "programVerified": false
+ },
+ {
+  "key": "MISS",
+  "name": "Ole Miss",
+  "color": "#ce1126",
+  "program": {
+   "heisman": 0,
+   "sec": 0,
+   "natl": 0,
+   "unbeaten": 0
+  },
+  "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
+  "programVerified": false
+ },
+ {
+  "key": "SC",
+  "name": "South Carolina",
+  "color": "#73000a",
+  "program": {
+   "heisman": 1,
+   "sec": 0,
+   "natl": 0,
+   "unbeaten": 0
+  },
+  "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
+  "programVerified": false
+ },
+ {
+  "key": "TENN",
+  "name": "Tennessee",
+  "color": "#ff8200",
+  "program": {
+   "heisman": 0,
+   "sec": 0,
+   "natl": 0,
+   "unbeaten": 0
+  },
+  "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
+  "programVerified": false
+ },
+ {
+  "key": "TEX",
+  "name": "Texas",
+  "color": "#bf5700",
+  "program": {
+   "heisman": 2,
+   "sec": 0,
+   "natl": 1,
+   "unbeaten": 1
+  },
+  "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
+  "programVerified": false
+ },
+ {
+  "key": "TAMU",
+  "name": "Texas A&M",
+  "color": "#500000",
+  "program": {
+   "heisman": 2,
+   "sec": 0,
+   "natl": 0,
+   "unbeaten": 0
+  },
+  "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
+  "programVerified": false
+ },
+ {
+  "key": "VAN",
+  "name": "Vanderbilt",
+  "color": "#cfae70",
+  "program": {
+   "heisman": 0,
+   "sec": 0,
+   "natl": 0,
+   "unbeaten": 0
+  },
+  "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
+  "programVerified": false
+ }
+]

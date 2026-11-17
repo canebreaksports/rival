@@ -1,0 +1,78 @@
+{
+ "key": "rival:2026-11-07:TAMU@SC",
+ "slug": "2026-11-07-tamu-at-sc",
+ "game": {
+  "date": "2026-11-07",
+  "away": "TAMU",
+  "home": "SC"
+ },
+ "generatedAt": "2026-11-17T03:28:39.864Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs South Carolina",
+   "a": "TAMU",
+   "b": "SC",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    2,
+    3
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs South Carolina",
+   "a": "TAMU",
+   "b": "SC",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    195,
+    181
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs South Carolina",
+   "a": "TAMU",
+   "b": "SC",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    0,
+    2
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs South Carolina",
+   "a": "TAMU",
+   "b": "SC",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    5,
+    8
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs South Carolina",
+   "a": "TAMU",
+   "b": "SC",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    11,
+    11
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  }
+ ]
+}

@@ -1,0 +1,179 @@
+{
+ "key": "rival:2026-11-07:UK@TENN",
+ "slug": "2026-11-07-uk-at-tenn",
+ "game": {
+  "date": "2026-11-07",
+  "away": "UK",
+  "home": "TENN"
+ },
+ "generatedAt": "2026-11-17T03:28:39.865Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career receiving yards (at that school), highest first.",
+   "items": [
+    {
+     "label": "Arian Foster (RB) · career, TENN",
+     "value": 742
+    },
+    {
+     "label": "Jalin Hyatt (WR) · career, TENN",
+     "value": 1769
+    },
+    {
+     "label": "Dylan Sampson (RB) · career, TENN",
+     "value": 340
+    },
+    {
+     "label": "Jamal Lewis (RB) · career, TENN",
+     "value": 475
+    }
+   ],
+   "unit": "yds",
+   "sig": "rcar|recArian Fostercareer,Dylan Sampsoncareer,Jalin Hyattcareer,Jamal Lewiscareer"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Tennessee",
+   "a": "UK",
+   "b": "TENN",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    6,
+    1
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career rushing yards (at that school), highest first.",
+   "items": [
+    {
+     "label": "Joshua Dobbs (QB) · career, TENN",
+     "value": 2160
+    },
+    {
+     "label": "Dylan Sampson (RB) · career, TENN",
+     "value": 2486
+    },
+    {
+     "label": "Arian Foster (RB) · career, TENN",
+     "value": 2964
+    },
+    {
+     "label": "Jalin Hyatt (WR) · career, TENN",
+     "value": 13
+    }
+   ],
+   "unit": "yds",
+   "sig": "rcar|rushArian Fostercareer,Dylan Sampsoncareer,Jalin Hyattcareer,Joshua Dobbscareer"
+  },
+  {
+   "label": "Tennessee",
+   "verified": true,
+   "sig": "kTennessee2",
+   "type": "moment",
+   "prompt": "In 2024, did Dylan Sampson score more or fewer than",
+   "line": "19.5 rushing TDs",
+   "answer": "over",
+   "reveal": "Over. He had 22 rushing TDs and 1,485 yards."
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Whose best college season had more yards from scrimmage?",
+   "A": {
+    "label": "Dylan Sampson (TENN RB)",
+    "value": 1626
+   },
+   "B": {
+    "label": "Arian Foster (TENN RB)",
+    "value": 1533
+   },
+   "unit": "",
+   "note": "🚨 Upset: Dylan Sampson 1,626 vs. Arian Foster 1,533.",
+   "sig": "upeakScrimArian FosterDylan Sampson"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Tennessee",
+   "a": "UK",
+   "b": "TENN",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    145,
+    194
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "label": "Tennessee",
+   "verified": true,
+   "sig": "kTennessee3",
+   "type": "h2h",
+   "prompt": "Who had more career rushing yards at Tennessee?",
+   "A": {
+    "label": "Arian Foster",
+    "value": 2964
+   },
+   "B": {
+    "label": "Jamal Lewis",
+    "value": 2677
+   },
+   "unit": "rushing yds",
+   "flip": true
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Arian Foster finish his Tennessee career with more or less than",
+   "line": "24.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. Arian Foster had 23 rushing TDs in his career.",
+   "check": {
+    "value": 23,
+    "line": 24.5
+   },
+   "sig": "pArian FostercareerrushTD"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "In 2023, did Dylan Sampson (Tennessee) have more or less than",
+   "line": "1,175 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Dylan Sampson had 604 rushing yards in 2023. 🪤 Trap: his big year was 2024 (1,485).",
+   "check": {
+    "value": 604,
+    "line": 1175
+   },
+   "sig": "tpDylan Sampson2023rush"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Tennessee",
+   "a": "UK",
+   "b": "TENN",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    14,
+    9
+   ],
+   "verified": true,
+   "sig": "glosing"
+  }
+ ]
+}

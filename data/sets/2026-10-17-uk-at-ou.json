@@ -1,0 +1,78 @@
+{
+ "key": "rival:2026-10-17:UK@OU",
+ "slug": "2026-10-17-uk-at-ou",
+ "game": {
+  "date": "2026-10-17",
+  "away": "UK",
+  "home": "OU"
+ },
+ "generatedAt": "2026-11-17T03:28:39.857Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Oklahoma",
+   "a": "UK",
+   "b": "OU",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    6,
+    0
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Oklahoma",
+   "a": "UK",
+   "b": "OU",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    145,
+    271
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Oklahoma",
+   "a": "UK",
+   "b": "OU",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    14,
+    2
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Oklahoma",
+   "a": "UK",
+   "b": "OU",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    2,
+    20
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Oklahoma",
+   "a": "UK",
+   "b": "OU",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    10,
+    13
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  }
+ ]
+}

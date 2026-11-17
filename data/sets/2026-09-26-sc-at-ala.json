@@ -1,0 +1,112 @@
+{
+ "key": "rival:2026-09-26:SC@ALA",
+ "slug": "2026-09-26-sc-at-ala",
+ "game": {
+  "date": "2026-09-26",
+  "away": "SC",
+  "home": "ALA"
+ },
+ "generatedAt": "2026-11-17T03:28:39.843Z",
+ "engine": 1,
+ "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2024, did Jalen Milroe (Alabama) have more or less than",
+   "line": "20.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. Jalen Milroe had 20 rushing TDs in 2024.",
+   "check": {
+    "value": 20,
+    "line": 20.5
+   },
+   "sig": "pJalen Milroe2024rushTD"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career receiving TDs (at that school), highest first.",
+   "items": [
+    {
+     "label": "DeVonta Smith (WR) · career, ALA",
+     "value": 46
+    },
+    {
+     "label": "Trent Richardson (RB) · career, ALA",
+     "value": 7
+    },
+    {
+     "label": "Najee Harris (RB) · career, ALA",
+     "value": 11
+    },
+    {
+     "label": "Derrick Henry (RB) · career, ALA",
+     "value": 3
+    }
+   ],
+   "unit": "TD",
+   "sig": "rcar|recTDDeVonta Smithcareer,Derrick Henrycareer,Najee Harriscareer,Trent Richardsoncareer"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
+   "A": {
+    "label": "Jalen Milroe (ALA QB)",
+    "value": 33
+   },
+   "B": {
+    "label": "Jalen Hurts (ALA QB)",
+    "value": 23
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jalen Milroe 33 vs. Jalen Hurts 23.",
+   "sig": "urushTDJalen HurtsJalen Milroe"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2010, did Trent Richardson (Alabama) have more or less than",
+   "line": "550 rushing yards",
+   "answer": "over",
+   "reveal": "More. Trent Richardson had 700 rushing yards in 2010.",
+   "check": {
+    "value": 700,
+    "line": 550
+   },
+   "sig": "pTrent Richardson2010rush"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Derrick Henry (RB) · 2014 ALA",
+     "value": 990
+    },
+    {
+     "label": "Trent Richardson (RB) · 2011 ALA",
+     "value": 1679
+    },
+    {
+     "label": "Jalen Hurts (QB) · 2018 ALA",
+     "value": 167
+    },
+    {
+     "label": "Jalen Milroe (QB) · 2023 ALA",
+     "value": 531
+    }
+   ],
+   "unit": "yds",
+   "sig": "rsea|rushDerrick Henry2014,Jalen Hurts2018,Jalen Milroe2023,Trent Richardson2011"
+  }
+ ]
+}
