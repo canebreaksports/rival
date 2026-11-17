@@ -6,204 +6,30 @@
   "away": "UK",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-17T17:22:31.546Z",
- "engine": 8,
+ "generatedAt": "2026-11-17T17:39:48.007Z",
+ "engine": 9,
  "questions": [
   {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Rank these seasons by rushing TDs, highest first.",
-   "items": [
-    {
-     "label": "Demie Sumo (RB) · 2024 UK",
-     "value": 5,
-     "school": "UK"
-    },
-    {
-     "label": "Larry Rountree III (RB) · 2019 MIZ",
-     "value": 9,
-     "school": "MIZ"
-    },
-    {
-     "label": "Damarea Crockett (RB) · 2016 MIZ",
-     "value": 10,
-     "school": "MIZ"
-    },
-    {
-     "label": "Asim Rose (RB) · 2019 UK",
-     "value": 6,
-     "school": "UK"
-    }
-   ],
-   "unit": "TD",
-   "sig": "rsea|rushTDAsim Rose2019,Damarea Crockett2016,Demie Sumo2024,Larry Rountree III2019"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
+   "type": "mc",
+   "label": "Since 2012",
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Oct 29, 2016",
-    "winner": "UK",
-    "loser": "MIZ",
-    "ws": 35,
-    "ls": 21,
-    "venue": "Memorial Stadium"
-   },
-   "prompt": "In this game, did Dimetrios Mason (Missouri) have more or less than",
-   "line": "120 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Dimetrios Mason had 101 receiving yards on 4 catches and 2 TD in this game.",
-   "check": {
-    "value": 101,
-    "line": 120
-   },
-   "sig": "gm2016-10-29Dimetrios Masonrec"
-  },
-  {
-   "type": "count",
-   "label": "School Count",
-   "a": "UK",
-   "b": "MIZ",
-   "threshold": 2800,
-   "A": [
-    {
-     "name": "Benny Snell",
-     "yards": 3873
-    },
-    {
-     "name": "Sonny Collins",
-     "yards": 3835
-    },
-    {
-     "name": "Chris Rodriguez Jr.",
-     "yards": 3644
-    },
-    {
-     "name": "Moe Williams",
-     "yards": 3333
-    },
-    {
-     "name": "Rafael Little",
-     "yards": 2996
-    },
-    {
-     "name": "Mark Higgs",
-     "yards": 2892
-    }
+   "prompt": "Since 2012, which player from either school has the most receiving yards against the other?",
+   "options": [
+    "Garrett Johnson (Kentucky)",
+    "Lynn Bowden Jr. (Kentucky)",
+    "Johnathon Johnson (Missouri)",
+    "Tyler Badie (Missouri)"
    ],
-   "B": [
-    {
-     "name": "Brad Smith",
-     "yards": 4289
-    },
-    {
-     "name": "Larry Rountree III",
-     "yards": 3720
-    },
-    {
-     "name": "Zack Abron",
-     "yards": 3198
-    },
-    {
-     "name": "Brock Olivo",
-     "yards": 3026
-    },
-    {
-     "name": "Devin West",
-     "yards": 2954
-    }
+   "answer": 0,
+   "order": [
+    3,
+    1,
+    0,
+    2
    ],
-   "verified": true,
-   "sig": "cUKMIZ2800"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Oct 26, 2019",
-    "winner": "UK",
-    "loser": "MIZ",
-    "ws": 29,
-    "ls": 7,
-    "venue": "Kroger Field"
-   },
-   "prompt": "In this game, did Lynn Bowden Jr. (Kentucky) run for more or less than",
-   "line": "250 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Lynn Bowden Jr. had 204 rushing yards on 21 carries and 2 TD in this game.",
-   "check": {
-    "value": 204,
-    "line": 250
-   },
-   "sig": "gm2019-10-26Lynn Bowden Jr.rush"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Kentucky–Missouri games, highest first.",
-   "items": [
-    {
-     "label": "Cody Schrader (MIZ) · 2022",
-     "value": 65,
-     "school": "MIZ"
-    },
-    {
-     "label": "Re'Mahn Davis (UK) · 2023",
-     "value": 128,
-     "school": "UK"
-    },
-    {
-     "label": "Ish Witter (MIZ) · 2015",
-     "value": 50,
-     "school": "MIZ"
-    },
-    {
-     "label": "Kendial Lawrence (MIZ) · 2012",
-     "value": 108,
-     "school": "MIZ"
-    }
-   ],
-   "sig": "grrushCody Schrader2022,Ish Witter2015,Kendial Lawrence2012,Re'Mahn Davis2023"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Oct 29, 2016",
-    "winner": "UK",
-    "loser": "MIZ",
-    "ws": 35,
-    "ls": 21,
-    "venue": "Memorial Stadium"
-   },
-   "prompt": "In this game, did Stanley Williams (Kentucky) run for more or less than",
-   "line": "125 rushing yards",
-   "answer": "over",
-   "reveal": "More. Stanley Williams had 182 rushing yards on 19 carries and 1 TD in this game.",
-   "check": {
-    "value": 182,
-    "line": 125
-   },
-   "sig": "gm2016-10-29Stanley Williamsrush"
-  },
-  {
-   "label": "SEC East Newcomers",
-   "verified": true,
-   "sig": "kSEC East Newcomers1",
-   "type": "moment",
-   "prompt": "Missouri's biggest win over Kentucky came in 2013. Was the margin more or less than",
-   "line": "27.5 points",
-   "answer": "over",
-   "reveal": "Over. Missouri won 48–17, a 31-point margin."
+   "reveal": "Garrett Johnson (Kentucky) 271 in 4 games · Lynn Bowden Jr. (Kentucky) 215 in 3 games · Johnathon Johnson (Missouri) 205 in 4 games · Tyler Badie (Missouri) 194 in 4 games",
+   "sig": "tvrec"
   },
   {
    "type": "rank",
@@ -212,37 +38,37 @@
    "pitted": true,
    "unit": "yds",
    "game": {
-    "date": "Oct 7, 2017",
-    "winner": "UK",
-    "loser": "MIZ",
-    "ws": 40,
-    "ls": 34,
+    "date": "Nov 9, 2013",
+    "winner": "MIZ",
+    "loser": "UK",
+    "ws": 48,
+    "ls": 17,
     "venue": "Kroger Field"
    },
    "prompt": "In this game, rank these players by receiving yards, highest first.",
    "items": [
     {
-     "label": "Garrett Johnson (UK)",
-     "value": 111,
+     "label": "Jeff Badet (UK)",
+     "value": 25,
      "school": "UK"
     },
     {
-     "label": "Emanuel Hall (MIZ)",
-     "value": 129,
+     "label": "Bud Sasser (MIZ)",
+     "value": 43,
      "school": "MIZ"
     },
     {
-     "label": "J'Mon Moore (MIZ)",
-     "value": 86,
-     "school": "MIZ"
-    },
-    {
-     "label": "Lynn Bowden Jr. (UK)",
-     "value": 49,
+     "label": "Raymond Sanders (UK)",
+     "value": 68,
      "school": "UK"
+    },
+    {
+     "label": "Dorial Green-Beckham (MIZ)",
+     "value": 100,
+     "school": "MIZ"
     }
    ],
-   "sig": "gs2017-10-07rec"
+   "sig": "gs2013-11-09rec"
   },
   {
    "type": "prog",
@@ -258,17 +84,147 @@
    "sig": "gwin3"
   },
   {
+   "label": "SEC East Newcomers",
+   "verified": true,
+   "sig": "kSEC East Newcomers0",
+   "type": "moment",
+   "prompt": "Kentucky's longest win streak over Missouri is more or fewer than",
+   "line": "4.5 games",
+   "answer": "over",
+   "reveal": "Over. Kentucky won 5 straight from 2015 to 2019."
+  },
+  {
    "type": "prog",
    "label": "Program Pit · Kentucky vs Missouri",
    "a": "UK",
    "b": "MIZ",
-   "prompt": "Whose best season since 2000 had more wins?",
+   "prompt": "Who had more losing seasons from 2000–2025?",
    "values": [
-    10,
-    12
+    14,
+    9
    ],
    "verified": true,
-   "sig": "gpeakW"
+   "sig": "glosing"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receptions (at the school shown)?",
+   "A": {
+    "label": "Ish Witter (MIZ RB)",
+    "value": 33,
+    "school": "MIZ"
+   },
+   "B": {
+    "label": "Chris Rodriguez Jr. (UK RB)",
+    "value": 20,
+    "school": "UK"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Ish Witter 33 vs. Chris Rodriguez Jr. 20.",
+   "sig": "urecNChris Rodriguez Jr.Ish Witter"
+  },
+  {
+   "type": "rank",
+   "label": "Rivalry Games",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these single-game rushing performances in Kentucky–Missouri games, highest first.",
+   "items": [
+    {
+     "label": "Asim Rose (UK) · 2019",
+     "value": 51,
+     "school": "UK"
+    },
+    {
+     "label": "Larry Rountree III (MIZ) · 2020",
+     "value": 126,
+     "school": "MIZ"
+    },
+    {
+     "label": "Cody Schrader (MIZ) · 2023",
+     "value": 71,
+     "school": "MIZ"
+    },
+    {
+     "label": "Lynn Bowden Jr. (UK) · 2019",
+     "value": 204,
+     "school": "UK"
+    }
+   ],
+   "sig": "grrushAsim Rose2019,Cody Schrader2023,Larry Rountree III2020,Lynn Bowden Jr.2019"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2017,
+   "stat": "Rushing season",
+   "aSchool": "MIZ",
+   "other": "UK",
+   "aName": "Ish Witter (RB)",
+   "bName": "Stephen Johnson (QB)",
+   "A": {
+    "big": "1,049",
+    "sm": "rush yds · 6 TD"
+   },
+   "B": {
+    "big": "375",
+    "sm": "rush yds · 5 TD"
+   },
+   "flip": true,
+   "sig": "drush2017Ish Witter,Stephen Johnson"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Oct 7, 2017",
+    "winner": "UK",
+    "loser": "MIZ",
+    "ws": 40,
+    "ls": 34,
+    "venue": "Kroger Field"
+   },
+   "prompt": "In this game, did Kayaune Ross (Kentucky) have more or less than",
+   "line": "100 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Kayaune Ross had 77 receiving yards on 4 catches and 0 TD in this game.",
+   "check": {
+    "value": 77,
+    "line": 100
+   },
+   "sig": "gm2017-10-07Kayaune Rossrec"
+  },
+  {
+   "type": "count",
+   "label": "Since 2020",
+   "a": "UK",
+   "b": "MIZ",
+   "threshold": 1100,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2020 through 2025, which school had more 1,100-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Wan'Dale Robinson",
+     "yards": 1334,
+     "season": 2021
+    }
+   ],
+   "B": [
+    {
+     "name": "Luther Burden III",
+     "yards": 1205,
+     "season": 2023
+    }
+   ],
+   "sig": "tsrec11002020"
   }
  ]
 }

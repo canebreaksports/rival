@@ -6,9 +6,10 @@ import career from "@/data/career-rushing.json";
 import schedule from "@/data/schedule.json";
 import curated from "@/data/curated.json";
 import rivalry from "@/data/rivalry.json";
+import leaders from "@/data/season-leaders.json";
 import type { Dataset, School, SchoolKey } from "./types";
 
-export const DATA = { schools, seasons, players, career, schedule, curated, rivalry } as unknown as Dataset;
+export const DATA = { schools, seasons, players, career, schedule, curated, rivalry, leaders } as unknown as Dataset;
 
 export { SCHOOL } from "./schools";
 

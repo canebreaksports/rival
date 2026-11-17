@@ -6,116 +6,118 @@
   "away": "ARK",
   "home": "TEX"
  },
- "generatedAt": "2026-11-17T17:22:31.559Z",
- "engine": 8,
+ "generatedAt": "2026-11-17T17:39:48.014Z",
+ "engine": 9,
  "questions": [
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career receiving yards (at that school), highest first.",
+   "items": [
+    {
+     "label": "Xavier Worthy (WR) · career, TEX",
+     "value": 2755,
+     "school": "TEX"
+    },
+    {
+     "label": "Andrew Armstrong (WR) · career, ARK",
+     "value": 1904,
+     "school": "ARK"
+    },
+    {
+     "label": "Gunnar Helm (TE) · career, TEX",
+     "value": 1022,
+     "school": "TEX"
+    },
+    {
+     "label": "Keaontay Ingram (RB) · career, TEX",
+     "value": 515,
+     "school": "TEX"
+    }
+   ],
+   "unit": "yds",
+   "sig": "rcar|recAndrew Armstrongcareer,Gunnar Helmcareer,Keaontay Ingramcareer,Xavier Worthycareer"
+  },
   {
    "type": "moment",
    "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Sep 27, 2008",
-    "winner": "TEX",
-    "loser": "ARK",
-    "ws": 52,
-    "ls": 10,
-    "venue": "DKR-Texas Memorial Stadium"
+    "date": "Dec 29, 2014",
+    "winner": "ARK",
+    "loser": "TEX",
+    "ws": 31,
+    "ls": 7,
+    "venue": "NRG Stadium · Postseason"
    },
-   "prompt": "In this game, did Quan Cosby (Texas) have more or less than",
-   "line": "50 receiving yards",
+   "prompt": "In this game, did Jonathan Williams (Arkansas) run for more or less than",
+   "line": "80 rushing yards",
    "answer": "over",
-   "reveal": "More. Quan Cosby had 67 receiving yards on 5 catches and 1 TD in this game.",
+   "reveal": "More. Jonathan Williams had 105 rushing yards on 23 carries and 1 TD in this game.",
    "check": {
-    "value": 67,
-    "line": 50
+    "value": 105,
+    "line": 80
    },
-   "sig": "gm2008-09-27Quan Cosbyrec"
+   "sig": "gm2014-12-29Jonathan Williamsrush"
   },
   {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2022,
-   "stat": "Rushing season",
-   "aSchool": "ARK",
-   "other": "TEX",
-   "aName": "Raheim Sanders (RB)",
-   "bName": "Roschon Johnson (RB)",
-   "A": {
-    "big": "1,443",
-    "sm": "rush yds · 10 TD"
-   },
-   "B": {
-    "big": "554",
-    "sm": "rush yds · 5 TD"
-   },
-   "flip": false,
-   "sig": "drush2022Raheim Sanders,Roschon Johnson"
-  },
-  {
-   "label": "Southwest Conference Rivals",
-   "verified": true,
-   "sig": "kSouthwest Conference Rivals1",
-   "type": "moment",
-   "prompt": "Texas's longest win streak in the series is more or fewer than",
-   "line": "12.5 games",
-   "answer": "over",
-   "reveal": "Over. Texas won 14 straight from 1894 to 1932. Arkansas's best is 4 (1935–38)."
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Arkansas vs Texas",
+   "type": "count",
+   "label": "Since 2018",
    "a": "ARK",
    "b": "TEX",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    11,
-    13
+   "threshold": 1000,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2018 through 2025, which school had more 1,000-yard rushing seasons?",
+   "A": [
+    {
+     "name": "Rakeem Boyd",
+     "yards": 1133,
+     "season": 2019
+    },
+    {
+     "name": "Raheim Sanders",
+     "yards": 1443,
+     "season": 2022
+    },
+    {
+     "name": "Michael Washington",
+     "yards": 1068,
+     "season": 2025
+    }
    ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Arkansas vs Texas",
-   "a": "ARK",
-   "b": "TEX",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
-   "values": [
-    5,
-    0
+   "B": [
+    {
+     "name": "Bijan Robinson",
+     "yards": 1127,
+     "season": 2021
+    },
+    {
+     "name": "Bijan Robinson",
+     "yards": 1578,
+     "season": 2022
+    },
+    {
+     "name": "Jonathon Brooks",
+     "yards": 1139,
+     "season": 2023
+    },
+    {
+     "name": "Tre Wisner",
+     "yards": 1064,
+     "season": 2024
+    }
    ],
-   "verified": true,
-   "sig": "gwin3"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
-   "A": {
-    "label": "Cheyenne O'Grady (ARK TE)",
-    "value": 12,
-    "school": "ARK"
-   },
-   "B": {
-    "label": "Ricky Williams (TEX RB)",
-    "value": 4,
-    "school": "TEX"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Cheyenne O'Grady 12 vs. Ricky Williams 4.",
-   "sig": "urecTDRicky WilliamsCheyenne O'Grady"
+   "sig": "tsrush10002018"
   },
   {
    "type": "count",
    "label": "School Count",
    "a": "ARK",
    "b": "TEX",
-   "threshold": 3000,
+   "threshold": 2800,
    "A": [
     {
      "name": "Darren McFadden",
@@ -136,6 +138,14 @@
     {
      "name": "Cedric Cobbs",
      "yards": 3018
+    },
+    {
+     "name": "Felix Jones",
+     "yards": 2956
+    },
+    {
+     "name": "James Rouse",
+     "yards": 2887
     }
    ],
    "B": [
@@ -166,10 +176,18 @@
     {
      "name": "Vince Young",
      "yards": 3127
+    },
+    {
+     "name": "Roosevelt Leaks",
+     "yards": 2923
+    },
+    {
+     "name": "A. J. Jones",
+     "yards": 2874
     }
    ],
    "verified": true,
-   "sig": "cARKTEX3000"
+   "sig": "cARKTEX2800"
   },
   {
    "type": "rank",
@@ -188,8 +206,8 @@
    "prompt": "In this game, rank these players by receiving yards, highest first.",
    "items": [
     {
-     "label": "Raylen Sharpe (ARK)",
-     "value": 65,
+     "label": "Rohan Jones (ARK)",
+     "value": 82,
      "school": "ARK"
     },
     {
@@ -198,9 +216,9 @@
      "school": "TEX"
     },
     {
-     "label": "Ryan Wingo (TEX)",
-     "value": 81,
-     "school": "TEX"
+     "label": "Jaden Platt (ARK)",
+     "value": 66,
+     "school": "ARK"
     },
     {
      "label": "Michael Washington (ARK)",
@@ -211,36 +229,91 @@
    "sig": "gs2025-11-22rec"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
+   "type": "prog",
+   "label": "Program Pit · Arkansas vs Texas",
+   "a": "ARK",
+   "b": "TEX",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    11,
+    5
+   ],
    "verified": true,
-   "prompt": "Did Alex Collins finish his Arkansas career with more or less than",
-   "line": "3,550 yards from scrimmage",
-   "answer": "over",
-   "reveal": "More. Alex Collins had 3,870 yards from scrimmage in his career.",
-   "check": {
-    "value": 3870,
-    "line": 3550
-   },
-   "sig": "ppAlex Collinscareer|Ricky Williamscareerscrim0",
-   "pair": "ppAlex Collinscareer|Ricky Williamscareerscrim",
-   "pairPart": 1
+   "sig": "glosing"
   },
   {
+   "label": "Southwest Conference Rivals",
+   "verified": true,
+   "sig": "kSouthwest Conference Rivals1",
    "type": "moment",
+   "prompt": "Texas's longest win streak in the series is more or fewer than",
+   "line": "12.5 games",
+   "answer": "over",
+   "reveal": "Over. Texas won 14 straight from 1894 to 1932. Arkansas's best is 4 (1935–38)."
+  },
+  {
+   "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "Did Ricky Williams finish his Texas career with more or less than",
-   "line": "7,900 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. Ricky Williams had 7,267 yards from scrimmage in his career.",
-   "check": {
-    "value": 7267,
-    "line": 7900
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Jordan Whittington (TEX WR) · career receiving yards",
+     "value": 1757,
+     "school": "TEX"
+    },
+    {
+     "label": "Alex Collins (ARK RB) · 2013 rushing yards",
+     "value": 1026,
+     "school": "ARK"
+    },
+    {
+     "label": "Johnathan Gray (TEX RB) · 2013 yards from scrimmage",
+     "value": 841,
+     "school": "TEX"
+    },
+    {
+     "label": "Keaontay Ingram (TEX RB) · 2020 yards from scrimmage",
+     "value": 353,
+     "school": "TEX"
+    }
+   ],
+   "sig": "mxydsAlex Collins2013 rushing yards,Johnathan Gray2013 yards from scrimmage,Jordan Whittingtoncareer receiving yards,Keaontay Ingram2020 yards from scrimmage"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Arkansas vs Texas",
+   "a": "ARK",
+   "b": "TEX",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    3,
+    13
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Gunnar Helm (TEX TE)",
+    "value": 9,
+    "school": "TEX"
    },
-   "sig": "ppAlex Collinscareer|Ricky Williamscareerscrim1",
-   "pair": "ppAlex Collinscareer|Ricky Williamscareerscrim",
-   "pairPart": 2
+   "B": {
+    "label": "Alex Collins (ARK RB)",
+    "value": 0,
+    "school": "ARK"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Gunnar Helm 9 vs. Alex Collins 0.",
+   "sig": "urecTDAlex CollinsGunnar Helm"
   }
  ]
 }

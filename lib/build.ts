@@ -2,11 +2,12 @@
 import type { CuratedItem, Dataset, FrozenSet, Game, Question, QType, SchoolKey } from "./types";
 import { pick, seededRng, shuffle, type Rng } from "./rng";
 import { PROGRAM_STATS, SCHOOL, programValue } from "./data";
+import { genGameCount, genSeasonCount, genVsLeaderMC } from "./trend-gen";
 import { genGameMoment, genGameRank, genGameRankSingle, genSeriesCount, genTeamDiffMC, genVsH2H, pairKey } from "./rivalry-gen";
 import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 8; // v8: single-game Rank It, team-stat multiple choice (v7: rivalry questions)
+export const ENGINE_VERSION = 9; // v9: weekly "since <year>" trend questions (v8: single-game rank, team-stat MC)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean }
@@ -84,6 +85,16 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
     gens.push(gm, gm, gm, gm, vs, vs, vs, gr, gr, gs, gs, td, td, () => genSeriesCount(rv, a, b, rng));
   }
   const out: Question[] = [], sigs = new Set<string>();
+  // Weekly "since <year>" trend questions come first so every matchup gets them (up to 2: one count, one other)
+  if (teams.length > 1) {
+    const [a, b] = teams, rv0 = data.rivalry?.pairs[pairKey(a, b)];
+    const tries = shuffle(rng, [
+      () => (data.leaders ? genSeasonCount(data.leaders, a, b, rng) : null),
+      () => (rv0 ? genGameCount(rv0, a, b, rng) : null),
+      () => (rv0 ? genVsLeaderMC(rv0, a, b, rng) : null),
+    ]);
+    for (const f of tries) { if (out.length >= 2) break; const q = f(); if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q) } }
+  }
   if (rng() < 0.7) { const u = genUpset(c); if (u) { sigs.add(u.sig); out.push(u) } }
   let trapped = rng() < 0.25;
   for (let t = 0; t < n * 20 && out.length < n; t++) { // pitted formats fail often (both-schools rule), so try harder
@@ -100,7 +111,7 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
 /** Per-set caps (spec §2). Trap and upset limits apply across generated and curated questions. */
 export function caps(progCap: number, pitted = false): Record<QType, number> {
   // Pitted sets lean on cross-school formats, so they get more room (owner's call, Nov 2026).
-  return pitted ? { moment: 4, prog: progCap, h2h: 4, rank: 3, count: 1, duel: 3, cross: 1, mc: 2 }
+  return pitted ? { moment: 4, prog: progCap, h2h: 4, rank: 3, count: 2, duel: 3, cross: 1, mc: 2 }
     : { moment: 4, prog: progCap, h2h: 3, rank: 2, count: 1, duel: 2, cross: 1, mc: 2 };
 }
 

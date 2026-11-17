@@ -6,59 +6,119 @@
   "away": "AUB",
   "home": "ALA"
  },
- "generatedAt": "2026-11-17T17:22:31.566Z",
- "engine": 8,
+ "generatedAt": "2026-11-17T17:39:48.018Z",
+ "engine": 9,
  "questions": [
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 25, 2023",
-    "winner": "ALA",
-    "loser": "AUB",
-    "ws": 27,
-    "ls": 24,
-    "venue": "Jordan-Hare Stadium"
-   },
-   "prompt": "In this game, did Jalen Milroe (Alabama) throw for more or less than",
-   "line": "200 passing yards",
-   "answer": "over",
-   "reveal": "More. Jalen Milroe had 259 passing yards and 2 TD in this game.",
-   "check": {
-    "value": 259,
-    "line": 200
-   },
-   "sig": "gm2023-11-25Jalen Milroepass"
-  },
   {
    "type": "h2h",
    "label": "Fresh Mix",
    "upset": true,
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receptions (at the school shown)?",
+   "flip": true,
+   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
    "A": {
-    "label": "Philip Lutzenkirchen (AUB TE)",
-    "value": 59,
+    "label": "Ben Obomanu (AUB WR)",
+    "value": 19.3,
     "school": "AUB"
    },
    "B": {
-    "label": "Derrick Henry (ALA RB)",
-    "value": 17,
+    "label": "Najee Harris (ALA RB)",
+    "value": 6,
     "school": "ALA"
    },
    "unit": "",
-   "note": "🚨 Upset: Philip Lutzenkirchen 59 vs. Derrick Henry 17.",
-   "sig": "urecNDerrick HenryPhilip Lutzenkirchen"
+   "ypc": true,
+   "note": "🚨 Upset: Ben Obomanu 19.3 per carry (8 carries) vs. Najee Harris 6.0 per carry (638 carries).",
+   "sig": "uypcNajee HarrisBen Obomanu"
+  },
+  {
+   "type": "rank",
+   "label": "Rivalry Games",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these single-game rushing performances in Auburn–Alabama games, highest first.",
+   "items": [
+    {
+     "label": "Jovon Robinson (AUB) · 2015",
+     "value": 51,
+     "school": "AUB"
+    },
+    {
+     "label": "Kenyan Drake (ALA) · 2012",
+     "value": 67,
+     "school": "ALA"
+    },
+    {
+     "label": "Nick Marshall (AUB) · 2013",
+     "value": 99,
+     "school": "AUB"
+    },
+    {
+     "label": "Jamarion Miller (ALA) · 2024",
+     "value": 84,
+     "school": "ALA"
+    }
+   ],
+   "sig": "grrushJamarion Miller2024,Jovon Robinson2015,Kenyan Drake2012,Nick Marshall2013"
+  },
+  {
+   "type": "mc",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 29, 2025",
+    "winner": "ALA",
+    "loser": "AUB",
+    "ws": 27,
+    "ls": 20,
+    "venue": "Jordan-Hare Stadium"
+   },
+   "prompt": "What was the difference in total yards in Alabama's 27–20 win over Auburn?",
+   "options": [
+    "Auburn +131 yards",
+    "Alabama +201 yards",
+    "Auburn +181 yards",
+    "Auburn +101 yards"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    0,
+    1,
+    3
+   ],
+   "reveal": "Auburn +131. Alabama had 280 total yards, Auburn 411.",
+   "sig": "td2025-11-29total"
+  },
+  {
+   "type": "mc",
+   "label": "Since 2006",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2006, which player from either school has the most rushing yards against the other?",
+   "options": [
+    "Derrick Henry (Alabama)",
+    "T.J. Yeldon (Alabama)",
+    "Jarquez Hunter (Auburn)",
+    "Trent Richardson (Alabama)"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    3,
+    2,
+    0
+   ],
+   "reveal": "Derrick Henry (Alabama) 343 in 2 games · T.J. Yeldon (Alabama) 306 in 3 games · Jarquez Hunter (Auburn) 285 in 4 games · Trent Richardson (Alabama) 278 in 3 games",
+   "sig": "tvrush"
   },
   {
    "type": "count",
    "label": "School Count",
    "a": "AUB",
    "b": "ALA",
-   "threshold": 3000,
+   "threshold": 3500,
    "A": [
     {
      "name": "Bo Jackson",
@@ -71,18 +131,6 @@
     {
      "name": "James Brooks",
      "yards": 3523
-    },
-    {
-     "name": "Jarquez Hunter",
-     "yards": 3371
-    },
-    {
-     "name": "Joe Cribbs",
-     "yards": 3368
-    },
-    {
-     "name": "Ben Tate",
-     "yards": 3321
     }
    ],
    "B": [
@@ -97,132 +145,60 @@
     {
      "name": "Shaun Alexander",
      "yards": 3565
-    },
-    {
-     "name": "Bobby Humphrey",
-     "yards": 3420
-    },
-    {
-     "name": "Kenneth Darby",
-     "yards": 3324
-    },
-    {
-     "name": "T. J. Yeldon",
-     "yards": 3322
-    },
-    {
-     "name": "Mark Ingram II",
-     "yards": 3261
-    },
-    {
-     "name": "Trent Richardson",
-     "yards": 3130
-    },
-    {
-     "name": "Damien Harris",
-     "yards": 3073
     }
    ],
    "verified": true,
-   "sig": "cAUBALA3000"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 29, 2014",
-    "winner": "ALA",
-    "loser": "AUB",
-    "ws": 55,
-    "ls": 44,
-    "venue": "Bryant-Denny Stadium"
-   },
-   "prompt": "In this game, did Cameron Artis-Payne (Auburn) run for more or less than",
-   "line": "60 rushing yards",
-   "answer": "over",
-   "reveal": "More. Cameron Artis-Payne had 77 rushing yards on 25 carries and 0 TD in this game.",
-   "check": {
-    "value": 77,
-    "line": 60
-   },
-   "sig": "gm2014-11-29Cameron Artis-Paynerush"
+   "sig": "cAUBALA3500"
   },
   {
    "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
-     "label": "Cam Newton (AUB QB) · 2010 rushing yards",
-     "value": 1473,
+     "label": "Tre Mason (AUB RB) · career rushing TDs",
+     "value": 32,
      "school": "AUB"
     },
     {
-     "label": "Trent Richardson (ALA RB) · 2010 yards from scrimmage",
-     "value": 966,
+     "label": "Derrick Henry (ALA RB) · 2014 rushing TDs",
+     "value": 11,
      "school": "ALA"
     },
     {
-     "label": "Ronnie Brown (AUB RB) · career yards from scrimmage",
-     "value": 3375,
-     "school": "AUB"
+     "label": "Najee Harris (ALA RB) · 2019 receiving TDs",
+     "value": 7,
+     "school": "ALA"
     },
     {
-     "label": "Tank Bigsby (AUB RB) · career rushing yards",
-     "value": 2903,
+     "label": "Ben Obomanu (AUB WR) · career receiving TDs",
+     "value": 18,
      "school": "AUB"
     }
    ],
-   "sig": "mxydsCam Newton2010 rushing yards,Ronnie Browncareer yards from scrimmage,Tank Bigsbycareer rushing yards,Trent Richardson2010 yards from scrimmage"
+   "sig": "mxTDBen Obomanucareer receiving TDs,Derrick Henry2014 rushing TDs,Najee Harris2019 receiving TDs,Tre Masoncareer rushing TDs"
   },
   {
-   "type": "rank",
-   "label": "Fresh Mix",
+   "type": "h2h",
+   "label": "Against Each Other",
    "verified": true,
-   "prompt": "Rank these seasons by rushing yards, highest first.",
-   "items": [
-    {
-     "label": "Trent Richardson (RB) · 2010 ALA",
-     "value": 700,
-     "school": "ALA"
-    },
-    {
-     "label": "Ronnie Brown (RB) · 2002 AUB",
-     "value": 1008,
-     "school": "AUB"
-    },
-    {
-     "label": "Jalen Hurts (QB) · 2017 ALA",
-     "value": 855,
-     "school": "ALA"
-    },
-    {
-     "label": "Ronnie Brown (RB) · 2003 AUB",
-     "value": 446,
-     "school": "AUB"
-    }
-   ],
-   "unit": "yds",
-   "sig": "rsea|rushJalen Hurts2017,Ronnie Brown2002,Ronnie Brown2003,Trent Richardson2010"
-  },
-  {
-   "type": "moment",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, did Auburn beat Alabama more or fewer than",
-   "line": "11.5 times",
-   "answer": "under",
-   "reveal": "Fewer. Auburn went 11–15 against Alabama from 2000 to 2025 (26 meetings, on-field results).",
-   "check": {
-    "value": 11,
-    "line": 11.5
+   "flip": true,
+   "prompt": "In Auburn–Alabama games since 2006, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Malcolm Simmons (AUB) vs. Alabama",
+    "value": 177,
+    "school": "AUB"
    },
-   "sig": "scAUBALA"
+   "B": {
+    "label": "Ja'Corey Brooks (ALA) vs. Auburn",
+    "value": 125,
+    "school": "ALA"
+   },
+   "unit": "receiving yds",
+   "note": "Malcolm Simmons: 177 in 2 games. Ja'Corey Brooks: 125 in 2 games.",
+   "sig": "vsrecJa'Corey Brooks,Malcolm Simmons"
   }
  ]
 }

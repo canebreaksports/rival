@@ -49,7 +49,7 @@ export function validateData(d: Dataset): string[] {
 /** Checks one question is internally consistent. */
 export function validateQuestion(q: Question): string[] {
   const errs: string[] = [];
-  const where = `${q.type} "${"prompt" in q ? q.prompt.slice(0, 60) : q.sig}"`;
+  const where = `${q.type} "${"prompt" in q && q.prompt ? q.prompt.slice(0, 60) : q.sig}"`;
   if (q.type === "moment" && q.check) {
     const { value, line } = q.check;
     if (value === line) errs.push(`${where}: value equals line`);

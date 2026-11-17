@@ -6,57 +6,92 @@
   "away": "VAN",
   "home": "FLA"
  },
- "generatedAt": "2026-11-17T17:22:31.544Z",
- "engine": 8,
+ "generatedAt": "2026-11-17T17:39:48.005Z",
+ "engine": 9,
  "questions": [
   {
-   "type": "moment",
-   "label": "Series History",
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
+   "items": [
+    {
+     "label": "Montrell Johnson (RB) · 2022 FLA",
+     "value": 899,
+     "school": "FLA"
+    },
+    {
+     "label": "Kelvin Taylor (RB) · 2013 FLA",
+     "value": 545,
+     "school": "FLA"
+    },
+    {
+     "label": "Keyon Brooks (RB) · 2019 VAN",
+     "value": 309,
+     "school": "VAN"
+    },
+    {
+     "label": "Malik Davis (RB) · 2021 FLA",
+     "value": 704,
+     "school": "FLA"
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Montrell Johnson's best year was 2023 (1,053), not 2022; Kelvin Taylor's best year was 2015 (1,185), not 2013; Keyon Brooks's best year was 2020 (738), not 2019.",
+   "sig": "trscrimKelvin Taylor2013,Keyon Brooks2019,Malik Davis2021,Montrell Johnson2022"
+  },
+  {
+   "type": "mc",
+   "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
-   "prompt": "From 2000 through 2025, did Florida beat Vanderbilt more or fewer than",
-   "line": "23.5 times",
-   "answer": "under",
-   "reveal": "Fewer. Florida went 22–2 against Vanderbilt from 2000 to 2025 (24 meetings, on-field results).",
-   "check": {
-    "value": 22,
-    "line": 23.5
+   "game": {
+    "date": "Nov 19, 2022",
+    "winner": "VAN",
+    "loser": "FLA",
+    "ws": 31,
+    "ls": 24,
+    "venue": "FirstBank Stadium"
    },
-   "sig": "scFLAVAN"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Vanderbilt vs Florida",
-   "a": "VAN",
-   "b": "FLA",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    21,
-    6
+   "prompt": "What was the difference in total yards in Vanderbilt's 31–24 win over Florida?",
+   "options": [
+    "Florida +162 yards",
+    "Vanderbilt +32 yards",
+    "Florida +92 yards",
+    "Florida +112 yards"
    ],
-   "verified": true,
-   "sig": "glosing"
+   "answer": 0,
+   "order": [
+    1,
+    3,
+    0,
+    2
+   ],
+   "reveal": "Florida +162. Vanderbilt had 283 total yards, Florida 445.",
+   "sig": "td2022-11-19total"
   },
   {
-   "type": "duel",
-   "label": "Fresh Mix",
+   "type": "mc",
+   "label": "Since 2012",
    "verified": true,
-   "year": 2024,
-   "stat": "Rushing season",
-   "aSchool": "VAN",
-   "other": "FLA",
-   "aName": "Diego Pavia (QB)",
-   "bName": "Montrell Johnson (RB)",
-   "A": {
-    "big": "800",
-    "sm": "rush yds · 8 TD"
-   },
-   "B": {
-    "big": "593",
-    "sm": "rush yds · 6 TD"
-   },
-   "flip": false,
-   "sig": "drush2024Diego Pavia,Montrell Johnson"
+   "pitted": true,
+   "prompt": "Since 2012, which player from either school has the most rushing yards against the other?",
+   "options": [
+    "Ralph Webb (Vanderbilt)",
+    "Lamical Perine (Florida)",
+    "Jeff Driskel (Florida)",
+    "Jordan Scarlett (Florida)"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "reveal": "Ralph Webb (Vanderbilt) 340 in 4 games · Lamical Perine (Florida) 220 in 4 games · Jeff Driskel (Florida) 187 in 2 games · Jordan Scarlett (Florida) 176 in 3 games",
+   "sig": "tvrush"
   },
   {
    "type": "rank",
@@ -75,8 +110,8 @@
    "prompt": "In this game, rank these players by receiving yards, highest first.",
    "items": [
     {
-     "label": "Jemalle Cornelius (FLA)",
-     "value": 34,
+     "label": "Chad Jackson (FLA)",
+     "value": 53,
      "school": "FLA"
     },
     {
@@ -85,69 +120,75 @@
      "school": "VAN"
     },
     {
+     "label": "Kenneth Tookes (FLA)",
+     "value": 36,
+     "school": "FLA"
+    },
+    {
      "label": "Erik Davis (VAN)",
      "value": 127,
      "school": "VAN"
-    },
-    {
-     "label": "Chad Jackson (FLA)",
-     "value": 53,
-     "school": "FLA"
     }
    ],
    "sig": "gs2005-11-05rec"
   },
   {
-   "type": "mc",
-   "label": "Rivalry Game",
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Florida",
+   "a": "VAN",
+   "b": "FLA",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    113,
+    218
+   ],
    "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 9, 2013",
-    "winner": "VAN",
-    "loser": "FLA",
-    "ws": 34,
-    "ls": 17,
-    "venue": "Ben Hill Griffin Stadium"
-   },
-   "prompt": "What was the difference in rushing yards in Vanderbilt's 34–17 win over Florida?",
-   "options": [
-    "Vanderbilt +87 yards",
-    "Florida +17 yards",
-    "Florida +217 yards",
-    "Vanderbilt +197 yards"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    2,
-    3,
-    0
-   ],
-   "reveal": "Vanderbilt +87. Florida had 39 rushing yards, Vanderbilt 126.",
-   "sig": "td2013-11-09rush"
+   "sig": "gtotalW"
   },
   {
    "type": "h2h",
    "label": "Fresh Mix",
    "upset": true,
    "verified": true,
-   "flip": false,
-   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "flip": true,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
    "A": {
-    "label": "Josh Hammond (FLA WR)",
-    "value": 14.9,
+    "label": "Lamical Perine (FLA RB)",
+    "value": 674,
     "school": "FLA"
    },
    "B": {
     "label": "Ralph Webb (VAN RB)",
-    "value": 4.5,
+    "value": 572,
     "school": "VAN"
    },
    "unit": "",
-   "ypc": true,
-   "note": "🚨 Upset: Josh Hammond 14.9 per carry (9 carries) vs. Ralph Webb 4.5 per carry (931 carries).",
-   "sig": "uypcRalph WebbJosh Hammond"
+   "note": "🚨 Upset: Lamical Perine 674 vs. Ralph Webb 572.",
+   "sig": "urecRalph WebbLamical Perine"
+  },
+  {
+   "type": "count",
+   "label": "Since 2020",
+   "a": "VAN",
+   "b": "FLA",
+   "threshold": 900,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2020 through 2025, which school had more 900-yard receiving seasons?",
+   "A": [],
+   "B": [
+    {
+     "name": "Kadarius Toney",
+     "yards": 984,
+     "season": 2020
+    },
+    {
+     "name": "Ricky Pearsall",
+     "yards": 970,
+     "season": 2023
+    }
+   ],
+   "sig": "tsrec9002020"
   },
   {
    "label": "SEC East Originals",
@@ -164,101 +205,36 @@
    "label": "Program Pit · Vanderbilt vs Florida",
    "a": "VAN",
    "b": "FLA",
-   "prompt": "Who won more total games from 2000–2025?",
+   "prompt": "Whose best season since 2000 had more wins?",
    "values": [
-    113,
-    218
+    10,
+    13
    ],
    "verified": true,
-   "sig": "gtotalW"
+   "sig": "gpeakW"
   },
   {
-   "type": "mc",
+   "type": "moment",
    "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 7, 2009",
+    "date": "Nov 21, 2020",
     "winner": "FLA",
     "loser": "VAN",
-    "ws": 27,
-    "ls": 3,
-    "venue": "Ben Hill Griffin Stadium"
+    "ws": 38,
+    "ls": 17,
+    "venue": "FirstBank Stadium"
    },
-   "prompt": "What was the difference in rushing yards in Florida's 27–3 win over Vanderbilt?",
-   "options": [
-    "Florida +49 yards",
-    "Florida +119 yards",
-    "Vanderbilt +179 yards",
-    "Florida +19 yards"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    1,
-    3,
-    2
-   ],
-   "reveal": "Florida +49. Vanderbilt had 99 rushing yards, Florida 148.",
-   "sig": "td2009-11-07rush"
-  },
-  {
-   "type": "count",
-   "label": "School Count",
-   "a": "VAN",
-   "b": "FLA",
-   "threshold": 2500,
-   "A": [
-    {
-     "name": "Ralph Webb",
-     "yards": 4173
-    },
-    {
-     "name": "Zac Stacy",
-     "yards": 3143
-    },
-    {
-     "name": "Frank Mordica",
-     "yards": 2632
-    }
-   ],
-   "B": [
-    {
-     "name": "Errict Rhett",
-     "yards": 4163
-    },
-    {
-     "name": "Emmitt Smith",
-     "yards": 3928
-    },
-    {
-     "name": "Neal Anderson",
-     "yards": 3234
-    },
-    {
-     "name": "Fred Taylor",
-     "yards": 3075
-    },
-    {
-     "name": "Earnest Graham",
-     "yards": 3065
-    },
-    {
-     "name": "Tim Tebow",
-     "yards": 2947
-    },
-    {
-     "name": "Jadan Baugh",
-     "yards": 2748,
-     "active": true
-    },
-    {
-     "name": "Tony Green",
-     "yards": 2590
-    }
-   ],
-   "verified": true,
-   "sig": "cVANFLA2500"
+   "prompt": "In this game, did Kadarius Toney (Florida) have more or less than",
+   "line": "80 receiving yards",
+   "answer": "over",
+   "reveal": "More. Kadarius Toney had 107 receiving yards on 6 catches and 1 TD in this game.",
+   "check": {
+    "value": 107,
+    "line": 80
+   },
+   "sig": "gm2020-11-21Kadarius Toneyrec"
   }
  ]
 }

@@ -6,105 +6,53 @@
   "away": "UGA",
   "home": "SC"
  },
- "generatedAt": "2026-11-17T17:22:31.553Z",
- "engine": 8,
+ "generatedAt": "2026-11-17T17:39:48.011Z",
+ "engine": 9,
  "questions": [
   {
-   "type": "moment",
-   "label": "Rivalry Game",
+   "type": "mc",
+   "label": "Since 2010",
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Oct 6, 2012",
-    "winner": "SC",
-    "loser": "UGA",
-    "ws": 35,
-    "ls": 7,
-    "venue": "Williams-Brice Stadium"
-   },
-   "prompt": "In this game, did Connor Shaw (South Carolina) throw for more or less than",
-   "line": "200 passing yards",
-   "answer": "under",
-   "reveal": "Less. Connor Shaw had 162 passing yards and 2 TD in this game.",
-   "check": {
-    "value": 162,
-    "line": 200
-   },
-   "sig": "gm2012-10-06Connor Shawpass"
-  },
-  {
-   "type": "moment",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, did South Carolina beat Georgia more or fewer than",
-   "line": "9.5 times",
-   "answer": "under",
-   "reveal": "Fewer. South Carolina went 8–16 against Georgia from 2000 to 2025 (24 meetings, on-field results).",
-   "check": {
-    "value": 8,
-    "line": 9.5
-   },
-   "sig": "scSCUGA"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Sep 7, 2013",
-    "winner": "UGA",
-    "loser": "SC",
-    "ws": 41,
-    "ls": 30,
-    "venue": "Sanford Stadium"
-   },
-   "prompt": "In this game, did Aaron Murray (Georgia) have more or fewer than",
-   "line": "2.5 touchdown passes",
-   "answer": "over",
-   "reveal": "More. Aaron Murray had 309 passing yards and 4 TD in this game.",
-   "check": {
-    "value": 4,
-    "line": 2.5
-   },
-   "sig": "gm2013-09-07Aaron Murraypasstd"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Sep 7, 2013",
-    "winner": "UGA",
-    "loser": "SC",
-    "ws": 41,
-    "ls": 30,
-    "venue": "Sanford Stadium"
-   },
-   "prompt": "In this game, did Mike Davis (South Carolina) run for more or less than",
-   "line": "120 rushing yards",
-   "answer": "over",
-   "reveal": "More. Mike Davis had 149 rushing yards on 16 carries and 1 TD in this game.",
-   "check": {
-    "value": 149,
-    "line": 120
-   },
-   "sig": "gm2013-09-07Mike Davisrush"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Georgia vs South Carolina",
-   "a": "UGA",
-   "b": "SC",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
-   "values": [
-    0,
-    2
+   "prompt": "Since 2010, which player from either school has the most rushing yards against the other?",
+   "options": [
+    "Marcus Lattimore (South Carolina)",
+    "Nick Chubb (Georgia)",
+    "Todd Gurley II (Georgia)",
+    "Sony Michel (Georgia)"
    ],
+   "answer": 0,
+   "order": [
+    2,
+    0,
+    3,
+    1
+   ],
+   "reveal": "Marcus Lattimore (South Carolina) 467 in 3 games · Nick Chubb (Georgia) 416 in 4 games · Todd Gurley II (Georgia) 302 in 3 games · Sony Michel (Georgia) 283 in 4 games",
+   "sig": "tvrush"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
    "verified": true,
-   "sig": "gwin3"
+   "pitted": true,
+   "game": {
+    "date": "Sep 18, 2021",
+    "winner": "UGA",
+    "loser": "SC",
+    "ws": 40,
+    "ls": 13,
+    "venue": "Sanford Stadium"
+   },
+   "prompt": "In this game, did Jermaine Burton (Georgia) have more or less than",
+   "line": "90 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Jermaine Burton had 70 receiving yards on 3 catches and 1 TD in this game.",
+   "check": {
+    "value": 70,
+    "line": 90
+   },
+   "sig": "gm2021-09-18Jermaine Burtonrec"
   },
   {
    "type": "prog",
@@ -120,44 +68,161 @@
    "sig": "gwin10"
   },
   {
-   "type": "h2h",
+   "type": "rank",
+   "label": "Rivalry Games",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these single-game rushing performances in Georgia–South Carolina games, highest first.",
+   "items": [
+    {
+     "label": "Nick Chubb (UGA) · 2017",
+     "value": 102,
+     "school": "UGA"
+    },
+    {
+     "label": "Mike Davis (SC) · 2014",
+     "value": 66,
+     "school": "SC"
+    },
+    {
+     "label": "Zamir White (UGA) · 2021",
+     "value": 51,
+     "school": "UGA"
+    },
+    {
+     "label": "Thomas Brown (UGA) · 2005",
+     "value": 144,
+     "school": "UGA"
+    }
+   ],
+   "sig": "grrushMike Davis2014,Nick Chubb2017,Thomas Brown2005,Zamir White2021"
+  },
+  {
+   "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more career rushing TDs?",
-   "A": {
-    "label": "Kenny McIntosh (RB) · career, UGA",
-    "value": 16,
-    "school": "UGA"
-   },
-   "B": {
-    "label": "A.J. Turner (RB) · career, SC",
-    "value": 8,
-    "school": "SC"
-   },
-   "unit": "rushing TDs",
-   "sig": "hA.J. Turnercareer,Kenny McIntoshcareerrushTD"
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Marcus Lattimore (SC RB) · 2011 rushing TDs",
+     "value": 10,
+     "school": "SC"
+    },
+    {
+     "label": "Kenny McIntosh (UGA RB) · career rushing TDs",
+     "value": 16,
+     "school": "UGA"
+    },
+    {
+     "label": "Dakereon Joyner (SC RB) · career total TDs (rushing + receiving)",
+     "value": 12,
+     "school": "SC"
+    },
+    {
+     "label": "Shi Smith (SC WR) · career receiving TDs",
+     "value": 13,
+     "school": "SC"
+    }
+   ],
+   "sig": "mxTDDakereon Joynercareer total TDs (rushing + receiving),Kenny McIntoshcareer rushing TDs,Marcus Lattimore2011 rushing TDs,Shi Smithcareer receiving TDs"
   },
   {
    "type": "h2h",
    "label": "Fresh Mix",
    "upset": true,
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "flip": true,
+   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
    "A": {
-    "label": "Joshua Simon (SC TE)",
-    "value": 9,
+    "label": "Josh Vann (SC WR)",
+    "value": 10.4,
     "school": "SC"
    },
    "B": {
-    "label": "D'Andre Swift (UGA RB)",
-    "value": 5,
+    "label": "Stetson Bennett (UGA QB)",
+    "value": 3.8,
     "school": "UGA"
    },
    "unit": "",
-   "note": "🚨 Upset: Joshua Simon 9 vs. D'Andre Swift 5.",
-   "sig": "urecTDD'Andre SwiftJoshua Simon"
+   "ypc": true,
+   "note": "🚨 Upset: Josh Vann 10.4 per carry (7 carries) vs. Stetson Bennett 3.8 per carry (141 carries).",
+   "sig": "uypcStetson BennettJosh Vann"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Sep 19, 2015",
+    "winner": "UGA",
+    "loser": "SC",
+    "ws": 52,
+    "ls": 20,
+    "venue": "Sanford Stadium"
+   },
+   "prompt": "In this game, did Greyson Lambert (Georgia) throw for more or less than",
+   "line": "375 passing yards",
+   "answer": "under",
+   "reveal": "Less. Greyson Lambert had 330 passing yards and 3 TD in this game.",
+   "check": {
+    "value": 330,
+    "line": 375
+   },
+   "sig": "gm2015-09-19Greyson Lambertpass"
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "UGA",
+   "b": "SC",
+   "threshold": 3500,
+   "A": [
+    {
+     "name": "Herschel Walker",
+     "yards": 5259
+    },
+    {
+     "name": "Nick Chubb",
+     "yards": 4769
+    },
+    {
+     "name": "Sony Michel",
+     "yards": 3638
+    }
+   ],
+   "B": [
+    {
+     "name": "George Rogers",
+     "yards": 5204
+    }
+   ],
+   "verified": true,
+   "sig": "cUGASC3500"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Georgia vs South Carolina",
+   "a": "UGA",
+   "b": "SC",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    1,
+    8
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "label": "Palmetto vs. Peach",
+   "verified": true,
+   "sig": "kPalmetto vs. Peach0",
+   "type": "moment",
+   "prompt": "Georgia's biggest win over South Carolina came in 2022. Was the margin more or less than",
+   "line": "35.5 points",
+   "answer": "over",
+   "reveal": "Over. Georgia won 48–7, a 41-point margin."
   }
  ]
 }

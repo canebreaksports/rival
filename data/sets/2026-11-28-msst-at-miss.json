@@ -6,77 +6,110 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-17T17:22:31.572Z",
- "engine": 8,
+ "generatedAt": "2026-11-17T17:39:48.022Z",
+ "engine": 9,
  "questions": [
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 24, 2022",
+    "winner": "MSST",
+    "loser": "MISS",
+    "ws": 24,
+    "ls": 22,
+    "venue": "Vaught-Hemingway Stadium"
+   },
+   "prompt": "In this game, did Jaxson Dart (Ole Miss) throw for more or less than",
+   "line": "325 passing yards",
+   "answer": "under",
+   "reveal": "Less. Jaxson Dart had 250 passing yards and 2 TD in this game.",
+   "check": {
+    "value": 250,
+    "line": 325
+   },
+   "sig": "gm2022-11-24Jaxson Dartpass"
+  },
+  {
+   "type": "mc",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 23, 2023",
+    "winner": "MISS",
+    "loser": "MSST",
+    "ws": 17,
+    "ls": 7,
+    "venue": "Davis Wade Stadium"
+   },
+   "prompt": "What was the difference in rushing yards in Ole Miss's 17–7 win over Mississippi State?",
+   "options": [
+    "Ole Miss +115 yards",
+    "Mississippi State +15 yards",
+    "Mississippi State +245 yards",
+    "Ole Miss +15 yards"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    2,
+    0,
+    1
+   ],
+   "reveal": "Ole Miss +115. Ole Miss had 211 rushing yards, Mississippi State 96.",
+   "sig": "td2023-11-23rush"
+  },
   {
    "type": "h2h",
    "label": "Against Each Other",
    "verified": true,
    "flip": true,
-   "prompt": "In Mississippi State–Ole Miss games since 2007, who had more rushing yards against the other school?",
+   "prompt": "In Mississippi State–Ole Miss games since 2007, who had more receiving yards against the other school?",
    "A": {
-    "label": "Aeris Williams (MSST) vs. Ole Miss",
-    "value": 330,
+    "label": "Boobie Dixon (MSST) vs. Ole Miss",
+    "value": 116,
     "school": "MSST"
    },
    "B": {
-    "label": "Akeem Judd (MISS) vs. Mississippi State",
-    "value": 131,
+    "label": "Damore'ea Stringfellow (MISS) vs. Mississippi State",
+    "value": 181,
     "school": "MISS"
    },
-   "unit": "rushing yds",
-   "note": "Aeris Williams: 330 in 3 games. Akeem Judd: 131 in 2 games.",
-   "sig": "vsrushAeris Williams,Akeem Judd"
+   "unit": "receiving yds",
+   "note": "Boobie Dixon: 116 in 3 games. Damore'ea Stringfellow: 181 in 2 games.",
+   "sig": "vsrecBoobie Dixon,Damore'ea Stringfellow"
   },
   {
-   "type": "duel",
-   "label": "Fresh Mix",
+   "type": "mc",
+   "label": "Since 2007",
    "verified": true,
-   "year": 2017,
-   "stat": "Rushing season",
-   "aSchool": "MSST",
-   "other": "MISS",
-   "aName": "Aeris Williams (RB)",
-   "bName": "Jordan Wilkins (RB)",
-   "A": {
-    "big": "1,107",
-    "sm": "rush yds · 6 TD"
-   },
-   "B": {
-    "big": "1,011",
-    "sm": "rush yds · 9 TD"
-   },
-   "flip": true,
-   "sig": "drush2017Aeris Williams,Jordan Wilkins"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
-   "A": {
-    "label": "Dexter McCluster (MISS RB)",
-    "value": 7,
-    "school": "MISS"
-   },
-   "B": {
-    "label": "Kylin Hill (MSST RB)",
-    "value": 6,
-    "school": "MSST"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Dexter McCluster 7 vs. Kylin Hill 6.",
-   "sig": "urecTDKylin HillDexter McCluster"
+   "pitted": true,
+   "prompt": "Since 2007, which player from either school has the most receiving yards against the other?",
+   "options": [
+    "A.J. Brown (Ole Miss)",
+    "Dontario Drummond (Ole Miss)",
+    "Jaden Walley (Mississippi State)",
+    "Fred Ross (Mississippi State)"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    2,
+    3,
+    0
+   ],
+   "reveal": "A.J. Brown (Ole Miss) 310 in 3 games · Dontario Drummond (Ole Miss) 272 in 3 games · Jaden Walley (Mississippi State) 260 in 3 games · Fred Ross (Mississippi State) 253 in 3 games",
+   "sig": "tvrec"
   },
   {
    "type": "count",
    "label": "School Count",
    "a": "MSST",
    "b": "MISS",
-   "threshold": 3000,
+   "threshold": 2750,
    "A": [
     {
      "name": "Anthony Dixon",
@@ -89,6 +122,10 @@
     {
      "name": "Jerious Norwood",
      "yards": 3212
+    },
+    {
+     "name": "Walter Packer",
+     "yards": 2820
     }
    ],
    "B": [
@@ -98,90 +135,64 @@
     }
    ],
    "verified": true,
-   "sig": "cMSSTMISS3000"
+   "sig": "cMSSTMISS2750"
   },
   {
-   "type": "moment",
-   "label": "Rivalry Game",
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "A": {
+    "label": "Creed Whittemore (MSST WR)",
+    "value": 20.2,
+    "school": "MSST"
+   },
+   "B": {
+    "label": "Matt Corral (MISS QB)",
+    "value": 4,
+    "school": "MISS"
+   },
+   "unit": "",
+   "ypc": true,
+   "note": "🚨 Upset: Creed Whittemore 20.2 per carry (5 carries) vs. Matt Corral 4.0 per carry (333 carries).",
+   "sig": "uypcMatt CorralCreed Whittemore"
+  },
+  {
+   "type": "count",
+   "label": "Since 2014",
+   "a": "MSST",
+   "b": "MISS",
+   "threshold": 1300,
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Nov 25, 2021",
-    "winner": "MISS",
-    "loser": "MSST",
-    "ws": 31,
-    "ls": 21,
-    "venue": "Davis Wade Stadium"
-   },
-   "prompt": "In this game, did Jerrion Ealy (Ole Miss) run for more or less than",
-   "line": "40 rushing yards",
-   "answer": "over",
-   "reveal": "More. Jerrion Ealy had 60 rushing yards on 16 carries and 0 TD in this game.",
-   "check": {
-    "value": 60,
-    "line": 40
-   },
-   "sig": "gm2021-11-25Jerrion Ealyrush"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Mississippi State–Ole Miss games, highest first.",
-   "items": [
+   "prompt": "From 2014 through 2025, which school had more 1,300-yard rushing seasons?",
+   "A": [
     {
-     "label": "Ashton Shumpert (MSST) · 2014",
-     "value": 68,
-     "school": "MSST"
+     "name": "Nick Fitzgerald",
+     "yards": 1375,
+     "season": 2016
     },
     {
-     "label": "BenJarvus Green-Ellis (MISS) · 2007",
-     "value": 117,
-     "school": "MISS"
-    },
-    {
-     "label": "Jerrion Ealy (MISS) · 2020",
-     "value": 93,
-     "school": "MISS"
-    },
-    {
-     "label": "Kamario Taylor (MSST) · 2025",
-     "value": 173,
-     "school": "MSST"
+     "name": "Kylin Hill",
+     "yards": 1350,
+     "season": 2019
     }
    ],
-   "sig": "grrushAshton Shumpert2014,BenJarvus Green-Ellis2007,Jerrion Ealy2020,Kamario Taylor2025"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Mississippi State–Ole Miss games, highest first.",
-   "items": [
+   "B": [
     {
-     "label": "Jaylen Walton (MISS) · 2014",
-     "value": 148,
-     "school": "MISS"
+     "name": "Quinshon Judkins",
+     "yards": 1567,
+     "season": 2022
     },
     {
-     "label": "Aeris Williams (MSST) · 2018",
-     "value": 64,
-     "school": "MSST"
-    },
-    {
-     "label": "Kamario Taylor (MSST) · 2025",
-     "value": 173,
-     "school": "MSST"
-    },
-    {
-     "label": "Dexter McCluster (MISS) · 2009",
-     "value": 82,
-     "school": "MISS"
+     "name": "Kewan Lacy",
+     "yards": 1567,
+     "season": 2025
     }
    ],
-   "sig": "grrushAeris Williams2018,Dexter McCluster2009,Jaylen Walton2014,Kamario Taylor2025"
+   "sig": "tsrush13002014"
   }
  ]
 }

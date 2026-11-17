@@ -6,38 +6,92 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-17T17:22:31.569Z",
- "engine": 8,
+ "generatedAt": "2026-11-17T17:39:48.020Z",
+ "engine": 9,
  "questions": [
   {
-   "type": "moment",
-   "label": "Rivalry Game",
+   "type": "mc",
+   "label": "Since 2011",
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Nov 28, 2009",
-    "winner": "LSU",
-    "loser": "ARK",
-    "ws": 33,
-    "ls": 30,
-    "venue": "Tiger Stadium (LA)"
+   "prompt": "Since 2011, which player from either school has the most rushing yards against the other?",
+   "options": [
+    "Derrius Guice (LSU)",
+    "Clyde Edwards-Helaire (LSU)",
+    "Jeremy Hill (LSU)",
+    "Alex Collins (Arkansas)"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    0,
+    2,
+    3
+   ],
+   "reveal": "Derrius Guice (LSU) 405 in 3 games · Clyde Edwards-Helaire (LSU) 244 in 2 games · Jeremy Hill (LSU) 222 in 2 games · Alex Collins (Arkansas) 215 in 3 games",
+   "sig": "tvrush"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Arkansas",
+   "a": "LSU",
+   "b": "ARK",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    249,
+    161
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In LSU–Arkansas games since 2011, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Travin Dural (LSU) vs. Arkansas",
+    "value": 156,
+    "school": "LSU"
    },
-   "prompt": "In this game, did Jordan Jefferson (LSU) throw for more or less than",
-   "line": "225 passing yards",
-   "answer": "under",
-   "reveal": "Less. Jordan Jefferson had 179 passing yards and 2 TD in this game.",
-   "check": {
-    "value": 179,
-    "line": 225
+   "B": {
+    "label": "Treylon Burks (ARK) vs. LSU",
+    "value": 186,
+    "school": "ARK"
    },
-   "sig": "gm2009-11-28Jordan Jeffersonpass"
+   "unit": "receiving yds",
+   "note": "Travin Dural: 156 in 4 games. Treylon Burks: 186 in 3 games.",
+   "sig": "vsrecTravin Dural,Treylon Burks"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "A": {
+    "label": "Treylon Burks (ARK WR)",
+    "value": 5.8,
+    "school": "ARK"
+   },
+   "B": {
+    "label": "Kevin Faulk (LSU RB)",
+    "value": 5.3,
+    "school": "LSU"
+   },
+   "unit": "",
+   "ypc": true,
+   "note": "🚨 Upset: Treylon Burks 5.8 per carry (38 carries) vs. Kevin Faulk 5.3 per carry (856 carries).",
+   "sig": "uypcKevin FaulkTreylon Burks"
   },
   {
    "type": "count",
    "label": "School Count",
    "a": "LSU",
    "b": "ARK",
-   "threshold": 2800,
+   "threshold": 3000,
    "A": [
     {
      "name": "Kevin Faulk",
@@ -58,10 +112,6 @@
     {
      "name": "Derrius Guice",
      "yards": 3074
-    },
-    {
-     "name": "Harvey Williams",
-     "yards": 2860
     }
    ],
    "B": [
@@ -84,63 +134,69 @@
     {
      "name": "Cedric Cobbs",
      "yards": 3018
-    },
-    {
-     "name": "Felix Jones",
-     "yards": 2956
-    },
-    {
-     "name": "James Rouse",
-     "yards": 2887
     }
    ],
    "verified": true,
-   "sig": "cLSUARK2800"
+   "sig": "cLSUARK3000"
   },
   {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "Rank these seasons by rushing yards, highest first.",
-   "items": [
-    {
-     "label": "Alex Collins (RB) · 2014 ARK",
-     "value": 1100,
-     "school": "ARK"
-    },
-    {
-     "label": "Kevin Faulk (RB) · 1998 LSU",
-     "value": 1279,
-     "school": "LSU"
-    },
-    {
-     "label": "Clyde Edwards-Helaire (RB) · 2018 LSU",
-     "value": 658,
-     "school": "LSU"
-    },
-    {
-     "label": "Taylen Green (QB) · 2024 ARK",
-     "value": 602,
-     "school": "ARK"
-    }
-   ],
-   "unit": "yds",
-   "note": "🪤 Trap: Alex Collins's best year was 2015 (1,577), not 2014; Kevin Faulk's best year was 1996 (1,282), not 1998; Clyde Edwards-Helaire's best year was 2019 (1,415), not 2018; Taylen Green's best year was 2025 (779), not 2024.",
-   "sig": "trrushAlex Collins2014,Clyde Edwards-Helaire2018,Kevin Faulk1998,Taylen Green2024"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Arkansas",
+   "type": "count",
+   "label": "Since 2016",
    "a": "LSU",
    "b": "ARK",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    13,
-    3
-   ],
+   "threshold": 1200,
    "verified": true,
-   "sig": "gwin10"
+   "pitted": true,
+   "prompt": "From 2016 through 2025, which school had more 1,200-yard rushing seasons?",
+   "A": [
+    {
+     "name": "Derrius Guice",
+     "yards": 1387,
+     "season": 2016
+    },
+    {
+     "name": "Derrius Guice",
+     "yards": 1251,
+     "season": 2017
+    },
+    {
+     "name": "Clyde Edwards-Helaire",
+     "yards": 1414,
+     "season": 2019
+    }
+   ],
+   "B": [
+    {
+     "name": "Rawleigh Williams III",
+     "yards": 1360,
+     "season": 2016
+    },
+    {
+     "name": "Raheim Sanders",
+     "yards": 1443,
+     "season": 2022
+    }
+   ],
+   "sig": "tsrush12002016"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more rushing TDs in a single season?",
+   "A": {
+    "label": "Darren McFadden (RB) · 2007 ARK",
+    "value": 16,
+    "school": "ARK"
+   },
+   "B": {
+    "label": "Kevin Faulk (RB) · 1995 LSU",
+    "value": 6,
+    "school": "LSU"
+   },
+   "unit": "rushing TDs",
+   "sig": "hDarren McFadden2007,Kevin Faulk1995rushTD"
   },
   {
    "type": "prog",
@@ -157,99 +213,26 @@
   },
   {
    "type": "moment",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, did LSU beat Arkansas more or fewer than",
-   "line": "19.5 times",
-   "answer": "under",
-   "reveal": "Fewer. LSU went 18–8 against Arkansas from 2000 to 2025 (26 meetings, on-field results).",
-   "check": {
-    "value": 18,
-    "line": 19.5
-   },
-   "sig": "scLSUARK"
-  },
-  {
-   "type": "mc",
    "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 11, 2017",
+    "date": "Nov 15, 2025",
     "winner": "LSU",
     "loser": "ARK",
-    "ws": 33,
-    "ls": 10,
+    "ws": 23,
+    "ls": 22,
     "venue": "Tiger Stadium (LA)"
    },
-   "prompt": "What was the difference in total yards in LSU's 33–10 win over Arkansas?",
-   "options": [
-    "LSU +97 yards",
-    "Arkansas +167 yards",
-    "LSU +47 yards",
-    "Arkansas +47 yards"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    1,
-    0,
-    3
-   ],
-   "reveal": "LSU +97. LSU had 415 total yards, Arkansas 318.",
-   "sig": "td2017-11-11total"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
-   "A": {
-    "label": "Cheyenne O'Grady (ARK TE)",
-    "value": 12,
-    "school": "ARK"
+   "prompt": "In this game, did Taylen Green (Arkansas) run for more or less than",
+   "line": "50 rushing yards",
+   "answer": "over",
+   "reveal": "More. Taylen Green had 70 rushing yards on 17 carries and 1 TD in this game.",
+   "check": {
+    "value": 70,
+    "line": 50
    },
-   "B": {
-    "label": "Leonard Fournette (LSU RB)",
-    "value": 1,
-    "school": "LSU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Cheyenne O'Grady 12 vs. Leonard Fournette 1.",
-   "sig": "urecTDLeonard FournetteCheyenne O'Grady"
-  },
-  {
-   "type": "mc",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 14, 2015",
-    "winner": "ARK",
-    "loser": "LSU",
-    "ws": 31,
-    "ls": 14,
-    "venue": "Tiger Stadium (LA)"
-   },
-   "prompt": "What was the difference in rushing yards in Arkansas's 31–14 win over LSU?",
-   "options": [
-    "Arkansas +240 yards",
-    "Arkansas +330 yards",
-    "Arkansas +130 yards",
-    "LSU +190 yards"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    3,
-    2,
-    1
-   ],
-   "reveal": "Arkansas +240. LSU had 59 rushing yards, Arkansas 299.",
-   "sig": "td2015-11-14rush"
+   "sig": "gm2025-11-15Taylen Greenrush"
   }
  ]
 }

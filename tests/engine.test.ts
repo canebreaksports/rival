@@ -162,7 +162,7 @@ describe("pitted mode", () => {
   it("team-stat multiple choice: 4 distinct options at least 20 yards apart, one true", () => {
     let seen = 0;
     for (let i = 0; i < 200; i++) for (const [a, b] of [["AUB", "ALA"], ["UGA", "SC"], ["LSU", "ARK"]]) for (const q of buildRound(DATA, a, b, mulberry32(i), VERIFIED)) {
-      if (q.type !== "mc") continue;
+      if (q.type !== "mc" || !q.sig.startsWith("td")) continue;
       seen++;
       expect(validateQuestion(q)).toEqual([]);
       const v = q.options.map(o => (o.startsWith(DATA.schools.find(s => s.key === a)!.name + " ") ? 1 : -1) * Number(o.replace(/[^\d]/g, "")));
@@ -179,6 +179,36 @@ describe("pitted mode", () => {
   });
 });
 
+describe("weekly trend questions (since <year>)", () => {
+  const TREND = /^t[sgv]/;
+  it("every scheduled matchup gets at least one", () => {
+    const missing = DATA.schedule.games.filter(g => !buildRound(DATA, g.away, g.home, seededRng(g.date), VERIFIED).some(q => TREND.test(q.sig)));
+    expect(missing.map(g => g.away + "@" + g.home)).toEqual([]);
+  });
+  it("season counts list exactly the seasons over the line, none within the margin", () => {
+    for (let i = 0; i < 150; i++) for (const [a, b] of [["LSU", "TENN"], ["UGA", "SC"], ["TEX", "TAMU"]]) for (const q of buildRound(DATA, a, b, mulberry32(i), VERIFIED)) {
+      if (q.type !== "count" || !q.sig.startsWith("ts")) continue;
+      const k = q.sig.startsWith("tsrush") ? "rush" : "rec", from = Number(q.prompt!.match(/From (\d{4})/)![1]);
+      for (const [s, list] of [[a, q.A], [b, q.B]] as const) {
+        const want = DATA.leaders!.schools[s].filter(x => x.season >= from && x[k] >= q.threshold).map(x => x.name + x.season).sort();
+        expect(list.map(x => x.name + x.season).sort()).toEqual(want);
+        DATA.leaders!.schools[s].filter(x => x.season >= from).forEach(x => expect(Math.abs(x[k] - q.threshold)).toBeGreaterThanOrEqual(x.margin));
+      }
+    }
+  });
+  it("most-yards-against multiple choice has a clear winner and both schools among the options", () => {
+    let seen = 0;
+    for (let i = 0; i < 150; i++) for (const [a, b] of [["LSU", "TENN"], ["UGA", "SC"], ["AUB", "ALA"]]) for (const q of buildRound(DATA, a, b, mulberry32(i), VERIFIED)) {
+      if (q.type !== "mc" || !q.sig.startsWith("tv")) continue;
+      seen++;
+      expect(validateQuestion(q)).toEqual([]);
+      const names = [a, b].map(k => DATA.schools.find(s => s.key === k)!.name);
+      expect(names.every(n => q.options.some(o => o.endsWith(`(${n})`)))).toBe(true);
+    }
+    expect(seen).toBeGreaterThan(0);
+  });
+});
+
 describe("sets", () => {
   const count = (qs: Question[], f: (q: Question) => boolean | undefined) => qs.filter(f).length;
   it("respect caps, ≤1 trap, ≤1 upset, ≤10 questions", () => {
@@ -191,7 +221,7 @@ describe("sets", () => {
       expect(count(qs, q => q.type === "h2h")).toBeLessThanOrEqual(4);   // pitted caps
       expect(count(qs, q => q.type === "rank")).toBeLessThanOrEqual(3);
       expect(count(qs, q => q.type === "duel")).toBeLessThanOrEqual(3);
-      expect(count(qs, q => q.type === "count")).toBeLessThanOrEqual(1);
+      expect(count(qs, q => q.type === "count")).toBeLessThanOrEqual(2); // pitted: career count + a weekly trend count
       for (const q of qs) expect(validateQuestion(q)).toEqual([]);
     }
   });

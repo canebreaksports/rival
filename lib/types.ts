@@ -52,6 +52,7 @@ export interface Dataset {
   schedule: { source: string; games: Game[] };
   curated: { matchups: Matchup[]; teamPacks: Record<SchoolKey, CuratedItem[]> };
   rivalry?: { source: string; boxFrom: number; pairs: Record<string, RivalryPair> };
+  leaders?: import("./trend-gen").SeasonLeaders;
 }
 
 // ---- games between two schools (data/rivalry.json) ----
@@ -63,6 +64,7 @@ export interface RivalryPair { games: RivalryGame[]; vs: VsTotal[]; vsFrom?: num
 
 // ---- questions: fully self-contained so frozen sets need no data at runtime ----
 interface QBase { label: string; verified: boolean; sig: string; trap?: boolean; upset?: boolean; pair?: string; pairPart?: 1 | 2; pitted?: boolean } // pitted: about both schools by construction
+export interface CountEntry { name: string; yards: number; active?: boolean; season?: number } // season: for season/game counts
 export interface Item { label: string; value: number; school?: SchoolKey } // school: who the item belongs to (pitted checks)
 
 export type Question = QBase & (
@@ -71,7 +73,7 @@ export type Question = QBase & (
       check?: { value: number; line: number } }
   | { type: "rank"; prompt: string; items: Item[]; unit: string; note?: string; game?: GameBox & { loser: SchoolKey } }
   | { type: "h2h"; prompt: string; A: Item; B: Item; unit: string; ypc?: boolean; note?: string; flip: boolean }
-  | { type: "count"; a: SchoolKey; b: SchoolKey; threshold: number; A: { name: string; yards: number; active?: boolean }[]; B: { name: string; yards: number; active?: boolean }[] }
+  | { type: "count"; a: SchoolKey; b: SchoolKey; threshold: number; prompt?: string; A: CountEntry[]; B: CountEntry[] }
   | { type: "duel"; year: number; stat: string; aSchool: SchoolKey; other: SchoolKey; aName: string; bName: string; A: { big: string; sm: string }; B: { big: string; sm: string }; flip: boolean }
   | { type: "cross"; a: SchoolKey; b: SchoolKey; prompt: string; options: string[]; answer: number; reveal: string; order: number[] }
   | { type: "mc"; prompt: string; options: string[]; answer: number; reveal: string; order: number[]; game?: GameBox & { loser: SchoolKey } }

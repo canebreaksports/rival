@@ -6,65 +6,145 @@
   "away": "LSU",
   "home": "TENN"
  },
- "generatedAt": "2026-11-17T17:22:31.555Z",
- "engine": 8,
+ "generatedAt": "2026-11-17T17:39:48.012Z",
+ "engine": 9,
  "questions": [
   {
-   "type": "moment",
-   "label": "Rivalry Game",
+   "type": "count",
+   "label": "Since 2012",
+   "a": "LSU",
+   "b": "TENN",
+   "threshold": 1200,
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Sep 26, 2005",
-    "winner": "TENN",
-    "loser": "LSU",
-    "ws": 30,
-    "ls": 27,
-    "venue": "Tiger Stadium (LA)"
-   },
-   "prompt": "In this game, did Gerald Riggs Jr. (Tennessee) run for more or less than",
-   "line": "110 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Gerald Riggs Jr. had 89 rushing yards on 24 carries and 2 TD in this game.",
-   "check": {
-    "value": 89,
-    "line": 110
-   },
-   "sig": "gm2005-09-26Gerald Riggs Jr.rush"
+   "prompt": "From 2012 through 2025, which school had more 1,200-yard rushing seasons?",
+   "A": [
+    {
+     "name": "Jeremy Hill",
+     "yards": 1401,
+     "season": 2013
+    },
+    {
+     "name": "Leonard Fournette",
+     "yards": 1953,
+     "season": 2015
+    },
+    {
+     "name": "Derrius Guice",
+     "yards": 1387,
+     "season": 2016
+    },
+    {
+     "name": "Derrius Guice",
+     "yards": 1251,
+     "season": 2017
+    },
+    {
+     "name": "Clyde Edwards-Helaire",
+     "yards": 1414,
+     "season": 2019
+    }
+   ],
+   "B": [
+    {
+     "name": "Jalen Hurd",
+     "yards": 1288,
+     "season": 2015
+    },
+    {
+     "name": "Dylan Sampson",
+     "yards": 1491,
+     "season": 2024
+    }
+   ],
+   "sig": "tsrush12002012"
   },
   {
    "type": "prog",
    "label": "Program Pit · LSU vs Tennessee",
    "a": "LSU",
    "b": "TENN",
-   "prompt": "Who had more losing seasons from 2000–2025?",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
    "values": [
-    1,
-    9
+    13,
+    6
    ],
    "verified": true,
-   "sig": "glosing"
+   "sig": "gwin10"
   },
   {
    "type": "duel",
    "label": "Fresh Mix",
    "verified": true,
-   "year": 1997,
+   "year": 2016,
    "stat": "Rushing season",
-   "aSchool": "TENN",
-   "other": "LSU",
-   "aName": "Jamal Lewis (RB)",
-   "bName": "Kevin Faulk (RB)",
+   "aSchool": "LSU",
+   "other": "TENN",
+   "aName": "Derrius Guice (RB)",
+   "bName": "Joshua Dobbs (QB)",
    "A": {
-    "big": "1,364",
-    "sm": "rush yds · 7 TD"
-   },
-   "B": {
-    "big": "1,144",
+    "big": "1,387",
     "sm": "rush yds · 15 TD"
    },
+   "B": {
+    "big": "831",
+    "sm": "rush yds · 12 TD"
+   },
    "flip": false,
-   "sig": "drush1997Jamal Lewis,Kevin Faulk"
+   "sig": "drush2016Derrius Guice,Joshua Dobbs"
+  },
+  {
+   "label": "Tigers vs. Vols",
+   "verified": true,
+   "sig": "kTigers vs. Vols1",
+   "type": "moment",
+   "prompt": "LSU's biggest win over Tennessee came in 2011. Was the margin more or less than",
+   "line": "27.5 points",
+   "answer": "over",
+   "reveal": "Over. LSU won 38–7, a 31-point margin."
+  },
+  {
+   "type": "mc",
+   "label": "Since 2005",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2005, which player from either school has the most yards from scrimmage against the other?",
+   "options": [
+    "Jacob Hester (LSU)",
+    "Tauren Poole (Tennessee)",
+    "Jordan Jefferson (LSU)",
+    "Robert Meachem (Tennessee)"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    0,
+    2,
+    1
+   ],
+   "reveal": "Jacob Hester (LSU) 202 in 3 games · Tauren Poole (Tennessee) 177 in 2 games · Jordan Jefferson (LSU) 173 in 2 games · Robert Meachem (Tennessee) 166 in 2 games",
+   "sig": "tvscrim"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Whose best college season had more rushing yards?",
+   "A": {
+    "label": "Clyde Edwards-Helaire (LSU RB)",
+    "value": 1415,
+    "school": "LSU"
+   },
+   "B": {
+    "label": "Arian Foster (TENN RB)",
+    "value": 1193,
+    "school": "TENN"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Clyde Edwards-Helaire 1,415 vs. Arian Foster 1,193.",
+   "sig": "upeakRushArian FosterClyde Edwards-Helaire"
   },
   {
    "type": "rank",
@@ -93,104 +173,30 @@
      "school": "LSU"
     },
     {
-     "label": "Early Doucet (LSU)",
-     "value": 73,
-     "school": "LSU"
-    },
-    {
      "label": "Dwayne Bowe (LSU)",
      "value": 89,
      "school": "LSU"
+    },
+    {
+     "label": "Robert Meachem (TENN)",
+     "value": 121,
+     "school": "TENN"
     }
    ],
    "sig": "gs2006-11-04rec"
-  },
-  {
-   "label": "Tigers vs. Vols",
-   "verified": true,
-   "sig": "kTigers vs. Vols1",
-   "type": "moment",
-   "prompt": "LSU's biggest win over Tennessee came in 2011. Was the margin more or less than",
-   "line": "27.5 points",
-   "answer": "over",
-   "reveal": "Over. LSU won 38–7, a 31-point margin."
   },
   {
    "type": "prog",
    "label": "Program Pit · LSU vs Tennessee",
    "a": "LSU",
    "b": "TENN",
-   "prompt": "Whose best season since 2000 had more wins?",
+   "prompt": "Who had more losing seasons from 2000–2025?",
    "values": [
-    15,
-    11
+    1,
+    9
    ],
    "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Oct 2, 2010",
-    "winner": "LSU",
-    "loser": "TENN",
-    "ws": 16,
-    "ls": 14,
-    "venue": "Tiger Stadium (LA)"
-   },
-   "prompt": "In this game, did Stevan Ridley (LSU) run for more or less than",
-   "line": "100 rushing yards",
-   "answer": "over",
-   "reveal": "More. Stevan Ridley had 123 rushing yards on 22 carries and 1 TD in this game.",
-   "check": {
-    "value": 123,
-    "line": 100
-   },
-   "sig": "gm2010-10-02Stevan Ridleyrush"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
-   "A": {
-    "label": "Joshua Dobbs (TENN QB)",
-    "value": 32,
-    "school": "TENN"
-   },
-   "B": {
-    "label": "Jayden Daniels (LSU QB)",
-    "value": 21,
-    "school": "LSU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Joshua Dobbs 32 vs. Jayden Daniels 21.",
-   "sig": "urushTDJayden DanielsJoshua Dobbs"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": false,
-   "prompt": "In LSU–Tennessee games since 2005, who had more rushing yards against the other school?",
-   "A": {
-    "label": "Stevan Ridley (LSU) vs. Tennessee",
-    "value": 123,
-    "school": "LSU"
-   },
-   "B": {
-    "label": "Tauren Poole (TENN) vs. LSU",
-    "value": 179,
-    "school": "TENN"
-   },
-   "unit": "rushing yds",
-   "note": "Stevan Ridley: 123 in 1 game. Tauren Poole: 179 in 2 games.",
-   "sig": "vsrushStevan Ridley,Tauren Poole"
+   "sig": "glosing"
   },
   {
    "type": "mc",
@@ -198,19 +204,19 @@
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Oct 2, 2010",
-    "winner": "LSU",
-    "loser": "TENN",
-    "ws": 16,
-    "ls": 14,
+    "date": "Sep 26, 2005",
+    "winner": "TENN",
+    "loser": "LSU",
+    "ws": 30,
+    "ls": 27,
     "venue": "Tiger Stadium (LA)"
    },
-   "prompt": "What was the difference in rushing yards in LSU's 16–14 win over Tennessee?",
+   "prompt": "What was the difference in rushing yards in Tennessee's 30–27 win over LSU?",
    "options": [
-    "LSU +123 yards",
-    "Tennessee +213 yards",
-    "Tennessee +93 yards",
-    "LSU +173 yards"
+    "LSU +28 yards",
+    "Tennessee +138 yards",
+    "LSU +138 yards",
+    "Tennessee +158 yards"
    ],
    "answer": 0,
    "order": [
@@ -219,8 +225,38 @@
     1,
     0
    ],
-   "reveal": "LSU +123. Tennessee had 96 rushing yards, LSU 219.",
-   "sig": "td2010-10-02rush"
+   "reveal": "LSU +28. Tennessee had 70 rushing yards, LSU 98.",
+   "sig": "td2005-09-26rush"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Leonard Fournette (LSU RB) · 2014 rushing TDs",
+     "value": 10,
+     "school": "LSU"
+    },
+    {
+     "label": "Jamal Lewis (TENN RB) · 1999 rushing TDs",
+     "value": 7,
+     "school": "TENN"
+    },
+    {
+     "label": "Kevin Faulk (LSU RB) · career total TDs (rushing + receiving)",
+     "value": 50,
+     "school": "LSU"
+    },
+    {
+     "label": "Jayden Daniels (LSU QB) · career rushing TDs",
+     "value": 21,
+     "school": "LSU"
+    }
+   ],
+   "sig": "mxTDJamal Lewis1999 rushing TDs,Jayden Danielscareer rushing TDs,Kevin Faulkcareer total TDs (rushing + receiving),Leonard Fournette2014 rushing TDs"
   }
  ]
 }

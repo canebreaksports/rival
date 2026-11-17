@@ -6,9 +6,22 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-17T17:22:31.562Z",
- "engine": 8,
+ "generatedAt": "2026-11-17T17:39:48.017Z",
+ "engine": 9,
  "questions": [
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Texas A&M",
+   "a": "TEX",
+   "b": "TAMU",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    13,
+    11
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
   {
    "type": "prog",
    "label": "Program Pit · Texas vs Texas A&M",
@@ -23,39 +36,60 @@
    "sig": "gtotalW"
   },
   {
-   "type": "prog",
-   "label": "Program Pit · Texas vs Texas A&M",
-   "a": "TEX",
-   "b": "TAMU",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    5,
-    5
-   ],
-   "verified": true,
-   "sig": "glosing"
-  },
-  {
-   "type": "h2h",
+   "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more rushing yards in a single season?",
-   "A": {
-    "label": "D'Onta Foreman (RB) · 2016 TEX",
-    "value": 2028,
-    "school": "TEX"
-   },
-   "B": {
-    "label": "Isaiah Spiller (RB) · 2021 TAMU",
-    "value": 1011,
-    "school": "TAMU"
-   },
-   "unit": "rushing yards",
-   "sig": "hD'Onta Foreman2016,Isaiah Spiller2021rush"
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Johnathan Gray (TEX RB) · 2014 yards from scrimmage",
+     "value": 758,
+     "school": "TEX"
+    },
+    {
+     "label": "Tra Carson (TAMU RB) · 2015 rushing yards",
+     "value": 1165,
+     "school": "TAMU"
+    },
+    {
+     "label": "Ricky Williams (TEX RB) · 1998 receiving yards",
+     "value": 307,
+     "school": "TEX"
+    },
+    {
+     "label": "Vince Young (TEX QB) · 2005 rushing yards",
+     "value": 1050,
+     "school": "TEX"
+    }
+   ],
+   "sig": "mxydsJohnathan Gray2014 yards from scrimmage,Ricky Williams1998 receiving yards,Tra Carson2015 rushing yards,Vince Young2005 rushing yards"
   },
   {
    "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2025",
+    "winner": "TEX",
+    "loser": "TAMU",
+    "ws": 27,
+    "ls": 17,
+    "venue": "DKR-Texas Memorial Stadium"
+   },
+   "prompt": "In this game, did Jack Endries (Texas) have more or less than",
+   "line": "60 receiving yards",
+   "answer": "over",
+   "reveal": "More. Jack Endries had 93 receiving yards on 4 catches and 0 TD in this game.",
+   "check": {
+    "value": 93,
+    "line": 60
+   },
+   "sig": "gm2025-11-28Jack Endriesrec"
+  },
+  {
+   "type": "mc",
    "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
@@ -67,128 +101,155 @@
     "ls": 7,
     "venue": "Kyle Field"
    },
-   "prompt": "In this game, did Quinn Ewers (Texas) throw for more or less than",
-   "line": "275 passing yards",
-   "answer": "under",
-   "reveal": "Less. Quinn Ewers had 218 passing yards and 1 TD in this game.",
-   "check": {
-    "value": 218,
-    "line": 275
-   },
-   "sig": "gm2024-11-30Quinn Ewerspass"
+   "prompt": "What was the difference in total yards in Texas's 17–7 win over Texas A&M?",
+   "options": [
+    "Texas +213 yards",
+    "Texas A&M +303 yards",
+    "Texas A&M +83 yards",
+    "Texas +263 yards"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    1,
+    3,
+    2
+   ],
+   "reveal": "Texas +213. Texas A&M had 248 total yards, Texas 461.",
+   "sig": "td2024-11-30total"
   },
   {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": false,
-   "prompt": "In Texas–Texas A&M games since 2005, who had more rushing yards against the other school?",
-   "A": {
-    "label": "Ramonce Taylor (TEX) vs. Texas A&M",
-    "value": 102,
-    "school": "TEX"
-   },
-   "B": {
-    "label": "Marcel Reed (TAMU) vs. Texas",
-    "value": 131,
-    "school": "TAMU"
-   },
-   "unit": "rushing yds",
-   "note": "Ramonce Taylor: 102 in 1 game. Marcel Reed: 131 in 2 games.",
-   "sig": "vsrushMarcel Reed,Ramonce Taylor"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
+   "type": "mc",
+   "label": "Since 2005",
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Nov 25, 2010",
-    "winner": "TAMU",
-    "loser": "TEX",
-    "ws": 24,
-    "ls": 17,
-    "venue": "DKR-Texas Memorial Stadium"
-   },
-   "prompt": "In this game, did Kenric McNeal (Texas A&M) have more or less than",
-   "line": "40 receiving yards",
-   "answer": "over",
-   "reveal": "More. Kenric McNeal had 64 receiving yards on 6 catches and 0 TD in this game.",
-   "check": {
-    "value": 64,
-    "line": 40
-   },
-   "sig": "gm2010-11-25Kenric McNealrec"
+   "prompt": "Since 2005, which player from either school has the most rushing yards against the other?",
+   "options": [
+    "Tre Wisner (Texas)",
+    "Jorvorskie Lane (Texas A&M)",
+    "Cyrus Gray (Texas A&M)",
+    "Colt McCoy (Texas)"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    0,
+    2,
+    3
+   ],
+   "reveal": "Tre Wisner (Texas) 341 in 2 games · Jorvorskie Lane (Texas A&M) 243 in 4 games · Cyrus Gray (Texas A&M) 237 in 3 games · Colt McCoy (Texas) 234 in 4 games",
+   "sig": "tvrush"
   },
   {
    "type": "h2h",
    "label": "Fresh Mix",
    "upset": true,
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receptions (at the school shown)?",
+   "flip": true,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
    "A": {
     "label": "Jalen Wydermyer (TAMU TE)",
-    "value": 118,
+    "value": 1468,
     "school": "TAMU"
    },
    "B": {
-    "label": "Bijan Robinson (TEX RB)",
-    "value": 60,
+    "label": "Ricky Williams (TEX RB)",
+    "value": 988,
     "school": "TEX"
    },
    "unit": "",
-   "note": "🚨 Upset: Jalen Wydermyer 118 vs. Bijan Robinson 60.",
-   "sig": "urecNBijan RobinsonJalen Wydermyer"
+   "note": "🚨 Upset: Jalen Wydermyer 1,468 vs. Ricky Williams 988.",
+   "sig": "urecRicky WilliamsJalen Wydermyer"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving yards in a single season?",
-   "A": {
-    "label": "Christian Kirk (WR) · 2017 TAMU",
-    "value": 919,
-    "school": "TAMU"
-   },
-   "B": {
-    "label": "Gunnar Helm (TE) · 2024 TEX",
-    "value": 786,
-    "school": "TEX"
-   },
-   "unit": "receiving yards",
-   "sig": "hChristian Kirk2017,Gunnar Helm2024rec"
-  },
-  {
-   "type": "mc",
-   "label": "Rivalry Game",
+   "type": "count",
+   "label": "Since 2018",
+   "a": "TEX",
+   "b": "TAMU",
+   "threshold": 1500,
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Nov 24, 2006",
-    "winner": "TAMU",
-    "loser": "TEX",
-    "ws": 12,
-    "ls": 7,
-    "venue": "DKR-Texas Memorial Stadium"
-   },
-   "prompt": "What was the difference in total yards in Texas A&M's 12–7 win over Texas?",
-   "options": [
-    "Texas A&M +72 yards",
-    "Texas A&M +22 yards",
-    "Texas +122 yards",
-    "Texas +162 yards"
+   "prompt": "From 2018 through 2025, which school had more 1,500-yard rushing seasons?",
+   "A": [
+    {
+     "name": "Bijan Robinson",
+     "yards": 1578,
+     "season": 2022
+    }
    ],
-   "answer": 0,
-   "order": [
-    2,
-    1,
-    3,
-    0
+   "B": [
+    {
+     "name": "Trayveon Williams",
+     "yards": 1760,
+     "season": 2018
+    }
    ],
-   "reveal": "Texas A&M +72. Texas A&M had 302 total yards, Texas 230.",
-   "sig": "td2006-11-24total"
+   "sig": "tsrush15002018"
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "TEX",
+   "b": "TAMU",
+   "threshold": 3000,
+   "A": [
+    {
+     "name": "Ricky Williams",
+     "yards": 6279
+    },
+    {
+     "name": "Cedric Benson",
+     "yards": 5540
+    },
+    {
+     "name": "Earl Campbell",
+     "yards": 4443
+    },
+    {
+     "name": "Bijan Robinson",
+     "yards": 3410
+    },
+    {
+     "name": "Jamaal Charles",
+     "yards": 3328
+    },
+    {
+     "name": "Chris Gilbert",
+     "yards": 3231
+    },
+    {
+     "name": "Vince Young",
+     "yards": 3127
+    }
+   ],
+   "B": [
+    {
+     "name": "Darren Lewis",
+     "yards": 5012
+    },
+    {
+     "name": "Curtis Dickey",
+     "yards": 3703
+    },
+    {
+     "name": "Trayveon Williams",
+     "yards": 3379
+    },
+    {
+     "name": "Cyrus Gray",
+     "yards": 3298
+    },
+    {
+     "name": "Greg Hill",
+     "yards": 3262
+    },
+    {
+     "name": "Rodney Thomas",
+     "yards": 3014
+    }
+   ],
+   "verified": true,
+   "sig": "cTEXTAMU3000"
   }
  ]
 }

@@ -6,197 +6,37 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-17T17:22:31.577Z",
- "engine": 8,
+ "generatedAt": "2026-11-17T17:39:48.024Z",
+ "engine": 9,
  "questions": [
   {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Joshua Dobbs (TENN QB) · 2016 rushing yards",
-     "value": 831,
-     "school": "TENN"
-    },
-    {
-     "label": "Keyon Brooks (VAN RB) · 2019 yards from scrimmage",
-     "value": 309,
-     "school": "VAN"
-    },
-    {
-     "label": "Ralph Webb (VAN RB) · career rushing yards",
-     "value": 4173,
-     "school": "VAN"
-    },
-    {
-     "label": "Ke'Shawn Vaughn (VAN RB) · 2019 rushing yards",
-     "value": 1028,
-     "school": "VAN"
-    }
-   ],
-   "sig": "mxydsJoshua Dobbs2016 rushing yards,Ke'Shawn Vaughn2019 rushing yards,Keyon Brooks2019 yards from scrimmage,Ralph Webbcareer rushing yards"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Game",
+   "type": "count",
+   "label": "Since 2020",
+   "a": "TENN",
+   "b": "VAN",
+   "threshold": 900,
    "verified": true,
    "pitted": true,
-   "unit": "yds",
-   "game": {
-    "date": "Nov 17, 2007",
-    "winner": "TENN",
-    "loser": "VAN",
-    "ws": 25,
-    "ls": 24,
-    "venue": "Neyland Stadium"
-   },
-   "prompt": "In this game, rank these players by receiving yards, highest first.",
-   "items": [
-    {
-     "label": "Earl Bennett (VAN)",
-     "value": 26,
-     "school": "VAN"
-    },
-    {
-     "label": "Lucas Taylor (TENN)",
-     "value": 90,
-     "school": "TENN"
-    },
-    {
-     "label": "Austin Rogers (TENN)",
-     "value": 60,
-     "school": "TENN"
-    },
-    {
-     "label": "Alex Washington (VAN)",
-     "value": 45,
-     "school": "VAN"
-    }
-   ],
-   "sig": "gs2007-11-17rec"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Ralph Webb (VAN RB) · 2016 rushing TDs",
-     "value": 13,
-     "school": "VAN"
-    },
-    {
-     "label": "Jalin Hyatt (TENN WR) · 2022 receiving TDs",
-     "value": 15,
-     "school": "TENN"
-    },
-    {
-     "label": "Ke'Shawn Vaughn (VAN RB) · career rushing TDs",
-     "value": 21,
-     "school": "VAN"
-    },
-    {
-     "label": "Diego Pavia (VAN QB) · career rushing TDs",
-     "value": 18,
-     "school": "VAN"
-    }
-   ],
-   "sig": "mxTDDiego Paviacareer rushing TDs,Jalin Hyatt2022 receiving TDs,Ke'Shawn Vaughncareer rushing TDs,Ralph Webb2016 rushing TDs"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
-   "a": "TENN",
-   "b": "VAN",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    11,
-    10
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "count",
-   "label": "School Count",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 2500,
+   "prompt": "From 2020 through 2025, which school had more 900-yard receiving seasons?",
    "A": [
     {
-     "name": "Travis Henry",
-     "yards": 3078
+     "name": "Cedric Tillman",
+     "yards": 1081,
+     "season": 2021
     },
     {
-     "name": "Arian Foster",
-     "yards": 2964
+     "name": "Jalin Hyatt",
+     "yards": 1267,
+     "season": 2022
     },
     {
-     "name": "James Stewart",
-     "yards": 2890
-    },
-    {
-     "name": "Johnnie Jones",
-     "yards": 2852
-    },
-    {
-     "name": "DeSean Bishop",
-     "yards": 2694,
-     "active": true
-    },
-    {
-     "name": "Jamal Lewis",
-     "yards": 2677
-    },
-    {
-     "name": "Jalen Hurd",
-     "yards": 2638
-    },
-    {
-     "name": "Cedric Houston",
-     "yards": 2634
-    },
-    {
-     "name": "Jay Graham",
-     "yards": 2609
+     "name": "Chris Brazzell II",
+     "yards": 1017,
+     "season": 2025
     }
    ],
-   "B": [
-    {
-     "name": "Ralph Webb",
-     "yards": 4173
-    },
-    {
-     "name": "Zac Stacy",
-     "yards": 3143
-    },
-    {
-     "name": "Frank Mordica",
-     "yards": 2632
-    }
-   ],
-   "verified": true,
-   "sig": "cTENNVAN2500"
-  },
-  {
-   "type": "moment",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, did Vanderbilt beat Tennessee more or fewer than",
-   "line": "7.5 times",
-   "answer": "under",
-   "reveal": "Fewer. Vanderbilt went 7–19 against Tennessee from 2000 to 2025 (26 meetings, on-field results).",
-   "check": {
-    "value": 7,
-    "line": 7.5
-   },
-   "sig": "scVANTENN"
+   "B": [],
+   "sig": "tsrec9002020"
   },
   {
    "type": "h2h",
@@ -206,19 +46,19 @@
    "flip": true,
    "prompt": "Who averaged more yards per carry in college (at the school shown)?",
    "A": {
-    "label": "Kalija Lipscomb (VAN WR)",
-    "value": 6.2,
+    "label": "Ke'Shawn Vaughn (VAN RB)",
+    "value": 6.4,
     "school": "VAN"
    },
    "B": {
-    "label": "Arian Foster (TENN RB)",
-    "value": 4.6,
+    "label": "Jamal Lewis (TENN RB)",
+    "value": 5.5,
     "school": "TENN"
    },
    "unit": "",
    "ypc": true,
-   "note": "🚨 Upset: Kalija Lipscomb 6.2 per carry (24 carries) vs. Arian Foster 4.6 per carry (650 carries).",
-   "sig": "uypcArian FosterKalija Lipscomb"
+   "note": "🚨 Upset: Ke'Shawn Vaughn 6.4 per carry (355 carries) vs. Jamal Lewis 5.5 per carry (487 carries).",
+   "sig": "uypcJamal LewisKe'Shawn Vaughn"
   },
   {
    "type": "prog",
@@ -234,6 +74,91 @@
    "sig": "gtotalW"
   },
   {
+   "type": "mc",
+   "label": "Since 2012",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2012, which player from either school has the most receiving yards against the other?",
+   "options": [
+    "Trent Sherfield (Vanderbilt)",
+    "Jordan Matthews (Vanderbilt)",
+    "Will Sheppard (Vanderbilt)",
+    "Jauan Jennings (Tennessee)"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    1,
+    3,
+    0
+   ],
+   "reveal": "Trent Sherfield (Vanderbilt) 350 in 3 games · Jordan Matthews (Vanderbilt) 248 in 2 games · Will Sheppard (Vanderbilt) 190 in 3 games · Jauan Jennings (Tennessee) 182 in 3 games",
+   "sig": "tvrec"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Tennessee–Vanderbilt games since 2012, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Jauan Jennings (TENN) vs. Vanderbilt",
+    "value": 182,
+    "school": "TENN"
+   },
+   "B": {
+    "label": "Jordan Matthews (VAN) vs. Tennessee",
+    "value": 248,
+    "school": "VAN"
+   },
+   "unit": "receiving yds",
+   "note": "Jauan Jennings: 182 in 3 games. Jordan Matthews: 248 in 2 games.",
+   "sig": "vsrecJauan Jennings,Jordan Matthews"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    1,
+    12
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "mc",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 30, 2024",
+    "winner": "TENN",
+    "loser": "VAN",
+    "ws": 36,
+    "ls": 23,
+    "venue": "FirstBank Stadium"
+   },
+   "prompt": "What was the difference in rushing yards in Tennessee's 36–23 win over Vanderbilt?",
+   "options": [
+    "Tennessee +172 yards",
+    "Tennessee +242 yards",
+    "Vanderbilt +142 yards",
+    "Vanderbilt +102 yards"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    3,
+    1,
+    0
+   ],
+   "reveal": "Tennessee +172. Tennessee had 281 rushing yards, Vanderbilt 109.",
+   "sig": "td2024-11-30rush"
+  },
+  {
    "type": "moment",
    "label": "Series History",
    "verified": true,
@@ -247,6 +172,29 @@
     "line": 18.5
    },
    "sig": "scTENNVAN"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 21, 2009",
+    "winner": "TENN",
+    "loser": "VAN",
+    "ws": 31,
+    "ls": 16,
+    "venue": "Neyland Stadium"
+   },
+   "prompt": "In this game, did Mackenzi Adams (Vanderbilt) throw for more or less than",
+   "line": "125 passing yards",
+   "answer": "over",
+   "reveal": "More. Mackenzi Adams had 174 passing yards and 1 TD in this game.",
+   "check": {
+    "value": 174,
+    "line": 125
+   },
+   "sig": "gm2009-11-21Mackenzi Adamspass"
   }
  ]
 }

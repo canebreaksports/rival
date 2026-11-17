@@ -143,7 +143,7 @@ function QuestionBody({ q, reveal, onAnswer, onRank }: { q: Question; reveal: Re
     case "prog":
     case "count":
       return <>{head}
-        <div className="prompt">{q.type === "prog" ? q.prompt : `Which school has more ${fmt(q.threshold)}-yard career rushers?`}</div>
+        <div className="prompt">{q.type === "prog" ? q.prompt : q.prompt ?? `Which school has more ${fmt(q.threshold)}-yard career rushers?`}</div>
         <div className="opts two">{o("a", <><Dot k={q.a} />{SCHOOL[q.a].name}</>)}{o("b", <><Dot k={q.b} />{SCHOOL[q.b].name}</>)}</div>
         <div className="opts" style={{ marginTop: 10 }}>{o("t", "Tied")}</div></>;
     case "moment":
@@ -204,21 +204,22 @@ function hashIdx(s: string, i: number) { let h = 2166136261; for (const c of s +
 
 function NameThem({ q, onDone, onNext, last }: { q: Extract<Question, { type: "count" }>; onDone: (pts: number) => void; onNext: () => void; last: boolean }) {
   const people = [...q.A.map(x => ({ ...x, t: q.a })), ...q.B.map(x => ({ ...x, t: q.b }))];
+  const unique = [...new Map(people.map(x => [x.t + "|" + x.name, x])).values()]; // a player with two seasons counts once in the bonus
   const [text, setText] = useState("");
   const [hit, setHit] = useState<Set<string> | null>(null);
   if (!people.length) return <div className="next show"><button className="btn" onClick={onNext}>{last ? "Final Whistle" : "Next Play →"}</button></div>;
-  const submit = (input: string) => { const h = matchNames(input, people); setHit(h); onDone(h.size * POINTS.name) };
+  const submit = (input: string) => { const h = matchNames(input, unique); setHit(h); onDone(h.size * POINTS.name) };
   const list = (k: SchoolKey) => people.filter(x => x.t === k);
   return <div className="bonus">
     <div className="kind">Bonus · Name Them</div>
-    <div className="prompt" style={{ fontSize: 15, margin: "6px 0 10px" }}>Name as many of the {people.length} as you can, from either school. +25 each. Last names are fine.</div>
+    <div className="prompt" style={{ fontSize: 15, margin: "6px 0 10px" }}>Name as many of the {unique.length} players as you can, from either school. +25 each. Last names are fine.</div>
     <textarea rows={3} value={text} disabled={!!hit} onChange={e => setText(e.target.value)} placeholder="e.g. Jackson, Fournette, ..." aria-label="Names" />
     {!hit && <div className="row"><button className="btn ghost" onClick={() => submit("")}>Skip</button><button className="btn" onClick={() => submit(text)}>Submit</button></div>}
     {hit && <>
       <div className={`reveal show ${hit.size ? "good" : "bad"}`}>
-        <b>{hit.size} of {people.length} named · +{hit.size * POINTS.name}</b>
+        <b>{hit.size} of {unique.length} named · +{hit.size * POINTS.name}</b>
         {[q.a, q.b].map(k => <div key={k} style={{ marginTop: 10 }}><b>{SCHOOL[k].name}</b>
-          {list(k).length ? list(k).map(x => <div key={x.name}>{hit.has(x.name) ? "✅" : "▫️"} {x.name} ({fmt(x.yards)}{x.active ? ", active" : ""})</div>) : <div>None</div>}</div>)}
+          {list(k).length ? list(k).map(x => <div key={x.name + (x.season ?? "")}>{hit.has(x.name) ? "✅" : "▫️"} {x.name}{x.season ? ` ${x.season}` : ""} ({fmt(x.yards)}{x.active ? ", active" : ""})</div>) : <div>None</div>}</div>)}
       </div>
       <div className="next show"><button className="btn" onClick={onNext}>{last ? "Final Whistle" : "Next Play →"}</button></div>
     </>}

@@ -6,161 +6,75 @@
   "away": "TAMU",
   "home": "OU"
  },
- "generatedAt": "2026-11-17T17:22:31.550Z",
- "engine": 8,
+ "generatedAt": "2026-11-17T17:39:48.009Z",
+ "engine": 9,
  "questions": [
   {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 14, 2009",
-    "winner": "OU",
-    "loser": "TAMU",
-    "ws": 65,
-    "ls": 10,
-    "venue": "Memorial Stadium (Norman, OK)"
-   },
-   "prompt": "In this game, did Adron Tennell (Oklahoma) have more or less than",
-   "line": "60 receiving yards",
-   "answer": "over",
-   "reveal": "More. Adron Tennell had 76 receiving yards on 5 catches and 2 TD in this game.",
-   "check": {
-    "value": 76,
-    "line": 60
-   },
-   "sig": "gm2009-11-14Adron Tennellrec"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receiving yards (at the school shown)?",
-   "A": {
-    "label": "Jalen Wydermyer (TAMU TE)",
-    "value": 1468,
-    "school": "TAMU"
-   },
-   "B": {
-    "label": "Joe Mixon (OU RB)",
-    "value": 894,
-    "school": "OU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Jalen Wydermyer 1,468 vs. Joe Mixon 894.",
-   "sig": "urecJoe MixonJalen Wydermyer"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2014,
-   "stat": "Receiving season",
-   "aSchool": "TAMU",
-   "other": "OU",
-   "aName": "Josh Reynolds (WR)",
-   "bName": "Sterling Shepard (WR)",
-   "A": {
-    "big": "842",
-    "sm": "rec yds · 13 TD"
-   },
-   "B": {
-    "big": "970",
-    "sm": "rec yds · 5 TD"
-   },
-   "flip": true,
-   "sig": "drec2014Josh Reynolds,Sterling Shepard"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas A&M vs Oklahoma",
+   "type": "count",
+   "label": "School Count",
    "a": "TAMU",
    "b": "OU",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    5,
-    2
+   "threshold": 4000,
+   "A": [
+    {
+     "name": "Darren Lewis",
+     "yards": 5012
+    }
+   ],
+   "B": [
+    {
+     "name": "Samaje Perine",
+     "yards": 4122
+    },
+    {
+     "name": "Billy Sims",
+     "yards": 4118
+    },
+    {
+     "name": "Joe Washington",
+     "yards": 4071
+    },
+    {
+     "name": "Adrian Peterson",
+     "yards": 4045
+    },
+    {
+     "name": "Steve Owens",
+     "yards": 4041
+    }
    ],
    "verified": true,
-   "sig": "glosing"
+   "sig": "cTAMUOU4000"
   },
   {
-   "type": "moment",
-   "label": "Rivalry Game",
+   "type": "rank",
+   "label": "Rivalry Games",
    "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 6, 2004",
-    "winner": "OU",
-    "loser": "TAMU",
-    "ws": 42,
-    "ls": 35,
-    "venue": "Kyle Field"
-   },
-   "prompt": "In this game, did Chad Schroeder (Texas A&M) have more or less than",
-   "line": "40 receiving yards",
-   "answer": "over",
-   "reveal": "More. Chad Schroeder had 63 receiving yards on 2 catches and 1 TD in this game.",
-   "check": {
-    "value": 63,
-    "line": 40
-   },
-   "sig": "gm2004-11-06Chad Schroederrec"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Devon Achane finish his Texas A&M career with more or less than",
-   "line": "3,250 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. Devon Achane had 2,930 yards from scrimmage in his career.",
-   "check": {
-    "value": 2930,
-    "line": 3250
-   },
-   "sig": "ppDevon Achanecareer|Adrian Petersoncareerscrim0",
-   "pair": "ppDevon Achanecareer|Adrian Petersoncareerscrim",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Adrian Peterson finish his Oklahoma career with more or less than",
-   "line": "4,550 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. Adrian Peterson had 4,243 yards from scrimmage in his career.",
-   "check": {
-    "value": 4243,
-    "line": 4550
-   },
-   "sig": "ppDevon Achanecareer|Adrian Petersoncareerscrim1",
-   "pair": "ppDevon Achanecareer|Adrian Petersoncareerscrim",
-   "pairPart": 2
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": true,
-   "prompt": "In Texas A&M–Oklahoma games since 2004, who had more rushing yards against the other school?",
-   "A": {
-    "label": "Johnny Manziel (TAMU) vs. Oklahoma",
-    "value": 229,
-    "school": "TAMU"
-   },
-   "B": {
-    "label": "Allen Patrick (OU) vs. Texas A&M",
-    "value": 285,
-    "school": "OU"
-   },
-   "unit": "rushing yds",
-   "note": "Johnny Manziel: 229 in 1 game. Allen Patrick: 285 in 3 games.",
-   "sig": "vsrushAllen Patrick,Johnny Manziel"
+   "unit": "yds",
+   "prompt": "Rank these single-game rushing performances in Texas A&M–Oklahoma games, highest first.",
+   "items": [
+    {
+     "label": "Christine Michael (TAMU) · 2011",
+     "value": 88,
+     "school": "TAMU"
+    },
+    {
+     "label": "Mossis Madu (OU) · 2008",
+     "value": 65,
+     "school": "OU"
+    },
+    {
+     "label": "Courtney Lewis (TAMU) · 2005",
+     "value": 146,
+     "school": "TAMU"
+    },
+    {
+     "label": "Johnny Manziel (TAMU) · 2012 postseason",
+     "value": 229,
+     "school": "TAMU"
+    }
+   ],
+   "sig": "grrushChristine Michael2011,Courtney Lewis2005,Johnny Manziel2012,Mossis Madu2008"
   },
   {
    "type": "prog",
@@ -174,6 +88,161 @@
    ],
    "verified": true,
    "sig": "gwin10"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2021,
+   "stat": "Rushing season",
+   "aSchool": "OU",
+   "other": "TAMU",
+   "aName": "Eric Gray (RB)",
+   "bName": "Isaiah Spiller (RB)",
+   "A": {
+    "big": "412",
+    "sm": "rush yds · 2 TD"
+   },
+   "B": {
+    "big": "1,011",
+    "sm": "rush yds · 6 TD"
+   },
+   "flip": true,
+   "sig": "drush2021Eric Gray,Isaiah Spiller"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs Oklahoma",
+   "a": "TAMU",
+   "b": "OU",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    195,
+    271
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "count",
+   "label": "Since 2020",
+   "a": "TAMU",
+   "b": "OU",
+   "threshold": 850,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2020 through 2025, which school had more 850-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Kevin Concepcion",
+     "yards": 919,
+     "season": 2025
+    },
+    {
+     "name": "Mario Craver",
+     "yards": 911,
+     "season": 2025
+    }
+   ],
+   "B": [
+    {
+     "name": "Marvin Mims",
+     "yards": 1083,
+     "season": 2022
+    },
+    {
+     "name": "Drake Stoops",
+     "yards": 962,
+     "season": 2023
+    },
+    {
+     "name": "Isaiah Sategna",
+     "yards": 949,
+     "season": 2025
+    }
+   ],
+   "sig": "tsrec8502020"
+  },
+  {
+   "type": "mc",
+   "label": "Since 2004",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2004, which player from either school has the most rushing yards against the other?",
+   "options": [
+    "DeMarco Murray (Oklahoma)",
+    "Allen Patrick (Oklahoma)",
+    "Adrian Peterson (Oklahoma)",
+    "Johnny Manziel (Texas A&M)"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    2,
+    3,
+    0
+   ],
+   "reveal": "DeMarco Murray (Oklahoma) 353 in 4 games · Allen Patrick (Oklahoma) 285 in 3 games · Adrian Peterson (Oklahoma) 236 in 2 games · Johnny Manziel (Texas A&M) 229 in 1 game",
+   "sig": "tvrush"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Johnny Manziel (TAMU QB) · 2012 rushing TDs",
+     "value": 21,
+     "school": "TAMU"
+    },
+    {
+     "label": "Kennedy Brooks (OU RB) · 2019 rushing TDs",
+     "value": 6,
+     "school": "OU"
+    },
+    {
+     "label": "Isaiah Spiller (TAMU RB) · career rushing TDs",
+     "value": 25,
+     "school": "TAMU"
+    },
+    {
+     "label": "Josh Reynolds (TAMU WR) · 2015 receiving TDs",
+     "value": 5,
+     "school": "TAMU"
+    }
+   ],
+   "sig": "mxTDIsaiah Spillercareer rushing TDs,Johnny Manziel2012 rushing TDs,Josh Reynolds2015 receiving TDs,Kennedy Brooks2019 rushing TDs"
+  },
+  {
+   "label": "Old Big 12 Foes",
+   "verified": true,
+   "sig": "kOld Big 12 Foes0",
+   "type": "moment",
+   "prompt": "Oklahoma's biggest win over Texas A&M came in 2003. Was the margin more or less than",
+   "line": "70 points",
+   "answer": "over",
+   "reveal": "Over. Oklahoma won 77–0."
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more career rushing yards?",
+   "A": {
+    "label": "Adrian Peterson (RB) · career, OU",
+    "value": 4045,
+    "school": "OU"
+   },
+   "B": {
+    "label": "Isaiah Spiller (RB) · career, TAMU",
+    "value": 2993,
+    "school": "TAMU"
+   },
+   "unit": "rushing yards",
+   "sig": "hAdrian Petersoncareer,Isaiah Spillercareerrush"
   }
  ]
 }
