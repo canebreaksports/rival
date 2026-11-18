@@ -110,3 +110,4 @@ textarea,input[type=date]{width:100%;background:#050a07;color:var(--chalk);borde
 .breakdown .bm{font-size:16px}
 .breakdown .bq .kind{display:block;font-size:10px;margin-bottom:2px}
 .breakdown .bp{font:700 13px Oswald;color:var(--chalk);white-space:nowrap}
+.hintnote{font-size:11px;color:var(--dim);letter-spacing:1px;margin-top:2px}

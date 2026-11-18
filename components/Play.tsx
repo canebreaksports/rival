@@ -74,7 +74,11 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
     const qpts = [...(x.qpts ?? [])]; qpts[x.i] = (qpts[x.i] ?? 0) + pts;
     const np = { ...x, pts: x.pts + pts, qpts }; savePast(np); return np;
   });
-  const addHint = () => setP(x => { const np = { ...x, hints: (x.hints ?? 0) + 1 }; savePast(np); return np });
+  // each hint costs 10 points, charged to the current question
+  const addHint = () => setP(x => {
+    const qpts = [...(x.qpts ?? [])]; qpts[x.i] = (qpts[x.i] ?? 0) + POINTS.hint;
+    const np = { ...x, pts: x.pts + POINTS.hint, hints: (x.hints ?? 0) + 1, qpts }; savePast(np); return np;
+  });
 
   if (!loaded) return null;
   if (finished) return <Final p={p} n={n} questions={questions} weekly={mode === "weekly"} away={away} home={home} nextUnlock={nextUnlock} onExit={onExit} onAgain={onAgain} />;
@@ -272,8 +276,9 @@ function NameThem({ q, onDone, onHint, onNext, last }: { q: Extract<Question, { 
       : <span key={x.i} className="slot" aria-label="unnamed">▢</span>;
   return <div className="bonus">
     <div className="kind">Bonus · Name Them</div>
+    <div className="hintnote">Hints: year, then profile, then initials · {POINTS.hint} each</div>
     <div className="prompt" style={{ fontSize: 15, margin: "6px 0 10px" }}>
-      Name all {slots.length} one at a time, from either school{hasYears && slots.length !== unique.length ? " (a player on the list twice must be named twice)" : ""}. +{POINTS.name} each. Last names are fine. {MISSES} misses and you&apos;re out.</div>
+      Name all {slots.length} one at a time, from either school{hasYears && slots.length !== unique.length ? " (a player on the list twice must be named twice)" : ""}. +{POINTS.name} each, hints {POINTS.hint}. Last names are fine. {MISSES} misses and you&apos;re out.</div>
     {!over && <>
       <div className="tally" aria-live="polite">
         <span>{filled.length} of {slots.length} named</span>
@@ -288,9 +293,9 @@ function NameThem({ q, onDone, onHint, onNext, last }: { q: Extract<Question, { 
       {profiled.filter(open).map(i => <div key={i} className="profile">💡 {slots[i].profile}{lettered.includes(i) ? ` · initials ${initials(slots[i].name)}` : ""}</div>)}
       {msg && <div className={`guess ${msg.tone}`} role="status">{msg.text}</div>}
       <div className="row">
-        {hasYears && <button className="btn ghost" disabled={nextHint == null} onClick={hint}>Hint: year</button>}
-        <button className="btn ghost" disabled={profileTarget == null} onClick={hintProfile} title={hasYears ? "Profile of the player behind your latest year hint" : "Profile of an unnamed player"}>Hint: profile</button>
-        <button className="btn ghost" disabled={initialsTarget == null} onClick={hintInitials} title="Initials of the player behind your latest profile hint">Hint: initials</button>
+        {hasYears && <button className="btn ghost" disabled={nextHint == null} onClick={hint}>Year {POINTS.hint}</button>}
+        <button className="btn ghost" disabled={profileTarget == null} onClick={hintProfile} title={hasYears ? "Profile of the player behind your latest year hint" : "Profile of an unnamed player"}>Profile {POINTS.hint}</button>
+        <button className="btn ghost" disabled={initialsTarget == null} onClick={hintInitials} title="Initials of the player behind your latest profile hint">Initials {POINTS.hint}</button>
         </div>
       <button className="btn ghost" style={{ marginTop: 10 }} onClick={() => finish(filled)}>I&apos;m done</button>
     </>}
@@ -308,7 +313,7 @@ function NameThem({ q, onDone, onHint, onNext, last }: { q: Extract<Question, { 
 function Final({ p, n, questions, weekly, away, home, nextUnlock, onExit, onAgain }: { p: Progress; n: number; questions: Question[]; weekly: boolean; away?: SchoolKey | null; home?: SchoolKey | null; nextUnlock?: string | null; onExit: () => void; onAgain?: () => void }) {
   const [shared, setShared] = useState<string | null>(null);
   const hints = p.hints ?? 0;
-  const hintText = hints ? `💡 ${hints} hint${hints > 1 ? "s" : ""} used` : "💡 No hints";
+  const hintText = hints ? `💡 ${hints} hint${hints > 1 ? "s" : ""} used (${hints * POINTS.hint} pts)` : "💡 No hints";
   async function share() {
     const title = away && home ? `${SCHOOL[away].name} ${weekly ? "@" : "vs"} ${SCHOOL[home].name}` : "SEC Mix";
     const text = [`RIVAL · ${title}`, p.marks ?? "", `${p.pts} pts · ${p.right}/${n} · 🔥 best streak ${p.best}`, hintText].filter(Boolean).join("\n");
@@ -345,7 +350,7 @@ function Breakdown({ p, questions }: { p: Progress; questions: Question[] }) {
     <ol>{questions.map((q, i) => <li key={i}>
       <span className="bm">{marks[i] ?? "–"}</span>
       <span className="bq"><span className="kind">{kindLabel(q)}</span>{what(q)}</span>
-      <span className="bp">{p.qpts?.[i] != null ? `+${p.qpts[i]}` : ""}</span>
+      <span className="bp">{p.qpts?.[i] != null ? `${p.qpts[i] >= 0 ? "+" : ""}${p.qpts[i]}` : ""}</span>
     </li>)}</ol>
   </details>;
 }

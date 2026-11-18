@@ -1,7 +1,7 @@
 // Answer checking and scoring (spec §5). Pure functions so the UI and tests share them.
 import type { Progress, Question } from "./types";
 
-export const POINTS = { correct: 100, perfectRank: 150, rankSlot: 25, streakStep: 25, bonus: 50, name: 25 };
+export const POINTS = { correct: 100, perfectRank: 150, rankSlot: 25, streakStep: 25, bonus: 50, name: 25, hint: -10 }; // hint: per Name Them hint used
 
 /** The correct answer token for a question (rank questions are scored with scoreRank instead). */
 export function correctAnswer(q: Question): string {

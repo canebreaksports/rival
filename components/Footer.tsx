@@ -4,6 +4,6 @@ export function Footer() {
     Program stats cover 2000–2024 unless marked all-time. Season records reflect on-field results: vacated wins are restored
     (LSU 2012–15, Missouri 2015–16, Tennessee 2019–20, Kentucky 2021). Player stats from Sports Reference (bowl games included where SR includes them).<br />
     Points: 100 per correct answer (+50 on 🪤 traps and 🚨 upsets), 150 for a perfect ranking or 25 per correct slot,
-    25 per name in the School Count bonus, plus 25 per streak step.
+    25 per name in the School Count bonus (−10 per hint), plus 25 per streak step.
   </p>;
 }
