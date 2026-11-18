@@ -112,29 +112,6 @@ export function genSeriesCount(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng:
 
 const gameBox = (g: RivalryGame) => ({ date: longDate(g.date), winner: winner(g), loser: loser(g), ws: Math.max(g.hp, g.ap), ls: Math.min(g.hp, g.ap), venue: venue(g) });
 
-/** 5. One game, rank its players: "In this game, rank these players by receiving yards" (both schools represented). */
-export function genGameRankSingle(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
-  for (const g of shuffle(rng, pr.games.filter(g => g.box && g.hp !== g.ap)).slice(0, 12)) {
-    for (const cat of shuffle(rng, ["rec", "rush"] as const)) {
-      const perfs = Object.entries(g.box!).flatMap(([school, ps]) => ps.filter(p => p.cat === cat && p.yds >= 25).map(p => ({ school, p })));
-      if (!perfs.some(x => x.p.yds >= 60)) continue; // needs a real lead performance
-      const picks: typeof perfs = [];
-      const ok = (x: (typeof perfs)[0]) => !picks.some(y => y.p.name === x.p.name || Math.abs(y.p.yds - x.p.yds) < gameGap(y.p.yds, x.p.yds));
-      for (const s of shuffle(rng, [a, b])) { const f = shuffle(rng, perfs).find(x => x.school === s && ok(x)); if (f) picks.push(f) }
-      for (const f of shuffle(rng, perfs)) { if (picks.length === 4) break; if (ok(f)) picks.push(f) }
-      if (picks.length < 4) continue;
-      const stat = cat === "rush" ? "rushing" : "receiving";
-      return {
-        type: "rank", label: "Rivalry Game", verified: SRC_VERIFIED, pitted: true, unit: "yds", game: gameBox(g),
-        prompt: `In this game, rank these players by ${stat} yards, highest first.`,
-        items: picks.map(x => ({ label: `${x.p.name} (${x.school})`, value: x.p.yds, school: x.school })),
-        sig: "gs" + g.date + cat,
-      };
-    }
-  }
-  return null;
-}
-
 /** 6. Team stat multiple choice: "What was the difference in total yards in Auburn's 48–45 win over Alabama?" */
 export function genTeamDiffMC(pr: RivalryPair, rng: Rng): Question | null {
   const MIN = 20; // every option at least this far from every other (and from the true answer)

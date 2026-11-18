@@ -6,106 +6,9 @@
   "away": "UK",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-17T18:07:41.486Z",
- "engine": 9,
+ "generatedAt": "2026-11-18T03:11:54.147Z",
+ "engine": 10,
  "questions": [
-  {
-   "type": "mc",
-   "label": "Since 2012",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2012, which player from either school has the most receiving yards against the other?",
-   "options": [
-    "Garrett Johnson (Kentucky)",
-    "Lynn Bowden Jr. (Kentucky)",
-    "Johnathon Johnson (Missouri)",
-    "Tyler Badie (Missouri)"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    1,
-    0,
-    2
-   ],
-   "reveal": "Garrett Johnson (Kentucky) 271 in 4 games · Lynn Bowden Jr. (Kentucky) 215 in 3 games · Johnathon Johnson (Missouri) 205 in 4 games · Tyler Badie (Missouri) 194 in 4 games",
-   "sig": "tvrec"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "unit": "yds",
-   "game": {
-    "date": "Nov 9, 2013",
-    "winner": "MIZ",
-    "loser": "UK",
-    "ws": 48,
-    "ls": 17,
-    "venue": "Kroger Field"
-   },
-   "prompt": "In this game, rank these players by receiving yards, highest first.",
-   "items": [
-    {
-     "label": "Jeff Badet (UK)",
-     "value": 25,
-     "school": "UK"
-    },
-    {
-     "label": "Bud Sasser (MIZ)",
-     "value": 43,
-     "school": "MIZ"
-    },
-    {
-     "label": "Raymond Sanders (UK)",
-     "value": 68,
-     "school": "UK"
-    },
-    {
-     "label": "Dorial Green-Beckham (MIZ)",
-     "value": 100,
-     "school": "MIZ"
-    }
-   ],
-   "sig": "gs2013-11-09rec"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Kentucky vs Missouri",
-   "a": "UK",
-   "b": "MIZ",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
-   "values": [
-    6,
-    1
-   ],
-   "verified": true,
-   "sig": "gwin3"
-  },
-  {
-   "label": "SEC East Newcomers",
-   "verified": true,
-   "sig": "kSEC East Newcomers0",
-   "type": "moment",
-   "prompt": "Kentucky's longest win streak over Missouri is more or fewer than",
-   "line": "4.5 games",
-   "answer": "over",
-   "reveal": "Over. Kentucky won 5 straight from 2015 to 2019."
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Kentucky vs Missouri",
-   "a": "UK",
-   "b": "MIZ",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    14,
-    9
-   ],
-   "verified": true,
-   "sig": "glosing"
-  },
   {
    "type": "h2h",
    "label": "Fresh Mix",
@@ -135,71 +38,144 @@
    "prompt": "Rank these single-game rushing performances in Kentucky–Missouri games, highest first.",
    "items": [
     {
-     "label": "Asim Rose (UK) · 2019",
-     "value": 51,
+     "label": "Stanley Williams (UK) · 2016",
+     "value": 182,
      "school": "UK"
     },
     {
-     "label": "Larry Rountree III (MIZ) · 2020",
-     "value": 126,
+     "label": "Marcus Murphy (MIZ) · 2014",
+     "value": 52,
      "school": "MIZ"
     },
     {
-     "label": "Cody Schrader (MIZ) · 2023",
-     "value": 71,
+     "label": "Maty Mauk (MIZ) · 2014",
+     "value": 75,
      "school": "MIZ"
     },
     {
-     "label": "Lynn Bowden Jr. (UK) · 2019",
-     "value": 204,
-     "school": "UK"
+     "label": "Kendial Lawrence (MIZ) · 2012",
+     "value": 108,
+     "school": "MIZ"
     }
    ],
-   "sig": "grrushAsim Rose2019,Cody Schrader2023,Larry Rountree III2020,Lynn Bowden Jr.2019"
+   "sig": "grrushKendial Lawrence2012,Marcus Murphy2014,Maty Mauk2014,Stanley Williams2016"
   },
   {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2017,
-   "stat": "Rushing season",
-   "aSchool": "MIZ",
-   "other": "UK",
-   "aName": "Ish Witter (RB)",
-   "bName": "Stephen Johnson (QB)",
-   "A": {
-    "big": "1,049",
-    "sm": "rush yds · 6 TD"
-   },
-   "B": {
-    "big": "375",
-    "sm": "rush yds · 5 TD"
-   },
-   "flip": true,
-   "sig": "drush2017Ish Witter,Stephen Johnson"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
+   "type": "mc",
+   "label": "Since 2012",
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Oct 7, 2017",
-    "winner": "UK",
-    "loser": "MIZ",
-    "ws": 40,
-    "ls": 34,
-    "venue": "Kroger Field"
+   "prompt": "Since 2012, which player from either school has the most receiving yards against the other?",
+   "options": [
+    "Garrett Johnson (Kentucky)",
+    "Lynn Bowden Jr. (Kentucky)",
+    "Johnathon Johnson (Missouri)",
+    "Tyler Badie (Missouri)"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    1,
+    0,
+    2
+   ],
+   "reveal": "Garrett Johnson (Kentucky) 271 in 4 games · Lynn Bowden Jr. (Kentucky) 215 in 3 games · Johnathon Johnson (Missouri) 205 in 4 games · Tyler Badie (Missouri) 194 in 4 games",
+   "sig": "tvrec"
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "UK",
+   "b": "MIZ",
+   "threshold": 3250,
+   "A": [
+    {
+     "name": "Benny Snell",
+     "yards": 3873,
+     "profile": "No. 1 on Kentucky's career rushing list"
+    },
+    {
+     "name": "Sonny Collins",
+     "yards": 3835,
+     "profile": "No. 2 on Kentucky's career rushing list"
+    },
+    {
+     "name": "Chris Rodriguez Jr.",
+     "yards": 3644,
+     "profile": "Running back · Kentucky 2018–2022 · No. 3 on Kentucky's career rushing list · 32 career rushing TDs"
+    },
+    {
+     "name": "Moe Williams",
+     "yards": 3333,
+     "profile": "No. 4 on Kentucky's career rushing list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Brad Smith",
+     "yards": 4289,
+     "profile": "No. 1 on Missouri's career rushing list"
+    },
+    {
+     "name": "Larry Rountree III",
+     "yards": 3720,
+     "profile": "Running back · Missouri 2017–2020 · No. 2 on Missouri's career rushing list · 40 career rushing TDs"
+    }
+   ],
+   "verified": true,
+   "sig": "cUKMIZ3250"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": false,
+   "prompt": "In Kentucky–Missouri games since 2012, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Wan'Dale Robinson (UK) vs. Missouri",
+    "value": 101,
+    "school": "UK"
    },
-   "prompt": "In this game, did Kayaune Ross (Kentucky) have more or less than",
-   "line": "100 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Kayaune Ross had 77 receiving yards on 4 catches and 0 TD in this game.",
-   "check": {
-    "value": 77,
-    "line": 100
+   "B": {
+    "label": "Emanuel Hall (MIZ) vs. Kentucky",
+    "value": 147,
+    "school": "MIZ"
    },
-   "sig": "gm2017-10-07Kayaune Rossrec"
+   "unit": "receiving yds",
+   "note": "Wan'Dale Robinson: 101 in 1 game. Emanuel Hall: 147 in 2 games.",
+   "sig": "vsrecEmanuel Hall,Wan'Dale Robinson"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more yards from scrimmage in a single season?",
+   "A": {
+    "label": "Asim Rose (RB) · 2018 UK",
+    "value": 524,
+    "school": "UK"
+   },
+   "B": {
+    "label": "Larry Rountree III (RB) · 2019 MIZ",
+    "value": 899,
+    "school": "MIZ"
+   },
+   "unit": "yards from scrimmage",
+   "sig": "hAsim Rose2018,Larry Rountree III2019scrim"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Missouri",
+   "a": "UK",
+   "b": "MIZ",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    10,
+    12
+   ],
+   "verified": true,
+   "sig": "gpeakW"
   },
   {
    "type": "count",
@@ -227,6 +203,29 @@
     }
    ],
    "sig": "tsrec11002020"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Missouri",
+   "a": "UK",
+   "b": "MIZ",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    145,
+    192
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "label": "SEC East Newcomers",
+   "verified": true,
+   "sig": "kSEC East Newcomers1",
+   "type": "moment",
+   "prompt": "Missouri's biggest win over Kentucky came in 2013. Was the margin more or less than",
+   "line": "27.5 points",
+   "answer": "over",
+   "reveal": "Over. Missouri won 48–17, a 31-point margin."
   }
  ]
 }

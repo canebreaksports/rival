@@ -6,8 +6,8 @@
   "away": "AUB",
   "home": "ALA"
  },
- "generatedAt": "2026-11-17T18:07:41.499Z",
- "engine": 9,
+ "generatedAt": "2026-11-18T03:11:54.162Z",
+ "engine": 10,
  "questions": [
   {
    "type": "h2h",
@@ -32,6 +32,47 @@
    "sig": "uypcNajee HarrisBen Obomanu"
   },
   {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Auburn–Alabama games since 2006, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Malcolm Simmons (AUB) vs. Alabama",
+    "value": 177,
+    "school": "AUB"
+   },
+   "B": {
+    "label": "Ja'Corey Brooks (ALA) vs. Auburn",
+    "value": 125,
+    "school": "ALA"
+   },
+   "unit": "receiving yds",
+   "note": "Malcolm Simmons: 177 in 2 games. Ja'Corey Brooks: 125 in 2 games.",
+   "sig": "vsrecJa'Corey Brooks,Malcolm Simmons"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2010,
+   "stat": "Rushing season",
+   "aSchool": "AUB",
+   "other": "ALA",
+   "aName": "Cam Newton (QB)",
+   "bName": "Trent Richardson (RB)",
+   "A": {
+    "big": "1,473",
+    "sm": "rush yds · 20 TD"
+   },
+   "B": {
+    "big": "700",
+    "sm": "rush yds · 6 TD"
+   },
+   "flip": true,
+   "sig": "drush2010Cam Newton,Trent Richardson"
+  },
+  {
    "type": "rank",
    "label": "Rivalry Games",
    "verified": true,
@@ -39,27 +80,72 @@
    "prompt": "Rank these single-game rushing performances in Auburn–Alabama games, highest first.",
    "items": [
     {
-     "label": "Jovon Robinson (AUB) · 2015",
-     "value": 51,
-     "school": "AUB"
-    },
-    {
-     "label": "Kenyan Drake (ALA) · 2012",
-     "value": 67,
-     "school": "ALA"
-    },
-    {
-     "label": "Nick Marshall (AUB) · 2013",
-     "value": 99,
-     "school": "AUB"
-    },
-    {
      "label": "Jamarion Miller (ALA) · 2024",
      "value": 84,
      "school": "ALA"
+    },
+    {
+     "label": "Brad Lester (AUB) · 2006",
+     "value": 54,
+     "school": "AUB"
+    },
+    {
+     "label": "Najee Harris (ALA) · 2019",
+     "value": 146,
+     "school": "ALA"
+    },
+    {
+     "label": "Derrick Henry (ALA) · 2015",
+     "value": 271,
+     "school": "ALA"
     }
    ],
-   "sig": "grrushJamarion Miller2024,Jovon Robinson2015,Kenyan Drake2012,Nick Marshall2013"
+   "sig": "grrushBrad Lester2006,Derrick Henry2015,Jamarion Miller2024,Najee Harris2019"
+  },
+  {
+   "type": "mc",
+   "label": "Since 2006",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2006, which player from either school has the most rushing yards against the other?",
+   "options": [
+    "Derrick Henry (Alabama)",
+    "T.J. Yeldon (Alabama)",
+    "Jarquez Hunter (Auburn)",
+    "Trent Richardson (Alabama)"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    3,
+    2,
+    0
+   ],
+   "reveal": "Derrick Henry (Alabama) 343 in 2 games · T.J. Yeldon (Alabama) 306 in 3 games · Jarquez Hunter (Auburn) 285 in 4 games · Trent Richardson (Alabama) 278 in 3 games",
+   "sig": "tvrush"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 26, 2010",
+    "winner": "AUB",
+    "loser": "ALA",
+    "ws": 28,
+    "ls": 27,
+    "venue": "Bryant-Denny Stadium"
+   },
+   "prompt": "In this game, did Cam Newton (Auburn) have more or fewer than",
+   "line": "4.5 touchdown passes",
+   "answer": "under",
+   "reveal": "Less. Cam Newton had 216 passing yards and 3 TD in this game.",
+   "check": {
+    "value": 3,
+    "line": 4.5
+   },
+   "sig": "gm2010-11-26Cam Newtonpasstd"
   },
   {
    "type": "mc",
@@ -90,121 +176,6 @@
    ],
    "reveal": "Auburn +131. Alabama had 280 total yards, Auburn 411.",
    "sig": "td2025-11-29total"
-  },
-  {
-   "type": "mc",
-   "label": "Since 2006",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2006, which player from either school has the most rushing yards against the other?",
-   "options": [
-    "Derrick Henry (Alabama)",
-    "T.J. Yeldon (Alabama)",
-    "Jarquez Hunter (Auburn)",
-    "Trent Richardson (Alabama)"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    2,
-    0
-   ],
-   "reveal": "Derrick Henry (Alabama) 343 in 2 games · T.J. Yeldon (Alabama) 306 in 3 games · Jarquez Hunter (Auburn) 285 in 4 games · Trent Richardson (Alabama) 278 in 3 games",
-   "sig": "tvrush"
-  },
-  {
-   "type": "count",
-   "label": "School Count",
-   "a": "AUB",
-   "b": "ALA",
-   "threshold": 3500,
-   "A": [
-    {
-     "name": "Bo Jackson",
-     "yards": 4303,
-     "profile": "Running back · No. 1 on Auburn's career rushing list · 43 career rushing TDs"
-    },
-    {
-     "name": "Carnell 'Cadillac' Williams",
-     "yards": 3831,
-     "profile": "Running back · No. 2 on Auburn's career rushing list · 45 career rushing TDs"
-    },
-    {
-     "name": "James Brooks",
-     "yards": 3523,
-     "profile": "Running back · No. 3 on Auburn's career rushing list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Najee Harris",
-     "yards": 3843,
-     "profile": "Running back · Alabama 2019–2020 · No. 1 on Alabama's career rushing list · 46 career rushing TDs"
-    },
-    {
-     "name": "Derrick Henry",
-     "yards": 3591,
-     "profile": "Running back · Alabama 2014–2015 · No. 2 on Alabama's career rushing list · 42 career rushing TDs"
-    },
-    {
-     "name": "Shaun Alexander",
-     "yards": 3565,
-     "profile": "No. 3 on Alabama's career rushing list"
-    }
-   ],
-   "verified": true,
-   "sig": "cAUBALA3500"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Tre Mason (AUB RB) · career rushing TDs",
-     "value": 32,
-     "school": "AUB"
-    },
-    {
-     "label": "Derrick Henry (ALA RB) · 2014 rushing TDs",
-     "value": 11,
-     "school": "ALA"
-    },
-    {
-     "label": "Najee Harris (ALA RB) · 2019 receiving TDs",
-     "value": 7,
-     "school": "ALA"
-    },
-    {
-     "label": "Ben Obomanu (AUB WR) · career receiving TDs",
-     "value": 18,
-     "school": "AUB"
-    }
-   ],
-   "sig": "mxTDBen Obomanucareer receiving TDs,Derrick Henry2014 rushing TDs,Najee Harris2019 receiving TDs,Tre Masoncareer rushing TDs"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": true,
-   "prompt": "In Auburn–Alabama games since 2006, who had more receiving yards against the other school?",
-   "A": {
-    "label": "Malcolm Simmons (AUB) vs. Alabama",
-    "value": 177,
-    "school": "AUB"
-   },
-   "B": {
-    "label": "Ja'Corey Brooks (ALA) vs. Auburn",
-    "value": 125,
-    "school": "ALA"
-   },
-   "unit": "receiving yds",
-   "note": "Malcolm Simmons: 177 in 2 games. Ja'Corey Brooks: 125 in 2 games.",
-   "sig": "vsrecJa'Corey Brooks,Malcolm Simmons"
   }
  ]
 }

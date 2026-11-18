@@ -6,161 +6,9 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-17T18:07:41.497Z",
- "engine": 9,
+ "generatedAt": "2026-11-18T03:11:54.160Z",
+ "engine": 10,
  "questions": [
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas vs Texas A&M",
-   "a": "TEX",
-   "b": "TAMU",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    13,
-    11
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas vs Texas A&M",
-   "a": "TEX",
-   "b": "TAMU",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    236,
-    195
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Johnathan Gray (TEX RB) · 2014 yards from scrimmage",
-     "value": 758,
-     "school": "TEX"
-    },
-    {
-     "label": "Tra Carson (TAMU RB) · 2015 rushing yards",
-     "value": 1165,
-     "school": "TAMU"
-    },
-    {
-     "label": "Ricky Williams (TEX RB) · 1998 receiving yards",
-     "value": 307,
-     "school": "TEX"
-    },
-    {
-     "label": "Vince Young (TEX QB) · 2005 rushing yards",
-     "value": 1050,
-     "school": "TEX"
-    }
-   ],
-   "sig": "mxydsJohnathan Gray2014 yards from scrimmage,Ricky Williams1998 receiving yards,Tra Carson2015 rushing yards,Vince Young2005 rushing yards"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 28, 2025",
-    "winner": "TEX",
-    "loser": "TAMU",
-    "ws": 27,
-    "ls": 17,
-    "venue": "DKR-Texas Memorial Stadium"
-   },
-   "prompt": "In this game, did Jack Endries (Texas) have more or less than",
-   "line": "60 receiving yards",
-   "answer": "over",
-   "reveal": "More. Jack Endries had 93 receiving yards on 4 catches and 0 TD in this game.",
-   "check": {
-    "value": 93,
-    "line": 60
-   },
-   "sig": "gm2025-11-28Jack Endriesrec"
-  },
-  {
-   "type": "mc",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 30, 2024",
-    "winner": "TEX",
-    "loser": "TAMU",
-    "ws": 17,
-    "ls": 7,
-    "venue": "Kyle Field"
-   },
-   "prompt": "What was the difference in total yards in Texas's 17–7 win over Texas A&M?",
-   "options": [
-    "Texas +213 yards",
-    "Texas A&M +303 yards",
-    "Texas A&M +83 yards",
-    "Texas +263 yards"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    1,
-    3,
-    2
-   ],
-   "reveal": "Texas +213. Texas A&M had 248 total yards, Texas 461.",
-   "sig": "td2024-11-30total"
-  },
-  {
-   "type": "mc",
-   "label": "Since 2005",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2005, which player from either school has the most rushing yards against the other?",
-   "options": [
-    "Tre Wisner (Texas)",
-    "Jorvorskie Lane (Texas A&M)",
-    "Cyrus Gray (Texas A&M)",
-    "Colt McCoy (Texas)"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    0,
-    2,
-    3
-   ],
-   "reveal": "Tre Wisner (Texas) 341 in 2 games · Jorvorskie Lane (Texas A&M) 243 in 4 games · Cyrus Gray (Texas A&M) 237 in 3 games · Colt McCoy (Texas) 234 in 4 games",
-   "sig": "tvrush"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receiving yards (at the school shown)?",
-   "A": {
-    "label": "Jalen Wydermyer (TAMU TE)",
-    "value": 1468,
-    "school": "TAMU"
-   },
-   "B": {
-    "label": "Ricky Williams (TEX RB)",
-    "value": 988,
-    "school": "TEX"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Jalen Wydermyer 1,468 vs. Ricky Williams 988.",
-   "sig": "urecRicky WilliamsJalen Wydermyer"
-  },
   {
    "type": "count",
    "label": "Since 2018",
@@ -189,82 +37,148 @@
    "sig": "tsrush15002018"
   },
   {
-   "type": "count",
-   "label": "School Count",
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Jalen Wydermyer (TAMU TE)",
+    "value": 1468,
+    "school": "TAMU"
+   },
+   "B": {
+    "label": "Ricky Williams (TEX RB)",
+    "value": 988,
+    "school": "TEX"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jalen Wydermyer 1,468 vs. Ricky Williams 988.",
+   "sig": "urecRicky WilliamsJalen Wydermyer"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Texas–Texas A&M games since 2005, who had more rushing yards against the other school?",
+   "A": {
+    "label": "Tre' Newton (TEX) vs. Texas A&M",
+    "value": 107,
+    "school": "TEX"
+   },
+   "B": {
+    "label": "Jorvorskie Lane (TAMU) vs. Texas",
+    "value": 243,
+    "school": "TAMU"
+   },
+   "unit": "rushing yds",
+   "note": "Tre' Newton: 107 in 1 game. Jorvorskie Lane: 243 in 4 games.",
+   "sig": "vsrushJorvorskie Lane,Tre' Newton"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Roschon Johnson finish his Texas career with more or less than",
+   "line": "22.5 rushing TDs",
+   "answer": "over",
+   "reveal": "More. Roschon Johnson had 23 rushing TDs in his career.",
+   "check": {
+    "value": 23,
+    "line": 22.5
+   },
+   "sig": "ppRoschon Johnsoncareer|Trayveon WilliamscareerrushTD0",
+   "pair": "ppRoschon Johnsoncareer|Trayveon WilliamscareerrushTD",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Trayveon Williams finish his Texas A&M career with more or less than",
+   "line": "34.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. Trayveon Williams had 34 rushing TDs in his career.",
+   "check": {
+    "value": 34,
+    "line": 34.5
+   },
+   "sig": "ppRoschon Johnsoncareer|Trayveon WilliamscareerrushTD1",
+   "pair": "ppRoschon Johnsoncareer|Trayveon WilliamscareerrushTD",
+   "pairPart": 2
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Texas A&M",
    "a": "TEX",
    "b": "TAMU",
-   "threshold": 3000,
-   "A": [
-    {
-     "name": "Ricky Williams",
-     "yards": 6279,
-     "profile": "Running back · Texas 1995–1998 · No. 1 on Texas's career rushing list · 75 career rushing TDs"
-    },
-    {
-     "name": "Cedric Benson",
-     "yards": 5540,
-     "profile": "No. 2 on Texas's career rushing list"
-    },
-    {
-     "name": "Earl Campbell",
-     "yards": 4443,
-     "profile": "No. 3 on Texas's career rushing list"
-    },
-    {
-     "name": "Bijan Robinson",
-     "yards": 3410,
-     "profile": "Running back · Texas 2020–2022 · No. 4 on Texas's career rushing list · 33 career rushing TDs"
-    },
-    {
-     "name": "Jamaal Charles",
-     "yards": 3328,
-     "profile": "No. 5 on Texas's career rushing list"
-    },
-    {
-     "name": "Chris Gilbert",
-     "yards": 3231,
-     "profile": "No. 6 on Texas's career rushing list"
-    },
-    {
-     "name": "Vince Young",
-     "yards": 3127,
-     "profile": "Quarterback · Texas 2003–2005 · No. 7 on Texas's career rushing list · 37 career rushing TDs"
-    }
-   ],
-   "B": [
-    {
-     "name": "Darren Lewis",
-     "yards": 5012,
-     "profile": "No. 1 on Texas A&M's career rushing list"
-    },
-    {
-     "name": "Curtis Dickey",
-     "yards": 3703,
-     "profile": "No. 2 on Texas A&M's career rushing list"
-    },
-    {
-     "name": "Trayveon Williams",
-     "yards": 3379,
-     "profile": "Running back · No. 3 on Texas A&M's career rushing list · 34 career rushing TDs"
-    },
-    {
-     "name": "Cyrus Gray",
-     "yards": 3298,
-     "profile": "No. 4 on Texas A&M's career rushing list"
-    },
-    {
-     "name": "Greg Hill",
-     "yards": 3262,
-     "profile": "No. 5 on Texas A&M's career rushing list"
-    },
-    {
-     "name": "Rodney Thomas",
-     "yards": 3014,
-     "profile": "No. 6 on Texas A&M's career rushing list"
-    }
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    13,
+    11
    ],
    "verified": true,
-   "sig": "cTEXTAMU3000"
+   "sig": "gpeakW"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2025",
+    "winner": "TEX",
+    "loser": "TAMU",
+    "ws": 27,
+    "ls": 17,
+    "venue": "DKR-Texas Memorial Stadium"
+   },
+   "prompt": "In this game, did Marcel Reed (Texas A&M) run for more or less than",
+   "line": "90 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Marcel Reed had 71 rushing yards on 12 carries and 0 TD in this game.",
+   "check": {
+    "value": 71,
+    "line": 90
+   },
+   "sig": "gm2025-11-28Marcel Reedrush"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Texas A&M",
+   "a": "TEX",
+   "b": "TAMU",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    13,
+    2
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "mc",
+   "label": "Since 2005",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2005, which player from either school has the most rushing yards against the other?",
+   "options": [
+    "Tre Wisner (Texas)",
+    "Jorvorskie Lane (Texas A&M)",
+    "Cyrus Gray (Texas A&M)",
+    "Colt McCoy (Texas)"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    0,
+    2,
+    3
+   ],
+   "reveal": "Tre Wisner (Texas) 341 in 2 games · Jorvorskie Lane (Texas A&M) 243 in 4 games · Cyrus Gray (Texas A&M) 237 in 3 games · Colt McCoy (Texas) 234 in 4 games",
+   "sig": "tvrush"
   }
  ]
 }

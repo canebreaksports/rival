@@ -6,21 +6,38 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-17T18:07:41.504Z",
- "engine": 9,
+ "generatedAt": "2026-11-18T03:11:54.170Z",
+ "engine": 10,
  "questions": [
   {
-   "type": "prog",
-   "label": "Program Pit · Oklahoma vs Missouri",
-   "a": "OU",
-   "b": "MIZ",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    2,
-    9
-   ],
+   "type": "rank",
+   "label": "Fresh Mix",
    "verified": true,
-   "sig": "glosing"
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Mark Andrews (OU TE) · 2016 receiving TDs",
+     "value": 7,
+     "school": "OU"
+    },
+    {
+     "label": "Luther Burden III (MIZ WR) · career total TDs (rushing + receiving)",
+     "value": 25,
+     "school": "MIZ"
+    },
+    {
+     "label": "Trey Sermon (OU RB) · 2018 rushing TDs",
+     "value": 13,
+     "school": "OU"
+    },
+    {
+     "label": "CeeDee Lamb (OU WR) · career total TDs (rushing + receiving)",
+     "value": 33,
+     "school": "OU"
+    }
+   ],
+   "sig": "mxTDCeeDee Lambcareer total TDs (rushing + receiving),Luther Burden IIIcareer total TDs (rushing + receiving),Mark Andrews2016 receiving TDs,Trey Sermon2018 rushing TDs"
   },
   {
    "type": "count",
@@ -81,25 +98,17 @@
    "sig": "hJohnathon Johnson2018,Mark Andrews2017recTD"
   },
   {
-   "type": "duel",
-   "label": "Fresh Mix",
+   "type": "prog",
+   "label": "Program Pit · Oklahoma vs Missouri",
+   "a": "OU",
+   "b": "MIZ",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    2,
+    9
+   ],
    "verified": true,
-   "year": 2018,
-   "stat": "Receiving season",
-   "aSchool": "MIZ",
-   "other": "OU",
-   "aName": "Albert Okwuegbunam (TE)",
-   "bName": "CeeDee Lamb (WR)",
-   "A": {
-    "big": "466",
-    "sm": "rec yds · 6 TD"
-   },
-   "B": {
-    "big": "1,155",
-    "sm": "rec yds · 11 TD"
-   },
-   "flip": true,
-   "sig": "drec2018Albert Okwuegbunam,CeeDee Lamb"
+   "sig": "glosing"
   },
   {
    "type": "h2h",
@@ -108,17 +117,17 @@
    "flip": true,
    "prompt": "Who had more career rushing yards?",
    "A": {
-    "label": "Joe Mixon (RB) · career, OU",
-    "value": 2027,
+    "label": "Eric Gray (RB) · career, OU",
+    "value": 1776,
     "school": "OU"
    },
    "B": {
-    "label": "Ish Witter (RB) · career, MIZ",
-    "value": 2418,
+    "label": "Damarea Crockett (RB) · career, MIZ",
+    "value": 2246,
     "school": "MIZ"
    },
    "unit": "rushing yards",
-   "sig": "hIsh Wittercareer,Joe Mixoncareerrush"
+   "sig": "hDamarea Crockettcareer,Eric Graycareerrush"
   },
   {
    "type": "mc",
@@ -156,53 +165,82 @@
    "sig": "gwin10"
   },
   {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Oklahoma–Missouri games, highest first.",
-   "items": [
+   "type": "count",
+   "label": "School Count",
+   "a": "OU",
+   "b": "MIZ",
+   "threshold": 3500,
+   "A": [
     {
-     "label": "Henry Josey (MIZ) · 2010",
-     "value": 64,
-     "school": "MIZ"
+     "name": "Samaje Perine",
+     "yards": 4122,
+     "profile": "Running back · Oklahoma 2014–2016 · No. 1 on Oklahoma's career rushing list · 49 career rushing TDs"
     },
     {
-     "label": "Chris Brown (OU) · 2008",
-     "value": 122,
-     "school": "OU"
+     "name": "Billy Sims",
+     "yards": 4118,
+     "profile": "No. 2 on Oklahoma's career rushing list"
     },
     {
-     "label": "Allen Patrick (OU) · 2006",
-     "value": 162,
-     "school": "OU"
+     "name": "Joe Washington",
+     "yards": 4071,
+     "profile": "No. 3 on Oklahoma's career rushing list"
     },
     {
-     "label": "Allen Patrick (OU) · 2007",
-     "value": 88,
-     "school": "OU"
+     "name": "Adrian Peterson",
+     "yards": 4045,
+     "profile": "Running back · Oklahoma 2004–2006 · No. 4 on Oklahoma's career rushing list · 41 career rushing TDs"
+    },
+    {
+     "name": "Steve Owens",
+     "yards": 4041,
+     "profile": "No. 5 on Oklahoma's career rushing list"
+    },
+    {
+     "name": "Quentin Griffin",
+     "yards": 3938,
+     "profile": "No. 6 on Oklahoma's career rushing list"
+    },
+    {
+     "name": "DeMarco Murray",
+     "yards": 3685,
+     "profile": "No. 7 on Oklahoma's career rushing list"
     }
    ],
-   "sig": "grrushAllen Patrick2006,Allen Patrick2007,Chris Brown2008,Henry Josey2010"
+   "B": [
+    {
+     "name": "Brad Smith",
+     "yards": 4289,
+     "profile": "No. 1 on Missouri's career rushing list"
+    },
+    {
+     "name": "Larry Rountree III",
+     "yards": 3720,
+     "profile": "Running back · Missouri 2017–2020 · No. 2 on Missouri's career rushing list · 40 career rushing TDs"
+    }
+   ],
+   "verified": true,
+   "sig": "cOUMIZ3500"
   },
   {
    "type": "h2h",
-   "label": "Fresh Mix",
+   "label": "Against Each Other",
    "verified": true,
    "flip": false,
-   "prompt": "Who had more rushing TDs in a single season?",
+   "prompt": "In Oklahoma–Missouri games since 2006, who had more receiving yards against the other school?",
    "A": {
-    "label": "Samaje Perine (RB) · 2014 OU",
-    "value": 21,
+    "label": "Jermaine Gresham (OU) vs. Missouri",
+    "value": 179,
     "school": "OU"
    },
    "B": {
-    "label": "Larry Rountree III (RB) · 2018 MIZ",
-    "value": 11,
+    "label": "Martin Rucker (MIZ) vs. Oklahoma",
+    "value": 140,
     "school": "MIZ"
    },
-   "unit": "rushing TDs",
-   "sig": "hLarry Rountree III2018,Samaje Perine2014rushTD"
+   "unit": "receiving yds",
+   "note": "Jermaine Gresham: 179 in 4 games. Martin Rucker: 140 in 3 games.",
+   "sig": "vsrecJermaine Gresham,Martin Rucker"
   }
  ]
 }

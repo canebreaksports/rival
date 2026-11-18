@@ -3,11 +3,11 @@ import type { CuratedItem, Dataset, FrozenSet, Game, Question, QType, SchoolKey 
 import { pick, seededRng, shuffle, type Rng } from "./rng";
 import { PROGRAM_STATS, SCHOOL, programValue } from "./data";
 import { genGameCount, genSeasonCount, genVsLeaderMC } from "./trend-gen";
-import { genGameMoment, genGameRank, genGameRankSingle, genSeriesCount, genTeamDiffMC, genVsH2H, pairKey } from "./rivalry-gen";
+import { genGameMoment, genGameRank, genSeriesCount, genTeamDiffMC, genVsH2H, pairKey } from "./rivalry-gen";
 import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 9; // v9: weekly "since <year>" trend questions (v8: single-game rank, team-stat MC)
+export const ENGINE_VERSION = 10; // v10: single-game Rank It removed (v9: weekly trend questions)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean }
@@ -81,8 +81,8 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
   if (rv) {
     const [a, b] = teams, from = data.rivalry!.boxFrom;
     const gm = () => genGameMoment(rv, rng), vs = () => genVsH2H(rv, a, b, rng, from), gr = () => genGameRank(rv, a, b, rng);
-    const gs = () => genGameRankSingle(rv, a, b, rng), td = () => genTeamDiffMC(rv, rng);
-    gens.push(gm, gm, gm, gm, vs, vs, vs, gr, gr, gs, gs, td, td, () => genSeriesCount(rv, a, b, rng));
+    const td = () => genTeamDiffMC(rv, rng); // (single-game Rank It removed at the owner's request, Nov 2026)
+    gens.push(gm, gm, gm, gm, vs, vs, vs, gr, gr, td, td, () => genSeriesCount(rv, a, b, rng));
   }
   const out: Question[] = [], sigs = new Set<string>();
   // Weekly "since <year>" trend questions come first so every matchup gets them (up to 2: one count, one other)

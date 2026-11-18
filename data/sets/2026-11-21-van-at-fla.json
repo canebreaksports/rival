@@ -6,70 +6,38 @@
   "away": "VAN",
   "home": "FLA"
  },
- "generatedAt": "2026-11-17T18:07:41.484Z",
- "engine": 9,
+ "generatedAt": "2026-11-18T03:11:54.145Z",
+ "engine": 10,
  "questions": [
   {
    "type": "rank",
    "label": "Fresh Mix",
-   "trap": true,
    "verified": true,
-   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
-     "label": "Montrell Johnson (RB) · 2022 FLA",
-     "value": 899,
+     "label": "Anthony Richardson (FLA QB) · career rushing TDs",
+     "value": 12,
      "school": "FLA"
     },
     {
-     "label": "Kelvin Taylor (RB) · 2013 FLA",
-     "value": 545,
-     "school": "FLA"
-    },
-    {
-     "label": "Keyon Brooks (RB) · 2019 VAN",
-     "value": 309,
+     "label": "Diego Pavia (VAN QB) · career rushing TDs",
+     "value": 18,
      "school": "VAN"
     },
     {
-     "label": "Malik Davis (RB) · 2021 FLA",
-     "value": 704,
+     "label": "Kalija Lipscomb (VAN WR) · 2018 receiving TDs",
+     "value": 9,
+     "school": "VAN"
+    },
+    {
+     "label": "Montrell Johnson (FLA RB) · 2024 rushing TDs",
+     "value": 6,
      "school": "FLA"
     }
    ],
-   "unit": "yds",
-   "note": "🪤 Trap: Montrell Johnson's best year was 2023 (1,053), not 2022; Kelvin Taylor's best year was 2015 (1,185), not 2013; Keyon Brooks's best year was 2020 (738), not 2019.",
-   "sig": "trscrimKelvin Taylor2013,Keyon Brooks2019,Malik Davis2021,Montrell Johnson2022"
-  },
-  {
-   "type": "mc",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 19, 2022",
-    "winner": "VAN",
-    "loser": "FLA",
-    "ws": 31,
-    "ls": 24,
-    "venue": "FirstBank Stadium"
-   },
-   "prompt": "What was the difference in total yards in Vanderbilt's 31–24 win over Florida?",
-   "options": [
-    "Florida +162 yards",
-    "Vanderbilt +32 yards",
-    "Florida +92 yards",
-    "Florida +112 yards"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    0,
-    2
-   ],
-   "reveal": "Florida +162. Vanderbilt had 283 total yards, Florida 445.",
-   "sig": "td2022-11-19total"
+   "sig": "mxTDAnthony Richardsoncareer rushing TDs,Diego Paviacareer rushing TDs,Kalija Lipscomb2018 receiving TDs,Montrell Johnson2024 rushing TDs"
   },
   {
    "type": "mc",
@@ -94,43 +62,73 @@
    "sig": "tvrush"
   },
   {
-   "type": "rank",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "unit": "yds",
-   "game": {
-    "date": "Nov 5, 2005",
-    "winner": "FLA",
-    "loser": "VAN",
-    "ws": 49,
-    "ls": 42,
-    "venue": "Ben Hill Griffin Stadium"
-   },
-   "prompt": "In this game, rank these players by receiving yards, highest first.",
-   "items": [
+   "type": "count",
+   "label": "School Count",
+   "a": "VAN",
+   "b": "FLA",
+   "threshold": 2500,
+   "A": [
     {
-     "label": "Chad Jackson (FLA)",
-     "value": 53,
-     "school": "FLA"
+     "name": "Ralph Webb",
+     "yards": 4173,
+     "profile": "Running back · Vanderbilt 2014–2017 · No. 1 on Vanderbilt's career rushing list · 32 career rushing TDs"
     },
     {
-     "label": "Earl Bennett (VAN)",
-     "value": 75,
-     "school": "VAN"
+     "name": "Zac Stacy",
+     "yards": 3143,
+     "profile": "No. 2 on Vanderbilt's career rushing list"
     },
     {
-     "label": "Kenneth Tookes (FLA)",
-     "value": 36,
-     "school": "FLA"
-    },
-    {
-     "label": "Erik Davis (VAN)",
-     "value": 127,
-     "school": "VAN"
+     "name": "Frank Mordica",
+     "yards": 2632,
+     "profile": "No. 3 on Vanderbilt's career rushing list"
     }
    ],
-   "sig": "gs2005-11-05rec"
+   "B": [
+    {
+     "name": "Errict Rhett",
+     "yards": 4163,
+     "profile": "No. 1 on Florida's career rushing list"
+    },
+    {
+     "name": "Emmitt Smith",
+     "yards": 3928,
+     "profile": "No. 2 on Florida's career rushing list"
+    },
+    {
+     "name": "Neal Anderson",
+     "yards": 3234,
+     "profile": "No. 3 on Florida's career rushing list"
+    },
+    {
+     "name": "Fred Taylor",
+     "yards": 3075,
+     "profile": "No. 4 on Florida's career rushing list"
+    },
+    {
+     "name": "Earnest Graham",
+     "yards": 3065,
+     "profile": "No. 5 on Florida's career rushing list"
+    },
+    {
+     "name": "Tim Tebow",
+     "yards": 2947,
+     "profile": "Quarterback · Florida 2006–2009 · No. 6 on Florida's career rushing list · 57 career rushing TDs"
+    },
+    {
+     "name": "Jadan Baugh",
+     "yards": 2748,
+     "active": true,
+     "profile": "No. 7 on Florida's career rushing list · still active"
+    },
+    {
+     "name": "Tony Green",
+     "yards": 2590,
+     "profile": "No. 8 on Florida's career rushing list"
+    }
+   ],
+   "verified": true,
+   "sig": "cVANFLA2500"
   },
   {
    "type": "prog",
@@ -167,6 +165,58 @@
    "sig": "urecRalph WebbLamical Perine"
   },
   {
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Florida",
+   "a": "VAN",
+   "b": "FLA",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    12,
+    0
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more receiving yards in a single season?",
+   "A": {
+    "label": "Josh Hammond (WR) · 2018 FLA",
+    "value": 369,
+    "school": "FLA"
+   },
+   "B": {
+    "label": "Kalija Lipscomb (WR) · 2018 VAN",
+    "value": 916,
+    "school": "VAN"
+   },
+   "unit": "receiving yards",
+   "sig": "hJosh Hammond2018,Kalija Lipscomb2018rec"
+  },
+  {
+   "label": "SEC East Originals",
+   "verified": true,
+   "sig": "kSEC East Originals1",
+   "type": "moment",
+   "prompt": "Florida's biggest win over Vanderbilt came in 2001. Was the margin more or less than",
+   "line": "50.5 points",
+   "answer": "over",
+   "reveal": "Over. Florida won 71–13, a 58-point margin."
+  },
+  {
+   "label": "SEC East Originals",
+   "verified": true,
+   "sig": "kSEC East Originals0",
+   "type": "moment",
+   "prompt": "Florida's longest win streak over Vanderbilt is more or fewer than",
+   "line": "19.5 games",
+   "answer": "over",
+   "reveal": "Over. Florida won 22 straight from 1989 to 2012."
+  },
+  {
    "type": "count",
    "label": "Since 2020",
    "a": "VAN",
@@ -191,52 +241,6 @@
     }
    ],
    "sig": "tsrec9002020"
-  },
-  {
-   "label": "SEC East Originals",
-   "verified": true,
-   "sig": "kSEC East Originals0",
-   "type": "moment",
-   "prompt": "Florida's longest win streak over Vanderbilt is more or fewer than",
-   "line": "19.5 games",
-   "answer": "over",
-   "reveal": "Over. Florida won 22 straight from 1989 to 2012."
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Vanderbilt vs Florida",
-   "a": "VAN",
-   "b": "FLA",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    10,
-    13
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 21, 2020",
-    "winner": "FLA",
-    "loser": "VAN",
-    "ws": 38,
-    "ls": 17,
-    "venue": "FirstBank Stadium"
-   },
-   "prompt": "In this game, did Kadarius Toney (Florida) have more or less than",
-   "line": "80 receiving yards",
-   "answer": "over",
-   "reveal": "More. Kadarius Toney had 107 receiving yards on 6 catches and 1 TD in this game.",
-   "check": {
-    "value": 107,
-    "line": 80
-   },
-   "sig": "gm2020-11-21Kadarius Toneyrec"
   }
  ]
 }
