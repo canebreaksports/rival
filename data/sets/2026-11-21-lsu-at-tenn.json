@@ -6,85 +6,9 @@
   "away": "LSU",
   "home": "TENN"
  },
- "generatedAt": "2026-11-18T03:11:54.154Z",
- "engine": 10,
+ "generatedAt": "2026-11-18T12:25:25.090Z",
+ "engine": 11,
  "questions": [
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Sep 26, 2005",
-    "winner": "TENN",
-    "loser": "LSU",
-    "ws": 30,
-    "ls": 27,
-    "venue": "Tiger Stadium (LA)"
-   },
-   "prompt": "In this game, did Joseph Addai (LSU) run for more or less than",
-   "line": "110 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Joseph Addai had 84 rushing yards on 16 carries and 1 TD in this game.",
-   "check": {
-    "value": 84,
-    "line": 110
-   },
-   "sig": "gm2005-09-26Joseph Addairush"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Whose best college season had more rushing yards?",
-   "A": {
-    "label": "Clyde Edwards-Helaire (LSU RB)",
-    "value": 1415,
-    "school": "LSU"
-   },
-   "B": {
-    "label": "Arian Foster (TENN RB)",
-    "value": 1193,
-    "school": "TENN"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Clyde Edwards-Helaire 1,415 vs. Arian Foster 1,193.",
-   "sig": "upeakRushArian FosterClyde Edwards-Helaire"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more receiving yards in a single season?",
-   "A": {
-    "label": "Kevin Faulk (RB) · 1998 LSU",
-    "value": 287,
-    "school": "LSU"
-   },
-   "B": {
-    "label": "Jalin Hyatt (WR) · 2022 TENN",
-    "value": 1267,
-    "school": "TENN"
-   },
-   "unit": "receiving yards",
-   "sig": "hJalin Hyatt2022,Kevin Faulk1998rec"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Tennessee",
-   "a": "LSU",
-   "b": "TENN",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    249,
-    194
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
   {
    "type": "prog",
    "label": "Program Pit · LSU vs Tennessee",
@@ -99,133 +23,87 @@
    "sig": "gwin3"
   },
   {
-   "type": "count",
-   "label": "School Count",
-   "a": "LSU",
-   "b": "TENN",
-   "threshold": 2500,
-   "A": [
-    {
-     "name": "Kevin Faulk",
-     "yards": 4557,
-     "profile": "Running back · LSU 1995–1998 · No. 1 on LSU's career rushing list · 46 career rushing TDs"
-    },
-    {
-     "name": "Dalton Hilliard",
-     "yards": 4050,
-     "profile": "No. 2 on LSU's career rushing list"
-    },
-    {
-     "name": "Charles Alexander",
-     "yards": 4035,
-     "profile": "No. 3 on LSU's career rushing list"
-    },
-    {
-     "name": "Leonard Fournette",
-     "yards": 3830,
-     "profile": "Running back · LSU 2014–2016 · No. 4 on LSU's career rushing list · 40 career rushing TDs"
-    },
-    {
-     "name": "Derrius Guice",
-     "yards": 3074,
-     "profile": "Running back · LSU 2016–2017 · No. 5 on LSU's career rushing list · 29 career rushing TDs"
-    },
-    {
-     "name": "Harvey Williams",
-     "yards": 2860,
-     "profile": "No. 6 on LSU's career rushing list"
-    },
-    {
-     "name": "Joseph Addai",
-     "yards": 2577,
-     "profile": "No. 7 on LSU's career rushing list"
-    },
-    {
-     "name": "Terry Robiskie",
-     "yards": 2517,
-     "profile": "No. 8 on LSU's career rushing list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Travis Henry",
-     "yards": 3078,
-     "profile": "No. 1 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Arian Foster",
-     "yards": 2964,
-     "profile": "Running back · Tennessee 2005–2008 · No. 2 on Tennessee's career rushing list · 23 career rushing TDs"
-    },
-    {
-     "name": "James Stewart",
-     "yards": 2890,
-     "profile": "No. 3 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Johnnie Jones",
-     "yards": 2852,
-     "profile": "No. 4 on Tennessee's career rushing list"
-    },
-    {
-     "name": "DeSean Bishop",
-     "yards": 2694,
-     "active": true,
-     "profile": "No. 5 on Tennessee's career rushing list · still active"
-    },
-    {
-     "name": "Jamal Lewis",
-     "yards": 2677,
-     "profile": "Running back · Tennessee 1997–1999 · No. 6 on Tennessee's career rushing list · 17 career rushing TDs"
-    },
-    {
-     "name": "Jalen Hurd",
-     "yards": 2638,
-     "profile": "No. 7 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Cedric Houston",
-     "yards": 2634,
-     "profile": "No. 8 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Jay Graham",
-     "yards": 2609,
-     "profile": "No. 9 on Tennessee's career rushing list"
-    }
-   ],
-   "verified": true,
-   "sig": "cLSUTENN2500"
-  },
-  {
    "type": "mc",
-   "label": "Rivalry Game",
+   "label": "Heisman",
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Sep 26, 2005",
-    "winner": "TENN",
-    "loser": "LSU",
-    "ws": 30,
-    "ls": 27,
-    "venue": "Tiger Stadium (LA)"
-   },
-   "prompt": "What was the difference in rushing yards in Tennessee's 30–27 win over LSU?",
+   "prompt": "Which of these finished highest in Heisman Trophy voting that season?",
    "options": [
-    "LSU +28 yards",
-    "Tennessee +138 yards",
-    "LSU +138 yards",
-    "Tennessee +158 yards"
+    "Jayden Daniels (LSU, 2023)",
+    "Hendon Hooker (Tennessee, 2022)",
+    "Leonard Fournette (LSU, 2015)",
+    "Glenn Dorsey (LSU, 2007)"
    ],
    "answer": 0,
    "order": [
+    1,
     3,
     2,
-    1,
     0
    ],
-   "reveal": "LSU +28. Tennessee had 70 rushing yards, LSU 98.",
-   "sig": "td2005-09-26rush"
+   "reveal": "Jayden Daniels: 1st in 2023 · Hendon Hooker: 5th in 2022 · Leonard Fournette: 6th in 2015 · Glenn Dorsey: 9th in 2007",
+   "sig": "hmGlenn Dorsey2007,Hendon Hooker2022,Jayden Daniels2023,Leonard Fournette2015"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2016,
+   "stat": "Rushing season",
+   "aSchool": "TENN",
+   "other": "LSU",
+   "aName": "Joshua Dobbs (QB)",
+   "bName": "Leonard Fournette (RB)",
+   "A": {
+    "big": "831",
+    "sm": "rush yds · 12 TD"
+   },
+   "B": {
+    "big": "843",
+    "sm": "rush yds · 8 TD"
+   },
+   "flip": true,
+   "sig": "drush2016Joshua Dobbs,Leonard Fournette"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Clyde Edwards-Helaire (LSU RB)",
+    "value": 595,
+    "school": "LSU"
+   },
+   "B": {
+    "label": "Jamal Lewis (TENN RB)",
+    "value": 475,
+    "school": "TENN"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Clyde Edwards-Helaire 595 vs. Jamal Lewis 475.",
+   "sig": "urecJamal LewisClyde Edwards-Helaire"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more rushing TDs in a single season?",
+   "A": {
+    "label": "Leonard Fournette (RB) · 2016 LSU",
+    "value": 8,
+    "school": "LSU"
+   },
+   "B": {
+    "label": "Arian Foster (RB) · 2005 TENN",
+    "value": 5,
+    "school": "TENN"
+   },
+   "unit": "rushing TDs",
+   "sig": "hArian Foster2005,Leonard Fournette2016rushTD"
   },
   {
    "label": "Tigers vs. Vols",
@@ -251,70 +129,91 @@
    ],
    "answer": 0,
    "order": [
-    3,
-    0,
     2,
-    1
+    0,
+    1,
+    3
    ],
    "reveal": "Jacob Hester (LSU) 202 in 3 games · Tauren Poole (Tennessee) 177 in 2 games · Jordan Jefferson (LSU) 173 in 2 games · Robert Meachem (Tennessee) 166 in 2 games",
    "sig": "tvscrim"
   },
   {
-   "type": "count",
-   "label": "Since 2012",
+   "type": "prog",
+   "label": "Program Pit · LSU vs Tennessee",
    "a": "LSU",
    "b": "TENN",
-   "threshold": 1200,
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    15,
+    11
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Dylan Sampson (TENN RB) · career rushing TDs",
+     "value": 35,
+     "school": "TENN"
+    },
+    {
+     "label": "Kevin Faulk (LSU RB) · 1995 rushing TDs",
+     "value": 6,
+     "school": "LSU"
+    },
+    {
+     "label": "Justin Jefferson (LSU WR) · 2019 receiving TDs",
+     "value": 18,
+     "school": "LSU"
+    },
+    {
+     "label": "Clyde Edwards-Helaire (LSU RB) · career rushing TDs",
+     "value": 23,
+     "school": "LSU"
+    }
+   ],
+   "sig": "mxTDClyde Edwards-Helairecareer rushing TDs,Dylan Sampsoncareer rushing TDs,Justin Jefferson2019 receiving TDs,Kevin Faulk1995 rushing TDs"
+  },
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "LSU",
+   "b": "TENN",
+   "threshold": 0,
    "verified": true,
    "pitted": true,
-   "prompt": "From 2012 through 2025, which school had more 1,200-yard rushing seasons?",
+   "prompt": "From 2010 through 2025, which school had more Jim Thorpe Award winners?",
    "A": [
     {
-     "name": "Jeremy Hill",
-     "yards": 1401,
-     "season": 2013,
-     "profile": "Running back · 2013: 1,401 rushing, 181 receiving yds"
+     "name": "Patrick Peterson",
+     "yards": 2010,
+     "season": 2010,
+     "label": "CB",
+     "profile": "CB · won the Jim Thorpe Award (best defensive back)"
     },
     {
-     "name": "Leonard Fournette",
-     "yards": 1953,
-     "season": 2015,
-     "profile": "Running back · 2015: 1,953 rushing, 253 receiving yds"
+     "name": "Morris Claiborne",
+     "yards": 2011,
+     "season": 2011,
+     "label": "CB",
+     "profile": "CB · won the Jim Thorpe Award (best defensive back)"
     },
     {
-     "name": "Derrius Guice",
-     "yards": 1387,
-     "season": 2016,
-     "profile": "Running back · 2016: 1,387 rushing, 106 receiving yds · also on this list in 2017"
-    },
-    {
-     "name": "Derrius Guice",
-     "yards": 1251,
-     "season": 2017,
-     "profile": "Running back · 2017: 1,251 rushing, 124 receiving yds · also on this list in 2016"
-    },
-    {
-     "name": "Clyde Edwards-Helaire",
-     "yards": 1414,
+     "name": "Grant Delpit",
+     "yards": 2019,
      "season": 2019,
-     "profile": "Running back · 2019: 1,414 rushing, 453 receiving yds"
+     "label": "S",
+     "profile": "S · won the Jim Thorpe Award (best defensive back)"
     }
    ],
-   "B": [
-    {
-     "name": "Jalen Hurd",
-     "yards": 1288,
-     "season": 2015,
-     "profile": "Running back · 2015: 1,288 rushing, 190 receiving yds"
-    },
-    {
-     "name": "Dylan Sampson",
-     "yards": 1491,
-     "season": 2024,
-     "profile": "Running back · 2024: 1,491 rushing, 143 receiving yds"
-    }
-   ],
-   "sig": "tsrush12002012"
+   "B": [],
+   "sig": "acthorpe2010"
   }
  ]
 }

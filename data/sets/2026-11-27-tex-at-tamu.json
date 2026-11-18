@@ -6,35 +6,89 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-18T03:11:54.160Z",
- "engine": 10,
+ "generatedAt": "2026-11-18T12:25:25.097Z",
+ "engine": 11,
  "questions": [
   {
    "type": "count",
    "label": "Since 2018",
    "a": "TEX",
    "b": "TAMU",
-   "threshold": 1500,
+   "threshold": 1100,
    "verified": true,
    "pitted": true,
-   "prompt": "From 2018 through 2025, which school had more 1,500-yard rushing seasons?",
+   "prompt": "From 2018 through 2025, which school had more 1,100-yard receiving seasons?",
    "A": [
     {
-     "name": "Bijan Robinson",
-     "yards": 1578,
-     "season": 2022,
-     "profile": "Running back · 2022: 1,578 rushing, 314 receiving yds"
-    }
-   ],
-   "B": [
-    {
-     "name": "Trayveon Williams",
-     "yards": 1760,
+     "name": "Lil'Jordan Humphrey",
+     "yards": 1176,
      "season": 2018,
-     "profile": "Running back · 2018: 1,760 rushing, 277 receiving yds"
+     "profile": "Wide receiver · 2018: 25 rushing, 1,176 receiving yds"
+    },
+    {
+     "name": "Devin Duvernay",
+     "yards": 1386,
+     "season": 2019,
+     "profile": "Wide receiver · 2019: 24 rushing, 1,386 receiving yds"
     }
    ],
-   "sig": "tsrush15002018"
+   "B": [],
+   "sig": "tsrec11002018"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Texas A&M",
+   "a": "TEX",
+   "b": "TAMU",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    236,
+    195
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "mc",
+   "label": "Awards",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Which of these players won the Walter Camp Award, given to the nation's player of the year?",
+   "options": [
+    "Colt McCoy (Texas)",
+    "Braden Mann (Texas A&M)",
+    "Derrick Johnson (Texas)",
+    "Cedric Benson (Texas)"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    2,
+    1,
+    0
+   ],
+   "reveal": "Colt McCoy (Texas) won the Walter Camp Award in 2009.",
+   "sig": "amcamp2009"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Texas–Texas A&M games since 2005, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Brandon Collins (TEX) vs. Texas A&M",
+    "value": 103,
+    "school": "TEX"
+   },
+   "B": {
+    "label": "Earvin Taylor (TAMU) vs. Texas",
+    "value": 129,
+    "school": "TAMU"
+   },
+   "unit": "receiving yds",
+   "note": "Brandon Collins: 103 in 1 game. Earvin Taylor: 129 in 2 games.",
+   "sig": "vsrecBrandon Collins,Earvin Taylor"
   },
   {
    "type": "h2h",
@@ -42,72 +96,74 @@
    "upset": true,
    "verified": true,
    "flip": true,
-   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
    "A": {
-    "label": "Jalen Wydermyer (TAMU TE)",
-    "value": 1468,
-    "school": "TAMU"
+    "label": "Gunnar Helm (TEX TE)",
+    "value": 9,
+    "school": "TEX"
    },
    "B": {
-    "label": "Ricky Williams (TEX RB)",
-    "value": 988,
-    "school": "TEX"
+    "label": "Devon Achane (TAMU RB)",
+    "value": 5,
+    "school": "TAMU"
    },
    "unit": "",
-   "note": "🚨 Upset: Jalen Wydermyer 1,468 vs. Ricky Williams 988.",
-   "sig": "urecRicky WilliamsJalen Wydermyer"
+   "note": "🚨 Upset: Gunnar Helm 9 vs. Devon Achane 5.",
+   "sig": "urecTDDevon AchaneGunnar Helm"
   },
   {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": true,
-   "prompt": "In Texas–Texas A&M games since 2005, who had more rushing yards against the other school?",
-   "A": {
-    "label": "Tre' Newton (TEX) vs. Texas A&M",
-    "value": 107,
-    "school": "TEX"
-   },
-   "B": {
-    "label": "Jorvorskie Lane (TAMU) vs. Texas",
-    "value": 243,
-    "school": "TAMU"
-   },
-   "unit": "rushing yds",
-   "note": "Tre' Newton: 107 in 1 game. Jorvorskie Lane: 243 in 4 games.",
-   "sig": "vsrushJorvorskie Lane,Tre' Newton"
-  },
-  {
-   "type": "moment",
+   "type": "rank",
    "label": "Fresh Mix",
+   "trap": true,
    "verified": true,
-   "prompt": "Did Roschon Johnson finish his Texas career with more or less than",
-   "line": "22.5 rushing TDs",
-   "answer": "over",
-   "reveal": "More. Roschon Johnson had 23 rushing TDs in his career.",
-   "check": {
-    "value": 23,
-    "line": 22.5
-   },
-   "sig": "ppRoschon Johnsoncareer|Trayveon WilliamscareerrushTD0",
-   "pair": "ppRoschon Johnsoncareer|Trayveon WilliamscareerrushTD",
-   "pairPart": 1
+   "prompt": "Rank these seasons by receiving yards, highest first.",
+   "items": [
+    {
+     "label": "Josh Reynolds (WR) · 2015 TAMU",
+     "value": 907,
+     "school": "TAMU"
+    },
+    {
+     "label": "Jordan Whittington (WR) · 2023 TEX",
+     "value": 505,
+     "school": "TEX"
+    },
+    {
+     "label": "Collin Johnson (WR) · 2017 TEX",
+     "value": 765,
+     "school": "TEX"
+    },
+    {
+     "label": "Bijan Robinson (RB) · 2022 TEX",
+     "value": 314,
+     "school": "TEX"
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Josh Reynolds's best year was 2016 (1,039), not 2015; Jordan Whittington's best year was 2022 (652), not 2023; Collin Johnson's best year was 2018 (988), not 2017.",
+   "sig": "trrecBijan Robinson2022,Collin Johnson2017,Jordan Whittington2023,Josh Reynolds2015"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
+   "type": "mc",
+   "label": "Since 2005",
    "verified": true,
-   "prompt": "Did Trayveon Williams finish his Texas A&M career with more or less than",
-   "line": "34.5 rushing TDs",
-   "answer": "under",
-   "reveal": "Less. Trayveon Williams had 34 rushing TDs in his career.",
-   "check": {
-    "value": 34,
-    "line": 34.5
-   },
-   "sig": "ppRoschon Johnsoncareer|Trayveon WilliamscareerrushTD1",
-   "pair": "ppRoschon Johnsoncareer|Trayveon WilliamscareerrushTD",
-   "pairPart": 2
+   "pitted": true,
+   "prompt": "Since 2005, which player from either school has the most receiving yards against the other?",
+   "options": [
+    "Jeff Fuller (Texas A&M)",
+    "Jordan Shipley (Texas)",
+    "Quan Cosby (Texas)",
+    "Malcolm Williams (Texas)"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    0,
+    1,
+    2
+   ],
+   "reveal": "Jeff Fuller (Texas A&M) 344 in 4 games · Jordan Shipley (Texas) 234 in 4 games · Quan Cosby (Texas) 193 in 4 games · Malcolm Williams (Texas) 168 in 3 games",
+   "sig": "tvrec"
   },
   {
    "type": "prog",
@@ -121,64 +177,6 @@
    ],
    "verified": true,
    "sig": "gpeakW"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 28, 2025",
-    "winner": "TEX",
-    "loser": "TAMU",
-    "ws": 27,
-    "ls": 17,
-    "venue": "DKR-Texas Memorial Stadium"
-   },
-   "prompt": "In this game, did Marcel Reed (Texas A&M) run for more or less than",
-   "line": "90 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Marcel Reed had 71 rushing yards on 12 carries and 0 TD in this game.",
-   "check": {
-    "value": 71,
-    "line": 90
-   },
-   "sig": "gm2025-11-28Marcel Reedrush"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas vs Texas A&M",
-   "a": "TEX",
-   "b": "TAMU",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    13,
-    2
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "mc",
-   "label": "Since 2005",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2005, which player from either school has the most rushing yards against the other?",
-   "options": [
-    "Tre Wisner (Texas)",
-    "Jorvorskie Lane (Texas A&M)",
-    "Cyrus Gray (Texas A&M)",
-    "Colt McCoy (Texas)"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    0,
-    2,
-    3
-   ],
-   "reveal": "Tre Wisner (Texas) 341 in 2 games · Jorvorskie Lane (Texas A&M) 243 in 4 games · Cyrus Gray (Texas A&M) 237 in 3 games · Colt McCoy (Texas) 234 in 4 games",
-   "sig": "tvrush"
   }
  ]
 }

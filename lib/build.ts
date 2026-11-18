@@ -3,11 +3,12 @@ import type { CuratedItem, Dataset, FrozenSet, Game, Question, QType, SchoolKey 
 import { pick, seededRng, shuffle, type Rng } from "./rng";
 import { PROGRAM_STATS, SCHOOL, programValue } from "./data";
 import { genGameCount, genSeasonCount, genVsLeaderMC } from "./trend-gen";
+import { genAwardCount, genAwardMC, genDraftCount, genDraftMC, genHeismanCount, genHeismanMC } from "./honors-gen";
 import { genGameMoment, genGameRank, genSeriesCount, genTeamDiffMC, genVsH2H, pairKey } from "./rivalry-gen";
 import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 10; // v10: single-game Rank It removed (v9: weekly trend questions)
+export const ENGINE_VERSION = 11; // v11: NFL draft, awards and Heisman voting questions (v10: single-game Rank It removed)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean }
@@ -84,6 +85,11 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
     const td = () => genTeamDiffMC(rv, rng); // (single-game Rank It removed at the owner's request, Nov 2026)
     gens.push(gm, gm, gm, gm, vs, vs, vs, gr, gr, td, td, () => genSeriesCount(rv, a, b, rng));
   }
+  if (teams.length > 1) { // honors multiple choice: drafted highest, award winner, best Heisman finish
+    const [a, b] = teams, pl = data.players.players.map(p => ({ name: p.name, school: p.school, pos: p.pos, star: p.star }));
+    if (data.draft) gens.push(() => genDraftMC(data.draft!, a, b, rng));
+    if (data.honors) gens.push(() => genAwardMC(data.honors!, a, b, rng, pl), () => genHeismanMC(data.honors!, a, b, rng));
+  }
   const out: Question[] = [], sigs = new Set<string>();
   // Weekly "since <year>" trend questions come first so every matchup gets them (up to 2: one count, one other)
   if (teams.length > 1) {
@@ -92,6 +98,11 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
       () => (data.leaders ? genSeasonCount(data.leaders, a, b, rng) : null),
       () => (rv0 ? genGameCount(rv0, a, b, rng, data.leaders) : null),
       () => (rv0 ? genVsLeaderMC(rv0, a, b, rng) : null),
+      // honors: draft, awards, Heisman voting (one of these may take a weekly slot)
+      () => { const f = pick(rng, [
+        () => (data.draft ? genDraftCount(data.draft, a, b, rng) : null),
+        () => (data.honors ? genAwardCount(data.honors, a, b, rng) : null),
+        () => (data.honors ? genHeismanCount(data.honors, a, b, rng) : null)]); return f() },
     ]);
     for (const f of tries) { if (out.length >= 2) break; const q = f(); if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q) } }
   }

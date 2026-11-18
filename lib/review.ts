@@ -21,7 +21,7 @@ export function reviewQuestion(q: Question): ReviewItem {
     }
     case "count": {
       const c = correctAnswer(q);
-      const list = (k: string, L: typeof q.A) => `${n(k)} (${L.length}): ${L.map(x => `${x.name}${x.season ? " " + x.season : ""} (${f(x.yards)})`).join(", ") || "none"}`;
+      const list = (k: string, L: typeof q.A) => `${n(k)} (${L.length}): ${L.map(x => `${x.name}${x.season ? " " + x.season : ""} (${x.label ?? f(x.yards)})`).join(", ") || "none"}`;
       return { kind: "School Count + Name Them", prompt: q.prompt ?? `Which school has more ${f(q.threshold)}-yard career rushers?`,
         options: [n(q.a), n(q.b), "Tied"], answer: c === "t" ? "Tied" : n(c === "a" ? q.a : q.b), detail: `${list(q.a, q.A)}\n${list(q.b, q.B)}`, flags };
     }

@@ -6,20 +6,173 @@
   "away": "TAMU",
   "home": "OU"
  },
- "generatedAt": "2026-11-18T03:11:54.150Z",
- "engine": 10,
+ "generatedAt": "2026-11-18T12:25:25.083Z",
+ "engine": 11,
  "questions": [
+  {
+   "label": "Old Big 12 Foes",
+   "verified": true,
+   "sig": "kOld Big 12 Foes0",
+   "type": "moment",
+   "prompt": "Oklahoma's biggest win over Texas A&M came in 2003. Was the margin more or less than",
+   "line": "70 points",
+   "answer": "over",
+   "reveal": "Over. Oklahoma won 77–0."
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 5, 2011",
+    "winner": "OU",
+    "loser": "TAMU",
+    "ws": 41,
+    "ls": 25,
+    "venue": "Memorial Stadium (Norman, OK)"
+   },
+   "prompt": "In this game, did Ryan Tannehill (Texas A&M) have more or fewer than",
+   "line": "0.5 touchdown passes",
+   "answer": "over",
+   "reveal": "More. Ryan Tannehill had 379 passing yards and 2 TD in this game.",
+   "check": {
+    "value": 2,
+    "line": 0.5
+   },
+   "sig": "gm2011-11-05Ryan Tannehillpasstd"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 8, 2008",
+    "winner": "OU",
+    "loser": "TAMU",
+    "ws": 66,
+    "ls": 28,
+    "venue": "Kyle Field"
+   },
+   "prompt": "In this game, did Ryan Tannehill (Texas A&M) have more or less than",
+   "line": "100 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Ryan Tannehill had 83 receiving yards on 4 catches and 0 TD in this game.",
+   "check": {
+    "value": 83,
+    "line": 100
+   },
+   "sig": "gm2008-11-08Ryan Tannehillrec"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs Oklahoma",
+   "a": "TAMU",
+   "b": "OU",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    5,
+    2
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Sterling Shepard (OU WR)",
+    "value": 3482,
+    "school": "OU"
+   },
+   "B": {
+    "label": "Christian Kirk (TAMU WR)",
+    "value": 2856,
+    "school": "TAMU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Sterling Shepard 3,482 vs. Christian Kirk 2,856.",
+   "sig": "urecChristian KirkSterling Shepard"
+  },
+  {
+   "type": "count",
+   "label": "Heisman",
+   "a": "TAMU",
+   "b": "OU",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2006 through 2025, which school had more Heisman Trophy winners?",
+   "A": [
+    {
+     "name": "Johnny Manziel",
+     "yards": 1,
+     "season": 2012,
+     "label": "1st place",
+     "profile": "QB · 2012 Heisman voting: 2,029 points"
+    }
+   ],
+   "B": [
+    {
+     "name": "Sam Bradford",
+     "yards": 1,
+     "season": 2008,
+     "label": "1st place",
+     "profile": "QB · 2008 Heisman voting: 1,726 points"
+    },
+    {
+     "name": "Baker Mayfield",
+     "yards": 1,
+     "season": 2017,
+     "label": "1st place",
+     "profile": "QB · 2017 Heisman voting: 2,398 points"
+    },
+    {
+     "name": "Kyler Murray",
+     "yards": 1,
+     "season": 2018,
+     "label": "1st place",
+     "profile": "QB · 2018 Heisman voting: 2,167 points"
+    }
+   ],
+   "sig": "hc12006"
+  },
   {
    "type": "count",
    "label": "School Count",
    "a": "TAMU",
    "b": "OU",
-   "threshold": 4000,
+   "threshold": 3250,
    "A": [
     {
      "name": "Darren Lewis",
      "yards": 5012,
      "profile": "No. 1 on Texas A&M's career rushing list"
+    },
+    {
+     "name": "Curtis Dickey",
+     "yards": 3703,
+     "profile": "No. 2 on Texas A&M's career rushing list"
+    },
+    {
+     "name": "Trayveon Williams",
+     "yards": 3379,
+     "profile": "Running back · No. 3 on Texas A&M's career rushing list · 34 career rushing TDs"
+    },
+    {
+     "name": "Cyrus Gray",
+     "yards": 3298,
+     "profile": "No. 4 on Texas A&M's career rushing list"
+    },
+    {
+     "name": "Greg Hill",
+     "yards": 3262,
+     "profile": "No. 5 on Texas A&M's career rushing list"
     }
    ],
    "B": [
@@ -47,132 +200,30 @@
      "name": "Steve Owens",
      "yards": 4041,
      "profile": "No. 5 on Oklahoma's career rushing list"
+    },
+    {
+     "name": "Quentin Griffin",
+     "yards": 3938,
+     "profile": "No. 6 on Oklahoma's career rushing list"
+    },
+    {
+     "name": "DeMarco Murray",
+     "yards": 3685,
+     "profile": "No. 7 on Oklahoma's career rushing list"
+    },
+    {
+     "name": "De'Mond Parker",
+     "yards": 3403,
+     "profile": "No. 8 on Oklahoma's career rushing list"
+    },
+    {
+     "name": "Kennedy Brooks",
+     "yards": 3320,
+     "profile": "Running back · Oklahoma 2018–2021 · No. 9 on Oklahoma's career rushing list · 31 career rushing TDs"
     }
    ],
    "verified": true,
-   "sig": "cTAMUOU4000"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Texas A&M–Oklahoma games, highest first.",
-   "items": [
-    {
-     "label": "Christine Michael (TAMU) · 2011",
-     "value": 88,
-     "school": "TAMU"
-    },
-    {
-     "label": "Mossis Madu (OU) · 2008",
-     "value": 65,
-     "school": "OU"
-    },
-    {
-     "label": "Courtney Lewis (TAMU) · 2005",
-     "value": 146,
-     "school": "TAMU"
-    },
-    {
-     "label": "Johnny Manziel (TAMU) · 2012 postseason",
-     "value": 229,
-     "school": "TAMU"
-    }
-   ],
-   "sig": "grrushChristine Michael2011,Courtney Lewis2005,Johnny Manziel2012,Mossis Madu2008"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas A&M vs Oklahoma",
-   "a": "TAMU",
-   "b": "OU",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    2,
-    20
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2021,
-   "stat": "Rushing season",
-   "aSchool": "OU",
-   "other": "TAMU",
-   "aName": "Eric Gray (RB)",
-   "bName": "Isaiah Spiller (RB)",
-   "A": {
-    "big": "412",
-    "sm": "rush yds · 2 TD"
-   },
-   "B": {
-    "big": "1,011",
-    "sm": "rush yds · 6 TD"
-   },
-   "flip": true,
-   "sig": "drush2021Eric Gray,Isaiah Spiller"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas A&M vs Oklahoma",
-   "a": "TAMU",
-   "b": "OU",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    195,
-    271
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "count",
-   "label": "Since 2020",
-   "a": "TAMU",
-   "b": "OU",
-   "threshold": 850,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2020 through 2025, which school had more 850-yard receiving seasons?",
-   "A": [
-    {
-     "name": "Kevin Concepcion",
-     "yards": 919,
-     "season": 2025,
-     "profile": "Wide receiver · 2025: 75 rushing, 919 receiving yds"
-    },
-    {
-     "name": "Mario Craver",
-     "yards": 911,
-     "season": 2025,
-     "profile": "Wide receiver · 2025: 81 rushing, 911 receiving yds"
-    }
-   ],
-   "B": [
-    {
-     "name": "Marvin Mims",
-     "yards": 1083,
-     "season": 2022,
-     "profile": "Wide receiver · 2022: 3 rushing, 1,083 receiving yds"
-    },
-    {
-     "name": "Drake Stoops",
-     "yards": 962,
-     "season": 2023,
-     "profile": "Wide receiver · 2023: 8 rushing, 962 receiving yds"
-    },
-    {
-     "name": "Isaiah Sategna",
-     "yards": 949,
-     "season": 2025,
-     "profile": "Wide receiver · 2025: 24 rushing, 949 receiving yds"
-    }
-   ],
-   "sig": "tsrec8502020"
+   "sig": "cTAMUOU3250"
   },
   {
    "type": "mc",
@@ -188,72 +239,26 @@
    ],
    "answer": 0,
    "order": [
-    1,
     2,
-    3,
-    0
+    0,
+    1,
+    3
    ],
    "reveal": "DeMarco Murray (Oklahoma) 353 in 4 games · Allen Patrick (Oklahoma) 285 in 3 games · Adrian Peterson (Oklahoma) 236 in 2 games · Johnny Manziel (Texas A&M) 229 in 1 game",
    "sig": "tvrush"
   },
   {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Johnny Manziel (TAMU QB) · 2012 rushing TDs",
-     "value": 21,
-     "school": "TAMU"
-    },
-    {
-     "label": "Kennedy Brooks (OU RB) · 2019 rushing TDs",
-     "value": 6,
-     "school": "OU"
-    },
-    {
-     "label": "Isaiah Spiller (TAMU RB) · career rushing TDs",
-     "value": 25,
-     "school": "TAMU"
-    },
-    {
-     "label": "Josh Reynolds (TAMU WR) · 2015 receiving TDs",
-     "value": 5,
-     "school": "TAMU"
-    }
+   "type": "prog",
+   "label": "Program Pit · Texas A&M vs Oklahoma",
+   "a": "TAMU",
+   "b": "OU",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    11,
+    13
    ],
-   "sig": "mxTDIsaiah Spillercareer rushing TDs,Johnny Manziel2012 rushing TDs,Josh Reynolds2015 receiving TDs,Kennedy Brooks2019 rushing TDs"
-  },
-  {
-   "label": "Old Big 12 Foes",
    "verified": true,
-   "sig": "kOld Big 12 Foes0",
-   "type": "moment",
-   "prompt": "Oklahoma's biggest win over Texas A&M came in 2003. Was the margin more or less than",
-   "line": "70 points",
-   "answer": "over",
-   "reveal": "Over. Oklahoma won 77–0."
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more career rushing yards?",
-   "A": {
-    "label": "Adrian Peterson (RB) · career, OU",
-    "value": 4045,
-    "school": "OU"
-   },
-   "B": {
-    "label": "Isaiah Spiller (RB) · career, TAMU",
-    "value": 2993,
-    "school": "TAMU"
-   },
-   "unit": "rushing yards",
-   "sig": "hAdrian Petersoncareer,Isaiah Spillercareerrush"
+   "sig": "gpeakW"
   }
  ]
 }

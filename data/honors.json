@@ -1,0 +1,3194 @@
+{
+ "source": "Wikipedia award articles (winners 2000–2025) and season articles (Heisman voting 2000–2025), fetched 2026-11-18. Award tables kept only when they cover ≥22 of 26 seasons; Heisman years kept only when every row's points check out",
+ "awards": [
+  {
+   "key": "heisman",
+   "name": "Heisman Trophy",
+   "for": "most outstanding player"
+  },
+  {
+   "key": "maxwell",
+   "name": "Maxwell Award",
+   "for": "best all-around player"
+  },
+  {
+   "key": "camp",
+   "name": "Walter Camp Award",
+   "for": "player of the year"
+  },
+  {
+   "key": "doak",
+   "name": "Doak Walker Award",
+   "for": "best running back"
+  },
+  {
+   "key": "biletnikoff",
+   "name": "Biletnikoff Award",
+   "for": "best receiver"
+  },
+  {
+   "key": "obrien",
+   "name": "Davey O'Brien Award",
+   "for": "best quarterback"
+  },
+  {
+   "key": "mackey",
+   "name": "John Mackey Award",
+   "for": "best tight end"
+  },
+  {
+   "key": "outland",
+   "name": "Outland Trophy",
+   "for": "best interior lineman"
+  },
+  {
+   "key": "bednarik",
+   "name": "Chuck Bednarik Award",
+   "for": "best defensive player"
+  },
+  {
+   "key": "nagurski",
+   "name": "Bronko Nagurski Trophy",
+   "for": "best defensive player"
+  },
+  {
+   "key": "butkus",
+   "name": "Butkus Award",
+   "for": "best linebacker"
+  },
+  {
+   "key": "thorpe",
+   "name": "Jim Thorpe Award",
+   "for": "best defensive back"
+  },
+  {
+   "key": "lombardi",
+   "name": "Lombardi Award",
+   "for": "best lineman or linebacker"
+  },
+  {
+   "key": "groza",
+   "name": "Lou Groza Award",
+   "for": "best kicker"
+  },
+  {
+   "key": "guy",
+   "name": "Ray Guy Award",
+   "for": "best punter"
+  }
+ ],
+ "wins": [
+  {
+   "award": "heisman",
+   "year": 2003,
+   "name": "Jason White",
+   "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2007,
+   "name": "Tim Tebow",
+   "school": "FLA",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2008,
+   "name": "Sam Bradford",
+   "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2009,
+   "name": "Mark Ingram II",
+   "school": "ALA",
+   "pos": "RB"
+  },
+  {
+   "award": "heisman",
+   "year": 2010,
+   "name": "Cam Newton",
+   "school": "AUB",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2012,
+   "name": "Johnny Manziel",
+   "school": "TAMU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2015,
+   "name": "Derrick Henry",
+   "school": "ALA",
+   "pos": "RB"
+  },
+  {
+   "award": "heisman",
+   "year": 2017,
+   "name": "Baker Mayfield",
+   "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2018,
+   "name": "Kyler Murray",
+   "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2019,
+   "name": "Joe Burrow",
+   "school": "LSU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2020,
+   "name": "DeVonta Smith",
+   "school": "ALA",
+   "pos": "WR"
+  },
+  {
+   "award": "heisman",
+   "year": 2021,
+   "name": "Bryce Young",
+   "school": "ALA",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2023,
+   "name": "Jayden Daniels",
+   "school": "LSU",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2003,
+   "name": "Eli Manning",
+   "school": "MISS",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2004,
+   "name": "Jason White",
+   "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2005,
+   "name": "Vince Young",
+   "school": "TEX",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2007,
+   "name": "Tim Tebow",
+   "school": "FLA",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2008,
+   "name": "Tim Tebow",
+   "school": "FLA",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2009,
+   "name": "Colt McCoy",
+   "school": "TEX",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2010,
+   "name": "Cam Newton",
+   "school": "AUB",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2013,
+   "name": "A. J. McCarron",
+   "school": "ALA",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2015,
+   "name": "Derrick Henry",
+   "school": "ALA",
+   "pos": "RB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2017,
+   "name": "Baker Mayfield",
+   "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2018,
+   "name": "Tua Tagovailoa",
+   "school": "ALA",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2019,
+   "name": "Joe Burrow",
+   "school": "LSU",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2020,
+   "name": "DeVonta Smith",
+   "school": "ALA",
+   "pos": "WR"
+  },
+  {
+   "award": "maxwell",
+   "year": 2021,
+   "name": "Bryce Young",
+   "school": "ALA",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2000,
+   "name": "Josh Heupel",
+   "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2007,
+   "name": "Darren McFadden",
+   "school": "ARK",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 2008,
+   "name": "Colt McCoy",
+   "school": "TEX",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2009,
+   "name": "Colt McCoy",
+   "school": "TEX",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2010,
+   "name": "Cam Newton",
+   "school": "AUB",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2015,
+   "name": "Derrick Henry",
+   "school": "ALA",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 2017,
+   "name": "Baker Mayfield",
+   "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2018,
+   "name": "Tua Tagovailoa",
+   "school": "ALA",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2019,
+   "name": "Joe Burrow",
+   "school": "LSU",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2020,
+   "name": "DeVonta Smith",
+   "school": "ALA",
+   "pos": "WR"
+  },
+  {
+   "award": "camp",
+   "year": 2023,
+   "name": "Jayden Daniels",
+   "school": "LSU",
+   "pos": "QB"
+  },
+  {
+   "award": "doak",
+   "year": 2004,
+   "name": "Cedric Benson",
+   "school": "TEX"
+  },
+  {
+   "award": "doak",
+   "year": 2006,
+   "name": "Darren McFadden",
+   "school": "ARK"
+  },
+  {
+   "award": "doak",
+   "year": 2007,
+   "name": "Darren McFadden",
+   "school": "ARK"
+  },
+  {
+   "award": "doak",
+   "year": 2011,
+   "name": "Trent Richardson",
+   "school": "ALA"
+  },
+  {
+   "award": "doak",
+   "year": 2015,
+   "name": "Derrick Henry",
+   "school": "ALA"
+  },
+  {
+   "award": "doak",
+   "year": 2016,
+   "name": "D'Onta Foreman",
+   "school": "TEX"
+  },
+  {
+   "award": "doak",
+   "year": 2020,
+   "name": "Najee Harris",
+   "school": "ALA"
+  },
+  {
+   "award": "doak",
+   "year": 2022,
+   "name": "Bijan Robinson",
+   "school": "TEX"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2001,
+   "name": "Josh Reed",
+   "school": "LSU"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2014,
+   "name": "Amari Cooper",
+   "school": "ALA"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2016,
+   "name": "Dede Westbrook",
+   "school": "OU"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2018,
+   "name": "Jerry Jeudy",
+   "school": "ALA"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2019,
+   "name": "Ja'Marr Chase",
+   "school": "LSU"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2020,
+   "name": "DeVonta Smith",
+   "school": "ALA"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2022,
+   "name": "Jalin Hyatt",
+   "school": "TENN"
+  },
+  {
+   "award": "obrien",
+   "year": 2003,
+   "name": "Jason White",
+   "school": "OU"
+  },
+  {
+   "award": "obrien",
+   "year": 2004,
+   "name": "Jason White",
+   "school": "OU"
+  },
+  {
+   "award": "obrien",
+   "year": 2005,
+   "name": "Vince Young",
+   "school": "TEX"
+  },
+  {
+   "award": "obrien",
+   "year": 2007,
+   "name": "Tim Tebow",
+   "school": "FLA"
+  },
+  {
+   "award": "obrien",
+   "year": 2008,
+   "name": "Sam Bradford",
+   "school": "OU"
+  },
+  {
+   "award": "obrien",
+   "year": 2009,
+   "name": "Colt McCoy",
+   "school": "TEX"
+  },
+  {
+   "award": "obrien",
+   "year": 2010,
+   "name": "Cam Newton",
+   "school": "AUB"
+  },
+  {
+   "award": "obrien",
+   "year": 2012,
+   "name": "Johnny Manziel",
+   "school": "TAMU"
+  },
+  {
+   "award": "obrien",
+   "year": 2017,
+   "name": "Baker Mayfield",
+   "school": "OU"
+  },
+  {
+   "award": "obrien",
+   "year": 2018,
+   "name": "Kyler Murray",
+   "school": "OU"
+  },
+  {
+   "award": "obrien",
+   "year": 2019,
+   "name": "Joe Burrow",
+   "school": "LSU"
+  },
+  {
+   "award": "obrien",
+   "year": 2020,
+   "name": "Mac Jones",
+   "school": "ALA"
+  },
+  {
+   "award": "obrien",
+   "year": 2021,
+   "name": "Bryce Young",
+   "school": "ALA"
+  },
+  {
+   "award": "obrien",
+   "year": 2023,
+   "name": "Jayden Daniels",
+   "school": "LSU"
+  },
+  {
+   "award": "mackey",
+   "year": 2008,
+   "name": "Chase Coffman",
+   "school": "MIZ"
+  },
+  {
+   "award": "mackey",
+   "year": 2009,
+   "name": "Aaron Hernandez",
+   "school": "FLA"
+  },
+  {
+   "award": "mackey",
+   "year": 2010,
+   "name": "D. J. Williams",
+   "school": "ARK"
+  },
+  {
+   "award": "mackey",
+   "year": 2015,
+   "name": "Hunter Henry",
+   "school": "ARK"
+  },
+  {
+   "award": "mackey",
+   "year": 2017,
+   "name": "Mark Andrews",
+   "school": "OU"
+  },
+  {
+   "award": "mackey",
+   "year": 2020,
+   "name": "Kyle Pitts",
+   "school": "FLA"
+  },
+  {
+   "award": "mackey",
+   "year": 2022,
+   "name": "Brock Bowers",
+   "school": "UGA"
+  },
+  {
+   "award": "mackey",
+   "year": 2023,
+   "name": "Brock Bowers",
+   "school": "UGA"
+  },
+  {
+   "award": "mackey",
+   "year": 2025,
+   "name": "Eli Stowers",
+   "school": "VAN"
+  },
+  {
+   "award": "outland",
+   "year": 2000,
+   "name": "John Henderson",
+   "school": "TENN",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2004,
+   "name": "Jammal Brown",
+   "school": "OU",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2007,
+   "name": "Glenn Dorsey",
+   "school": "LSU",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2008,
+   "name": "Andre Smith",
+   "school": "ALA",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2011,
+   "name": "Barrett Jones",
+   "school": "ALA",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2012,
+   "name": "Luke Joeckel",
+   "school": "TAMU",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2016,
+   "name": "Cam Robinson",
+   "school": "ALA",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2018,
+   "name": "Quinnen Williams",
+   "school": "ALA",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2020,
+   "name": "Alex Leatherwood",
+   "school": "ALA",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2021,
+   "name": "Jordan Davis",
+   "school": "UGA",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2023,
+   "name": "T'Vondre Sweat",
+   "school": "TEX",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2024,
+   "name": "Kelvin Banks Jr.",
+   "school": "TEX",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "bednarik",
+   "year": 2003,
+   "name": "Teddy Lehman",
+   "school": "OU",
+   "pos": "LB"
+  },
+  {
+   "award": "bednarik",
+   "year": 2004,
+   "name": "David Pollack",
+   "school": "UGA",
+   "pos": "DE"
+  },
+  {
+   "award": "bednarik",
+   "year": 2010,
+   "name": "Patrick Peterson",
+   "school": "LSU",
+   "pos": "CB"
+  },
+  {
+   "award": "bednarik",
+   "year": 2011,
+   "name": "Tyrann Mathieu",
+   "school": "LSU",
+   "pos": "CB"
+  },
+  {
+   "award": "bednarik",
+   "year": 2016,
+   "name": "Jonathan Allen",
+   "school": "ALA",
+   "pos": "DT"
+  },
+  {
+   "award": "bednarik",
+   "year": 2017,
+   "name": "Minkah Fitzpatrick",
+   "school": "ALA",
+   "pos": "S"
+  },
+  {
+   "award": "bednarik",
+   "year": 2018,
+   "name": "Josh Allen",
+   "school": "UK",
+   "pos": "LB"
+  },
+  {
+   "award": "bednarik",
+   "year": 2021,
+   "name": "Jordan Davis",
+   "school": "UGA",
+   "pos": "DT"
+  },
+  {
+   "award": "bednarik",
+   "year": 2022,
+   "name": "Will Anderson Jr.",
+   "school": "ALA",
+   "pos": "LB"
+  },
+  {
+   "award": "nagurski",
+   "year": 2001,
+   "name": "Roy Williams",
+   "school": "OU",
+   "pos": "SS"
+  },
+  {
+   "award": "nagurski",
+   "year": 2003,
+   "name": "Derrick Strait",
+   "school": "OU",
+   "pos": "CB"
+  },
+  {
+   "award": "nagurski",
+   "year": 2004,
+   "name": "Derrick Johnson",
+   "school": "TEX",
+   "pos": "LB"
+  },
+  {
+   "award": "nagurski",
+   "year": 2007,
+   "name": "Glenn Dorsey",
+   "school": "LSU",
+   "pos": "DT"
+  },
+  {
+   "award": "nagurski",
+   "year": 2008,
+   "name": "Brian Orakpo",
+   "school": "TEX",
+   "pos": "DE"
+  },
+  {
+   "award": "nagurski",
+   "year": 2016,
+   "name": "Jonathan Allen",
+   "school": "ALA",
+   "pos": "DE"
+  },
+  {
+   "award": "nagurski",
+   "year": 2018,
+   "name": "Josh Allen",
+   "school": "UK",
+   "pos": "LB"
+  },
+  {
+   "award": "nagurski",
+   "year": 2021,
+   "name": "Will Anderson Jr.",
+   "school": "ALA",
+   "pos": "LB"
+  },
+  {
+   "award": "nagurski",
+   "year": 2022,
+   "name": "Will Anderson Jr.",
+   "school": "ALA",
+   "pos": "LB"
+  },
+  {
+   "award": "nagurski",
+   "year": 2024,
+   "name": "Kyle Kennard",
+   "school": "SC",
+   "pos": "DE"
+  },
+  {
+   "award": "butkus",
+   "year": 2001,
+   "name": "Rocky Calmus",
+   "school": "OU"
+  },
+  {
+   "award": "butkus",
+   "year": 2003,
+   "name": "Teddy Lehman",
+   "school": "OU"
+  },
+  {
+   "award": "butkus",
+   "year": 2004,
+   "name": "Derrick Johnson",
+   "school": "TEX"
+  },
+  {
+   "award": "butkus",
+   "year": 2006,
+   "name": "Patrick Willis",
+   "school": "MISS"
+  },
+  {
+   "award": "butkus",
+   "year": 2009,
+   "name": "Rolando McClain",
+   "school": "ALA"
+  },
+  {
+   "award": "butkus",
+   "year": 2010,
+   "name": "Von Miller",
+   "school": "TAMU"
+  },
+  {
+   "award": "butkus",
+   "year": 2013,
+   "name": "C. J. Mosley",
+   "school": "ALA"
+  },
+  {
+   "award": "butkus",
+   "year": 2016,
+   "name": "Reuben Foster",
+   "school": "ALA"
+  },
+  {
+   "award": "butkus",
+   "year": 2017,
+   "name": "Roquan Smith",
+   "school": "UGA"
+  },
+  {
+   "award": "butkus",
+   "year": 2018,
+   "name": "Devin White",
+   "school": "LSU"
+  },
+  {
+   "award": "butkus",
+   "year": 2021,
+   "name": "Nakobe Dean",
+   "school": "UGA"
+  },
+  {
+   "award": "butkus",
+   "year": 2024,
+   "name": "Jalon Walker",
+   "school": "UGA"
+  },
+  {
+   "award": "thorpe",
+   "year": 2001,
+   "name": "Roy Williams",
+   "school": "OU",
+   "pos": "SS"
+  },
+  {
+   "award": "thorpe",
+   "year": 2003,
+   "name": "Derrick Strait",
+   "school": "OU",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2004,
+   "name": "Carlos Rogers",
+   "school": "AUB",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2005,
+   "name": "Michael Huff",
+   "school": "TEX",
+   "pos": "SS"
+  },
+  {
+   "award": "thorpe",
+   "year": 2006,
+   "name": "Aaron Ross",
+   "school": "TEX",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2009,
+   "name": "Eric Berry",
+   "school": "TENN",
+   "pos": "SS"
+  },
+  {
+   "award": "thorpe",
+   "year": 2010,
+   "name": "Patrick Peterson",
+   "school": "LSU",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2011,
+   "name": "Morris Claiborne",
+   "school": "LSU",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2012,
+   "name": "Johnthan Banks",
+   "school": "MSST",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2017,
+   "name": "Minkah Fitzpatrick",
+   "school": "ALA",
+   "pos": "S"
+  },
+  {
+   "award": "thorpe",
+   "year": 2018,
+   "name": "Deandre Baker",
+   "school": "UGA",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2019,
+   "name": "Grant Delpit",
+   "school": "LSU",
+   "pos": "S"
+  },
+  {
+   "award": "thorpe",
+   "year": 2024,
+   "name": "Jahdae Barron",
+   "school": "TEX",
+   "pos": "CB"
+  },
+  {
+   "award": "lombardi",
+   "year": 2019,
+   "name": "Joe Burrow",
+   "school": "LSU",
+   "pos": "Quarterback"
+  },
+  {
+   "award": "lombardi",
+   "year": 2003,
+   "name": "Tommie Harris",
+   "school": "OU",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 2004,
+   "name": "David Pollack",
+   "school": "UGA",
+   "pos": "Defensive end"
+  },
+  {
+   "award": "lombardi",
+   "year": 2007,
+   "name": "Glenn Dorsey",
+   "school": "LSU",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 2008,
+   "name": "Brian Orakpo",
+   "school": "TEX",
+   "pos": "Defensive end"
+  },
+  {
+   "award": "lombardi",
+   "year": 2010,
+   "name": "Nick Fairley",
+   "school": "AUB",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 2016,
+   "name": "Jonathan Allen",
+   "school": "ALA",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 2019,
+   "name": "Joe Burrow",
+   "school": "LSU",
+   "pos": "Quarterback"
+  },
+  {
+   "award": "lombardi",
+   "year": 2022,
+   "name": "Will Anderson Jr.",
+   "school": "ALA",
+   "pos": "Linebacker"
+  },
+  {
+   "award": "lombardi",
+   "year": 2024,
+   "name": "Kelvin Banks Jr.",
+   "school": "TEX",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "groza",
+   "year": 2003,
+   "name": "Jonathan Nichols",
+   "school": "MISS"
+  },
+  {
+   "award": "groza",
+   "year": 2011,
+   "name": "Randy Bullock",
+   "school": "TAMU"
+  },
+  {
+   "award": "groza",
+   "year": 2019,
+   "name": "Rodrigo Blankenship",
+   "school": "UGA"
+  },
+  {
+   "award": "groza",
+   "year": 2025,
+   "name": "Tate Sandell",
+   "school": "OU"
+  },
+  {
+   "award": "guy",
+   "year": 2009,
+   "name": "Drew Butler",
+   "school": "UGA"
+  },
+  {
+   "award": "guy",
+   "year": 2010,
+   "name": "Chas Henry",
+   "school": "FLA"
+  },
+  {
+   "award": "guy",
+   "year": 2017,
+   "name": "Michael Dickson",
+   "school": "TEX"
+  },
+  {
+   "award": "guy",
+   "year": 2018,
+   "name": "Braden Mann",
+   "school": "TAMU"
+  },
+  {
+   "award": "guy",
+   "year": 2019,
+   "name": "Max Duffy",
+   "school": "UK"
+  },
+  {
+   "award": "guy",
+   "year": 2025,
+   "name": "Brett Thorson",
+   "school": "UGA"
+  }
+ ],
+ "everWon": [
+  {
+   "award": "heisman",
+   "year": 1942,
+   "name": "Frank Sinkwich",
+   "school": "UGA",
+   "pos": "HB"
+  },
+  {
+   "award": "heisman",
+   "year": 1952,
+   "name": "Billy Vessels",
+   "school": "OU",
+   "pos": "HB"
+  },
+  {
+   "award": "heisman",
+   "year": 1957,
+   "name": "John David Crow",
+   "school": "TAMU",
+   "pos": "HB"
+  },
+  {
+   "award": "heisman",
+   "year": 1959,
+   "name": "Billy Cannon",
+   "school": "LSU",
+   "pos": "HB"
+  },
+  {
+   "award": "heisman",
+   "year": 1966,
+   "name": "Steve Spurrier",
+   "school": "FLA",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 1969,
+   "name": "Steve Owens",
+   "school": "OU",
+   "pos": "FB"
+  },
+  {
+   "award": "heisman",
+   "year": 1971,
+   "name": "Pat Sullivan",
+   "school": "AUB",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 1977,
+   "name": "Earl Campbell",
+   "school": "TEX",
+   "pos": "RB"
+  },
+  {
+   "award": "heisman",
+   "year": 1978,
+   "name": "Billy Sims",
+   "school": "OU",
+   "pos": "RB"
+  },
+  {
+   "award": "heisman",
+   "year": 1980,
+   "name": "George Rogers",
+   "school": "SC",
+   "pos": "RB"
+  },
+  {
+   "award": "heisman",
+   "year": 1982,
+   "name": "Herschel Walker",
+   "school": "UGA",
+   "pos": "RB"
+  },
+  {
+   "award": "heisman",
+   "year": 1985,
+   "name": "Bo Jackson",
+   "school": "AUB",
+   "pos": "RB"
+  },
+  {
+   "award": "heisman",
+   "year": 1996,
+   "name": "Danny Wuerffel",
+   "school": "FLA",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 1998,
+   "name": "Ricky Williams",
+   "school": "TEX",
+   "pos": "RB"
+  },
+  {
+   "award": "heisman",
+   "year": 2003,
+   "name": "Jason White",
+   "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2007,
+   "name": "Tim Tebow",
+   "school": "FLA",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2008,
+   "name": "Sam Bradford",
+   "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2009,
+   "name": "Mark Ingram II",
+   "school": "ALA",
+   "pos": "RB"
+  },
+  {
+   "award": "heisman",
+   "year": 2010,
+   "name": "Cam Newton",
+   "school": "AUB",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2012,
+   "name": "Johnny Manziel",
+   "school": "TAMU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2015,
+   "name": "Derrick Henry",
+   "school": "ALA",
+   "pos": "RB"
+  },
+  {
+   "award": "heisman",
+   "year": 2017,
+   "name": "Baker Mayfield",
+   "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2018,
+   "name": "Kyler Murray",
+   "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2019,
+   "name": "Joe Burrow",
+   "school": "LSU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2020,
+   "name": "DeVonta Smith",
+   "school": "ALA",
+   "pos": "WR"
+  },
+  {
+   "award": "heisman",
+   "year": 2021,
+   "name": "Bryce Young",
+   "school": "ALA",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2023,
+   "name": "Jayden Daniels",
+   "school": "LSU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 1908,
+   "name": "Doc Fenton",
+   "school": "LSU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 1933,
+   "name": "Beattie Feathers",
+   "school": "TENN",
+   "pos": "HB"
+  },
+  {
+   "award": "heisman",
+   "year": 1934,
+   "name": "Don Hutson",
+   "school": "ALA",
+   "pos": "E"
+  },
+  {
+   "award": "maxwell",
+   "year": 1946,
+   "name": "Charley Trippi",
+   "school": "UGA",
+   "pos": "HB, QB, P"
+  },
+  {
+   "award": "maxwell",
+   "year": 1956,
+   "name": "Tommy McDonald",
+   "school": "OU",
+   "pos": "HB"
+  },
+  {
+   "award": "maxwell",
+   "year": 1965,
+   "name": "Tommy Nobis",
+   "school": "TEX",
+   "pos": "G, LB"
+  },
+  {
+   "award": "maxwell",
+   "year": 1982,
+   "name": "Herschel Walker",
+   "school": "UGA",
+   "pos": "RB"
+  },
+  {
+   "award": "maxwell",
+   "year": 1996,
+   "name": "Danny Wuerffel",
+   "school": "FLA",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 1997,
+   "name": "Peyton Manning",
+   "school": "TENN",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 1998,
+   "name": "Ricky Williams",
+   "school": "TEX",
+   "pos": "RB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2003,
+   "name": "Eli Manning",
+   "school": "MISS",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2004,
+   "name": "Jason White",
+   "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2005,
+   "name": "Vince Young",
+   "school": "TEX",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2007,
+   "name": "Tim Tebow",
+   "school": "FLA",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2008,
+   "name": "Tim Tebow",
+   "school": "FLA",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2009,
+   "name": "Colt McCoy",
+   "school": "TEX",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2010,
+   "name": "Cam Newton",
+   "school": "AUB",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2013,
+   "name": "A. J. McCarron",
+   "school": "ALA",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2015,
+   "name": "Derrick Henry",
+   "school": "ALA",
+   "pos": "RB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2017,
+   "name": "Baker Mayfield",
+   "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2018,
+   "name": "Tua Tagovailoa",
+   "school": "ALA",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2019,
+   "name": "Joe Burrow",
+   "school": "LSU",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2020,
+   "name": "DeVonta Smith",
+   "school": "ALA",
+   "pos": "WR"
+  },
+  {
+   "award": "maxwell",
+   "year": 2021,
+   "name": "Bryce Young",
+   "school": "ALA",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 1969,
+   "name": "Steve Owens",
+   "school": "OU",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 1971,
+   "name": "Pat Sullivan",
+   "school": "AUB",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 1978,
+   "name": "Billy Sims",
+   "school": "OU",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 1982,
+   "name": "Herschel Walker",
+   "school": "UGA",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 1985,
+   "name": "Bo Jackson",
+   "school": "AUB",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 1996,
+   "name": "Danny Wuerffel",
+   "school": "FLA",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 1998,
+   "name": "Ricky Williams",
+   "school": "TEX",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 2000,
+   "name": "Josh Heupel",
+   "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2007,
+   "name": "Darren McFadden",
+   "school": "ARK",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 2008,
+   "name": "Colt McCoy",
+   "school": "TEX",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2009,
+   "name": "Colt McCoy",
+   "school": "TEX",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2010,
+   "name": "Cam Newton",
+   "school": "AUB",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2015,
+   "name": "Derrick Henry",
+   "school": "ALA",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 2017,
+   "name": "Baker Mayfield",
+   "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2018,
+   "name": "Tua Tagovailoa",
+   "school": "ALA",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2019,
+   "name": "Joe Burrow",
+   "school": "LSU",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2020,
+   "name": "DeVonta Smith",
+   "school": "ALA",
+   "pos": "WR"
+  },
+  {
+   "award": "camp",
+   "year": 2023,
+   "name": "Jayden Daniels",
+   "school": "LSU",
+   "pos": "QB"
+  },
+  {
+   "award": "doak",
+   "year": 1992,
+   "name": "Garrison Hearst",
+   "school": "UGA"
+  },
+  {
+   "award": "doak",
+   "year": 1997,
+   "name": "Ricky Williams",
+   "school": "TEX"
+  },
+  {
+   "award": "doak",
+   "year": 1998,
+   "name": "Ricky Williams",
+   "school": "TEX"
+  },
+  {
+   "award": "doak",
+   "year": 2004,
+   "name": "Cedric Benson",
+   "school": "TEX"
+  },
+  {
+   "award": "doak",
+   "year": 2006,
+   "name": "Darren McFadden",
+   "school": "ARK"
+  },
+  {
+   "award": "doak",
+   "year": 2007,
+   "name": "Darren McFadden",
+   "school": "ARK"
+  },
+  {
+   "award": "doak",
+   "year": 2011,
+   "name": "Trent Richardson",
+   "school": "ALA"
+  },
+  {
+   "award": "doak",
+   "year": 2015,
+   "name": "Derrick Henry",
+   "school": "ALA"
+  },
+  {
+   "award": "doak",
+   "year": 2016,
+   "name": "D'Onta Foreman",
+   "school": "TEX"
+  },
+  {
+   "award": "doak",
+   "year": 2020,
+   "name": "Najee Harris",
+   "school": "ALA"
+  },
+  {
+   "award": "doak",
+   "year": 2022,
+   "name": "Bijan Robinson",
+   "school": "TEX"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2001,
+   "name": "Josh Reed",
+   "school": "LSU"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2014,
+   "name": "Amari Cooper",
+   "school": "ALA"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2016,
+   "name": "Dede Westbrook",
+   "school": "OU"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2018,
+   "name": "Jerry Jeudy",
+   "school": "ALA"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2019,
+   "name": "Ja'Marr Chase",
+   "school": "LSU"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2020,
+   "name": "DeVonta Smith",
+   "school": "ALA"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2022,
+   "name": "Jalin Hyatt",
+   "school": "TENN"
+  },
+  {
+   "award": "obrien",
+   "year": 1977,
+   "name": "Earl Campbell",
+   "school": "TEX",
+   "pos": "Running back"
+  },
+  {
+   "award": "obrien",
+   "year": 1978,
+   "name": "Billy Sims",
+   "school": "OU",
+   "pos": "Running back"
+  },
+  {
+   "award": "obrien",
+   "year": 1995,
+   "name": "Danny Wuerffel",
+   "school": "FLA"
+  },
+  {
+   "award": "obrien",
+   "year": 1996,
+   "name": "Danny Wuerffel",
+   "school": "FLA"
+  },
+  {
+   "award": "obrien",
+   "year": 1997,
+   "name": "Peyton Manning",
+   "school": "TENN"
+  },
+  {
+   "award": "obrien",
+   "year": 2003,
+   "name": "Jason White",
+   "school": "OU"
+  },
+  {
+   "award": "obrien",
+   "year": 2004,
+   "name": "Jason White",
+   "school": "OU"
+  },
+  {
+   "award": "obrien",
+   "year": 2005,
+   "name": "Vince Young",
+   "school": "TEX"
+  },
+  {
+   "award": "obrien",
+   "year": 2007,
+   "name": "Tim Tebow",
+   "school": "FLA"
+  },
+  {
+   "award": "obrien",
+   "year": 2008,
+   "name": "Sam Bradford",
+   "school": "OU"
+  },
+  {
+   "award": "obrien",
+   "year": 2009,
+   "name": "Colt McCoy",
+   "school": "TEX"
+  },
+  {
+   "award": "obrien",
+   "year": 2010,
+   "name": "Cam Newton",
+   "school": "AUB"
+  },
+  {
+   "award": "obrien",
+   "year": 2012,
+   "name": "Johnny Manziel",
+   "school": "TAMU"
+  },
+  {
+   "award": "obrien",
+   "year": 2017,
+   "name": "Baker Mayfield",
+   "school": "OU"
+  },
+  {
+   "award": "obrien",
+   "year": 2018,
+   "name": "Kyler Murray",
+   "school": "OU"
+  },
+  {
+   "award": "obrien",
+   "year": 2019,
+   "name": "Joe Burrow",
+   "school": "LSU"
+  },
+  {
+   "award": "obrien",
+   "year": 2020,
+   "name": "Mac Jones",
+   "school": "ALA"
+  },
+  {
+   "award": "obrien",
+   "year": 2021,
+   "name": "Bryce Young",
+   "school": "ALA"
+  },
+  {
+   "award": "obrien",
+   "year": 2023,
+   "name": "Jayden Daniels",
+   "school": "LSU"
+  },
+  {
+   "award": "mackey",
+   "year": 2008,
+   "name": "Chase Coffman",
+   "school": "MIZ"
+  },
+  {
+   "award": "mackey",
+   "year": 2009,
+   "name": "Aaron Hernandez",
+   "school": "FLA"
+  },
+  {
+   "award": "mackey",
+   "year": 2010,
+   "name": "D. J. Williams",
+   "school": "ARK"
+  },
+  {
+   "award": "mackey",
+   "year": 2015,
+   "name": "Hunter Henry",
+   "school": "ARK"
+  },
+  {
+   "award": "mackey",
+   "year": 2017,
+   "name": "Mark Andrews",
+   "school": "OU"
+  },
+  {
+   "award": "mackey",
+   "year": 2020,
+   "name": "Kyle Pitts",
+   "school": "FLA"
+  },
+  {
+   "award": "mackey",
+   "year": 2022,
+   "name": "Brock Bowers",
+   "school": "UGA"
+  },
+  {
+   "award": "mackey",
+   "year": 2023,
+   "name": "Brock Bowers",
+   "school": "UGA"
+  },
+  {
+   "award": "mackey",
+   "year": 2025,
+   "name": "Eli Stowers",
+   "school": "VAN"
+  },
+  {
+   "award": "outland",
+   "year": 1950,
+   "name": "Bob Gain",
+   "school": "UK",
+   "pos": "Tackle"
+  },
+  {
+   "award": "outland",
+   "year": 1951,
+   "name": "Jim Weatherall",
+   "school": "OU",
+   "pos": "Tackle"
+  },
+  {
+   "award": "outland",
+   "year": 1953,
+   "name": "J. D. Roberts",
+   "school": "OU",
+   "pos": "Guard"
+  },
+  {
+   "award": "outland",
+   "year": 1954,
+   "name": "Bud Brooks",
+   "school": "ARK",
+   "pos": "Guard"
+  },
+  {
+   "award": "outland",
+   "year": 1958,
+   "name": "Zeke Smith",
+   "school": "AUB",
+   "pos": "Guard"
+  },
+  {
+   "award": "outland",
+   "year": 1963,
+   "name": "Scott Appleton",
+   "school": "TEX",
+   "pos": "Tackle"
+  },
+  {
+   "award": "outland",
+   "year": 1964,
+   "name": "Steve DeLong",
+   "school": "TENN",
+   "pos": "Middle guard"
+  },
+  {
+   "award": "outland",
+   "year": 1965,
+   "name": "Tommy Nobis",
+   "school": "TEX",
+   "pos": "Guard"
+  },
+  {
+   "award": "outland",
+   "year": 1966,
+   "name": "Loyd Phillips",
+   "school": "ARK",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 1968,
+   "name": "Bill Stanfill",
+   "school": "UGA",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 1975,
+   "name": "Lee Roy Selmon",
+   "school": "OU",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 1977,
+   "name": "Brad Shearer",
+   "school": "TEX",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 1978,
+   "name": "Greg Roberts",
+   "school": "OU",
+   "pos": "Guard"
+  },
+  {
+   "award": "outland",
+   "year": 1988,
+   "name": "Tracy Rocker",
+   "school": "AUB",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 1999,
+   "name": "Chris Samuels",
+   "school": "ALA",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2000,
+   "name": "John Henderson",
+   "school": "TENN",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2004,
+   "name": "Jammal Brown",
+   "school": "OU",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2007,
+   "name": "Glenn Dorsey",
+   "school": "LSU",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2008,
+   "name": "Andre Smith",
+   "school": "ALA",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2011,
+   "name": "Barrett Jones",
+   "school": "ALA",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2012,
+   "name": "Luke Joeckel",
+   "school": "TAMU",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2016,
+   "name": "Cam Robinson",
+   "school": "ALA",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2018,
+   "name": "Quinnen Williams",
+   "school": "ALA",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2020,
+   "name": "Alex Leatherwood",
+   "school": "ALA",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2021,
+   "name": "Jordan Davis",
+   "school": "UGA",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2023,
+   "name": "T'Vondre Sweat",
+   "school": "TEX",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 2024,
+   "name": "Kelvin Banks Jr.",
+   "school": "TEX",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "bednarik",
+   "year": 1998,
+   "name": "Dat Nguyen",
+   "school": "TAMU",
+   "pos": "DE"
+  },
+  {
+   "award": "bednarik",
+   "year": 2003,
+   "name": "Teddy Lehman",
+   "school": "OU",
+   "pos": "LB"
+  },
+  {
+   "award": "bednarik",
+   "year": 2004,
+   "name": "David Pollack",
+   "school": "UGA",
+   "pos": "DE"
+  },
+  {
+   "award": "bednarik",
+   "year": 2010,
+   "name": "Patrick Peterson",
+   "school": "LSU",
+   "pos": "CB"
+  },
+  {
+   "award": "bednarik",
+   "year": 2011,
+   "name": "Tyrann Mathieu",
+   "school": "LSU",
+   "pos": "CB"
+  },
+  {
+   "award": "bednarik",
+   "year": 2016,
+   "name": "Jonathan Allen",
+   "school": "ALA",
+   "pos": "DT"
+  },
+  {
+   "award": "bednarik",
+   "year": 2017,
+   "name": "Minkah Fitzpatrick",
+   "school": "ALA",
+   "pos": "S"
+  },
+  {
+   "award": "bednarik",
+   "year": 2018,
+   "name": "Josh Allen",
+   "school": "UK",
+   "pos": "LB"
+  },
+  {
+   "award": "bednarik",
+   "year": 2021,
+   "name": "Jordan Davis",
+   "school": "UGA",
+   "pos": "DT"
+  },
+  {
+   "award": "bednarik",
+   "year": 2022,
+   "name": "Will Anderson Jr.",
+   "school": "ALA",
+   "pos": "LB"
+  },
+  {
+   "award": "nagurski",
+   "year": 1998,
+   "name": "Champ Bailey",
+   "school": "UGA",
+   "pos": "CB"
+  },
+  {
+   "award": "nagurski",
+   "year": 2001,
+   "name": "Roy Williams",
+   "school": "OU",
+   "pos": "SS"
+  },
+  {
+   "award": "nagurski",
+   "year": 2003,
+   "name": "Derrick Strait",
+   "school": "OU",
+   "pos": "CB"
+  },
+  {
+   "award": "nagurski",
+   "year": 2004,
+   "name": "Derrick Johnson",
+   "school": "TEX",
+   "pos": "LB"
+  },
+  {
+   "award": "nagurski",
+   "year": 2007,
+   "name": "Glenn Dorsey",
+   "school": "LSU",
+   "pos": "DT"
+  },
+  {
+   "award": "nagurski",
+   "year": 2008,
+   "name": "Brian Orakpo",
+   "school": "TEX",
+   "pos": "DE"
+  },
+  {
+   "award": "nagurski",
+   "year": 2016,
+   "name": "Jonathan Allen",
+   "school": "ALA",
+   "pos": "DE"
+  },
+  {
+   "award": "nagurski",
+   "year": 2018,
+   "name": "Josh Allen",
+   "school": "UK",
+   "pos": "LB"
+  },
+  {
+   "award": "nagurski",
+   "year": 2021,
+   "name": "Will Anderson Jr.",
+   "school": "ALA",
+   "pos": "LB"
+  },
+  {
+   "award": "nagurski",
+   "year": 2022,
+   "name": "Will Anderson Jr.",
+   "school": "ALA",
+   "pos": "LB"
+  },
+  {
+   "award": "nagurski",
+   "year": 2024,
+   "name": "Kyle Kennard",
+   "school": "SC",
+   "pos": "DE"
+  },
+  {
+   "award": "butkus",
+   "year": 1985,
+   "name": "Brian Bosworth",
+   "school": "OU"
+  },
+  {
+   "award": "butkus",
+   "year": 1986,
+   "name": "Brian Bosworth",
+   "school": "OU"
+  },
+  {
+   "award": "butkus",
+   "year": 1988,
+   "name": "Derrick Thomas",
+   "school": "ALA"
+  },
+  {
+   "award": "butkus",
+   "year": 2001,
+   "name": "Rocky Calmus",
+   "school": "OU"
+  },
+  {
+   "award": "butkus",
+   "year": 2003,
+   "name": "Teddy Lehman",
+   "school": "OU"
+  },
+  {
+   "award": "butkus",
+   "year": 2004,
+   "name": "Derrick Johnson",
+   "school": "TEX"
+  },
+  {
+   "award": "butkus",
+   "year": 2006,
+   "name": "Patrick Willis",
+   "school": "MISS"
+  },
+  {
+   "award": "butkus",
+   "year": 2009,
+   "name": "Rolando McClain",
+   "school": "ALA"
+  },
+  {
+   "award": "butkus",
+   "year": 2010,
+   "name": "Von Miller",
+   "school": "TAMU"
+  },
+  {
+   "award": "butkus",
+   "year": 2013,
+   "name": "C. J. Mosley",
+   "school": "ALA"
+  },
+  {
+   "award": "butkus",
+   "year": 2016,
+   "name": "Reuben Foster",
+   "school": "ALA"
+  },
+  {
+   "award": "butkus",
+   "year": 2017,
+   "name": "Roquan Smith",
+   "school": "UGA"
+  },
+  {
+   "award": "butkus",
+   "year": 2018,
+   "name": "Devin White",
+   "school": "LSU"
+  },
+  {
+   "award": "butkus",
+   "year": 2021,
+   "name": "Nakobe Dean",
+   "school": "UGA"
+  },
+  {
+   "award": "butkus",
+   "year": 2024,
+   "name": "Jalon Walker",
+   "school": "UGA"
+  },
+  {
+   "award": "thorpe",
+   "year": 1993,
+   "name": "Antonio Langham",
+   "school": "ALA",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 1996,
+   "name": "Lawrence Wright",
+   "school": "FLA",
+   "pos": "FS"
+  },
+  {
+   "award": "thorpe",
+   "year": 2001,
+   "name": "Roy Williams",
+   "school": "OU",
+   "pos": "SS"
+  },
+  {
+   "award": "thorpe",
+   "year": 2003,
+   "name": "Derrick Strait",
+   "school": "OU",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2004,
+   "name": "Carlos Rogers",
+   "school": "AUB",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2005,
+   "name": "Michael Huff",
+   "school": "TEX",
+   "pos": "SS"
+  },
+  {
+   "award": "thorpe",
+   "year": 2006,
+   "name": "Aaron Ross",
+   "school": "TEX",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2009,
+   "name": "Eric Berry",
+   "school": "TENN",
+   "pos": "SS"
+  },
+  {
+   "award": "thorpe",
+   "year": 2010,
+   "name": "Patrick Peterson",
+   "school": "LSU",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2011,
+   "name": "Morris Claiborne",
+   "school": "LSU",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2012,
+   "name": "Johnthan Banks",
+   "school": "MSST",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2017,
+   "name": "Minkah Fitzpatrick",
+   "school": "ALA",
+   "pos": "S"
+  },
+  {
+   "award": "thorpe",
+   "year": 2018,
+   "name": "Deandre Baker",
+   "school": "UGA",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2019,
+   "name": "Grant Delpit",
+   "school": "LSU",
+   "pos": "S"
+  },
+  {
+   "award": "thorpe",
+   "year": 2024,
+   "name": "Jahdae Barron",
+   "school": "TEX",
+   "pos": "CB"
+  },
+  {
+   "award": "lombardi",
+   "year": 2019,
+   "name": "Joe Burrow",
+   "school": "LSU",
+   "pos": "Quarterback"
+  },
+  {
+   "award": "lombardi",
+   "year": 1975,
+   "name": "Lee Roy Selmon",
+   "school": "OU",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 1981,
+   "name": "Kenneth Sims",
+   "school": "TEX",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 1984,
+   "name": "Tony Degrate",
+   "school": "TEX",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 1985,
+   "name": "Tony Casillas",
+   "school": "OU",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 1986,
+   "name": "Cornelius Bennett",
+   "school": "ALA",
+   "pos": "Linebacker"
+  },
+  {
+   "award": "lombardi",
+   "year": 1988,
+   "name": "Tracy Rocker",
+   "school": "AUB",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 1998,
+   "name": "Dat Nguyen",
+   "school": "TAMU",
+   "pos": "Linebacker"
+  },
+  {
+   "award": "lombardi",
+   "year": 2003,
+   "name": "Tommie Harris",
+   "school": "OU",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 2004,
+   "name": "David Pollack",
+   "school": "UGA",
+   "pos": "Defensive end"
+  },
+  {
+   "award": "lombardi",
+   "year": 2007,
+   "name": "Glenn Dorsey",
+   "school": "LSU",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 2008,
+   "name": "Brian Orakpo",
+   "school": "TEX",
+   "pos": "Defensive end"
+  },
+  {
+   "award": "lombardi",
+   "year": 2010,
+   "name": "Nick Fairley",
+   "school": "AUB",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 2016,
+   "name": "Jonathan Allen",
+   "school": "ALA",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 2019,
+   "name": "Joe Burrow",
+   "school": "LSU",
+   "pos": "Quarterback"
+  },
+  {
+   "award": "lombardi",
+   "year": 2022,
+   "name": "Will Anderson Jr.",
+   "school": "ALA",
+   "pos": "Linebacker"
+  },
+  {
+   "award": "lombardi",
+   "year": 2024,
+   "name": "Kelvin Banks Jr.",
+   "school": "TEX",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "groza",
+   "year": 1993,
+   "name": "Judd Davis",
+   "school": "FLA"
+  },
+  {
+   "award": "groza",
+   "year": 2003,
+   "name": "Jonathan Nichols",
+   "school": "MISS"
+  },
+  {
+   "award": "groza",
+   "year": 2011,
+   "name": "Randy Bullock",
+   "school": "TAMU"
+  },
+  {
+   "award": "groza",
+   "year": 2019,
+   "name": "Rodrigo Blankenship",
+   "school": "UGA"
+  },
+  {
+   "award": "groza",
+   "year": 2025,
+   "name": "Tate Sandell",
+   "school": "OU"
+  },
+  {
+   "award": "guy",
+   "year": 2009,
+   "name": "Drew Butler",
+   "school": "UGA"
+  },
+  {
+   "award": "guy",
+   "year": 2010,
+   "name": "Chas Henry",
+   "school": "FLA"
+  },
+  {
+   "award": "guy",
+   "year": 2017,
+   "name": "Michael Dickson",
+   "school": "TEX"
+  },
+  {
+   "award": "guy",
+   "year": 2018,
+   "name": "Braden Mann",
+   "school": "TAMU"
+  },
+  {
+   "award": "guy",
+   "year": 2019,
+   "name": "Max Duffy",
+   "school": "UK"
+  },
+  {
+   "award": "guy",
+   "year": 2025,
+   "name": "Brett Thorson",
+   "school": "UGA"
+  }
+ ],
+ "heisman": [
+  {
+   "year": 2000,
+   "place": 2,
+   "name": "Josh Heupel",
+   "school": "OU",
+   "pos": "QB",
+   "points": 1552,
+   "first": 286
+  },
+  {
+   "year": 2000,
+   "place": 10,
+   "name": "Rudi Johnson",
+   "school": "AUB",
+   "pos": "RB",
+   "points": 20,
+   "first": 3
+  },
+  {
+   "year": 2001,
+   "place": 2,
+   "name": "Rex Grossman",
+   "school": "FLA",
+   "pos": "QB",
+   "points": 708,
+   "first": 137
+  },
+  {
+   "year": 2001,
+   "place": 7,
+   "name": "Roy Williams",
+   "school": "OU",
+   "pos": "S",
+   "points": 146,
+   "first": 13
+  },
+  {
+   "year": 2002,
+   "place": 10,
+   "name": "Quentin Griffin",
+   "school": "OU",
+   "pos": "RB",
+   "points": 28,
+   "first": 1
+  },
+  {
+   "year": 2003,
+   "place": 1,
+   "name": "Jason White",
+   "school": "OU",
+   "pos": "QB",
+   "points": 1481,
+   "first": 319
+  },
+  {
+   "year": 2003,
+   "place": 3,
+   "name": "Eli Manning",
+   "school": "MISS",
+   "pos": "QB",
+   "points": 710,
+   "first": 95
+  },
+  {
+   "year": 2004,
+   "place": 2,
+   "name": "Adrian Peterson",
+   "school": "OU",
+   "pos": "RB",
+   "points": 997,
+   "first": 154
+  },
+  {
+   "year": 2004,
+   "place": 3,
+   "name": "Jason White",
+   "school": "OU",
+   "pos": "QB",
+   "points": 957,
+   "first": 171
+  },
+  {
+   "year": 2004,
+   "place": 6,
+   "name": "Cedric Benson",
+   "school": "TEX",
+   "pos": "RB",
+   "points": 187,
+   "first": 12
+  },
+  {
+   "year": 2004,
+   "place": 7,
+   "name": "Jason Campbell",
+   "school": "AUB",
+   "pos": "QB",
+   "points": 162,
+   "first": 21
+  },
+  {
+   "year": 2006,
+   "place": 2,
+   "name": "Darren McFadden",
+   "school": "ARK",
+   "pos": "RB",
+   "points": 878,
+   "first": 45
+  },
+  {
+   "year": 2007,
+   "place": 1,
+   "name": "Tim Tebow",
+   "school": "FLA",
+   "pos": "QB",
+   "points": 1957,
+   "first": 462
+  },
+  {
+   "year": 2007,
+   "place": 2,
+   "name": "Darren McFadden",
+   "school": "ARK",
+   "pos": "RB",
+   "points": 1703,
+   "first": 291
+  },
+  {
+   "year": 2007,
+   "place": 4,
+   "name": "Chase Daniel",
+   "school": "MIZ",
+   "pos": "QB",
+   "points": 425,
+   "first": 25
+  },
+  {
+   "year": 2007,
+   "place": 9,
+   "name": "Glenn Dorsey",
+   "school": "LSU",
+   "pos": "DT",
+   "points": 30,
+   "first": 3
+  },
+  {
+   "year": 2008,
+   "place": 1,
+   "name": "Sam Bradford",
+   "school": "OU",
+   "pos": "QB",
+   "points": 1726,
+   "first": 300
+  },
+  {
+   "year": 2008,
+   "place": 2,
+   "name": "Colt McCoy",
+   "school": "TEX",
+   "pos": "QB",
+   "points": 1604,
+   "first": 266
+  },
+  {
+   "year": 2008,
+   "place": 3,
+   "name": "Tim Tebow",
+   "school": "FLA",
+   "pos": "QB",
+   "points": 1575,
+   "first": 309
+  },
+  {
+   "year": 2009,
+   "place": 1,
+   "name": "Mark Ingram II",
+   "school": "ALA",
+   "pos": "RB",
+   "points": 1304,
+   "first": 227
+  },
+  {
+   "year": 2009,
+   "place": 3,
+   "name": "Colt McCoy",
+   "school": "TEX",
+   "pos": "QB",
+   "points": 1145,
+   "first": 203
+  },
+  {
+   "year": 2009,
+   "place": 5,
+   "name": "Tim Tebow",
+   "school": "FLA",
+   "pos": "QB",
+   "points": 390,
+   "first": 43
+  },
+  {
+   "year": 2010,
+   "place": 1,
+   "name": "Cam Newton",
+   "school": "AUB",
+   "pos": "QB",
+   "points": 2263,
+   "first": 729
+  },
+  {
+   "year": 2010,
+   "place": 7,
+   "name": "Ryan Mallett",
+   "school": "ARK",
+   "pos": "QB",
+   "points": 41,
+   "first": 0
+  },
+  {
+   "year": 2011,
+   "place": 3,
+   "name": "Trent Richardson",
+   "school": "ALA",
+   "pos": "RB",
+   "points": 978,
+   "first": 138
+  },
+  {
+   "year": 2011,
+   "place": 5,
+   "name": "Tyrann Mathieu",
+   "school": "LSU",
+   "pos": "CB",
+   "points": 327,
+   "first": 34
+  },
+  {
+   "year": 2012,
+   "place": 1,
+   "name": "Johnny Manziel",
+   "school": "TAMU",
+   "pos": "QB",
+   "points": 2029,
+   "first": 474
+  },
+  {
+   "year": 2013,
+   "place": 2,
+   "name": "A. J. McCarron",
+   "school": "ALA",
+   "pos": "QB",
+   "points": 704,
+   "first": 79
+  },
+  {
+   "year": 2013,
+   "place": 5,
+   "name": "Johnny Manziel",
+   "school": "TAMU",
+   "pos": "QB",
+   "points": 421,
+   "first": 30
+  },
+  {
+   "year": 2013,
+   "place": 6,
+   "name": "Tre Mason",
+   "school": "AUB",
+   "pos": "RB",
+   "points": 404,
+   "first": 31
+  },
+  {
+   "year": 2014,
+   "place": 3,
+   "name": "Amari Cooper",
+   "school": "ALA",
+   "pos": "WR",
+   "points": 1023,
+   "first": 49
+  },
+  {
+   "year": 2014,
+   "place": 8,
+   "name": "Dak Prescott",
+   "school": "MSST",
+   "pos": "QB",
+   "points": 42,
+   "first": 2
+  },
+  {
+   "year": 2015,
+   "place": 1,
+   "name": "Derrick Henry",
+   "school": "ALA",
+   "pos": "RB",
+   "points": 1832,
+   "first": 378
+  },
+  {
+   "year": 2015,
+   "place": 4,
+   "name": "Baker Mayfield",
+   "school": "OU",
+   "pos": "QB",
+   "points": 334,
+   "first": 34
+  },
+  {
+   "year": 2015,
+   "place": 6,
+   "name": "Leonard Fournette",
+   "school": "LSU",
+   "pos": "RB",
+   "points": 110,
+   "first": 10
+  },
+  {
+   "year": 2016,
+   "place": 3,
+   "name": "Baker Mayfield",
+   "school": "OU",
+   "pos": "QB",
+   "points": 361,
+   "first": 26
+  },
+  {
+   "year": 2016,
+   "place": 4,
+   "name": "Dede Westbrook",
+   "school": "OU",
+   "pos": "WR",
+   "points": 209,
+   "first": 7
+  },
+  {
+   "year": 2016,
+   "place": 7,
+   "name": "Jonathan Allen",
+   "school": "ALA",
+   "pos": "DE",
+   "points": 132,
+   "first": 17
+  },
+  {
+   "year": 2017,
+   "place": 1,
+   "name": "Baker Mayfield",
+   "school": "OU",
+   "pos": "QB",
+   "points": 2398,
+   "first": 732
+  },
+  {
+   "year": 2017,
+   "place": 9,
+   "name": "Kerryon Johnson",
+   "school": "AUB",
+   "pos": "RB",
+   "points": 45,
+   "first": 0
+  },
+  {
+   "year": 2017,
+   "place": 10,
+   "name": "Roquan Smith",
+   "school": "UGA",
+   "pos": "LB",
+   "points": 38,
+   "first": 3
+  },
+  {
+   "year": 2018,
+   "place": 1,
+   "name": "Kyler Murray",
+   "school": "OU",
+   "pos": "QB",
+   "points": 2167,
+   "first": 517
+  },
+  {
+   "year": 2019,
+   "place": 1,
+   "name": "Joe Burrow",
+   "school": "LSU",
+   "pos": "QB",
+   "points": 2608,
+   "first": 841
+  },
+  {
+   "year": 2019,
+   "place": 2,
+   "name": "Jalen Hurts",
+   "school": "OU",
+   "pos": "QB",
+   "points": 762,
+   "first": 12
+  },
+  {
+   "year": 2019,
+   "place": 10,
+   "name": "Tua Tagovailoa",
+   "school": "ALA",
+   "pos": "QB",
+   "points": 24,
+   "first": 1
+  },
+  {
+   "year": 2020,
+   "place": 1,
+   "name": "DeVonta Smith",
+   "school": "ALA",
+   "pos": "WR",
+   "points": 1856,
+   "first": 447
+  },
+  {
+   "year": 2020,
+   "place": 3,
+   "name": "Mac Jones",
+   "school": "ALA",
+   "pos": "QB",
+   "points": 1130,
+   "first": 138
+  },
+  {
+   "year": 2020,
+   "place": 4,
+   "name": "Kyle Trask",
+   "school": "FLA",
+   "pos": "QB",
+   "points": 737,
+   "first": 61
+  },
+  {
+   "year": 2020,
+   "place": 5,
+   "name": "Najee Harris",
+   "school": "ALA",
+   "pos": "RB",
+   "points": 216,
+   "first": 16
+  },
+  {
+   "year": 2020,
+   "place": 10,
+   "name": "Kyle Pitts",
+   "school": "FLA",
+   "pos": "TE",
+   "points": 24,
+   "first": 0
+  },
+  {
+   "year": 2021,
+   "place": 1,
+   "name": "Bryce Young",
+   "school": "ALA",
+   "pos": "QB",
+   "points": 2311,
+   "first": 684
+  },
+  {
+   "year": 2021,
+   "place": 5,
+   "name": "Will Anderson Jr.",
+   "school": "ALA",
+   "pos": "LB",
+   "points": 325,
+   "first": 31
+  },
+  {
+   "year": 2021,
+   "place": 7,
+   "name": "Matt Corral",
+   "school": "MISS",
+   "pos": "QB",
+   "points": 150,
+   "first": 10
+  },
+  {
+   "year": 2021,
+   "place": 9,
+   "name": "Jordan Davis",
+   "school": "UGA",
+   "pos": "DT",
+   "points": 75,
+   "first": 9
+  },
+  {
+   "year": 2022,
+   "place": 4,
+   "name": "Stetson Bennett",
+   "school": "UGA",
+   "pos": "QB",
+   "points": 349,
+   "first": 36
+  },
+  {
+   "year": 2022,
+   "place": 5,
+   "name": "Hendon Hooker",
+   "school": "TENN",
+   "pos": "QB",
+   "points": 226,
+   "first": 17
+  },
+  {
+   "year": 2022,
+   "place": 6,
+   "name": "Bryce Young",
+   "school": "ALA",
+   "pos": "QB",
+   "points": 141,
+   "first": 17
+  },
+  {
+   "year": 2022,
+   "place": 9,
+   "name": "Bijan Robinson",
+   "school": "TEX",
+   "pos": "RB",
+   "points": 75,
+   "first": 4
+  },
+  {
+   "year": 2023,
+   "place": 1,
+   "name": "Jayden Daniels",
+   "school": "LSU",
+   "pos": "QB",
+   "points": 2029,
+   "first": 503
+  },
+  {
+   "year": 2023,
+   "place": 6,
+   "name": "Jalen Milroe",
+   "school": "ALA",
+   "pos": "QB",
+   "points": 73,
+   "first": 4
+  },
+  {
+   "year": 2023,
+   "place": 8,
+   "name": "Cody Schrader",
+   "school": "MIZ",
+   "pos": "RB",
+   "points": 29,
+   "first": 1
+  },
+  {
+   "year": 2025,
+   "place": 2,
+   "name": "Diego Pavia",
+   "school": "VAN",
+   "pos": "QB",
+   "points": 1435,
+   "first": 189
+  }
+ ],
+ "heismanDepth": {
+  "2000": 10,
+  "2001": 10,
+  "2002": 10,
+  "2003": 10,
+  "2004": 10,
+  "2006": 10,
+  "2007": 10,
+  "2008": 10,
+  "2009": 10,
+  "2010": 10,
+  "2011": 8,
+  "2012": 1,
+  "2013": 10,
+  "2014": 10,
+  "2015": 10,
+  "2016": 7,
+  "2017": 10,
+  "2018": 1,
+  "2019": 10,
+  "2020": 10,
+  "2021": 10,
+  "2022": 10,
+  "2023": 10,
+  "2024": 10,
+  "2025": 6
+ },
+ "sources": {
+  "heisman": "Wikipedia \"List of Heisman Trophy winners\" (revision 1377939923)",
+  "maxwell": "Wikipedia \"Maxwell Award\" (revision 1382084985)",
+  "camp": "Wikipedia \"Walter Camp Award\" (revision 1382085114)",
+  "doak": "Wikipedia \"Doak Walker Award\" (revision 1355478675)",
+  "biletnikoff": "Wikipedia \"Fred Biletnikoff Award\" (revision 1366228711)",
+  "obrien": "Wikipedia \"Davey O'Brien Award\" (revision 1355474355)",
+  "mackey": "Wikipedia \"John Mackey Award\" (revision 1369946664)",
+  "outland": "Wikipedia \"Outland Trophy\" (revision 1376493144)",
+  "bednarik": "Wikipedia \"Chuck Bednarik Award\" (revision 1356322491)",
+  "nagurski": "Wikipedia \"Bronko Nagurski Trophy\" (revision 1386378517)",
+  "butkus": "Wikipedia \"Butkus Award\" (revision 1356436876)",
+  "thorpe": "Wikipedia \"Jim Thorpe Award\" (revision 1380103697)",
+  "lombardi": "Wikipedia \"Lombardi Award\" (revision 1380050898)",
+  "groza": "Wikipedia \"Lou Groza Award\" (revision 1355431742)",
+  "guy": "Wikipedia \"Ray Guy Award\" (revision 1386160453)",
+  "heisman-2000": "Wikipedia \"2000 NCAA Division I-A football season\" (revision 1384254959)",
+  "heisman-2001": "Wikipedia \"2001 NCAA Division I-A football season\" (revision 1379920280)",
+  "heisman-2002": "Wikipedia \"2002 NCAA Division I-A football season\" (revision 1376570202)",
+  "heisman-2003": "Wikipedia \"2003 NCAA Division I-A football season\" (revision 1382308541)",
+  "heisman-2004": "Wikipedia \"2004 NCAA Division I-A football season\" (revision 1372545426)",
+  "heisman-2006": "Wikipedia \"2006 NCAA Division I FBS football season\" (revision 1380681562)",
+  "heisman-2007": "Wikipedia \"2007 NCAA Division I FBS football season\" (revision 1383652807)",
+  "heisman-2008": "Wikipedia \"2008 NCAA Division I FBS football season\" (revision 1360588758)",
+  "heisman-2009": "Wikipedia \"2009 NCAA Division I FBS football season\" (revision 1384538034)",
+  "heisman-2010": "Wikipedia \"2010 NCAA Division I FBS football season\" (revision 1373478820)",
+  "heisman-2011": "Wikipedia \"2011 NCAA Division I FBS football season\" (revision 1370609091)",
+  "heisman-2012": "Wikipedia \"2012 NCAA Division I FBS football season\" (revision 1383610337)",
+  "heisman-2013": "Wikipedia \"2013 NCAA Division I FBS football season\" (revision 1375110339)",
+  "heisman-2014": "Wikipedia \"2014 NCAA Division I FBS football season\" (revision 1372004147)",
+  "heisman-2015": "Wikipedia \"2015 NCAA Division I FBS football season\" (revision 1384257072)",
+  "heisman-2016": "Wikipedia \"2016 NCAA Division I FBS football season\" (revision 1384257241)",
+  "heisman-2017": "Wikipedia \"2017 NCAA Division I FBS football season\" (revision 1382308874)",
+  "heisman-2018": "Wikipedia \"2018 NCAA Division I FBS football season\" (revision 1384538556)",
+  "heisman-2019": "Wikipedia \"2019 NCAA Division I FBS football season\" (revision 1384258209)",
+  "heisman-2020": "Wikipedia \"2020 NCAA Division I FBS football season\" (revision 1338365402)",
+  "heisman-2021": "Wikipedia \"2021 NCAA Division I FBS football season\" (revision 1381333026)",
+  "heisman-2022": "Wikipedia \"2022 NCAA Division I FBS football season\" (revision 1378642578)",
+  "heisman-2023": "Wikipedia \"2023 NCAA Division I FBS football season\" (revision 1377196806)",
+  "heisman-2024": "Wikipedia \"2024 NCAA Division I FBS football season\" (revision 1385139850)",
+  "heisman-2025": "Wikipedia \"2025 NCAA Division I FBS football season\" (revision 1385139498)"
+ }
+}

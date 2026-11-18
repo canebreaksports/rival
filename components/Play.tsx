@@ -303,7 +303,7 @@ function NameThem({ q, onDone, onHint, onNext, last }: { q: Extract<Question, { 
       <div className={`reveal show ${filled.length ? "good" : "bad"}`}>
         <b>{filled.length} of {slots.length} named · +{filled.length * POINTS.name}</b>
         {[q.a, q.b].map(k => <div key={k} style={{ marginTop: 10 }}><b>{SCHOOL[k].name}</b>
-          {bySchool(k).length ? bySchool(k).map(x => <div key={x.i}>{filled.includes(x.i) ? "✅" : "▫️"} {x.name}{x.season ? ` ${x.season}` : ""} ({fmt(x.yards)}{x.active ? ", active" : ""})</div>) : <div>None</div>}</div>)}
+          {bySchool(k).length ? bySchool(k).map(x => <div key={x.i}>{filled.includes(x.i) ? "✅" : "▫️"} {x.name}{x.season ? ` ${x.season}` : ""} ({x.label ?? fmt(x.yards)}{x.active ? ", active" : ""})</div>) : <div>None</div>}</div>)}
       </div>
       <div className="next show"><button className="btn" onClick={onNext}>{last ? "Final Whistle" : "Next Play →"}</button></div>
     </>}

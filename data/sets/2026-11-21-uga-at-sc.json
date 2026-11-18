@@ -6,42 +6,9 @@
   "away": "UGA",
   "home": "SC"
  },
- "generatedAt": "2026-11-18T03:11:54.152Z",
- "engine": 10,
+ "generatedAt": "2026-11-18T12:25:25.087Z",
+ "engine": 11,
  "questions": [
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": true,
-   "prompt": "In Georgia–South Carolina games since 2010, who had more receiving yards against the other school?",
-   "A": {
-    "label": "Mecole Hardman (UGA) vs. South Carolina",
-    "value": 144,
-    "school": "UGA"
-   },
-   "B": {
-    "label": "Bryan Edwards (SC) vs. Georgia",
-    "value": 286,
-    "school": "SC"
-   },
-   "unit": "receiving yds",
-   "note": "Mecole Hardman: 144 in 2 games. Bryan Edwards: 286 in 4 games.",
-   "sig": "vsrecBryan Edwards,Mecole Hardman"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Georgia vs South Carolina",
-   "a": "UGA",
-   "b": "SC",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    271,
-    181
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
   {
    "label": "Palmetto vs. Peach",
    "verified": true,
@@ -51,159 +18,6 @@
    "line": "35.5 points",
    "answer": "over",
    "reveal": "Over. Georgia won 48–7, a 41-point margin."
-  },
-  {
-   "type": "mc",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Sep 10, 2005",
-    "winner": "UGA",
-    "loser": "SC",
-    "ws": 17,
-    "ls": 15,
-    "venue": "Sanford Stadium"
-   },
-   "prompt": "What was the difference in total yards in Georgia's 17–15 win over South Carolina?",
-   "options": [
-    "Georgia +71 yards",
-    "South Carolina +19 yards",
-    "Georgia +201 yards",
-    "South Carolina +59 yards"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    0,
-    3,
-    2
-   ],
-   "reveal": "Georgia +71. South Carolina had 279 total yards, Georgia 350.",
-   "sig": "td2005-09-10total"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": true,
-   "prompt": "In Georgia–South Carolina games since 2010, who had more rushing yards against the other school?",
-   "A": {
-    "label": "Brian Herrien (UGA) vs. South Carolina",
-    "value": 145,
-    "school": "UGA"
-   },
-   "B": {
-    "label": "Marcus Lattimore (SC) vs. Georgia",
-    "value": 467,
-    "school": "SC"
-   },
-   "unit": "rushing yds",
-   "note": "Brian Herrien: 145 in 3 games. Marcus Lattimore: 467 in 3 games.",
-   "sig": "vsrushBrian Herrien,Marcus Lattimore"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Sep 19, 2015",
-    "winner": "UGA",
-    "loser": "SC",
-    "ws": 52,
-    "ls": 20,
-    "venue": "Sanford Stadium"
-   },
-   "prompt": "In this game, did Greyson Lambert (Georgia) throw for more or less than",
-   "line": "375 passing yards",
-   "answer": "under",
-   "reveal": "Less. Greyson Lambert had 330 passing yards and 3 TD in this game.",
-   "check": {
-    "value": 330,
-    "line": 375
-   },
-   "sig": "gm2015-09-19Greyson Lambertpass"
-  },
-  {
-   "type": "count",
-   "label": "School Count",
-   "a": "UGA",
-   "b": "SC",
-   "threshold": 3000,
-   "A": [
-    {
-     "name": "Herschel Walker",
-     "yards": 5259,
-     "profile": "Running back · Georgia 1980–1982 · No. 1 on Georgia's career rushing list · 49 career rushing TDs"
-    },
-    {
-     "name": "Nick Chubb",
-     "yards": 4769,
-     "profile": "No. 2 on Georgia's career rushing list"
-    },
-    {
-     "name": "Sony Michel",
-     "yards": 3638,
-     "profile": "No. 3 on Georgia's career rushing list"
-    },
-    {
-     "name": "Todd Gurley",
-     "yards": 3285,
-     "profile": "No. 4 on Georgia's career rushing list"
-    },
-    {
-     "name": "Garrison Hearst",
-     "yards": 3232,
-     "profile": "No. 5 on Georgia's career rushing list"
-    },
-    {
-     "name": "Lars Tate",
-     "yards": 3017,
-     "profile": "No. 6 on Georgia's career rushing list"
-    }
-   ],
-   "B": [
-    {
-     "name": "George Rogers",
-     "yards": 5204,
-     "profile": "No. 1 on South Carolina's career rushing list"
-    },
-    {
-     "name": "Brandon Bennett",
-     "yards": 3055,
-     "profile": "No. 2 on South Carolina's career rushing list"
-    },
-    {
-     "name": "Harold Green",
-     "yards": 3005,
-     "profile": "No. 3 on South Carolina's career rushing list"
-    }
-   ],
-   "verified": true,
-   "sig": "cUGASC3000"
-  },
-  {
-   "type": "mc",
-   "label": "Since 2010",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2010, which player from either school has the most rushing yards against the other?",
-   "options": [
-    "Marcus Lattimore (South Carolina)",
-    "Nick Chubb (Georgia)",
-    "Todd Gurley II (Georgia)",
-    "Sony Michel (Georgia)"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    0,
-    3,
-    1
-   ],
-   "reveal": "Marcus Lattimore (South Carolina) 467 in 3 games · Nick Chubb (Georgia) 416 in 4 games · Todd Gurley II (Georgia) 302 in 3 games · Sony Michel (Georgia) 283 in 4 games",
-   "sig": "tvrush"
   },
   {
    "type": "h2h",
@@ -239,6 +53,208 @@
    ],
    "verified": true,
    "sig": "gpeakW"
+  },
+  {
+   "type": "mc",
+   "label": "Since 2010",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2010, which player from either school has the most rushing yards against the other?",
+   "options": [
+    "Marcus Lattimore (South Carolina)",
+    "Nick Chubb (Georgia)",
+    "Todd Gurley II (Georgia)",
+    "Sony Michel (Georgia)"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    0,
+    3,
+    1
+   ],
+   "reveal": "Marcus Lattimore (South Carolina) 467 in 3 games · Nick Chubb (Georgia) 416 in 4 games · Todd Gurley II (Georgia) 302 in 3 games · Sony Michel (Georgia) 283 in 4 games",
+   "sig": "tvrush"
+  },
+  {
+   "type": "count",
+   "label": "NFL Draft",
+   "a": "UGA",
+   "b": "SC",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From the 2022 draft through 2026, which school produced more top-10 NFL draft picks?",
+   "A": [
+    {
+     "name": "Travon Walker",
+     "yards": 1,
+     "season": 2022,
+     "label": "No. 1 pick",
+     "profile": "Defensive End · 2022 draft, round 1"
+    },
+    {
+     "name": "Jalen Carter",
+     "yards": 9,
+     "season": 2023,
+     "label": "No. 9 pick",
+     "profile": "Defensive Tackle · 2023 draft, round 1"
+    }
+   ],
+   "B": [],
+   "sig": "dctop102022"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": false,
+   "prompt": "In Georgia–South Carolina games since 2010, who had more rushing yards against the other school?",
+   "A": {
+    "label": "Todd Gurley II (UGA) vs. South Carolina",
+    "value": 302,
+    "school": "UGA"
+   },
+   "B": {
+    "label": "Brandon Wilds (SC) vs. Georgia",
+    "value": 126,
+    "school": "SC"
+   },
+   "unit": "rushing yds",
+   "note": "Todd Gurley II: 302 in 3 games. Brandon Wilds: 126 in 3 games.",
+   "sig": "vsrushBrandon Wilds,Todd Gurley II"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Sep 8, 2018",
+    "winner": "UGA",
+    "loser": "SC",
+    "ws": 41,
+    "ls": 17,
+    "venue": "Williams-Brice Stadium"
+   },
+   "prompt": "In this game, did Jake Bentley (South Carolina) throw for more or less than",
+   "line": "325 passing yards",
+   "answer": "under",
+   "reveal": "Less. Jake Bentley had 269 passing yards and 1 TD in this game.",
+   "check": {
+    "value": 269,
+    "line": 325
+   },
+   "sig": "gm2018-09-08Jake Bentleypass"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Sep 10, 2005",
+    "winner": "UGA",
+    "loser": "SC",
+    "ws": 17,
+    "ls": 15,
+    "venue": "Sanford Stadium"
+   },
+   "prompt": "In this game, did Blake Mitchell (South Carolina) throw for more or less than",
+   "line": "175 passing yards",
+   "answer": "over",
+   "reveal": "More. Blake Mitchell had 236 passing yards and 1 TD in this game.",
+   "check": {
+    "value": 236,
+    "line": 175
+   },
+   "sig": "gm2005-09-10Blake Mitchellpass"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Georgia vs South Carolina",
+   "a": "UGA",
+   "b": "SC",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    1,
+    8
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "UGA",
+   "b": "SC",
+   "threshold": 2750,
+   "A": [
+    {
+     "name": "Herschel Walker",
+     "yards": 5259,
+     "profile": "Running back · Georgia 1980–1982 · No. 1 on Georgia's career rushing list · 49 career rushing TDs"
+    },
+    {
+     "name": "Nick Chubb",
+     "yards": 4769,
+     "profile": "No. 2 on Georgia's career rushing list"
+    },
+    {
+     "name": "Sony Michel",
+     "yards": 3638,
+     "profile": "No. 3 on Georgia's career rushing list"
+    },
+    {
+     "name": "Todd Gurley",
+     "yards": 3285,
+     "profile": "No. 4 on Georgia's career rushing list"
+    },
+    {
+     "name": "Garrison Hearst",
+     "yards": 3232,
+     "profile": "No. 5 on Georgia's career rushing list"
+    },
+    {
+     "name": "Lars Tate",
+     "yards": 3017,
+     "profile": "No. 6 on Georgia's career rushing list"
+    },
+    {
+     "name": "D'Andre Swift",
+     "yards": 2885,
+     "profile": "Running back · Georgia 2017–2019 · No. 7 on Georgia's career rushing list · 20 career rushing TDs"
+    }
+   ],
+   "B": [
+    {
+     "name": "George Rogers",
+     "yards": 5204,
+     "profile": "No. 1 on South Carolina's career rushing list"
+    },
+    {
+     "name": "Brandon Bennett",
+     "yards": 3055,
+     "profile": "No. 2 on South Carolina's career rushing list"
+    },
+    {
+     "name": "Harold Green",
+     "yards": 3005,
+     "profile": "No. 3 on South Carolina's career rushing list"
+    },
+    {
+     "name": "Steve Wadiak",
+     "yards": 2878,
+     "profile": "No. 4 on South Carolina's career rushing list"
+    },
+    {
+     "name": "Thomas Dendy",
+     "yards": 2767,
+     "profile": "No. 5 on South Carolina's career rushing list"
+    }
+   ],
+   "verified": true,
+   "sig": "cUGASC2750"
   }
  ]
 }

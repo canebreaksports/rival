@@ -43,6 +43,7 @@ describe("wikitable parser", () => {
 describe("wikitable templates", () => {
   it("keeps the short label of abbr/tooltip templates", () => {
     expect(cleanCell("{{abbr|Yds|Rushing yards}}")).toBe("Yds");
+    expect(cleanCell("{{sortname|Derrick|Henry|Derrick Henry (American football)}}")).toBe("Derrick Henry");
     expect(cleanCell("Fumbles{{efn|name=F|note}}")).toBe("Fumbles");
   });
 });

@@ -6,205 +6,31 @@
   "away": "VAN",
   "home": "FLA"
  },
- "generatedAt": "2026-11-18T03:11:54.145Z",
- "engine": 10,
+ "generatedAt": "2026-11-18T12:25:25.076Z",
+ "engine": 11,
  "questions": [
   {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Anthony Richardson (FLA QB) · career rushing TDs",
-     "value": 12,
-     "school": "FLA"
-    },
-    {
-     "label": "Diego Pavia (VAN QB) · career rushing TDs",
-     "value": 18,
-     "school": "VAN"
-    },
-    {
-     "label": "Kalija Lipscomb (VAN WR) · 2018 receiving TDs",
-     "value": 9,
-     "school": "VAN"
-    },
-    {
-     "label": "Montrell Johnson (FLA RB) · 2024 rushing TDs",
-     "value": 6,
-     "school": "FLA"
-    }
-   ],
-   "sig": "mxTDAnthony Richardsoncareer rushing TDs,Diego Paviacareer rushing TDs,Kalija Lipscomb2018 receiving TDs,Montrell Johnson2024 rushing TDs"
-  },
-  {
-   "type": "mc",
-   "label": "Since 2012",
+   "type": "moment",
+   "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
-   "prompt": "Since 2012, which player from either school has the most rushing yards against the other?",
-   "options": [
-    "Ralph Webb (Vanderbilt)",
-    "Lamical Perine (Florida)",
-    "Jeff Driskel (Florida)",
-    "Jordan Scarlett (Florida)"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    1,
-    2,
-    3
-   ],
-   "reveal": "Ralph Webb (Vanderbilt) 340 in 4 games · Lamical Perine (Florida) 220 in 4 games · Jeff Driskel (Florida) 187 in 2 games · Jordan Scarlett (Florida) 176 in 3 games",
-   "sig": "tvrush"
-  },
-  {
-   "type": "count",
-   "label": "School Count",
-   "a": "VAN",
-   "b": "FLA",
-   "threshold": 2500,
-   "A": [
-    {
-     "name": "Ralph Webb",
-     "yards": 4173,
-     "profile": "Running back · Vanderbilt 2014–2017 · No. 1 on Vanderbilt's career rushing list · 32 career rushing TDs"
-    },
-    {
-     "name": "Zac Stacy",
-     "yards": 3143,
-     "profile": "No. 2 on Vanderbilt's career rushing list"
-    },
-    {
-     "name": "Frank Mordica",
-     "yards": 2632,
-     "profile": "No. 3 on Vanderbilt's career rushing list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Errict Rhett",
-     "yards": 4163,
-     "profile": "No. 1 on Florida's career rushing list"
-    },
-    {
-     "name": "Emmitt Smith",
-     "yards": 3928,
-     "profile": "No. 2 on Florida's career rushing list"
-    },
-    {
-     "name": "Neal Anderson",
-     "yards": 3234,
-     "profile": "No. 3 on Florida's career rushing list"
-    },
-    {
-     "name": "Fred Taylor",
-     "yards": 3075,
-     "profile": "No. 4 on Florida's career rushing list"
-    },
-    {
-     "name": "Earnest Graham",
-     "yards": 3065,
-     "profile": "No. 5 on Florida's career rushing list"
-    },
-    {
-     "name": "Tim Tebow",
-     "yards": 2947,
-     "profile": "Quarterback · Florida 2006–2009 · No. 6 on Florida's career rushing list · 57 career rushing TDs"
-    },
-    {
-     "name": "Jadan Baugh",
-     "yards": 2748,
-     "active": true,
-     "profile": "No. 7 on Florida's career rushing list · still active"
-    },
-    {
-     "name": "Tony Green",
-     "yards": 2590,
-     "profile": "No. 8 on Florida's career rushing list"
-    }
-   ],
-   "verified": true,
-   "sig": "cVANFLA2500"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Vanderbilt vs Florida",
-   "a": "VAN",
-   "b": "FLA",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    113,
-    218
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receiving yards (at the school shown)?",
-   "A": {
-    "label": "Lamical Perine (FLA RB)",
-    "value": 674,
-    "school": "FLA"
+   "game": {
+    "date": "Nov 4, 2006",
+    "winner": "FLA",
+    "loser": "VAN",
+    "ws": 25,
+    "ls": 19,
+    "venue": "FirstBank Stadium"
    },
-   "B": {
-    "label": "Ralph Webb (VAN RB)",
-    "value": 572,
-    "school": "VAN"
+   "prompt": "In this game, did Dallas Baker (Florida) have more or less than",
+   "line": "170 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Dallas Baker had 135 receiving yards on 7 catches and 1 TD in this game.",
+   "check": {
+    "value": 135,
+    "line": 170
    },
-   "unit": "",
-   "note": "🚨 Upset: Lamical Perine 674 vs. Ralph Webb 572.",
-   "sig": "urecRalph WebbLamical Perine"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Vanderbilt vs Florida",
-   "a": "VAN",
-   "b": "FLA",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
-   "values": [
-    12,
-    0
-   ],
-   "verified": true,
-   "sig": "gwin3"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving yards in a single season?",
-   "A": {
-    "label": "Josh Hammond (WR) · 2018 FLA",
-    "value": 369,
-    "school": "FLA"
-   },
-   "B": {
-    "label": "Kalija Lipscomb (WR) · 2018 VAN",
-    "value": 916,
-    "school": "VAN"
-   },
-   "unit": "receiving yards",
-   "sig": "hJosh Hammond2018,Kalija Lipscomb2018rec"
-  },
-  {
-   "label": "SEC East Originals",
-   "verified": true,
-   "sig": "kSEC East Originals1",
-   "type": "moment",
-   "prompt": "Florida's biggest win over Vanderbilt came in 2001. Was the margin more or less than",
-   "line": "50.5 points",
-   "answer": "over",
-   "reveal": "Over. Florida won 71–13, a 58-point margin."
+   "sig": "gm2006-11-04Dallas Bakerrec"
   },
   {
    "label": "SEC East Originals",
@@ -217,30 +43,173 @@
    "reveal": "Over. Florida won 22 straight from 1989 to 2012."
   },
   {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Vanderbilt–Florida games since 2012, who had more rushing yards against the other school?",
+   "A": {
+    "label": "Patrick Smith (VAN) vs. Florida",
+    "value": 123,
+    "school": "VAN"
+   },
+   "B": {
+    "label": "Jeff Driskel (FLA) vs. Vanderbilt",
+    "value": 187,
+    "school": "FLA"
+   },
+   "unit": "rushing yds",
+   "note": "Patrick Smith: 123 in 3 games. Jeff Driskel: 187 in 2 games.",
+   "sig": "vsrushJeff Driskel,Patrick Smith"
+  },
+  {
+   "label": "SEC East Originals",
+   "verified": true,
+   "sig": "kSEC East Originals1",
+   "type": "moment",
+   "prompt": "Florida's biggest win over Vanderbilt came in 2001. Was the margin more or less than",
+   "line": "50.5 points",
+   "answer": "over",
+   "reveal": "Over. Florida won 71–13, a 58-point margin."
+  },
+  {
    "type": "count",
-   "label": "Since 2020",
+   "label": "Heisman",
    "a": "VAN",
    "b": "FLA",
-   "threshold": 900,
+   "threshold": 0,
    "verified": true,
    "pitted": true,
-   "prompt": "From 2020 through 2025, which school had more 900-yard receiving seasons?",
-   "A": [],
-   "B": [
+   "prompt": "From 2019 through 2025, which school had more top-5 finishes in Heisman Trophy voting?",
+   "A": [
     {
-     "name": "Kadarius Toney",
-     "yards": 984,
-     "season": 2020,
-     "profile": "Wide receiver · 2020: 161 rushing, 984 receiving yds"
-    },
-    {
-     "name": "Ricky Pearsall",
-     "yards": 970,
-     "season": 2023,
-     "profile": "Wide receiver · 2023: 62 rushing, 970 receiving yds"
+     "name": "Diego Pavia",
+     "yards": 2,
+     "season": 2025,
+     "label": "2nd place",
+     "profile": "QB · 2025 Heisman voting: 1,435 points"
     }
    ],
-   "sig": "tsrec9002020"
+   "B": [
+    {
+     "name": "Kyle Trask",
+     "yards": 4,
+     "season": 2020,
+     "label": "4th place",
+     "profile": "QB · 2020 Heisman voting: 737 points"
+    }
+   ],
+   "sig": "hc52019"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Oct 13, 2018",
+    "winner": "FLA",
+    "loser": "VAN",
+    "ws": 37,
+    "ls": 27,
+    "venue": "FirstBank Stadium"
+   },
+   "prompt": "In this game, did Lamical Perine (Florida) have more or less than",
+   "line": "110 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Lamical Perine had 93 receiving yards on 4 catches and 0 TD in this game.",
+   "check": {
+    "value": 93,
+    "line": 110
+   },
+   "sig": "gm2018-10-13Lamical Perinerec"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Florida",
+   "a": "VAN",
+   "b": "FLA",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    10,
+    13
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
+   "type": "mc",
+   "label": "Heisman",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Which of these finished highest in Heisman Trophy voting that season?",
+   "options": [
+    "Diego Pavia (Vanderbilt, 2025)",
+    "Tim Tebow (Florida, 2009)",
+    "Kyle Pitts (Florida, 2020)",
+    "Kyle Trask (Florida, 2020)"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    2,
+    0,
+    3
+   ],
+   "reveal": "Diego Pavia: 2nd in 2025 · Kyle Trask: 4th in 2020 · Tim Tebow: 5th in 2009 · Kyle Pitts: 10th in 2020",
+   "sig": "hmDiego Pavia2025,Kyle Pitts2020,Kyle Trask2020,Tim Tebow2009"
+  },
+  {
+   "type": "count",
+   "label": "Since 2014",
+   "a": "VAN",
+   "b": "FLA",
+   "threshold": 1100,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2014 through 2025, which school had more 1,100-yard rushing seasons?",
+   "A": [
+    {
+     "name": "Ralph Webb",
+     "yards": 1152,
+     "season": 2015,
+     "profile": "Running back · 2015: 1,152 rushing, 188 receiving yds · also on this list in 2016"
+    },
+    {
+     "name": "Ralph Webb",
+     "yards": 1283,
+     "season": 2016,
+     "profile": "Running back · 2016: 1,283 rushing, 166 receiving yds · also on this list in 2015"
+    },
+    {
+     "name": "Ke'Shawn Vaughn",
+     "yards": 1244,
+     "season": 2018,
+     "profile": "Running back · 2018: 1,244 rushing, 170 receiving yds"
+    }
+   ],
+   "B": [
+    {
+     "name": "Jadan Baugh",
+     "yards": 1170,
+     "season": 2025,
+     "profile": "Running back · 2025: 1,170 rushing, 210 receiving yds"
+    }
+   ],
+   "sig": "tsrush11002014"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Vanderbilt vs Florida",
+   "a": "VAN",
+   "b": "FLA",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    1,
+    9
+   ],
+   "verified": true,
+   "sig": "gwin10"
   }
  ]
 }

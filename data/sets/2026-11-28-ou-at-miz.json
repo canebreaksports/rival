@@ -6,57 +6,52 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-18T03:11:54.170Z",
- "engine": 10,
+ "generatedAt": "2026-11-18T12:25:25.114Z",
+ "engine": 11,
  "questions": [
   {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Mark Andrews (OU TE) · 2016 receiving TDs",
-     "value": 7,
-     "school": "OU"
-    },
-    {
-     "label": "Luther Burden III (MIZ WR) · career total TDs (rushing + receiving)",
-     "value": 25,
-     "school": "MIZ"
-    },
-    {
-     "label": "Trey Sermon (OU RB) · 2018 rushing TDs",
-     "value": 13,
-     "school": "OU"
-    },
-    {
-     "label": "CeeDee Lamb (OU WR) · career total TDs (rushing + receiving)",
-     "value": 33,
-     "school": "OU"
-    }
+   "type": "prog",
+   "label": "Program Pit · Oklahoma vs Missouri",
+   "a": "OU",
+   "b": "MIZ",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    20,
+    7
    ],
-   "sig": "mxTDCeeDee Lambcareer total TDs (rushing + receiving),Luther Burden IIIcareer total TDs (rushing + receiving),Mark Andrews2016 receiving TDs,Trey Sermon2018 rushing TDs"
+   "verified": true,
+   "sig": "gwin10"
   },
   {
    "type": "count",
-   "label": "Since 2012",
+   "label": "Since 2020",
    "a": "OU",
    "b": "MIZ",
-   "threshold": 1500,
+   "threshold": 900,
    "verified": true,
    "pitted": true,
-   "prompt": "From 2012 through 2025, which school had more 1,500-yard rushing seasons?",
+   "prompt": "From 2020 through 2025, which school had more 900-yard rushing seasons?",
    "A": [
     {
-     "name": "Samaje Perine",
-     "yards": 1713,
-     "season": 2014,
-     "profile": "Running back · 2014: 1,713 rushing, 108 receiving yds"
+     "name": "Kennedy Brooks",
+     "yards": 1253,
+     "season": 2021,
+     "profile": "Running back · 2021: 1,253 rushing, 73 receiving yds"
+    },
+    {
+     "name": "Eric Gray",
+     "yards": 1364,
+     "season": 2022,
+     "profile": "Running back · 2022: 1,364 rushing, 229 receiving yds"
     }
    ],
    "B": [
+    {
+     "name": "Larry Rountree III",
+     "yards": 972,
+     "season": 2020,
+     "profile": "Running back · 2020: 972 rushing, 100 receiving yds"
+    },
     {
      "name": "Tyler Badie",
      "yards": 1604,
@@ -76,7 +71,7 @@
      "profile": "Running back · 2025: 1,649 rushing, 22 receiving yds"
     }
    ],
-   "sig": "tsrush15002012"
+   "sig": "tsrush9002020"
   },
   {
    "type": "h2h",
@@ -98,149 +93,117 @@
    "sig": "hJohnathon Johnson2018,Mark Andrews2017recTD"
   },
   {
-   "type": "prog",
-   "label": "Program Pit · Oklahoma vs Missouri",
-   "a": "OU",
-   "b": "MIZ",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    2,
-    9
-   ],
+   "type": "rank",
+   "label": "Rivalry Games",
    "verified": true,
-   "sig": "glosing"
+   "unit": "yds",
+   "prompt": "Rank these single-game rushing performances in Oklahoma–Missouri games, highest first.",
+   "items": [
+    {
+     "label": "Henry Josey (MIZ) · 2010",
+     "value": 64,
+     "school": "MIZ"
+    },
+    {
+     "label": "Chris Brown (OU) · 2008",
+     "value": 122,
+     "school": "OU"
+    },
+    {
+     "label": "Allen Patrick (OU) · 2006",
+     "value": 162,
+     "school": "OU"
+    },
+    {
+     "label": "Allen Patrick (OU) · 2007",
+     "value": 88,
+     "school": "OU"
+    }
+   ],
+   "sig": "grrushAllen Patrick2006,Allen Patrick2007,Chris Brown2008,Henry Josey2010"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2018,
+   "stat": "Receiving season",
+   "aSchool": "MIZ",
+   "other": "OU",
+   "aName": "Albert Okwuegbunam (TE)",
+   "bName": "CeeDee Lamb (WR)",
+   "A": {
+    "big": "466",
+    "sm": "rec yds · 6 TD"
+   },
+   "B": {
+    "big": "1,155",
+    "sm": "rec yds · 11 TD"
+   },
+   "flip": true,
+   "sig": "drec2018Albert Okwuegbunam,CeeDee Lamb"
   },
   {
    "type": "h2h",
    "label": "Fresh Mix",
+   "upset": true,
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more career rushing yards?",
+   "flip": false,
+   "prompt": "Who had more college receptions (at the school shown)?",
    "A": {
-    "label": "Eric Gray (RB) · career, OU",
-    "value": 1776,
-    "school": "OU"
-   },
-   "B": {
-    "label": "Damarea Crockett (RB) · career, MIZ",
-    "value": 2246,
+    "label": "Tyler Badie (MIZ RB)",
+    "value": 126,
     "school": "MIZ"
    },
-   "unit": "rushing yards",
-   "sig": "hDamarea Crockettcareer,Eric Graycareerrush"
-  },
-  {
-   "type": "mc",
-   "label": "Since 2006",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2006, which player from either school has the most receiving yards against the other?",
-   "options": [
-    "Ryan Broyles (Oklahoma)",
-    "Juaquin Iglesias (Oklahoma)",
-    "Chase Coffman (Missouri)",
-    "Jermaine Gresham (Oklahoma)"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    0,
-    2
-   ],
-   "reveal": "Ryan Broyles (Oklahoma) 349 in 3 games · Juaquin Iglesias (Oklahoma) 249 in 4 games · Chase Coffman (Missouri) 207 in 3 games · Jermaine Gresham (Oklahoma) 179 in 4 games",
-   "sig": "tvrec"
+   "B": {
+    "label": "Samaje Perine (OU RB)",
+    "value": 40,
+    "school": "OU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Tyler Badie 126 vs. Samaje Perine 40.",
+   "sig": "urecNSamaje PerineTyler Badie"
   },
   {
    "type": "prog",
    "label": "Program Pit · Oklahoma vs Missouri",
    "a": "OU",
    "b": "MIZ",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "prompt": "Who won more total games from 2000–2025?",
    "values": [
-    20,
-    7
+    271,
+    192
    ],
    "verified": true,
-   "sig": "gwin10"
+   "sig": "gtotalW"
   },
   {
    "type": "count",
-   "label": "School Count",
+   "label": "Heisman",
    "a": "OU",
    "b": "MIZ",
-   "threshold": 3500,
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2010 through 2025, which school had more Heisman Trophy winners?",
    "A": [
     {
-     "name": "Samaje Perine",
-     "yards": 4122,
-     "profile": "Running back · Oklahoma 2014–2016 · No. 1 on Oklahoma's career rushing list · 49 career rushing TDs"
+     "name": "Baker Mayfield",
+     "yards": 1,
+     "season": 2017,
+     "label": "1st place",
+     "profile": "QB · 2017 Heisman voting: 2,398 points"
     },
     {
-     "name": "Billy Sims",
-     "yards": 4118,
-     "profile": "No. 2 on Oklahoma's career rushing list"
-    },
-    {
-     "name": "Joe Washington",
-     "yards": 4071,
-     "profile": "No. 3 on Oklahoma's career rushing list"
-    },
-    {
-     "name": "Adrian Peterson",
-     "yards": 4045,
-     "profile": "Running back · Oklahoma 2004–2006 · No. 4 on Oklahoma's career rushing list · 41 career rushing TDs"
-    },
-    {
-     "name": "Steve Owens",
-     "yards": 4041,
-     "profile": "No. 5 on Oklahoma's career rushing list"
-    },
-    {
-     "name": "Quentin Griffin",
-     "yards": 3938,
-     "profile": "No. 6 on Oklahoma's career rushing list"
-    },
-    {
-     "name": "DeMarco Murray",
-     "yards": 3685,
-     "profile": "No. 7 on Oklahoma's career rushing list"
+     "name": "Kyler Murray",
+     "yards": 1,
+     "season": 2018,
+     "label": "1st place",
+     "profile": "QB · 2018 Heisman voting: 2,167 points"
     }
    ],
-   "B": [
-    {
-     "name": "Brad Smith",
-     "yards": 4289,
-     "profile": "No. 1 on Missouri's career rushing list"
-    },
-    {
-     "name": "Larry Rountree III",
-     "yards": 3720,
-     "profile": "Running back · Missouri 2017–2020 · No. 2 on Missouri's career rushing list · 40 career rushing TDs"
-    }
-   ],
-   "verified": true,
-   "sig": "cOUMIZ3500"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": false,
-   "prompt": "In Oklahoma–Missouri games since 2006, who had more receiving yards against the other school?",
-   "A": {
-    "label": "Jermaine Gresham (OU) vs. Missouri",
-    "value": 179,
-    "school": "OU"
-   },
-   "B": {
-    "label": "Martin Rucker (MIZ) vs. Oklahoma",
-    "value": 140,
-    "school": "MIZ"
-   },
-   "unit": "receiving yds",
-   "note": "Jermaine Gresham: 179 in 4 games. Martin Rucker: 140 in 3 games.",
-   "sig": "vsrecJermaine Gresham,Martin Rucker"
+   "B": [],
+   "sig": "hc12010"
   }
  ]
 }

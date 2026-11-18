@@ -6,9 +6,75 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-18T03:11:54.169Z",
- "engine": 10,
+ "generatedAt": "2026-11-18T12:25:25.111Z",
+ "engine": 11,
  "questions": [
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "MSST",
+   "b": "MISS",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, which school had more winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)?",
+   "A": [
+    {
+     "name": "Johnthan Banks",
+     "yards": 2012,
+     "season": 2012,
+     "label": "Jim Thorpe Award",
+     "profile": "CB · won the Jim Thorpe Award (best defensive back)"
+    }
+   ],
+   "B": [
+    {
+     "name": "Eli Manning",
+     "yards": 2003,
+     "season": 2003,
+     "label": "Maxwell Award",
+     "profile": "QB · won the Maxwell Award (best all-around player)"
+    },
+    {
+     "name": "Patrick Willis",
+     "yards": 2006,
+     "season": 2006,
+     "label": "Butkus Award",
+     "profile": "won the Butkus Award (best linebacker)"
+    },
+    {
+     "name": "Jonathan Nichols",
+     "yards": 2003,
+     "season": 2003,
+     "label": "Lou Groza Award",
+     "profile": "won the Lou Groza Award (best kicker)"
+    }
+   ],
+   "sig": "acall2000"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 23, 2017",
+    "winner": "MISS",
+    "loser": "MSST",
+    "ws": 31,
+    "ls": 28,
+    "venue": "Davis Wade Stadium"
+   },
+   "prompt": "In this game, did D.K. Metcalf (Ole Miss) have more or less than",
+   "line": "90 receiving yards",
+   "answer": "under",
+   "reveal": "Less. D.K. Metcalf had 67 receiving yards on 2 catches and 1 TD in this game.",
+   "check": {
+    "value": 67,
+    "line": 90
+   },
+   "sig": "gm2017-11-23D.K. Metcalfrec"
+  },
   {
    "type": "moment",
    "label": "Rivalry Game",
@@ -22,171 +88,26 @@
     "ls": 22,
     "venue": "Vaught-Hemingway Stadium"
    },
-   "prompt": "In this game, did Jaxson Dart (Ole Miss) throw for more or less than",
+   "prompt": "In this game, did Will Rogers (Mississippi State) throw for more or less than",
    "line": "325 passing yards",
    "answer": "under",
-   "reveal": "Less. Jaxson Dart had 250 passing yards and 2 TD in this game.",
+   "reveal": "Less. Will Rogers had 239 passing yards and 2 TD in this game.",
    "check": {
-    "value": 250,
+    "value": 239,
     "line": 325
    },
-   "sig": "gm2022-11-24Jaxson Dartpass"
-  },
-  {
-   "type": "mc",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 23, 2023",
-    "winner": "MISS",
-    "loser": "MSST",
-    "ws": 17,
-    "ls": 7,
-    "venue": "Davis Wade Stadium"
-   },
-   "prompt": "What was the difference in rushing yards in Ole Miss's 17–7 win over Mississippi State?",
-   "options": [
-    "Ole Miss +115 yards",
-    "Mississippi State +15 yards",
-    "Mississippi State +245 yards",
-    "Ole Miss +15 yards"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    2,
-    0,
-    1
-   ],
-   "reveal": "Ole Miss +115. Ole Miss had 211 rushing yards, Mississippi State 96.",
-   "sig": "td2023-11-23rush"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": true,
-   "prompt": "In Mississippi State–Ole Miss games since 2007, who had more receiving yards against the other school?",
-   "A": {
-    "label": "Boobie Dixon (MSST) vs. Ole Miss",
-    "value": 116,
-    "school": "MSST"
-   },
-   "B": {
-    "label": "Damore'ea Stringfellow (MISS) vs. Mississippi State",
-    "value": 181,
-    "school": "MISS"
-   },
-   "unit": "receiving yds",
-   "note": "Boobie Dixon: 116 in 3 games. Damore'ea Stringfellow: 181 in 2 games.",
-   "sig": "vsrecBoobie Dixon,Damore'ea Stringfellow"
-  },
-  {
-   "type": "mc",
-   "label": "Since 2007",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2007, which player from either school has the most receiving yards against the other?",
-   "options": [
-    "A.J. Brown (Ole Miss)",
-    "Dontario Drummond (Ole Miss)",
-    "Jaden Walley (Mississippi State)",
-    "Fred Ross (Mississippi State)"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    2,
-    3,
-    0
-   ],
-   "reveal": "A.J. Brown (Ole Miss) 310 in 3 games · Dontario Drummond (Ole Miss) 272 in 3 games · Jaden Walley (Mississippi State) 260 in 3 games · Fred Ross (Mississippi State) 253 in 3 games",
-   "sig": "tvrec"
+   "sig": "gm2022-11-24Will Rogerspass"
   },
   {
    "type": "count",
-   "label": "School Count",
+   "label": "Since 2012",
    "a": "MSST",
    "b": "MISS",
-   "threshold": 2750,
-   "A": [
-    {
-     "name": "Anthony Dixon",
-     "yards": 3994,
-     "profile": "No. 1 on Mississippi State's career rushing list"
-    },
-    {
-     "name": "Nick Fitzgerald",
-     "yards": 3607,
-     "profile": "Quarterback · Mississippi State 2015–2018 · No. 2 on Mississippi State's career rushing list · 46 career rushing TDs"
-    },
-    {
-     "name": "Jerious Norwood",
-     "yards": 3212,
-     "profile": "No. 3 on Mississippi State's career rushing list"
-    },
-    {
-     "name": "Walter Packer",
-     "yards": 2820,
-     "profile": "No. 4 on Mississippi State's career rushing list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Deuce McAllister",
-     "yards": 3060,
-     "profile": "No. 1 on Ole Miss's career rushing list"
-    }
-   ],
-   "verified": true,
-   "sig": "cMSSTMISS2750"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
-   "A": {
-    "label": "Creed Whittemore (MSST WR)",
-    "value": 20.2,
-    "school": "MSST"
-   },
-   "B": {
-    "label": "Matt Corral (MISS QB)",
-    "value": 4,
-    "school": "MISS"
-   },
-   "unit": "",
-   "ypc": true,
-   "note": "🚨 Upset: Creed Whittemore 20.2 per carry (5 carries) vs. Matt Corral 4.0 per carry (333 carries).",
-   "sig": "uypcMatt CorralCreed Whittemore"
-  },
-  {
-   "type": "count",
-   "label": "Since 2014",
-   "a": "MSST",
-   "b": "MISS",
-   "threshold": 1300,
+   "threshold": 1500,
    "verified": true,
    "pitted": true,
-   "prompt": "From 2014 through 2025, which school had more 1,300-yard rushing seasons?",
-   "A": [
-    {
-     "name": "Nick Fitzgerald",
-     "yards": 1375,
-     "season": 2016,
-     "profile": "Quarterback · 2016: 1,375 rushing, 9 receiving yds"
-    },
-    {
-     "name": "Kylin Hill",
-     "yards": 1350,
-     "season": 2019,
-     "profile": "Running back · 2019: 1,350 rushing, 180 receiving yds"
-    }
-   ],
+   "prompt": "From 2012 through 2025, which school had more 1,500-yard rushing seasons?",
+   "A": [],
    "B": [
     {
      "name": "Quinshon Judkins",
@@ -201,7 +122,57 @@
      "profile": "Running back · 2025: 1,567 rushing, 177 receiving yds"
     }
    ],
-   "sig": "tsrush13002014"
+   "sig": "tsrush15002012"
+  },
+  {
+   "type": "rank",
+   "label": "Rivalry Games",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these single-game receiving performances in Mississippi State–Ole Miss games, highest first.",
+   "items": [
+    {
+     "label": "Jordan Thomas (MSST) · 2017",
+     "value": 65,
+     "school": "MSST"
+    },
+    {
+     "label": "Deuce Alexander (MISS) · 2025",
+     "value": 94,
+     "school": "MISS"
+    },
+    {
+     "label": "Elijah Moore (MISS) · 2020",
+     "value": 139,
+     "school": "MISS"
+    },
+    {
+     "label": "Jaden Walley (MSST) · 2020",
+     "value": 176,
+     "school": "MSST"
+    }
+   ],
+   "sig": "grrecDeuce Alexander2025,Elijah Moore2020,Jaden Walley2020,Jordan Thomas2017"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": false,
+   "prompt": "In Mississippi State–Ole Miss games since 2007, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Jaden Walley (MSST) vs. Ole Miss",
+    "value": 260,
+    "school": "MSST"
+   },
+   "B": {
+    "label": "Markeith Summers (MISS) vs. Mississippi State",
+    "value": 146,
+    "school": "MISS"
+   },
+   "unit": "receiving yds",
+   "note": "Jaden Walley: 260 in 3 games. Markeith Summers: 146 in 3 games.",
+   "sig": "vsrecJaden Walley,Markeith Summers"
   }
  ]
 }

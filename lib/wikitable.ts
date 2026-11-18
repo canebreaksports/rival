@@ -8,6 +8,7 @@ export interface ParsedTable { columns: string[]; rows: ParsedRow[]; hasTeamColu
 export function cleanCell(s: string): string {
   let t = s.replace(/<ref[^>]*\/>/g, "").replace(/<ref[^>]*>[\s\S]*?<\/ref>/g, "");
   t = t.replace(/\{\{\s*(?:abbr|abbreviation|tooltip|tt)\s*\|\s*([^|}]*)\|[^{}]*\}\}/gi, "$1"); // {{abbr|Yds|Rushing yards}} → Yds
+  t = t.replace(/\{\{\s*sortname\s*\|\s*([^|}]*)\|\s*([^|}]*)(?:\|[^{}]*)?\}\}/gi, "$1 $2");    // {{sortname|Bo|Jackson}} → Bo Jackson
   for (let i = 0; i < 3; i++) t = t.replace(/\{\{[^{}]*\}\}/g, m => {
     const sort = m.match(/^\{\{\s*(?:sort|nts|ntsh)\s*\|\s*(?:[^|}]*\|)?\s*([^|}]*)\}\}$/i); // keep the displayed value of sort templates
     return sort ? sort[1] : "";

@@ -6,29 +6,104 @@
   "away": "UK",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-18T03:11:54.147Z",
- "engine": 10,
+ "generatedAt": "2026-11-18T12:25:25.079Z",
+ "engine": 11,
  "questions": [
   {
    "type": "h2h",
    "label": "Fresh Mix",
    "upset": true,
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receptions (at the school shown)?",
+   "flip": true,
+   "prompt": "Whose best college season had more rushing yards?",
    "A": {
-    "label": "Ish Witter (MIZ RB)",
-    "value": 33,
+    "label": "Tyler Badie (MIZ RB)",
+    "value": 1604,
     "school": "MIZ"
    },
    "B": {
     "label": "Chris Rodriguez Jr. (UK RB)",
-    "value": 20,
+    "value": 1379,
     "school": "UK"
    },
    "unit": "",
-   "note": "🚨 Upset: Ish Witter 33 vs. Chris Rodriguez Jr. 20.",
-   "sig": "urecNChris Rodriguez Jr.Ish Witter"
+   "note": "🚨 Upset: Tyler Badie 1,604 vs. Chris Rodriguez Jr. 1,379.",
+   "sig": "upeakRushChris Rodriguez Jr.Tyler Badie"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": false,
+   "prompt": "In Kentucky–Missouri games since 2012, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Wan'Dale Robinson (UK) vs. Missouri",
+    "value": 101,
+    "school": "UK"
+   },
+   "B": {
+    "label": "Johnathon Johnson (MIZ) vs. Kentucky",
+    "value": 205,
+    "school": "MIZ"
+   },
+   "unit": "receiving yds",
+   "note": "Wan'Dale Robinson: 101 in 1 game. Johnathon Johnson: 205 in 4 games.",
+   "sig": "vsrecJohnathon Johnson,Wan'Dale Robinson"
+  },
+  {
+   "label": "SEC East Newcomers",
+   "verified": true,
+   "sig": "kSEC East Newcomers0",
+   "type": "moment",
+   "prompt": "Kentucky's longest win streak over Missouri is more or fewer than",
+   "line": "4.5 games",
+   "answer": "over",
+   "reveal": "Over. Kentucky won 5 straight from 2015 to 2019."
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Tyler Badie (RB) · 2018 MIZ",
+     "value": 436,
+     "school": "MIZ"
+    },
+    {
+     "label": "Chris Rodriguez Jr. (RB) · 2022 UK",
+     "value": 903,
+     "school": "UK"
+    },
+    {
+     "label": "Damarea Crockett (RB) · 2016 MIZ",
+     "value": 1062,
+     "school": "MIZ"
+    },
+    {
+     "label": "Cody Schrader (RB) · 2023 MIZ",
+     "value": 1617,
+     "school": "MIZ"
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Tyler Badie's best year was 2021 (1,604), not 2018; Chris Rodriguez Jr.'s best year was 2021 (1,379), not 2022.",
+   "sig": "trrushChris Rodriguez Jr.2022,Cody Schrader2023,Damarea Crockett2016,Tyler Badie2018"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Kentucky vs Missouri",
+   "a": "UK",
+   "b": "MIZ",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    145,
+    192
+   ],
+   "verified": true,
+   "sig": "gtotalW"
   },
   {
    "type": "rank",
@@ -38,27 +113,56 @@
    "prompt": "Rank these single-game rushing performances in Kentucky–Missouri games, highest first.",
    "items": [
     {
-     "label": "Stanley Williams (UK) · 2016",
-     "value": 182,
+     "label": "Benny Snell Jr. (UK) · 2017",
+     "value": 117,
      "school": "UK"
     },
     {
-     "label": "Marcus Murphy (MIZ) · 2014",
-     "value": 52,
+     "label": "Ish Witter (MIZ) · 2017",
+     "value": 139,
      "school": "MIZ"
     },
     {
-     "label": "Maty Mauk (MIZ) · 2014",
-     "value": 75,
+     "label": "Ish Witter (MIZ) · 2015",
+     "value": 50,
      "school": "MIZ"
     },
     {
-     "label": "Kendial Lawrence (MIZ) · 2012",
-     "value": 108,
-     "school": "MIZ"
+     "label": "Jojo Kemp (UK) · 2015",
+     "value": 66,
+     "school": "UK"
     }
    ],
-   "sig": "grrushKendial Lawrence2012,Marcus Murphy2014,Maty Mauk2014,Stanley Williams2016"
+   "sig": "grrushBenny Snell Jr.2017,Ish Witter2015,Ish Witter2017,Jojo Kemp2015"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more career receiving TDs?",
+   "A": {
+    "label": "Wan'Dale Robinson (WR) · career, UK",
+    "value": 7,
+    "school": "UK"
+   },
+   "B": {
+    "label": "Luther Burden III (WR) · career, MIZ",
+    "value": 20,
+    "school": "MIZ"
+   },
+   "unit": "receiving TDs",
+   "sig": "hLuther Burden IIIcareer,Wan'Dale RobinsoncareerrecTD"
+  },
+  {
+   "label": "SEC East Newcomers",
+   "verified": true,
+   "sig": "kSEC East Newcomers1",
+   "type": "moment",
+   "prompt": "Missouri's biggest win over Kentucky came in 2013. Was the margin more or less than",
+   "line": "27.5 points",
+   "answer": "over",
+   "reveal": "Over. Missouri won 48–17, a 31-point margin."
   },
   {
    "type": "mc",
@@ -74,118 +178,23 @@
    ],
    "answer": 0,
    "order": [
-    3,
-    1,
     0,
-    2
+    2,
+    1,
+    3
    ],
    "reveal": "Garrett Johnson (Kentucky) 271 in 4 games · Lynn Bowden Jr. (Kentucky) 215 in 3 games · Johnathon Johnson (Missouri) 205 in 4 games · Tyler Badie (Missouri) 194 in 4 games",
    "sig": "tvrec"
   },
   {
    "type": "count",
-   "label": "School Count",
+   "label": "Since 2018",
    "a": "UK",
    "b": "MIZ",
-   "threshold": 3250,
-   "A": [
-    {
-     "name": "Benny Snell",
-     "yards": 3873,
-     "profile": "No. 1 on Kentucky's career rushing list"
-    },
-    {
-     "name": "Sonny Collins",
-     "yards": 3835,
-     "profile": "No. 2 on Kentucky's career rushing list"
-    },
-    {
-     "name": "Chris Rodriguez Jr.",
-     "yards": 3644,
-     "profile": "Running back · Kentucky 2018–2022 · No. 3 on Kentucky's career rushing list · 32 career rushing TDs"
-    },
-    {
-     "name": "Moe Williams",
-     "yards": 3333,
-     "profile": "No. 4 on Kentucky's career rushing list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Brad Smith",
-     "yards": 4289,
-     "profile": "No. 1 on Missouri's career rushing list"
-    },
-    {
-     "name": "Larry Rountree III",
-     "yards": 3720,
-     "profile": "Running back · Missouri 2017–2020 · No. 2 on Missouri's career rushing list · 40 career rushing TDs"
-    }
-   ],
-   "verified": true,
-   "sig": "cUKMIZ3250"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": false,
-   "prompt": "In Kentucky–Missouri games since 2012, who had more receiving yards against the other school?",
-   "A": {
-    "label": "Wan'Dale Robinson (UK) vs. Missouri",
-    "value": 101,
-    "school": "UK"
-   },
-   "B": {
-    "label": "Emanuel Hall (MIZ) vs. Kentucky",
-    "value": 147,
-    "school": "MIZ"
-   },
-   "unit": "receiving yds",
-   "note": "Wan'Dale Robinson: 101 in 1 game. Emanuel Hall: 147 in 2 games.",
-   "sig": "vsrecEmanuel Hall,Wan'Dale Robinson"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more yards from scrimmage in a single season?",
-   "A": {
-    "label": "Asim Rose (RB) · 2018 UK",
-    "value": 524,
-    "school": "UK"
-   },
-   "B": {
-    "label": "Larry Rountree III (RB) · 2019 MIZ",
-    "value": 899,
-    "school": "MIZ"
-   },
-   "unit": "yards from scrimmage",
-   "sig": "hAsim Rose2018,Larry Rountree III2019scrim"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Kentucky vs Missouri",
-   "a": "UK",
-   "b": "MIZ",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    10,
-    12
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "count",
-   "label": "Since 2020",
-   "a": "UK",
-   "b": "MIZ",
-   "threshold": 1100,
+   "threshold": 1000,
    "verified": true,
    "pitted": true,
-   "prompt": "From 2020 through 2025, which school had more 1,100-yard receiving seasons?",
+   "prompt": "From 2018 through 2025, which school had more 1,000-yard receiving seasons?",
    "A": [
     {
      "name": "Wan'Dale Robinson",
@@ -202,30 +211,7 @@
      "profile": "Wide receiver · 2023: 38 rushing, 1,205 receiving yds"
     }
    ],
-   "sig": "tsrec11002020"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Kentucky vs Missouri",
-   "a": "UK",
-   "b": "MIZ",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    145,
-    192
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "label": "SEC East Newcomers",
-   "verified": true,
-   "sig": "kSEC East Newcomers1",
-   "type": "moment",
-   "prompt": "Missouri's biggest win over Kentucky came in 2013. Was the margin more or less than",
-   "line": "27.5 points",
-   "answer": "over",
-   "reveal": "Over. Missouri won 48–17, a 31-point margin."
+   "sig": "tsrec10002018"
   }
  ]
 }
