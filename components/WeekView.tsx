@@ -53,6 +53,7 @@ function Card({ g, live, linkBase, storagePrefix }: { g: GameSummary; live: bool
     <div className="t"><Dot k={away} />{SCHOOL[away].name} <span className="vs">{site ? "VS" : "@"}</span> <Dot k={home} />{SCHOOL[home].name}</div>
     <div className="q">{status}</div>
   </>;
+  if (played) return <Link className="rv played" href={`${linkBase}/${g.slug}`} aria-label={`Your results: ${SCHOOL[away].name} at ${SCHOOL[home].name}`}>{body}</Link>;
   return open ? <Link className="rv live" href={`${linkBase}/${g.slug}`}>{body}</Link>
     : <button className="rv locked" disabled aria-disabled="true">{body}</button>;
 }

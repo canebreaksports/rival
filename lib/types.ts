@@ -89,4 +89,4 @@ export interface FrozenSet {
   questions: Question[];
 }
 
-export interface Progress { i: number; pts: number; streak: number; best: number; right: number; n: number; done: boolean; hints?: number; marks?: string } // marks: ✅/🟨/❌ per question
+export interface Progress { i: number; pts: number; streak: number; best: number; right: number; n: number; done: boolean; hints?: number; marks?: string; qpts?: number[] } // marks: ✅/🟨/❌ per question; qpts: points earned per question

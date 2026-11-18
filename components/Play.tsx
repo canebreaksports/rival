@@ -45,7 +45,9 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
 
   function settle(ok: boolean, base: number, msg: ReactNode, correct = "", chosen = "") {
     const mark = ok ? "✅" : base > 0 ? "🟨" : "❌"; // 🟨 = partial credit (rank)
-    const np = { ...applyResult(p, ok, base), marks: (p.marks ?? "") + mark };
+    const scored = applyResult(p, ok, base), qpts = [...(p.qpts ?? [])];
+    qpts[p.i] = scored.pts - p.pts;
+    const np = { ...scored, marks: (p.marks ?? "") + mark, qpts };
     const last = p.i + 1 >= n;
     setP(np);
     setReveal({ ok, msg, correct, chosen });
@@ -68,11 +70,14 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
 
   // after a question is answered, progress is saved as already past it (see settle)
   const savePast = (np: Progress) => save({ ...np, i: np.i + 1 >= n ? np.i : np.i + 1, done: np.i + 1 >= n });
-  const addBonus = (pts: number) => setP(x => { const np = { ...x, pts: x.pts + pts }; savePast(np); return np });
+  const addBonus = (pts: number) => setP(x => {
+    const qpts = [...(x.qpts ?? [])]; qpts[x.i] = (qpts[x.i] ?? 0) + pts;
+    const np = { ...x, pts: x.pts + pts, qpts }; savePast(np); return np;
+  });
   const addHint = () => setP(x => { const np = { ...x, hints: (x.hints ?? 0) + 1 }; savePast(np); return np });
 
   if (!loaded) return null;
-  if (finished) return <Final p={p} n={n} weekly={mode === "weekly"} away={away} home={home} nextUnlock={nextUnlock} onExit={onExit} onAgain={onAgain} />;
+  if (finished) return <Final p={p} n={n} questions={questions} weekly={mode === "weekly"} away={away} home={home} nextUnlock={nextUnlock} onExit={onExit} onAgain={onAgain} />;
   if (!q) return <p className="note">No questions available.</p>;
 
   return (
@@ -300,7 +305,7 @@ function NameThem({ q, onDone, onHint, onNext, last }: { q: Extract<Question, { 
   </div>;
 }
 
-function Final({ p, n, weekly, away, home, nextUnlock, onExit, onAgain }: { p: Progress; n: number; weekly: boolean; away?: SchoolKey | null; home?: SchoolKey | null; nextUnlock?: string | null; onExit: () => void; onAgain?: () => void }) {
+function Final({ p, n, questions, weekly, away, home, nextUnlock, onExit, onAgain }: { p: Progress; n: number; questions: Question[]; weekly: boolean; away?: SchoolKey | null; home?: SchoolKey | null; nextUnlock?: string | null; onExit: () => void; onAgain?: () => void }) {
   const [shared, setShared] = useState<string | null>(null);
   const hints = p.hints ?? 0;
   const hintText = hints ? `💡 ${hints} hint${hints > 1 ? "s" : ""} used` : "💡 No hints";
@@ -320,9 +325,28 @@ function Final({ p, n, weekly, away, home, nextUnlock, onExit, onAgain }: { p: P
     <p>{p.right}/{n} correct · best streak {p.best}<br />{hintText}<br />{grade(n ? p.right / n : 0)}
       {weekly && away && home && <><br /><br />That&apos;s this week&apos;s set for {SCHOOL[away].name} vs {SCHOOL[home].name}.{nextUnlock ? ` New matchups unlock ${nextUnlock}.` : ""}</>}</p>
     <button className="btn" onClick={share}>Share Results</button>
+    <Breakdown p={p} questions={questions} />
     {shared && <div className="note" style={{ marginTop: 8 }}>{shared}</div>}
     <div style={{ height: 10 }} />
     {!weekly && onAgain && <><button className="btn ghost" onClick={onAgain}>Run It Back</button><div style={{ height: 10 }} /></>}
     <button className="btn ghost" onClick={onExit}>{weekly ? "Back to This Week" : "Back"}</button>
   </section>;
 }
+
+/** Your results, question by question: type, prompt, ✅/🟨/❌ and points earned. Never the correct answers. */
+function Breakdown({ p, questions }: { p: Progress; questions: Question[] }) {
+  const marks = [...(p.marks ?? "").matchAll(/✅|🟨|❌/gu)].map(m => m[0]);
+  if (!marks.length) return null;
+  const what = (q: Question) => q.type === "count" ? (q.prompt ?? `Which school has more ${fmt(q.threshold)}-yard career rushers?`)
+    : q.type === "duel" ? `${q.year} ${q.stat.toLowerCase()}: which line belongs to ${SCHOOL[q.aSchool].name}?`
+    : `${"game" in q && q.game ? `${q.game.date} (${SCHOOL[q.game.winner].name} ${q.game.ws}, ${SCHOOL[q.game.loser].name} ${q.game.ls}): ` : ""}${q.prompt}${q.type === "moment" ? " " + q.line : ""}`;
+  return <details className="breakdown" open>
+    <summary>Your results</summary>
+    <ol>{questions.map((q, i) => <li key={i}>
+      <span className="bm">{marks[i] ?? "–"}</span>
+      <span className="bq"><span className="kind">{kindLabel(q)}</span>{what(q)}</span>
+      <span className="bp">{p.qpts?.[i] != null ? `+${p.qpts[i]}` : ""}</span>
+    </li>)}</ol>
+  </details>;
+}
+

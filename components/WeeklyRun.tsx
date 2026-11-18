@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { FrozenSet, Game } from "@/lib/types";
 import { isLive, nextGames, unlockFmt, windowOf } from "@/lib/gating";
-import { PREVIEW_PREFIX } from "@/lib/storage";
+import { PREVIEW_PREFIX, store } from "@/lib/storage";
 import { Play } from "./Play";
 
 export function WeeklyRun({ set, games, preview = false }: { set: FrozenSet; games: Game[]; preview?: boolean }) {
@@ -14,7 +14,9 @@ export function WeeklyRun({ set, games, preview = false }: { set: FrozenSet; gam
   useEffect(() => setNow(new Date()), []);
   if (!now) return null;
   const home = preview ? "/coach" : "/";
-  if (!preview && !isLive(set.game, now)) {
+  const key = (preview ? PREVIEW_PREFIX : "") + set.key;
+  // outside the window: locked, unless you played it, in which case your results stay viewable
+  if (!preview && !isLive(set.game, now) && !store.get(key)?.done) {
     const w = windowOf(set.game);
     return <section className="final"><div className="kind">Locked</div>
       <p>{now < w.start ? `This matchup unlocks ${unlockFmt(w.start)}.` : "This matchup's week is over."}</p>
@@ -24,6 +26,6 @@ export function WeeklyRun({ set, games, preview = false }: { set: FrozenSet; gam
     <Link className="back" href={home}>Back</Link></section>;
   const N = nextGames(games, now);
   return <Play questions={set.questions} away={set.game.away} home={set.game.home} mode="weekly"
-    storageKey={(preview ? PREVIEW_PREFIX : "") + set.key} nextUnlock={N.length ? unlockFmt(windowOf(N[0]).start) : null}
+    storageKey={key} nextUnlock={N.length ? unlockFmt(windowOf(N[0]).start) : null}
     onExit={() => router.push(home)} />;
 }

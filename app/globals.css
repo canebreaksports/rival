@@ -101,3 +101,12 @@ textarea,input[type=date]{width:100%;background:#050a07;color:var(--chalk);borde
 .review .ro{font-size:12px;color:var(--dim)}
 .review .ra{font-weight:800;color:var(--gold);margin-top:6px;font-size:14px;line-height:1.5;white-space:pre-line}
 .review .rd{font-size:12px;color:var(--dim);margin-top:6px;white-space:pre-line;line-height:1.5}
+/* results breakdown */
+.rv.played{border-color:var(--good)}
+.breakdown{margin:18px 0 6px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.breakdown summary{font:700 13px Oswald;letter-spacing:2px;text-transform:uppercase;color:var(--gold);cursor:pointer}
+.breakdown ol{list-style:none;margin-top:10px;display:grid;gap:8px}
+.breakdown li{display:grid;grid-template-columns:24px 1fr auto;gap:8px;align-items:start;font-size:13px;line-height:1.4}
+.breakdown .bm{font-size:16px}
+.breakdown .bq .kind{display:block;font-size:10px;margin-bottom:2px}
+.breakdown .bp{font:700 13px Oswald;color:var(--chalk);white-space:nowrap}
