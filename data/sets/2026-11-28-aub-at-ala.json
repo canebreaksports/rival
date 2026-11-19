@@ -6,30 +6,158 @@
   "away": "AUB",
   "home": "ALA"
  },
- "generatedAt": "2026-11-18T12:25:25.101Z",
- "engine": 11,
+ "generatedAt": "2026-11-19T14:51:33.251Z",
+ "engine": 12,
  "questions": [
   {
-   "type": "mc",
-   "label": "NFL Draft",
+   "type": "h2h",
+   "label": "Against Each Other",
    "verified": true,
-   "pitted": true,
-   "prompt": "Which of these Auburn and Alabama players was drafted highest?",
-   "options": [
-    "Greg Robinson (Auburn)",
-    "Landon Dickerson (Alabama)",
-    "Cam Robinson (Alabama)",
-    "Corey Lemonier (Auburn)"
+   "flip": true,
+   "prompt": "In Auburn–Alabama games since 2006, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Malcolm Simmons (AUB) vs. Alabama",
+    "value": 177,
+    "school": "AUB"
+   },
+   "B": {
+    "label": "Ja'Corey Brooks (ALA) vs. Auburn",
+    "value": 125,
+    "school": "ALA"
+   },
+   "unit": "receiving yds",
+   "note": "Malcolm Simmons: 177 in 2 games. Ja'Corey Brooks: 125 in 2 games.",
+   "sig": "vsrecJa'Corey Brooks,Malcolm Simmons"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "A": {
+    "label": "Ben Obomanu (AUB WR)",
+    "value": 19.3,
+    "school": "AUB"
+   },
+   "B": {
+    "label": "Najee Harris (ALA RB)",
+    "value": 6,
+    "school": "ALA"
+   },
+   "unit": "",
+   "ypc": true,
+   "note": "🚨 Upset: Ben Obomanu 19.3 per carry (8 carries) vs. Najee Harris 6.0 per carry (638 carries).",
+   "sig": "uypcNajee HarrisBen Obomanu"
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "AUB",
+   "b": "ALA",
+   "threshold": 3250,
+   "A": [
+    {
+     "name": "Bo Jackson",
+     "yards": 4303,
+     "profile": "Running back · No. 1 on Auburn's career rushing list · 43 career rushing TDs"
+    },
+    {
+     "name": "Carnell 'Cadillac' Williams",
+     "yards": 3831,
+     "profile": "Running back · No. 2 on Auburn's career rushing list · 45 career rushing TDs"
+    },
+    {
+     "name": "James Brooks",
+     "yards": 3523,
+     "profile": "Running back · No. 3 on Auburn's career rushing list"
+    },
+    {
+     "name": "Jarquez Hunter",
+     "yards": 3371,
+     "profile": "No. 4 on Auburn's career rushing list"
+    },
+    {
+     "name": "Joe Cribbs",
+     "yards": 3368,
+     "profile": "Running back · No. 5 on Auburn's career rushing list"
+    },
+    {
+     "name": "Ben Tate",
+     "yards": 3321,
+     "profile": "Running back · No. 6 on Auburn's career rushing list"
+    }
    ],
-   "answer": 0,
-   "order": [
-    2,
-    1,
-    0,
-    3
+   "B": [
+    {
+     "name": "Najee Harris",
+     "yards": 3843,
+     "profile": "Running back · Alabama 2019–2020 · No. 1 on Alabama's career rushing list · 46 career rushing TDs"
+    },
+    {
+     "name": "Derrick Henry",
+     "yards": 3591,
+     "profile": "Running back · Alabama 2014–2015 · No. 2 on Alabama's career rushing list · 42 career rushing TDs"
+    },
+    {
+     "name": "Shaun Alexander",
+     "yards": 3565,
+     "profile": "No. 3 on Alabama's career rushing list"
+    },
+    {
+     "name": "Bobby Humphrey",
+     "yards": 3420,
+     "profile": "No. 4 on Alabama's career rushing list"
+    },
+    {
+     "name": "Kenneth Darby",
+     "yards": 3324,
+     "profile": "No. 5 on Alabama's career rushing list"
+    },
+    {
+     "name": "T. J. Yeldon",
+     "yards": 3322,
+     "profile": "No. 6 on Alabama's career rushing list"
+    },
+    {
+     "name": "Mark Ingram II",
+     "yards": 3261,
+     "profile": "No. 7 on Alabama's career rushing list"
+    }
    ],
-   "reveal": "Greg Robinson: No. 2 overall in 2014 · Cam Robinson: No. 34 overall in 2017 · Landon Dickerson: No. 37 overall in 2021 · Corey Lemonier: No. 88 overall in 2013",
-   "sig": "dmCam Robinson,Corey Lemonier,Greg Robinson,Landon Dickerson"
+   "verified": true,
+   "sig": "cAUBALA3250"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Philip Lutzenkirchen (AUB TE) · 2011 receiving TDs",
+     "value": 7,
+     "school": "AUB"
+    },
+    {
+     "label": "Jalen Milroe (ALA QB) · 2023 rushing TDs",
+     "value": 12,
+     "school": "ALA"
+    },
+    {
+     "label": "Derrick Henry (ALA RB) · career rushing TDs",
+     "value": 42,
+     "school": "ALA"
+    },
+    {
+     "label": "Najee Harris (ALA RB) · 2020 rushing TDs",
+     "value": 26,
+     "school": "ALA"
+    }
+   ],
+   "sig": "mxTDDerrick Henrycareer rushing TDs,Jalen Milroe2023 rushing TDs,Najee Harris2020 rushing TDs,Philip Lutzenkirchen2011 receiving TDs"
   },
   {
    "type": "count",
@@ -75,45 +203,23 @@
   },
   {
    "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
-   "A": {
-    "label": "Ben Obomanu (AUB WR)",
-    "value": 19.3,
-    "school": "AUB"
-   },
-   "B": {
-    "label": "Najee Harris (ALA RB)",
-    "value": 6,
-    "school": "ALA"
-   },
-   "unit": "",
-   "ypc": true,
-   "note": "🚨 Upset: Ben Obomanu 19.3 per carry (8 carries) vs. Najee Harris 6.0 per carry (638 carries).",
-   "sig": "uypcNajee HarrisBen Obomanu"
-  },
-  {
-   "type": "h2h",
    "label": "Against Each Other",
    "verified": true,
    "flip": true,
    "prompt": "In Auburn–Alabama games since 2006, who had more receiving yards against the other school?",
    "A": {
-    "label": "Malcolm Simmons (AUB) vs. Alabama",
-    "value": 177,
+    "label": "Emory Blake (AUB) vs. Alabama",
+    "value": 102,
     "school": "AUB"
    },
    "B": {
-    "label": "Ja'Corey Brooks (ALA) vs. Auburn",
-    "value": 125,
+    "label": "Mark Ingram II (ALA) vs. Auburn",
+    "value": 139,
     "school": "ALA"
    },
    "unit": "receiving yds",
-   "note": "Malcolm Simmons: 177 in 2 games. Ja'Corey Brooks: 125 in 2 games.",
-   "sig": "vsrecJa'Corey Brooks,Malcolm Simmons"
+   "note": "Emory Blake: 102 in 3 games. Mark Ingram II: 139 in 3 games.",
+   "sig": "vsrecEmory Blake,Mark Ingram II"
   },
   {
    "type": "mc",
@@ -138,107 +244,26 @@
    "sig": "tvrush"
   },
   {
-   "type": "count",
-   "label": "School Count",
-   "a": "AUB",
-   "b": "ALA",
-   "threshold": 2800,
-   "A": [
-    {
-     "name": "Bo Jackson",
-     "yards": 4303,
-     "profile": "Running back · No. 1 on Auburn's career rushing list · 43 career rushing TDs"
-    },
-    {
-     "name": "Carnell 'Cadillac' Williams",
-     "yards": 3831,
-     "profile": "Running back · No. 2 on Auburn's career rushing list · 45 career rushing TDs"
-    },
-    {
-     "name": "James Brooks",
-     "yards": 3523,
-     "profile": "Running back · No. 3 on Auburn's career rushing list"
-    },
-    {
-     "name": "Jarquez Hunter",
-     "yards": 3371,
-     "profile": "No. 4 on Auburn's career rushing list"
-    },
-    {
-     "name": "Joe Cribbs",
-     "yards": 3368,
-     "profile": "Running back · No. 5 on Auburn's career rushing list"
-    },
-    {
-     "name": "Ben Tate",
-     "yards": 3321,
-     "profile": "Running back · No. 6 on Auburn's career rushing list"
-    },
-    {
-     "name": "Tre Mason",
-     "yards": 2979,
-     "profile": "Running back · Auburn 2012–2013 · No. 7 on Auburn's career rushing list · 32 career rushing TDs"
-    },
-    {
-     "name": "Tank Bigsby",
-     "yards": 2903,
-     "profile": "Running back · No. 8 on Auburn's career rushing list · 25 career rushing TDs"
-    },
-    {
-     "name": "Stephen Davis",
-     "yards": 2811,
-     "profile": "Running back · No. 9 on Auburn's career rushing list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Najee Harris",
-     "yards": 3843,
-     "profile": "Running back · Alabama 2019–2020 · No. 1 on Alabama's career rushing list · 46 career rushing TDs"
-    },
-    {
-     "name": "Derrick Henry",
-     "yards": 3591,
-     "profile": "Running back · Alabama 2014–2015 · No. 2 on Alabama's career rushing list · 42 career rushing TDs"
-    },
-    {
-     "name": "Shaun Alexander",
-     "yards": 3565,
-     "profile": "No. 3 on Alabama's career rushing list"
-    },
-    {
-     "name": "Bobby Humphrey",
-     "yards": 3420,
-     "profile": "No. 4 on Alabama's career rushing list"
-    },
-    {
-     "name": "Kenneth Darby",
-     "yards": 3324,
-     "profile": "No. 5 on Alabama's career rushing list"
-    },
-    {
-     "name": "T. J. Yeldon",
-     "yards": 3322,
-     "profile": "No. 6 on Alabama's career rushing list"
-    },
-    {
-     "name": "Mark Ingram II",
-     "yards": 3261,
-     "profile": "No. 7 on Alabama's career rushing list"
-    },
-    {
-     "name": "Trent Richardson",
-     "yards": 3130,
-     "profile": "Running back · Alabama 2010–2011 · No. 8 on Alabama's career rushing list · 35 career rushing TDs"
-    },
-    {
-     "name": "Damien Harris",
-     "yards": 3073,
-     "profile": "No. 9 on Alabama's career rushing list"
-    }
-   ],
+   "type": "mc",
+   "label": "NFL Draft",
    "verified": true,
-   "sig": "cAUBALA2800"
+   "pitted": true,
+   "prompt": "Which of these Auburn and Alabama players was drafted highest?",
+   "options": [
+    "Greg Robinson (Auburn)",
+    "Landon Dickerson (Alabama)",
+    "Cam Robinson (Alabama)",
+    "Corey Lemonier (Auburn)"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    1,
+    0,
+    3
+   ],
+   "reveal": "Greg Robinson: No. 2 overall in 2014 · Cam Robinson: No. 34 overall in 2017 · Landon Dickerson: No. 37 overall in 2021 · Corey Lemonier: No. 88 overall in 2013",
+   "sig": "dmCam Robinson,Corey Lemonier,Greg Robinson,Landon Dickerson"
   }
  ]
 }

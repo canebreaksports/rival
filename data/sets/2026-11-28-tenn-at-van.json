@@ -6,9 +6,30 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-18T12:25:25.117Z",
- "engine": 11,
+ "generatedAt": "2026-11-19T14:51:33.263Z",
+ "engine": 12,
  "questions": [
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Jared Pinkney (VAN TE)",
+    "value": 14,
+    "school": "VAN"
+   },
+   "B": {
+    "label": "Arian Foster (TENN RB)",
+    "value": 2,
+    "school": "TENN"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jared Pinkney 14 vs. Arian Foster 2.",
+   "sig": "urecTDArian FosterJared Pinkney"
+  },
   {
    "type": "count",
    "label": "Heisman",
@@ -40,160 +61,23 @@
   },
   {
    "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
+   "label": "Against Each Other",
    "verified": true,
    "flip": false,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "prompt": "In Tennessee–Vanderbilt games since 2012, who had more receiving yards against the other school?",
    "A": {
-    "label": "Jared Pinkney (VAN TE)",
-    "value": 14,
-    "school": "VAN"
-   },
-   "B": {
-    "label": "Arian Foster (TENN RB)",
-    "value": 2,
+    "label": "Squirrel White (TENN) vs. Vanderbilt",
+    "value": 128,
     "school": "TENN"
    },
-   "unit": "",
-   "note": "🚨 Upset: Jared Pinkney 14 vs. Arian Foster 2.",
-   "sig": "urecTDArian FosterJared Pinkney"
-  },
-  {
-   "type": "count",
-   "label": "School Count",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 2250,
-   "A": [
-    {
-     "name": "Travis Henry",
-     "yards": 3078,
-     "profile": "No. 1 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Arian Foster",
-     "yards": 2964,
-     "profile": "Running back · Tennessee 2005–2008 · No. 2 on Tennessee's career rushing list · 23 career rushing TDs"
-    },
-    {
-     "name": "James Stewart",
-     "yards": 2890,
-     "profile": "No. 3 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Johnnie Jones",
-     "yards": 2852,
-     "profile": "No. 4 on Tennessee's career rushing list"
-    },
-    {
-     "name": "DeSean Bishop",
-     "yards": 2694,
-     "active": true,
-     "profile": "No. 5 on Tennessee's career rushing list · still active"
-    },
-    {
-     "name": "Jamal Lewis",
-     "yards": 2677,
-     "profile": "Running back · Tennessee 1997–1999 · No. 6 on Tennessee's career rushing list · 17 career rushing TDs"
-    },
-    {
-     "name": "Jalen Hurd",
-     "yards": 2638,
-     "profile": "No. 7 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Cedric Houston",
-     "yards": 2634,
-     "profile": "No. 8 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Jay Graham",
-     "yards": 2609,
-     "profile": "No. 9 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Dylan Sampson",
-     "yards": 2492,
-     "profile": "Running back · Tennessee 2022–2024 · No. 10 on Tennessee's career rushing list · 35 career rushing TDs"
-    },
-    {
-     "name": "Montario Hardesty",
-     "yards": 2391,
-     "profile": "No. 11 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Curt Watson",
-     "yards": 2364,
-     "profile": "No. 12 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Reggie Cobb",
-     "yards": 2360,
-     "profile": "No. 13 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Travis Stephens",
-     "yards": 2336,
-     "profile": "No. 14 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Jaylen Wright",
-     "yards": 2297,
-     "profile": "No. 15 on Tennessee's career rushing list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Ralph Webb",
-     "yards": 4173,
-     "profile": "Running back · Vanderbilt 2014–2017 · No. 1 on Vanderbilt's career rushing list · 32 career rushing TDs"
-    },
-    {
-     "name": "Zac Stacy",
-     "yards": 3143,
-     "profile": "No. 2 on Vanderbilt's career rushing list"
-    },
-    {
-     "name": "Frank Mordica",
-     "yards": 2632,
-     "profile": "No. 3 on Vanderbilt's career rushing list"
-    },
-    {
-     "name": "Carl Woods",
-     "yards": 2490,
-     "profile": "No. 4 on Vanderbilt's career rushing list"
-    },
-    {
-     "name": "Ke'Shawn Vaughn",
-     "yards": 2272,
-     "profile": "Running back · Vanderbilt 2018–2019 · No. 5 on Vanderbilt's career rushing list · 21 career rushing TDs"
-    }
-   ],
-   "verified": true,
-   "sig": "cTENNVAN2250"
-  },
-  {
-   "type": "mc",
-   "label": "Awards",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Which of these players won the Biletnikoff Award, given to the nation's best receiver?",
-   "options": [
-    "Jalin Hyatt (Tennessee)",
-    "Trent Sherfield (Vanderbilt)",
-    "Jared Pinkney (Vanderbilt)",
-    "Kalija Lipscomb (Vanderbilt)"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    0,
-    2,
-    1
-   ],
-   "reveal": "Jalin Hyatt (Tennessee) won the Biletnikoff Award in 2022.",
-   "sig": "ambiletnikoff2022"
+   "B": {
+    "label": "Junior Sherrill (VAN) vs. Tennessee",
+    "value": 158,
+    "school": "VAN"
+   },
+   "unit": "receiving yds",
+   "note": "Squirrel White: 128 in 2 games. Junior Sherrill: 158 in 3 games.",
+   "sig": "vsrecJunior Sherrill,Squirrel White"
   },
   {
    "type": "rank",
@@ -218,12 +102,25 @@
      "school": "TENN"
     },
     {
-     "label": "Jaylen Wright (TENN) · 2023",
-     "value": 75,
+     "label": "Arian Foster (TENN) · 2005",
+     "value": 223,
      "school": "TENN"
     }
    ],
-   "sig": "grrushDylan Sampson2022,Jaylen Wright2023,Joshua Dobbs2015,Re'Mahn Davis2022"
+   "sig": "grrushArian Foster2005,Dylan Sampson2022,Joshua Dobbs2015,Re'Mahn Davis2022"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    6,
+    1
+   ],
+   "verified": true,
+   "sig": "gwin10"
   },
   {
    "type": "moment",
@@ -249,32 +146,6 @@
    "sig": "gm2024-11-30Dont'E Thorntonrec"
   },
   {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
-   "a": "TENN",
-   "b": "VAN",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    11,
-    10
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
-   "a": "TENN",
-   "b": "VAN",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    194,
-    113
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
    "type": "mc",
    "label": "Since 2012",
    "verified": true,
@@ -295,6 +166,81 @@
    ],
    "reveal": "Trent Sherfield (Vanderbilt) 350 in 3 games · Jordan Matthews (Vanderbilt) 248 in 2 games · Will Sheppard (Vanderbilt) 190 in 3 games · Jauan Jennings (Tennessee) 182 in 3 games",
    "sig": "tvrec"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Diego Pavia (VAN QB) · career rushing yards",
+     "value": 1662,
+     "school": "VAN"
+    },
+    {
+     "label": "Joshua Dobbs (TENN QB) · 2016 rushing yards",
+     "value": 831,
+     "school": "TENN"
+    },
+    {
+     "label": "Dylan Sampson (TENN RB) · 2023 yards from scrimmage",
+     "value": 779,
+     "school": "TENN"
+    },
+    {
+     "label": "Keyon Brooks (VAN RB) · 2020 receiving yards",
+     "value": 260,
+     "school": "VAN"
+    }
+   ],
+   "sig": "mxydsDiego Paviacareer rushing yards,Dylan Sampson2023 yards from scrimmage,Joshua Dobbs2016 rushing yards,Keyon Brooks2020 receiving yards"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 19, 2005",
+    "winner": "VAN",
+    "loser": "TENN",
+    "ws": 28,
+    "ls": 24,
+    "venue": "Neyland Stadium"
+   },
+   "prompt": "In this game, did George Smith (Vanderbilt) have more or less than",
+   "line": "50 receiving yards",
+   "answer": "over",
+   "reveal": "More. George Smith had 68 receiving yards on 4 catches and 0 TD in this game.",
+   "check": {
+    "value": 68,
+    "line": 50
+   },
+   "sig": "gm2005-11-19George Smithrec"
+  },
+  {
+   "type": "mc",
+   "label": "Awards",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Which of these players won the Biletnikoff Award, given to the nation's best receiver?",
+   "options": [
+    "Jalin Hyatt (Tennessee)",
+    "Trent Sherfield (Vanderbilt)",
+    "Jared Pinkney (Vanderbilt)",
+    "Kalija Lipscomb (Vanderbilt)"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    0,
+    2,
+    1
+   ],
+   "reveal": "Jalin Hyatt (Tennessee) won the Biletnikoff Award in 2022.",
+   "sig": "ambiletnikoff2022"
   }
  ]
 }

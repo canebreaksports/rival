@@ -179,6 +179,18 @@ describe("pitted mode", () => {
   });
 });
 
+describe("no close calls", () => {
+  it("yardage comparisons are at least 25 yards or 5% apart, unless both are notable (checked separately)", () => {
+    const gap = (a: number, b: number) => Math.max(25, 0.05 * Math.max(a, b));
+    for (let i = 0; i < 300; i++) for (const [a, b] of [["LSU", "TENN"], ["AUB", "ALA"], ["TEX", "TAMU"]]) for (const q of buildRound(DATA, a, b, mulberry32(i), VERIFIED)) {
+      const bigEnough = (v: number) => v >= 1000; // notable seasons/careers are at least 1,000 yards
+      if (q.type === "duel") { const x = Number(q.A.big.replace(/,/g, "")), y = Number(q.B.big.replace(/,/g, "")); if (!(bigEnough(x) && bigEnough(y))) expect(Math.abs(x - y)).toBeGreaterThanOrEqual(gap(x, y)) }
+      if (q.type === "h2h" && !q.ypc && /yards|yds/.test(q.prompt + q.unit) && !(bigEnough(q.A.value) && bigEnough(q.B.value))) expect(Math.abs(q.A.value - q.B.value)).toBeGreaterThanOrEqual(gap(q.A.value, q.B.value) - 0.001);
+      if (q.type === "rank" && q.unit === "yds") { const v = q.items.map(x => x.value).sort((m, n) => n - m); v.slice(1).forEach((x, j) => { if (!(bigEnough(v[j]) && bigEnough(x))) expect(v[j] - x).toBeGreaterThanOrEqual(Math.min(gap(v[j], x), Math.max(15, 0.12 * v[j])) - 0.001) }) }
+    }
+  });
+});
+
 describe("weekly trend questions (since <year>)", () => {
   const TREND = /^t[sgv]/;
   it("every scheduled matchup gets at least one", () => {

@@ -6,9 +6,66 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-18T12:25:25.107Z",
- "engine": 11,
+ "generatedAt": "2026-11-19T14:51:33.254Z",
+ "engine": 12,
  "questions": [
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "A": {
+    "label": "Treylon Burks (ARK WR)",
+    "value": 5.8,
+    "school": "ARK"
+   },
+   "B": {
+    "label": "Joe Burrow (LSU QB)",
+    "value": 3.2,
+    "school": "LSU"
+   },
+   "unit": "",
+   "ypc": true,
+   "note": "🚨 Upset: Treylon Burks 5.8 per carry (38 carries) vs. Joe Burrow 3.2 per carry (243 carries).",
+   "sig": "uypcJoe BurrowTreylon Burks"
+  },
+  {
+   "type": "mc",
+   "label": "Since 2011",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2011, which player from either school has the most yards from scrimmage against the other?",
+   "options": [
+    "Derrius Guice (LSU)",
+    "Clyde Edwards-Helaire (LSU)",
+    "Leonard Fournette (LSU)",
+    "Alex Collins (Arkansas)"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    1,
+    2,
+    0
+   ],
+   "reveal": "Derrius Guice (LSU) 405 in 3 games · Clyde Edwards-Helaire (LSU) 314 in 2 games · Leonard Fournette (LSU) 278 in 3 games · Alex Collins (Arkansas) 215 in 3 games",
+   "sig": "tvscrim"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Arkansas",
+   "a": "LSU",
+   "b": "ARK",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    15,
+    11
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
   {
    "type": "moment",
    "label": "Rivalry Game",
@@ -33,26 +90,90 @@
    "sig": "gm2018-11-10Cheyenne O'Gradyrec"
   },
   {
-   "type": "mc",
-   "label": "Since 2011",
+   "type": "moment",
+   "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
-   "prompt": "Since 2011, which player from either school has the most yards from scrimmage against the other?",
-   "options": [
-    "Derrius Guice (LSU)",
-    "Clyde Edwards-Helaire (LSU)",
-    "Leonard Fournette (LSU)",
-    "Alex Collins (Arkansas)"
+   "game": {
+    "date": "Nov 28, 2009",
+    "winner": "LSU",
+    "loser": "ARK",
+    "ws": 33,
+    "ls": 30,
+    "venue": "Tiger Stadium (LA)"
+   },
+   "prompt": "In this game, did Dennis Johnson (Arkansas) run for more or less than",
+   "line": "60 rushing yards",
+   "answer": "over",
+   "reveal": "More. Dennis Johnson had 78 rushing yards on 9 carries and 0 TD in this game.",
+   "check": {
+    "value": 78,
+    "line": 60
+   },
+   "sig": "gm2009-11-28Dennis Johnsonrush"
+  },
+  {
+   "type": "count",
+   "label": "School Count",
+   "a": "LSU",
+   "b": "ARK",
+   "threshold": 3000,
+   "A": [
+    {
+     "name": "Kevin Faulk",
+     "yards": 4557,
+     "profile": "Running back · LSU 1995–1998 · No. 1 on LSU's career rushing list · 46 career rushing TDs"
+    },
+    {
+     "name": "Dalton Hilliard",
+     "yards": 4050,
+     "profile": "No. 2 on LSU's career rushing list"
+    },
+    {
+     "name": "Charles Alexander",
+     "yards": 4035,
+     "profile": "No. 3 on LSU's career rushing list"
+    },
+    {
+     "name": "Leonard Fournette",
+     "yards": 3830,
+     "profile": "Running back · LSU 2014–2016 · No. 4 on LSU's career rushing list · 40 career rushing TDs"
+    },
+    {
+     "name": "Derrius Guice",
+     "yards": 3074,
+     "profile": "Running back · LSU 2016–2017 · No. 5 on LSU's career rushing list · 29 career rushing TDs"
+    }
    ],
-   "answer": 0,
-   "order": [
-    3,
-    1,
-    2,
-    0
+   "B": [
+    {
+     "name": "Darren McFadden",
+     "yards": 4590,
+     "profile": "Running back · Arkansas 2005–2007 · No. 1 on Arkansas's career rushing list · 41 career rushing TDs"
+    },
+    {
+     "name": "Alex Collins",
+     "yards": 3703,
+     "profile": "Running back · Arkansas 2013–2015 · No. 2 on Arkansas's career rushing list · 36 career rushing TDs"
+    },
+    {
+     "name": "Ben Cowins",
+     "yards": 3570,
+     "profile": "No. 3 on Arkansas's career rushing list"
+    },
+    {
+     "name": "Dickey Morton",
+     "yards": 3317,
+     "profile": "No. 4 on Arkansas's career rushing list"
+    },
+    {
+     "name": "Cedric Cobbs",
+     "yards": 3018,
+     "profile": "No. 5 on Arkansas's career rushing list"
+    }
    ],
-   "reveal": "Derrius Guice (LSU) 405 in 3 games · Clyde Edwards-Helaire (LSU) 314 in 2 games · Leonard Fournette (LSU) 278 in 3 games · Alex Collins (Arkansas) 215 in 3 games",
-   "sig": "tvscrim"
+   "verified": true,
+   "sig": "cLSUARK3000"
   },
   {
    "type": "count",
@@ -88,51 +209,6 @@
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 28, 2009",
-    "winner": "LSU",
-    "loser": "ARK",
-    "ws": 33,
-    "ls": 30,
-    "venue": "Tiger Stadium (LA)"
-   },
-   "prompt": "In this game, did Dennis Johnson (Arkansas) run for more or less than",
-   "line": "60 rushing yards",
-   "answer": "over",
-   "reveal": "More. Dennis Johnson had 78 rushing yards on 9 carries and 0 TD in this game.",
-   "check": {
-    "value": 78,
-    "line": 60
-   },
-   "sig": "gm2009-11-28Dennis Johnsonrush"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
-   "A": {
-    "label": "Treylon Burks (ARK WR)",
-    "value": 5.8,
-    "school": "ARK"
-   },
-   "B": {
-    "label": "Joe Burrow (LSU QB)",
-    "value": 3.2,
-    "school": "LSU"
-   },
-   "unit": "",
-   "ypc": true,
-   "note": "🚨 Upset: Treylon Burks 5.8 per carry (38 carries) vs. Joe Burrow 3.2 per carry (243 carries).",
-   "sig": "uypcJoe BurrowTreylon Burks"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
     "date": "Nov 12, 2016",
     "winner": "LSU",
     "loser": "ARK",
@@ -151,128 +227,46 @@
    "sig": "gm2016-11-12Malachi Duprerec"
   },
   {
-   "type": "count",
-   "label": "School Count",
-   "a": "LSU",
-   "b": "ARK",
-   "threshold": 2500,
-   "A": [
-    {
-     "name": "Kevin Faulk",
-     "yards": 4557,
-     "profile": "Running back · LSU 1995–1998 · No. 1 on LSU's career rushing list · 46 career rushing TDs"
-    },
-    {
-     "name": "Dalton Hilliard",
-     "yards": 4050,
-     "profile": "No. 2 on LSU's career rushing list"
-    },
-    {
-     "name": "Charles Alexander",
-     "yards": 4035,
-     "profile": "No. 3 on LSU's career rushing list"
-    },
-    {
-     "name": "Leonard Fournette",
-     "yards": 3830,
-     "profile": "Running back · LSU 2014–2016 · No. 4 on LSU's career rushing list · 40 career rushing TDs"
-    },
-    {
-     "name": "Derrius Guice",
-     "yards": 3074,
-     "profile": "Running back · LSU 2016–2017 · No. 5 on LSU's career rushing list · 29 career rushing TDs"
-    },
-    {
-     "name": "Harvey Williams",
-     "yards": 2860,
-     "profile": "No. 6 on LSU's career rushing list"
-    },
-    {
-     "name": "Joseph Addai",
-     "yards": 2577,
-     "profile": "No. 7 on LSU's career rushing list"
-    },
-    {
-     "name": "Terry Robiskie",
-     "yards": 2517,
-     "profile": "No. 8 on LSU's career rushing list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Darren McFadden",
-     "yards": 4590,
-     "profile": "Running back · Arkansas 2005–2007 · No. 1 on Arkansas's career rushing list · 41 career rushing TDs"
-    },
-    {
-     "name": "Alex Collins",
-     "yards": 3703,
-     "profile": "Running back · Arkansas 2013–2015 · No. 2 on Arkansas's career rushing list · 36 career rushing TDs"
-    },
-    {
-     "name": "Ben Cowins",
-     "yards": 3570,
-     "profile": "No. 3 on Arkansas's career rushing list"
-    },
-    {
-     "name": "Dickey Morton",
-     "yards": 3317,
-     "profile": "No. 4 on Arkansas's career rushing list"
-    },
-    {
-     "name": "Cedric Cobbs",
-     "yards": 3018,
-     "profile": "No. 5 on Arkansas's career rushing list"
-    },
-    {
-     "name": "Felix Jones",
-     "yards": 2956,
-     "profile": "Running back · Arkansas 2005–2007 · No. 6 on Arkansas's career rushing list · 20 career rushing TDs"
-    },
-    {
-     "name": "James Rouse",
-     "yards": 2887,
-     "profile": "No. 7 on Arkansas's career rushing list"
-    },
-    {
-     "name": "Fred Talley",
-     "yards": 2661,
-     "profile": "No. 8 on Arkansas's career rushing list"
-    },
-    {
-     "name": "Matt Jones",
-     "yards": 2535,
-     "profile": "No. 9 on Arkansas's career rushing list"
-    }
-   ],
+   "type": "h2h",
+   "label": "Fresh Mix",
    "verified": true,
-   "sig": "cLSUARK2500"
+   "flip": true,
+   "prompt": "Who had more rushing TDs in a single season?",
+   "A": {
+    "label": "Darren McFadden (RB) · 2007 ARK",
+    "value": 16,
+    "school": "ARK"
+   },
+   "B": {
+    "label": "Kevin Faulk (RB) · 1995 LSU",
+    "value": 6,
+    "school": "LSU"
+   },
+   "unit": "rushing TDs",
+   "sig": "hDarren McFadden2007,Kevin Faulk1995rushTD"
   },
   {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Arkansas",
-   "a": "LSU",
-   "b": "ARK",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    249,
-    161
-   ],
+   "type": "moment",
+   "label": "Rivalry Game",
    "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Arkansas",
-   "a": "LSU",
-   "b": "ARK",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
-   "values": [
-    0,
-    5
-   ],
-   "verified": true,
-   "sig": "gwin3"
+   "pitted": true,
+   "game": {
+    "date": "Nov 25, 2011",
+    "winner": "LSU",
+    "loser": "ARK",
+    "ws": 41,
+    "ls": 17,
+    "venue": "Tiger Stadium (LA)"
+   },
+   "prompt": "In this game, did Kenny Hilliard (LSU) run for more or less than",
+   "line": "80 rushing yards",
+   "answer": "over",
+   "reveal": "More. Kenny Hilliard had 102 rushing yards on 19 carries and 1 TD in this game.",
+   "check": {
+    "value": 102,
+    "line": 80
+   },
+   "sig": "gm2011-11-25Kenny Hilliardrush"
   }
  ]
 }

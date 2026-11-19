@@ -80,7 +80,8 @@ export function genGameRank(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rn
     ps.filter(p => p.cat === cat && p.yds >= 50).map(p => ({ g, school, p }))));
   for (let t = 0; t < 8; t++) {
     const picks: typeof perfs = [];
-    const ok = (x: (typeof perfs)[0]) => !picks.some(y => (y.p.name === x.p.name && y.g.season === x.g.season) || Math.abs(y.p.yds - x.p.yds) < gameGap(y.p.yds, x.p.yds));
+    // no close calls: single-game performances at least 25 yds or 15% apart
+    const ok = (x: (typeof perfs)[0]) => !picks.some(y => (y.p.name === x.p.name && y.g.season === x.g.season) || Math.abs(y.p.yds - x.p.yds) < Math.max(25, 0.15 * Math.max(y.p.yds, x.p.yds), gameGap(y.p.yds, x.p.yds)));
     for (const s of shuffle(rng, [a, b])) { const f = shuffle(rng, perfs).find(x => x.school === s && ok(x)); if (f) picks.push(f) }
     for (const f of shuffle(rng, perfs)) { if (picks.length === 4) break; if (ok(f)) picks.push(f) }
     if (picks.length < 4) continue;

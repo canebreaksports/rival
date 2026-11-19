@@ -22,6 +22,7 @@ export interface Ctx {
   seasonsOf: Map<string, PlayerSeason[]>; // name|school → that player's season rows (no career row)
   teams: SchoolKey[];
   memo: Map<string, unknown>;
+  honored: Set<string>;          // name|school of award winners and Heisman top-5 finishers
 }
 
 export function makeCtx(data: Dataset, teams: SchoolKey[], rng: Rng, verifiedOnly: boolean, label = "Fresh Mix"): Ctx {
@@ -29,7 +30,8 @@ export function makeCtx(data: Dataset, teams: SchoolKey[], rng: Rng, verifiedOnl
   const info = new Map(data.players.players.map(p => [p.name + "|" + p.school, p]));
   const seasonsOf = new Map<string, PlayerSeason[]>();
   for (const s of pool) if (s.year !== "career") { const k = s.name + "|" + s.school; (seasonsOf.get(k) ?? seasonsOf.set(k, []).get(k)!).push(s) }
-  return { rng, pool, info, label, seasonsOf, memo: new Map(), teams };
+  const honored = new Set([...(data.honors?.everWon ?? []).map(w => w.name + "|" + w.school), ...(data.honors?.heisman ?? []).filter(v => v.place <= 5).map(v => v.name + "|" + v.school)]);
+  return { rng, pool, info, label, seasonsOf, memo: new Map(), teams, honored };
 }
 
 // ---- safety margin for approximate sources ----
@@ -39,15 +41,18 @@ export const isApprox = (p: PlayerSeason) => p.source.startsWith("CollegeFootbal
 type Kind = "yds" | "count" | "ypc";
 const kindOf = (k: string): Kind => (k === "ypc" ? "ypc" : /TD$/.test(k) ? "count" : k === "recN" || k === "att" ? "count" : "yds");
 export function minGap(kind: Kind, a: number, b: number, approx: boolean) {
-  if (!approx) return 0;
-  return kind === "yds" ? Math.max(50, 0.08 * Math.max(Math.abs(a), Math.abs(b))) : kind === "ypc" ? 0.5 : kind === "count" ? 1 : 0;
+  const big = Math.max(Math.abs(a), Math.abs(b));
+  // Exact sources: still no close calls (owner's rule) — yardage at least 25 yds or 5% apart, YPC 0.3, counts 1.
+  if (!approx) return kind === "yds" ? Math.max(25, 0.05 * big) : kind === "ypc" ? 0.3 : kind === "count" ? 1 : 0;
+  return kind === "yds" ? Math.max(50, 0.08 * big) : kind === "ypc" ? 0.5 : kind === "count" ? 1 : 0;
 }
 /** True when a and b differ by more than the source can blur. */
-export const clear = (k: string, a: number, b: number, approx: boolean) => a !== b && Math.abs(a - b) >= minGap(kindOf(k), a, b, approx);
+export const clear = (k: string, a: number, b: number, approx: boolean, bothNotable = false) =>
+  a !== b && ((bothNotable && !approx && kindOf(k) === "yds") || Math.abs(a - b) >= minGap(kindOf(k), a, b, approx));
 /** Pairwise version: the margin applies to adjacent values when either comes from an approximate source. */
-const ranksClear = (k: string, ps: PlayerSeason[], val: (p: PlayerSeason) => number) => {
+const ranksClear = (k: string, ps: PlayerSeason[], val: (p: PlayerSeason) => number, c?: Ctx) => {
   const v = [...ps].sort((x, y) => val(y) - val(x));
-  return v.every((x, i) => i === 0 || clear(k, val(v[i - 1]), val(x), isApprox(v[i - 1]) || isApprox(x)));
+  return v.every((x, i) => i === 0 || clear(k, val(v[i - 1]), val(x), isApprox(v[i - 1]) || isApprox(x), !!c && notablePair(c, v[i - 1], x, k)));
 };
 
 /** In a matchup (two schools), a multi-player question must include players from both. */
@@ -55,6 +60,11 @@ const bothSchools = (c: Ctx, ps: PlayerSeason[]) => c.teams.length < 2 || c.team
 
 const pos = (c: Ctx, p: PlayerSeason): Pos => c.info.get(p.name + "|" + p.school)?.pos ?? "RB";
 const isStar = (c: Ctx, p: PlayerSeason) => !!c.info.get(p.name + "|" + p.school)?.star;
+/** Close calls are allowed only between notable players in notable seasons (owner's rule):
+ *  a star, award winner or Heisman top-5 finisher, with 1,000+ yards for a season or 2,500+ for a career. */
+const notableRow = (c: Ctx, p: PlayerSeason, k: string) =>
+  (isStar(c, p) || c.honored.has(p.name + "|" + p.school)) && ((p[k as StatKey] ?? 0) >= (p.year === "career" ? 2500 : 1000));
+const notablePair = (c: Ctx, x: PlayerSeason, y: PlayerSeason, k: string) => notableRow(c, x, k) && notableRow(c, y, k);
 const allVerified = (...ps: PlayerSeason[]) => ps.every(p => p.verified);
 const tag = (c: Ctx, p: PlayerSeason) => `${p.name} (${pos(c, p)}) · ${p.year === "career" ? "career, " + p.school : p.year + " " + p.school}`;
 
@@ -80,7 +90,7 @@ export function genRank(c: Ctx): Question | null {
   const arr = shuffle(c.rng, g[key]), schools = [...new Set(arr.map(p => p.school))];
   if (schools.length > 1) for (const t of schools) { const p = arr.find(x => x.school === t && !seen.has(x[k]!)); if (p) add(p) } // at least one from each school
   arr.forEach(add);
-  if (picks.length < 4 || !ranksClear(k, picks, p => p[k]!) || !bothSchools(c, picks)) return null;
+  if (picks.length < 4 || !ranksClear(k, picks, p => p[k]!, c) || !bothSchools(c, picks)) return null;
   return {
     type: "rank", label: c.label, verified: allVerified(...picks),
     prompt: sc === "car" ? `Rank these players by career ${ST[k][0]} (at that school), highest first.` : `Rank these seasons by ${ST[k][0]}, highest first.`,
@@ -142,7 +152,7 @@ export function genH2H(c: Ctx, teams: SchoolKey[]): Question | null {
   if (!keys.length) return null;
   for (let t = 0; t < 12; t++) {
     const key = pick(c.rng, keys), [sc, k] = key.split("|") as ["car" | "sea", GenStat], arr = shuffle(c.rng, g[key]);
-    const a = arr[0], b = arr.find(x => x.name !== a.name && clear(k, x[k]!, a[k]!, isApprox(a) || isApprox(x)) && (teams.length < 2 || x.school !== a.school));
+    const a = arr[0], b = arr.find(x => x.name !== a.name && clear(k, x[k]!, a[k]!, isApprox(a) || isApprox(x), notablePair(c, a, x, k)) && (teams.length < 2 || x.school !== a.school));
     if (!b) continue;
     return {
       type: "h2h", label: c.label, verified: allVerified(a, b), flip: c.rng() < 0.5,
@@ -180,7 +190,8 @@ export function genMixedRank(c: Ctx, teams: SchoolKey[]): Question | null {
   const unit = c.rng() < 0.6 ? "TD" : "yds", all = shuffle(c.rng, facts(c, unit));
   for (let t = 0; t < 10; t++) {
     const picks: Fact[] = [];
-    const ok = (f: Fact) => !picks.some(x => x.p.name === f.p.name || !clear(unit === "TD" ? "rushTD" : "rush", x.value, f.value, isApprox(x.p) || isApprox(f.p)));
+    const big = (f: Fact) => (isStar(c, f.p) || c.honored.has(f.p.name + "|" + f.p.school)) && f.value >= (f.kind.startsWith("car") ? 2500 : 1000);
+    const ok = (f: Fact) => !picks.some(x => x.p.name === f.p.name || !clear(unit === "TD" ? "rushTD" : "rush", x.value, f.value, isApprox(x.p) || isApprox(f.p), big(x) && big(f)));
     for (const team of shuffle(c.rng, teams)) { const f = all.find(x => x.p.school === team && ok(x)); if (f) picks.push(f) } // both schools
     for (const f of shuffle(c.rng, all)) { if (picks.length === 4) break; if (ok(f) && !picks.some(x => x.kind === f.kind && picks.length < 3)) picks.push(f) }
     if (picks.length < 4 || new Set(picks.map(x => x.kind)).size < 3 || !bothSchools(c, picks.map(f => f.p))) continue; // ≥3 stat framings
@@ -223,7 +234,7 @@ export function genTrapRank(c: Ctx): Question | null {
     const add = (p: PlayerSeason) => { if (picks.length < 4 && !names.has(p.name) && !vals.has(p[k]!)) { picks.push(p); names.add(p.name); vals.add(p[k]!) } };
     offs.slice(0, 2 + Math.floor(c.rng() * 2)).forEach(add); // 2–3 off-years
     shuffle(c.rng, sea).forEach(add);                         // fill with anything else
-    if (picks.length < 4 || !ranksClear(k, picks, p => p[k]!) || !bothSchools(c, picks)) continue;
+    if (picks.length < 4 || !ranksClear(k, picks, p => p[k]!, c) || !bothSchools(c, picks)) continue;
     return {
       type: "rank", label: c.label, trap: true, verified: allVerified(...picks),
       prompt: `Rank these seasons by ${ST[k][0]}, highest first.`, items: picks.map(p => ({ label: tag(c, p), value: p[k]!, school: p.school })),
@@ -331,7 +342,7 @@ export function genDuel(c: Ctx, teams: SchoolKey[]): Question | null {
   for (const k of ["rush", "rec"] as const) {
     const sea = c.pool.filter(p => p.year !== "career" && (p[k] ?? 0) >= 300 && p[DUEL[k].td] != null);
     for (const a of sea) if (a.school === ta) for (const b of sea)
-      if (b.school === tb && b.year === a.year && clear(k, a[k]!, b[k]!, isApprox(a) || isApprox(b))) cands.push([a, b, k]);
+      if (b.school === tb && b.year === a.year && clear(k, a[k]!, b[k]!, isApprox(a) || isApprox(b), notablePair(c, a, b, k))) cands.push([a, b, k]);
   }
   if (!cands.length) return null;
   const [a, b, k] = pick(c.rng, cands), d = DUEL[k];

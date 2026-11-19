@@ -6,110 +6,57 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-18T12:25:25.097Z",
- "engine": 11,
+ "generatedAt": "2026-11-19T14:51:33.248Z",
+ "engine": 12,
  "questions": [
   {
-   "type": "count",
-   "label": "Since 2018",
-   "a": "TEX",
-   "b": "TAMU",
-   "threshold": 1100,
+   "type": "rank",
+   "label": "Rivalry Games",
    "verified": true,
-   "pitted": true,
-   "prompt": "From 2018 through 2025, which school had more 1,100-yard receiving seasons?",
-   "A": [
+   "unit": "yds",
+   "prompt": "Rank these single-game rushing performances in Texas–Texas A&M games, highest first.",
+   "items": [
     {
-     "name": "Lil'Jordan Humphrey",
-     "yards": 1176,
-     "season": 2018,
-     "profile": "Wide receiver · 2018: 25 rushing, 1,176 receiving yds"
+     "label": "Marcel Reed (TAMU) · 2025",
+     "value": 71,
+     "school": "TAMU"
     },
     {
-     "name": "Devin Duvernay",
-     "yards": 1386,
-     "season": 2019,
-     "profile": "Wide receiver · 2019: 24 rushing, 1,386 receiving yds"
+     "label": "Cody Johnson (TEX) · 2008",
+     "value": 102,
+     "school": "TEX"
+    },
+    {
+     "label": "Cyrus Gray (TAMU) · 2010",
+     "value": 223,
+     "school": "TAMU"
+    },
+    {
+     "label": "Colt McCoy (TEX) · 2009",
+     "value": 175,
+     "school": "TEX"
     }
    ],
-   "B": [],
-   "sig": "tsrec11002018"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Texas vs Texas A&M",
-   "a": "TEX",
-   "b": "TAMU",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    236,
-    195
-   ],
-   "verified": true,
-   "sig": "gtotalW"
-  },
-  {
-   "type": "mc",
-   "label": "Awards",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Which of these players won the Walter Camp Award, given to the nation's player of the year?",
-   "options": [
-    "Colt McCoy (Texas)",
-    "Braden Mann (Texas A&M)",
-    "Derrick Johnson (Texas)",
-    "Cedric Benson (Texas)"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    2,
-    1,
-    0
-   ],
-   "reveal": "Colt McCoy (Texas) won the Walter Camp Award in 2009.",
-   "sig": "amcamp2009"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": true,
-   "prompt": "In Texas–Texas A&M games since 2005, who had more receiving yards against the other school?",
-   "A": {
-    "label": "Brandon Collins (TEX) vs. Texas A&M",
-    "value": 103,
-    "school": "TEX"
-   },
-   "B": {
-    "label": "Earvin Taylor (TAMU) vs. Texas",
-    "value": 129,
-    "school": "TAMU"
-   },
-   "unit": "receiving yds",
-   "note": "Brandon Collins: 103 in 1 game. Earvin Taylor: 129 in 2 games.",
-   "sig": "vsrecBrandon Collins,Earvin Taylor"
+   "sig": "grrushCody Johnson2008,Colt McCoy2009,Cyrus Gray2010,Marcel Reed2025"
   },
   {
    "type": "h2h",
    "label": "Fresh Mix",
-   "upset": true,
    "verified": true,
    "flip": true,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "prompt": "Who had more rushing TDs in a single season?",
    "A": {
-    "label": "Gunnar Helm (TEX TE)",
+    "label": "Isaiah Spiller (RB) · 2020 TAMU",
     "value": 9,
-    "school": "TEX"
-   },
-   "B": {
-    "label": "Devon Achane (TAMU RB)",
-    "value": 5,
     "school": "TAMU"
    },
-   "unit": "",
-   "note": "🚨 Upset: Gunnar Helm 9 vs. Devon Achane 5.",
-   "sig": "urecTDDevon AchaneGunnar Helm"
+   "B": {
+    "label": "Roschon Johnson (RB) · 2022 TEX",
+    "value": 5,
+    "school": "TEX"
+   },
+   "unit": "rushing TDs",
+   "sig": "hIsaiah Spiller2020,Roschon Johnson2022rushTD"
   },
   {
    "type": "rank",
@@ -166,17 +113,126 @@
    "sig": "tvrec"
   },
   {
+   "type": "count",
+   "label": "Since 2018",
+   "a": "TEX",
+   "b": "TAMU",
+   "threshold": 1100,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2018 through 2025, which school had more 1,100-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Lil'Jordan Humphrey",
+     "yards": 1176,
+     "season": 2018,
+     "profile": "Wide receiver · 2018: 25 rushing, 1,176 receiving yds"
+    },
+    {
+     "name": "Devin Duvernay",
+     "yards": 1386,
+     "season": 2019,
+     "profile": "Wide receiver · 2019: 24 rushing, 1,386 receiving yds"
+    }
+   ],
+   "B": [],
+   "sig": "tsrec11002018"
+  },
+  {
+   "type": "mc",
+   "label": "Awards",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Which of these players won the Walter Camp Award, given to the nation's player of the year?",
+   "options": [
+    "Colt McCoy (Texas)",
+    "Braden Mann (Texas A&M)",
+    "Derrick Johnson (Texas)",
+    "Cedric Benson (Texas)"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    2,
+    1,
+    0
+   ],
+   "reveal": "Colt McCoy (Texas) won the Walter Camp Award in 2009.",
+   "sig": "amcamp2009"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": false,
+   "prompt": "In Texas–Texas A&M games since 2005, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Quan Cosby (TEX) vs. Texas A&M",
+    "value": 193,
+    "school": "TEX"
+   },
+   "B": {
+    "label": "Mike Goodson (TAMU) vs. Texas",
+    "value": 156,
+    "school": "TAMU"
+   },
+   "unit": "receiving yds",
+   "note": "Quan Cosby: 193 in 4 games. Mike Goodson: 156 in 3 games.",
+   "sig": "vsrecMike Goodson,Quan Cosby"
+  },
+  {
    "type": "prog",
    "label": "Program Pit · Texas vs Texas A&M",
    "a": "TEX",
    "b": "TAMU",
-   "prompt": "Whose best season since 2000 had more wins?",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
    "values": [
     13,
-    11
+    2
    ],
    "verified": true,
-   "sig": "gpeakW"
+   "sig": "gwin10"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Gunnar Helm (TEX TE)",
+    "value": 9,
+    "school": "TEX"
+   },
+   "B": {
+    "label": "Devon Achane (TAMU RB)",
+    "value": 5,
+    "school": "TAMU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Gunnar Helm 9 vs. Devon Achane 5.",
+   "sig": "urecTDDevon AchaneGunnar Helm"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Texas–Texas A&M games since 2005, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Brandon Collins (TEX) vs. Texas A&M",
+    "value": 103,
+    "school": "TEX"
+   },
+   "B": {
+    "label": "Earvin Taylor (TAMU) vs. Texas",
+    "value": 129,
+    "school": "TAMU"
+   },
+   "unit": "receiving yds",
+   "note": "Brandon Collins: 103 in 1 game. Earvin Taylor: 129 in 2 games.",
+   "sig": "vsrecBrandon Collins,Earvin Taylor"
   }
  ]
 }

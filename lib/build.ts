@@ -8,7 +8,7 @@ import { genGameMoment, genGameRank, genSeriesCount, genTeamDiffMC, genVsH2H, pa
 import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 11; // v11: NFL draft, awards and Heisman voting questions (v10: single-game Rank It removed)
+export const ENGINE_VERSION = 12; // v12: no close calls unless both sides are notable players in notable seasons (v11: honors)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean }
@@ -64,7 +64,7 @@ const teamQs = (data: Dataset, k: SchoolKey, rng: Rng, o: BuildOpts) =>
   data.curated.teamPacks[k] ? curatedQs(data.curated.teamPacks[k], SCHOOL[k].name, rng, o) : [];
 
 /** Generated player questions per set. Program comparisons only fill gaps. */
-export const PLAYER_QS = 7;
+export const PLAYER_QS = 10; // up to a full set from generated questions; caps and the pitted rule still apply
 
 /** About n generated player questions: ≤1 upset (attempted first 70% of the time), ≤1 trap (allowed 75% of the time). */
 export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng, o: BuildOpts): Question[] {
@@ -108,7 +108,7 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
   }
   if (rng() < 0.7) { const u = genUpset(c); if (u) { sigs.add(u.sig); out.push(u) } }
   let trapped = rng() < 0.25;
-  for (let t = 0; t < n * 20 && out.length < n; t++) { // pitted formats fail often (both-schools rule), so try harder
+  for (let t = 0; t < n * 40 && out.length < n; t++) { // pitted formats fail often (both-schools rule), so try harder
     const r = pick(rng, gens)();
     const qs = !r ? [] : Array.isArray(r) ? r : [r];
     if (!qs.length || qs.some(q => sigs.has(q.sig)) || (qs[0].trap && trapped)) continue;

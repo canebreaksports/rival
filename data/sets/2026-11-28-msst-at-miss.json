@@ -6,9 +6,108 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-18T12:25:25.111Z",
- "engine": 11,
+ "generatedAt": "2026-11-19T14:51:33.257Z",
+ "engine": 12,
  "questions": [
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 23, 2017",
+    "winner": "MISS",
+    "loser": "MSST",
+    "ws": 31,
+    "ls": 28,
+    "venue": "Davis Wade Stadium"
+   },
+   "prompt": "In this game, did D.K. Metcalf (Ole Miss) have more or less than",
+   "line": "90 receiving yards",
+   "answer": "under",
+   "reveal": "Less. D.K. Metcalf had 67 receiving yards on 2 catches and 1 TD in this game.",
+   "check": {
+    "value": 67,
+    "line": 90
+   },
+   "sig": "gm2017-11-23D.K. Metcalfrec"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2009",
+    "winner": "MSST",
+    "loser": "MISS",
+    "ws": 41,
+    "ls": 27,
+    "venue": "Davis Wade Stadium"
+   },
+   "prompt": "In this game, did Chris Relf (Mississippi State) run for more or less than",
+   "line": "160 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Chris Relf had 131 rushing yards on 15 carries and 1 TD in this game.",
+   "check": {
+    "value": 131,
+    "line": 160
+   },
+   "sig": "gm2009-11-28Chris Relfrush"
+  },
+  {
+   "type": "rank",
+   "label": "Rivalry Games",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these single-game rushing performances in Mississippi State–Ole Miss games, highest first.",
+   "items": [
+    {
+     "label": "Ulysses Bentley IV (MISS) · 2023",
+     "value": 63,
+     "school": "MISS"
+    },
+    {
+     "label": "Boobie Dixon (MSST) · 2009",
+     "value": 133,
+     "school": "MSST"
+    },
+    {
+     "label": "Kylin Hill (MSST) · 2018",
+     "value": 108,
+     "school": "MSST"
+    },
+    {
+     "label": "Kamario Taylor (MSST) · 2025",
+     "value": 173,
+     "school": "MSST"
+    }
+   ],
+   "sig": "grrushBoobie Dixon2009,Kamario Taylor2025,Kylin Hill2018,Ulysses Bentley IV2023"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 24, 2022",
+    "winner": "MSST",
+    "loser": "MISS",
+    "ws": 24,
+    "ls": 22,
+    "venue": "Vaught-Hemingway Stadium"
+   },
+   "prompt": "In this game, did Will Rogers (Mississippi State) throw for more or less than",
+   "line": "325 passing yards",
+   "answer": "under",
+   "reveal": "Less. Will Rogers had 239 passing yards and 2 TD in this game.",
+   "check": {
+    "value": 239,
+    "line": 325
+   },
+   "sig": "gm2022-11-24Will Rogerspass"
+  },
   {
    "type": "count",
    "label": "Awards",
@@ -51,78 +150,6 @@
     }
    ],
    "sig": "acall2000"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 23, 2017",
-    "winner": "MISS",
-    "loser": "MSST",
-    "ws": 31,
-    "ls": 28,
-    "venue": "Davis Wade Stadium"
-   },
-   "prompt": "In this game, did D.K. Metcalf (Ole Miss) have more or less than",
-   "line": "90 receiving yards",
-   "answer": "under",
-   "reveal": "Less. D.K. Metcalf had 67 receiving yards on 2 catches and 1 TD in this game.",
-   "check": {
-    "value": 67,
-    "line": 90
-   },
-   "sig": "gm2017-11-23D.K. Metcalfrec"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 24, 2022",
-    "winner": "MSST",
-    "loser": "MISS",
-    "ws": 24,
-    "ls": 22,
-    "venue": "Vaught-Hemingway Stadium"
-   },
-   "prompt": "In this game, did Will Rogers (Mississippi State) throw for more or less than",
-   "line": "325 passing yards",
-   "answer": "under",
-   "reveal": "Less. Will Rogers had 239 passing yards and 2 TD in this game.",
-   "check": {
-    "value": 239,
-    "line": 325
-   },
-   "sig": "gm2022-11-24Will Rogerspass"
-  },
-  {
-   "type": "count",
-   "label": "Since 2012",
-   "a": "MSST",
-   "b": "MISS",
-   "threshold": 1500,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2012 through 2025, which school had more 1,500-yard rushing seasons?",
-   "A": [],
-   "B": [
-    {
-     "name": "Quinshon Judkins",
-     "yards": 1567,
-     "season": 2022,
-     "profile": "Running back · 2022: 1,567 rushing, 132 receiving yds"
-    },
-    {
-     "name": "Kewan Lacy",
-     "yards": 1567,
-     "season": 2025,
-     "profile": "Running back · 2025: 1,567 rushing, 177 receiving yds"
-    }
-   ],
-   "sig": "tsrush15002012"
   },
   {
    "type": "rank",
@@ -173,6 +200,62 @@
    "unit": "receiving yds",
    "note": "Jaden Walley: 260 in 3 games. Markeith Summers: 146 in 3 games.",
    "sig": "vsrecJaden Walley,Markeith Summers"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Dexter McCluster (MISS RB) · 2009 rushing TDs",
+     "value": 8,
+     "school": "MISS"
+    },
+    {
+     "label": "Nick Fitzgerald (MSST QB) · 2017 rushing TDs",
+     "value": 14,
+     "school": "MSST"
+    },
+    {
+     "label": "Cody Core (MISS WR) · 2014 receiving TDs",
+     "value": 6,
+     "school": "MISS"
+    },
+    {
+     "label": "Kylin Hill (MSST RB) · career total TDs (rushing + receiving)",
+     "value": 22,
+     "school": "MSST"
+    }
+   ],
+   "sig": "mxTDCody Core2014 receiving TDs,Dexter McCluster2009 rushing TDs,Kylin Hillcareer total TDs (rushing + receiving),Nick Fitzgerald2017 rushing TDs"
+  },
+  {
+   "type": "count",
+   "label": "Since 2012",
+   "a": "MSST",
+   "b": "MISS",
+   "threshold": 1500,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2012 through 2025, which school had more 1,500-yard rushing seasons?",
+   "A": [],
+   "B": [
+    {
+     "name": "Quinshon Judkins",
+     "yards": 1567,
+     "season": 2022,
+     "profile": "Running back · 2022: 1,567 rushing, 132 receiving yds"
+    },
+    {
+     "name": "Kewan Lacy",
+     "yards": 1567,
+     "season": 2025,
+     "profile": "Running back · 2025: 1,567 rushing, 177 receiving yds"
+    }
+   ],
+   "sig": "tsrush15002012"
   }
  ]
 }

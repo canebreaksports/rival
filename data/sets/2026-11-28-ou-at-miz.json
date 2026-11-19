@@ -6,22 +6,9 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-18T12:25:25.114Z",
- "engine": 11,
+ "generatedAt": "2026-11-19T14:51:33.260Z",
+ "engine": 12,
  "questions": [
-  {
-   "type": "prog",
-   "label": "Program Pit · Oklahoma vs Missouri",
-   "a": "OU",
-   "b": "MIZ",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    20,
-    7
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
   {
    "type": "count",
    "label": "Since 2020",
@@ -74,23 +61,47 @@
    "sig": "tsrush9002020"
   },
   {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Oct 13, 2007",
+    "winner": "OU",
+    "loser": "MIZ",
+    "ws": 41,
+    "ls": 31,
+    "venue": "Memorial Stadium (Norman, OK)"
+   },
+   "prompt": "In this game, did Juaquin Iglesias (Oklahoma) have more or less than",
+   "line": "60 receiving yards",
+   "answer": "over",
+   "reveal": "More. Juaquin Iglesias had 77 receiving yards on 7 catches and 1 TD in this game.",
+   "check": {
+    "value": 77,
+    "line": 60
+   },
+   "sig": "gm2007-10-13Juaquin Iglesiasrec"
+  },
+  {
    "type": "h2h",
-   "label": "Fresh Mix",
+   "label": "Against Each Other",
    "verified": true,
    "flip": true,
-   "prompt": "Who had more receiving TDs in a single season?",
+   "prompt": "In Oklahoma–Missouri games since 2006, who had more receiving yards against the other school?",
    "A": {
-    "label": "Mark Andrews (TE) · 2017 OU",
-    "value": 8,
+    "label": "Juaquin Iglesias (OU) vs. Missouri",
+    "value": 249,
     "school": "OU"
    },
    "B": {
-    "label": "Johnathon Johnson (WR) · 2018 MIZ",
-    "value": 5,
+    "label": "Martin Rucker (MIZ) vs. Oklahoma",
+    "value": 140,
     "school": "MIZ"
    },
-   "unit": "receiving TDs",
-   "sig": "hJohnathon Johnson2018,Mark Andrews2017recTD"
+   "unit": "receiving yds",
+   "note": "Juaquin Iglesias: 249 in 4 games. Martin Rucker: 140 in 3 games.",
+   "sig": "vsrecJuaquin Iglesias,Martin Rucker"
   },
   {
    "type": "rank",
@@ -100,48 +111,40 @@
    "prompt": "Rank these single-game rushing performances in Oklahoma–Missouri games, highest first.",
    "items": [
     {
-     "label": "Henry Josey (MIZ) · 2010",
-     "value": 64,
+     "label": "James Franklin (MIZ) · 2011",
+     "value": 103,
      "school": "MIZ"
     },
     {
-     "label": "Chris Brown (OU) · 2008",
-     "value": 122,
+     "label": "Chris Brown (OU) · 2007",
+     "value": 67,
      "school": "OU"
+    },
+    {
+     "label": "Henry Josey (MIZ) · 2011",
+     "value": 133,
+     "school": "MIZ"
     },
     {
      "label": "Allen Patrick (OU) · 2006",
      "value": 162,
      "school": "OU"
-    },
-    {
-     "label": "Allen Patrick (OU) · 2007",
-     "value": 88,
-     "school": "OU"
     }
    ],
-   "sig": "grrushAllen Patrick2006,Allen Patrick2007,Chris Brown2008,Henry Josey2010"
+   "sig": "grrushAllen Patrick2006,Chris Brown2007,Henry Josey2011,James Franklin2011"
   },
   {
-   "type": "duel",
-   "label": "Fresh Mix",
+   "type": "prog",
+   "label": "Program Pit · Oklahoma vs Missouri",
+   "a": "OU",
+   "b": "MIZ",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    2,
+    9
+   ],
    "verified": true,
-   "year": 2018,
-   "stat": "Receiving season",
-   "aSchool": "MIZ",
-   "other": "OU",
-   "aName": "Albert Okwuegbunam (TE)",
-   "bName": "CeeDee Lamb (WR)",
-   "A": {
-    "big": "466",
-    "sm": "rec yds · 6 TD"
-   },
-   "B": {
-    "big": "1,155",
-    "sm": "rec yds · 11 TD"
-   },
-   "flip": true,
-   "sig": "drec2018Albert Okwuegbunam,CeeDee Lamb"
+   "sig": "glosing"
   },
   {
    "type": "h2h",
@@ -163,19 +166,6 @@
    "unit": "",
    "note": "🚨 Upset: Tyler Badie 126 vs. Samaje Perine 40.",
    "sig": "urecNSamaje PerineTyler Badie"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Oklahoma vs Missouri",
-   "a": "OU",
-   "b": "MIZ",
-   "prompt": "Who won more total games from 2000–2025?",
-   "values": [
-    271,
-    192
-   ],
-   "verified": true,
-   "sig": "gtotalW"
   },
   {
    "type": "count",
@@ -204,6 +194,85 @@
    ],
    "B": [],
    "sig": "hc12010"
+  },
+  {
+   "type": "rank",
+   "label": "Rivalry Games",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these single-game rushing performances in Oklahoma–Missouri games, highest first.",
+   "items": [
+    {
+     "label": "Dominique Whaley (OU) · 2011",
+     "value": 68,
+     "school": "OU"
+    },
+    {
+     "label": "James Franklin (MIZ) · 2011",
+     "value": 103,
+     "school": "MIZ"
+    },
+    {
+     "label": "Allen Patrick (OU) · 2006",
+     "value": 162,
+     "school": "OU"
+    },
+    {
+     "label": "Henry Josey (MIZ) · 2011",
+     "value": 133,
+     "school": "MIZ"
+    }
+   ],
+   "sig": "grrushAllen Patrick2006,Dominique Whaley2011,Henry Josey2011,James Franklin2011"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more receiving TDs in a single season?",
+   "A": {
+    "label": "Mark Andrews (TE) · 2017 OU",
+    "value": 8,
+    "school": "OU"
+   },
+   "B": {
+    "label": "Johnathon Johnson (WR) · 2018 MIZ",
+    "value": 5,
+    "school": "MIZ"
+   },
+   "unit": "receiving TDs",
+   "sig": "hJohnathon Johnson2018,Mark Andrews2017recTD"
+  },
+  {
+   "type": "mc",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Sep 24, 2011",
+    "winner": "OU",
+    "loser": "MIZ",
+    "ws": 38,
+    "ls": 28,
+    "venue": "Memorial Stadium (Norman, OK)"
+   },
+   "prompt": "What was the difference in rushing yards in Oklahoma's 38–28 win over Missouri?",
+   "options": [
+    "Missouri +97 yards",
+    "Missouri +47 yards",
+    "Oklahoma +187 yards",
+    "Oklahoma +227 yards"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    0,
+    1,
+    2
+   ],
+   "reveal": "Missouri +97. Missouri had 241 rushing yards, Oklahoma 144.",
+   "sig": "td2011-09-24rush"
   }
  ]
 }
