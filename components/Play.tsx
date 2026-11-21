@@ -19,12 +19,13 @@ export interface PlayProps {
   nextUnlock?: string | null;   // e.g. "Sun, Nov 22" for the final screen
   onExit: () => void;
   onAgain?: () => void;         // free play only
+  onFinish?: (p: Progress) => void; // called once when a run is completed (not when reopening a finished run)
 }
 
 type Reveal = { ok: boolean; msg: ReactNode; correct: string; chosen: string };
 const fresh = (n: number): Progress => ({ i: 0, pts: 0, streak: 0, best: 0, right: 0, n, done: false });
 
-export function Play({ questions, away, home, mode = "weekly", storageKey, nextUnlock, onExit, onAgain }: PlayProps) {
+export function Play({ questions, away, home, mode = "weekly", storageKey, nextUnlock, onExit, onAgain, onFinish }: PlayProps) {
   const n = questions.length;
   const [p, setP] = useState<Progress>(() => fresh(n));
   const [reveal, setReveal] = useState<Reveal | null>(null);
@@ -64,7 +65,7 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
 
   function next() {
     setReveal(null);
-    if (p.i + 1 >= n) { setFinished(true); return }
+    if (p.i + 1 >= n) { setFinished(true); onFinish?.(p); return }
     setP(x => ({ ...x, i: x.i + 1 }));
   }
 

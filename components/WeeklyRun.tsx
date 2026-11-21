@@ -6,15 +6,24 @@ import { useEffect, useState } from "react";
 import type { FrozenSet, Game } from "@/lib/types";
 import { isLive, nextGames, unlockFmt, windowOf } from "@/lib/gating";
 import { PREVIEW_PREFIX, store } from "@/lib/storage";
+import { getFan, setFan, type Fan } from "@/lib/fan";
+import { track } from "@/lib/track";
+import { SchoolPicker } from "./SchoolPicker";
 import { Play } from "./Play";
 
 export function WeeklyRun({ set, games, preview = false }: { set: FrozenSet; games: Game[]; preview?: boolean }) {
   const router = useRouter();
   const [now, setNow] = useState<Date | null>(null);
-  useEffect(() => setNow(new Date()), []);
-  if (!now) return null;
-  const home = preview ? "/coach" : "/";
+  const [fan, setF] = useState<Fan | null | undefined>(undefined);
+  useEffect(() => { setNow(new Date()); setF(getFan()) }, []);
   const key = (preview ? PREVIEW_PREFIX : "") + set.key;
+  // count a "start" once, when a fan opens a live matchup they haven't begun (never in Coach preview)
+  const startable = !!now && !!fan && !preview && isLive(set.game, now) && set.questions.length >= 3;
+  useEffect(() => {
+    if (startable && fan && !store.get(key)) track({ e: "start", pid: fan.pid, school: fan.school, slug: set.slug });
+  }, [startable, fan, key, set.slug]);
+  if (!now || fan === undefined) return null;
+  const home = preview ? "/coach" : "/";
   // outside the window: locked, unless you played it, in which case your results stay viewable
   if (!preview && !isLive(set.game, now) && !store.get(key)?.done) {
     const w = windowOf(set.game);
@@ -24,8 +33,11 @@ export function WeeklyRun({ set, games, preview = false }: { set: FrozenSet; gam
   }
   if (set.questions.length < 3) return <section className="final"><p>Stats pack coming soon for this matchup.</p>
     <Link className="back" href={home}>Back</Link></section>;
+  // choose your school before entering a weekly game (Coach preview skips this)
+  if (!preview && !fan) return <SchoolPicker onPick={k => { const f = setFan(k); setF(f); track({ e: "pick", pid: f.pid, school: k }) }} />;
   const N = nextGames(games, now);
   return <Play questions={set.questions} away={set.game.away} home={set.game.home} mode="weekly"
     storageKey={key} nextUnlock={N.length ? unlockFmt(windowOf(N[0]).start) : null}
-    onExit={() => router.push(home)} />;
+    onExit={() => router.push(home)}
+    onFinish={p => { if (!preview && fan) track({ e: "finish", pid: fan.pid, school: fan.school, slug: set.slug, pts: p.pts, right: p.right, hints: p.hints ?? 0 }) }} />;
 }

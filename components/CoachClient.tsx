@@ -33,6 +33,7 @@ export function CoachClient({ games }: { games: GameSummary[] }) {
     <p className="note" style={{ marginTop: 0 }}>Testing only. Weekly runs here use separate progress, so they don&apos;t use up your real run.</p>
 
     <Link className="btn" href="/coach/review" style={{ display: "block", textAlign: "center", textDecoration: "none", marginTop: 8 }}>Review This Week&apos;s Questions</Link>
+    <Link className="btn ghost" href="/coach/stats" style={{ display: "block", textAlign: "center", textDecoration: "none", marginTop: 8 }}>Player Stats</Link>
 
     <div className="sec">Simulate a Date</div>
     <input type="date" value={sim} onChange={e => setSim(e.target.value)} aria-label="Simulated date" />

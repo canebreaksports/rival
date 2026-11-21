@@ -111,3 +111,17 @@ textarea,input[type=date]{width:100%;background:#050a07;color:var(--chalk);borde
 .breakdown .bq .kind{display:block;font-size:10px;margin-bottom:2px}
 .breakdown .bp{font:700 13px Oswald;color:var(--chalk);white-space:nowrap}
 .hintnote{font-size:11px;color:var(--dim);letter-spacing:1px;margin-top:2px}
+/* school picker + fan bar */
+.picker{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:6px 0 10px}
+.picker input[type=search]{width:100%;background:#050a07;color:var(--chalk);border:1px solid var(--line);border-radius:10px;padding:12px;font:600 15px Inter}
+.pconf{font:700 12px Oswald;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin:12px 0 6px}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.pteam{display:flex;align-items:center;gap:6px;background:#0f1c15;border:1px solid var(--line);color:var(--chalk);border-radius:8px;padding:8px;font:600 13px Inter;cursor:pointer;text-align:left}
+.pteam:hover,.pteam.on{border-color:var(--gold)}
+.fanbar{display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;color:var(--dim);margin:-10px 0 8px}
+.fanbar b{color:var(--chalk)}
+.linkbtn{background:none;border:0;color:var(--gold);font:600 13px Inter;cursor:pointer;text-decoration:underline;margin-left:4px}
+table.stats{width:100%;border-collapse:collapse;font-size:12px}
+table.stats th{font:700 11px Oswald;letter-spacing:1px;color:var(--gold);text-align:left;padding:6px 4px;border-bottom:1px solid var(--line)}
+table.stats td{padding:6px 4px;border-bottom:1px solid #1d3326}
+table.stats td:not(:first-child),table.stats th:not(:first-child){text-align:right}
