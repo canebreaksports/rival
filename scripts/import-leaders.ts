@@ -11,6 +11,7 @@ import fs from "node:fs";
 import { wikiArticle } from "./wiki-fetch";
 import { tablesIn, tableRows } from "../lib/wikitable";
 import type { CareerList, PlayerSeason } from "../lib/types";
+import { NEW_LEADER_PAGES } from "../lib/cfbd-teams";
 
 // Same player across sources despite "Jr.", "III", apostrophes or a Wikipedia "(born 1993)" tag.
 const display = (n: string) => n.replace(/\s*\([^)]*\)\s*/g, " ").replace(/\s+/g, " ").trim();
@@ -27,6 +28,7 @@ const PAGES: Record<string, string> = {
   TEX: "Texas Longhorns football statistical leaders", ARK: "Arkansas Razorbacks football statistical leaders",
   MISS: "Ole Miss Rebels football statistical leaders", MSST: "Mississippi State Bulldogs football statistical leaders",
 };
+Object.assign(PAGES, NEW_LEADER_PAGES); // non-SEC rivalry schools
 const CURRENT_SEASON = 2026;
 
 async function main() {
@@ -42,9 +44,11 @@ async function main() {
     if (!table) { console.log(`✗ ${k}: no career rushing yards table`); continue; }
     const list: CareerList["list"] = [];
     for (const r of tableRows(table)) {
-      const [rank, name, yds, years] = r.map(c => c.text);
+      const cells = r.map(c => c.text.replace(/^[|\s]+/, ""));
+      while (cells.length > 4 && cells[0] === "") cells.shift(); // "||5||Name" rows carry an empty first cell
+      const [rank, name, yds, years] = cells;
       const yards = Number((yds ?? "").replace(/[^\d]/g, ""));
-      if (!/^T?-?\d+$/i.test((rank ?? "").replace(/\s/g, "")) || !name || !yards) continue;
+      if (!/^(T?-?\d+)?$/i.test((rank ?? "").replace(/\s/g, "")) || !name || !yards) continue; // blank rank = tied with the row above
       const yrs = (years ?? "").match(/\b(19|20)\d{2}\b/g)?.map(Number) ?? [];
       list.push({ name: display(name), yards, ...(yrs.includes(CURRENT_SEASON) ? { active: true } : {}) });
     }

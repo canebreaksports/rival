@@ -1,0 +1,387 @@
+{
+ "key": "rival:2026-11-28:ASU@ARIZ",
+ "slug": "2026-11-28-asu-at-ariz",
+ "game": {
+  "date": "2026-11-28",
+  "away": "ASU",
+  "home": "ARIZ"
+ },
+ "generatedAt": "2026-11-23T21:12:18.808Z",
+ "engine": 22,
+ "questions": [
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "D.J. Foster (ASU WR) · career total TDs (rushing + receiving)",
+     "value": 32,
+     "school": "ASU"
+    },
+    {
+     "label": "Khalil Tate (ARIZ QB) · career rushing TDs",
+     "value": 18,
+     "school": "ARIZ"
+    },
+    {
+     "label": "Nate Phillips (ARIZ WR) · career receiving TDs",
+     "value": 15,
+     "school": "ARIZ"
+    },
+    {
+     "label": "Tetairoa Mcmillan (ARIZ WR) · career total TDs (rushing + receiving)",
+     "value": 26,
+     "school": "ARIZ"
+    }
+   ],
+   "sig": "mxTDD.J. Fostercareer total TDs (rushing + receiving),Khalil Tatecareer rushing TDs,Nate Phillipscareer receiving TDs,Tetairoa Mcmillancareer total TDs (rushing + receiving)"
+  },
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "ASU",
+   "b": "ARIZ",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "info": {
+    "title": "Which awards count?",
+    "text": "Heisman Trophy: most outstanding player · Maxwell Award: best all-around player · Walter Camp Award: player of the year · Doak Walker Award: best running back · Biletnikoff Award: best receiver · Davey O'Brien Award: best quarterback · John Mackey Award: best tight end · Outland Trophy: best interior lineman · Chuck Bednarik Award: best defensive player · Bronko Nagurski Trophy: best defensive player · Butkus Award: best linebacker · Jim Thorpe Award: best defensive back · Lombardi Award: best lineman or linebacker · Lou Groza Award: best kicker · Ray Guy Award: best punter"
+   },
+   "prompt": "From 2010 through 2025, which school had more winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)?",
+   "A": [
+    {
+     "name": "Zane Gonzalez",
+     "yards": 2016,
+     "season": 2016,
+     "label": "Lou Groza Award",
+     "profile": "won the Lou Groza Award (best kicker)"
+    }
+   ],
+   "B": [
+    {
+     "name": "Scooby Wright",
+     "yards": 2014,
+     "season": 2014,
+     "label": "Chuck Bednarik Award",
+     "profile": "LB · won the Chuck Bednarik Award (best defensive player)"
+    },
+    {
+     "name": "Scooby Wright",
+     "yards": 2014,
+     "season": 2014,
+     "label": "Bronko Nagurski Trophy",
+     "profile": "LB · won the Bronko Nagurski Trophy (best defensive player)"
+    },
+    {
+     "name": "Scooby Wright",
+     "yards": 2014,
+     "season": 2014,
+     "label": "Lombardi Award",
+     "profile": "Linebacker · won the Lombardi Award (best lineman or linebacker)"
+    }
+   ],
+   "sig": "acall2010",
+   "bonus": "names"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Whose best college season had more rushing yards?",
+   "A": {
+    "label": "Brandon Dawkins (ARIZ QB)",
+    "value": 944,
+    "school": "ARIZ"
+   },
+   "B": {
+    "label": "Jayden Daniels (ASU QB)",
+    "value": 710,
+    "school": "ASU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Brandon Dawkins 944 vs. Jayden Daniels 710.",
+   "sig": "upeakRushJayden DanielsBrandon Dawkins"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Dec 11, 2020",
+    "winner": "ASU",
+    "loser": "ARIZ",
+    "ws": 70,
+    "ls": 7,
+    "venue": "Arizona Stadium"
+   },
+   "prompt": "In this game, did Jayden Daniels (Arizona State) throw for more or less than",
+   "line": "250 passing yards",
+   "answer": "under",
+   "reveal": "Less. Jayden Daniels had 203 passing yards and 2 TD in this game.",
+   "check": {
+    "value": 203,
+    "line": 250
+   },
+   "sig": "gm2020-12-11Jayden Danielspass"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2025",
+    "winner": "ARIZ",
+    "loser": "ASU",
+    "ws": 23,
+    "ls": 7,
+    "venue": "Mountain America Stadium"
+   },
+   "prompt": "In this game, did Raleek Brown (Arizona State) run for more or less than",
+   "line": "40 rushing yards",
+   "answer": "over",
+   "reveal": "More. Raleek Brown had 63 rushing yards on 13 carries and 0 TD in this game.",
+   "check": {
+    "value": 63,
+    "line": 40
+   },
+   "sig": "gm2025-11-28Raleek Brownrush"
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "ASU",
+   "b": "ARIZ",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Arizona State and Arizona's combined top 10 single-season receiving yards (through 2025): which school has more seasons on the list?",
+   "A": [
+    {
+     "name": "Shaun McDonald",
+     "yards": 1405,
+     "season": 2002,
+     "label": "2002: 1,405",
+     "profile": "2002 season, 1,405 receiving yards · No. 2 on the combined list"
+    },
+    {
+     "name": "Gerell Robinson",
+     "yards": 1397,
+     "season": 2011,
+     "label": "2011: 1,397",
+     "profile": "2011 season, 1,397 receiving yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Derek Hagan",
+     "yards": 1248,
+     "season": 2004,
+     "label": "2004: 1,248",
+     "profile": "2004 season, 1,248 receiving yards · No. 8 on the combined list"
+    },
+    {
+     "name": "Derek Hagan",
+     "yards": 1210,
+     "season": 2005,
+     "label": "2005: 1,210",
+     "profile": "2005 season, 1,210 receiving yards · No. 10 on the combined list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Dennis Northcutt",
+     "yards": 1422,
+     "season": 1999,
+     "label": "1999: 1,422",
+     "profile": "1999 season, 1,422 receiving yards · No. 1 on the combined list"
+    },
+    {
+     "name": "Tetairoa McMillan",
+     "yards": 1402,
+     "season": 2023,
+     "label": "2023: 1,402",
+     "profile": "2023 season, 1,402 receiving yards · No. 3 on the combined list"
+    },
+    {
+     "name": "Bobby Wade",
+     "yards": 1389,
+     "season": 2002,
+     "label": "2002: 1,389",
+     "profile": "2002 season, 1,389 receiving yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Austin Hill",
+     "yards": 1364,
+     "season": 2012,
+     "label": "2012: 1,364",
+     "profile": "2012 season, 1,364 receiving yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Tetairoa McMillan",
+     "yards": 1319,
+     "season": 2024,
+     "label": "2024: 1,319",
+     "profile": "2024 season, 1,319 receiving yards · No. 7 on the combined list"
+    },
+    {
+     "name": "Juron Criner",
+     "yards": 1233,
+     "season": 2010,
+     "label": "2010: 1,233",
+     "profile": "2010 season, 1,233 receiving yards · No. 9 on the combined list"
+    }
+   ],
+   "sig": "fsrec"
+  },
+  {
+   "type": "count",
+   "label": "Since 2014",
+   "a": "ASU",
+   "b": "ARIZ",
+   "threshold": 1500,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2014 through 2025, which school had more 1,500-yard rushing seasons?",
+   "A": [
+    {
+     "name": "Eno Benjamin",
+     "yards": 1642,
+     "season": 2018,
+     "profile": "Running back · 2018: 1,642 rushing, 261 receiving yds"
+    },
+    {
+     "name": "Cameron Skattebo",
+     "yards": 1715,
+     "season": 2024,
+     "profile": "Running back · 2024: 1,715 rushing, 605 receiving yds"
+    }
+   ],
+   "B": [],
+   "sig": "tsrush15002014",
+   "bonus": "names"
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Wilford White (Arizona State)",
+     "value": 3173,
+     "school": "ASU"
+    },
+    {
+     "label": "Ka'Deem Carey (Arizona)",
+     "value": 4239,
+     "school": "ARIZ"
+    },
+    {
+     "label": "J. J. Taylor (Arizona)",
+     "value": 3263,
+     "school": "ARIZ"
+    },
+    {
+     "label": "Woody Green (Arizona State)",
+     "value": 4188,
+     "school": "ASU"
+    }
+   ],
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Arizona State Sun Devils football statistical leaders\" career rushing yards table (revision 1387163761), which cites the school record book; fetched 2026-11-17; Wikipedia \"Arizona Wildcats football statistical leaders\" career rushing yards table (revision 1387112364), which cites the school record book; fetched 2026-11-17",
+   "sig": "nrrushingJ. J. Taylor,Ka'Deem Carey,Wilford White,Woody Green",
+   "more": {
+    "title": "Career rushing yards, Arizona State and Arizona (school top 10s)",
+    "rows": [
+     "1. Ka'Deem Carey (Arizona) 4,239",
+     "2. Woody Green (Arizona State) 4,188",
+     "3. Trung Canidate (Arizona) 3,824",
+     "4. Ontiwaun Carter (Arizona) 3,501",
+     "5. Freddie Williams (Arizona State) 3,424",
+     "6. Art Luppino (Arizona) 3,381",
+     "7. J. R. Redmond (Arizona State) 3,299",
+     "8. J. J. Taylor (Arizona) 3,263",
+     "9. Demario Richard (Arizona State) 3,202",
+     "10. Wilford White (Arizona State) 3,173"
+    ]
+   }
+  },
+  {
+   "type": "moment",
+   "label": "Longest Play",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2014",
+    "winner": "ARIZ",
+    "loser": "ASU",
+    "ws": 42,
+    "ls": 35,
+    "venue": "Arizona Stadium"
+   },
+   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
+   "line": "62.5 yards",
+   "answer": "over",
+   "reveal": "More. The longest was Nick Wilson's 72-yard run for Arizona; Arizona State's longest was 50 yards (Jaelen Strong).",
+   "check": {
+    "value": 72,
+    "line": 62.5
+   },
+   "sig": "lg2014-11-28"
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "ASU",
+   "b": "ARIZ",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Since 2006, which school has more players in the top 5 for receiving yards against the other?",
+   "A": [
+    {
+     "name": "Kyle Williams",
+     "yards": 287,
+     "label": "287 in 7 games",
+     "profile": "287 receiving yards against Arizona in 7 games · No. 2"
+    },
+    {
+     "name": "Gerell Robinson",
+     "yards": 265,
+     "label": "265 in 3 games",
+     "profile": "265 receiving yards against Arizona in 3 games · No. 3"
+    }
+   ],
+   "B": [
+    {
+     "name": "Tetairoa Mcmillan",
+     "yards": 334,
+     "label": "334 in 2 games",
+     "profile": "334 receiving yards against Arizona State in 2 games · No. 1"
+    },
+    {
+     "name": "Juron Criner",
+     "yards": 241,
+     "label": "241 in 3 games",
+     "profile": "241 receiving yards against Arizona State in 3 games · No. 4"
+    },
+    {
+     "name": "Mike Thomas",
+     "yards": 240,
+     "label": "240 in 3 games",
+     "profile": "240 receiving yards against Arizona State in 3 games · No. 5"
+    }
+   ],
+   "sig": "fvrec"
+  }
+ ]
+}

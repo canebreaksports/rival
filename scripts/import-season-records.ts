@@ -7,6 +7,7 @@
 import fs from "node:fs";
 import { wikiArticle } from "./wiki-fetch";
 import { tablesIn, tableRows } from "../lib/wikitable";
+import { NEW_LEADER_PAGES } from "../lib/cfbd-teams";
 
 const display = (n: string) => n.replace(/^[|\s]+/, "").replace(/\s*\([^)]*\)\s*/g, " ").replace(/[*†‡^#]+/g, "").replace(/\s+/g, " ").trim();
 const [cache, ...flags] = process.argv.slice(2);
@@ -22,6 +23,7 @@ const PAGES: Record<string, string> = {
   TEX: "Texas Longhorns football statistical leaders", ARK: "Arkansas Razorbacks football statistical leaders",
   MISS: "Ole Miss Rebels football statistical leaders", MSST: "Mississippi State Bulldogs football statistical leaders",
 };
+Object.assign(PAGES, NEW_LEADER_PAGES); // non-SEC rivalry schools
 export interface SeasonRec { name: string; yards: number; season: number }
 type Out = Record<string, { source: string; verified: boolean; rush?: SeasonRec[]; rec?: SeasonRec[] }>;
 
@@ -38,16 +40,19 @@ async function main() {
       const section = next < 0 ? rest : rest.slice(0, next);
       const table = m ? tablesIn(section).find(t => /\|\+\s*Single[ -]season/i.test(t)) : null;
       if (!table) { console.log(`✗ ${k} ${stat}: no single-season table`); continue; }
-      const list: SeasonRec[] = [];
+      const list: SeasonRec[] = [], unread: string[] = [];
       for (const r of tableRows(table)) {
-        const cells = r.map(c => c.text);
+        const cells = r.map(c => c.text.replace(/^[|\s]+/, ""));
+        while (cells.length > 4 && cells[0] === "") cells.shift();                // "||5||Name" rows carry an empty first cell
         const [, name, yds, year] = cells.length >= 4 ? cells : ["", ...cells]; // tied rows may drop the rank cell
         const yards = Number((yds ?? "").replace(/[^\d]/g, "")), season = Number((year ?? "").match(/\b(19|20)\d{2}\b/)?.[0]);
-        if (!name || !yards || !season || /^(rank|player)$/i.test(name)) continue;
+        if (/^(rank|player)$/i.test(name ?? "") || cells.every(c => !/\d/.test(c))) continue;  // header rows
+        if (!name || !yards || !season) { unread.push(cells.join(" | ")); continue }
         list.push({ name: display(name), yards, season });
       }
       const problems: string[] = [];
       if (list.length < 10) problems.push(`only ${list.length} rows`);
+      if (unread.length) problems.push(`unreadable rows: ${unread.join(" ; ")}`);  // never drop a row silently
       if (list.some((x, i) => i && x.yards > list[i - 1].yards)) problems.push("not descending");
       const summary = list.map(x => `${x.name} ${x.season} ${x.yards}`).join(", ");
       if (problems.length) { console.log(`✗ ${k} ${stat}: ${problems.join("; ")}\n    ${summary}`); continue; }

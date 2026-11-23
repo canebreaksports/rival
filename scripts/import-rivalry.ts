@@ -12,6 +12,7 @@
 //              3. where CollegeFootballData also has the game, every player in both agrees within the single-game margin.
 import fs from "node:fs";
 import path from "node:path";
+import { NEW_SCHOOLS } from "../lib/cfbd-teams";
 
 const [cache, espnDir] = process.argv.slice(2);
 if (!cache) { console.error("usage: tsx scripts/import-rivalry.ts <cfbdCacheDir> [espnCacheDir]"); process.exit(1); }
@@ -20,6 +21,7 @@ const KEY: Record<string, string> = {
   "Mississippi State": "MSST", Missouri: "MIZ", Oklahoma: "OU", "Ole Miss": "MISS", "South Carolina": "SC",
   Tennessee: "TENN", Texas: "TEX", "Texas A&M": "TAMU", Vanderbilt: "VAN",
 };
+Object.assign(KEY, NEW_SCHOOLS); // non-SEC rivalry schools (lib/cfbd-teams.ts)
 const ESPN_KEY = (t: { location?: string; displayName?: string }) => KEY[t.location ?? ""] ?? Object.entries(KEY).find(([n]) => t.displayName?.startsWith(n + " "))?.[1];
 type Game = { id: number; season: number; seasonType: string; startDate: string; neutralSite: boolean; homeTeam: string; awayTeam: string; homePoints: number | null; awayPoints: number | null; venue: string | null; completed: boolean };
 type CfbdBox = { id: number; teams: { team: string; points: number; categories: { name: string; types: { name: string; athletes: { name: string; stat: string }[] }[] }[] }[] };

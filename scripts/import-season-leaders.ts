@@ -9,6 +9,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { PlayerSeason } from "../lib/types";
+import { NEW_SCHOOLS } from "../lib/cfbd-teams";
 
 const [cache] = process.argv.slice(2);
 if (!cache) { console.error("usage: tsx scripts/import-season-leaders.ts <cfbdSeasonCacheDir>"); process.exit(1); }
@@ -17,6 +18,7 @@ const KEY: Record<string, string> = {
   "Mississippi State": "MSST", Missouri: "MIZ", Oklahoma: "OU", "Ole Miss": "MISS", "South Carolina": "SC",
   Tennessee: "TENN", Texas: "TEX", "Texas A&M": "TAMU", Vanderbilt: "VAN",
 };
+Object.assign(KEY, NEW_SCHOOLS); // non-SEC rivalry schools (lib/cfbd-teams.ts)
 const nkey = (n: string) => n.toLowerCase().replace(/[’'.]/g, "").replace(/\b(jr|sr|ii|iii|iv)\b/g, "").replace(/\s+/g, " ").trim();
 type Row = { season: number; playerId: string; player: string; position?: string; team: string; category: string; statType: string; stat: string };
 const rows: Row[] = fs.readdirSync(cache).flatMap(f => JSON.parse(fs.readFileSync(path.join(cache, f), "utf8")));

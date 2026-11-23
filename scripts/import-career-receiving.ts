@@ -7,6 +7,7 @@
 import fs from "node:fs";
 import { wikiArticle } from "./wiki-fetch";
 import { tablesIn, tableRows } from "../lib/wikitable";
+import { NEW_LEADER_PAGES } from "../lib/cfbd-teams";
 
 const display = (n: string) => n.replace(/\s*\([^)]*\)\s*/g, " ").replace(/[*†‡^#]+/g, "").replace(/\s+/g, " ").trim();
 const [cache, ...flags] = process.argv.slice(2);
@@ -22,6 +23,7 @@ const PAGES: Record<string, string> = {
   TEX: "Texas Longhorns football statistical leaders", ARK: "Arkansas Razorbacks football statistical leaders",
   MISS: "Ole Miss Rebels football statistical leaders", MSST: "Mississippi State Bulldogs football statistical leaders",
 };
+Object.assign(PAGES, NEW_LEADER_PAGES); // non-SEC rivalry schools
 const CURRENT_SEASON = 2026;
 export interface RecvEntry { name: string; yards: number; from?: number; to?: number; active?: boolean }
 
@@ -35,9 +37,11 @@ async function main() {
     if (!table) { console.log(`✗ ${k}: no career receiving yards table`); continue; }
     const list: RecvEntry[] = [];
     for (const r of tableRows(table)) {
-      const [rank, name, yds, years] = r.map(c => c.text);
+      const cells = r.map(c => c.text.replace(/^[|\s]+/, ""));
+      while (cells.length > 4 && cells[0] === "") cells.shift(); // "||5||Name" rows carry an empty first cell
+      const [rank, name, yds, years] = cells;
       const yards = Number((yds ?? "").replace(/[^\d]/g, ""));
-      if (!/^T?-?\d+$/i.test((rank ?? "").replace(/\s/g, "")) || !name || !yards) continue;
+      if (!/^(T?-?\d+)?$/i.test((rank ?? "").replace(/\s/g, "")) || !name || !yards) continue; // blank rank = tied with the row above
       const yrs = (years ?? "").match(/\b(19|20)\d{2}\b/g)?.map(Number) ?? [];
       list.push({ name: display(name), yards, ...(yrs.length ? { from: Math.min(...yrs), to: Math.max(...yrs) } : {}),
         ...(yrs.includes(CURRENT_SEASON) ? { active: true } : {}) });

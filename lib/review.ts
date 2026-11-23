@@ -60,7 +60,7 @@ export function formatOf(q: Question): string {
     case "h2h": return "Head to head: pick 1 of 2";
     case "duel": return "Blind stat duel: pick Player X or Y";
     case "cross": return "Multiple choice: pick 1 of 4";
-    case "mc": return q.years ? "Multiple choice: pick 1 of 4, then Name the Years bonus (one year at a time, 3 misses, hints −10)" : "Multiple choice: pick 1 of 4";
+    case "mc": return `Multiple choice: pick 1 of ${q.options.length}` + (q.years ? ", then Name the Years bonus (one year at a time, 3 misses, hints −10)" : "");
   }
 }
 
@@ -71,6 +71,7 @@ export function reviewMarkdown(week: string, sets: FrozenSet[]): string {
     s.questions.forEach((q, i) => {
       const r = reviewQuestion(q);
       lines.push(`${i + 1}. *${r.kind}*${r.flags.length ? ` · ${r.flags.join(" · ")}` : ""}  `, `   Format: ${formatOf(q)}  `, `   ${r.prompt}  `);
+      if (q.sig) lines.push(`   <sub>id: ${q.sig.slice(0, 40)}</sub>  `);
       if (r.options && q.type !== "rank") lines.push(`   Options: ${r.options.join(" / ")}  `);
       lines.push(...r.answer.split("\n").map(a => `   **${a}**  `));
       if (r.detail) lines.push(...r.detail.split("\n").map(d => `   ${d}  `));

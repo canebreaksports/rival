@@ -8,6 +8,7 @@
 import fs from "node:fs";
 import { wikiArticle } from "./wiki-fetch";
 import { tablesIn, tableRows } from "../lib/wikitable";
+import { NEW_SCHOOLS, NEW_ALIASES } from "../lib/cfbd-teams";
 
 const [cache] = process.argv.slice(2);
 if (!cache) { console.error("usage: tsx scripts/import-honors.ts <wikiCacheDir>"); process.exit(1); }
@@ -16,6 +17,7 @@ const SCHOOLS: Record<string, string> = {
   "Mississippi State": "MSST", Missouri: "MIZ", Oklahoma: "OU", "Ole Miss": "MISS", Mississippi: "MISS", "South Carolina": "SC",
   Tennessee: "TENN", Texas: "TEX", "Texas A&M": "TAMU", Vanderbilt: "VAN",
 };
+Object.assign(SCHOOLS, NEW_SCHOOLS, NEW_ALIASES); // non-SEC rivalry schools (lib/cfbd-teams.ts)
 // "Alabama (2)" = Alabama's 2nd winner: drop the count before matching
 const schoolOf = (t: string) => SCHOOLS[t.replace(/\s*\([^)]*\)\s*/g, " ").replace(/\s+/g, " ").trim()] ?? null;
 export const AWARDS: { key: string; title: string; name: string; for: string }[] = [

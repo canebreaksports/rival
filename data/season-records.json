@@ -1674,5 +1674,1306 @@
     "season": 2015
    }
   ]
+ },
+ "FSU": {
+  "verified": true,
+  "source": "Wikipedia \"Florida State Seminoles football statistical leaders\" single-season rushing and receiving yards tables (revision 1378376740), which cite the school record book; fetched 2026-11-23",
+  "rush": [
+   {
+    "name": "Dalvin Cook",
+    "yards": 1765,
+    "season": 2016
+   },
+   {
+    "name": "Dalvin Cook",
+    "yards": 1691,
+    "season": 2015
+   },
+   {
+    "name": "Warrick Dunn",
+    "yards": 1242,
+    "season": 1995
+   },
+   {
+    "name": "Sammie Smith",
+    "yards": 1230,
+    "season": 1987
+   },
+   {
+    "name": "Warrick Dunn",
+    "yards": 1180,
+    "season": 1996
+   },
+   {
+    "name": "Cam Akers",
+    "yards": 1144,
+    "season": 2019
+   },
+   {
+    "name": "Greg Allen",
+    "yards": 1134,
+    "season": 1983
+   },
+   {
+    "name": "Larry Key",
+    "yards": 1117,
+    "season": 1977
+   },
+   {
+    "name": "Warrick Dunn",
+    "yards": 1026,
+    "season": 1994
+   },
+   {
+    "name": "Cam Akers",
+    "yards": 1024,
+    "season": 2017
+   }
+  ],
+  "rec": [
+   {
+    "name": "Ron Sellers",
+    "yards": 1496,
+    "season": 1968
+   },
+   {
+    "name": "Rashad Greene",
+    "yards": 1365,
+    "season": 2014
+   },
+   {
+    "name": "Snoop Minnis",
+    "yards": 1340,
+    "season": 2000
+   },
+   {
+    "name": "Barry Smith",
+    "yards": 1243,
+    "season": 1972
+   },
+   {
+    "name": "Peter Warrick",
+    "yards": 1232,
+    "season": 1998
+   },
+   {
+    "name": "Ron Sellers",
+    "yards": 1228,
+    "season": 1967
+   },
+   {
+    "name": "Tamorrion Terry",
+    "yards": 1188,
+    "season": 2019
+   },
+   {
+    "name": "Rashad Greene",
+    "yards": 1128,
+    "season": 2013
+   },
+   {
+    "name": "Duce Robinson",
+    "yards": 1081,
+    "season": 2025
+   },
+   {
+    "name": "E.G. Green",
+    "yards": 1059,
+    "season": 1997
+   }
+  ]
+ },
+ "GT": {
+  "verified": true,
+  "source": "Wikipedia \"Georgia Tech Yellow Jackets football statistical leaders\" single-season rushing and receiving yards tables (revision 1380386584), which cite the school record book; fetched 2026-11-23",
+  "rush": [
+   {
+    "name": "Eddie Lee Ivery",
+    "yards": 1562,
+    "season": 1978
+   },
+   {
+    "name": "Tashard Choice",
+    "yards": 1473,
+    "season": 2006
+   },
+   {
+    "name": "P.J. Daniels",
+    "yards": 1447,
+    "season": 2003
+   },
+   {
+    "name": "Jonathan Dwyer",
+    "yards": 1395,
+    "season": 2008
+   },
+   {
+    "name": "Jonathan Dwyer",
+    "yards": 1395,
+    "season": 2009
+   },
+   {
+    "name": "Tashard Choice",
+    "yards": 1379,
+    "season": 2007
+   },
+   {
+    "name": "Jerry Mays",
+    "yards": 1349,
+    "season": 1989
+   },
+   {
+    "name": "Anthony Allen",
+    "yards": 1316,
+    "season": 2010
+   },
+   {
+    "name": "Robert Lavette",
+    "yards": 1208,
+    "season": 1982
+   },
+   {
+    "name": "Robert Lavette",
+    "yards": 1189,
+    "season": 1984
+   }
+  ],
+  "rec": [
+   {
+    "name": "Calvin Johnson",
+    "yards": 1202,
+    "season": 2006
+   },
+   {
+    "name": "Demaryius Thomas",
+    "yards": 1157,
+    "season": 2009
+   },
+   {
+    "name": "Jonathan Smith",
+    "yards": 1138,
+    "season": 2003
+   },
+   {
+    "name": "Kelly Campbell",
+    "yards": 1105,
+    "season": 1999
+   },
+   {
+    "name": "Kerry Watkins",
+    "yards": 1050,
+    "season": 2002
+   },
+   {
+    "name": "Dez White",
+    "yards": 973,
+    "season": 1998
+   },
+   {
+    "name": "Kelly Campbell",
+    "yards": 963,
+    "season": 2000
+   },
+   {
+    "name": "John Sias",
+    "yards": 902,
+    "season": 1968
+   },
+   {
+    "name": "Calvin Johnson",
+    "yards": 888,
+    "season": 2005
+   },
+   {
+    "name": "Dez White",
+    "yards": 860,
+    "season": 1999
+   }
+  ]
+ },
+ "MICH": {
+  "verified": true,
+  "source": "Wikipedia \"Michigan Wolverines football statistical leaders\" single-season rushing and receiving yards tables (revision 1352691178), which cite the school record book; fetched 2026-11-23",
+  "rush": [
+   {
+    "name": "Tim Biakabutuka",
+    "yards": 1818,
+    "season": 1995
+   },
+   {
+    "name": "Anthony Thomas",
+    "yards": 1733,
+    "season": 2000
+   },
+   {
+    "name": "Jamie Morris",
+    "yards": 1703,
+    "season": 1987
+   },
+   {
+    "name": "Denard Robinson",
+    "yards": 1702,
+    "season": 2010
+   },
+   {
+    "name": "Chris Perry",
+    "yards": 1674,
+    "season": 2003
+   },
+   {
+    "name": "Mike Hart",
+    "yards": 1562,
+    "season": 2006
+   },
+   {
+    "name": "Rob Lytle",
+    "yards": 1469,
+    "season": 1976
+   },
+   {
+    "name": "Blake Corum",
+    "yards": 1463,
+    "season": 2022
+   },
+   {
+    "name": "Butch Woolfolk",
+    "yards": 1459,
+    "season": 1981
+   },
+   {
+    "name": "Mike Hart",
+    "yards": 1455,
+    "season": 2004
+   }
+  ],
+  "rec": [
+   {
+    "name": "Jeremy Gallon",
+    "yards": 1373,
+    "season": 2013
+   },
+   {
+    "name": "Braylon Edwards",
+    "yards": 1330,
+    "season": 2004
+   },
+   {
+    "name": "Mario Manningham",
+    "yards": 1174,
+    "season": 2007
+   },
+   {
+    "name": "Marquise Walker",
+    "yards": 1143,
+    "season": 2001
+   },
+   {
+    "name": "Braylon Edwards",
+    "yards": 1138,
+    "season": 2003
+   },
+   {
+    "name": "David Terrell",
+    "yards": 1130,
+    "season": 2000
+   },
+   {
+    "name": "Amani Toomer",
+    "yards": 1096,
+    "season": 1994
+   },
+   {
+    "name": "Jack Clancy",
+    "yards": 1077,
+    "season": 1966
+   },
+   {
+    "name": "David Terrell",
+    "yards": 1038,
+    "season": 1999
+   },
+   {
+    "name": "Tai Streets",
+    "yards": 1035,
+    "season": 1998
+   },
+   {
+    "name": "Braylon Edwards",
+    "yards": 1035,
+    "season": 2002
+   }
+  ]
+ },
+ "OSU": {
+  "verified": true,
+  "source": "Wikipedia \"Ohio State Buckeyes football statistical leaders\" single-season rushing and receiving yards tables (revision 1387105526), which cite the school record book; fetched 2026-11-23",
+  "rush": [
+   {
+    "name": "J. K. Dobbins",
+    "yards": 2003,
+    "season": 2019
+   },
+   {
+    "name": "Eddie George",
+    "yards": 1927,
+    "season": 1995
+   },
+   {
+    "name": "Ezekiel Elliott",
+    "yards": 1878,
+    "season": 2014
+   },
+   {
+    "name": "Ezekiel Elliott",
+    "yards": 1821,
+    "season": 2015
+   },
+   {
+    "name": "Keith Byars",
+    "yards": 1764,
+    "season": 1984
+   },
+   {
+    "name": "Archie Griffin",
+    "yards": 1695,
+    "season": 1974
+   },
+   {
+    "name": "Beanie Wells",
+    "yards": 1609,
+    "season": 2007
+   },
+   {
+    "name": "Archie Griffin",
+    "yards": 1577,
+    "season": 1973
+   },
+   {
+    "name": "Tim Spencer",
+    "yards": 1538,
+    "season": 1982
+   },
+   {
+    "name": "Carlos Hyde",
+    "yards": 1521,
+    "season": 2013
+   }
+  ],
+  "rec": [
+   {
+    "name": "Jaxon Smith-Njigba",
+    "yards": 1606,
+    "season": 2021
+   },
+   {
+    "name": "Jeremiah Smith",
+    "yards": 1482,
+    "season": 2026
+   },
+   {
+    "name": "David Boston",
+    "yards": 1435,
+    "season": 1998
+   },
+   {
+    "name": "Terry Glenn",
+    "yards": 1411,
+    "season": 1995
+   },
+   {
+    "name": "Jeremiah Smith",
+    "yards": 1315,
+    "season": 2024
+   },
+   {
+    "name": "Marvin Harrison Jr.",
+    "yards": 1263,
+    "season": 2022
+   },
+   {
+    "name": "Jeremiah Smith",
+    "yards": 1243,
+    "season": 2025
+   },
+   {
+    "name": "Marvin Harrison Jr.",
+    "yards": 1211,
+    "season": 2023
+   },
+   {
+    "name": "Emeka Egbuka",
+    "yards": 1151,
+    "season": 2022
+   },
+   {
+    "name": "Cris Carter",
+    "yards": 1127,
+    "season": 1986
+   }
+  ]
+ },
+ "LOU": {
+  "verified": true,
+  "source": "Wikipedia \"Louisville Cardinals football statistical leaders\" single-season rushing and receiving yards tables (revision 1379530191), which cite the school record book; fetched 2026-11-23",
+  "rush": [
+   {
+    "name": "Lamar Jackson",
+    "yards": 1601,
+    "season": 2017
+   },
+   {
+    "name": "Lamar Jackson",
+    "yards": 1571,
+    "season": 2016
+   },
+   {
+    "name": "Javian Hawkins",
+    "yards": 1525,
+    "season": 2019
+   },
+   {
+    "name": "Howard Stevens",
+    "yards": 1429,
+    "season": 1971
+   },
+   {
+    "name": "Bilal Powell",
+    "yards": 1405,
+    "season": 2010
+   },
+   {
+    "name": "Nathan Poole",
+    "yards": 1394,
+    "season": 1978
+   },
+   {
+    "name": "Howard Stevens",
+    "yards": 1294,
+    "season": 1972
+   },
+   {
+    "name": "Walter Peacock",
+    "yards": 1294,
+    "season": 1973
+   },
+   {
+    "name": "Frank Moreau",
+    "yards": 1289,
+    "season": 1999
+   },
+   {
+    "name": "Lenny Lyles",
+    "yards": 1207,
+    "season": 1957
+   }
+  ],
+  "rec": [
+   {
+    "name": "Tutu Atwell",
+    "yards": 1276,
+    "season": 2019
+   },
+   {
+    "name": "Harry Douglas",
+    "yards": 1265,
+    "season": 2006
+   },
+   {
+    "name": "J. R. Russell",
+    "yards": 1213,
+    "season": 2003
+   },
+   {
+    "name": "Arnold Jackson",
+    "yards": 1209,
+    "season": 1999
+   },
+   {
+    "name": "Deion Branch",
+    "yards": 1188,
+    "season": 2001
+   },
+   {
+    "name": "Arnold Jackson",
+    "yards": 1165,
+    "season": 1998
+   },
+   {
+    "name": "Harry Douglas",
+    "yards": 1159,
+    "season": 2007
+   },
+   {
+    "name": "Mark Clayton",
+    "yards": 1112,
+    "season": 1982
+   },
+   {
+    "name": "Tyler Hudson",
+    "yards": 1034,
+    "season": 2022
+   },
+   {
+    "name": "Deion Branch",
+    "yards": 1016,
+    "season": 2000
+   }
+  ]
+ },
+ "CLEM": {
+  "verified": true,
+  "source": "Wikipedia \"Clemson Tigers football statistical leaders\" single-season rushing and receiving yards tables (revision 1383648805), which cite the school record book; fetched 2026-11-23",
+  "rush": [
+   {
+    "name": "Travis Etienne",
+    "yards": 1658,
+    "season": 2018
+   },
+   {
+    "name": "Travis Etienne",
+    "yards": 1614,
+    "season": 2019
+   },
+   {
+    "name": "Wayne Gallman",
+    "yards": 1527,
+    "season": 2015
+   },
+   {
+    "name": "Raymond Priester",
+    "yards": 1345,
+    "season": 1996
+   },
+   {
+    "name": "Raymond Priester",
+    "yards": 1322,
+    "season": 1995
+   },
+   {
+    "name": "Terrence Flagler",
+    "yards": 1258,
+    "season": 1986
+   },
+   {
+    "name": "C. J. Spiller",
+    "yards": 1212,
+    "season": 2009
+   },
+   {
+    "name": "Kenny Flowers",
+    "yards": 1200,
+    "season": 1985
+   },
+   {
+    "name": "Terry Allen",
+    "yards": 1192,
+    "season": 1988
+   },
+   {
+    "name": "James Davis",
+    "yards": 1187,
+    "season": 2006
+   }
+  ],
+  "rec": [
+   {
+    "name": "Sammy Watkins",
+    "yards": 1464,
+    "season": 2013
+   },
+   {
+    "name": "DeAndre Hopkins",
+    "yards": 1405,
+    "season": 2012
+   },
+   {
+    "name": "Mike Williams",
+    "yards": 1361,
+    "season": 2016
+   },
+   {
+    "name": "Sammy Watkins",
+    "yards": 1219,
+    "season": 2011
+   },
+   {
+    "name": "Tee Higgins",
+    "yards": 1167,
+    "season": 2019
+   },
+   {
+    "name": "Rod Gardner",
+    "yards": 1084,
+    "season": 1999
+   },
+   {
+    "name": "Aaron Kelly",
+    "yards": 1081,
+    "season": 2007
+   },
+   {
+    "name": "Rod Gardner",
+    "yards": 1050,
+    "season": 2000
+   },
+   {
+    "name": "Mike Williams",
+    "yards": 1030,
+    "season": 2014
+   },
+   {
+    "name": "Derrick Hamilton",
+    "yards": 1026,
+    "season": 2003
+   }
+  ]
+ },
+ "USC": {
+  "verified": true,
+  "source": "Wikipedia \"USC Trojans football statistical leaders\" single-season rushing and receiving yards tables (revision 1387109358), which cite the school record book; fetched 2026-11-23",
+  "rush": [
+   {
+    "name": "Marcus Allen",
+    "yards": 2427,
+    "season": 1981
+   },
+   {
+    "name": "Charles White",
+    "yards": 2050,
+    "season": 1979
+   },
+   {
+    "name": "Ricky Bell",
+    "yards": 1957,
+    "season": 1975
+   },
+   {
+    "name": "O. J. Simpson",
+    "yards": 1880,
+    "season": 1968
+   },
+   {
+    "name": "Charles White",
+    "yards": 1859,
+    "season": 1978
+   },
+   {
+    "name": "Reggie Bush",
+    "yards": 1740,
+    "season": 2005
+   },
+   {
+    "name": "Marcus Allen",
+    "yards": 1563,
+    "season": 1980
+   },
+   {
+    "name": "Ronald Jones II",
+    "yards": 1550,
+    "season": 2017
+   },
+   {
+    "name": "O. J. Simpson",
+    "yards": 1543,
+    "season": 1967
+   },
+   {
+    "name": "Javorius Allen",
+    "yards": 1489,
+    "season": 2014
+   }
+  ],
+  "rec": [
+   {
+    "name": "Marqise Lee",
+    "yards": 1721,
+    "season": 2012
+   },
+   {
+    "name": "Johnnie Morton",
+    "yards": 1520,
+    "season": 1993
+   },
+   {
+    "name": "JuJu Smith-Schuster",
+    "yards": 1454,
+    "season": 2015
+   },
+   {
+    "name": "Keyshawn Johnson",
+    "yards": 1434,
+    "season": 1995
+   },
+   {
+    "name": "Keyshawn Johnson",
+    "yards": 1362,
+    "season": 1994
+   },
+   {
+    "name": "Mike Williams",
+    "yards": 1314,
+    "season": 2003
+   },
+   {
+    "name": "Nelson Agholor",
+    "yards": 1313,
+    "season": 2014
+   },
+   {
+    "name": "Robert Woods",
+    "yards": 1292,
+    "season": 2011
+   },
+   {
+    "name": "Michael Pittman Jr.",
+    "yards": 1275,
+    "season": 2019
+   },
+   {
+    "name": "Dwayne Jarrett",
+    "yards": 1274,
+    "season": 2005
+   }
+  ]
+ },
+ "UCLA": {
+  "verified": true,
+  "source": "Wikipedia \"UCLA Bruins football statistical leaders\" single-season rushing and receiving yards tables (revision 1385843112), which cite the school record book; fetched 2026-11-23",
+  "rush": [
+   {
+    "name": "Johnathan Franklin",
+    "yards": 1734,
+    "season": 2012
+   },
+   {
+    "name": "Paul Perkins",
+    "yards": 1575,
+    "season": 2014
+   },
+   {
+    "name": "Karim Abdul-Jabbar",
+    "yards": 1571,
+    "season": 1995
+   },
+   {
+    "name": "Gaston Green",
+    "yards": 1405,
+    "season": 1986
+   },
+   {
+    "name": "Freeman McNeil",
+    "yards": 1396,
+    "season": 1979
+   },
+   {
+    "name": "Wendell Tyler",
+    "yards": 1388,
+    "season": 1975
+   },
+   {
+    "name": "Zach Charbonnet",
+    "yards": 1359,
+    "season": 2022
+   },
+   {
+    "name": "Paul Perkins",
+    "yards": 1343,
+    "season": 2015
+   },
+   {
+    "name": "Theotis Brown",
+    "yards": 1283,
+    "season": 1978
+   },
+   {
+    "name": "Skip Hicks",
+    "yards": 1282,
+    "season": 1997
+   }
+  ],
+  "rec": [
+   {
+    "name": "Freddie Mitchell",
+    "yards": 1494,
+    "season": 2000
+   },
+   {
+    "name": "Danny Farmer",
+    "yards": 1274,
+    "season": 1998
+   },
+   {
+    "name": "Jordan Lasley",
+    "yards": 1264,
+    "season": 2017
+   },
+   {
+    "name": "Kevin Jordan",
+    "yards": 1228,
+    "season": 1994
+   },
+   {
+    "name": "J. J. Stokes",
+    "yards": 1181,
+    "season": 1993
+   },
+   {
+    "name": "Nelson Rosario",
+    "yards": 1161,
+    "season": 2011
+   },
+   {
+    "name": "Jordan Payton",
+    "yards": 1105,
+    "season": 2015
+   },
+   {
+    "name": "Craig Bragg",
+    "yards": 1065,
+    "season": 2003
+   },
+   {
+    "name": "Sean LaChapelle",
+    "yards": 1056,
+    "season": 1991
+   },
+   {
+    "name": "Jim McElroy",
+    "yards": 988,
+    "season": 1997
+   }
+  ]
+ },
+ "ARIZ": {
+  "verified": true,
+  "source": "Wikipedia \"Arizona Wildcats football statistical leaders\" single-season rushing and receiving yards tables (revision 1387112364), which cite the school record book; fetched 2026-11-23",
+  "rush": [
+   {
+    "name": "Ka'Deem Carey",
+    "yards": 1929,
+    "season": 2012
+   },
+   {
+    "name": "Ka'Deem Carey",
+    "yards": 1885,
+    "season": 2013
+   },
+   {
+    "name": "Trung Canidate",
+    "yards": 1602,
+    "season": 1999
+   },
+   {
+    "name": "J.J. Taylor",
+    "yards": 1434,
+    "season": 2018
+   },
+   {
+    "name": "Khalil Tate",
+    "yards": 1411,
+    "season": 2017
+   },
+   {
+    "name": "Nick Wilson",
+    "yards": 1375,
+    "season": 2014
+   },
+   {
+    "name": "Art Luppino",
+    "yards": 1359,
+    "season": 1954
+   },
+   {
+    "name": "Art Luppino",
+    "yards": 1313,
+    "season": 1955
+   },
+   {
+    "name": "Clarence Farmer",
+    "yards": 1229,
+    "season": 2001
+   },
+   {
+    "name": "Trung Canidate",
+    "yards": 1220,
+    "season": 1998
+   }
+  ],
+  "rec": [
+   {
+    "name": "Dennis Northcutt",
+    "yards": 1422,
+    "season": 1999
+   },
+   {
+    "name": "Tetairoa McMillan",
+    "yards": 1402,
+    "season": 2023
+   },
+   {
+    "name": "Bobby Wade",
+    "yards": 1389,
+    "season": 2002
+   },
+   {
+    "name": "Austin Hill",
+    "yards": 1364,
+    "season": 2012
+   },
+   {
+    "name": "Tetairoa McMillan",
+    "yards": 1319,
+    "season": 2024
+   },
+   {
+    "name": "Juron Criner",
+    "yards": 1233,
+    "season": 2010
+   },
+   {
+    "name": "Keith Hartwig",
+    "yards": 1134,
+    "season": 1976
+   },
+   {
+    "name": "Dorian Singer",
+    "yards": 1105,
+    "season": 2022
+   },
+   {
+    "name": "Mike Thomas",
+    "yards": 1038,
+    "season": 2007
+   },
+   {
+    "name": "Jacob Cowing",
+    "yards": 1034,
+    "season": 2022
+   }
+  ]
+ },
+ "ASU": {
+  "verified": true,
+  "source": "Wikipedia \"Arizona State Sun Devils football statistical leaders\" single-season rushing and receiving yards tables (revision 1387163761), which cite the school record book; fetched 2026-11-23",
+  "rush": [
+   {
+    "name": "Cam Skattebo",
+    "yards": 1711,
+    "season": 2024
+   },
+   {
+    "name": "Eno Benjamin",
+    "yards": 1642,
+    "season": 2018
+   },
+   {
+    "name": "Woody Green",
+    "yards": 1565,
+    "season": 1972
+   },
+   {
+    "name": "Wilford White",
+    "yards": 1502,
+    "season": 1950
+   },
+   {
+    "name": "Art Malone",
+    "yards": 1431,
+    "season": 1968
+   },
+   {
+    "name": "Freddie Williams",
+    "yards": 1427,
+    "season": 1975
+   },
+   {
+    "name": "Woody Green",
+    "yards": 1313,
+    "season": 1973
+   },
+   {
+    "name": "Woody Green",
+    "yards": 1310,
+    "season": 1971
+   },
+   {
+    "name": "Freddie Williams",
+    "yards": 1299,
+    "season": 1974
+   },
+   {
+    "name": "Ryan Torain",
+    "yards": 1229,
+    "season": 2006
+   }
+  ],
+  "rec": [
+   {
+    "name": "Shaun McDonald",
+    "yards": 1405,
+    "season": 2002
+   },
+   {
+    "name": "Gerell Robinson",
+    "yards": 1397,
+    "season": 2011
+   },
+   {
+    "name": "Derek Hagan",
+    "yards": 1248,
+    "season": 2004
+   },
+   {
+    "name": "Derek Hagan",
+    "yards": 1210,
+    "season": 2005
+   },
+   {
+    "name": "Brandon Aiyuk",
+    "yards": 1192,
+    "season": 2019
+   },
+   {
+    "name": "Jaelen Strong",
+    "yards": 1165,
+    "season": 2014
+   },
+   {
+    "name": "Reed Harris",
+    "yards": 1159,
+    "season": 2026
+   },
+   {
+    "name": "Morris Owens",
+    "yards": 1144,
+    "season": 1973
+   },
+   {
+    "name": "N'Keal Harry",
+    "yards": 1142,
+    "season": 2017
+   },
+   {
+    "name": "Jaelen Strong",
+    "yards": 1122,
+    "season": 2013
+   }
+  ]
+ },
+ "PUR": {
+  "verified": true,
+  "source": "Wikipedia \"Purdue Boilermakers football statistical leaders\" single-season rushing and receiving yards tables (revision 1387405885), which cite the school record book; fetched 2026-11-23",
+  "rush": [
+   {
+    "name": "Mike Alstott",
+    "yards": 1436,
+    "season": 1995
+   },
+   {
+    "name": "Otis Armstrong",
+    "yards": 1361,
+    "season": 1972
+   },
+   {
+    "name": "Mike Alstott",
+    "yards": 1188,
+    "season": 1994
+   },
+   {
+    "name": "Kory Sheets",
+    "yards": 1131,
+    "season": 2008
+   },
+   {
+    "name": "Joey Harris",
+    "yards": 1115,
+    "season": 2002
+   },
+   {
+    "name": "Otis Armstrong",
+    "yards": 1009,
+    "season": 1970
+   },
+   {
+    "name": "Leroy Keyes",
+    "yards": 1003,
+    "season": 1968
+   },
+   {
+    "name": "Scott Dierking",
+    "yards": 1000,
+    "season": 1976
+   },
+   {
+    "name": "Montrell Lowe",
+    "yards": 998,
+    "season": 2000
+   },
+   {
+    "name": "Harry Szulborski",
+    "yards": 989,
+    "season": 1948
+   }
+  ],
+  "rec": [
+   {
+    "name": "Charlie Jones",
+    "yards": 1361,
+    "season": 2022
+   },
+   {
+    "name": "John Standeford",
+    "yards": 1307,
+    "season": 2002
+   },
+   {
+    "name": "David Bell",
+    "yards": 1286,
+    "season": 2021
+   },
+   {
+    "name": "Rondale Moore",
+    "yards": 1258,
+    "season": 2018
+   },
+   {
+    "name": "Chris Daniels",
+    "yards": 1236,
+    "season": 1999
+   },
+   {
+    "name": "Brian Alford",
+    "yards": 1228,
+    "season": 1997
+   },
+   {
+    "name": "John Standeford",
+    "yards": 1150,
+    "season": 2003
+   },
+   {
+    "name": "Keith Smith",
+    "yards": 1100,
+    "season": 2009
+   },
+   {
+    "name": "Rodney Carter",
+    "yards": 1099,
+    "season": 1985
+   },
+   {
+    "name": "Taylor Stubblefield",
+    "yards": 1095,
+    "season": 2004
+   }
+  ]
+ },
+ "IU": {
+  "verified": true,
+  "source": "Wikipedia \"Indiana Hoosiers football statistical leaders\" single-season rushing and receiving yards tables (revision 1387103435), which cite the school record book; fetched 2026-11-23",
+  "rush": [
+   {
+    "name": "Tevin Coleman",
+    "yards": 2036,
+    "season": 2014
+   },
+   {
+    "name": "Vaughn Dunbar",
+    "yards": 1805,
+    "season": 1991
+   },
+   {
+    "name": "Anthony Thompson",
+    "yards": 1793,
+    "season": 1989
+   },
+   {
+    "name": "Anthony Thompson",
+    "yards": 1686,
+    "season": 1988
+   },
+   {
+    "name": "Alex Smith",
+    "yards": 1475,
+    "season": 1994
+   },
+   {
+    "name": "Levron Williams",
+    "yards": 1401,
+    "season": 2001
+   },
+   {
+    "name": "Antwaan Randle El",
+    "yards": 1270,
+    "season": 2000
+   },
+   {
+    "name": "Courtney Snyder",
+    "yards": 1254,
+    "season": 1974
+   },
+   {
+    "name": "Alex Smith",
+    "yards": 1248,
+    "season": 1996
+   },
+   {
+    "name": "Vaughn Dunbar",
+    "yards": 1224,
+    "season": 1990
+   }
+  ],
+  "rec": [
+   {
+    "name": "Ernie Jones",
+    "yards": 1265,
+    "season": 1987
+   },
+   {
+    "name": "James Hardy",
+    "yards": 1125,
+    "season": 2007
+   },
+   {
+    "name": "Charlie Becker",
+    "yards": 1117,
+    "season": 2026
+   },
+   {
+    "name": "Cody Latimer",
+    "yards": 1096,
+    "season": 2013
+   },
+   {
+    "name": "Thomas Lewis",
+    "yards": 1058,
+    "season": 1993
+   },
+   {
+    "name": "Courtney Roby",
+    "yards": 1039,
+    "season": 2002
+   },
+   {
+    "name": "Simmie Cobbs Jr.",
+    "yards": 1035,
+    "season": 2015
+   },
+   {
+    "name": "Whop Philyor",
+    "yards": 1002,
+    "season": 2019
+   },
+   {
+    "name": "Nick Westbrook-Ikhine",
+    "yards": 995,
+    "season": 2016
+   },
+   {
+    "name": "Tandon Doss",
+    "yards": 962,
+    "season": 2009
+   }
+  ]
  }
 }

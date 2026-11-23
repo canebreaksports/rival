@@ -3,7 +3,7 @@ import { isNotable } from "@/lib/notable";
 import { describe, expect, it } from "vitest";
 import { DATA } from "@/lib/data";
 import { readSets } from "@/lib/sets";
-import { weekSlug, WEEKLY_N } from "@/lib/build";
+import { weekSlug, WEEKLY_N, countCandidates } from "@/lib/build";
 import { validateQuestion } from "@/lib/validate";
 
 describe("frozen sets", () => {
@@ -27,7 +27,8 @@ describe("frozen sets", () => {
   it("from this week on, both schools get an edge: one count each school leads", () => {
     for (const s of sets.filter(s => s.game.date >= "2026-11-22")) {
       const leads = s.questions.filter(q => q.type === "count").map(q => (q.type === "count" ? Math.sign(q.A.length - q.B.length) : 0));
-      expect(leads, s.slug).toContain(1); expect(leads, s.slug).toContain(-1);
+      const c = countCandidates(DATA, s.game.away, s.game.home).map(q => (q.type === "count" ? Math.sign(q.A.length - q.B.length) : 0));
+      if (c.includes(1) && c.includes(-1)) { expect(leads, s.slug).toContain(1); expect(leads, s.slug).toContain(-1) } // else one school leads everything
       expect(s.questions.filter(q => /^d[cm]/.test(q.sig)).length, s.slug).toBeLessThanOrEqual(1); // the draft is a side dish
     }
   });

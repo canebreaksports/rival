@@ -1,0 +1,447 @@
+{
+ "key": "rival:2026-11-28:PUR@IU",
+ "slug": "2026-11-28-pur-at-iu",
+ "game": {
+  "date": "2026-11-28",
+  "away": "PUR",
+  "home": "IU"
+ },
+ "generatedAt": "2026-11-23T21:12:19.907Z",
+ "engine": 22,
+ "questions": [
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "PUR",
+   "b": "IU",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Purdue and Indiana's combined top 10 career rushing yards: which school has more players on the list?",
+   "A": [
+    {
+     "name": "Mike Alstott",
+     "yards": 3635,
+     "label": "3,635",
+     "profile": "3,635 career rushing yards · No. 3 on the combined list"
+    },
+    {
+     "name": "Kory Sheets",
+     "yards": 3341,
+     "label": "3,341",
+     "profile": "3,341 career rushing yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Otis Armstrong",
+     "yards": 3315,
+     "label": "3,315",
+     "profile": "3,315 career rushing yards · No. 6 on the combined list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Anthony Thompson",
+     "yards": 5299,
+     "label": "5,299",
+     "profile": "5,299 career rushing yards · No. 1 on the combined list"
+    },
+    {
+     "name": "Antwaan Randle El",
+     "yards": 3895,
+     "label": "3,895",
+     "profile": "3,895 career rushing yards · No. 2 on the combined list"
+    },
+    {
+     "name": "Alex Smith",
+     "yards": 3492,
+     "label": "3,492",
+     "profile": "3,492 career rushing yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Mike Harkrader",
+     "yards": 3257,
+     "label": "3,257",
+     "profile": "3,257 career rushing yards · No. 7 on the combined list"
+    },
+    {
+     "name": "Tevin Coleman",
+     "yards": 3219,
+     "label": "3,219",
+     "profile": "3,219 career rushing yards · No. 8 on the combined list"
+    },
+    {
+     "name": "Levron Williams",
+     "yards": 3095,
+     "label": "3,095",
+     "profile": "3,095 career rushing yards · No. 9 on the combined list"
+    },
+    {
+     "name": "Vaughn Dunbar",
+     "yards": 3029,
+     "label": "3,029",
+     "profile": "3,029 career rushing yards · No. 10 on the combined list"
+    }
+   ],
+   "sig": "fcrush"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2015",
+    "winner": "IU",
+    "loser": "PUR",
+    "ws": 54,
+    "ls": 36,
+    "venue": "Ross-Ade Stadium"
+   },
+   "prompt": "In this game, did Simmie Cobbs Jr. (Indiana) have more or less than",
+   "line": "60 receiving yards",
+   "answer": "over",
+   "reveal": "More. Simmie Cobbs Jr. had 84 receiving yards on 5 catches and 1 TD in this game.",
+   "check": {
+    "value": 84,
+    "line": 60
+   },
+   "sig": "gm2015-11-28Simmie Cobbs Jr.rec"
+  },
+  {
+   "type": "mc",
+   "label": "Awards",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Which of these players won the Davey O'Brien Award, given to the nation's best quarterback?",
+   "options": [
+    "Fernando Mendoza (Indiana)",
+    "Drew Brees (Purdue)",
+    "Peyton Ramsey (Indiana)",
+    "Zander Diamont (Indiana)"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "reveal": "Fernando Mendoza (Indiana) won the Davey O'Brien Award in 2025.",
+   "sig": "amobrien2025",
+   "more": {
+    "title": "Every Purdue and Indiana winner of the Davey O'Brien Award",
+    "rows": [
+     "2025: Fernando Mendoza (IU)"
+    ]
+   }
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receptions (at the school shown)?",
+   "A": {
+    "label": "Alexander Horvath (PUR RB)",
+    "value": 69,
+    "school": "PUR"
+   },
+   "B": {
+    "label": "Tevin Coleman (IU RB)",
+    "value": 54,
+    "school": "IU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Alexander Horvath 69 vs. Tevin Coleman 54.",
+   "sig": "urecNTevin ColemanAlexander Horvath"
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "PUR",
+   "b": "IU",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Purdue and Indiana's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
+   "A": [
+    {
+     "name": "Mike Alstott",
+     "yards": 1436,
+     "season": 1995,
+     "label": "1995: 1,436",
+     "profile": "1995 season, 1,436 rushing yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Otis Armstrong",
+     "yards": 1361,
+     "season": 1972,
+     "label": "1972: 1,361",
+     "profile": "1972 season, 1,361 rushing yards · No. 8 on the combined list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Tevin Coleman",
+     "yards": 2036,
+     "season": 2014,
+     "label": "2014: 2,036",
+     "profile": "2014 season, 2,036 rushing yards · No. 1 on the combined list"
+    },
+    {
+     "name": "Vaughn Dunbar",
+     "yards": 1805,
+     "season": 1991,
+     "label": "1991: 1,805",
+     "profile": "1991 season, 1,805 rushing yards · No. 2 on the combined list"
+    },
+    {
+     "name": "Anthony Thompson",
+     "yards": 1793,
+     "season": 1989,
+     "label": "1989: 1,793",
+     "profile": "1989 season, 1,793 rushing yards · No. 3 on the combined list"
+    },
+    {
+     "name": "Anthony Thompson",
+     "yards": 1686,
+     "season": 1988,
+     "label": "1988: 1,686",
+     "profile": "1988 season, 1,686 rushing yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Alex Smith",
+     "yards": 1475,
+     "season": 1994,
+     "label": "1994: 1,475",
+     "profile": "1994 season, 1,475 rushing yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Levron Williams",
+     "yards": 1401,
+     "season": 2001,
+     "label": "2001: 1,401",
+     "profile": "2001 season, 1,401 rushing yards · No. 7 on the combined list"
+    },
+    {
+     "name": "Antwaan Randle El",
+     "yards": 1270,
+     "season": 2000,
+     "label": "2000: 1,270",
+     "profile": "2000 season, 1,270 rushing yards · No. 9 on the combined list"
+    },
+    {
+     "name": "Courtney Snyder",
+     "yards": 1254,
+     "season": 1974,
+     "label": "1974: 1,254",
+     "profile": "1974 season, 1,254 rushing yards · No. 10 on the combined list"
+    }
+   ],
+   "sig": "fsrush"
+  },
+  {
+   "type": "count",
+   "label": "Since 2018",
+   "a": "PUR",
+   "b": "IU",
+   "threshold": 1100,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2018 through 2025, which school had more 1,100-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Rondale Moore",
+     "yards": 1258,
+     "season": 2018,
+     "profile": "Wide receiver · 2018: 213 rushing, 1,258 receiving yds"
+    },
+    {
+     "name": "David Bell",
+     "yards": 1286,
+     "season": 2021,
+     "profile": "Wide receiver · 2021: 39 rushing, 1,286 receiving yds"
+    },
+    {
+     "name": "Charlie Jones",
+     "yards": 1361,
+     "season": 2022,
+     "profile": "Wide receiver · 2022: 3 rushing, 1,361 receiving yds"
+    }
+   ],
+   "B": [],
+   "sig": "tsrec11002018",
+   "bonus": "names"
+  },
+  {
+   "type": "mc",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2025",
+    "winner": "IU",
+    "loser": "PUR",
+    "ws": 56,
+    "ls": 3,
+    "venue": "Ross-Ade Stadium"
+   },
+   "prompt": "What was the difference in rushing yards in Indiana's 56–3 win over Purdue?",
+   "options": [
+    "Indiana +311 yards",
+    "Indiana +281 yards",
+    "Indiana +381 yards",
+    "Purdue +341 yards"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    0,
+    2,
+    1
+   ],
+   "reveal": "Indiana +311. Indiana had 355 rushing yards, Purdue 44.",
+   "sig": "td2025-11-28rush"
+  },
+  {
+   "type": "rank",
+   "label": "Rivalry Games",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these single-game receiving performances in Purdue–Indiana games, highest first.",
+   "items": [
+    {
+     "label": "James Hardy (IU) · 2006",
+     "value": 151,
+     "school": "IU"
+    },
+    {
+     "label": "Dorien Bryant (PUR) · 2007",
+     "value": 55,
+     "school": "PUR"
+    },
+    {
+     "label": "Cody Latimer (IU) · 2013",
+     "value": 110,
+     "school": "IU"
+    },
+    {
+     "label": "Dustin Keller (PUR) · 2007",
+     "value": 81,
+     "school": "PUR"
+    }
+   ],
+   "sig": "grrecCody Latimer2013,Dorien Bryant2007,Dustin Keller2007,James Hardy2006",
+   "more": {
+    "title": "Top receiving games in this rivalry (box scores)",
+    "rows": [
+     "1. Elijah Sarratt (IU) 2024: 165",
+     "2. James Hardy (IU) 2006: 151",
+     "3. Danny Anthrop (PUR) 2013: 151",
+     "4. Charlie Jones (PUR) 2022: 143",
+     "5. Brycen Hopkins (PUR) 2019: 142",
+     "6. Rondale Moore (PUR) 2018: 141",
+     "7. Whop Philyor (IU) 2019: 138",
+     "8. Keith Smith (PUR) 2008: 136"
+    ]
+   }
+  },
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "PUR",
+   "b": "IU",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "info": {
+    "title": "Which awards count?",
+    "text": "Heisman Trophy: most outstanding player · Maxwell Award: best all-around player · Walter Camp Award: player of the year · Doak Walker Award: best running back · Biletnikoff Award: best receiver · Davey O'Brien Award: best quarterback · John Mackey Award: best tight end · Outland Trophy: best interior lineman · Chuck Bednarik Award: best defensive player · Bronko Nagurski Trophy: best defensive player · Butkus Award: best linebacker · Jim Thorpe Award: best defensive back · Lombardi Award: best lineman or linebacker · Lou Groza Award: best kicker · Ray Guy Award: best punter"
+   },
+   "prompt": "From 2015 through 2025, which school had more winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)?",
+   "A": [],
+   "B": [
+    {
+     "name": "Fernando Mendoza",
+     "yards": 2025,
+     "season": 2025,
+     "label": "Heisman Trophy",
+     "profile": "QB · won the Heisman Trophy (most outstanding player)"
+    },
+    {
+     "name": "Fernando Mendoza",
+     "yards": 2025,
+     "season": 2025,
+     "label": "Maxwell Award",
+     "profile": "QB · won the Maxwell Award (best all-around player)"
+    },
+    {
+     "name": "Fernando Mendoza",
+     "yards": 2025,
+     "season": 2025,
+     "label": "Walter Camp Award",
+     "profile": "QB · won the Walter Camp Award (player of the year)"
+    },
+    {
+     "name": "Fernando Mendoza",
+     "yards": 2025,
+     "season": 2025,
+     "label": "Davey O'Brien Award",
+     "profile": "won the Davey O'Brien Award (best quarterback)"
+    }
+   ],
+   "sig": "acall2015",
+   "bonus": "names"
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Scott Dierking (Purdue)",
+     "value": 2863,
+     "school": "PUR"
+    },
+    {
+     "label": "Montrell Lowe (Purdue)",
+     "value": 2648,
+     "school": "PUR"
+    },
+    {
+     "label": "Antwaan Randle El (Indiana)",
+     "value": 3895,
+     "school": "IU"
+    },
+    {
+     "label": "Tevin Coleman (Indiana)",
+     "value": 3219,
+     "school": "IU"
+    }
+   ],
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Purdue Boilermakers football statistical leaders\" career rushing yards table (revision 1387405885), which cites the school record book; fetched 2026-11-17; Wikipedia \"Indiana Hoosiers football statistical leaders\" career rushing yards table (revision 1387103435), which cites the school record book; fetched 2026-11-17",
+   "sig": "nrrushingAntwaan Randle El,Montrell Lowe,Scott Dierking,Tevin Coleman",
+   "more": {
+    "title": "Career rushing yards, Purdue and Indiana (school top 10s)",
+    "rows": [
+     "1. Anthony Thompson (Indiana) 5,299",
+     "2. Antwaan Randle El (Indiana) 3,895",
+     "3. Mike Alstott (Purdue) 3,635",
+     "4. Alex Smith (Indiana) 3,492",
+     "5. Kory Sheets (Purdue) 3,341",
+     "6. Otis Armstrong (Purdue) 3,315",
+     "7. Mike Harkrader (Indiana) 3,257",
+     "8. Tevin Coleman (Indiana) 3,219",
+     "9. Levron Williams (Indiana) 3,095",
+     "10. Devin Mockobee (Purdue) 2,983"
+    ]
+   }
+  }
+ ]
+}

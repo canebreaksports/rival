@@ -38,19 +38,16 @@
      "verified": false
     },
     {
-     "type": "moment",
-     "prompt": "Derrick Henry carried the load. Did he have more or fewer than",
-     "line": "50 carries",
-     "answer": "under",
-     "reveal": "Fewer. Derrick Henry carried 46 times for 271 yards.",
-     "game": {
-      "date": "Nov 28, 2015",
-      "winner": "ALA",
-      "ws": 29,
-      "ls": 13,
-      "venue": "Bryant-Denny Stadium"
-     },
-     "source": "Box score: CollegeFootballData /games/players (2015 Iron Bowl): Derrick Henry 46 carries, 271 yards",
+     "type": "mc",
+     "prompt": "Who had more carries: Tre Mason in the 2013 SEC Championship Game (vs. Missouri) or Derrick Henry in the 2015 Iron Bowl?",
+     "options": [
+      "Tre Mason",
+      "Derrick Henry",
+      "Same number"
+     ],
+     "answer": 2,
+     "reveal": "Same number: 46 each. Mason ran 46 times for 304 yards and 4 touchdowns in Auburn's 59–42 SEC title win over Missouri. Henry ran 46 times for 271 yards and a touchdown in Alabama's 29–13 Iron Bowl win.",
+     "source": "Tre Mason, 2013 SEC Championship Game: CollegeFootballData /games/players (46 carries, 304 yds, 4 TD), matched by ESPN box score (event 333410002). Derrick Henry, 2015 Iron Bowl: CollegeFootballData /games/players (46 carries, 271 yds, 1 TD)",
      "verified": true
     },
     {

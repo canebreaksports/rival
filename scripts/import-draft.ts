@@ -6,6 +6,7 @@
 // A draft year is kept only if it's complete: overall picks run 1..N with no gaps or repeats and N is 220–265.
 import fs from "node:fs";
 import path from "node:path";
+import { NEW_SCHOOLS } from "../lib/cfbd-teams";
 
 const [cache] = process.argv.slice(2);
 if (!cache) { console.error("usage: tsx scripts/import-draft.ts <cacheDir>"); process.exit(1); }
@@ -14,6 +15,7 @@ const KEY: Record<string, string> = {
   "Mississippi State": "MSST", Missouri: "MIZ", Oklahoma: "OU", "Ole Miss": "MISS", "South Carolina": "SC",
   Tennessee: "TENN", Texas: "TEX", "Texas A&M": "TAMU", Vanderbilt: "VAN",
 };
+Object.assign(KEY, NEW_SCHOOLS); // non-SEC rivalry schools (lib/cfbd-teams.ts)
 type Pick = { collegeTeam: string; year: number; overall: number; round: number; name: string; position: string; nflTeam: string };
 export interface DraftPick { year: number; round: number; overall: number; name: string; pos: string; nfl: string; school: string }
 

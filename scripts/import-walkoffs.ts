@@ -10,6 +10,7 @@
 // A pair's window starts after the last rivalry game whose data fails a check, so "since <year>" claims are complete.
 import fs from "node:fs";
 import path from "node:path";
+import { NEW_SCHOOLS } from "../lib/cfbd-teams";
 
 const [cache] = process.argv.slice(2);
 if (!cache) { console.error("usage: tsx scripts/import-walkoffs.ts <gamesCacheDir>"); process.exit(1); }
@@ -18,14 +19,17 @@ const KEY: Record<string, string> = {
   "Mississippi State": "MSST", Missouri: "MIZ", Oklahoma: "OU", "Ole Miss": "MISS", "South Carolina": "SC",
   Tennessee: "TENN", Texas: "TEX", "Texas A&M": "TAMU", Vanderbilt: "VAN",
 };
+Object.assign(KEY, NEW_SCHOOLS); // non-SEC rivalry schools (lib/cfbd-teams.ts)
 interface G { id: number; season: number; startDate: string; homeTeam: string; awayTeam: string; homePoints: number; awayPoints: number; homeLineScores?: number[]; awayLineScores?: number[] }
 interface D { gameId: number; offense: string; defense: string; driveNumber: number; scoring: boolean; endPeriod: number; endTime: { minutes: number; seconds: number }; driveResult: string; startOffenseScore: number; startDefenseScore: number; endOffenseScore: number; endDefenseScore: number }
 export interface Walkoff { season: number; date: string; winner: string; loser: string; ws: number; ls: number; how: "ot" | "fg" | "td" | "ret" }
 
 const games = new Map<number, G>(), drives = new Map<number, D[]>();
-for (let y = 2001; y <= 2025; y++) for (const conf of ["SEC", "B12"]) {
-  for (const g of JSON.parse(fs.readFileSync(path.join(cache, "games", `${y}-${conf}.json`), "utf8")) as G[]) games.set(g.id, g);
-  for (const d of JSON.parse(fs.readFileSync(path.join(cache, "drives", `${y}-${conf}.json`), "utf8")) as D[]) {
+for (let y = 2001; y <= 2025; y++) for (const conf of ["SEC", "B12", "ACC", "B1G", "PAC", "Pac-10"]) {
+  const gf = path.join(cache, "games", `${y}-${conf}.json`), df = path.join(cache, "drives", `${y}-${conf}.json`);
+  if (!fs.existsSync(gf) || !fs.existsSync(df)) continue;
+  for (const g of JSON.parse(fs.readFileSync(gf, "utf8")) as G[]) games.set(g.id, g);
+  for (const d of JSON.parse(fs.readFileSync(df, "utf8")) as D[]) {
     if (!drives.has(d.gameId)) drives.set(d.gameId, []);
     const L = drives.get(d.gameId)!; if (!L.some(x => x.driveNumber === d.driveNumber)) L.push(d);
   }

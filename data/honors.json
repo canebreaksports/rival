@@ -80,9 +80,44 @@
  "wins": [
   {
    "award": "heisman",
+   "year": 2000,
+   "name": "Chris Weinke",
+   "school": "FSU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2002,
+   "name": "Carson Palmer",
+   "school": "USC",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
    "year": 2003,
    "name": "Jason White",
    "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2004,
+   "name": "Matt Leinart",
+   "school": "USC",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2005,
+   "name": "Reggie Bush",
+   "school": "USC",
+   "pos": "RB"
+  },
+  {
+   "award": "heisman",
+   "year": 2006,
+   "name": "Troy Smith",
+   "school": "OSU",
    "pos": "QB"
   },
   {
@@ -122,10 +157,24 @@
   },
   {
    "award": "heisman",
+   "year": 2013,
+   "name": "Jameis Winston",
+   "school": "FSU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
    "year": 2015,
    "name": "Derrick Henry",
    "school": "ALA",
    "pos": "RB"
+  },
+  {
+   "award": "heisman",
+   "year": 2016,
+   "name": "Lamar Jackson",
+   "school": "LOU",
+   "pos": "QB"
   },
   {
    "award": "heisman",
@@ -164,9 +213,30 @@
   },
   {
    "award": "heisman",
+   "year": 2022,
+   "name": "Caleb Williams",
+   "school": "USC",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
    "year": 2023,
    "name": "Jayden Daniels",
    "school": "LSU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2025,
+   "name": "Fernando Mendoza",
+   "school": "IU",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2000,
+   "name": "Drew Brees",
+   "school": "PUR",
    "pos": "QB"
   },
   {
@@ -234,6 +304,13 @@
   },
   {
    "award": "maxwell",
+   "year": 2016,
+   "name": "Lamar Jackson",
+   "school": "LOU",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
    "year": 2017,
    "name": "Baker Mayfield",
    "school": "OU",
@@ -268,10 +345,45 @@
    "pos": "QB"
   },
   {
+   "award": "maxwell",
+   "year": 2022,
+   "name": "Caleb Williams",
+   "school": "USC",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2025,
+   "name": "Fernando Mendoza",
+   "school": "IU",
+   "pos": "QB"
+  },
+  {
    "award": "camp",
    "year": 2000,
    "name": "Josh Heupel",
    "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2004,
+   "name": "Matt Leinart",
+   "school": "USC",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2005,
+   "name": "Reggie Bush",
+   "school": "USC",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 2006,
+   "name": "Troy Smith",
+   "school": "OSU",
    "pos": "QB"
   },
   {
@@ -304,10 +416,24 @@
   },
   {
    "award": "camp",
+   "year": 2013,
+   "name": "Jameis Winston",
+   "school": "FSU",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
    "year": 2015,
    "name": "Derrick Henry",
    "school": "ALA",
    "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 2016,
+   "name": "Lamar Jackson",
+   "school": "LOU",
+   "pos": "QB"
   },
   {
    "award": "camp",
@@ -339,16 +465,42 @@
   },
   {
    "award": "camp",
+   "year": 2022,
+   "name": "Caleb Williams",
+   "school": "USC",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
    "year": 2023,
    "name": "Jayden Daniels",
    "school": "LSU",
    "pos": "QB"
   },
   {
+   "award": "camp",
+   "year": 2025,
+   "name": "Fernando Mendoza",
+   "school": "IU",
+   "pos": "QB"
+  },
+  {
+   "award": "doak",
+   "year": 2003,
+   "name": "Chris Perry",
+   "school": "MICH"
+  },
+  {
    "award": "doak",
    "year": 2004,
    "name": "Cedric Benson",
    "school": "TEX"
+  },
+  {
+   "award": "doak",
+   "year": 2005,
+   "name": "Reggie Bush",
+   "school": "USC"
   },
   {
    "award": "doak",
@@ -400,6 +552,24 @@
   },
   {
    "award": "biletnikoff",
+   "year": 2004,
+   "name": "Braylon Edwards",
+   "school": "MICH"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2006,
+   "name": "Calvin Johnson",
+   "school": "GT"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2012,
+   "name": "Marqise Lee",
+   "school": "USC"
+  },
+  {
+   "award": "biletnikoff",
    "year": 2014,
    "name": "Amari Cooper",
    "school": "ALA"
@@ -435,6 +605,24 @@
    "school": "TENN"
   },
   {
+   "award": "biletnikoff",
+   "year": 2023,
+   "name": "Marvin Harrison Jr.",
+   "school": "OSU"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2025,
+   "name": "Makai Lemon",
+   "school": "USC"
+  },
+  {
+   "award": "obrien",
+   "year": 2000,
+   "name": "Chris Weinke",
+   "school": "FSU"
+  },
+  {
    "award": "obrien",
    "year": 2003,
    "name": "Jason White",
@@ -451,6 +639,12 @@
    "year": 2005,
    "name": "Vince Young",
    "school": "TEX"
+  },
+  {
+   "award": "obrien",
+   "year": 2006,
+   "name": "Troy Smith",
+   "school": "OSU"
   },
   {
    "award": "obrien",
@@ -481,6 +675,24 @@
    "year": 2012,
    "name": "Johnny Manziel",
    "school": "TAMU"
+  },
+  {
+   "award": "obrien",
+   "year": 2013,
+   "name": "Jameis Winston",
+   "school": "FSU"
+  },
+  {
+   "award": "obrien",
+   "year": 2015,
+   "name": "Deshaun Watson",
+   "school": "CLEM"
+  },
+  {
+   "award": "obrien",
+   "year": 2016,
+   "name": "Deshaun Watson",
+   "school": "CLEM"
   },
   {
    "award": "obrien",
@@ -519,6 +731,30 @@
    "school": "LSU"
   },
   {
+   "award": "obrien",
+   "year": 2025,
+   "name": "Fernando Mendoza",
+   "school": "IU"
+  },
+  {
+   "award": "mackey",
+   "year": 2000,
+   "name": "Tim Stratton",
+   "school": "PUR"
+  },
+  {
+   "award": "mackey",
+   "year": 2005,
+   "name": "Marcedes Lewis",
+   "school": "UCLA"
+  },
+  {
+   "award": "mackey",
+   "year": 2007,
+   "name": "Fred Davis",
+   "school": "USC"
+  },
+  {
    "award": "mackey",
    "year": 2008,
    "name": "Chase Coffman",
@@ -538,9 +774,27 @@
   },
   {
    "award": "mackey",
+   "year": 2011,
+   "name": "Dwayne Allen",
+   "school": "CLEM"
+  },
+  {
+   "award": "mackey",
+   "year": 2014,
+   "name": "Nick O'Leary",
+   "school": "FSU"
+  },
+  {
+   "award": "mackey",
    "year": 2015,
    "name": "Hunter Henry",
    "school": "ARK"
+  },
+  {
+   "award": "mackey",
+   "year": 2016,
+   "name": "Jake Butt",
+   "school": "MICH"
   },
   {
    "award": "mackey",
@@ -644,6 +898,13 @@
   },
   {
    "award": "outland",
+   "year": 2022,
+   "name": "Olu Oluwatimi",
+   "school": "MICH",
+   "pos": "Center"
+  },
+  {
+   "award": "outland",
    "year": 2023,
    "name": "T'Vondre Sweat",
    "school": "TEX",
@@ -672,6 +933,13 @@
   },
   {
    "award": "bednarik",
+   "year": 2008,
+   "name": "Rey Maualuga",
+   "school": "USC",
+   "pos": "LB"
+  },
+  {
+   "award": "bednarik",
    "year": 2010,
    "name": "Patrick Peterson",
    "school": "LSU",
@@ -683,6 +951,13 @@
    "name": "Tyrann Mathieu",
    "school": "LSU",
    "pos": "CB"
+  },
+  {
+   "award": "bednarik",
+   "year": 2014,
+   "name": "Scooby Wright",
+   "school": "ARIZ",
+   "pos": "LB"
   },
   {
    "award": "bednarik",
@@ -707,6 +982,13 @@
   },
   {
    "award": "bednarik",
+   "year": 2019,
+   "name": "Chase Young",
+   "school": "OSU",
+   "pos": "DE"
+  },
+  {
+   "award": "bednarik",
    "year": 2021,
    "name": "Jordan Davis",
    "school": "UGA",
@@ -728,6 +1010,13 @@
   },
   {
    "award": "nagurski",
+   "year": 2002,
+   "name": "Terrell Suggs",
+   "school": "ASU",
+   "pos": "DE"
+  },
+  {
+   "award": "nagurski",
    "year": 2003,
    "name": "Derrick Strait",
    "school": "OU",
@@ -738,6 +1027,20 @@
    "year": 2004,
    "name": "Derrick Johnson",
    "school": "TEX",
+   "pos": "LB"
+  },
+  {
+   "award": "nagurski",
+   "year": 2005,
+   "name": "Elvis Dumervil",
+   "school": "LOU",
+   "pos": "DE"
+  },
+  {
+   "award": "nagurski",
+   "year": 2006,
+   "name": "James Laurinaitis",
+   "school": "OSU",
    "pos": "LB"
   },
   {
@@ -756,6 +1059,20 @@
   },
   {
    "award": "nagurski",
+   "year": 2010,
+   "name": "Da'Quan Bowers",
+   "school": "CLEM",
+   "pos": "DE"
+  },
+  {
+   "award": "nagurski",
+   "year": 2014,
+   "name": "Scooby Wright",
+   "school": "ARIZ",
+   "pos": "LB"
+  },
+  {
+   "award": "nagurski",
    "year": 2016,
    "name": "Jonathan Allen",
    "school": "ALA",
@@ -767,6 +1084,13 @@
    "name": "Josh Allen",
    "school": "UK",
    "pos": "LB"
+  },
+  {
+   "award": "nagurski",
+   "year": 2019,
+   "name": "Chase Young",
+   "school": "OSU",
+   "pos": "DE"
   },
   {
    "award": "nagurski",
@@ -815,6 +1139,12 @@
   },
   {
    "award": "butkus",
+   "year": 2007,
+   "name": "James Laurinaitis",
+   "school": "OSU"
+  },
+  {
+   "award": "butkus",
    "year": 2009,
    "name": "Rolando McClain",
    "school": "ALA"
@@ -833,6 +1163,12 @@
   },
   {
    "award": "butkus",
+   "year": 2014,
+   "name": "Eric Kendricks",
+   "school": "UCLA"
+  },
+  {
+   "award": "butkus",
    "year": 2016,
    "name": "Reuben Foster",
    "school": "ALA"
@@ -848,6 +1184,12 @@
    "year": 2018,
    "name": "Devin White",
    "school": "LSU"
+  },
+  {
+   "award": "butkus",
+   "year": 2019,
+   "name": "Isaiah Simmons",
+   "school": "CLEM"
   },
   {
    "award": "butkus",
@@ -898,6 +1240,20 @@
   },
   {
    "award": "thorpe",
+   "year": 2007,
+   "name": "Antoine Cason",
+   "school": "ARIZ",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2008,
+   "name": "Malcolm Jenkins",
+   "school": "OSU",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
    "year": 2009,
    "name": "Eric Berry",
    "school": "TENN",
@@ -922,6 +1278,20 @@
    "year": 2012,
    "name": "Johnthan Banks",
    "school": "MSST",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2014,
+   "name": "Gerod Holliman",
+   "school": "LOU",
+   "pos": "S"
+  },
+  {
+   "award": "thorpe",
+   "year": 2016,
+   "name": "Adoree' Jackson",
+   "school": "USC",
    "pos": "CB"
   },
   {
@@ -953,11 +1323,32 @@
    "pos": "CB"
   },
   {
+   "award": "thorpe",
+   "year": 2025,
+   "name": "Caleb Downs",
+   "school": "OSU",
+   "pos": "S"
+  },
+  {
    "award": "lombardi",
    "year": 2019,
    "name": "Joe Burrow",
    "school": "LSU",
    "pos": "Quarterback"
+  },
+  {
+   "award": "lombardi",
+   "year": 2000,
+   "name": "Jamal Reynolds",
+   "school": "FSU",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 2002,
+   "name": "Terrell Suggs",
+   "school": "ASU",
+   "pos": "Defensive end"
   },
   {
    "award": "lombardi",
@@ -971,6 +1362,20 @@
    "year": 2004,
    "name": "David Pollack",
    "school": "UGA",
+   "pos": "Defensive end"
+  },
+  {
+   "award": "lombardi",
+   "year": 2005,
+   "name": "A. J. Hawk",
+   "school": "OSU",
+   "pos": "Linebacker"
+  },
+  {
+   "award": "lombardi",
+   "year": 2006,
+   "name": "LaMarr Woodley",
+   "school": "MICH",
    "pos": "Defensive end"
   },
   {
@@ -996,6 +1401,13 @@
   },
   {
    "award": "lombardi",
+   "year": 2014,
+   "name": "Scooby Wright",
+   "school": "ARIZ",
+   "pos": "Linebacker"
+  },
+  {
+   "award": "lombardi",
    "year": 2016,
    "name": "Jonathan Allen",
    "school": "ALA",
@@ -1010,10 +1422,24 @@
   },
   {
    "award": "lombardi",
+   "year": 2021,
+   "name": "Aidan Hutchinson",
+   "school": "MICH",
+   "pos": "Defensive end"
+  },
+  {
+   "award": "lombardi",
    "year": 2022,
    "name": "Will Anderson Jr.",
    "school": "ALA",
    "pos": "Linebacker"
+  },
+  {
+   "award": "lombardi",
+   "year": 2023,
+   "name": "Laiatu Latu",
+   "school": "UCLA",
+   "pos": "Defensive end"
   },
   {
    "award": "lombardi",
@@ -1030,9 +1456,57 @@
   },
   {
    "award": "groza",
+   "year": 2004,
+   "name": "Mike Nugent",
+   "school": "OSU"
+  },
+  {
+   "award": "groza",
+   "year": 2006,
+   "name": "Art Carmody",
+   "school": "LOU"
+  },
+  {
+   "award": "groza",
+   "year": 2007,
+   "name": "Thomas Weber",
+   "school": "ASU"
+  },
+  {
+   "award": "groza",
+   "year": 2008,
+   "name": "Graham Gano",
+   "school": "FSU"
+  },
+  {
+   "award": "groza",
+   "year": 2009,
+   "name": "Kai Forbath",
+   "school": "UCLA"
+  },
+  {
+   "award": "groza",
    "year": 2011,
    "name": "Randy Bullock",
    "school": "TAMU"
+  },
+  {
+   "award": "groza",
+   "year": 2013,
+   "name": "Roberto Aguayo",
+   "school": "FSU"
+  },
+  {
+   "award": "groza",
+   "year": 2015,
+   "name": "Kaʻimi Fairbairn",
+   "school": "UCLA"
+  },
+  {
+   "award": "groza",
+   "year": 2016,
+   "name": "Zane Gonzalez",
+   "school": "ASU"
   },
   {
    "award": "groza",
@@ -1042,9 +1516,33 @@
   },
   {
    "award": "groza",
+   "year": 2021,
+   "name": "Jake Moody",
+   "school": "MICH"
+  },
+  {
+   "award": "groza",
    "year": 2025,
    "name": "Tate Sandell",
    "school": "OU"
+  },
+  {
+   "award": "guy",
+   "year": 2001,
+   "name": "Travis Dorsch",
+   "school": "PUR"
+  },
+  {
+   "award": "guy",
+   "year": 2003,
+   "name": "B. J. Sander",
+   "school": "OSU"
+  },
+  {
+   "award": "guy",
+   "year": 2007,
+   "name": "Durant Brooks",
+   "school": "GT"
   },
   {
    "award": "guy",
@@ -1078,12 +1576,31 @@
   },
   {
    "award": "guy",
+   "year": 2020,
+   "name": "Pressley Harvin III",
+   "school": "GT"
+  },
+  {
+   "award": "guy",
+   "year": 2024,
+   "name": "Eddie Czaplicki",
+   "school": "USC"
+  },
+  {
+   "award": "guy",
    "year": 2025,
    "name": "Brett Thorson",
    "school": "UGA"
   }
  ],
  "everWon": [
+  {
+   "award": "heisman",
+   "year": 1940,
+   "name": "Tom Harmon",
+   "school": "MICH",
+   "pos": "HB"
+  },
   {
    "award": "heisman",
    "year": 1942,
@@ -1093,9 +1610,30 @@
   },
   {
    "award": "heisman",
+   "year": 1944,
+   "name": "Les Horvath",
+   "school": "OSU",
+   "pos": "HB/QB"
+  },
+  {
+   "award": "heisman",
+   "year": 1950,
+   "name": "Vic Janowicz",
+   "school": "OSU",
+   "pos": "HB/P"
+  },
+  {
+   "award": "heisman",
    "year": 1952,
    "name": "Billy Vessels",
    "school": "OU",
+   "pos": "HB"
+  },
+  {
+   "award": "heisman",
+   "year": 1955,
+   "name": "Howard Cassady",
+   "school": "OSU",
    "pos": "HB"
   },
   {
@@ -1114,10 +1652,31 @@
   },
   {
    "award": "heisman",
+   "year": 1965,
+   "name": "Mike Garrett",
+   "school": "USC",
+   "pos": "HB"
+  },
+  {
+   "award": "heisman",
    "year": 1966,
    "name": "Steve Spurrier",
    "school": "FLA",
    "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 1967,
+   "name": "Gary Beban",
+   "school": "UCLA",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 1968,
+   "name": "O. J. Simpson",
+   "school": "USC",
+   "pos": "HB"
   },
   {
    "award": "heisman",
@@ -1149,9 +1708,23 @@
   },
   {
    "award": "heisman",
+   "year": 1979,
+   "name": "Charles White",
+   "school": "USC",
+   "pos": "RB"
+  },
+  {
+   "award": "heisman",
    "year": 1980,
    "name": "George Rogers",
    "school": "SC",
+   "pos": "RB"
+  },
+  {
+   "award": "heisman",
+   "year": 1981,
+   "name": "Marcus Allen",
+   "school": "USC",
    "pos": "RB"
   },
   {
@@ -1170,10 +1743,38 @@
   },
   {
    "award": "heisman",
+   "year": 1991,
+   "name": "Desmond Howard",
+   "school": "MICH",
+   "pos": "WR/PR"
+  },
+  {
+   "award": "heisman",
+   "year": 1993,
+   "name": "Charlie Ward",
+   "school": "FSU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 1995,
+   "name": "Eddie George",
+   "school": "OSU",
+   "pos": "RB"
+  },
+  {
+   "award": "heisman",
    "year": 1996,
    "name": "Danny Wuerffel",
    "school": "FLA",
    "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 1997,
+   "name": "Charles Woodson",
+   "school": "MICH",
+   "pos": "CB"
   },
   {
    "award": "heisman",
@@ -1184,9 +1785,44 @@
   },
   {
    "award": "heisman",
+   "year": 2000,
+   "name": "Chris Weinke",
+   "school": "FSU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2002,
+   "name": "Carson Palmer",
+   "school": "USC",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
    "year": 2003,
    "name": "Jason White",
    "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2004,
+   "name": "Matt Leinart",
+   "school": "USC",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 2005,
+   "name": "Reggie Bush",
+   "school": "USC",
+   "pos": "RB"
+  },
+  {
+   "award": "heisman",
+   "year": 2006,
+   "name": "Troy Smith",
+   "school": "OSU",
    "pos": "QB"
   },
   {
@@ -1226,10 +1862,24 @@
   },
   {
    "award": "heisman",
+   "year": 2013,
+   "name": "Jameis Winston",
+   "school": "FSU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
    "year": 2015,
    "name": "Derrick Henry",
    "school": "ALA",
    "pos": "RB"
+  },
+  {
+   "award": "heisman",
+   "year": 2016,
+   "name": "Lamar Jackson",
+   "school": "LOU",
+   "pos": "QB"
   },
   {
    "award": "heisman",
@@ -1268,6 +1918,13 @@
   },
   {
    "award": "heisman",
+   "year": 2022,
+   "name": "Caleb Williams",
+   "school": "USC",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
    "year": 2023,
    "name": "Jayden Daniels",
    "school": "LSU",
@@ -1275,9 +1932,72 @@
   },
   {
    "award": "heisman",
+   "year": 2025,
+   "name": "Fernando Mendoza",
+   "school": "IU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 1904,
+   "name": "Willie Heston",
+   "school": "MICH",
+   "pos": "HB"
+  },
+  {
+   "award": "heisman",
+   "year": 1907,
+   "name": "Germany Schulz",
+   "school": "MICH",
+   "pos": "C"
+  },
+  {
+   "award": "heisman",
    "year": 1908,
    "name": "Doc Fenton",
    "school": "LSU",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 1917,
+   "name": "Chic Harley",
+   "school": "OSU",
+   "pos": "HB"
+  },
+  {
+   "award": "heisman",
+   "year": 1919,
+   "name": "Chic Harley",
+   "school": "OSU",
+   "pos": "HB"
+  },
+  {
+   "award": "heisman",
+   "year": 1926,
+   "name": "Benny Friedman",
+   "school": "MICH",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 1927,
+   "name": "Morley Drury",
+   "school": "USC",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 1931,
+   "name": "Gaius Shaver",
+   "school": "USC",
+   "pos": "QB"
+  },
+  {
+   "award": "heisman",
+   "year": 1932,
+   "name": "Harry Newman",
+   "school": "MICH",
    "pos": "QB"
   },
   {
@@ -1296,10 +2016,24 @@
   },
   {
    "award": "maxwell",
+   "year": 1940,
+   "name": "Tom Harmon",
+   "school": "MICH",
+   "pos": "HB"
+  },
+  {
+   "award": "maxwell",
    "year": 1946,
    "name": "Charley Trippi",
    "school": "UGA",
    "pos": "HB, QB, P"
+  },
+  {
+   "award": "maxwell",
+   "year": 1955,
+   "name": "Howard Cassady",
+   "school": "OSU",
+   "pos": "HB"
   },
   {
    "award": "maxwell",
@@ -1310,6 +2044,13 @@
   },
   {
    "award": "maxwell",
+   "year": 1961,
+   "name": "Bob Ferguson",
+   "school": "OSU",
+   "pos": "FB"
+  },
+  {
+   "award": "maxwell",
    "year": 1965,
    "name": "Tommy Nobis",
    "school": "TEX",
@@ -1317,9 +2058,72 @@
   },
   {
    "award": "maxwell",
+   "year": 1967,
+   "name": "Gary Beban",
+   "school": "UCLA",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 1968,
+   "name": "O. J. Simpson",
+   "school": "USC",
+   "pos": "RB"
+  },
+  {
+   "award": "maxwell",
+   "year": 1975,
+   "name": "Archie Griffin",
+   "school": "OSU",
+   "pos": "RB"
+  },
+  {
+   "award": "maxwell",
+   "year": 1979,
+   "name": "Charles White",
+   "school": "USC",
+   "pos": "RB"
+  },
+  {
+   "award": "maxwell",
+   "year": 1981,
+   "name": "Marcus Allen",
+   "school": "USC",
+   "pos": "RB"
+  },
+  {
+   "award": "maxwell",
    "year": 1982,
    "name": "Herschel Walker",
    "school": "UGA",
+   "pos": "RB"
+  },
+  {
+   "award": "maxwell",
+   "year": 1989,
+   "name": "Anthony Thompson",
+   "school": "IU",
+   "pos": "RB"
+  },
+  {
+   "award": "maxwell",
+   "year": 1991,
+   "name": "Desmond Howard",
+   "school": "MICH",
+   "pos": "WR, RS"
+  },
+  {
+   "award": "maxwell",
+   "year": 1993,
+   "name": "Charlie Ward",
+   "school": "FSU",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 1995,
+   "name": "Eddie George",
+   "school": "OSU",
    "pos": "RB"
   },
   {
@@ -1342,6 +2146,13 @@
    "name": "Ricky Williams",
    "school": "TEX",
    "pos": "RB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2000,
+   "name": "Drew Brees",
+   "school": "PUR",
+   "pos": "QB"
   },
   {
    "award": "maxwell",
@@ -1408,6 +2219,13 @@
   },
   {
    "award": "maxwell",
+   "year": 2016,
+   "name": "Lamar Jackson",
+   "school": "LOU",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
    "year": 2017,
    "name": "Baker Mayfield",
    "school": "OU",
@@ -1442,6 +2260,34 @@
    "pos": "QB"
   },
   {
+   "award": "maxwell",
+   "year": 2022,
+   "name": "Caleb Williams",
+   "school": "USC",
+   "pos": "QB"
+  },
+  {
+   "award": "maxwell",
+   "year": 2025,
+   "name": "Fernando Mendoza",
+   "school": "IU",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 1967,
+   "name": "O. J. Simpson",
+   "school": "USC",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 1968,
+   "name": "O. J. Simpson",
+   "school": "USC",
+   "pos": "RB"
+  },
+  {
    "award": "camp",
    "year": 1969,
    "name": "Steve Owens",
@@ -1457,9 +2303,37 @@
   },
   {
    "award": "camp",
+   "year": 1974,
+   "name": "Archie Griffin",
+   "school": "OSU",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 1975,
+   "name": "Archie Griffin",
+   "school": "OSU",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
    "year": 1978,
    "name": "Billy Sims",
    "school": "OU",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 1979,
+   "name": "Charles White",
+   "school": "USC",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 1981,
+   "name": "Marcus Allen",
+   "school": "USC",
    "pos": "RB"
   },
   {
@@ -1478,10 +2352,45 @@
   },
   {
    "award": "camp",
+   "year": 1989,
+   "name": "Anthony Thompson",
+   "school": "IU",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 1991,
+   "name": "Desmond Howard",
+   "school": "MICH",
+   "pos": "WR"
+  },
+  {
+   "award": "camp",
+   "year": 1993,
+   "name": "Charlie Ward",
+   "school": "FSU",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 1995,
+   "name": "Eddie George",
+   "school": "OSU",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
    "year": 1996,
    "name": "Danny Wuerffel",
    "school": "FLA",
    "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 1997,
+   "name": "Charles Woodson",
+   "school": "MICH",
+   "pos": "CB"
   },
   {
    "award": "camp",
@@ -1495,6 +2404,27 @@
    "year": 2000,
    "name": "Josh Heupel",
    "school": "OU",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2004,
+   "name": "Matt Leinart",
+   "school": "USC",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2005,
+   "name": "Reggie Bush",
+   "school": "USC",
+   "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 2006,
+   "name": "Troy Smith",
+   "school": "OSU",
    "pos": "QB"
   },
   {
@@ -1527,10 +2457,24 @@
   },
   {
    "award": "camp",
+   "year": 2013,
+   "name": "Jameis Winston",
+   "school": "FSU",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
    "year": 2015,
    "name": "Derrick Henry",
    "school": "ALA",
    "pos": "RB"
+  },
+  {
+   "award": "camp",
+   "year": 2016,
+   "name": "Lamar Jackson",
+   "school": "LOU",
+   "pos": "QB"
   },
   {
    "award": "camp",
@@ -1562,9 +2506,23 @@
   },
   {
    "award": "camp",
+   "year": 2022,
+   "name": "Caleb Williams",
+   "school": "USC",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
    "year": 2023,
    "name": "Jayden Daniels",
    "school": "LSU",
+   "pos": "QB"
+  },
+  {
+   "award": "camp",
+   "year": 2025,
+   "name": "Fernando Mendoza",
+   "school": "IU",
    "pos": "QB"
   },
   {
@@ -1572,6 +2530,12 @@
    "year": 1992,
    "name": "Garrison Hearst",
    "school": "UGA"
+  },
+  {
+   "award": "doak",
+   "year": 1995,
+   "name": "Eddie George",
+   "school": "OSU"
   },
   {
    "award": "doak",
@@ -1587,9 +2551,21 @@
   },
   {
    "award": "doak",
+   "year": 2003,
+   "name": "Chris Perry",
+   "school": "MICH"
+  },
+  {
+   "award": "doak",
    "year": 2004,
    "name": "Cedric Benson",
    "school": "TEX"
+  },
+  {
+   "award": "doak",
+   "year": 2005,
+   "name": "Reggie Bush",
+   "school": "USC"
   },
   {
    "award": "doak",
@@ -1635,9 +2611,33 @@
   },
   {
    "award": "biletnikoff",
+   "year": 1995,
+   "name": "Terry Glenn",
+   "school": "OSU"
+  },
+  {
+   "award": "biletnikoff",
    "year": 2001,
    "name": "Josh Reed",
    "school": "LSU"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2004,
+   "name": "Braylon Edwards",
+   "school": "MICH"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2006,
+   "name": "Calvin Johnson",
+   "school": "GT"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2012,
+   "name": "Marqise Lee",
+   "school": "USC"
   },
   {
    "award": "biletnikoff",
@@ -1676,6 +2676,18 @@
    "school": "TENN"
   },
   {
+   "award": "biletnikoff",
+   "year": 2023,
+   "name": "Marvin Harrison Jr.",
+   "school": "OSU"
+  },
+  {
+   "award": "biletnikoff",
+   "year": 2025,
+   "name": "Makai Lemon",
+   "school": "USC"
+  },
+  {
    "award": "obrien",
    "year": 1977,
    "name": "Earl Campbell",
@@ -1688,6 +2700,18 @@
    "name": "Billy Sims",
    "school": "OU",
    "pos": "Running back"
+  },
+  {
+   "award": "obrien",
+   "year": 1988,
+   "name": "Troy Aikman",
+   "school": "UCLA"
+  },
+  {
+   "award": "obrien",
+   "year": 1993,
+   "name": "Charlie Ward",
+   "school": "FSU"
   },
   {
    "award": "obrien",
@@ -1709,6 +2733,18 @@
   },
   {
    "award": "obrien",
+   "year": 1999,
+   "name": "Joe Hamilton",
+   "school": "GT"
+  },
+  {
+   "award": "obrien",
+   "year": 2000,
+   "name": "Chris Weinke",
+   "school": "FSU"
+  },
+  {
+   "award": "obrien",
    "year": 2003,
    "name": "Jason White",
    "school": "OU"
@@ -1724,6 +2760,12 @@
    "year": 2005,
    "name": "Vince Young",
    "school": "TEX"
+  },
+  {
+   "award": "obrien",
+   "year": 2006,
+   "name": "Troy Smith",
+   "school": "OSU"
   },
   {
    "award": "obrien",
@@ -1754,6 +2796,24 @@
    "year": 2012,
    "name": "Johnny Manziel",
    "school": "TAMU"
+  },
+  {
+   "award": "obrien",
+   "year": 2013,
+   "name": "Jameis Winston",
+   "school": "FSU"
+  },
+  {
+   "award": "obrien",
+   "year": 2015,
+   "name": "Deshaun Watson",
+   "school": "CLEM"
+  },
+  {
+   "award": "obrien",
+   "year": 2016,
+   "name": "Deshaun Watson",
+   "school": "CLEM"
   },
   {
    "award": "obrien",
@@ -1792,6 +2852,30 @@
    "school": "LSU"
   },
   {
+   "award": "obrien",
+   "year": 2025,
+   "name": "Fernando Mendoza",
+   "school": "IU"
+  },
+  {
+   "award": "mackey",
+   "year": 2000,
+   "name": "Tim Stratton",
+   "school": "PUR"
+  },
+  {
+   "award": "mackey",
+   "year": 2005,
+   "name": "Marcedes Lewis",
+   "school": "UCLA"
+  },
+  {
+   "award": "mackey",
+   "year": 2007,
+   "name": "Fred Davis",
+   "school": "USC"
+  },
+  {
    "award": "mackey",
    "year": 2008,
    "name": "Chase Coffman",
@@ -1811,9 +2895,27 @@
   },
   {
    "award": "mackey",
+   "year": 2011,
+   "name": "Dwayne Allen",
+   "school": "CLEM"
+  },
+  {
+   "award": "mackey",
+   "year": 2014,
+   "name": "Nick O'Leary",
+   "school": "FSU"
+  },
+  {
+   "award": "mackey",
    "year": 2015,
    "name": "Hunter Henry",
    "school": "ARK"
+  },
+  {
+   "award": "mackey",
+   "year": 2016,
+   "name": "Jake Butt",
+   "school": "MICH"
   },
   {
    "award": "mackey",
@@ -1875,6 +2977,13 @@
   },
   {
    "award": "outland",
+   "year": 1956,
+   "name": "Jim Parker",
+   "school": "OSU",
+   "pos": "Guard"
+  },
+  {
+   "award": "outland",
    "year": 1958,
    "name": "Zeke Smith",
    "school": "AUB",
@@ -1910,10 +3019,31 @@
   },
   {
    "award": "outland",
+   "year": 1967,
+   "name": "Ron Yary",
+   "school": "USC",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "outland",
    "year": 1968,
    "name": "Bill Stanfill",
    "school": "UGA",
    "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 1970,
+   "name": "Jim Stillwagon",
+   "school": "OSU",
+   "pos": "Middle guard"
+  },
+  {
+   "award": "outland",
+   "year": 1973,
+   "name": "John Hicks",
+   "school": "OSU",
+   "pos": "Offensive tackle"
   },
   {
    "award": "outland",
@@ -1942,6 +3072,34 @@
    "name": "Tracy Rocker",
    "school": "AUB",
    "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 1993,
+   "name": "Rob Waldrop",
+   "school": "ARIZ",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 1995,
+   "name": "Jonathan Ogden",
+   "school": "UCLA",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 1996,
+   "name": "Orlando Pace",
+   "school": "OSU",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "outland",
+   "year": 1998,
+   "name": "Kris Farris",
+   "school": "UCLA",
+   "pos": "Offensive tackle"
   },
   {
    "award": "outland",
@@ -2022,6 +3180,13 @@
   },
   {
    "award": "outland",
+   "year": 2022,
+   "name": "Olu Oluwatimi",
+   "school": "MICH",
+   "pos": "Center"
+  },
+  {
+   "award": "outland",
    "year": 2023,
    "name": "T'Vondre Sweat",
    "school": "TEX",
@@ -2033,6 +3198,13 @@
    "name": "Kelvin Banks Jr.",
    "school": "TEX",
    "pos": "Offensive tackle"
+  },
+  {
+   "award": "bednarik",
+   "year": 1997,
+   "name": "Charles Woodson",
+   "school": "MICH",
+   "pos": "CB"
   },
   {
    "award": "bednarik",
@@ -2057,6 +3229,13 @@
   },
   {
    "award": "bednarik",
+   "year": 2008,
+   "name": "Rey Maualuga",
+   "school": "USC",
+   "pos": "LB"
+  },
+  {
+   "award": "bednarik",
    "year": 2010,
    "name": "Patrick Peterson",
    "school": "LSU",
@@ -2068,6 +3247,13 @@
    "name": "Tyrann Mathieu",
    "school": "LSU",
    "pos": "CB"
+  },
+  {
+   "award": "bednarik",
+   "year": 2014,
+   "name": "Scooby Wright",
+   "school": "ARIZ",
+   "pos": "LB"
   },
   {
    "award": "bednarik",
@@ -2092,6 +3278,13 @@
   },
   {
    "award": "bednarik",
+   "year": 2019,
+   "name": "Chase Young",
+   "school": "OSU",
+   "pos": "DE"
+  },
+  {
+   "award": "bednarik",
    "year": 2021,
    "name": "Jordan Davis",
    "school": "UGA",
@@ -2103,6 +3296,20 @@
    "name": "Will Anderson Jr.",
    "school": "ALA",
    "pos": "LB"
+  },
+  {
+   "award": "nagurski",
+   "year": 1993,
+   "name": "Rob Waldrop",
+   "school": "ARIZ",
+   "pos": "DT"
+  },
+  {
+   "award": "nagurski",
+   "year": 1997,
+   "name": "Charles Woodson",
+   "school": "MICH",
+   "pos": "CB"
   },
   {
    "award": "nagurski",
@@ -2120,6 +3327,13 @@
   },
   {
    "award": "nagurski",
+   "year": 2002,
+   "name": "Terrell Suggs",
+   "school": "ASU",
+   "pos": "DE"
+  },
+  {
+   "award": "nagurski",
    "year": 2003,
    "name": "Derrick Strait",
    "school": "OU",
@@ -2130,6 +3344,20 @@
    "year": 2004,
    "name": "Derrick Johnson",
    "school": "TEX",
+   "pos": "LB"
+  },
+  {
+   "award": "nagurski",
+   "year": 2005,
+   "name": "Elvis Dumervil",
+   "school": "LOU",
+   "pos": "DE"
+  },
+  {
+   "award": "nagurski",
+   "year": 2006,
+   "name": "James Laurinaitis",
+   "school": "OSU",
    "pos": "LB"
   },
   {
@@ -2148,6 +3376,20 @@
   },
   {
    "award": "nagurski",
+   "year": 2010,
+   "name": "Da'Quan Bowers",
+   "school": "CLEM",
+   "pos": "DE"
+  },
+  {
+   "award": "nagurski",
+   "year": 2014,
+   "name": "Scooby Wright",
+   "school": "ARIZ",
+   "pos": "LB"
+  },
+  {
+   "award": "nagurski",
    "year": 2016,
    "name": "Jonathan Allen",
    "school": "ALA",
@@ -2159,6 +3401,13 @@
    "name": "Josh Allen",
    "school": "UK",
    "pos": "LB"
+  },
+  {
+   "award": "nagurski",
+   "year": 2019,
+   "name": "Chase Young",
+   "school": "OSU",
+   "pos": "DE"
   },
   {
    "award": "nagurski",
@@ -2195,9 +3444,39 @@
   },
   {
    "award": "butkus",
+   "year": 1987,
+   "name": "Paul McGowan",
+   "school": "FSU"
+  },
+  {
+   "award": "butkus",
    "year": 1988,
    "name": "Derrick Thomas",
    "school": "ALA"
+  },
+  {
+   "award": "butkus",
+   "year": 1991,
+   "name": "Erick Anderson",
+   "school": "MICH"
+  },
+  {
+   "award": "butkus",
+   "year": 1992,
+   "name": "Marvin Jones",
+   "school": "FSU"
+  },
+  {
+   "award": "butkus",
+   "year": 1997,
+   "name": "Andy Katzenmoyer",
+   "school": "OSU"
+  },
+  {
+   "award": "butkus",
+   "year": 1998,
+   "name": "Chris Claiborne",
+   "school": "USC"
   },
   {
    "award": "butkus",
@@ -2225,6 +3504,12 @@
   },
   {
    "award": "butkus",
+   "year": 2007,
+   "name": "James Laurinaitis",
+   "school": "OSU"
+  },
+  {
+   "award": "butkus",
    "year": 2009,
    "name": "Rolando McClain",
    "school": "ALA"
@@ -2240,6 +3525,12 @@
    "year": 2013,
    "name": "C. J. Mosley",
    "school": "ALA"
+  },
+  {
+   "award": "butkus",
+   "year": 2014,
+   "name": "Eric Kendricks",
+   "school": "UCLA"
   },
   {
    "award": "butkus",
@@ -2261,6 +3552,12 @@
   },
   {
    "award": "butkus",
+   "year": 2019,
+   "name": "Isaiah Simmons",
+   "school": "CLEM"
+  },
+  {
+   "award": "butkus",
    "year": 2021,
    "name": "Nakobe Dean",
    "school": "UGA"
@@ -2270,6 +3567,34 @@
    "year": 2024,
    "name": "Jalon Walker",
    "school": "UGA"
+  },
+  {
+   "award": "thorpe",
+   "year": 1988,
+   "name": "Deion Sanders",
+   "school": "FSU",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 1989,
+   "name": "Mark Carrier",
+   "school": "USC",
+   "pos": "S"
+  },
+  {
+   "award": "thorpe",
+   "year": 1990,
+   "name": "Darryll Lewis",
+   "school": "ARIZ",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 1991,
+   "name": "Terrell Buckley",
+   "school": "FSU",
+   "pos": "CB"
   },
   {
    "award": "thorpe",
@@ -2284,6 +3609,20 @@
    "name": "Lawrence Wright",
    "school": "FLA",
    "pos": "FS"
+  },
+  {
+   "award": "thorpe",
+   "year": 1997,
+   "name": "Charles Woodson",
+   "school": "MICH",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 1998,
+   "name": "Antoine Winfield Sr.",
+   "school": "OSU",
+   "pos": "CB"
   },
   {
    "award": "thorpe",
@@ -2322,6 +3661,20 @@
   },
   {
    "award": "thorpe",
+   "year": 2007,
+   "name": "Antoine Cason",
+   "school": "ARIZ",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2008,
+   "name": "Malcolm Jenkins",
+   "school": "OSU",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
    "year": 2009,
    "name": "Eric Berry",
    "school": "TENN",
@@ -2346,6 +3699,20 @@
    "year": 2012,
    "name": "Johnthan Banks",
    "school": "MSST",
+   "pos": "CB"
+  },
+  {
+   "award": "thorpe",
+   "year": 2014,
+   "name": "Gerod Holliman",
+   "school": "LOU",
+   "pos": "S"
+  },
+  {
+   "award": "thorpe",
+   "year": 2016,
+   "name": "Adoree' Jackson",
+   "school": "USC",
    "pos": "CB"
   },
   {
@@ -2377,6 +3744,13 @@
    "pos": "CB"
   },
   {
+   "award": "thorpe",
+   "year": 2025,
+   "name": "Caleb Downs",
+   "school": "OSU",
+   "pos": "S"
+  },
+  {
    "award": "lombardi",
    "year": 2019,
    "name": "Joe Burrow",
@@ -2385,10 +3759,31 @@
   },
   {
    "award": "lombardi",
+   "year": 1970,
+   "name": "Jim Stillwagon",
+   "school": "OSU",
+   "pos": "Middle guard"
+  },
+  {
+   "award": "lombardi",
+   "year": 1973,
+   "name": "John Hicks",
+   "school": "OSU",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "lombardi",
    "year": 1975,
    "name": "Lee Roy Selmon",
    "school": "OU",
    "pos": "Defensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 1979,
+   "name": "Brad Budde",
+   "school": "USC",
+   "pos": "Guard"
   },
   {
    "award": "lombardi",
@@ -2420,6 +3815,13 @@
   },
   {
    "award": "lombardi",
+   "year": 1987,
+   "name": "Chris Spielman",
+   "school": "OSU",
+   "pos": "Linebacker"
+  },
+  {
+   "award": "lombardi",
    "year": 1988,
    "name": "Tracy Rocker",
    "school": "AUB",
@@ -2427,10 +3829,45 @@
   },
   {
    "award": "lombardi",
+   "year": 1992,
+   "name": "Marvin Jones",
+   "school": "FSU",
+   "pos": "Linebacker"
+  },
+  {
+   "award": "lombardi",
+   "year": 1995,
+   "name": "Orlando Pace",
+   "school": "OSU",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 1996,
+   "name": "Orlando Pace",
+   "school": "OSU",
+   "pos": "Offensive tackle"
+  },
+  {
+   "award": "lombardi",
    "year": 1998,
    "name": "Dat Nguyen",
    "school": "TAMU",
    "pos": "Linebacker"
+  },
+  {
+   "award": "lombardi",
+   "year": 2000,
+   "name": "Jamal Reynolds",
+   "school": "FSU",
+   "pos": "Defensive tackle"
+  },
+  {
+   "award": "lombardi",
+   "year": 2002,
+   "name": "Terrell Suggs",
+   "school": "ASU",
+   "pos": "Defensive end"
   },
   {
    "award": "lombardi",
@@ -2444,6 +3881,20 @@
    "year": 2004,
    "name": "David Pollack",
    "school": "UGA",
+   "pos": "Defensive end"
+  },
+  {
+   "award": "lombardi",
+   "year": 2005,
+   "name": "A. J. Hawk",
+   "school": "OSU",
+   "pos": "Linebacker"
+  },
+  {
+   "award": "lombardi",
+   "year": 2006,
+   "name": "LaMarr Woodley",
+   "school": "MICH",
    "pos": "Defensive end"
   },
   {
@@ -2469,6 +3920,13 @@
   },
   {
    "award": "lombardi",
+   "year": 2014,
+   "name": "Scooby Wright",
+   "school": "ARIZ",
+   "pos": "Linebacker"
+  },
+  {
+   "award": "lombardi",
    "year": 2016,
    "name": "Jonathan Allen",
    "school": "ALA",
@@ -2483,10 +3941,24 @@
   },
   {
    "award": "lombardi",
+   "year": 2021,
+   "name": "Aidan Hutchinson",
+   "school": "MICH",
+   "pos": "Defensive end"
+  },
+  {
+   "award": "lombardi",
    "year": 2022,
    "name": "Will Anderson Jr.",
    "school": "ALA",
    "pos": "Linebacker"
+  },
+  {
+   "award": "lombardi",
+   "year": 2023,
+   "name": "Laiatu Latu",
+   "school": "UCLA",
+   "pos": "Defensive end"
   },
   {
    "award": "lombardi",
@@ -2503,9 +3975,51 @@
   },
   {
    "award": "groza",
+   "year": 1994,
+   "name": "Steve McLaughlin",
+   "school": "ARIZ"
+  },
+  {
+   "award": "groza",
+   "year": 1998,
+   "name": "Sebastian Janikowski",
+   "school": "FSU"
+  },
+  {
+   "award": "groza",
    "year": 2003,
    "name": "Jonathan Nichols",
    "school": "MISS"
+  },
+  {
+   "award": "groza",
+   "year": 2004,
+   "name": "Mike Nugent",
+   "school": "OSU"
+  },
+  {
+   "award": "groza",
+   "year": 2006,
+   "name": "Art Carmody",
+   "school": "LOU"
+  },
+  {
+   "award": "groza",
+   "year": 2007,
+   "name": "Thomas Weber",
+   "school": "ASU"
+  },
+  {
+   "award": "groza",
+   "year": 2008,
+   "name": "Graham Gano",
+   "school": "FSU"
+  },
+  {
+   "award": "groza",
+   "year": 2009,
+   "name": "Kai Forbath",
+   "school": "UCLA"
   },
   {
    "award": "groza",
@@ -2515,15 +4029,57 @@
   },
   {
    "award": "groza",
+   "year": 2013,
+   "name": "Roberto Aguayo",
+   "school": "FSU"
+  },
+  {
+   "award": "groza",
+   "year": 2015,
+   "name": "Kaʻimi Fairbairn",
+   "school": "UCLA"
+  },
+  {
+   "award": "groza",
+   "year": 2016,
+   "name": "Zane Gonzalez",
+   "school": "ASU"
+  },
+  {
+   "award": "groza",
    "year": 2019,
    "name": "Rodrigo Blankenship",
    "school": "UGA"
   },
   {
    "award": "groza",
+   "year": 2021,
+   "name": "Jake Moody",
+   "school": "MICH"
+  },
+  {
+   "award": "groza",
    "year": 2025,
    "name": "Tate Sandell",
    "school": "OU"
+  },
+  {
+   "award": "guy",
+   "year": 2001,
+   "name": "Travis Dorsch",
+   "school": "PUR"
+  },
+  {
+   "award": "guy",
+   "year": 2003,
+   "name": "B. J. Sander",
+   "school": "OSU"
+  },
+  {
+   "award": "guy",
+   "year": 2007,
+   "name": "Durant Brooks",
+   "school": "GT"
   },
   {
    "award": "guy",
@@ -2557,6 +4113,18 @@
   },
   {
    "award": "guy",
+   "year": 2020,
+   "name": "Pressley Harvin III",
+   "school": "GT"
+  },
+  {
+   "award": "guy",
+   "year": 2024,
+   "name": "Eddie Czaplicki",
+   "school": "USC"
+  },
+  {
+   "award": "guy",
    "year": 2025,
    "name": "Brett Thorson",
    "school": "UGA"
@@ -2565,12 +4133,30 @@
  "heisman": [
   {
    "year": 2000,
+   "place": 1,
+   "name": "Chris Weinke",
+   "school": "FSU",
+   "pos": "QB",
+   "points": 1628,
+   "first": 369
+  },
+  {
+   "year": 2000,
    "place": 2,
    "name": "Josh Heupel",
    "school": "OU",
    "pos": "QB",
    "points": 1552,
    "first": 286
+  },
+  {
+   "year": 2000,
+   "place": 3,
+   "name": "Drew Brees",
+   "school": "PUR",
+   "pos": "QB",
+   "points": 619,
+   "first": 69
   },
   {
    "year": 2000,
@@ -2592,12 +4178,30 @@
   },
   {
    "year": 2001,
+   "place": 6,
+   "name": "Antwaan Randle El",
+   "school": "IU",
+   "pos": "QB",
+   "points": 267,
+   "first": 46
+  },
+  {
+   "year": 2001,
    "place": 7,
    "name": "Roy Williams",
    "school": "OU",
    "pos": "S",
    "points": 146,
    "first": 13
+  },
+  {
+   "year": 2002,
+   "place": 1,
+   "name": "Carson Palmer",
+   "school": "USC",
+   "pos": "QB",
+   "points": 1328,
+   "first": 242
   },
   {
    "year": 2002,
@@ -2627,6 +4231,42 @@
    "first": 95
   },
   {
+   "year": 2003,
+   "place": 4,
+   "name": "Chris Perry",
+   "school": "MICH",
+   "pos": "RB",
+   "points": 341,
+   "first": 27
+  },
+  {
+   "year": 2003,
+   "place": 6,
+   "name": "Matt Leinart",
+   "school": "USC",
+   "pos": "QB",
+   "points": 127,
+   "first": 5
+  },
+  {
+   "year": 2003,
+   "place": 8,
+   "name": "Mike Williams",
+   "school": "USC",
+   "pos": "WR",
+   "points": 78,
+   "first": 12
+  },
+  {
+   "year": 2004,
+   "place": 1,
+   "name": "Matt Leinart",
+   "school": "USC",
+   "pos": "QB",
+   "points": 1325,
+   "first": 267
+  },
+  {
    "year": 2004,
    "place": 2,
    "name": "Adrian Peterson",
@@ -2643,6 +4283,15 @@
    "pos": "QB",
    "points": 957,
    "first": 171
+  },
+  {
+   "year": 2004,
+   "place": 5,
+   "name": "Reggie Bush",
+   "school": "USC",
+   "pos": "RB",
+   "points": 597,
+   "first": 118
   },
   {
    "year": 2004,
@@ -2663,6 +4312,24 @@
    "first": 21
   },
   {
+   "year": 2004,
+   "place": 10,
+   "name": "Braylon Edwards",
+   "school": "MICH",
+   "pos": "WR",
+   "points": 62,
+   "first": 3
+  },
+  {
+   "year": 2006,
+   "place": 1,
+   "name": "Troy Smith",
+   "school": "OSU",
+   "pos": "QB",
+   "points": 2540,
+   "first": 801
+  },
+  {
    "year": 2006,
    "place": 2,
    "name": "Darren McFadden",
@@ -2670,6 +4337,33 @@
    "pos": "RB",
    "points": 878,
    "first": 45
+  },
+  {
+   "year": 2006,
+   "place": 5,
+   "name": "Mike Hart",
+   "school": "MICH",
+   "pos": "RB",
+   "points": 210,
+   "first": 5
+  },
+  {
+   "year": 2006,
+   "place": 9,
+   "name": "Dwayne Jarrett",
+   "school": "USC",
+   "pos": "WR",
+   "points": 47,
+   "first": 1
+  },
+  {
+   "year": 2006,
+   "place": 10,
+   "name": "Calvin Johnson",
+   "school": "GT",
+   "pos": "WR",
+   "points": 43,
+   "first": 1
   },
   {
    "year": 2007,
@@ -2735,6 +4429,15 @@
    "first": 309
   },
   {
+   "year": 2008,
+   "place": 9,
+   "name": "Rey Maualuga",
+   "school": "USC",
+   "pos": "LB",
+   "points": 9,
+   "first": 2
+  },
+  {
    "year": 2009,
    "place": 1,
    "name": "Mark Ingram II",
@@ -2762,6 +4465,15 @@
    "first": 43
   },
   {
+   "year": 2009,
+   "place": 6,
+   "name": "C. J. Spiller",
+   "school": "CLEM",
+   "pos": "RB",
+   "points": 223,
+   "first": 26
+  },
+  {
    "year": 2010,
    "place": 1,
    "name": "Cam Newton",
@@ -2769,6 +4481,15 @@
    "pos": "QB",
    "points": 2263,
    "first": 729
+  },
+  {
+   "year": 2010,
+   "place": 6,
+   "name": "Denard Robinson",
+   "school": "MICH",
+   "pos": "QB",
+   "points": 84,
+   "first": 6
   },
   {
    "year": 2010,
@@ -2798,6 +4519,15 @@
    "first": 34
   },
   {
+   "year": 2011,
+   "place": 6,
+   "name": "Matt Barkley",
+   "school": "USC",
+   "pos": "QB",
+   "points": 153,
+   "first": 11
+  },
+  {
    "year": 2012,
    "place": 1,
    "name": "Johnny Manziel",
@@ -2805,6 +4535,15 @@
    "pos": "QB",
    "points": 2029,
    "first": 474
+  },
+  {
+   "year": 2013,
+   "place": 1,
+   "name": "Jameis Winston",
+   "school": "FSU",
+   "pos": "QB",
+   "points": 2205,
+   "first": 668
   },
   {
    "year": 2013,
@@ -2834,6 +4573,24 @@
    "first": 31
   },
   {
+   "year": 2013,
+   "place": 9,
+   "name": "Braxton Miller",
+   "school": "OSU",
+   "pos": "QB",
+   "points": 91,
+   "first": 4
+  },
+  {
+   "year": 2013,
+   "place": 10,
+   "name": "Ka'Deem Carey",
+   "school": "ARIZ",
+   "pos": "RB",
+   "points": 70,
+   "first": 2
+  },
+  {
    "year": 2014,
    "place": 3,
    "name": "Amari Cooper",
@@ -2841,6 +4598,33 @@
    "pos": "WR",
    "points": 1023,
    "first": 49
+  },
+  {
+   "year": 2014,
+   "place": 5,
+   "name": "J. T. Barrett",
+   "school": "OSU",
+   "pos": "QB",
+   "points": 78,
+   "first": 0
+  },
+  {
+   "year": 2014,
+   "place": 6,
+   "name": "Jameis Winston",
+   "school": "FSU",
+   "pos": "QB",
+   "points": 51,
+   "first": 4
+  },
+  {
+   "year": 2014,
+   "place": 7,
+   "name": "Tevin Coleman",
+   "school": "IU",
+   "pos": "RB",
+   "points": 44,
+   "first": 2
   },
   {
    "year": 2014,
@@ -2852,6 +4636,15 @@
    "first": 2
   },
   {
+   "year": 2014,
+   "place": 9,
+   "name": "Scooby Wright",
+   "school": "ARIZ",
+   "pos": "LB",
+   "points": 21,
+   "first": 0
+  },
+  {
    "year": 2015,
    "place": 1,
    "name": "Derrick Henry",
@@ -2859,6 +4652,15 @@
    "pos": "RB",
    "points": 1832,
    "first": 378
+  },
+  {
+   "year": 2015,
+   "place": 3,
+   "name": "Deshaun Watson",
+   "school": "CLEM",
+   "pos": "QB",
+   "points": 1165,
+   "first": 148
   },
   {
    "year": 2015,
@@ -2877,6 +4679,42 @@
    "pos": "RB",
    "points": 110,
    "first": 10
+  },
+  {
+   "year": 2015,
+   "place": 7,
+   "name": "Dalvin Cook",
+   "school": "FSU",
+   "pos": "RB",
+   "points": 79,
+   "first": 7
+  },
+  {
+   "year": 2015,
+   "place": 8,
+   "name": "Ezekiel Elliott",
+   "school": "OSU",
+   "pos": "RB",
+   "points": 57,
+   "first": 5
+  },
+  {
+   "year": 2016,
+   "place": 1,
+   "name": "Lamar Jackson",
+   "school": "LOU",
+   "pos": "QB",
+   "points": 2144,
+   "first": 526
+  },
+  {
+   "year": 2016,
+   "place": 2,
+   "name": "Deshaun Watson",
+   "school": "CLEM",
+   "pos": "QB",
+   "points": 1524,
+   "first": 269
   },
   {
    "year": 2016,
@@ -2898,6 +4736,15 @@
   },
   {
    "year": 2016,
+   "place": 5,
+   "name": "Jabrill Peppers",
+   "school": "MICH",
+   "pos": "LB",
+   "points": 208,
+   "first": 11
+  },
+  {
+   "year": 2016,
    "place": 7,
    "name": "Jonathan Allen",
    "school": "ALA",
@@ -2913,6 +4760,15 @@
    "pos": "QB",
    "points": 2398,
    "first": 732
+  },
+  {
+   "year": 2017,
+   "place": 3,
+   "name": "Lamar Jackson",
+   "school": "LOU",
+   "pos": "QB",
+   "points": 793,
+   "first": 47
   },
   {
    "year": 2017,
@@ -2961,6 +4817,51 @@
   },
   {
    "year": 2019,
+   "place": 3,
+   "name": "Justin Fields",
+   "school": "OSU",
+   "pos": "QB",
+   "points": 747,
+   "first": 6
+  },
+  {
+   "year": 2019,
+   "place": 4,
+   "name": "Chase Young",
+   "school": "OSU",
+   "pos": "DE",
+   "points": 643,
+   "first": 20
+  },
+  {
+   "year": 2019,
+   "place": 6,
+   "name": "J. K. Dobbins",
+   "school": "OSU",
+   "pos": "RB",
+   "points": 114,
+   "first": 2
+  },
+  {
+   "year": 2019,
+   "place": 7,
+   "name": "Trevor Lawrence",
+   "school": "CLEM",
+   "pos": "QB",
+   "points": 88,
+   "first": 3
+  },
+  {
+   "year": 2019,
+   "place": 9,
+   "name": "Travis Etienne",
+   "school": "CLEM",
+   "pos": "RB",
+   "points": 25,
+   "first": 0
+  },
+  {
+   "year": 2019,
    "place": 10,
    "name": "Tua Tagovailoa",
    "school": "ALA",
@@ -2976,6 +4877,15 @@
    "pos": "WR",
    "points": 1856,
    "first": 447
+  },
+  {
+   "year": 2020,
+   "place": 2,
+   "name": "Trevor Lawrence",
+   "school": "CLEM",
+   "pos": "QB",
+   "points": 1187,
+   "first": 222
   },
   {
    "year": 2020,
@@ -3006,6 +4916,15 @@
   },
   {
    "year": 2020,
+   "place": 7,
+   "name": "Justin Fields",
+   "school": "OSU",
+   "pos": "QB",
+   "points": 48,
+   "first": 5
+  },
+  {
+   "year": 2020,
    "place": 10,
    "name": "Kyle Pitts",
    "school": "FLA",
@@ -3021,6 +4940,24 @@
    "pos": "QB",
    "points": 2311,
    "first": 684
+  },
+  {
+   "year": 2021,
+   "place": 2,
+   "name": "Aidan Hutchinson",
+   "school": "MICH",
+   "pos": "DE",
+   "points": 954,
+   "first": 78
+  },
+  {
+   "year": 2021,
+   "place": 4,
+   "name": "C. J. Stroud",
+   "school": "OSU",
+   "pos": "QB",
+   "points": 399,
+   "first": 12
   },
   {
    "year": 2021,
@@ -3051,6 +4988,24 @@
   },
   {
    "year": 2022,
+   "place": 1,
+   "name": "Caleb Williams",
+   "school": "USC",
+   "pos": "QB",
+   "points": 2031,
+   "first": 544
+  },
+  {
+   "year": 2022,
+   "place": 3,
+   "name": "C. J. Stroud",
+   "school": "OSU",
+   "pos": "QB",
+   "points": 539,
+   "first": 37
+  },
+  {
+   "year": 2022,
    "place": 4,
    "name": "Stetson Bennett",
    "school": "UGA",
@@ -3078,6 +5033,15 @@
   },
   {
    "year": 2022,
+   "place": 7,
+   "name": "Blake Corum",
+   "school": "MICH",
+   "pos": "RB",
+   "points": 125,
+   "first": 8
+  },
+  {
+   "year": 2022,
    "place": 9,
    "name": "Bijan Robinson",
    "school": "TEX",
@@ -3093,6 +5057,24 @@
    "pos": "QB",
    "points": 2029,
    "first": 503
+  },
+  {
+   "year": 2023,
+   "place": 4,
+   "name": "Marvin Harrison Jr.",
+   "school": "OSU",
+   "pos": "WR",
+   "points": 352,
+   "first": 20
+  },
+  {
+   "year": 2023,
+   "place": 5,
+   "name": "Jordan Travis",
+   "school": "FSU",
+   "pos": "QB",
+   "points": 85,
+   "first": 8
   },
   {
    "year": 2023,
@@ -3113,6 +5095,51 @@
    "first": 1
   },
   {
+   "year": 2023,
+   "place": 9,
+   "name": "Blake Corum",
+   "school": "MICH",
+   "pos": "RB",
+   "points": 28,
+   "first": 3
+  },
+  {
+   "year": 2023,
+   "place": 10,
+   "name": "J. J. McCarthy",
+   "school": "MICH",
+   "pos": "QB",
+   "points": 21,
+   "first": 1
+  },
+  {
+   "year": 2024,
+   "place": 5,
+   "name": "Cam Skattebo",
+   "school": "ASU",
+   "pos": "RB",
+   "points": 170,
+   "first": 3
+  },
+  {
+   "year": 2024,
+   "place": 9,
+   "name": "Kurtis Rourke",
+   "school": "IU",
+   "pos": "QB",
+   "points": 22,
+   "first": 2
+  },
+  {
+   "year": 2025,
+   "place": 1,
+   "name": "Fernando Mendoza",
+   "school": "IU",
+   "pos": "QB",
+   "points": 2362,
+   "first": 643
+  },
+  {
    "year": 2025,
    "place": 2,
    "name": "Diego Pavia",
@@ -3120,6 +5147,24 @@
    "pos": "QB",
    "points": 1435,
    "first": 189
+  },
+  {
+   "year": 2025,
+   "place": 4,
+   "name": "Julian Sayin",
+   "school": "OSU",
+   "pos": "QB",
+   "points": 432,
+   "first": 8
+  },
+  {
+   "year": 2025,
+   "place": 6,
+   "name": "Jeremiah Smith",
+   "school": "OSU",
+   "pos": "WR",
+   "points": 84,
+   "first": 4
   }
  ],
  "heismanDepth": {

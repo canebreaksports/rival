@@ -37,8 +37,9 @@ export function programValue(data: Dataset, k: SchoolKey, stat: string, verified
   const s = data.schools.find(x => x.key === k);
   if (!s) return null;
   if (stat in s.program) {
-    if (verifiedOnly && !s.programVerified) return null;
-    return { value: s.program[stat as keyof School["program"]], verified: s.programVerified };
+    const v = s.program[stat as keyof School["program"]];
+    if (v == null || (verifiedOnly && !s.programVerified)) return null;
+    return { value: v, verified: s.programVerified };
   }
   const rec = data.seasons[k];
   if (!rec || (verifiedOnly && !rec.verified)) return null;

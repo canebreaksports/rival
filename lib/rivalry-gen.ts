@@ -32,7 +32,7 @@ export function genGameMoment(pr: RivalryPair, rng: Rng, notable: (name: string,
   if (useTD) line = Math.max(1.5, v + dir * (rng() < 0.5 ? 0.5 : 1.5)); // never a "0.5 touchdowns" line
   else {
     const step = v >= 150 ? 25 : 10;
-    line = Math.round((v * (1 + dir * (0.15 + rng() * 0.2))) / step) * step;
+    line = Math.round((v * (1 + dir * (0.12 + rng() * 0.08))) / step) * step; // just outside the margin: never an obvious line (owner, Nov 2026)
     if (Math.abs(line - v) < gameGap(v)) line = dir > 0 ? Math.ceil((v + gameGap(v)) / step) * step : Math.floor((v - gameGap(v)) / step) * step;
     if (line <= 0) return null;
   }

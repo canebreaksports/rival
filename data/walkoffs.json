@@ -1,6 +1,16 @@
 {
  "source": "CollegeFootballData /games (line scores) and /drives (last drive, clock, score), seasons 2001–2025, fetched 2026-11-23. Final-play wins: the winner was tied or trailing and scored on the game's last drive, ending 0:00 in the 4th quarter; overtime: any game decided in overtime.",
  "pairs": {
+  "LOU|UK": {
+   "from": 2023,
+   "games": 3,
+   "list": []
+  },
+  "ALA|UCLA": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
   "ALA|VAN": {
    "from": 2003,
    "games": 7,
@@ -85,6 +95,16 @@
     }
    ]
   },
+  "OSU|UCLA": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "IU|OSU": {
+   "from": 2007,
+   "games": 17,
+   "list": []
+  },
   "ALA|SC": {
    "from": 2001,
    "games": 8,
@@ -109,6 +129,21 @@
    "from": 2001,
    "games": 8,
    "list": []
+  },
+  "CLEM|GT": {
+   "from": 2003,
+   "games": 23,
+   "list": [
+    {
+     "season": 2025,
+     "date": "2025-09-13",
+     "winner": "GT",
+     "loser": "CLEM",
+     "ws": 24,
+     "ls": 21,
+     "how": "fg"
+    }
+   ]
   },
   "ARK|UGA": {
    "from": 2003,
@@ -227,6 +262,11 @@
     }
    ]
   },
+  "MICH|PUR": {
+   "from": 2003,
+   "games": 12,
+   "list": []
+  },
   "ALA|MISS": {
    "from": 2004,
    "games": 20,
@@ -270,6 +310,21 @@
    "from": 2003,
    "games": 13,
    "list": []
+  },
+  "ASU|USC": {
+   "from": 2003,
+   "games": 21,
+   "list": [
+    {
+     "season": 2014,
+     "date": "2014-10-04",
+     "winner": "ASU",
+     "loser": "USC",
+     "ws": 38,
+     "ls": 34,
+     "how": "td"
+    }
+   ]
   },
   "LSU|UK": {
    "from": 2003,
@@ -436,6 +491,21 @@
     }
    ]
   },
+  "ARIZ|USC": {
+   "from": 2001,
+   "games": 22,
+   "list": [
+    {
+     "season": 2023,
+     "date": "2023-10-08",
+     "winner": "USC",
+     "loser": "ARIZ",
+     "ws": 43,
+     "ls": 41,
+     "how": "ot"
+    }
+   ]
+  },
   "LSU|MISS": {
    "from": 2003,
    "games": 23,
@@ -541,6 +611,39 @@
     }
    ]
   },
+  "CLEM|FSU": {
+   "from": 2003,
+   "games": 22,
+   "list": [
+    {
+     "season": 2010,
+     "date": "2010-11-14",
+     "winner": "FSU",
+     "loser": "CLEM",
+     "ws": 16,
+     "ls": 13,
+     "how": "fg"
+    },
+    {
+     "season": 2014,
+     "date": "2014-09-21",
+     "winner": "FSU",
+     "loser": "CLEM",
+     "ws": 23,
+     "ls": 17,
+     "how": "ot"
+    },
+    {
+     "season": 2023,
+     "date": "2023-09-23",
+     "winner": "FSU",
+     "loser": "CLEM",
+     "ws": 31,
+     "ls": 24,
+     "how": "ot"
+    }
+   ]
+  },
   "ARK|MISS": {
    "from": 2003,
    "games": 23,
@@ -569,6 +672,39 @@
    "from": 2003,
    "games": 10,
    "list": []
+  },
+  "OSU|PUR": {
+   "from": 2003,
+   "games": 14,
+   "list": [
+    {
+     "season": 2003,
+     "date": "2003-11-15",
+     "winner": "OSU",
+     "loser": "PUR",
+     "ws": 16,
+     "ls": 13,
+     "how": "ot"
+    },
+    {
+     "season": 2011,
+     "date": "2011-11-12",
+     "winner": "PUR",
+     "loser": "OSU",
+     "ws": 26,
+     "ls": 23,
+     "how": "ot"
+    },
+    {
+     "season": 2012,
+     "date": "2012-10-20",
+     "winner": "OSU",
+     "loser": "PUR",
+     "ws": 29,
+     "ls": 22,
+     "how": "ot"
+    }
+   ]
   },
   "ALA|MSST": {
    "from": 2003,
@@ -629,6 +765,21 @@
     }
    ]
   },
+  "CLEM|SC": {
+   "from": 2004,
+   "games": 21,
+   "list": [
+    {
+     "season": 2007,
+     "date": "2007-11-25",
+     "winner": "CLEM",
+     "loser": "SC",
+     "ws": 23,
+     "ls": 21,
+     "how": "fg"
+    }
+   ]
+  },
   "ARK|MSST": {
    "from": 2022,
    "games": 4,
@@ -657,6 +808,16 @@
      "how": "ot"
     }
    ]
+  },
+  "UCLA|USC": {
+   "from": 2003,
+   "games": 23,
+   "list": []
+  },
+  "FLA|FSU": {
+   "from": 2004,
+   "games": 21,
+   "list": []
   },
   "MISS|MSST": {
    "from": 2007,
@@ -721,6 +882,41 @@
     }
    ]
   },
+  "ARIZ|ASU": {
+   "from": 2003,
+   "games": 23,
+   "list": [
+    {
+     "season": 2010,
+     "date": "2010-12-03",
+     "winner": "ASU",
+     "loser": "ARIZ",
+     "ws": 30,
+     "ls": 29,
+     "how": "ot"
+    }
+   ]
+  },
+  "IU|PUR": {
+   "from": 2023,
+   "games": 3,
+   "list": []
+  },
+  "MICH|OSU": {
+   "from": 2003,
+   "games": 22,
+   "list": [
+    {
+     "season": 2016,
+     "date": "2016-11-26",
+     "winner": "OSU",
+     "loser": "MICH",
+     "ws": 30,
+     "ls": 27,
+     "how": "ot"
+    }
+   ]
+  },
   "TENN|VAN": {
    "from": 2004,
    "games": 22,
@@ -732,6 +928,39 @@
      "loser": "VAN",
      "ws": 27,
      "ls": 21,
+     "how": "ot"
+    }
+   ]
+  },
+  "GT|UGA": {
+   "from": 2004,
+   "games": 21,
+   "list": [
+    {
+     "season": 2013,
+     "date": "2013-11-30",
+     "winner": "UGA",
+     "loser": "GT",
+     "ws": 41,
+     "ls": 34,
+     "how": "ot"
+    },
+    {
+     "season": 2014,
+     "date": "2014-11-29",
+     "winner": "GT",
+     "loser": "UGA",
+     "ws": 30,
+     "ls": 24,
+     "how": "ot"
+    },
+    {
+     "season": 2024,
+     "date": "2024-11-30",
+     "winner": "UGA",
+     "loser": "GT",
+     "ws": 44,
+     "ls": 42,
      "how": "ot"
     }
    ]
@@ -760,6 +989,35 @@
     }
    ]
   },
+  "IU|UK": {
+   "from": 2003,
+   "games": 3,
+   "list": []
+  },
+  "FSU|GT": {
+   "from": 2003,
+   "games": 9,
+   "list": [
+    {
+     "season": 2015,
+     "date": "2015-10-24",
+     "winner": "GT",
+     "loser": "FSU",
+     "ws": 22,
+     "ls": 16,
+     "how": "ret"
+    },
+    {
+     "season": 2024,
+     "date": "2024-08-24",
+     "winner": "GT",
+     "loser": "FSU",
+     "ws": 24,
+     "ls": 21,
+     "how": "fg"
+    }
+   ]
+  },
   "FLA|TENN": {
    "from": 2003,
    "games": 23,
@@ -783,6 +1041,11 @@
      "how": "ot"
     }
    ]
+  },
+  "ASU|UCLA": {
+   "from": 2015,
+   "games": 9,
+   "list": []
   },
   "AUB|LSU": {
    "from": 2003,
@@ -808,8 +1071,43 @@
     }
    ]
   },
+  "OSU|SC": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
   "ARK|OU": {
    "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "MICH|TENN": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "GT|VAN": {
+   "from": 2003,
+   "games": 4,
+   "list": [
+    {
+     "season": 2003,
+     "date": "2003-09-27",
+     "winner": "GT",
+     "loser": "VAN",
+     "ws": 24,
+     "ls": 17,
+     "how": "ot"
+    }
+   ]
+  },
+  "CLEM|UGA": {
+   "from": 2003,
+   "games": 5,
+   "list": []
+  },
+  "AUB|USC": {
+   "from": 2003,
    "games": 1,
    "list": []
   },
@@ -817,6 +1115,21 @@
    "from": 2003,
    "games": 6,
    "list": []
+  },
+  "FSU|LOU": {
+   "from": 2001,
+   "games": 11,
+   "list": [
+    {
+     "season": 2002,
+     "date": "2002-09-26",
+     "winner": "LOU",
+     "loser": "FSU",
+     "ws": 26,
+     "ls": 20,
+     "how": "ot"
+    }
+   ]
   },
   "FLA|MISS": {
    "from": 2003,
@@ -872,6 +1185,11 @@
    "games": 8,
    "list": []
   },
+  "ARIZ|UCLA": {
+   "from": 2003,
+   "games": 21,
+   "list": []
+  },
   "MSST|TENN": {
    "from": 2003,
    "games": 7,
@@ -916,6 +1234,26 @@
    "games": 2,
    "list": []
   },
+  "FLA|MICH": {
+   "from": 2001,
+   "games": 5,
+   "list": []
+  },
+  "FSU|UGA": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "AUB|GT": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "ARIZ|LSU": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
   "ARK|TEX": {
    "from": 2001,
    "games": 7,
@@ -926,10 +1264,44 @@
    "games": 8,
    "list": []
   },
+  "ARIZ|PUR": {
+   "from": 2001,
+   "games": 3,
+   "list": []
+  },
   "LSU|UGA": {
    "from": 2001,
    "games": 11,
    "list": []
+  },
+  "OU|UCLA": {
+   "from": 2001,
+   "games": 4,
+   "list": []
+  },
+  "IU|MICH": {
+   "from": 2001,
+   "games": 18,
+   "list": [
+    {
+     "season": 2015,
+     "date": "2015-11-14",
+     "winner": "MICH",
+     "loser": "IU",
+     "ws": 48,
+     "ls": 41,
+     "how": "ot"
+    },
+    {
+     "season": 2017,
+     "date": "2017-10-14",
+     "winner": "MICH",
+     "loser": "IU",
+     "ws": 27,
+     "ls": 20,
+     "how": "ot"
+    }
+   ]
   },
   "MSST|VAN": {
    "from": 2001,
@@ -976,7 +1348,37 @@
     }
    ]
   },
+  "PUR|UGA": {
+   "from": 2001,
+   "games": 1,
+   "list": [
+    {
+     "season": 2003,
+     "date": "2004-01-01",
+     "winner": "UGA",
+     "loser": "PUR",
+     "ws": 34,
+     "ls": 27,
+     "how": "ot"
+    }
+   ]
+  },
+  "MICH|USC": {
+   "from": 2001,
+   "games": 4,
+   "list": []
+  },
+  "CLEM|TENN": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
   "LSU|OU": {
+   "from": 2001,
+   "games": 4,
+   "list": []
+  },
+  "CLEM|TAMU": {
    "from": 2001,
    "games": 4,
    "list": []
@@ -1021,9 +1423,29 @@
     }
    ]
   },
+  "MICH|TEX": {
+   "from": 2005,
+   "games": 2,
+   "list": []
+  },
   "ARK|VAN": {
    "from": 2006,
    "games": 4,
+   "list": []
+  },
+  "OSU|TEX": {
+   "from": 2001,
+   "games": 5,
+   "list": []
+  },
+  "ASU|LSU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "ARK|USC": {
+   "from": 2001,
+   "games": 2,
    "list": []
   },
   "MSST|UGA": {
@@ -1056,9 +1478,148 @@
     }
    ]
   },
+  "TEX|USC": {
+   "from": 2001,
+   "games": 3,
+   "list": [
+    {
+     "season": 2017,
+     "date": "2017-09-17",
+     "winner": "USC",
+     "loser": "TEX",
+     "ws": 27,
+     "ls": 24,
+     "how": "ot"
+    }
+   ]
+  },
+  "MICH|VAN": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
   "MISS|MIZ": {
    "from": 2001,
    "games": 4,
+   "list": []
+  },
+  "FSU|UCLA": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "CLEM|UK": {
+   "from": 2001,
+   "games": 3,
+   "list": []
+  },
+  "FLA|OSU": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "ALA|FSU": {
+   "from": 2001,
+   "games": 3,
+   "list": []
+  },
+  "ASU|TEX": {
+   "from": 2001,
+   "games": 2,
+   "list": [
+    {
+     "season": 2024,
+     "date": "2025-01-01",
+     "winner": "TEX",
+     "loser": "ASU",
+     "ws": 39,
+     "ls": 31,
+     "how": "ot"
+    }
+   ]
+  },
+  "FSU|UK": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "AUB|CLEM": {
+   "from": 2001,
+   "games": 6,
+   "list": [
+    {
+     "season": 2007,
+     "date": "2008-01-01",
+     "winner": "AUB",
+     "loser": "CLEM",
+     "ws": 23,
+     "ls": 20,
+     "how": "ot"
+    },
+    {
+     "season": 2010,
+     "date": "2010-09-18",
+     "winner": "AUB",
+     "loser": "CLEM",
+     "ws": 27,
+     "ls": 24,
+     "how": "ot"
+    }
+   ]
+  },
+  "LSU|OSU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "ALA|CLEM": {
+   "from": 2001,
+   "games": 5,
+   "list": []
+  },
+  "TENN|UCLA": {
+   "from": 2001,
+   "games": 2,
+   "list": [
+    {
+     "season": 2008,
+     "date": "2008-09-02",
+     "winner": "UCLA",
+     "loser": "TENN",
+     "ws": 27,
+     "ls": 24,
+     "how": "ot"
+    }
+   ]
+  },
+  "OSU|USC": {
+   "from": 2001,
+   "games": 3,
+   "list": []
+  },
+  "GT|MSST": {
+   "from": 2001,
+   "games": 3,
+   "list": []
+  },
+  "ASU|UGA": {
+   "from": 2001,
+   "games": 2,
+   "list": [
+    {
+     "season": 2009,
+     "date": "2009-09-26",
+     "winner": "UGA",
+     "loser": "ASU",
+     "ws": 20,
+     "ls": 17,
+     "how": "fg"
+    }
+   ]
+  },
+  "GT|LSU": {
+   "from": 2001,
+   "games": 1,
    "list": []
   },
   "FLA|OU": {
@@ -1109,6 +1670,31 @@
    "games": 3,
    "list": []
   },
+  "FSU|OU": {
+   "from": 2001,
+   "games": 3,
+   "list": []
+  },
+  "TEX|UCLA": {
+   "from": 2001,
+   "games": 3,
+   "list": []
+  },
+  "FSU|SC": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "MICH|MSST": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "ARK|OSU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
   "LSU|TAMU": {
    "from": 2001,
    "games": 15,
@@ -1120,6 +1706,36 @@
      "loser": "LSU",
      "ws": 74,
      "ls": 72,
+     "how": "ot"
+    }
+   ]
+  },
+  "ASU|MIZ": {
+   "from": 2001,
+   "games": 2,
+   "list": [
+    {
+     "season": 2011,
+     "date": "2011-09-10",
+     "winner": "ASU",
+     "loser": "MIZ",
+     "ws": 37,
+     "ls": 30,
+     "how": "ot"
+    }
+   ]
+  },
+  "ALA|MICH": {
+   "from": 2001,
+   "games": 4,
+   "list": [
+    {
+     "season": 2023,
+     "date": "2024-01-01",
+     "winner": "MICH",
+     "loser": "ALA",
+     "ws": 27,
+     "ls": 20,
      "how": "ot"
     }
    ]
@@ -1239,6 +1855,41 @@
     }
    ]
   },
+  "GT|USC": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "CLEM|LSU": {
+   "from": 2001,
+   "games": 3,
+   "list": [
+    {
+     "season": 2012,
+     "date": "2013-01-01",
+     "winner": "CLEM",
+     "loser": "LSU",
+     "ws": 25,
+     "ls": 24,
+     "how": "fg"
+    }
+   ]
+  },
+  "MICH|SC": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "FLA|LOU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "IU|MIZ": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
   "TAMU|VAN": {
    "from": 2001,
    "games": 3,
@@ -1268,6 +1919,21 @@
     }
    ]
   },
+  "GT|MISS": {
+   "from": 2001,
+   "games": 3,
+   "list": []
+  },
+  "CLEM|OSU": {
+   "from": 2001,
+   "games": 4,
+   "list": []
+  },
+  "AUB|FSU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
   "SC|TAMU": {
    "from": 2001,
    "games": 12,
@@ -1288,9 +1954,74 @@
     }
    ]
   },
+  "CLEM|LOU": {
+   "from": 2001,
+   "games": 10,
+   "list": []
+  },
+  "CLEM|OU": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "LOU|UGA": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "ALA|OSU": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "AUB|LOU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "ASU|TAMU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
   "MIZ|MSST": {
    "from": 2001,
    "games": 4,
+   "list": []
+  },
+  "LOU|TAMU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "TAMU|UCLA": {
+   "from": 2001,
+   "games": 2,
+   "list": [
+    {
+     "season": 2016,
+     "date": "2016-09-03",
+     "winner": "TAMU",
+     "loser": "UCLA",
+     "ws": 31,
+     "ls": 24,
+     "how": "ot"
+    }
+   ]
+  },
+  "ALA|USC": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "FSU|MISS": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "OSU|OU": {
+   "from": 2001,
+   "games": 2,
    "list": []
   },
   "LSU|MIZ": {
@@ -1298,9 +2029,64 @@
    "games": 3,
    "list": []
   },
+  "FSU|MICH": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "GT|UK": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "LOU|LSU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
   "AUB|OU": {
    "from": 2001,
    "games": 3,
+   "list": []
+  },
+  "LOU|PUR": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "GT|TENN": {
+   "from": 2001,
+   "games": 1,
+   "list": [
+    {
+     "season": 2017,
+     "date": "2017-09-05",
+     "winner": "TENN",
+     "loser": "GT",
+     "ws": 42,
+     "ls": 41,
+     "how": "ot"
+    }
+   ]
+  },
+  "MIZ|PUR": {
+   "from": 2001,
+   "games": 2,
+   "list": [
+    {
+     "season": 2018,
+     "date": "2018-09-15",
+     "winner": "MIZ",
+     "loser": "PUR",
+     "ws": 40,
+     "ls": 37,
+     "how": "fg"
+    }
+   ]
+  },
+  "LOU|MSST": {
+   "from": 2001,
+   "games": 2,
    "list": []
   },
   "OU|UGA": {
@@ -1318,6 +2104,11 @@
     }
    ]
   },
+  "ALA|LOU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
   "TAMU|UK": {
    "from": 2001,
    "games": 1,
@@ -1333,6 +2124,11 @@
     }
    ]
   },
+  "AUB|PUR": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
   "TEX|UGA": {
    "from": 2001,
    "games": 4,
@@ -1347,6 +2143,121 @@
      "how": "ot"
     }
    ]
+  },
+  "PUR|VAN": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "ASU|FSU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "IU|TENN": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "IU|MISS": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "LSU|UCLA": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "LOU|MISS": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "PUR|TENN": {
+   "from": 2001,
+   "games": 1,
+   "list": [
+    {
+     "season": 2021,
+     "date": "2021-12-30",
+     "winner": "PUR",
+     "loser": "TENN",
+     "ws": 48,
+     "ls": 45,
+     "how": "ot"
+    }
+   ]
+  },
+  "MICH|UGA": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "FSU|LSU": {
+   "from": 2023,
+   "games": 1,
+   "list": []
+  },
+  "ARIZ|MSST": {
+   "from": 2001,
+   "games": 2,
+   "list": [
+    {
+     "season": 2023,
+     "date": "2023-09-09",
+     "winner": "MSST",
+     "loser": "ARIZ",
+     "ws": 31,
+     "ls": 24,
+     "how": "ot"
+    }
+   ]
+  },
+  "OSU|UGA": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "LSU|PUR": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "IU|LOU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "LOU|USC": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "ARIZ|OU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "MIZ|OSU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "LSU|USC": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "ASU|MSST": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "IU|UCLA": {
+   "from": 2001,
+   "games": 2,
+   "list": []
   },
   "MSST|TEX": {
    "from": 2001,
@@ -1397,6 +2308,31 @@
      "how": "ot"
     }
    ]
+  },
+  "CLEM|TEX": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "OSU|TENN": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "MICH|OU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "PUR|USC": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "ALA|IU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
   }
  }
 }

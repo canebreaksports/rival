@@ -784,5 +784,570 @@
    }
   ],
   "source": "Wikipedia \"Mississippi State Bulldogs football statistical leaders\" career rushing yards table (revision 1385863841), which cites the school record book; fetched 2026-11-17"
+ },
+ "FSU": {
+  "floor": 2255,
+  "verified": true,
+  "list": [
+   {
+    "name": "Dalvin Cook",
+    "yards": 4464
+   },
+   {
+    "name": "Warrick Dunn",
+    "yards": 3959
+   },
+   {
+    "name": "Greg Allen",
+    "yards": 3769
+   },
+   {
+    "name": "Travis Minor",
+    "yards": 3218
+   },
+   {
+    "name": "Larry Key",
+    "yards": 2953
+   },
+   {
+    "name": "Cam Akers",
+    "yards": 2874
+   },
+   {
+    "name": "Sammie Smith",
+    "yards": 2539
+   },
+   {
+    "name": "Greg Jones",
+    "yards": 2535
+   },
+   {
+    "name": "Lorenzo Booker",
+    "yards": 2389
+   },
+   {
+    "name": "Devonta Freeman",
+    "yards": 2255
+   }
+  ],
+  "source": "Wikipedia \"Florida State Seminoles football statistical leaders\" career rushing yards table (revision 1378376740), which cites the school record book; fetched 2026-11-17"
+ },
+ "GT": {
+  "floor": 2412,
+  "verified": true,
+  "list": [
+   {
+    "name": "Robert Lavette",
+    "yards": 4066
+   },
+   {
+    "name": "Jerry Mays",
+    "yards": 3699
+   },
+   {
+    "name": "Eddie Lee Ivery",
+    "yards": 3517
+   },
+   {
+    "name": "Tashard Choice",
+    "yards": 3365
+   },
+   {
+    "name": "P.J. Daniels",
+    "yards": 3346
+   },
+   {
+    "name": "Jonathan Dwyer",
+    "yards": 3226
+   },
+   {
+    "name": "Joshua Nesbitt",
+    "yards": 2806
+   },
+   {
+    "name": "Joe Burns",
+    "yards": 2634
+   },
+   {
+    "name": "Jamal Haynes",
+    "yards": 2534
+   },
+   {
+    "name": "Justin Thomas",
+    "yards": 2412
+   }
+  ],
+  "source": "Wikipedia \"Georgia Tech Yellow Jackets football statistical leaders\" career rushing yards table (revision 1380386584), which cites the school record book; fetched 2026-11-17"
+ },
+ "MICH": {
+  "floor": 3072,
+  "verified": true,
+  "list": [
+   {
+    "name": "Mike Hart",
+    "yards": 5040
+   },
+   {
+    "name": "Denard Robinson",
+    "yards": 4495
+   },
+   {
+    "name": "Anthony Thomas",
+    "yards": 4472
+   },
+   {
+    "name": "Jamie Morris",
+    "yards": 4392
+   },
+   {
+    "name": "Tyrone Wheatley",
+    "yards": 4178
+   },
+   {
+    "name": "Butch Woolfolk",
+    "yards": 3850
+   },
+   {
+    "name": "Blake Corum",
+    "yards": 3737
+   },
+   {
+    "name": "Chris Perry",
+    "yards": 3696
+   },
+   {
+    "name": "Rob Lytle",
+    "yards": 3307
+   },
+   {
+    "name": "Billy Taylor",
+    "yards": 3072
+   }
+  ],
+  "source": "Wikipedia \"Michigan Wolverines football statistical leaders\" career rushing yards table (revision 1352691178), which cites the school record book; fetched 2026-11-17"
+ },
+ "LOU": {
+  "floor": 2508,
+  "verified": true,
+  "list": [
+   {
+    "name": "Lamar Jackson",
+    "yards": 4132
+   },
+   {
+    "name": "Walter Peacock",
+    "yards": 3204
+   },
+   {
+    "name": "Malik Cunningham",
+    "yards": 3184
+   },
+   {
+    "name": "Nathan Poole",
+    "yards": 2958
+   },
+   {
+    "name": "Lenny Lyles",
+    "yards": 2786
+   },
+   {
+    "name": "Howard Stevens",
+    "yards": 2723
+   },
+   {
+    "name": "Isaac Brown",
+    "yards": 2614,
+    "active": true
+   },
+   {
+    "name": "Frank Moreau",
+    "yards": 2599
+   },
+   {
+    "name": "Tom Lucia",
+    "yards": 2542
+   },
+   {
+    "name": "Michael Bush",
+    "yards": 2508
+   }
+  ],
+  "source": "Wikipedia \"Louisville Cardinals football statistical leaders\" career rushing yards table (revision 1379530191), which cites the school record book; fetched 2026-11-17"
+ },
+ "CLEM": {
+  "floor": 2778,
+  "verified": true,
+  "list": [
+   {
+    "name": "Travis Etienne",
+    "yards": 4952
+   },
+   {
+    "name": "Raymond Priester",
+    "yards": 3966
+   },
+   {
+    "name": "James Davis",
+    "yards": 3881
+   },
+   {
+    "name": "C. J. Spiller",
+    "yards": 3547
+   },
+   {
+    "name": "Andre Ellington",
+    "yards": 3436
+   },
+   {
+    "name": "Wayne Gallman",
+    "yards": 3429
+   },
+   {
+    "name": "Travis Zachery",
+    "yards": 3043
+   },
+   {
+    "name": "Kenny Flowers",
+    "yards": 2914
+   },
+   {
+    "name": "Phil Mafah",
+    "yards": 2887
+   },
+   {
+    "name": "Terry Allen",
+    "yards": 2778
+   }
+  ],
+  "source": "Wikipedia \"Clemson Tigers football statistical leaders\" career rushing yards table (revision 1383648805), which cites the school record book; fetched 2026-11-17"
+ },
+ "USC": {
+  "floor": 2815,
+  "verified": true,
+  "list": [
+   {
+    "name": "Charles White",
+    "yards": 6245
+   },
+   {
+    "name": "Marcus Allen",
+    "yards": 4810
+   },
+   {
+    "name": "Anthony Davis",
+    "yards": 3724
+   },
+   {
+    "name": "Ricky Bell",
+    "yards": 3689
+   },
+   {
+    "name": "Ronald Jones II",
+    "yards": 3619
+   },
+   {
+    "name": "O. J. Simpson",
+    "yards": 3423
+   },
+   {
+    "name": "Mike Garrett",
+    "yards": 3221
+   },
+   {
+    "name": "Reggie Bush",
+    "yards": 3169
+   },
+   {
+    "name": "LenDale White",
+    "yards": 3159
+   },
+   {
+    "name": "Fred Crutcher",
+    "yards": 2815
+   }
+  ],
+  "source": "Wikipedia \"USC Trojans football statistical leaders\" career rushing yards table (revision 1387109358), which cites the school record book; fetched 2026-11-17"
+ },
+ "UCLA": {
+  "floor": 2733,
+  "verified": true,
+  "list": [
+   {
+    "name": "Johnathan Franklin",
+    "yards": 4403
+   },
+   {
+    "name": "Gaston Green",
+    "yards": 3731
+   },
+   {
+    "name": "Paul Perkins",
+    "yards": 3611
+   },
+   {
+    "name": "Freeman McNeil",
+    "yards": 3195
+   },
+   {
+    "name": "DeShaun Foster",
+    "yards": 3194
+   },
+   {
+    "name": "Karim Abdul-Jabbar",
+    "yards": 3182
+   },
+   {
+    "name": "Wendell Tyler",
+    "yards": 3181
+   },
+   {
+    "name": "Skip Hicks",
+    "yards": 3140
+   },
+   {
+    "name": "Theotis Brown",
+    "yards": 2914
+   },
+   {
+    "name": "Chris Markey",
+    "yards": 2733
+   }
+  ],
+  "source": "Wikipedia \"UCLA Bruins football statistical leaders\" career rushing yards table (revision 1385843112), which cites the school record book; fetched 2026-11-17"
+ },
+ "ARIZ": {
+  "floor": 2571,
+  "verified": true,
+  "list": [
+   {
+    "name": "Ka'Deem Carey",
+    "yards": 4239
+   },
+   {
+    "name": "Trung Canidate",
+    "yards": 3824
+   },
+   {
+    "name": "Ontiwaun Carter",
+    "yards": 3501
+   },
+   {
+    "name": "Art Luppino",
+    "yards": 3381
+   },
+   {
+    "name": "J. J. Taylor",
+    "yards": 3263
+   },
+   {
+    "name": "Mike Bell",
+    "yards": 3163
+   },
+   {
+    "name": "Hubie Oliver",
+    "yards": 3096
+   },
+   {
+    "name": "Nick Wilson",
+    "yards": 3034
+   },
+   {
+    "name": "Nic Grigsby",
+    "yards": 2957
+   },
+   {
+    "name": "David Adams",
+    "yards": 2571
+   }
+  ],
+  "source": "Wikipedia \"Arizona Wildcats football statistical leaders\" career rushing yards table (revision 1387112364), which cites the school record book; fetched 2026-11-17"
+ },
+ "ASU": {
+  "floor": 2649,
+  "verified": true,
+  "list": [
+   {
+    "name": "Woody Green",
+    "yards": 4188
+   },
+   {
+    "name": "Freddie Williams",
+    "yards": 3424
+   },
+   {
+    "name": "J. R. Redmond",
+    "yards": 3299
+   },
+   {
+    "name": "Demario Richard",
+    "yards": 3202
+   },
+   {
+    "name": "Wilford White",
+    "yards": 3173
+   },
+   {
+    "name": "Leon Burton",
+    "yards": 2994
+   },
+   {
+    "name": "Eno Benjamin",
+    "yards": 2867
+   },
+   {
+    "name": "Darryl Clack",
+    "yards": 2711
+   },
+   {
+    "name": "Cameron Marshall",
+    "yards": 2700
+   },
+   {
+    "name": "Art Malone",
+    "yards": 2649
+   }
+  ],
+  "source": "Wikipedia \"Arizona State Sun Devils football statistical leaders\" career rushing yards table (revision 1387163761), which cites the school record book; fetched 2026-11-17"
+ },
+ "PUR": {
+  "floor": 2436,
+  "verified": true,
+  "list": [
+   {
+    "name": "Mike Alstott",
+    "yards": 3635
+   },
+   {
+    "name": "Kory Sheets",
+    "yards": 3341
+   },
+   {
+    "name": "Otis Armstrong",
+    "yards": 3315
+   },
+   {
+    "name": "Devin Mockobee",
+    "yards": 2983
+   },
+   {
+    "name": "Scott Dierking",
+    "yards": 2863
+   },
+   {
+    "name": "Montrell Lowe",
+    "yards": 2648
+   },
+   {
+    "name": "Markell Jones",
+    "yards": 2594
+   },
+   {
+    "name": "Edwin Watson",
+    "yards": 2520
+   },
+   {
+    "name": "Harry Szulborski",
+    "yards": 2478
+   },
+   {
+    "name": "Corey Rogers",
+    "yards": 2436
+   }
+  ],
+  "source": "Wikipedia \"Purdue Boilermakers football statistical leaders\" career rushing yards table (revision 1387405885), which cites the school record book; fetched 2026-11-17"
+ },
+ "IU": {
+  "floor": 2453,
+  "verified": true,
+  "list": [
+   {
+    "name": "Anthony Thompson",
+    "yards": 5299
+   },
+   {
+    "name": "Antwaan Randle El",
+    "yards": 3895
+   },
+   {
+    "name": "Alex Smith",
+    "yards": 3492
+   },
+   {
+    "name": "Mike Harkrader",
+    "yards": 3257
+   },
+   {
+    "name": "Tevin Coleman",
+    "yards": 3219
+   },
+   {
+    "name": "Levron Williams",
+    "yards": 3095
+   },
+   {
+    "name": "Vaughn Dunbar",
+    "yards": 3029
+   },
+   {
+    "name": "Courtney Snyder",
+    "yards": 2789
+   },
+   {
+    "name": "Stevie Scott III",
+    "yards": 2543
+   },
+   {
+    "name": "John Isenbarger",
+    "yards": 2453
+   }
+  ],
+  "source": "Wikipedia \"Indiana Hoosiers football statistical leaders\" career rushing yards table (revision 1387103435), which cites the school record book; fetched 2026-11-17"
+ },
+ "OSU": {
+  "floor": 3200,
+  "verified": true,
+  "list": [
+   {
+    "name": "Archie Griffin",
+    "yards": 5589
+   },
+   {
+    "name": "J. K. Dobbins",
+    "yards": 4459
+   },
+   {
+    "name": "Ezekiel Elliott",
+    "yards": 3961
+   },
+   {
+    "name": "Eddie George",
+    "yards": 3768
+   },
+   {
+    "name": "TreVeyon Henderson",
+    "yards": 3761
+   },
+   {
+    "name": "Tim Spencer",
+    "yards": 3553
+   },
+   {
+    "name": "Beanie Wells",
+    "yards": 3382
+   },
+   {
+    "name": "Braxton Miller",
+    "yards": 3314
+   },
+   {
+    "name": "J. T. Barrett",
+    "yards": 3263
+   },
+   {
+    "name": "Keith Byars",
+    "yards": 3200
+   }
+  ],
+  "source": "Wikipedia \"Ohio State Buckeyes football statistical leaders\" career rushing yards table (revision 1387105526), which cites the school record book; fetched 2026-11-17"
  }
 }

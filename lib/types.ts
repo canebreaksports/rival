@@ -9,7 +9,7 @@ export interface School {
   key: SchoolKey;
   name: string;
   color: string;
-  program: { heisman: number; sec: number; natl: number; unbeaten: number };
+  program: Partial<{ heisman: number; sec: number; natl: number; unbeaten: number }>; // empty for non-SEC rivalry schools
   programSource: string;
   programVerified: boolean;
 }

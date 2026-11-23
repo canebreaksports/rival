@@ -10,6 +10,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { PlayerSeason, Player, Pos } from "../lib/types";
+import { NEW_SCHOOLS } from "../lib/cfbd-teams";
 
 const [cache, ...flags] = process.argv.slice(2);
 const DRY = flags.includes("--dry");
@@ -18,6 +19,8 @@ const TEAMS: Record<string, string> = {
   FLA: "Florida", VAN: "Vanderbilt", MIZ: "Missouri", UK: "Kentucky", OU: "Oklahoma", TAMU: "Texas A&M",
   UGA: "Georgia", SC: "South Carolina", TEX: "Texas", ARK: "Arkansas", MISS: "Ole Miss", MSST: "Mississippi State",
 };
+// non-SEC rivalry schools: --teams=FSU,GT,... builds just those packs
+for (const [n, k] of Object.entries(NEW_SCHOOLS)) TEAMS[k] = n;
 // Well-known names (fame is a judgment call, not a stat). Only used if the player is in the pack.
 const STARS = new Set(["Nick Chubb", "Todd Gurley", "Sony Michel", "D'Andre Swift", "Kenny McIntosh", "Stetson Bennett", "Brock Bowers",
   "Kyle Pitts", "Kadarius Toney", "Anthony Richardson", "Kyle Trask", "Bijan Robinson", "Jonathan Gray", "Sam Ehlinger", "Quinn Ewers",
@@ -26,7 +29,11 @@ const STARS = new Set(["Nick Chubb", "Todd Gurley", "Sony Michel", "D'Andre Swif
   "Benny Snell Jr.", "Chris Rodriguez Jr.", "Lynn Bowden Jr.", "Will Levis", "Ray Davis", "Drew Lock", "Kelly Bryant", "Cody Schrader",
   "Marcus Lattimore", "Mike Davis", "Deebo Samuel", "Jaycee Horn", "Spencer Rattler", "Dak Prescott", "Josh Robinson", "Kylin Hill",
   "Chad Kelly", "Matt Corral", "Jaxson Dart", "Quinshon Judkins", "A.J. Brown", "D.K. Metcalf", "Ralph Webb", "Zac Stacy",
-  "Jerron Seymour", "Trayveon Williams", "Isaiah Spiller", "Christian Kirk", "Devon Achane", "Dameon Pierce"]);
+  "Jerron Seymour", "Trayveon Williams", "Isaiah Spiller", "Christian Kirk", "Devon Achane", "Dameon Pierce",
+  // non-SEC rivalry schools (Nov 2026)
+  "Dalvin Cook", "Jameis Winston", "Lamar Jackson", "Deshaun Watson", "Travis Etienne", "Trevor Lawrence", "Caleb Williams",
+  "Jayden Daniels", "Ezekiel Elliott", "J.K. Dobbins", "Blake Corum", "J.J. McCarthy", "Tevin Coleman", "Ka'Deem Carey",
+  "Cameron Skattebo", "Rondale Moore", "Jahmyr Gibbs", "Marvin Harrison Jr.", "Jaxon Smith-Njigba", "Justin Fields", "C.J. Stroud"]);
 
 type Row = { season: number; playerId: string; player: string; position: string; team: string; category: string; statType: string; stat: string };
 const rows: Row[] = fs.readdirSync(cache).flatMap(f => JSON.parse(fs.readFileSync(path.join(cache, f), "utf8")));
@@ -72,7 +79,9 @@ const data = JSON.parse(fs.readFileSync(file, "utf8")) as { players: Player[]; s
 // --add "Name,Name": append just these players (from any CFBD school) and leave every existing row alone,
 // so record-book corrections made after the original import survive.
 const ADD = (flags.find(f => f.startsWith("--add="))?.slice(6) ?? "").split(",").map(s => s.trim()).filter(Boolean);
+const ONLY = (flags.find(f => f.startsWith("--teams="))?.slice(8) ?? "").split(",").filter(Boolean);
 for (const [key, team] of Object.entries(TEAMS)) {
+  if (ONLY.length && !ONLY.includes(key)) continue;
   const pack = ADD.length ? aggregate(key, team).filter(a => ADD.includes(a.name) && !data.players.some(p => p.name === a.name && p.school === key))
     : pickPack(aggregate(key, team));
   if (!ADD.length) {

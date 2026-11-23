@@ -1,0 +1,4 @@
+{
+ "note": "Owner revisions: per set slug, question signatures (sig) to leave out. The set refills from the next-best questions. Edit, then npm run sets -- --force <slug>.",
+ "sets": {}
+}

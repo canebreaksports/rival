@@ -1,0 +1,471 @@
+{
+ "key": "rival:2026-11-28:LOU@UK",
+ "slug": "2026-11-28-lou-at-uk",
+ "game": {
+  "date": "2026-11-28",
+  "away": "LOU",
+  "home": "UK"
+ },
+ "generatedAt": "2026-11-23T21:12:19.255Z",
+ "engine": 22,
+ "questions": [
+  {
+   "type": "count",
+   "label": "Since 2019",
+   "a": "LOU",
+   "b": "UK",
+   "threshold": 1300,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2019 through 2025, which school had more 1,300-yard rushing seasons?",
+   "A": [
+    {
+     "name": "Javian Hawkins",
+     "yards": 1525,
+     "season": 2019,
+     "profile": "Running back · 2019: 1,525 rushing, 58 receiving yds"
+    }
+   ],
+   "B": [
+    {
+     "name": "Lynn Bowden Jr.",
+     "yards": 1468,
+     "season": 2019,
+     "profile": "Wide receiver · 2019: 1,468 rushing, 348 receiving yds"
+    },
+    {
+     "name": "Chris Rodriguez Jr.",
+     "yards": 1379,
+     "season": 2021,
+     "profile": "Running back · 2021: 1,379 rushing, 61 receiving yds"
+    }
+   ],
+   "sig": "tsrush13002019",
+   "bonus": "names"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more rushing yards in a single season?",
+   "A": {
+    "label": "Lamar Jackson (QB) · 2015 LOU",
+    "value": 960,
+    "school": "LOU"
+   },
+   "B": {
+    "label": "Demie Sumo (RB) · 2024 UK",
+    "value": 586,
+    "school": "UK"
+   },
+   "unit": "rushing yards",
+   "sig": "hDemie Sumo2024,Lamar Jackson2015rush",
+   "more": {
+    "title": "Top 6: single-season rushing yards (LOU, UK players in our data)",
+    "rows": [
+     "1. Lamar Jackson (LOU 2017) 1,601",
+     "2. Lamar Jackson (LOU 2016) 1,571",
+     "3. Javian Hawkins (LOU 2019) 1,525",
+     "4. Benny Snell Jr. (UK 2018) 1,434",
+     "5. Chris Rodriguez Jr. (UK 2021) 1,379",
+     "6. Benny Snell Jr. (UK 2017) 1,333"
+    ]
+   }
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "LOU",
+   "b": "UK",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Since 2007, which school has more players in the top 5 for receiving yards against the other?",
+   "A": [
+    {
+     "name": "DeVante Parker",
+     "yards": 312,
+     "label": "312 in 4 games",
+     "profile": "312 receiving yards against Kentucky in 4 games · No. 1"
+    },
+    {
+     "name": "Harry Douglas",
+     "yards": 223,
+     "label": "223 in 1 game",
+     "profile": "223 receiving yards against Kentucky in 1 game · No. 2"
+    },
+    {
+     "name": "James Quick",
+     "yards": 211,
+     "label": "211 in 3 games",
+     "profile": "211 receiving yards against Kentucky in 3 games · No. 5"
+    }
+   ],
+   "B": [
+    {
+     "name": "La'Rod King",
+     "yards": 219,
+     "label": "219 in 3 games",
+     "profile": "219 receiving yards against Louisville in 3 games · No. 3"
+    },
+    {
+     "name": "Garrett Johnson",
+     "yards": 212,
+     "label": "212 in 3 games",
+     "profile": "212 receiving yards against Louisville in 3 games · No. 4"
+    }
+   ],
+   "sig": "fvrec"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Jawhar Jordan (LOU RB)",
+    "value": 1,
+    "school": "LOU"
+   },
+   "B": {
+    "label": "Benny Snell Jr. (UK RB)",
+    "value": 0,
+    "school": "UK"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jawhar Jordan 1 vs. Benny Snell Jr. 0.",
+   "sig": "urecTDBenny Snell Jr.Jawhar Jordan"
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Dicky Lyons Jr. (Kentucky, 2004–08)",
+     "value": 1752,
+     "school": "UK"
+    },
+    {
+     "label": "Garrett Johnson (Kentucky, 2014–17)",
+     "value": 2089,
+     "school": "UK"
+    },
+    {
+     "label": "J. R. Russell (Louisville, 2001–04)",
+     "value": 2619,
+     "school": "LOU"
+    },
+    {
+     "label": "Harry Douglas (Louisville, 2004–07)",
+     "value": 2924,
+     "school": "LOU"
+    }
+   ],
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Louisville Cardinals football statistical leaders\" career receiving yards table (revision 1379530191), which cites the school record book; fetched 2026-11-23; Wikipedia \"Kentucky Wildcats football statistical leaders\" career receiving yards table (revision 1381777200), which cites the school record book; fetched 2026-11-23",
+   "sig": "nrreceivingDicky Lyons Jr.,Garrett Johnson,Harry Douglas,J. R. Russell",
+   "more": {
+    "title": "Career receiving yards, Louisville and Kentucky (careers ending 2000 or later)",
+    "rows": [
+     "1. Arnold Jackson (Louisville, 1997–00) 3,670",
+     "2. Harry Douglas (Louisville, 2004–07) 2,924",
+     "3. DeVante Parker (Louisville, 2011–14) 2,775",
+     "4. J. R. Russell (Louisville, 2001–04) 2,619",
+     "5. Dez Fitzpatrick (Louisville, 2017–20) 2,589",
+     "6. Jaylen Smith (Louisville, 2015–18) 2,561",
+     "7. Keenan Burton (Kentucky, 2003–07) 2,376",
+     "8. Derek Abney (Kentucky, 2000–03) 2,339",
+     "9. Garrett Johnson (Kentucky, 2014–17) 2,089",
+     "10. Dane Key (Kentucky, 2022–24) 1,870"
+    ]
+   }
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "LOU",
+   "b": "UK",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Louisville and Kentucky's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
+   "A": [
+    {
+     "name": "Lamar Jackson",
+     "yards": 1601,
+     "season": 2017,
+     "label": "2017: 1,601",
+     "profile": "2017 season, 1,601 rushing yards · No. 1 on the combined list"
+    },
+    {
+     "name": "Lamar Jackson",
+     "yards": 1571,
+     "season": 2016,
+     "label": "2016: 1,571",
+     "profile": "2016 season, 1,571 rushing yards · No. 3 on the combined list"
+    },
+    {
+     "name": "Javian Hawkins",
+     "yards": 1525,
+     "season": 2019,
+     "label": "2019: 1,525",
+     "profile": "2019 season, 1,525 rushing yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Howard Stevens",
+     "yards": 1429,
+     "season": 1971,
+     "label": "1971: 1,429",
+     "profile": "1971 season, 1,429 rushing yards · No. 7 on the combined list"
+    },
+    {
+     "name": "Bilal Powell",
+     "yards": 1405,
+     "season": 2010,
+     "label": "2010: 1,405",
+     "profile": "2010 season, 1,405 rushing yards · No. 9 on the combined list"
+    },
+    {
+     "name": "Nathan Poole",
+     "yards": 1394,
+     "season": 1978,
+     "label": "1978: 1,394",
+     "profile": "1978 season, 1,394 rushing yards · No. 10 on the combined list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Moe Williams",
+     "yards": 1600,
+     "season": 1995,
+     "label": "1995: 1,600",
+     "profile": "1995 season, 1,600 rushing yards · No. 2 on the combined list"
+    },
+    {
+     "name": "Lynn Bowden",
+     "yards": 1468,
+     "season": 2019,
+     "label": "2019: 1,468",
+     "profile": "2019 season, 1,468 rushing yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Benny Snell",
+     "yards": 1449,
+     "season": 2018,
+     "label": "2018: 1,449",
+     "profile": "2018 season, 1,449 rushing yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Artose Pinner",
+     "yards": 1414,
+     "season": 2002,
+     "label": "2002: 1,414",
+     "profile": "2002 season, 1,414 rushing yards · No. 8 on the combined list"
+    }
+   ],
+   "sig": "fsrush"
+  },
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "LOU",
+   "b": "UK",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "info": {
+    "title": "Which awards count?",
+    "text": "Heisman Trophy: most outstanding player · Maxwell Award: best all-around player · Walter Camp Award: player of the year · Doak Walker Award: best running back · Biletnikoff Award: best receiver · Davey O'Brien Award: best quarterback · John Mackey Award: best tight end · Outland Trophy: best interior lineman · Chuck Bednarik Award: best defensive player · Bronko Nagurski Trophy: best defensive player · Butkus Award: best linebacker · Jim Thorpe Award: best defensive back · Lombardi Award: best lineman or linebacker · Lou Groza Award: best kicker · Ray Guy Award: best punter"
+   },
+   "prompt": "From 2000 through 2025, which school had more winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)?",
+   "A": [
+    {
+     "name": "Lamar Jackson",
+     "yards": 2016,
+     "season": 2016,
+     "label": "Heisman Trophy",
+     "profile": "QB · won the Heisman Trophy (most outstanding player)"
+    },
+    {
+     "name": "Lamar Jackson",
+     "yards": 2016,
+     "season": 2016,
+     "label": "Maxwell Award",
+     "profile": "QB · won the Maxwell Award (best all-around player)"
+    },
+    {
+     "name": "Lamar Jackson",
+     "yards": 2016,
+     "season": 2016,
+     "label": "Walter Camp Award",
+     "profile": "QB · won the Walter Camp Award (player of the year)"
+    },
+    {
+     "name": "Elvis Dumervil",
+     "yards": 2005,
+     "season": 2005,
+     "label": "Bronko Nagurski Trophy",
+     "profile": "DE · won the Bronko Nagurski Trophy (best defensive player)"
+    },
+    {
+     "name": "Gerod Holliman",
+     "yards": 2014,
+     "season": 2014,
+     "label": "Jim Thorpe Award",
+     "profile": "S · won the Jim Thorpe Award (best defensive back)"
+    },
+    {
+     "name": "Art Carmody",
+     "yards": 2006,
+     "season": 2006,
+     "label": "Lou Groza Award",
+     "profile": "won the Lou Groza Award (best kicker)"
+    }
+   ],
+   "B": [
+    {
+     "name": "Josh Allen",
+     "yards": 2018,
+     "season": 2018,
+     "label": "Chuck Bednarik Award",
+     "profile": "LB · won the Chuck Bednarik Award (best defensive player)"
+    },
+    {
+     "name": "Josh Allen",
+     "yards": 2018,
+     "season": 2018,
+     "label": "Bronko Nagurski Trophy",
+     "profile": "LB · won the Bronko Nagurski Trophy (best defensive player)"
+    },
+    {
+     "name": "Max Duffy",
+     "yards": 2019,
+     "season": 2019,
+     "label": "Ray Guy Award",
+     "profile": "won the Ray Guy Award (best punter)"
+    }
+   ],
+   "sig": "acall2000",
+   "bonus": "names"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Sep 2, 2012",
+    "winner": "LOU",
+    "loser": "UK",
+    "ws": 32,
+    "ls": 14,
+    "venue": "L&N Federal Credit Union Stadium"
+   },
+   "prompt": "In this game, did La'Rod King (Kentucky) have more or less than",
+   "line": "100 receiving yards",
+   "answer": "under",
+   "reveal": "Less. La'Rod King had 77 receiving yards on 8 catches and 1 TD in this game.",
+   "check": {
+    "value": 77,
+    "line": 100
+   },
+   "sig": "gm2012-09-02La'Rod Kingrec"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Malik Cunningham (QB) · 2022 LOU",
+     "value": 565,
+     "school": "LOU"
+    },
+    {
+     "label": "Hassan Hall (RB) · 2018 LOU",
+     "value": 303,
+     "school": "LOU"
+    },
+    {
+     "label": "Stanley Williams (RB) · 2015 UK",
+     "value": 855,
+     "school": "UK"
+    },
+    {
+     "label": "Javian Hawkins (RB) · 2019 LOU",
+     "value": 1525,
+     "school": "LOU"
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Malik Cunningham's best year was 2021 (1,031), not 2022; Hassan Hall's best year was 2019 (501), not 2018; Stanley Williams's best year was 2016 (1,170), not 2015.",
+   "sig": "trrushHassan Hall2018,Javian Hawkins2019,Malik Cunningham2022,Stanley Williams2015",
+   "more": {
+    "title": "Top 8: single-season rushing yards (LOU, UK players in our data)",
+    "rows": [
+     "1. Lamar Jackson (LOU 2017) 1,601",
+     "2. Lamar Jackson (LOU 2016) 1,571",
+     "3. Javian Hawkins (LOU 2019) 1,525",
+     "4. Benny Snell Jr. (UK 2018) 1,434",
+     "5. Chris Rodriguez Jr. (UK 2021) 1,379",
+     "6. Benny Snell Jr. (UK 2017) 1,333",
+     "7. Stanley Williams (UK 2016) 1,170",
+     "8. Jawhar Jordan (LOU 2023) 1,128"
+    ]
+   }
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Stephen Johnson (QB) · 2017 UK",
+     "value": 375,
+     "school": "UK"
+    },
+    {
+     "label": "Malik Cunningham (QB) · 2018 LOU",
+     "value": 497,
+     "school": "LOU"
+    },
+    {
+     "label": "Asim Rose (RB) · 2019 UK",
+     "value": 826,
+     "school": "UK"
+    },
+    {
+     "label": "Jawhar Jordan (RB) · 2023 LOU",
+     "value": 1128,
+     "school": "LOU"
+    }
+   ],
+   "unit": "yds",
+   "sig": "rsea|rushAsim Rose2019,Jawhar Jordan2023,Malik Cunningham2018,Stephen Johnson2017",
+   "more": {
+    "title": "Top 8: single-season rushing yards (LOU, UK players in our data)",
+    "rows": [
+     "1. Lamar Jackson (LOU 2017) 1,601",
+     "2. Lamar Jackson (LOU 2016) 1,571",
+     "3. Javian Hawkins (LOU 2019) 1,525",
+     "4. Benny Snell Jr. (UK 2018) 1,434",
+     "5. Chris Rodriguez Jr. (UK 2021) 1,379",
+     "6. Benny Snell Jr. (UK 2017) 1,333",
+     "7. Stanley Williams (UK 2016) 1,170",
+     "8. Jawhar Jordan (LOU 2023) 1,128"
+    ]
+   }
+  }
+ ]
+}

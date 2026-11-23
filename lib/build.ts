@@ -2,8 +2,9 @@
 import type { CuratedItem, Dataset, FrozenSet, Game, Question, QType, SchoolKey } from "./types";
 import { pick, seededRng, shuffle, type Rng } from "./rng";
 import { genCareerRecRank } from "./notable-gen";
+import overrides from "@/data/overrides.json";
 import { genWalkoffCount, genWalkoffMC } from "./walkoff-gen";
-import { genTopSeasons, genTopVs } from "./fillin-gen";
+import { genTopSeasons, genTopVs, genTopCareer, type CareerLists } from "./fillin-gen";
 import { PROGRAM_STATS, SCHOOL, programValue } from "./data";
 import { genGameCount, genSeasonCount, genVsLeaderMC } from "./trend-gen";
 import { genAwardCount, genAwardMC, genDraftCount, genDraftMC, genHeismanCount, genHeismanMC } from "./honors-gen";
@@ -11,10 +12,10 @@ import { genGameMoment, genGameRank, genLongestGameMoment, genLongestSeriesMC, g
 import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 21; // v21: notable also = school top-10 single seasons + owner list (McCluster); // v20: Name Them by default, years only for walk-offs; bonus answers hidden until the bonus ends; // v19: fill-in questions (combined top 10 seasons, top 5 vs each other), ⓘ award explainers; // v18: higher/lower only on notable players (lib/notable.ts); // v17: 10 questions in every set (bigger generated pool, second fill pass); // v16: walk-offs (final play or OT), a record-book career ranking every week; v15: Notables Rank It; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
+export const ENGINE_VERSION = 22; // v22: two fill-ins per set (+ combined career top 10), tighter game lines, rivalry week non-SEC schools; // v21: notable also = school top-10 single seasons + owner list (McCluster); // v20: Name Them by default, years only for walk-offs; bonus answers hidden until the bonus ends; // v19: fill-in questions (combined top 10 seasons, top 5 vs each other), ⓘ award explainers; // v18: higher/lower only on notable players (lib/notable.ts); // v17: 10 questions in every set (bigger generated pool, second fill pass); // v16: walk-offs (final play or OT), a record-book career ranking every week; v15: Notables Rank It; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
 export const WEEKLY_N = 10;
 
-export interface BuildOpts { verifiedOnly: boolean }
+export interface BuildOpts { verifiedOnly: boolean; skip?: Set<string> } // skip: owner-rejected question signatures
 
 export const findMatchup = (data: Dataset, a: SchoolKey, b: SchoolKey) =>
   data.curated.matchups.find(m => (m.a === a && m.b === b) || (m.a === b && m.b === a));
@@ -79,7 +80,7 @@ export const PLAYER_QS = 18; // up to a full set from generated questions; caps 
 // Every "since <year>" count question a matchup can produce, enumerated once per matchup with a fixed seed
 // (so it doesn't depend on, or consume, the set's own random stream) and cached.
 const CANDS = new WeakMap<Dataset, Map<string, Question[]>>();
-function countCandidates(data: Dataset, a: SchoolKey, b: SchoolKey): Question[] {
+export function countCandidates(data: Dataset, a: SchoolKey, b: SchoolKey): Question[] {
   let m = CANDS.get(data); if (!m) CANDS.set(data, (m = new Map()));
   const key = a + "@" + b, hit = m.get(key); if (hit) return hit;
   const rng = seededRng("cands:" + key), rv = data.rivalry?.pairs[pairKey(a, b)];
@@ -174,14 +175,15 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
     const q = cr ? genCareerRecRank(cr, teams[0], teams[1], rng, rush) ?? (data.careerRec ? genCareerRecRank(data.careerRec, teams[0], teams[1], rng) : null) : null;
     if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q) }
   }
-  // Fill-in every week (owner, Nov 2026: "we want more fill in questions"): combined top 10 seasons or top 5 against each other
+  // Two fill-ins every week (owner, Nov 2026: "we want more fill in questions"): combined top 10 seasons, combined top 10
+  // careers, or the top 5 against each other
   if (teams.length > 1) {
-    const rvF = data.rivalry?.pairs[pairKey(teams[0], teams[1])];
-    const fills = shuffle(rng, [() => (data.seasonRecs ? genTopSeasons(data.seasonRecs, teams[0], teams[1], rng) : null),
-      () => (rvF ? genTopVs(rvF, teams[0], teams[1], rng) : null)]);
-    for (const f of fills) { const q = f(); if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q); break } }
-    if (data.seasonRecs) gens.push(() => genTopSeasons(data.seasonRecs!, teams[0], teams[1], rng));
-    if (rvF) gens.push(() => genTopVs(rvF, teams[0], teams[1], rng));
+    const rvF = data.rivalry?.pairs[pairKey(teams[0], teams[1])], [ta, tb] = teams;
+    const fam = [() => (data.seasonRecs ? genTopSeasons(data.seasonRecs, ta, tb, rng) : null),
+      () => (data.careerRec ? genTopCareer(data.career as unknown as CareerLists, data.careerRec as unknown as CareerLists, ta, tb, rng) : null),
+      () => (rvF ? genTopVs(rvF, ta, tb, rng) : null)];
+    let got = 0;
+    for (const f of shuffle(rng, fam)) { if (got >= 2) break; const q = f(); if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q); got++ } }
   }
   if (rng() < 0.7) { const u = genUpset(c); if (u) { sigs.add(u.sig); out.push(u) } }
   let trapped = rng() < 0.25;
@@ -228,7 +230,7 @@ export function involvesBoth(q: Question, a: SchoolKey, b: SchoolKey): boolean {
 
 /** Generator family of a question, from its signature prefix (e.g. "vs" = totals against each other). */
 export const questionKind = (q: Question) =>
-  q.sig.match(/^(gm|vs|tv|ts|tg|dc|dm|ac|am|hc|hm|sc|td|gr|lp|lg|mx|nx|nr|wo|wm|fs|fv|pp|tr|tp|d|u|h|r|c|g|k|p)/)?.[1] ?? q.sig.slice(0, 2);
+  q.sig.match(/^(gm|vs|tv|ts|tg|dc|dm|ac|am|hc|hm|sc|td|gr|lp|lg|mx|nx|nr|wo|wm|fs|fv|fc|pp|tr|tp|d|u|h|r|c|g|k|p)/)?.[1] ?? q.sig.slice(0, 2);
 // may appear twice in a set: program pit, curated items, game moments, plain head-to-heads
 const REPEATABLE = new Set(["g", "gm", "h"]);
 const CURATED_MAX = 3; // hand-written questions per set
@@ -258,6 +260,7 @@ export function buildRound(data: Dataset, a: SchoolKey, b: SchoolKey, rng: Rng, 
   // any kind may appear twice (owner: every set gets 10 questions). Caps, traps and upsets hold in both passes.
   for (const pass of [1, 2]) for (const u of units) {
     if (n >= WEEKLY_N) break;
+    if (o.skip && u.some(q => o.skip!.has(q.sig))) continue; // owner revisions (data/overrides.json)
     if (n + u.length > WEEKLY_N || picked.includes(u)) continue;
     const kind = questionKind(u[0]);
     if ((kinds[kind] ?? 0) >= (kind === "k" ? CURATED_MAX : REPEATABLE.has(kind) || pass === 2 ? 2 : 1)) continue;
@@ -274,12 +277,14 @@ export function buildRound(data: Dataset, a: SchoolKey, b: SchoolKey, rng: Rng, 
 }
 
 // ---- weekly sets ----
+// Owner revisions: question signatures to leave out of a set (data/overrides.json), applied when the set is built.
+const skipFor = (slug: string): string[] => ((overrides as { sets: Record<string, { skip?: string[] }> }).sets[slug]?.skip ?? []);
 export const weekKey = (g: Game) => `rival:${g.date}:${g.away}@${g.home}`;
 export const weekSlug = (g: Game) => `${g.date}-${g.away}-at-${g.home}`.toLowerCase();
 
 export function weeklySet(data: Dataset, g: Game): FrozenSet {
   const key = weekKey(g);
-  const questions = buildRound(data, g.away, g.home, seededRng(key), { verifiedOnly: true }).slice(0, WEEKLY_N);
+  const questions = buildRound(data, g.away, g.home, seededRng(key), { verifiedOnly: true, skip: new Set(skipFor(weekSlug(g))) }).slice(0, WEEKLY_N);
   return { key, slug: weekSlug(g), game: g, generatedAt: new Date().toISOString(), engine: ENGINE_VERSION, questions };
 }
 

@@ -4,10 +4,11 @@
 //   npx tsx scripts/fetch-espn-box.ts <cfbdCacheDir> <espnCacheDir> [fromYear] [toYear]
 import fs from "node:fs";
 import path from "node:path";
+import { NEW_SCHOOLS } from "../lib/cfbd-teams";
 
 const [cfbd, out, from = "2004", to = "2011"] = process.argv.slice(2);
 if (!cfbd || !out) { console.error("usage: tsx scripts/fetch-espn-box.ts <cfbdCacheDir> <espnCacheDir> [fromYear] [toYear]"); process.exit(1); }
-const SEC = new Set(["Alabama", "Arkansas", "Auburn", "Florida", "Georgia", "Kentucky", "LSU", "Mississippi State", "Missouri", "Oklahoma",
+const SEC = new Set([...Object.keys(NEW_SCHOOLS), "Alabama", "Arkansas", "Auburn", "Florida", "Georgia", "Kentucky", "LSU", "Mississippi State", "Missouri", "Oklahoma",
   "Ole Miss", "South Carolina", "Tennessee", "Texas", "Texas A&M", "Vanderbilt"]);
 const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
 

@@ -206,5 +206,101 @@
   },
   "programSource": "Drafted early in the prototype; re-verify from Wikipedia: List of Southeastern Conference champions, College football national championships in NCAA Division I FBS, Heisman Trophy winners (spec §8.4)",
   "programVerified": false
+ },
+ {
+  "key": "FSU",
+  "name": "Florida State",
+  "color": "#782f40",
+  "program": {},
+  "programSource": "Not compiled (non-SEC rivalry school added Nov 2026); program questions skip it",
+  "programVerified": false
+ },
+ {
+  "key": "GT",
+  "name": "Georgia Tech",
+  "color": "#b3a369",
+  "program": {},
+  "programSource": "Not compiled (non-SEC rivalry school added Nov 2026); program questions skip it",
+  "programVerified": false
+ },
+ {
+  "key": "MICH",
+  "name": "Michigan",
+  "color": "#00274c",
+  "program": {},
+  "programSource": "Not compiled (non-SEC rivalry school added Nov 2026); program questions skip it",
+  "programVerified": false
+ },
+ {
+  "key": "OSU",
+  "name": "Ohio State",
+  "color": "#ba0c2f",
+  "program": {},
+  "programSource": "Not compiled (non-SEC rivalry school added Nov 2026); program questions skip it",
+  "programVerified": false
+ },
+ {
+  "key": "LOU",
+  "name": "Louisville",
+  "color": "#c9001f",
+  "program": {},
+  "programSource": "Not compiled (non-SEC rivalry school added Nov 2026); program questions skip it",
+  "programVerified": false
+ },
+ {
+  "key": "CLEM",
+  "name": "Clemson",
+  "color": "#f56600",
+  "program": {},
+  "programSource": "Not compiled (non-SEC rivalry school added Nov 2026); program questions skip it",
+  "programVerified": false
+ },
+ {
+  "key": "USC",
+  "name": "USC",
+  "color": "#990000",
+  "program": {},
+  "programSource": "Not compiled (non-SEC rivalry school added Nov 2026); program questions skip it",
+  "programVerified": false
+ },
+ {
+  "key": "UCLA",
+  "name": "UCLA",
+  "color": "#2774ae",
+  "program": {},
+  "programSource": "Not compiled (non-SEC rivalry school added Nov 2026); program questions skip it",
+  "programVerified": false
+ },
+ {
+  "key": "ARIZ",
+  "name": "Arizona",
+  "color": "#cc0033",
+  "program": {},
+  "programSource": "Not compiled (non-SEC rivalry school added Nov 2026); program questions skip it",
+  "programVerified": false
+ },
+ {
+  "key": "ASU",
+  "name": "Arizona State",
+  "color": "#ffc627",
+  "program": {},
+  "programSource": "Not compiled (non-SEC rivalry school added Nov 2026); program questions skip it",
+  "programVerified": false
+ },
+ {
+  "key": "PUR",
+  "name": "Purdue",
+  "color": "#ceb888",
+  "program": {},
+  "programSource": "Not compiled (non-SEC rivalry school added Nov 2026); program questions skip it",
+  "programVerified": false
+ },
+ {
+  "key": "IU",
+  "name": "Indiana",
+  "color": "#990000",
+  "program": {},
+  "programSource": "Not compiled (non-SEC rivalry school added Nov 2026); program questions skip it",
+  "programVerified": false
  }
 ]

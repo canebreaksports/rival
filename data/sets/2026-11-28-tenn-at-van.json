@@ -6,39 +6,139 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-23T20:15:09.288Z",
- "engine": 21,
+ "generatedAt": "2026-11-23T21:12:20.186Z",
+ "engine": 22,
  "questions": [
   {
-   "type": "h2h",
-   "label": "Against Each Other",
+   "type": "count",
+   "label": "Since 2022",
+   "a": "TENN",
+   "b": "VAN",
+   "threshold": 900,
    "verified": true,
-   "flip": true,
-   "prompt": "In Tennessee–Vanderbilt games since 2012, who had more rushing yards against the other school?",
-   "A": {
-    "label": "Dylan Sampson (TENN) vs. Vanderbilt",
-    "value": 346,
-    "school": "TENN"
-   },
-   "B": {
-    "label": "Diego Pavia (VAN) vs. Tennessee",
-    "value": 210,
-    "school": "VAN"
-   },
-   "unit": "rushing yds",
-   "note": "Dylan Sampson: 346 in 3 games. Diego Pavia: 210 in 2 games.",
-   "sig": "vsrushDiego Pavia,Dylan Sampson",
+   "pitted": true,
+   "prompt": "From 2022 through 2025, which school had more 900-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Jalin Hyatt",
+     "yards": 1267,
+     "season": 2022,
+     "profile": "Wide receiver · 2022: 0 rushing, 1,267 receiving yds"
+    },
+    {
+     "name": "Chris Brazzell II",
+     "yards": 1017,
+     "season": 2025,
+     "profile": "Wide receiver · 2025: 0 rushing, 1,017 receiving yds"
+    }
+   ],
+   "B": [],
+   "sig": "tsrec9002022",
+   "bonus": "names"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
+   "items": [
+    {
+     "label": "Arian Foster (RB) · 2008 TENN",
+     "value": 736,
+     "school": "TENN"
+    },
+    {
+     "label": "Ke'Shawn Vaughn (RB) · 2019 VAN",
+     "value": 1298,
+     "school": "VAN"
+    },
+    {
+     "label": "Re'Mahn Davis (RB) · 2022 VAN",
+     "value": 1057,
+     "school": "VAN"
+    },
+    {
+     "label": "Ralph Webb (RB) · 2016 VAN",
+     "value": 1449,
+     "school": "VAN"
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Arian Foster's best year was 2007 (1,533), not 2008; Ke'Shawn Vaughn's best year was 2018 (1,414), not 2019.",
+   "sig": "trscrimArian Foster2008,Ke'Shawn Vaughn2019,Ralph Webb2016,Re'Mahn Davis2022",
    "more": {
-    "title": "Top rushing yards against the other school since 2012",
+    "title": "Top 8: single-season yards from scrimmage (TENN, VAN players in our data)",
     "rows": [
-     "1. Ralph Webb (VAN) 481 in 4 games",
-     "2. Jaylen Wright (TENN) 347 in 3 games",
-     "3. Dylan Sampson (TENN) 346 in 3 games",
-     "4. Eric Gray (TENN) 320 in 2 games",
-     "5. Jabari Small (TENN) 260 in 4 games",
-     "6. Joshua Dobbs (TENN) 260 in 4 games"
+     "1. Jamal Lewis (TENN 1997) 1,630",
+     "2. Dylan Sampson (TENN 2024) 1,626",
+     "3. Arian Foster (TENN 2007) 1,533",
+     "4. Ralph Webb (VAN 2016) 1,449",
+     "5. Ke'Shawn Vaughn (VAN 2018) 1,414",
+     "6. Ralph Webb (VAN 2015) 1,340",
+     "7. Ke'Shawn Vaughn (VAN 2019) 1,298",
+     "8. Re'Mahn Davis (VAN 2022) 1,057"
     ]
    }
+  },
+  {
+   "type": "count",
+   "label": "NFL Draft",
+   "a": "TENN",
+   "b": "VAN",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From the 2015 draft through 2026, which school had more linebackers taken in the first three rounds?",
+   "A": [],
+   "B": [
+    {
+     "name": "Zach Cunningham",
+     "yards": 57,
+     "season": 2017,
+     "label": "No. 57 pick",
+     "profile": "Inside Linebacker · 2017 draft, round 2"
+    },
+    {
+     "name": "Oren Burks",
+     "yards": 88,
+     "season": 2018,
+     "label": "No. 88 pick",
+     "profile": "Outside Linebacker · 2018 draft, round 3"
+    }
+   ],
+   "sig": "dcr32015lb",
+   "bonus": "names"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Jalin Hyatt (TENN WR) · career receiving TDs",
+     "value": 19,
+     "school": "TENN"
+    },
+    {
+     "label": "Kalija Lipscomb (VAN WR) · 2017 receiving TDs",
+     "value": 8,
+     "school": "VAN"
+    },
+    {
+     "label": "Ralph Webb (VAN RB) · 2015 rushing TDs",
+     "value": 5,
+     "school": "VAN"
+    },
+    {
+     "label": "Joshua Dobbs (TENN QB) · career rushing TDs",
+     "value": 32,
+     "school": "TENN"
+    }
+   ],
+   "sig": "mxTDJalin Hyattcareer receiving TDs,Joshua Dobbscareer rushing TDs,Kalija Lipscomb2017 receiving TDs,Ralph Webb2015 rushing TDs"
   },
   {
    "type": "count",
@@ -49,7 +149,91 @@
    "verified": true,
    "pitted": true,
    "bonus": "names",
-   "prompt": "Tennessee and Vanderbilt's combined top 10 single-season rushing yards: which school has more seasons on the list?",
+   "prompt": "Since 2012, which school has more players in the top 5 for yards from scrimmage against the other?",
+   "A": [
+    {
+     "name": "Jaylen Wright",
+     "yards": 356,
+     "label": "356 in 3 games",
+     "profile": "356 yards from scrimmage against Vanderbilt in 3 games · No. 2"
+    },
+    {
+     "name": "Dylan Sampson",
+     "yards": 352,
+     "label": "352 in 3 games",
+     "profile": "352 yards from scrimmage against Vanderbilt in 3 games · No. 4"
+    },
+    {
+     "name": "Eric Gray",
+     "yards": 329,
+     "label": "329 in 2 games",
+     "profile": "329 yards from scrimmage against Vanderbilt in 2 games · No. 5"
+    }
+   ],
+   "B": [
+    {
+     "name": "Ralph Webb",
+     "yards": 506,
+     "label": "506 in 4 games",
+     "profile": "506 yards from scrimmage against Tennessee in 4 games · No. 1"
+    },
+    {
+     "name": "Trent Sherfield",
+     "yards": 354,
+     "label": "354 in 3 games",
+     "profile": "354 yards from scrimmage against Tennessee in 3 games · No. 3"
+    }
+   ],
+   "sig": "fvscrim"
+  },
+  {
+   "type": "moment",
+   "label": "Longest Play",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 25, 2023",
+    "winner": "TENN",
+    "loser": "VAN",
+    "ws": 48,
+    "ls": 24,
+    "venue": "Neyland Stadium"
+   },
+   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
+   "line": "47.5 yards",
+   "answer": "over",
+   "reveal": "More. The longest was Ramel Keyton's 56-yard catch for Tennessee; Vanderbilt's longest was 27 yards (Will Sheppard).",
+   "check": {
+    "value": 56,
+    "line": 47.5
+   },
+   "sig": "lg2023-11-25"
+  },
+  {
+   "type": "moment",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did Tennessee beat Vanderbilt more or fewer than",
+   "line": "17.5 times",
+   "answer": "over",
+   "reveal": "More. Tennessee went 19–7 against Vanderbilt from 2000 to 2025 (26 meetings, on-field results).",
+   "check": {
+    "value": 19,
+    "line": 17.5
+   },
+   "sig": "scTENNVAN"
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "TENN",
+   "b": "VAN",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Tennessee and Vanderbilt's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
    "A": [
     {
      "name": "Dylan Sampson",
@@ -128,115 +312,6 @@
   },
   {
    "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Re'Mahn Davis (VAN RB) · career rushing TDs",
-     "value": 5,
-     "school": "VAN"
-    },
-    {
-     "label": "Arian Foster (TENN RB) · 2007 rushing TDs",
-     "value": 12,
-     "school": "TENN"
-    },
-    {
-     "label": "Jamal Lewis (TENN RB) · career total TDs (rushing + receiving)",
-     "value": 21,
-     "school": "TENN"
-    },
-    {
-     "label": "Trent Sherfield (VAN WR) · career total TDs (rushing + receiving)",
-     "value": 11,
-     "school": "VAN"
-    }
-   ],
-   "sig": "mxTDArian Foster2007 rushing TDs,Jamal Lewiscareer total TDs (rushing + receiving),Re'Mahn Daviscareer rushing TDs,Trent Sherfieldcareer total TDs (rushing + receiving)"
-  },
-  {
-   "type": "count",
-   "label": "Since 2022",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 900,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2022 through 2025, which school had more 900-yard receiving seasons?",
-   "A": [
-    {
-     "name": "Jalin Hyatt",
-     "yards": 1267,
-     "season": 2022,
-     "profile": "Wide receiver · 2022: 0 rushing, 1,267 receiving yds"
-    },
-    {
-     "name": "Chris Brazzell II",
-     "yards": 1017,
-     "season": 2025,
-     "profile": "Wide receiver · 2025: 0 rushing, 1,017 receiving yds"
-    }
-   ],
-   "B": [],
-   "sig": "tsrec9002022",
-   "bonus": "names"
-  },
-  {
-   "type": "count",
-   "label": "Fill In",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "Since 2012, which school has more players in the top 6 for rushing yards against the other?",
-   "A": [
-    {
-     "name": "Jaylen Wright",
-     "yards": 347,
-     "label": "347 in 3 games",
-     "profile": "347 rushing yards against Vanderbilt in 3 games · No. 2"
-    },
-    {
-     "name": "Dylan Sampson",
-     "yards": 346,
-     "label": "346 in 3 games",
-     "profile": "346 rushing yards against Vanderbilt in 3 games · No. 3"
-    },
-    {
-     "name": "Eric Gray",
-     "yards": 320,
-     "label": "320 in 2 games",
-     "profile": "320 rushing yards against Vanderbilt in 2 games · No. 4"
-    },
-    {
-     "name": "Jabari Small",
-     "yards": 260,
-     "label": "260 in 4 games",
-     "profile": "260 rushing yards against Vanderbilt in 4 games · No. 5"
-    },
-    {
-     "name": "Joshua Dobbs",
-     "yards": 260,
-     "label": "260 in 4 games",
-     "profile": "260 rushing yards against Vanderbilt in 4 games · No. 6"
-    }
-   ],
-   "B": [
-    {
-     "name": "Ralph Webb",
-     "yards": 481,
-     "label": "481 in 4 games",
-     "profile": "481 rushing yards against Tennessee in 4 games · No. 1"
-    }
-   ],
-   "sig": "fvrush"
-  },
-  {
-   "type": "rank",
    "label": "Notables",
    "verified": true,
    "pitted": true,
@@ -282,108 +357,25 @@
    }
   },
   {
-   "type": "moment",
-   "label": "Series History",
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
    "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, did Vanderbilt beat Tennessee more or fewer than",
-   "line": "6.5 times",
-   "answer": "over",
-   "reveal": "More. Vanderbilt went 7–19 against Tennessee from 2000 to 2025 (26 meetings, on-field results).",
-   "check": {
-    "value": 7,
-    "line": 6.5
+   "flip": true,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Jared Pinkney (VAN TE)",
+    "value": 14,
+    "school": "VAN"
    },
-   "sig": "scVANTENN"
-  },
-  {
-   "type": "count",
-   "label": "NFL Draft",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From the 2015 draft through 2026, which school had more linebackers taken in the first three rounds?",
-   "A": [],
-   "B": [
-    {
-     "name": "Zach Cunningham",
-     "yards": 57,
-     "season": 2017,
-     "label": "No. 57 pick",
-     "profile": "Inside Linebacker · 2017 draft, round 2"
-    },
-    {
-     "name": "Oren Burks",
-     "yards": 88,
-     "season": 2018,
-     "label": "No. 88 pick",
-     "profile": "Outside Linebacker · 2018 draft, round 3"
-    }
-   ],
-   "sig": "dcr32015lb",
-   "bonus": "names"
-  },
-  {
-   "type": "mc",
-   "label": "Walk-offs",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Of the 22 Tennessee–Vanderbilt games since 2004, how many were won on the final play or in overtime? (Counts: a game-winning score as time expired in the 4th quarter, or any overtime win.)",
-   "options": [
-    "1",
-    "4",
-    "0",
-    "3"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    0,
-    2
-   ],
-   "reveal": "1: 2011 overtime win, Tennessee 27–21.",
-   "years": {
-    "prompt": "Name the season it happened.",
-    "a": "TENN",
-    "b": "VAN",
-    "A": [
-     {
-      "name": "Overtime win: Tennessee 27, Vanderbilt 21",
-      "yards": 6,
-      "season": 2011,
-      "label": "27–21 (OT)",
-      "profile": "Overtime win, 27–21"
-     }
-    ],
-    "B": []
+   "B": {
+    "label": "Jamal Lewis (TENN RB)",
+    "value": 4,
+    "school": "TENN"
    },
-   "sig": "wm2004"
-  },
-  {
-   "type": "moment",
-   "label": "Longest Play",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 17, 2012",
-    "winner": "VAN",
-    "loser": "TENN",
-    "ws": 41,
-    "ls": 18,
-    "venue": "FirstBank Stadium"
-   },
-   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
-   "line": "49.5 yards",
-   "answer": "over",
-   "reveal": "More. The longest was Zac Stacy's 72-yard catch for Vanderbilt; Tennessee's longest was 30 yards (Marlin Lane).",
-   "check": {
-    "value": 72,
-    "line": 49.5
-   },
-   "sig": "lg2012-11-17"
+   "unit": "",
+   "note": "🚨 Upset: Jared Pinkney 14 vs. Jamal Lewis 4.",
+   "sig": "urecTDJamal LewisJared Pinkney"
   }
  ]
 }
