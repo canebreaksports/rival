@@ -1,5 +1,4 @@
-// Site passwords (browser Basic Auth, any username). The whole site is closed (owner, Nov 2026):
-//   players' pages: PLAYER_PASSWORD or COACH_PASSWORD · coach pages (answers): COACH_PASSWORD only.
+// Password check for the admin (coach) pages. Browser Basic Auth: any username, password = COACH_PASSWORD.
 export function coachAuthorized(header: string | null, password: string | undefined): boolean {
   if (!password) return false;                       // fail closed: no password configured, nobody gets in
   if (!header?.startsWith("Basic ")) return false;
@@ -12,9 +11,3 @@ export function coachAuthorized(header: string | null, password: string | undefi
   return diff === 0;
 }
 
-/** Which password a path needs, and whether the request has it. */
-export function siteAuthorized(path: string, header: string | null, env: { PLAYER_PASSWORD?: string; COACH_PASSWORD?: string }): boolean {
-  if (coachAuthorized(header, env.COACH_PASSWORD)) return true;          // the coach password opens everything
-  if (path === "/coach" || path.startsWith("/coach/") || path.startsWith("/api/stats")) return false;
-  return coachAuthorized(header, env.PLAYER_PASSWORD);
-}

@@ -1,19 +1,15 @@
-// The whole site is password-protected (owner, Nov 2026: "players and coaches pages should be closed").
-// Players' pages: PLAYER_PASSWORD (or the coach password). Coach pages (review with answers, coach play, stats): COACH_PASSWORD.
-// Set both in Vercel → Settings → Environment Variables. A missing password keeps its pages locked.
+// Only the admin area is password-protected: every /coach page (weekly review with answers and the owner's notable
+// players, coach play, stats). The game itself is open to everyone. Set COACH_PASSWORD in Vercel → Settings →
+// Environment Variables; without it the admin pages stay locked.
 import { NextResponse, type NextRequest } from "next/server";
-import { siteAuthorized } from "@/lib/coach-auth";
+import { coachAuthorized } from "@/lib/coach-auth";
 
 export function proxy(request: NextRequest) {
-  const path = request.nextUrl.pathname;
-  const env = { PLAYER_PASSWORD: process.env.PLAYER_PASSWORD, COACH_PASSWORD: process.env.COACH_PASSWORD };
-  if (siteAuthorized(path, request.headers.get("authorization"), env)) return NextResponse.next();
-  const coach = path === "/coach" || path.startsWith("/coach/");
-  return new NextResponse(coach ? "Coach area: password required." : "PITTED is in a private beta: password required.", {
+  if (coachAuthorized(request.headers.get("authorization"), process.env.COACH_PASSWORD)) return NextResponse.next();
+  return new NextResponse("Coach area: password required.", {
     status: 401,
-    headers: { "WWW-Authenticate": `Basic realm="${coach ? "PITTED coach" : "PITTED"}", charset="UTF-8"`, "Cache-Control": "no-store" },
+    headers: { "WWW-Authenticate": 'Basic realm="PITTED coach", charset="UTF-8"', "Cache-Control": "no-store" },
   });
 }
 
-// everything except Next's static files and images
-export const config = { matcher: ["/((?!_next/static|_next/image|favicon.ico|.*\\.(?:png|jpg|jpeg|svg|ico|webp)$).*)"] };
+export const config = { matcher: ["/coach", "/coach/:path*"] };
