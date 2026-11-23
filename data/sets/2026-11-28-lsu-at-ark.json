@@ -6,8 +6,8 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-23T19:52:54.754Z",
- "engine": 17,
+ "generatedAt": "2026-11-23T20:03:20.887Z",
+ "engine": 18,
  "questions": [
   {
    "type": "mc",
@@ -56,24 +56,24 @@
     "value": 5157,
     "line": 5450
    },
-   "sig": "ppKevin Faulkcareer|Rashod Dubinioncareerscrim0",
-   "pair": "ppKevin Faulkcareer|Rashod Dubinioncareerscrim",
+   "sig": "ppKevin Faulkcareer|Rakeem Boydcareerscrim0",
+   "pair": "ppKevin Faulkcareer|Rakeem Boydcareerscrim",
    "pairPart": 1
   },
   {
    "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "Did Rashod Dubinion finish his Arkansas career with more or less than",
-   "line": "1,000 yards from scrimmage",
+   "prompt": "Did Rakeem Boyd finish his Arkansas career with more or less than",
+   "line": "2,100 yards from scrimmage",
    "answer": "over",
-   "reveal": "More. Rashod Dubinion had 1,203 yards from scrimmage in his career.",
+   "reveal": "More. Rakeem Boyd had 2,534 yards from scrimmage in his career.",
    "check": {
-    "value": 1203,
-    "line": 1000
+    "value": 2534,
+    "line": 2100
    },
-   "sig": "ppKevin Faulkcareer|Rashod Dubinioncareerscrim1",
-   "pair": "ppKevin Faulkcareer|Rashod Dubinioncareerscrim",
+   "sig": "ppKevin Faulkcareer|Rakeem Boydcareerscrim1",
+   "pair": "ppKevin Faulkcareer|Rakeem Boydcareerscrim",
    "pairPart": 2
   },
   {

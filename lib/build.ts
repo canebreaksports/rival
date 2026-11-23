@@ -10,7 +10,7 @@ import { genGameMoment, genGameRank, genLongestGameMoment, genLongestSeriesMC, g
 import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 17; // v17: 10 questions in every set (bigger generated pool, second fill pass); // v16: walk-offs (final play or OT), a record-book career ranking every week; v15: Notables Rank It; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
+export const ENGINE_VERSION = 18; // v18: higher/lower only on notable players (lib/notable.ts); // v17: 10 questions in every set (bigger generated pool, second fill pass); // v16: walk-offs (final play or OT), a record-book career ranking every week; v15: Notables Rank It; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean }
@@ -116,7 +116,7 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
   const rv = teams.length > 1 ? data.rivalry?.pairs[pairKey(teams[0], teams[1])] : undefined;
   if (rv) {
     const [a, b] = teams, from = data.rivalry!.boxFrom;
-    const gm = () => genGameMoment(rv, rng), vs = () => genVsH2H(rv, a, b, rng, from), gr = () => genGameRank(rv, a, b, rng);
+    const gm = () => genGameMoment(rv, rng, c.notable), vs = () => genVsH2H(rv, a, b, rng, from), gr = () => genGameRank(rv, a, b, rng);
     const td = () => genTeamDiffMC(rv, rng); // (single-game Rank It removed at the owner's request, Nov 2026)
     gens.push(gm, gm, gm, gm, vs, vs, vs, gr, gr, td, td, () => genSeriesCount(rv, a, b, rng),
       () => genLongestSeriesMC(rv, a, b, rng), () => genLongestGameMoment(rv, rng));

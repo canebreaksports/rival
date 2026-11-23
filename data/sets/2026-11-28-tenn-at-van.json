@@ -6,133 +6,147 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-23T19:52:55.153Z",
- "engine": 17,
+ "generatedAt": "2026-11-23T20:03:21.188Z",
+ "engine": 18,
  "questions": [
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more career yards from scrimmage?",
+   "A": {
+    "label": "Ke'Shawn Vaughn (RB) · career, VAN",
+    "value": 2712,
+    "school": "VAN"
+   },
+   "B": {
+    "label": "Arian Foster (RB) · career, TENN",
+    "value": 3706,
+    "school": "TENN"
+   },
+   "unit": "yards from scrimmage",
+   "sig": "hArian Fostercareer,Ke'Shawn Vaughncareerscrim",
+   "more": {
+    "title": "Top 6: career yards from scrimmage (VAN, TENN players in our data)",
+    "rows": [
+     "1. Ralph Webb (VAN) 4,745",
+     "2. Arian Foster (TENN) 3,706",
+     "3. Jamal Lewis (TENN) 3,152",
+     "4. Dylan Sampson (TENN) 2,826",
+     "5. Ke'Shawn Vaughn (VAN) 2,712",
+     "6. Re'Mahn Davis (VAN) 1,295"
+    ]
+   }
+  },
+  {
+   "type": "count",
+   "label": "Since 2022",
+   "a": "TENN",
+   "b": "VAN",
+   "threshold": 900,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2022 through 2025, which school had more 900-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Jalin Hyatt",
+     "yards": 1267,
+     "season": 2022,
+     "profile": "Wide receiver · 2022: 0 rushing, 1,267 receiving yds"
+    },
+    {
+     "name": "Chris Brazzell II",
+     "yards": 1017,
+     "season": 2025,
+     "profile": "Wide receiver · 2025: 0 rushing, 1,017 receiving yds"
+    }
+   ],
+   "B": [],
+   "sig": "tsrec9002022",
+   "bonus": "names"
+  },
+  {
+   "type": "count",
+   "label": "NFL Draft",
+   "a": "TENN",
+   "b": "VAN",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From the 2015 draft through 2026, which school had more linebackers taken in the first three rounds?",
+   "A": [],
+   "B": [
+    {
+     "name": "Zach Cunningham",
+     "yards": 57,
+     "season": 2017,
+     "label": "No. 57 pick",
+     "profile": "Inside Linebacker · 2017 draft, round 2"
+    },
+    {
+     "name": "Oren Burks",
+     "yards": 88,
+     "season": 2018,
+     "label": "No. 88 pick",
+     "profile": "Outside Linebacker · 2018 draft, round 3"
+    }
+   ],
+   "sig": "dcr32015lb",
+   "bonus": "names"
+  },
   {
    "type": "moment",
    "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 26, 2016",
+    "date": "Nov 25, 2017",
     "winner": "VAN",
     "loser": "TENN",
-    "ws": 45,
-    "ls": 34,
-    "venue": "FirstBank Stadium"
+    "ws": 42,
+    "ls": 24,
+    "venue": "Neyland Stadium"
    },
-   "prompt": "In this game, did Jauan Jennings (Tennessee) have more or less than",
-   "line": "60 receiving yards",
+   "prompt": "In this game, did Ralph Webb (Vanderbilt) run for more or less than",
+   "line": "100 rushing yards",
    "answer": "over",
-   "reveal": "More. Jauan Jennings had 75 receiving yards on 4 catches and 0 TD in this game.",
+   "reveal": "More. Ralph Webb had 163 rushing yards on 25 carries and 2 TD in this game.",
    "check": {
-    "value": 75,
-    "line": 60
+    "value": 163,
+    "line": 100
    },
-   "sig": "gm2016-11-26Jauan Jenningsrec"
+   "sig": "gm2017-11-25Ralph Webbrush"
   },
   {
-   "type": "mc",
-   "label": "Longest Play",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2012, what was the longest offensive play in a Tennessee–Vanderbilt game?",
-   "options": [
-    "Eric Gray (Tennessee), 2019: run",
-    "Richie Hoskins (Vanderbilt), 2024: catch",
-    "Will Sheppard (Vanderbilt), 2021: catch",
-    "Steven Scheu (Vanderbilt), 2014: catch"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    1,
-    3,
-    0
-   ],
-   "reveal": "Eric Gray 2019: 94-yard run · Will Sheppard 2021: 56-yard catch · Steven Scheu 2014: 36-yard catch · Richie Hoskins 2024: 31-yard catch",
-   "sig": "lp2019-11-30",
-   "more": {
-    "title": "Longest plays in Tennessee–Vanderbilt games since 2012",
-    "rows": [
-     "1. Eric Gray (TENN) 2019: 94-yard run",
-     "2. Dont'E Thornton (TENN) 2024: 86-yard catch",
-     "3. Jaylen Wright (TENN) 2022: 83-yard run",
-     "4. Trent Sherfield (VAN) 2016: 76-yard catch",
-     "5. Ty Chandler (TENN) 2018: 75-yard run",
-     "6. Velus Jones Jr. (TENN) 2020: 74-yard catch",
-     "7. Zac Stacy (VAN) 2012: 72-yard catch",
-     "8. Will Sheppard (VAN) 2021: 56-yard catch"
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "label": "Walk-offs",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Of the 22 Tennessee–Vanderbilt games since 2004, how many were won on the final play or in overtime? (Counts: a game-winning score as time expired in the 4th quarter, or any overtime win.)",
-   "options": [
-    "1",
-    "0",
-    "3",
-    "4"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    2,
-    0
-   ],
-   "reveal": "1: 2011 overtime win, Tennessee 27–21.",
-   "years": {
-    "prompt": "Name the season it happened.",
-    "a": "TENN",
-    "b": "VAN",
-    "A": [
-     {
-      "name": "Overtime win: Tennessee 27, Vanderbilt 21",
-      "yards": 6,
-      "season": 2011,
-      "label": "27–21 (OT)",
-      "profile": "Overtime win, 27–21"
-     }
-    ],
-    "B": []
-   },
-   "sig": "wm2004"
-  },
-  {
-   "type": "rank",
+   "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Arian Foster (TENN RB) · 2007 yards from scrimmage",
-     "value": 1533,
-     "school": "TENN"
-    },
-    {
-     "label": "Ralph Webb (VAN RB) · 2017 yards from scrimmage",
-     "value": 1019,
-     "school": "VAN"
-    },
-    {
-     "label": "Re'Mahn Davis (VAN RB) · 2022 rushing yards",
-     "value": 926,
-     "school": "VAN"
-    },
-    {
-     "label": "Trent Sherfield (VAN WR) · 2015 receiving yards",
-     "value": 659,
-     "school": "VAN"
-    }
-   ],
-   "sig": "mxydsArian Foster2007 yards from scrimmage,Ralph Webb2017 yards from scrimmage,Re'Mahn Davis2022 rushing yards,Trent Sherfield2015 receiving yards"
+   "flip": false,
+   "prompt": "Who had more career yards from scrimmage?",
+   "A": {
+    "label": "Jamal Lewis (RB) · career, TENN",
+    "value": 3152,
+    "school": "TENN"
+   },
+   "B": {
+    "label": "Ralph Webb (RB) · career, VAN",
+    "value": 4745,
+    "school": "VAN"
+   },
+   "unit": "yards from scrimmage",
+   "sig": "hJamal Lewiscareer,Ralph Webbcareerscrim",
+   "more": {
+    "title": "Top 6: career yards from scrimmage (VAN, TENN players in our data)",
+    "rows": [
+     "1. Ralph Webb (VAN) 4,745",
+     "2. Arian Foster (TENN) 3,706",
+     "3. Jamal Lewis (TENN) 3,152",
+     "4. Dylan Sampson (TENN) 2,826",
+     "5. Ke'Shawn Vaughn (VAN) 2,712",
+     "6. Re'Mahn Davis (VAN) 1,295"
+    ]
+   }
   },
   {
    "type": "rank",
@@ -181,101 +195,6 @@
    }
   },
   {
-   "type": "count",
-   "label": "NFL Draft",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From the 2015 draft through 2026, which school had more linebackers taken in the first three rounds?",
-   "A": [],
-   "B": [
-    {
-     "name": "Zach Cunningham",
-     "yards": 57,
-     "season": 2017,
-     "label": "No. 57 pick",
-     "profile": "Inside Linebacker · 2017 draft, round 2"
-    },
-    {
-     "name": "Oren Burks",
-     "yards": 88,
-     "season": 2018,
-     "label": "No. 88 pick",
-     "profile": "Outside Linebacker · 2018 draft, round 3"
-    }
-   ],
-   "sig": "dcr32015lb",
-   "bonus": "names"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Tennessee–Vanderbilt games, highest first.",
-   "items": [
-    {
-     "label": "Marlin Lane (TENN) · 2013",
-     "value": 53,
-     "school": "TENN"
-    },
-    {
-     "label": "Rocko Griffin (VAN) · 2021",
-     "value": 104,
-     "school": "VAN"
-    },
-    {
-     "label": "Eric Gray (TENN) · 2019",
-     "value": 246,
-     "school": "TENN"
-    },
-    {
-     "label": "Ralph Webb (VAN) · 2015",
-     "value": 149,
-     "school": "VAN"
-    }
-   ],
-   "sig": "grrushEric Gray2019,Marlin Lane2013,Ralph Webb2015,Rocko Griffin2021",
-   "more": {
-    "title": "Top rushing games in this rivalry (box scores)",
-    "rows": [
-     "1. Eric Gray (TENN) 2019: 246",
-     "2. Arian Foster (TENN) 2005: 223",
-     "3. Dylan Sampson (TENN) 2024: 178",
-     "4. Montario Hardesty (TENN) 2009: 171",
-     "5. Diego Pavia (VAN) 2025: 165",
-     "6. Ralph Webb (VAN) 2017: 163",
-     "7. Jaylen Wright (TENN) 2022: 160",
-     "8. Ralph Webb (VAN) 2015: 149"
-    ]
-   }
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 29, 2025",
-    "winner": "VAN",
-    "loser": "TENN",
-    "ws": 45,
-    "ls": 24,
-    "venue": "Neyland Stadium"
-   },
-   "prompt": "In this game, did Joey Aguilar (Tennessee) throw for more or less than",
-   "line": "225 passing yards",
-   "answer": "over",
-   "reveal": "More. Joey Aguilar had 299 passing yards and 1 TD in this game.",
-   "check": {
-    "value": 299,
-    "line": 225
-   },
-   "sig": "gm2025-11-29Joey Aguilarpass"
-  },
-  {
    "type": "h2h",
    "label": "Against Each Other",
    "verified": true,
@@ -307,31 +226,77 @@
    }
   },
   {
-   "type": "count",
-   "label": "Since 2022",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 900,
+   "type": "mc",
+   "label": "Longest Play",
    "verified": true,
    "pitted": true,
-   "prompt": "From 2022 through 2025, which school had more 900-yard receiving seasons?",
-   "A": [
-    {
-     "name": "Jalin Hyatt",
-     "yards": 1267,
-     "season": 2022,
-     "profile": "Wide receiver · 2022: 0 rushing, 1,267 receiving yds"
-    },
-    {
-     "name": "Chris Brazzell II",
-     "yards": 1017,
-     "season": 2025,
-     "profile": "Wide receiver · 2025: 0 rushing, 1,017 receiving yds"
-    }
+   "prompt": "Since 2012, what was the longest offensive play in a Tennessee–Vanderbilt game?",
+   "options": [
+    "Eric Gray (Tennessee), 2019: run",
+    "Richie Hoskins (Vanderbilt), 2024: catch",
+    "Will Sheppard (Vanderbilt), 2021: catch",
+    "Steven Scheu (Vanderbilt), 2014: catch"
    ],
-   "B": [],
-   "sig": "tsrec9002022",
-   "bonus": "names"
+   "answer": 0,
+   "order": [
+    2,
+    1,
+    3,
+    0
+   ],
+   "reveal": "Eric Gray 2019: 94-yard run · Will Sheppard 2021: 56-yard catch · Steven Scheu 2014: 36-yard catch · Richie Hoskins 2024: 31-yard catch",
+   "sig": "lp2019-11-30",
+   "more": {
+    "title": "Longest plays in Tennessee–Vanderbilt games since 2012",
+    "rows": [
+     "1. Eric Gray (TENN) 2019: 94-yard run",
+     "2. Dont'E Thornton (TENN) 2024: 86-yard catch",
+     "3. Jaylen Wright (TENN) 2022: 83-yard run",
+     "4. Trent Sherfield (VAN) 2016: 76-yard catch",
+     "5. Ty Chandler (TENN) 2018: 75-yard run",
+     "6. Velus Jones Jr. (TENN) 2020: 74-yard catch",
+     "7. Zac Stacy (VAN) 2012: 72-yard catch",
+     "8. Will Sheppard (VAN) 2021: 56-yard catch"
+    ]
+   }
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 26, 2016",
+    "winner": "VAN",
+    "loser": "TENN",
+    "ws": 45,
+    "ls": 34,
+    "venue": "FirstBank Stadium"
+   },
+   "prompt": "In this game, did Joshua Dobbs (Tennessee) have more or fewer than",
+   "line": "3.5 touchdown passes",
+   "answer": "under",
+   "reveal": "Less. Joshua Dobbs had 340 passing yards and 2 TD in this game.",
+   "check": {
+    "value": 2,
+    "line": 3.5
+   },
+   "sig": "gm2016-11-26Joshua Dobbspasstd"
+  },
+  {
+   "type": "moment",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did Vanderbilt beat Tennessee more or fewer than",
+   "line": "5.5 times",
+   "answer": "over",
+   "reveal": "More. Vanderbilt went 7–19 against Tennessee from 2000 to 2025 (26 meetings, on-field results).",
+   "check": {
+    "value": 7,
+    "line": 5.5
+   },
+   "sig": "scVANTENN"
   }
  ]
 }

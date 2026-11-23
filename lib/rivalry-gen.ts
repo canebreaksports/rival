@@ -19,17 +19,17 @@ const venue = (g: RivalryGame) => [g.venue, g.bowl ? "Postseason" : g.neutral ? 
 const CAT = { rush: ["run for", "rushing yards"], rec: ["have", "receiving yards"], pass: ["throw for", "passing yards"] } as const;
 
 /** 1. Game moment: a real game between them (scoreboard shown), higher/lower on a player's line in it. */
-export function genGameMoment(pr: RivalryPair, rng: Rng): Question | null {
+export function genGameMoment(pr: RivalryPair, rng: Rng, notable: (name: string, school: string) => boolean = () => true): Question | null {
   const games = pr.games.filter(g => g.box && g.hp !== g.ap);
   const cands: { g: RivalryGame; school: SchoolKey; p: Perf }[] = [];
   for (const g of games) for (const [school, perfs] of Object.entries(g.box!))
-    for (const p of perfs) if (p.cat === "pass" ? p.yds >= 150 : p.yds >= 60) cands.push({ g, school, p });
+    for (const p of perfs) if ((p.cat === "pass" ? p.yds >= 150 : p.yds >= 60) && notable(p.name, school)) cands.push({ g, school, p }); // no obscure players
   if (!cands.length) return null;
   const { g, school, p } = pick(rng, cands);
   const useTD = p.td >= 2 && rng() < 0.3;
   const v = useTD ? p.td : p.yds, dir = rng() < 0.5 ? -1 : 1;
   let line: number;
-  if (useTD) line = Math.max(0.5, v + dir * (rng() < 0.5 ? 0.5 : 1.5));
+  if (useTD) line = Math.max(1.5, v + dir * (rng() < 0.5 ? 0.5 : 1.5)); // never a "0.5 touchdowns" line
   else {
     const step = v >= 150 ? 25 : 10;
     line = Math.round((v * (1 + dir * (0.15 + rng() * 0.2))) / step) * step;

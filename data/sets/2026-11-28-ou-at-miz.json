@@ -6,185 +6,37 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-23T19:52:55.030Z",
- "engine": 17,
+ "generatedAt": "2026-11-23T20:03:21.102Z",
+ "engine": 18,
  "questions": [
   {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Oklahoma–Missouri games, highest first.",
-   "items": [
-    {
-     "label": "Chris Brown (OU) · 2007",
-     "value": 71,
-     "school": "OU"
-    },
-    {
-     "label": "Henry Josey (MIZ) · 2011",
-     "value": 133,
-     "school": "MIZ"
-    },
-    {
-     "label": "James Franklin (MIZ) · 2011",
-     "value": 103,
-     "school": "MIZ"
-    },
-    {
-     "label": "Allen Patrick (OU) · 2006",
-     "value": 162,
-     "school": "OU"
-    }
-   ],
-   "sig": "grrushAllen Patrick2006,Chris Brown2007,Henry Josey2011,James Franklin2011",
-   "more": {
-    "title": "Top rushing games in this rivalry (box scores)",
-    "rows": [
-     "1. Allen Patrick (OU) 2006: 162",
-     "2. Henry Josey (MIZ) 2011: 133",
-     "3. Chris Brown (OU) 2008: 122",
-     "4. Mossis Madu (OU) 2008: 114",
-     "5. James Franklin (MIZ) 2011: 103",
-     "6. Allen Patrick (OU) 2007: 88",
-     "7. Chase Daniel (MIZ) 2006: 75",
-     "8. De'Vion Moore (MIZ) 2010: 73"
-    ]
-   }
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Oct 23, 2010",
-    "winner": "MIZ",
-    "loser": "OU",
-    "ws": 36,
-    "ls": 27,
-    "venue": "Memorial Stadium"
-   },
-   "prompt": "In this game, did Blaine Gabbert (Missouri) throw for more or less than",
-   "line": "250 passing yards",
-   "answer": "over",
-   "reveal": "More. Blaine Gabbert had 308 passing yards and 1 TD in this game.",
-   "check": {
-    "value": 308,
-    "line": 250
-   },
-   "sig": "gm2010-10-23Blaine Gabbertpass"
-  },
-  {
    "type": "count",
-   "label": "Since 2022",
+   "label": "Awards",
    "a": "OU",
    "b": "MIZ",
-   "threshold": 1500,
+   "threshold": 0,
    "verified": true,
    "pitted": true,
-   "prompt": "From 2022 through 2025, which school had more 1,500-yard rushing seasons?",
-   "A": [],
-   "B": [
+   "prompt": "From 2010 through 2025, which school had more Heisman Trophy winners?",
+   "A": [
     {
-     "name": "Cody Schrader",
-     "yards": 1617,
-     "season": 2023,
-     "profile": "Running back · 2023: 1,617 rushing, 191 receiving yds"
+     "name": "Baker Mayfield",
+     "yards": 2017,
+     "season": 2017,
+     "label": "QB",
+     "profile": "QB · won the Heisman Trophy (most outstanding player)"
     },
     {
-     "name": "Ahmad Hardy",
-     "yards": 1649,
-     "season": 2025,
-     "profile": "Running back · 2025: 1,649 rushing, 22 receiving yds"
+     "name": "Kyler Murray",
+     "yards": 2018,
+     "season": 2018,
+     "label": "QB",
+     "profile": "QB · won the Heisman Trophy (most outstanding player)"
     }
    ],
-   "sig": "tsrush15002022",
+   "B": [],
+   "sig": "acheisman2010",
    "bonus": "years"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Oct 13, 2007",
-    "winner": "OU",
-    "loser": "MIZ",
-    "ws": 41,
-    "ls": 31,
-    "venue": "Memorial Stadium (Norman, OK)"
-   },
-   "prompt": "In this game, did Chris Brown (Oklahoma) run for more or less than",
-   "line": "50 rushing yards",
-   "answer": "over",
-   "reveal": "More. Chris Brown had 67 rushing yards on 13 carries and 3 TD in this game.",
-   "check": {
-    "value": 67,
-    "line": 50
-   },
-   "sig": "gm2007-10-13Chris Brownrush"
-  },
-  {
-   "type": "mc",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 22, 2025",
-    "winner": "OU",
-    "loser": "MIZ",
-    "ws": 17,
-    "ls": 6,
-    "venue": "Memorial Stadium (Norman, OK)"
-   },
-   "prompt": "What was the difference in total yards in Oklahoma's 17–6 win over Missouri?",
-   "options": [
-    "Missouri +25 yards",
-    "Missouri +105 yards",
-    "Oklahoma +135 yards",
-    "Missouri +135 yards"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    1,
-    0,
-    2
-   ],
-   "reveal": "Missouri +25. Missouri had 301 total yards, Oklahoma 276.",
-   "sig": "td2025-11-22total"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": true,
-   "prompt": "In Oklahoma–Missouri games since 2006, who had more rushing yards against the other school?",
-   "A": {
-    "label": "Allen Patrick (OU) vs. Missouri",
-    "value": 294,
-    "school": "OU"
-   },
-   "B": {
-    "label": "Henry Josey (MIZ) vs. Oklahoma",
-    "value": 197,
-    "school": "MIZ"
-   },
-   "unit": "rushing yds",
-   "note": "Allen Patrick: 294 in 3 games. Henry Josey: 197 in 2 games.",
-   "sig": "vsrushAllen Patrick,Henry Josey",
-   "more": {
-    "title": "Top rushing yards against the other school since 2006",
-    "rows": [
-     "1. Allen Patrick (OU) 294 in 3 games",
-     "2. Chris Brown (OU) 260 in 3 games",
-     "3. Henry Josey (MIZ) 197 in 2 games",
-     "4. Mossis Madu (OU) 114 in 2 games",
-     "5. Chase Daniel (MIZ) 113 in 4 games",
-     "6. James Franklin (MIZ) 106 in 2 games"
-    ]
-   }
   },
   {
    "type": "rank",
@@ -234,6 +86,156 @@
    }
   },
   {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more yards from scrimmage in a single season?",
+   "A": {
+    "label": "Larry Rountree III (RB) · 2019 MIZ",
+    "value": 899,
+    "school": "MIZ"
+   },
+   "B": {
+    "label": "Kennedy Brooks (RB) · 2019 OU",
+    "value": 1090,
+    "school": "OU"
+   },
+   "unit": "yards from scrimmage",
+   "sig": "hKennedy Brooks2019,Larry Rountree III2019scrim",
+   "more": {
+    "title": "Top 6: single-season yards from scrimmage (OU, MIZ players in our data)",
+    "rows": [
+     "1. Adrian Peterson (OU 2004) 1,937",
+     "2. Tyler Badie (MIZ 2021) 1,934",
+     "3. Samaje Perine (OU 2014) 1,821",
+     "4. Joe Mixon (OU 2016) 1,812",
+     "5. Cody Schrader (MIZ 2023) 1,808",
+     "6. Eric Gray (OU 2022) 1,593"
+    ]
+   }
+  },
+  {
+   "type": "rank",
+   "label": "Rivalry Games",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these single-game rushing performances in Oklahoma–Missouri games, highest first.",
+   "items": [
+    {
+     "label": "Henry Josey (MIZ) · 2011",
+     "value": 133,
+     "school": "MIZ"
+    },
+    {
+     "label": "Roy Finch (OU) · 2010",
+     "value": 59,
+     "school": "OU"
+    },
+    {
+     "label": "James Franklin (MIZ) · 2011",
+     "value": 103,
+     "school": "MIZ"
+    },
+    {
+     "label": "Allen Patrick (OU) · 2006",
+     "value": 162,
+     "school": "OU"
+    }
+   ],
+   "sig": "grrushAllen Patrick2006,Henry Josey2011,James Franklin2011,Roy Finch2010",
+   "more": {
+    "title": "Top rushing games in this rivalry (box scores)",
+    "rows": [
+     "1. Allen Patrick (OU) 2006: 162",
+     "2. Henry Josey (MIZ) 2011: 133",
+     "3. Chris Brown (OU) 2008: 122",
+     "4. Mossis Madu (OU) 2008: 114",
+     "5. James Franklin (MIZ) 2011: 103",
+     "6. Allen Patrick (OU) 2007: 88",
+     "7. Chase Daniel (MIZ) 2006: 75",
+     "8. De'Vion Moore (MIZ) 2010: 73"
+    ]
+   }
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Oklahoma–Missouri games since 2006, who had more rushing yards against the other school?",
+   "A": {
+    "label": "Allen Patrick (OU) vs. Missouri",
+    "value": 294,
+    "school": "OU"
+   },
+   "B": {
+    "label": "Henry Josey (MIZ) vs. Oklahoma",
+    "value": 197,
+    "school": "MIZ"
+   },
+   "unit": "rushing yds",
+   "note": "Allen Patrick: 294 in 3 games. Henry Josey: 197 in 2 games.",
+   "sig": "vsrushAllen Patrick,Henry Josey",
+   "more": {
+    "title": "Top rushing yards against the other school since 2006",
+    "rows": [
+     "1. Allen Patrick (OU) 294 in 3 games",
+     "2. Chris Brown (OU) 260 in 3 games",
+     "3. Henry Josey (MIZ) 197 in 2 games",
+     "4. Mossis Madu (OU) 114 in 2 games",
+     "5. Chase Daniel (MIZ) 113 in 4 games",
+     "6. James Franklin (MIZ) 106 in 2 games"
+    ]
+   }
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Dec 6, 2008",
+    "winner": "OU",
+    "loser": "MIZ",
+    "ws": 62,
+    "ls": 21,
+    "venue": "Memorial Stadium (Norman, OK) · Neutral site"
+   },
+   "prompt": "In this game, did Jermaine Gresham (Oklahoma) have more or less than",
+   "line": "60 receiving yards",
+   "answer": "over",
+   "reveal": "More. Jermaine Gresham had 82 receiving yards on 8 catches and 0 TD in this game.",
+   "check": {
+    "value": 82,
+    "line": 60
+   },
+   "sig": "gm2008-12-06Jermaine Greshamrec"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Oct 13, 2007",
+    "winner": "OU",
+    "loser": "MIZ",
+    "ws": 41,
+    "ls": 31,
+    "venue": "Memorial Stadium (Norman, OK)"
+   },
+   "prompt": "In this game, did Chase Daniel (Missouri) throw for more or less than",
+   "line": "300 passing yards",
+   "answer": "over",
+   "reveal": "More. Chase Daniel had 361 passing yards and 1 TD in this game.",
+   "check": {
+    "value": 361,
+    "line": 300
+   },
+   "sig": "gm2007-10-13Chase Danielpass"
+  },
+  {
    "type": "rank",
    "label": "Notables",
    "verified": true,
@@ -264,68 +266,61 @@
    "sig": "nxTDCeeDee Lamb2018 receiving TDs,Kyler Murray2018 rushing TDs,Larry Rountree III2020 rushing TDs,Samaje Perinecareer rushing TDs"
   },
   {
-   "type": "count",
-   "label": "Awards",
-   "a": "OU",
-   "b": "MIZ",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2010 through 2025, which school had more Heisman Trophy winners?",
-   "A": [
-    {
-     "name": "Baker Mayfield",
-     "yards": 2017,
-     "season": 2017,
-     "label": "QB",
-     "profile": "QB · won the Heisman Trophy (most outstanding player)"
-    },
-    {
-     "name": "Kyler Murray",
-     "yards": 2018,
-     "season": 2018,
-     "label": "QB",
-     "profile": "QB · won the Heisman Trophy (most outstanding player)"
-    }
-   ],
-   "B": [],
-   "sig": "acheisman2010",
-   "bonus": "years"
-  },
-  {
    "type": "mc",
-   "label": "Longest Play",
+   "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
-   "prompt": "Since 2006, what was the longest offensive play in a Oklahoma–Missouri game?",
+   "game": {
+    "date": "Nov 9, 2024",
+    "winner": "MIZ",
+    "loser": "OU",
+    "ws": 30,
+    "ls": 23,
+    "venue": "Memorial Stadium"
+   },
+   "prompt": "What was the difference in total yards in Missouri's 30–23 win over Oklahoma?",
    "options": [
-    "Isaiah Sategna (Oklahoma), 2025: catch",
-    "Luther Burden III (Missouri), 2024: catch",
-    "De'Vion Moore (Missouri), 2010: run",
-    "Henry Josey (Missouri), 2011: run"
+    "Missouri +21 yards",
+    "Oklahoma +21 yards",
+    "Missouri +151 yards",
+    "Missouri +131 yards"
    ],
    "answer": 0,
    "order": [
-    1,
-    0,
     3,
+    0,
+    1,
     2
    ],
-   "reveal": "Isaiah Sategna 2025: 87-yard catch · Henry Josey 2011: 48-yard run · De'Vion Moore 2010: 39-yard run · Luther Burden III 2024: 33-yard catch",
-   "sig": "lp2025-11-22",
-   "more": {
-    "title": "Longest plays in Oklahoma–Missouri games since 2006",
-    "rows": [
-     "1. Isaiah Sategna (OU) 2025: 87-yard catch",
-     "2. Henry Josey (MIZ) 2011: 48-yard run",
-     "3. Malcolm Kelly (OU) 2007: 47-yard catch",
-     "4. Greg Bracey (MIZ) 2006: 46-yard catch",
-     "5. Bauer Sharp (OU) 2024: 43-yard catch",
-     "6. Danario Alexander (MIZ) 2008: 39-yard catch",
-     "7. Ryan Broyles (OU) 2010: 39-yard catch",
-     "8. De'Vion Moore (MIZ) 2010: 39-yard run"
-    ]
-   }
+   "reveal": "Missouri +21. Oklahoma had 257 total yards, Missouri 278.",
+   "sig": "td2024-11-09total"
+  },
+  {
+   "type": "count",
+   "label": "Since 2022",
+   "a": "OU",
+   "b": "MIZ",
+   "threshold": 1500,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2022 through 2025, which school had more 1,500-yard rushing seasons?",
+   "A": [],
+   "B": [
+    {
+     "name": "Cody Schrader",
+     "yards": 1617,
+     "season": 2023,
+     "profile": "Running back · 2023: 1,617 rushing, 191 receiving yds"
+    },
+    {
+     "name": "Ahmad Hardy",
+     "yards": 1649,
+     "season": 2025,
+     "profile": "Running back · 2025: 1,649 rushing, 22 receiving yds"
+    }
+   ],
+   "sig": "tsrush15002022",
+   "bonus": "years"
   }
  ]
 }

@@ -1,3 +1,4 @@
+import { isNotable } from "@/lib/notable";
 // Frozen weekly sets on disk (data/sets) must stay valid and match the schedule.
 import { describe, expect, it } from "vitest";
 import { DATA } from "@/lib/data";
@@ -33,5 +34,14 @@ describe("frozen sets", () => {
   it("the Saban question carries a Name the Years bonus", () => {
     const q = sets.find(s => s.slug === "2026-11-28-aub-at-ala")!.questions.find(q => q.type === "mc" && q.prompt.includes("Saban"));
     expect(q && q.type === "mc" && q.years?.A.map(x => x.season)).toEqual([2007, 2010, 2013, 2017, 2019]);
+  });
+  it("from this week on, higher/lower questions about a player use notable players only", () => {
+    for (const s of sets.filter(s => s.game.date >= "2026-11-22")) for (const q of s.questions) {
+      if (q.type !== "moment" || !/^(gm|pp)/.test(q.sig)) continue;
+      const m = q.prompt.match(/did (.+?) \((.+?)\)/) ?? q.prompt.match(/Did (.+?) finish his (.+?) career/);
+      const school = DATA.schools.find(x => x.name === m![2])!.key;
+      expect(isNotable(DATA, m![1], school), `${s.slug}: ${m![1]}`).toBe(true);
+      if (/touchdown/.test(q.line)) expect(q.check!.line).toBeGreaterThanOrEqual(1.5);
+    }
   });
 });

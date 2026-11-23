@@ -1,4 +1,5 @@
 // Question generators (spec §4). All randomness comes from the Rng argument.
+import { isNotable } from "./notable";
 import type { CareerList, Dataset, Item, Player, PlayerSeason, Pos, Question, SchoolKey, StatKey } from "./types";
 import { posName, profileLine } from "./profile";
 import { pick, shuffle, type Rng } from "./rng";
@@ -23,6 +24,7 @@ export interface Ctx {
   teams: SchoolKey[];
   memo: Map<string, unknown>;
   honored: Set<string>;          // name|school of award winners and Heisman top-5 finishers
+  notable: (name: string, school: string) => boolean; // lib/notable.ts: higher/lower questions only on these
 }
 
 export function makeCtx(data: Dataset, teams: SchoolKey[], rng: Rng, verifiedOnly: boolean, label = "Fresh Mix"): Ctx {
@@ -31,7 +33,7 @@ export function makeCtx(data: Dataset, teams: SchoolKey[], rng: Rng, verifiedOnl
   const seasonsOf = new Map<string, PlayerSeason[]>();
   for (const s of pool) if (s.year !== "career") { const k = s.name + "|" + s.school; (seasonsOf.get(k) ?? seasonsOf.set(k, []).get(k)!).push(s) }
   const honored = new Set([...(data.honors?.everWon ?? []).map(w => w.name + "|" + w.school), ...(data.honors?.heisman ?? []).filter(v => v.place <= 5).map(v => v.name + "|" + v.school)]);
-  return { rng, pool, info, label, seasonsOf, memo: new Map(), teams, honored };
+  return { rng, pool, info, label, seasonsOf, memo: new Map(), teams, honored, notable: (n, k) => isNotable(data, n, k) };
 }
 
 // ---- safety margin for approximate sources ----
@@ -108,7 +110,7 @@ export function genRank(c: Ctx): Question | null {
 }
 
 export function genPOU(c: Ctx): Question | null {
-  const p = pick(c.rng, c.pool); if (!p) return null;
+  const p = pick(c.rng, c.pool.filter(x => c.notable(x.name, x.school))); if (!p) return null;
   const ks = GEN_STATS.filter(k => p[k] != null && notable(k, p[k]!, p.year === "career")); if (!ks.length) return null;
   return propFor(c, p, pick(c.rng, ks));
 }
@@ -117,7 +119,7 @@ export function genPOU(c: Ctx): Question | null {
 function propFor(c: Ctx, p: PlayerSeason, k: GenStat): Question | null {
   const v = p[k]!, dir = c.rng() < 0.5 ? -1 : 1;
   let line: number;
-  if (ST[k][1] === "TD") line = Math.max(0.5, v + dir * Math.floor(c.rng() * 3) + dir * 0.5);
+  if (ST[k][1] === "TD") line = Math.max(1.5, v + dir * Math.floor(c.rng() * 3) + dir * 0.5); // never a "0.5 touchdowns" line
   else {
     const step = v >= 1000 ? 50 : v >= 300 ? 25 : 10;
     line = Math.round((v * (1 + dir * (0.05 + c.rng() * 0.15))) / step) * step;
@@ -146,7 +148,9 @@ export function genPropPair(c: Ctx, teams: SchoolKey[]): Question[] | null {
   const keys = shuffle(c.rng, Object.keys(g).filter(key => teams.every(t => g[key].some(p => p.school === t))));
   for (const key of keys) {
     const k = key.split("|")[1] as GenStat;
-    const sides = teams.map(t => pick(c.rng, g[key].filter(p => p.school === t)));
+    const opts = teams.map(t => g[key].filter(p => p.school === t && c.notable(p.name, p.school))); // both players notable
+    if (opts.some(o => !o.length)) continue;
+    const sides = opts.map(o => pick(c.rng, o));
     const qs = sides.map(p => propFor(c, p, k));
     if (qs.some(q => !q)) continue;
     const id = "pp" + sides.map(p => p.name + p.year).join("|") + k;

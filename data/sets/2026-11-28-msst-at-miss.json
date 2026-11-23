@@ -6,8 +6,8 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-23T19:52:54.894Z",
- "engine": 17,
+ "generatedAt": "2026-11-23T20:03:20.987Z",
+ "engine": 18,
  "questions": [
   {
    "type": "count",
@@ -281,15 +281,15 @@
     "ls": 24,
     "venue": "Vaught-Hemingway Stadium"
    },
-   "prompt": "In this game, did Dontario Drummond (Ole Miss) have more or less than",
-   "line": "110 receiving yards",
+   "prompt": "In this game, did Jaden Walley (Mississippi State) have more or less than",
+   "line": "225 receiving yards",
    "answer": "under",
-   "reveal": "Less. Dontario Drummond had 84 receiving yards on 2 catches and 1 TD in this game.",
+   "reveal": "Less. Jaden Walley had 176 receiving yards on 9 catches and 0 TD in this game.",
    "check": {
-    "value": 84,
-    "line": 110
+    "value": 176,
+    "line": 225
    },
-   "sig": "gm2020-11-28Dontario Drummondrec"
+   "sig": "gm2020-11-28Jaden Walleyrec"
   },
   {
    "type": "moment",
@@ -297,22 +297,22 @@
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 28, 2008",
-    "winner": "MISS",
-    "loser": "MSST",
-    "ws": 45,
-    "ls": 0,
-    "venue": "Vaught-Hemingway Stadium"
+    "date": "Nov 23, 2007",
+    "winner": "MSST",
+    "loser": "MISS",
+    "ws": 17,
+    "ls": 14,
+    "venue": "Davis Wade Stadium"
    },
-   "prompt": "In this game, did Dexter McCluster (Ole Miss) run for more or less than",
-   "line": "90 rushing yards",
+   "prompt": "In this game, did BenJarvus Green-Ellis (Ole Miss) run for more or less than",
+   "line": "140 rushing yards",
    "answer": "under",
-   "reveal": "Less. Dexter McCluster had 68 rushing yards on 9 carries and 1 TD in this game.",
+   "reveal": "Less. BenJarvus Green-Ellis had 117 rushing yards on 29 carries and 1 TD in this game.",
    "check": {
-    "value": 68,
-    "line": 90
+    "value": 117,
+    "line": 140
    },
-   "sig": "gm2008-11-28Dexter McClusterrush"
+   "sig": "gm2007-11-23BenJarvus Green-Ellisrush"
   }
  ]
 }
