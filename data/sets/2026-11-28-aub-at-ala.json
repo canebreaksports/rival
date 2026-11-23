@@ -6,84 +6,227 @@
   "away": "AUB",
   "home": "ALA"
  },
- "generatedAt": "2026-11-23T22:04:17.176Z",
- "engine": 30,
+ "generatedAt": "2026-11-23T22:23:55.981Z",
+ "engine": 35,
  "questions": [
   {
    "type": "count",
-   "label": "Fill In",
+   "label": "Awards",
+   "a": "AUB",
+   "b": "ALA",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "info": {
+    "title": "What is the Davey O'Brien Award?",
+    "text": "The Davey O'Brien Award is given each year to college football's best quarterback."
+   },
+   "prompt": "From 2010 through 2025, which school had more Davey O'Brien Award winners?",
+   "A": [
+    {
+     "name": "Cam Newton",
+     "yards": 2010,
+     "season": 2010,
+     "label": "winner",
+     "profile": "won the Davey O'Brien Award (best quarterback)"
+    }
+   ],
+   "B": [
+    {
+     "name": "Mac Jones",
+     "yards": 2020,
+     "season": 2020,
+     "label": "winner",
+     "profile": "won the Davey O'Brien Award (best quarterback)"
+    },
+    {
+     "name": "Bryce Young",
+     "yards": 2021,
+     "season": 2021,
+     "label": "winner",
+     "profile": "won the Davey O'Brien Award (best quarterback)"
+    }
+   ],
+   "sig": "acobrien2010",
+   "bonus": "names"
+  },
+  {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Auburn–Alabama series?",
+   "options": [
+    "49 points",
+    "58 points",
+    "42 points",
+    "39 points"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    2,
+    0,
+    1
+   ],
+   "reveal": "49 points: Alabama 49, Auburn 0 (Nov 24, 2012).",
+   "sig": "mm49"
+  },
+  {
+   "type": "count",
+   "label": "SEC Record Book",
    "a": "AUB",
    "b": "ALA",
    "threshold": 0,
    "verified": true,
    "pitted": true,
    "bonus": "names",
-   "prompt": "Auburn and Alabama's combined top 10 career rushing yards: which school has more players on the list?",
+   "prompt": "Which school has more seasons in the SEC's all-time top 10 for single-season rushing yards?",
    "A": [
     {
+     "name": "Tre Mason",
+     "yards": 1816,
+     "season": 2013,
+     "label": "2013: 1,816",
+     "profile": "2013 season, 1,816 rushing yards · No. 5 in SEC history"
+    },
+    {
      "name": "Bo Jackson",
-     "yards": 4303,
-     "label": "4,303",
-     "profile": "4,303 career rushing yards · No. 1 on the combined list"
-    },
-    {
-     "name": "Carnell 'Cadillac' Williams",
-     "yards": 3831,
-     "label": "3,831",
-     "profile": "3,831 career rushing yards · No. 3 on the combined list"
-    },
-    {
-     "name": "James Brooks",
-     "yards": 3523,
-     "label": "3,523",
-     "profile": "3,523 career rushing yards · No. 6 on the combined list"
-    },
-    {
-     "name": "Jarquez Hunter",
-     "yards": 3371,
-     "label": "3,371",
-     "profile": "3,371 career rushing yards · No. 8 on the combined list"
-    },
-    {
-     "name": "Joe Cribbs",
-     "yards": 3368,
-     "label": "3,368",
-     "profile": "3,368 career rushing yards · No. 9 on the combined list"
+     "yards": 1786,
+     "season": 1985,
+     "label": "1985: 1,786",
+     "profile": "1985 season, 1,786 rushing yards · No. 6 in SEC history"
     }
    ],
    "B": [
     {
-     "name": "Najee Harris",
-     "yards": 3843,
-     "label": "3,843",
-     "profile": "3,843 career rushing yards · No. 2 on the combined list"
-    },
-    {
      "name": "Derrick Henry",
-     "yards": 3591,
-     "label": "3,591",
-     "profile": "3,591 career rushing yards · No. 4 on the combined list"
+     "yards": 2219,
+     "season": 2015,
+     "label": "2015: 2,219",
+     "profile": "2015 season, 2,219 rushing yards · No. 1 in SEC history"
     },
     {
-     "name": "Shaun Alexander",
-     "yards": 3565,
-     "label": "3,565",
-     "profile": "3,565 career rushing yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Bobby Humphrey",
-     "yards": 3420,
-     "label": "3,420",
-     "profile": "3,420 career rushing yards · No. 7 on the combined list"
-    },
-    {
-     "name": "Kenneth Darby",
-     "yards": 3324,
-     "label": "3,324",
-     "profile": "3,324 career rushing yards · No. 10 on the combined list"
+     "name": "Trent Richardson",
+     "yards": 1679,
+     "season": 2011,
+     "label": "2011: 1,679",
+     "profile": "2011 season, 1,679 rushing yards · No. 10 in SEC history"
     }
    ],
-   "sig": "fcrush"
+   "sig": "strush",
+   "info": {
+    "title": "How the SEC list works",
+    "text": "Seasons played as an SEC member, through 2025, from every member school's record book. The full top 10: 1. Derrick Henry (ALA 2015) 2,219 · 2. Leonard Fournette (LSU 2015) 1,953 · 3. Herschel Walker (UGA 1981) 1,891 · 4. Darren McFadden (ARK 2007) 1,830 · 5. Tre Mason (AUB 2013) 1,816 · 6. Bo Jackson (AUB 1985) 1,786 · 7. Trayveon Williams (TAMU 2018) 1,760 · 8. Herschel Walker (UGA 1982) 1,752 · 9. Charles Alexander (LSU 1977) 1,686 · 10. Trent Richardson (ALA 2011) 1,679"
+   }
+  },
+  {
+   "label": "Iron Bowl",
+   "verified": true,
+   "sig": "kIron Bowl6",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "In Alabama's 55–44 Iron Bowl shootout win over Auburn in 2014, how many players finished with 100 or more receiving yards?",
+   "options": [
+    "3",
+    "1",
+    "2",
+    "4"
+   ],
+   "answer": 0,
+   "reveal": "3: Amari Cooper (Alabama) 13 catches for 224 yards and 3 TD, Sammie Coates (Auburn) 5 for 206 and 2 TD, and Duke Williams (Auburn) 7 for 121.",
+   "order": [
+    2,
+    1,
+    3,
+    0
+   ],
+   "names": {
+    "prompt": "Bonus: name the three players who topped 100 receiving yards in the 2014 Iron Bowl.",
+    "a": "AUB",
+    "b": "ALA",
+    "A": [
+     {
+      "name": "Sammie Coates",
+      "yards": 206,
+      "label": "5 catches, 206 yds, 2 TD",
+      "profile": "Auburn WR · 5 catches for 206 yards and 2 TD"
+     },
+     {
+      "name": "Duke Williams",
+      "yards": 121,
+      "label": "7 catches, 121 yds",
+      "profile": "Auburn WR · 7 catches for 121 yards"
+     }
+    ],
+    "B": [
+     {
+      "name": "Amari Cooper",
+      "yards": 224,
+      "label": "13 catches, 224 yds, 3 TD",
+      "profile": "Alabama WR · 13 catches for 224 yards and 3 TD"
+     }
+    ]
+   }
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receptions (at the school shown)?",
+   "A": {
+    "label": "Ronnie Brown (AUB RB)",
+    "value": 58,
+    "school": "AUB"
+   },
+   "B": {
+    "label": "Derrick Henry (ALA RB)",
+    "value": 17,
+    "school": "ALA"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Ronnie Brown 58 vs. Derrick Henry 17.",
+   "sig": "urecNDerrick HenryRonnie Brown"
+  },
+  {
+   "label": "Iron Bowl",
+   "verified": true,
+   "sig": "kIron Bowl0",
+   "type": "moment",
+   "prompt": "Chris Davis returned Alabama's missed field goal for the 'Kick Six.' Was that field-goal attempt longer or shorter than",
+   "line": "55 yards",
+   "answer": "over",
+   "reveal": "Longer. Alabama tried a 57-yard field goal; it fell short and Chris Davis returned it 109 yards for the touchdown that won it 34–28.",
+   "game": {
+    "date": "Nov 30, 2013",
+    "winner": "AUB",
+    "ws": 34,
+    "ls": 28,
+    "venue": "Jordan-Hare Stadium",
+    "loser": "ALA"
+   }
+  },
+  {
+   "label": "Iron Bowl",
+   "verified": true,
+   "sig": "kIron Bowl2",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "Who had more carries: Tre Mason in the 2013 SEC Championship Game (vs. Missouri) or Derrick Henry in the 2015 Iron Bowl?",
+   "options": [
+    "Tre Mason",
+    "Derrick Henry",
+    "Same number"
+   ],
+   "answer": 2,
+   "reveal": "Same number: 46 each. Mason ran 46 times for 304 yards and 4 touchdowns in Auburn's 59–42 SEC title win over Missouri. Henry ran 46 times for 271 yards and a touchdown in Alabama's 29–13 Iron Bowl win.",
+   "order": [
+    2,
+    1,
+    0
+   ]
   },
   {
    "type": "count",
@@ -138,198 +281,101 @@
    "bonus": "names"
   },
   {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Auburn–Alabama series?",
-   "options": [
-    "49 points",
-    "61 points",
-    "42 points",
-    "55 points"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    3,
-    0,
-    1
-   ],
-   "reveal": "49 points: Alabama 49, Auburn 0 (Nov 24, 2012).",
-   "sig": "mm49"
-  },
-  {
-   "type": "count",
-   "label": "Awards",
-   "a": "AUB",
-   "b": "ALA",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "info": {
-    "title": "What is the Doak Walker Award?",
-    "text": "The Doak Walker Award is given each year to college football's best running back."
-   },
-   "prompt": "From 2000 through 2025, which school had more Doak Walker Award winners?",
-   "A": [],
-   "B": [
-    {
-     "name": "Trent Richardson",
-     "yards": 2011,
-     "season": 2011,
-     "label": "winner",
-     "profile": "won the Doak Walker Award (best running back)"
-    },
-    {
-     "name": "Derrick Henry",
-     "yards": 2015,
-     "season": 2015,
-     "label": "winner",
-     "profile": "won the Doak Walker Award (best running back)"
-    },
-    {
-     "name": "Najee Harris",
-     "yards": 2020,
-     "season": 2020,
-     "label": "winner",
-     "profile": "won the Doak Walker Award (best running back)"
-    }
-   ],
-   "sig": "acdoak2000",
-   "bonus": "names"
-  },
-  {
-   "label": "Iron Bowl",
-   "verified": true,
-   "sig": "kIron Bowl0",
-   "type": "moment",
-   "prompt": "Chris Davis returned Alabama's missed field goal for the 'Kick Six.' Was that field-goal attempt longer or shorter than",
-   "line": "55 yards",
-   "answer": "over",
-   "reveal": "Longer. Alabama tried a 57-yard field goal; it fell short and Chris Davis returned it 109 yards for the touchdown that won it 34–28.",
-   "game": {
-    "date": "Nov 30, 2013",
-    "winner": "AUB",
-    "ws": 34,
-    "ls": 28,
-    "venue": "Jordan-Hare Stadium",
-    "loser": "ALA"
-   }
-  },
-  {
    "type": "rank",
    "label": "Notables",
    "verified": true,
    "pitted": true,
    "unit": "yds",
-   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
+   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
    "items": [
     {
-     "label": "Amari Cooper (Alabama, 2012–14)",
-     "value": 3463,
-     "school": "ALA"
-    },
-    {
-     "label": "Seth Williams (Auburn, 2018–20)",
-     "value": 2124,
+     "label": "Jarquez Hunter (Auburn)",
+     "value": 3371,
      "school": "AUB"
     },
     {
-     "label": "Darvin Adams (Auburn, 2008–10)",
-     "value": 1978,
-     "school": "AUB"
+     "label": "T. J. Yeldon (Alabama)",
+     "value": 3322,
+     "school": "ALA"
     },
     {
-     "label": "Calvin Ridley (Alabama, 2015–17)",
-     "value": 2781,
+     "label": "Derrick Henry (Alabama)",
+     "value": 3591,
      "school": "ALA"
+    },
+    {
+     "label": "Bo Jackson (Auburn)",
+     "value": 4303,
+     "school": "AUB"
     }
    ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"Auburn Tigers football statistical leaders\" career receiving yards table (revision 1351164605), which cites the school record book; fetched 2026-11-23; Wikipedia \"Alabama Crimson Tide football statistical leaders\" career receiving yards table (revision 1386991921), which cites the school record book; fetched 2026-11-23",
-   "sig": "nrreceivingAmari Cooper,Calvin Ridley,Darvin Adams,Seth Williams",
-   "more": {
-    "title": "Career receiving yards, Auburn and Alabama (careers ending 2000 or later)",
-    "rows": [
-     "1. DeVonta Smith (Alabama, 2017–20) 3,965",
-     "2. Amari Cooper (Alabama, 2012–14) 3,463",
-     "3. D. J. Hall (Alabama, 2004–07) 2,923",
-     "4. Calvin Ridley (Alabama, 2015–17) 2,781",
-     "5. Jerry Jeudy (Alabama, 2017–19) 2,742",
-     "6. Julio Jones (Alabama, 2008–10) 2,653",
-     "7. Seth Williams (Auburn, 2018–20) 2,124",
-     "8. Courtney Taylor (Auburn, 2003–06) 2,098",
-     "9. Emory Blake (Auburn, 2009–12) 2,022",
-     "10. Darvin Adams (Auburn, 2008–10) 1,978"
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Auburn football statistical leaders\" (school record book), top 10; Wikipedia \"Alabama football statistical leaders\" (school record book), top 10",
+   "sig": "nrrushingBo Jackson,Derrick Henry,Jarquez Hunter,T. J. Yeldon",
+   "names": {
+    "prompt": "Bonus: name the other 7 players in Auburn and Alabama's combined top 10 for career rushing yards.",
+    "a": "AUB",
+    "b": "ALA",
+    "A": [
+     {
+      "name": "Carnell 'Cadillac' Williams",
+      "yards": 3831,
+      "label": "3,831",
+      "profile": "3,831 career rushing yards · No. 3 on the combined list"
+     },
+     {
+      "name": "James Brooks",
+      "yards": 3523,
+      "label": "3,523",
+      "profile": "3,523 career rushing yards · No. 6 on the combined list"
+     },
+     {
+      "name": "Joe Cribbs",
+      "yards": 3368,
+      "label": "3,368",
+      "profile": "3,368 career rushing yards · No. 9 on the combined list"
+     }
+    ],
+    "B": [
+     {
+      "name": "Najee Harris",
+      "yards": 3843,
+      "label": "3,843",
+      "profile": "3,843 career rushing yards · No. 2 on the combined list"
+     },
+     {
+      "name": "Shaun Alexander",
+      "yards": 3565,
+      "label": "3,565",
+      "profile": "3,565 career rushing yards · No. 5 on the combined list"
+     },
+     {
+      "name": "Bobby Humphrey",
+      "yards": 3420,
+      "label": "3,420",
+      "profile": "3,420 career rushing yards · No. 7 on the combined list"
+     },
+     {
+      "name": "Kenneth Darby",
+      "yards": 3324,
+      "label": "3,324",
+      "profile": "3,324 career rushing yards · No. 10 on the combined list"
+     }
     ]
-   }
-  },
-  {
-   "label": "Iron Bowl",
-   "verified": true,
-   "sig": "kIron Bowl2",
-   "type": "mc",
-   "pitted": true,
-   "prompt": "Who had more carries: Tre Mason in the 2013 SEC Championship Game (vs. Missouri) or Derrick Henry in the 2015 Iron Bowl?",
-   "options": [
-    "Tre Mason",
-    "Derrick Henry",
-    "Same number"
-   ],
-   "answer": 2,
-   "reveal": "Same number: 46 each. Mason ran 46 times for 304 yards and 4 touchdowns in Auburn's 59–42 SEC title win over Missouri. Henry ran 46 times for 271 yards and a touchdown in Alabama's 29–13 Iron Bowl win.",
-   "order": [
-    2,
-    0,
-    1
-   ]
-  },
-  {
-   "type": "count",
-   "label": "SEC Record Book",
-   "a": "AUB",
-   "b": "ALA",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "Which school has more seasons in the SEC's all-time top 10 for single-season rushing yards?",
-   "A": [
-    {
-     "name": "Tre Mason",
-     "yards": 1816,
-     "season": 2013,
-     "label": "2013: 1,816",
-     "profile": "2013 season, 1,816 rushing yards · No. 5 in SEC history"
-    },
-    {
-     "name": "Bo Jackson",
-     "yards": 1786,
-     "season": 1985,
-     "label": "1985: 1,786",
-     "profile": "1985 season, 1,786 rushing yards · No. 6 in SEC history"
-    }
-   ],
-   "B": [
-    {
-     "name": "Derrick Henry",
-     "yards": 2219,
-     "season": 2015,
-     "label": "2015: 2,219",
-     "profile": "2015 season, 2,219 rushing yards · No. 1 in SEC history"
-    },
-    {
-     "name": "Trent Richardson",
-     "yards": 1679,
-     "season": 2011,
-     "label": "2011: 1,679",
-     "profile": "2011 season, 1,679 rushing yards · No. 10 in SEC history"
-    }
-   ],
-   "sig": "strush",
-   "info": {
-    "title": "How the SEC list works",
-    "text": "Seasons played as an SEC member, through 2025, from every member school's record book. The full top 10: 1. Derrick Henry (ALA 2015) 2,219 · 2. Leonard Fournette (LSU 2015) 1,953 · 3. Herschel Walker (UGA 1981) 1,891 · 4. Darren McFadden (ARK 2007) 1,830 · 5. Tre Mason (AUB 2013) 1,816 · 6. Bo Jackson (AUB 1985) 1,786 · 7. Trayveon Williams (TAMU 2018) 1,760 · 8. Herschel Walker (UGA 1982) 1,752 · 9. Charles Alexander (LSU 1977) 1,686 · 10. Trent Richardson (ALA 2011) 1,679"
+   },
+   "more": {
+    "title": "Career rushing yards, Auburn and Alabama (school top 10s)",
+    "rows": [
+     "1. Bo Jackson (Auburn) 4,303",
+     "2. Najee Harris (Alabama) 3,843",
+     "3. Carnell 'Cadillac' Williams (Auburn) 3,831",
+     "4. Derrick Henry (Alabama) 3,591",
+     "5. Shaun Alexander (Alabama) 3,565",
+     "6. James Brooks (Auburn) 3,523",
+     "7. Bobby Humphrey (Alabama) 3,420",
+     "8. Jarquez Hunter (Auburn) 3,371",
+     "9. Joe Cribbs (Auburn) 3,368",
+     "10. Kenneth Darby (Alabama) 3,324"
+    ]
    }
   },
   {
@@ -350,8 +396,8 @@
    "order": [
     2,
     3,
-    0,
-    1
+    1,
+    0
    ],
    "years": {
     "prompt": "Name the five seasons Auburn beat Saban's Alabama with a 9-win team.",
@@ -395,55 +441,6 @@
      }
     ],
     "B": []
-   }
-  },
-  {
-   "label": "Iron Bowl",
-   "verified": true,
-   "sig": "kIron Bowl6",
-   "type": "mc",
-   "pitted": true,
-   "prompt": "In Alabama's 55–44 Iron Bowl shootout win over Auburn in 2014, how many players finished with 100 or more receiving yards?",
-   "options": [
-    "3",
-    "1",
-    "2",
-    "4"
-   ],
-   "answer": 0,
-   "reveal": "3: Amari Cooper (Alabama) 13 catches for 224 yards and 3 TD, Sammie Coates (Auburn) 5 for 206 and 2 TD, and Duke Williams (Auburn) 7 for 121.",
-   "order": [
-    3,
-    0,
-    2,
-    1
-   ],
-   "names": {
-    "prompt": "Bonus: name the three players who topped 100 receiving yards in the 2014 Iron Bowl.",
-    "a": "AUB",
-    "b": "ALA",
-    "A": [
-     {
-      "name": "Sammie Coates",
-      "yards": 206,
-      "label": "5 catches, 206 yds, 2 TD",
-      "profile": "Auburn WR · 5 catches for 206 yards and 2 TD"
-     },
-     {
-      "name": "Duke Williams",
-      "yards": 121,
-      "label": "7 catches, 121 yds",
-      "profile": "Auburn WR · 7 catches for 121 yards"
-     }
-    ],
-    "B": [
-     {
-      "name": "Amari Cooper",
-      "yards": 224,
-      "label": "13 catches, 224 yds, 3 TD",
-      "profile": "Alabama WR · 13 catches for 224 yards and 3 TD"
-     }
-    ]
    }
   }
  ],

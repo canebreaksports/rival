@@ -6,9 +6,73 @@
   "away": "LOU",
   "home": "UK"
  },
- "generatedAt": "2026-11-23T22:03:43.829Z",
- "engine": 30,
+ "generatedAt": "2026-11-23T22:23:56.296Z",
+ "engine": 35,
  "questions": [
+  {
+   "type": "rank",
+   "label": "Rivalry Games",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these single-game rushing performances in Louisville–Kentucky games, highest first.",
+   "items": [
+    {
+     "label": "Stephen Johnson (UK) · 2016",
+     "value": 83,
+     "school": "UK"
+    },
+    {
+     "label": "Lamar Jackson (LOU) · 2015",
+     "value": 186,
+     "school": "LOU"
+    },
+    {
+     "label": "Chris Rodriguez Jr. (UK) · 2022",
+     "value": 120,
+     "school": "UK"
+    },
+    {
+     "label": "Lynn Bowden Jr. (UK) · 2019",
+     "value": 284,
+     "school": "UK"
+    }
+   ],
+   "sig": "grrushChris Rodriguez Jr.2022,Lamar Jackson2015,Lynn Bowden Jr.2019,Stephen Johnson2016",
+   "more": {
+    "title": "Top rushing games in this rivalry (box scores)",
+    "rows": [
+     "1. Lynn Bowden Jr. (UK) 2019: 284",
+     "2. Benny Snell Jr. (UK) 2017: 211",
+     "3. Lamar Jackson (LOU) 2015: 186",
+     "4. Isaac Brown (LOU) 2024: 178",
+     "5. Lamar Jackson (LOU) 2016: 171",
+     "6. Lamar Jackson (LOU) 2017: 156",
+     "7. Bilal Powell (LOU) 2010: 153",
+     "8. Rafael Little (UK) 2007: 151"
+    ]
+   }
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Whose best college season had more rushing yards?",
+   "A": {
+    "label": "Javian Hawkins (LOU RB)",
+    "value": 1525,
+    "school": "LOU"
+   },
+   "B": {
+    "label": "Chris Rodriguez Jr. (UK RB)",
+    "value": 1379,
+    "school": "UK"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Javian Hawkins 1,525 vs. Chris Rodriguez Jr. 1,379.",
+   "sig": "upeakRushChris Rodriguez Jr.Javian Hawkins"
+  },
   {
    "type": "count",
    "label": "Fill In",
@@ -18,155 +82,160 @@
    "verified": true,
    "pitted": true,
    "bonus": "names",
-   "prompt": "Louisville and Kentucky's combined top 10 single-season receiving yards (through 2025): which school has more seasons on the list?",
+   "prompt": "Louisville and Kentucky's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
    "A": [
     {
-     "name": "Tutu Atwell",
-     "yards": 1276,
+     "name": "Lamar Jackson",
+     "yards": 1601,
+     "season": 2017,
+     "label": "2017: 1,601",
+     "profile": "2017 season, 1,601 rushing yards · No. 1 on the combined list"
+    },
+    {
+     "name": "Lamar Jackson",
+     "yards": 1571,
+     "season": 2016,
+     "label": "2016: 1,571",
+     "profile": "2016 season, 1,571 rushing yards · No. 3 on the combined list"
+    },
+    {
+     "name": "Javian Hawkins",
+     "yards": 1525,
      "season": 2019,
-     "label": "2019: 1,276",
-     "profile": "2019 season, 1,276 receiving yards · No. 3 on the combined list"
+     "label": "2019: 1,525",
+     "profile": "2019 season, 1,525 rushing yards · No. 4 on the combined list"
     },
     {
-     "name": "Harry Douglas",
-     "yards": 1265,
-     "season": 2006,
-     "label": "2006: 1,265",
-     "profile": "2006 season, 1,265 receiving yards · No. 4 on the combined list"
+     "name": "Howard Stevens",
+     "yards": 1429,
+     "season": 1971,
+     "label": "1971: 1,429",
+     "profile": "1971 season, 1,429 rushing yards · No. 7 on the combined list"
     },
     {
-     "name": "J. R. Russell",
-     "yards": 1213,
-     "season": 2003,
-     "label": "2003: 1,213",
-     "profile": "2003 season, 1,213 receiving yards · No. 5 on the combined list"
+     "name": "Bilal Powell",
+     "yards": 1405,
+     "season": 2010,
+     "label": "2010: 1,405",
+     "profile": "2010 season, 1,405 rushing yards · No. 9 on the combined list"
     },
     {
-     "name": "Arnold Jackson",
-     "yards": 1209,
-     "season": 1999,
-     "label": "1999: 1,209",
-     "profile": "1999 season, 1,209 receiving yards · No. 6 on the combined list"
-    },
-    {
-     "name": "Deion Branch",
-     "yards": 1188,
-     "season": 2001,
-     "label": "2001: 1,188",
-     "profile": "2001 season, 1,188 receiving yards · No. 7 on the combined list"
-    },
-    {
-     "name": "Arnold Jackson",
-     "yards": 1165,
-     "season": 1998,
-     "label": "1998: 1,165",
-     "profile": "1998 season, 1,165 receiving yards · No. 8 on the combined list"
-    },
-    {
-     "name": "Harry Douglas",
-     "yards": 1159,
-     "season": 2007,
-     "label": "2007: 1,159",
-     "profile": "2007 season, 1,159 receiving yards · No. 9 on the combined list"
-    },
-    {
-     "name": "Mark Clayton",
-     "yards": 1112,
-     "season": 1982,
-     "label": "1982: 1,112",
-     "profile": "1982 season, 1,112 receiving yards · No. 10 on the combined list"
+     "name": "Nathan Poole",
+     "yards": 1394,
+     "season": 1978,
+     "label": "1978: 1,394",
+     "profile": "1978 season, 1,394 rushing yards · No. 10 on the combined list"
     }
    ],
    "B": [
     {
-     "name": "Wan'Dale Robinson",
-     "yards": 1334,
-     "season": 2021,
-     "label": "2021: 1,334",
-     "profile": "2021 season, 1,334 receiving yards · No. 1 on the combined list"
+     "name": "Moe Williams",
+     "yards": 1600,
+     "season": 1995,
+     "label": "1995: 1,600",
+     "profile": "1995 season, 1,600 rushing yards · No. 2 on the combined list"
     },
     {
-     "name": "Craig Yeast",
-     "yards": 1311,
-     "season": 1998,
-     "label": "1998: 1,311",
-     "profile": "1998 season, 1,311 receiving yards · No. 2 on the combined list"
+     "name": "Lynn Bowden",
+     "yards": 1468,
+     "season": 2019,
+     "label": "2019: 1,468",
+     "profile": "2019 season, 1,468 rushing yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Benny Snell",
+     "yards": 1449,
+     "season": 2018,
+     "label": "2018: 1,449",
+     "profile": "2018 season, 1,449 rushing yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Artose Pinner",
+     "yards": 1414,
+     "season": 2002,
+     "label": "2002: 1,414",
+     "profile": "2002 season, 1,414 rushing yards · No. 8 on the combined list"
     }
    ],
-   "sig": "fsrec"
+   "sig": "fsrush"
+  },
+  {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Louisville–Kentucky series?",
+   "options": [
+    "46 points",
+    "55 points",
+    "52 points",
+    "58 points"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    2,
+    3,
+    0
+   ],
+   "reveal": "46 points: Kentucky 56, Louisville 10 (Nov 24, 2018).",
+   "sig": "mm46"
+  },
+  {
+   "type": "mc",
+   "label": "Ranked Wins",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2015, which school has more wins over AP-ranked opponents, and how many?",
+   "options": [
+    "Kentucky, 14",
+    "Kentucky, 18",
+    "Louisville, 7",
+    "Louisville, 11"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    3,
+    1,
+    0
+   ],
+   "reveal": "Kentucky 14, Louisville 7 (through 2025). Latest: Kentucky: 2023 vs. No. 22 Florida 33–14, 2023 vs. No. 9 Louisville 38–31, 2024 vs. No. 6 Ole Miss 20–17; Louisville: 2023 vs. No. 20 Duke 23–0, 2024 vs. No. 11 Clemson 33–21, 2025 vs. No. 2 Miami 24–21.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   },
+   "sig": "rw2015"
   },
   {
    "type": "rank",
-   "label": "Fresh Mix",
+   "label": "Notables",
    "verified": true,
-   "prompt": "Rank these seasons by receiving TDs, highest first.",
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
-     "label": "Dez Fitzpatrick (WR) · 2017 LOU",
-     "value": 9,
+     "label": "Malik Cunningham (LOU QB) · 2021 rushing TDs",
+     "value": 20,
      "school": "LOU"
     },
     {
-     "label": "Dane Key (WR) · 2023 UK",
-     "value": 6,
+     "label": "Chris Rodriguez Jr. (UK RB) · 2020 rushing TDs",
+     "value": 11,
      "school": "UK"
     },
     {
-     "label": "Chris Rodriguez Jr. (RB) · 2021 UK",
-     "value": 3,
+     "label": "Benny Snell Jr. (UK RB) · career total TDs (rushing + receiving)",
+     "value": 48,
      "school": "UK"
     },
     {
-     "label": "Wan'Dale Robinson (WR) · 2021 UK",
-     "value": 7,
-     "school": "UK"
+     "label": "Lamar Jackson (LOU QB) · career rushing TDs",
+     "value": 50,
+     "school": "LOU"
     }
    ],
-   "unit": "TD",
-   "sig": "rsea|recTDChris Rodriguez Jr.2021,Dane Key2023,Dez Fitzpatrick2017,Wan'Dale Robinson2021",
-   "more": {
-    "title": "Top 8: single-season receiving TDs (LOU, UK players in our data)",
-    "rows": [
-     "1. Dez Fitzpatrick (LOU 2017) 9",
-     "2. Wan'Dale Robinson (UK 2021) 7",
-     "3. Jaylen Smith (LOU 2017) 7",
-     "4. Dane Key (UK 2022) 6",
-     "5. Dane Key (UK 2023) 6",
-     "6. Dez Fitzpatrick (LOU 2019) 6",
-     "7. Jaylen Smith (LOU 2016) 6",
-     "8. Garrett Johnson (UK 2016) 5"
-    ]
-   }
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more rushing TDs in a single season?",
-   "A": {
-    "label": "Chris Rodriguez Jr. (RB) · 2022 UK",
-    "value": 6,
-    "school": "UK"
-   },
-   "B": {
-    "label": "Javian Hawkins (RB) · 2020 LOU",
-    "value": 7,
-    "school": "LOU"
-   },
-   "unit": "rushing TDs",
-   "sig": "hChris Rodriguez Jr.2022,Javian Hawkins2020rushTD",
-   "more": {
-    "title": "Top 6: single-season rushing TDs (LOU, UK players in our data)",
-    "rows": [
-     "1. Lamar Jackson (LOU 2016) 21",
-     "2. Malik Cunningham (LOU 2021) 20",
-     "3. Benny Snell Jr. (UK 2017) 19",
-     "4. Lamar Jackson (LOU 2017) 18",
-     "5. Benny Snell Jr. (UK 2018) 16",
-     "6. Benny Snell Jr. (UK 2016) 13"
-    ]
-   }
+   "sig": "nxTDBenny Snell Jr.career total TDs (rushing + receiving),Chris Rodriguez Jr.2020 rushing TDs,Lamar Jacksoncareer rushing TDs,Malik Cunningham2021 rushing TDs"
   },
   {
    "type": "count",
@@ -201,6 +270,37 @@
    ],
    "sig": "tsrush13002019",
    "bonus": "names"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Louisville–Kentucky games since 2007, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Chris Bell (LOU) vs. Kentucky",
+    "value": 100,
+    "school": "LOU"
+   },
+   "B": {
+    "label": "La'Rod King (UK) vs. Louisville",
+    "value": 219,
+    "school": "UK"
+   },
+   "unit": "receiving yds",
+   "note": "Chris Bell: 100 in 2 games. La'Rod King: 219 in 3 games.",
+   "sig": "vsrecChris Bell,La'Rod King",
+   "more": {
+    "title": "Top receiving yards against the other school since 2007",
+    "rows": [
+     "1. DeVante Parker (LOU) 312 in 4 games",
+     "2. Harry Douglas (LOU) 223 in 1 game",
+     "3. La'Rod King (UK) 219 in 3 games",
+     "4. Garrett Johnson (UK) 212 in 3 games",
+     "5. James Quick (LOU) 211 in 3 games",
+     "6. Jaylen Smith (LOU) 175 in 4 games"
+    ]
+   }
   },
   {
    "type": "rank",
@@ -388,109 +488,6 @@
    ],
    "sig": "acall2000",
    "bonus": "names"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receptions (at the school shown)?",
-   "A": {
-    "label": "Marshon Ford (LOU TE)",
-    "value": 127,
-    "school": "LOU"
-   },
-   "B": {
-    "label": "Benny Snell Jr. (UK RB)",
-    "value": 29,
-    "school": "UK"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Marshon Ford 127 vs. Benny Snell Jr. 29.",
-   "sig": "urecNBenny Snell Jr.Marshon Ford"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more career receiving yards?",
-   "A": {
-    "label": "Jaylen Smith (WR) · career, LOU",
-    "value": 2505,
-    "school": "LOU"
-   },
-   "B": {
-    "label": "Dane Key (WR) · career, UK",
-    "value": 1870,
-    "school": "UK"
-   },
-   "unit": "receiving yards",
-   "sig": "hDane Keycareer,Jaylen Smithcareerrec",
-   "more": {
-    "title": "Top 5: career receiving yards (LOU, UK players in our data)",
-    "rows": [
-     "1. Dez Fitzpatrick (LOU) 2,589",
-     "2. Jaylen Smith (LOU) 2,505",
-     "3. Garrett Johnson (UK) 2,089",
-     "4. Dane Key (UK) 1,870",
-     "5. Wan'Dale Robinson (UK) 1,334"
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Louisville–Kentucky series?",
-   "options": [
-    "46 points",
-    "55 points",
-    "52 points",
-    "58 points"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    2,
-    3,
-    0
-   ],
-   "reveal": "46 points: Kentucky 56, Louisville 10 (Nov 24, 2018).",
-   "sig": "mm46"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": false,
-   "prompt": "In Louisville–Kentucky games since 2007, who had more receiving yards against the other school?",
-   "A": {
-    "label": "Eli Rogers (LOU) vs. Kentucky",
-    "value": 118,
-    "school": "LOU"
-   },
-   "B": {
-    "label": "Garrett Johnson (UK) vs. Louisville",
-    "value": 212,
-    "school": "UK"
-   },
-   "unit": "receiving yds",
-   "note": "Eli Rogers: 118 in 4 games. Garrett Johnson: 212 in 3 games.",
-   "sig": "vsrecEli Rogers,Garrett Johnson",
-   "more": {
-    "title": "Top receiving yards against the other school since 2007",
-    "rows": [
-     "1. DeVante Parker (LOU) 312 in 4 games",
-     "2. Harry Douglas (LOU) 223 in 1 game",
-     "3. La'Rod King (UK) 219 in 3 games",
-     "4. Garrett Johnson (UK) 212 in 3 games",
-     "5. James Quick (LOU) 211 in 3 games",
-     "6. Jaylen Smith (LOU) 175 in 4 games"
-    ]
-   }
   }
  ]
 }

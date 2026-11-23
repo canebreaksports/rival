@@ -24,20 +24,21 @@ type Row = { season: number; playerId: string; player: string; position?: string
 const rows: Row[] = fs.readdirSync(cache).flatMap(f => JSON.parse(fs.readFileSync(path.join(cache, f), "utf8")));
 const players = JSON.parse(fs.readFileSync("data/players.json", "utf8")) as { seasons: PlayerSeason[] };
 
-export interface LeaderSeason { name: string; season: number; rush: number; rec: number; margin: number; pos?: string }
+export interface LeaderSeason { name: string; season: number; rush: number; rec: number; rushTD?: number; recTD?: number; margin: number; pos?: string }
 const out: Record<string, LeaderSeason[]> = {};
 const agg = new Map<string, LeaderSeason & { school: string }>();
 for (const r of rows) {
   const k = KEY[r.team];
-  if (!k || r.season < 2012 || r.season > 2025 || r.statType !== "YDS" || (r.category !== "rushing" && r.category !== "receiving")) continue;
+  if (!k || r.season < 2012 || r.season > 2025 || (r.statType !== "YDS" && r.statType !== "TD") || (r.category !== "rushing" && r.category !== "receiving")) continue;
   const id = `${k}|${r.playerId}|${r.season}`;
-  const a = agg.get(id) ?? { name: r.player, school: k, season: r.season, rush: 0, rec: 0, margin: 50, ...(r.position && r.position !== "?" ? { pos: r.position } : {}) };
-  a[r.category === "rushing" ? "rush" : "rec"] = Number(r.stat) || 0;
+  const a = agg.get(id) ?? { name: r.player, school: k, season: r.season, rush: 0, rec: 0, rushTD: 0, recTD: 0, margin: 50, ...(r.position && r.position !== "?" ? { pos: r.position } : {}) };
+  const f = r.category === "rushing" ? (r.statType === "TD" ? "rushTD" : "rush") : (r.statType === "TD" ? "recTD" : "rec");
+  a[f] = Number(r.stat) || 0;
   agg.set(id, a);
 }
 let flagged = 0, checked = 0;
 for (const a of agg.values()) {
-  if (a.rush < 300 && a.rec < 300) continue;
+  if (a.rush < 300 && a.rec < 300 && (a.rushTD ?? 0) < 6 && (a.recTD ?? 0) < 6) continue;
   // cross-check against our other sources (Sports Reference / Wikipedia / record-book-aligned rows) where they overlap
   const mine = players.seasons.filter(s => s.school === a.school && s.year === a.season && nkey(s.name) === nkey(a.name));
   for (const s of mine) {
@@ -47,7 +48,7 @@ for (const a of agg.values()) {
       for (const f of ["rush", "rec"] as const) if (s[f] != null && Math.abs((s[f] ?? 0) - a[f]) > 50) { a.margin = 250; flagged++; }
     }
   }
-  (out[a.school] ??= []).push({ name: a.name, season: a.season, rush: a.rush, rec: a.rec, margin: a.margin, ...(a.pos ? { pos: a.pos } : {}) });
+  (out[a.school] ??= []).push({ name: a.name, season: a.season, rush: a.rush, rec: a.rec, rushTD: a.rushTD, recTD: a.recTD, margin: a.margin, ...(a.pos ? { pos: a.pos } : {}) });
 }
 for (const k of Object.keys(out)) out[k].sort((x, y) => x.season - y.season || y.rush + y.rec - (x.rush + x.rec));
 fs.writeFileSync("data/season-leaders.json", JSON.stringify({

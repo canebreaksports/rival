@@ -54,7 +54,7 @@ describe("generators", () => {
 describe("player-first sets", () => {
   it("generated duels pair one same-season line from each school", () => {
     let seen = 0;
-    for (let i = 0; i < 400; i++) for (const q of generate(DATA, ["LSU", "ALA"], 7, mulberry32(i), ALL)) {
+    for (let i = 0; i < 400; i++) for (const q of generate(DATA, ["LSU", "ALA"], 18, mulberry32(i), ALL)) {
       if (q.type !== "duel" || !q.sig.startsWith("d")) continue;
       seen++; expect(new Set([q.aSchool, q.other])).toEqual(new Set(["LSU", "ALA"])); expect(q.A.big).not.toBe(q.B.big);
     }
@@ -62,7 +62,7 @@ describe("player-first sets", () => {
   });
   it("Mixed Rank It uses 4 players, at least 3 stat framings, one unit, no ties", () => {
     let seen = 0;
-    for (let i = 0; i < 300; i++) for (const q of generate(DATA, ["AUB", "TENN"], 7, mulberry32(i), VERIFIED)) {
+    for (let i = 0; i < 300; i++) for (const q of generate(DATA, ["AUB", "TENN"], 18, mulberry32(i), VERIFIED)) {
       if (q.type !== "rank" || !q.sig.startsWith("mx")) continue;
       seen++;
       expect(new Set(q.items.map(x => x.label.split(" (")[0])).size).toBe(4);
@@ -204,7 +204,7 @@ describe("weekly trend questions (since <year>)", () => {
   });
   it("season counts list exactly the seasons over the line, none within the margin", () => {
     for (let i = 0; i < 150; i++) for (const [a, b] of [["LSU", "TENN"], ["UGA", "SC"], ["TEX", "TAMU"]]) for (const q of buildRound(DATA, a, b, mulberry32(i), VERIFIED)) {
-      if (q.type !== "count" || !q.sig.startsWith("ts")) continue;
+      if (q.type !== "count" || !q.sig.startsWith("ts") || /TD/.test(q.sig)) continue; // yardage counts here; TD counts below
       const k = q.sig.startsWith("tsrush") ? "rush" : "rec", from = Number(q.prompt!.match(/From (\d{4})/)![1]);
       for (const [s, list] of [[a, q.A], [b, q.B]] as const) {
         const want = DATA.leaders!.schools[s].filter(x => x.season >= from && x[k] >= q.threshold).map(x => x.name + x.season).sort();

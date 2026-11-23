@@ -6,9 +6,88 @@
   "away": "PUR",
   "home": "IU"
  },
- "generatedAt": "2026-11-23T22:03:44.481Z",
- "engine": 30,
+ "generatedAt": "2026-11-23T22:23:57.008Z",
+ "engine": 35,
  "questions": [
+  {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, what's the longest winning streak by either school in the Purdue–Indiana series?",
+   "options": [
+    "5 straight",
+    "7 straight",
+    "8 straight",
+    "3 straight"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    1,
+    0,
+    2
+   ],
+   "reveal": "5 straight: Purdue won every meeting from 2002 through 2006.",
+   "sig": "msPUR2002"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": false,
+   "prompt": "In Purdue–Indiana games since 2005, who had more rushing yards against the other school?",
+   "A": {
+    "label": "Akeem Hunt (PUR) vs. Indiana",
+    "value": 288,
+    "school": "PUR"
+   },
+   "B": {
+    "label": "Tre Roberson (IU) vs. Purdue",
+    "value": 231,
+    "school": "IU"
+   },
+   "unit": "rushing yds",
+   "note": "Akeem Hunt: 288 in 4 games. Tre Roberson: 231 in 2 games.",
+   "sig": "vsrushAkeem Hunt,Tre Roberson",
+   "more": {
+    "title": "Top rushing yards against the other school since 2005",
+    "rows": [
+     "1. Markell Jones (PUR) 443 in 4 games",
+     "2. Stephen Houston (IU) 407 in 3 games",
+     "3. Kory Sheets (PUR) 307 in 4 games",
+     "4. Akeem Hunt (PUR) 288 in 4 games",
+     "5. Jaycen Taylor (PUR) 257 in 3 games",
+     "6. Marcus Thigpen (IU) 243 in 4 games"
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "label": "Ranked Wins",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2010, which school has more wins over AP-ranked opponents, and how many?",
+   "options": [
+    "Indiana, 11",
+    "Indiana, 14",
+    "Purdue, 8",
+    "Purdue, 9"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    2,
+    1,
+    3
+   ],
+   "reveal": "Indiana 11, Purdue 8 (through 2025). Latest: Indiana: 2025 vs. No. 11 Alabama 38–3, 2025 vs. No. 5 Oregon 56–22, 2025 vs. No. 10 Miami 27–21; Purdue: 2021 vs. No. 5 Michigan State 40–29, 2022 vs. No. 21 Minnesota 20–10, 2022 vs. No. 21 Illinois 31–24.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   },
+   "sig": "rw2010"
+  },
   {
    "type": "count",
    "label": "Fill In",
@@ -96,60 +175,6 @@
    "sig": "fsrush"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receiving yards (at the school shown)?",
-   "A": {
-    "label": "Payne Durham (PUR TE)",
-    "value": 1275,
-    "school": "PUR"
-   },
-   "B": {
-    "label": "Tevin Coleman (IU RB)",
-    "value": 383,
-    "school": "IU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Payne Durham 1,275 vs. Tevin Coleman 383.",
-   "sig": "urecTevin ColemanPayne Durham"
-  },
-  {
-   "type": "count",
-   "label": "Since 2018",
-   "a": "PUR",
-   "b": "IU",
-   "threshold": 1100,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2018 through 2025, which school had more 1,100-yard receiving seasons?",
-   "A": [
-    {
-     "name": "Rondale Moore",
-     "yards": 1258,
-     "season": 2018,
-     "profile": "Wide receiver · 2018: 213 rushing, 1,258 receiving yds"
-    },
-    {
-     "name": "David Bell",
-     "yards": 1286,
-     "season": 2021,
-     "profile": "Wide receiver · 2021: 39 rushing, 1,286 receiving yds"
-    },
-    {
-     "name": "Charlie Jones",
-     "yards": 1361,
-     "season": 2022,
-     "profile": "Wide receiver · 2022: 3 rushing, 1,361 receiving yds"
-    }
-   ],
-   "B": [],
-   "sig": "tsrec11002018",
-   "bonus": "names"
-  },
-  {
    "type": "rank",
    "label": "Notables",
    "verified": true,
@@ -158,19 +183,19 @@
    "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
    "items": [
     {
-     "label": "Scott Dierking (Purdue)",
-     "value": 2863,
-     "school": "PUR"
-    },
-    {
      "label": "Montrell Lowe (Purdue)",
      "value": 2648,
      "school": "PUR"
     },
     {
-     "label": "Antwaan Randle El (Indiana)",
-     "value": 3895,
+     "label": "Alex Smith (Indiana)",
+     "value": 3492,
      "school": "IU"
+    },
+    {
+     "label": "Devin Mockobee (Purdue)",
+     "value": 2983,
+     "school": "PUR"
     },
     {
      "label": "Tevin Coleman (Indiana)",
@@ -179,7 +204,7 @@
     }
    ],
    "note": "Career totals from each school's record book. Sources: Wikipedia \"Purdue Boilermakers football statistical leaders\" career rushing yards table (revision 1387405885), which cites the school record book; fetched 2026-11-17; Wikipedia \"Indiana Hoosiers football statistical leaders\" career rushing yards table (revision 1387103435), which cites the school record book; fetched 2026-11-17",
-   "sig": "nrrushingAntwaan Randle El,Montrell Lowe,Scott Dierking,Tevin Coleman",
+   "sig": "nrrushingAlex Smith,Devin Mockobee,Montrell Lowe,Tevin Coleman",
    "names": {
     "prompt": "Bonus: name the other 8 players in Purdue and Indiana's combined top 10 for career rushing yards.",
     "a": "PUR",
@@ -212,10 +237,10 @@
       "profile": "5,299 career rushing yards · No. 1 on the combined list"
      },
      {
-      "name": "Alex Smith",
-      "yards": 3492,
-      "label": "3,492",
-      "profile": "3,492 career rushing yards · No. 4 on the combined list"
+      "name": "Antwaan Randle El",
+      "yards": 3895,
+      "label": "3,895",
+      "profile": "3,895 career rushing yards · No. 2 on the combined list"
      },
      {
       "name": "Mike Harkrader",
@@ -254,6 +279,60 @@
    }
   },
   {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2019,
+   "stat": "Receiving season",
+   "aSchool": "IU",
+   "other": "PUR",
+   "aName": "Ty Fryfogle (WR)",
+   "bName": "David Bell (WR)",
+   "A": {
+    "big": "604",
+    "sm": "rec yds · 3 TD"
+   },
+   "B": {
+    "big": "1,035",
+    "sm": "rec yds · 7 TD"
+   },
+   "flip": false,
+   "sig": "drec2019David Bell,Ty Fryfogle"
+  },
+  {
+   "type": "count",
+   "label": "Since 2018",
+   "a": "PUR",
+   "b": "IU",
+   "threshold": 1100,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2018 through 2025, which school had more 1,100-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Rondale Moore",
+     "yards": 1258,
+     "season": 2018,
+     "profile": "Wide receiver · 2018: 213 rushing, 1,258 receiving yds"
+    },
+    {
+     "name": "David Bell",
+     "yards": 1286,
+     "season": 2021,
+     "profile": "Wide receiver · 2021: 39 rushing, 1,286 receiving yds"
+    },
+    {
+     "name": "Charlie Jones",
+     "yards": 1361,
+     "season": 2022,
+     "profile": "Wide receiver · 2022: 3 rushing, 1,361 receiving yds"
+    }
+   ],
+   "B": [],
+   "sig": "tsrec11002018",
+   "bonus": "names"
+  },
+  {
    "type": "count",
    "label": "Awards",
    "a": "PUR",
@@ -265,7 +344,7 @@
     "title": "Which awards count?",
     "text": "Heisman Trophy: most outstanding player · Maxwell Award: best all-around player · Walter Camp Award: player of the year · Doak Walker Award: best running back · Biletnikoff Award: best receiver · Davey O'Brien Award: best quarterback · John Mackey Award: best tight end · Outland Trophy: best interior lineman · Chuck Bednarik Award: best defensive player · Bronko Nagurski Trophy: best defensive player · Butkus Award: best linebacker · Jim Thorpe Award: best defensive back · Lombardi Award: best lineman or linebacker · Lou Groza Award: best kicker · Ray Guy Award: best punter"
    },
-   "prompt": "From 2015 through 2025, which school had more winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)?",
+   "prompt": "From 2010 through 2025, which school had more winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)?",
    "A": [],
    "B": [
     {
@@ -297,190 +376,40 @@
      "profile": "won the Davey O'Brien Award (best quarterback)"
     }
    ],
-   "sig": "acall2015",
+   "sig": "acall2010",
    "bonus": "names"
   },
   {
-   "type": "count",
-   "label": "Fill In",
-   "a": "PUR",
-   "b": "IU",
-   "threshold": 0,
+   "type": "moment",
+   "label": "Fresh Mix",
    "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "Purdue and Indiana's combined top 10 career receiving yards: which school has more players on the list?",
-   "A": [
-    {
-     "name": "John Standeford",
-     "yards": 3788,
-     "label": "3,788 (2000–2003)",
-     "profile": "3,788 career receiving yards (2000–2003) · No. 1 on the combined list"
-    },
-    {
-     "name": "Taylor Stubblefield",
-     "yards": 3629,
-     "label": "3,629 (2001–2004)",
-     "profile": "3,629 career receiving yards (2001–2004) · No. 2 on the combined list"
-    },
-    {
-     "name": "Dorien Bryant",
-     "yards": 3548,
-     "label": "3,548 (2004–2007)",
-     "profile": "3,548 career receiving yards (2004–2007) · No. 3 on the combined list"
-    },
-    {
-     "name": "Brian Alford",
-     "yards": 3029,
-     "label": "3,029 (1994–1997)",
-     "profile": "3,029 career receiving yards (1994–1997) · No. 4 on the combined list"
-    },
-    {
-     "name": "David Bell",
-     "yards": 2946,
-     "label": "2,946 (2019–2021)",
-     "profile": "2,946 career receiving yards (2019–2021) · No. 5 on the combined list"
-    },
-    {
-     "name": "Vinny Sutherland",
-     "yards": 2370,
-     "label": "2,370 (1997–2000)",
-     "profile": "2,370 career receiving yards (1997–2000) · No. 8 on the combined list"
-    },
-    {
-     "name": "Greg Orton",
-     "yards": 2356,
-     "label": "2,356 (2005–2008)",
-     "profile": "2,356 career receiving yards (2005–2008) · No. 10 on the combined list"
-    }
-   ],
-   "B": [
-    {
-     "name": "James Hardy",
-     "yards": 2740,
-     "label": "2,740 (2005–2007)",
-     "profile": "2,740 career receiving yards (2005–2007) · No. 6 on the combined list"
-    },
-    {
-     "name": "Courtney Roby",
-     "yards": 2524,
-     "label": "2,524 (2001–2004)",
-     "profile": "2,524 career receiving yards (2001–2004) · No. 7 on the combined list"
-    },
-    {
-     "name": "Ernie Jones",
-     "yards": 2361,
-     "label": "2,361 (1984–1987)",
-     "profile": "2,361 career receiving yards (1984–1987) · No. 9 on the combined list"
-    }
-   ],
-   "sig": "fcrec"
-  },
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Purdue–Indiana series?",
-   "options": [
-    "66 points",
-    "72 points",
-    "56 points",
-    "75 points"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    0,
-    1,
-    3
-   ],
-   "reveal": "66 points: Indiana 66, Purdue 0 (Nov 30, 2024).",
-   "sig": "mm66"
+   "prompt": "Did Rondale Moore finish his Purdue career with more or less than",
+   "line": "15.5 receiving TDs",
+   "answer": "under",
+   "reveal": "Less. Rondale Moore had 14 receiving TDs in his career.",
+   "check": {
+    "value": 14,
+    "line": 15.5
+   },
+   "sig": "ppRondale Moorecareer|Omar Cooper Jr.careerrecTD0",
+   "pair": "ppRondale Moorecareer|Omar Cooper Jr.careerrecTD",
+   "pairPart": 1
   },
   {
    "type": "moment",
-   "label": "Longest Play",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 24, 2012",
-    "winner": "PUR",
-    "loser": "IU",
-    "ws": 56,
-    "ls": 35,
-    "venue": "Ross-Ade Stadium"
-   },
-   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
-   "line": "50.5 yards",
-   "answer": "over",
-   "reveal": "More. The longest was Akeem Shavers's 73-yard catch for Purdue; Indiana's longest was 52 yards (Shane Wynn).",
-   "check": {
-    "value": 73,
-    "line": 50.5
-   },
-   "sig": "lg2012-11-24"
-  },
-  {
-   "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more receiving yards in a single season?",
-   "A": {
-    "label": "DeAngelo Yancey (WR) · 2013 PUR",
-    "value": 546,
-    "school": "PUR"
+   "prompt": "Did Omar Cooper Jr. finish his Indiana career with more or less than",
+   "line": "20.5 receiving TDs",
+   "answer": "over",
+   "reveal": "More. Omar Cooper Jr. had 22 receiving TDs in his career.",
+   "check": {
+    "value": 22,
+    "line": 20.5
    },
-   "B": {
-    "label": "Ty Fryfogle (WR) · 2019 IU",
-    "value": 604,
-    "school": "IU"
-   },
-   "unit": "receiving yards",
-   "sig": "hDeAngelo Yancey2013,Ty Fryfogle2019rec",
-   "more": {
-    "title": "Top 6: single-season receiving yards (PUR, IU players in our data)",
-    "rows": [
-     "1. David Bell (PUR 2021) 1,286",
-     "2. Rondale Moore (PUR 2018) 1,258",
-     "3. David Bell (PUR 2019) 1,035",
-     "4. Omar Cooper Jr. (IU 2025) 961",
-     "5. DeAngelo Yancey (PUR 2016) 951",
-     "6. Ty Fryfogle (IU 2020) 726"
-    ]
-   }
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": false,
-   "prompt": "In Purdue–Indiana games since 2005, who had more receiving yards against the other school?",
-   "A": {
-    "label": "Brycen Hopkins (PUR) vs. Indiana",
-    "value": 155,
-    "school": "PUR"
-   },
-   "B": {
-    "label": "Andrew Means (IU) vs. Purdue",
-    "value": 114,
-    "school": "IU"
-   },
-   "unit": "receiving yds",
-   "note": "Brycen Hopkins: 155 in 2 games. Andrew Means: 114 in 3 games.",
-   "sig": "vsrecAndrew Means,Brycen Hopkins",
-   "more": {
-    "title": "Top receiving yards against the other school since 2005",
-    "rows": [
-     "1. James Hardy (IU) 276 in 3 games",
-     "2. DeAngelo Yancey (PUR) 264 in 3 games",
-     "3. Nick Westbrook (IU) 257 in 3 games",
-     "4. Danny Anthrop (PUR) 247 in 2 games",
-     "5. Greg Orton (PUR) 235 in 4 games",
-     "6. Keith Smith (PUR) 221 in 2 games"
-    ]
-   }
+   "sig": "ppRondale Moorecareer|Omar Cooper Jr.careerrecTD1",
+   "pair": "ppRondale Moorecareer|Omar Cooper Jr.careerrecTD",
+   "pairPart": 2
   }
  ]
 }

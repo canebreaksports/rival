@@ -57,6 +57,8 @@ export interface Dataset {
   careerRec?: import("./notable-gen").CareerReceiving;
   walkoffs?: import("./walkoff-gen").WalkoffData;
   seasonRecs?: import("./fillin-gen").SeasonRecords;
+  gameRanks?: import("./ranks-gen").GameRanks;
+  rankedWins?: import("./ranks-gen").RankedWins;
   draft?: import("./honors-gen").DraftData;
   honors?: import("./honors-gen").HonorsData;
 }

@@ -6,61 +6,82 @@
   "away": "FLA",
   "home": "FSU"
  },
- "generatedAt": "2026-11-23T22:03:43.213Z",
- "engine": 30,
+ "generatedAt": "2026-11-23T22:23:55.528Z",
+ "engine": 35,
  "questions": [
   {
-   "type": "duel",
-   "label": "Fresh Mix",
+   "type": "h2h",
+   "label": "Against Each Other",
    "verified": true,
-   "year": 2014,
-   "stat": "Rushing season",
-   "aSchool": "FLA",
-   "other": "FSU",
-   "aName": "Kelvin Taylor (RB)",
-   "bName": "Dalvin Cook (RB)",
+   "flip": true,
+   "prompt": "In Florida–Florida State games since 2004, who had more rushing yards against the other school?",
    "A": {
-    "big": "565",
-    "sm": "rush yds · 6 TD"
+    "label": "Jeff Demps (FLA) vs. Florida State",
+    "value": 231,
+    "school": "FLA"
    },
    "B": {
-    "big": "1,008",
-    "sm": "rush yds · 8 TD"
+    "label": "Cam Akers (FSU) vs. Florida",
+    "value": 173,
+    "school": "FSU"
    },
+   "unit": "rushing yds",
+   "note": "Jeff Demps: 231 in 4 games. Cam Akers: 173 in 3 games.",
+   "sig": "vsrushCam Akers,Jeff Demps",
+   "more": {
+    "title": "Top rushing yards against the other school since 2004",
+    "rows": [
+     "1. Dalvin Cook (FSU) 480 in 3 games",
+     "2. Jadan Baugh (FLA) 347 in 2 games",
+     "3. Montrell Johnson (FLA) 291 in 3 games",
+     "4. Chris Rainey (FLA) 285 in 4 games",
+     "5. Tim Tebow (FLA) 262 in 4 games",
+     "6. Percy Harvin (FLA) 256 in 3 games"
+    ]
+   }
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
    "flip": false,
-   "sig": "drush2014Dalvin Cook,Kelvin Taylor"
+   "prompt": "Who had more college receptions (at the school shown)?",
+   "A": {
+    "label": "Travis Rudolph (FSU WR)",
+    "value": 153,
+    "school": "FSU"
+   },
+   "B": {
+    "label": "Kadarius Toney (FLA WR)",
+    "value": 120,
+    "school": "FLA"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Travis Rudolph 153 vs. Kadarius Toney 120.",
+   "sig": "urecNKadarius ToneyTravis Rudolph"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
+   "type": "mc",
+   "label": "Series History",
    "verified": true,
-   "prompt": "In 2014, did Kelvin Taylor (Florida) have more or less than",
-   "line": "625 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Kelvin Taylor had 565 rushing yards in 2014.",
-   "check": {
-    "value": 565,
-    "line": 625
-   },
-   "sig": "ppKelvin Taylor2014|Cam Akers2018rush0",
-   "pair": "ppKelvin Taylor2014|Cam Akers2018rush",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2018, did Cam Akers (Florida State) have more or less than",
-   "line": "625 rushing yards",
-   "answer": "over",
-   "reveal": "More. Cam Akers had 706 rushing yards in 2018.",
-   "check": {
-    "value": 706,
-    "line": 625
-   },
-   "sig": "ppKelvin Taylor2014|Cam Akers2018rush1",
-   "pair": "ppKelvin Taylor2014|Cam Akers2018rush",
-   "pairPart": 2
+   "pitted": true,
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Florida–Florida State series?",
+   "options": [
+    "33 points",
+    "39 points",
+    "42 points",
+    "23 points"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    1,
+    0,
+    2
+   ],
+   "reveal": "33 points: Florida 45, Florida State 12 (Nov 24, 2007).",
+   "sig": "mm33"
   },
   {
    "type": "rank",
@@ -68,73 +89,219 @@
    "verified": true,
    "pitted": true,
    "unit": "yds",
-   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
+   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
    "items": [
     {
-     "label": "Errict Rhett (Florida)",
-     "value": 4163,
-     "school": "FLA"
-    },
-    {
-     "label": "Warrick Dunn (Florida State)",
-     "value": 3959,
+     "label": "Rashad Greene (Florida State, 2011–14)",
+     "value": 3830,
      "school": "FSU"
     },
     {
-     "label": "Emmitt Smith (Florida)",
-     "value": 3928,
+     "label": "Jabar Gaffney (Florida, 2000–01)",
+     "value": 2375,
      "school": "FLA"
     },
     {
-     "label": "Cam Akers (Florida State)",
-     "value": 2874,
+     "label": "Dallas Baker (Florida, 2003–06)",
+     "value": 2236,
+     "school": "FLA"
+    },
+    {
+     "label": "Craphonso Thorpe (Florida State, 2001–04)",
+     "value": 2153,
      "school": "FSU"
     }
    ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"Florida Gators football statistical leaders\" career rushing yards table (revision 1385857120), which cites the school record book; fetched 2026-11-17; Wikipedia \"Florida State Seminoles football statistical leaders\" career rushing yards table (revision 1378376740), which cites the school record book; fetched 2026-11-17",
-   "sig": "nrrushingCam Akers,Emmitt Smith,Errict Rhett,Warrick Dunn",
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Florida Gators football statistical leaders\" career receiving yards table (revision 1385857120), which cites the school record book; fetched 2026-11-23; Wikipedia \"Florida State Seminoles football statistical leaders\" career receiving yards table (revision 1378376740), which cites the school record book; fetched 2026-11-23",
+   "sig": "nrreceivingCraphonso Thorpe,Dallas Baker,Jabar Gaffney,Rashad Greene",
+   "names": {
+    "prompt": "Bonus: name the other 8 players in Florida and Florida State's combined top 10 for career receiving yards.",
+    "a": "FLA",
+    "b": "FSU",
+    "A": [
+     {
+      "name": "Carlos Alvarez",
+      "yards": 2563,
+      "label": "2,563 (1969–1971)",
+      "profile": "2,563 career receiving yards (1969–1971) · No. 7 on the combined list"
+     },
+     {
+      "name": "Andre Caldwell",
+      "yards": 2349,
+      "label": "2,349 (2003–2007)",
+      "profile": "2,349 career receiving yards (2003–2007) · No. 10 on the combined list"
+     }
+    ],
+    "B": [
+     {
+      "name": "Ron Sellers",
+      "yards": 3598,
+      "label": "3,598 (1966–1968)",
+      "profile": "3,598 career receiving yards (1966–1968) · No. 2 on the combined list"
+     },
+     {
+      "name": "Peter Warrick",
+      "yards": 3517,
+      "label": "3,517 (1996–1999)",
+      "profile": "3,517 career receiving yards (1996–1999) · No. 3 on the combined list"
+     },
+     {
+      "name": "E.G. Green",
+      "yards": 2920,
+      "label": "2,920 (1994–1997)",
+      "profile": "2,920 career receiving yards (1994–1997) · No. 4 on the combined list"
+     },
+     {
+      "name": "Kez McCorvey",
+      "yards": 2660,
+      "label": "2,660 (1991–1994)",
+      "profile": "2,660 career receiving yards (1991–1994) · No. 5 on the combined list"
+     },
+     {
+      "name": "Greg Carr",
+      "yards": 2574,
+      "label": "2,574 (2005–2008)",
+      "profile": "2,574 career receiving yards (2005–2008) · No. 6 on the combined list"
+     },
+     {
+      "name": "Barry Smith",
+      "yards": 2392,
+      "label": "2,392 (1970–1972)",
+      "profile": "2,392 career receiving yards (1970–1972) · No. 8 on the combined list"
+     }
+    ]
+   },
    "more": {
-    "title": "Career rushing yards, Florida and Florida State (school top 10s)",
+    "title": "Career receiving yards, Florida and Florida State (careers ending 2000 or later)",
     "rows": [
-     "1. Dalvin Cook (Florida State) 4,464",
-     "2. Errict Rhett (Florida) 4,163",
-     "3. Warrick Dunn (Florida State) 3,959",
-     "4. Emmitt Smith (Florida) 3,928",
-     "5. Greg Allen (Florida State) 3,769",
-     "6. Neal Anderson (Florida) 3,234",
-     "7. Travis Minor (Florida State) 3,218",
-     "8. Fred Taylor (Florida) 3,075",
-     "9. Earnest Graham (Florida) 3,065",
-     "10. Larry Key (Florida State) 2,953"
+     "1. Rashad Greene (Florida State, 2011–14) 3,830",
+     "2. Greg Carr (Florida State, 2005–08) 2,574",
+     "3. Jabar Gaffney (Florida, 2000–01) 2,375",
+     "4. Andre Caldwell (Florida, 2003–07) 2,349",
+     "5. Travis Rudolph (Florida State, 2014–16) 2,311",
+     "6. Dallas Baker (Florida, 2003–06) 2,236",
+     "7. Craphonso Thorpe (Florida State, 2001–04) 2,153"
+    ]
+   }
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more yards from scrimmage in a single season?",
+   "A": {
+    "label": "Trey Benson (RB) · 2023 FSU",
+    "value": 1132,
+    "school": "FSU"
+   },
+   "B": {
+    "label": "Lamical Perine (RB) · 2018 FLA",
+    "value": 996,
+    "school": "FLA"
+   },
+   "unit": "yards from scrimmage",
+   "sig": "hLamical Perine2018,Trey Benson2023scrim",
+   "more": {
+    "title": "Top 6: single-season yards from scrimmage (FSU, FLA players in our data)",
+    "rows": [
+     "1. Dalvin Cook (FSU 2016) 2,253",
+     "2. Dalvin Cook (FSU 2015) 1,935",
+     "3. Cam Akers (FSU 2019) 1,369",
+     "4. Dalvin Cook (FSU 2014) 1,211",
+     "5. Kelvin Taylor (FLA 2015) 1,185",
+     "6. Cam Akers (FSU 2017) 1,140"
     ]
    }
   },
   {
    "type": "count",
-   "label": "Since 2012",
+   "label": "Since 2016",
    "a": "FLA",
    "b": "FSU",
-   "threshold": 1300,
+   "threshold": 12,
    "verified": true,
    "pitted": true,
-   "prompt": "From 2012 through 2025, which school had more 1,300-yard rushing seasons?",
-   "A": [],
+   "prompt": "From 2016 through 2025, which school had more seasons with 12+ rushing touchdowns by one player?",
+   "A": [
+    {
+     "name": "Dameon Pierce",
+     "yards": 13,
+     "season": 2021,
+     "profile": "Running back · 2021: 574 rushing, 216 receiving yds, 13 rushing TD"
+    }
+   ],
    "B": [
     {
      "name": "Dalvin Cook",
-     "yards": 1691,
-     "season": 2015,
-     "profile": "Running back · 2015: 1,691 rushing, 244 receiving yds · also on this list in 2016"
+     "yards": 19,
+     "season": 2016,
+     "profile": "Running back · 2016: 1,765 rushing, 488 receiving yds, 19 rushing TD"
     },
     {
-     "name": "Dalvin Cook",
-     "yards": 1765,
-     "season": 2016,
-     "profile": "Running back · 2016: 1,765 rushing, 488 receiving yds · also on this list in 2015"
+     "name": "Cam Akers",
+     "yards": 14,
+     "season": 2019,
+     "profile": "Running back · 2019: 1,144 rushing, 225 receiving yds, 14 rushing TD"
+    },
+    {
+     "name": "Trey Benson",
+     "yards": 14,
+     "season": 2023,
+     "profile": "Running back · 2023: 905 rushing, 227 receiving yds, 14 rushing TD"
     }
    ],
-   "sig": "tsrush13002012",
+   "sig": "tsrushTD122016",
    "bonus": "names"
+  },
+  {
+   "type": "mc",
+   "label": "Rankings",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Of the 25 Florida–Florida State games from 2000 through 2025, how many featured a team ranked No. 1 in the AP poll?",
+   "options": [
+    "2",
+    "5",
+    "0",
+    "1"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    3,
+    1,
+    0
+   ],
+   "reveal": "2: 2009 (No. 1 Florida 37, Florida State 10) · 2014 (No. 1 Florida State 24, Florida 19).",
+   "info": {
+    "title": "Which poll?",
+    "text": "The AP Top 25 in force the week of each game; bowl and championship games use the last regular-season poll. Tied teams share a rank."
+   },
+   "years": {
+    "prompt": "Name the 2 seasons.",
+    "a": "FLA",
+    "b": "FSU",
+    "A": [
+     {
+      "name": "No. 1 Florida 37, Florida State 10",
+      "yards": 0,
+      "season": 2009,
+      "label": "No. 1 Florida 37, Florida State 10",
+      "profile": "No. 1 Florida 37, Florida State 10"
+     }
+    ],
+    "B": [
+     {
+      "name": "No. 1 Florida State 24, Florida 19",
+      "yards": 0,
+      "season": 2014,
+      "label": "No. 1 Florida State 24, Florida 19",
+      "profile": "No. 1 Florida State 24, Florida 19"
+     }
+    ]
+   },
+   "sig": "rkn1"
   },
   {
    "type": "count",
@@ -170,28 +337,6 @@
    "bonus": "names"
   },
   {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Florida–Florida State series?",
-   "options": [
-    "33 points",
-    "45 points",
-    "39 points",
-    "42 points"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    1,
-    2,
-    0
-   ],
-   "reveal": "33 points: Florida 45, Florida State 12 (Nov 24, 2007).",
-   "sig": "mm33"
-  },
-  {
    "type": "count",
    "label": "Fill In",
    "a": "FLA",
@@ -200,196 +345,103 @@
    "verified": true,
    "pitted": true,
    "bonus": "names",
-   "prompt": "Florida and Florida State's combined top 10 single-season receiving yards (through 2025): which school has more seasons on the list?",
+   "prompt": "Florida and Florida State's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
    "A": [
     {
-     "name": "Travis McGriff",
-     "yards": 1357,
-     "season": 1998,
-     "label": "1998: 1,357",
-     "profile": "1998 season, 1,357 receiving yards · No. 3 on the combined list"
+     "name": "Emmitt Smith",
+     "yards": 1599,
+     "season": 1989,
+     "label": "1989: 1,599",
+     "profile": "1989 season, 1,599 rushing yards · No. 3 on the combined list"
     },
     {
-     "name": "Carlos Alvarez",
-     "yards": 1329,
-     "season": 1969,
-     "label": "1969: 1,329",
-     "profile": "1969 season, 1,329 receiving yards · No. 5 on the combined list"
+     "name": "Emmitt Smith",
+     "yards": 1341,
+     "season": 1987,
+     "label": "1987: 1,341",
+     "profile": "1987 season, 1,341 rushing yards · No. 4 on the combined list"
     },
     {
-     "name": "Reidel Anthony",
-     "yards": 1293,
-     "season": 1996,
-     "label": "1996: 1,293",
-     "profile": "1996 season, 1,293 receiving yards · No. 6 on the combined list"
+     "name": "Jimmy DuBose",
+     "yards": 1307,
+     "season": 1975,
+     "label": "1975: 1,307",
+     "profile": "1975 season, 1,307 rushing yards · No. 5 on the combined list"
     },
     {
-     "name": "Jabar Gaffney",
-     "yards": 1191,
-     "season": 2001,
-     "label": "2001: 1,191",
-     "profile": "2001 season, 1,191 receiving yards · No. 10 on the combined list"
+     "name": "Fred Taylor",
+     "yards": 1292,
+     "season": 1997,
+     "label": "1997: 1,292",
+     "profile": "1997 season, 1,292 rushing yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Errict Rhett",
+     "yards": 1289,
+     "season": 1993,
+     "label": "1993: 1,289",
+     "profile": "1993 season, 1,289 rushing yards · No. 7 on the combined list"
+    },
+    {
+     "name": "Ciatrick Fason",
+     "yards": 1267,
+     "season": 2004,
+     "label": "2004: 1,267",
+     "profile": "2004 season, 1,267 rushing yards · No. 8 on the combined list"
     }
    ],
    "B": [
     {
-     "name": "Ron Sellers",
-     "yards": 1496,
-     "season": 1968,
-     "label": "1968: 1,496",
-     "profile": "1968 season, 1,496 receiving yards · No. 1 on the combined list"
+     "name": "Dalvin Cook",
+     "yards": 1765,
+     "season": 2016,
+     "label": "2016: 1,765",
+     "profile": "2016 season, 1,765 rushing yards · No. 1 on the combined list"
     },
     {
-     "name": "Rashad Greene",
-     "yards": 1365,
-     "season": 2014,
-     "label": "2014: 1,365",
-     "profile": "2014 season, 1,365 receiving yards · No. 2 on the combined list"
+     "name": "Dalvin Cook",
+     "yards": 1691,
+     "season": 2015,
+     "label": "2015: 1,691",
+     "profile": "2015 season, 1,691 rushing yards · No. 2 on the combined list"
     },
     {
-     "name": "Snoop Minnis",
-     "yards": 1340,
-     "season": 2000,
-     "label": "2000: 1,340",
-     "profile": "2000 season, 1,340 receiving yards · No. 4 on the combined list"
+     "name": "Warrick Dunn",
+     "yards": 1242,
+     "season": 1995,
+     "label": "1995: 1,242",
+     "profile": "1995 season, 1,242 rushing yards · No. 9 on the combined list"
     },
     {
-     "name": "Barry Smith",
-     "yards": 1243,
-     "season": 1972,
-     "label": "1972: 1,243",
-     "profile": "1972 season, 1,243 receiving yards · No. 7 on the combined list"
-    },
-    {
-     "name": "Peter Warrick",
-     "yards": 1232,
-     "season": 1998,
-     "label": "1998: 1,232",
-     "profile": "1998 season, 1,232 receiving yards · No. 8 on the combined list"
-    },
-    {
-     "name": "Ron Sellers",
-     "yards": 1228,
-     "season": 1967,
-     "label": "1967: 1,228",
-     "profile": "1967 season, 1,228 receiving yards · No. 9 on the combined list"
+     "name": "Sammie Smith",
+     "yards": 1230,
+     "season": 1987,
+     "label": "1987: 1,230",
+     "profile": "1987 season, 1,230 rushing yards · No. 10 on the combined list"
     }
    ],
-   "sig": "fsrec"
+   "sig": "fsrush"
   },
   {
-   "type": "count",
-   "label": "Fill In",
-   "a": "FLA",
-   "b": "FSU",
-   "threshold": 0,
+   "type": "duel",
+   "label": "Fresh Mix",
    "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "Florida and Florida State's combined top 10 career receiving yards: which school has more players on the list?",
-   "A": [
-    {
-     "name": "Carlos Alvarez",
-     "yards": 2563,
-     "label": "2,563 (1969–1971)",
-     "profile": "2,563 career receiving yards (1969–1971) · No. 7 on the combined list"
-    },
-    {
-     "name": "Jabar Gaffney",
-     "yards": 2375,
-     "label": "2,375 (2000–2001)",
-     "profile": "2,375 career receiving yards (2000–2001) · No. 9 on the combined list"
-    },
-    {
-     "name": "Andre Caldwell",
-     "yards": 2349,
-     "label": "2,349 (2003–2007)",
-     "profile": "2,349 career receiving yards (2003–2007) · No. 10 on the combined list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Rashad Greene",
-     "yards": 3830,
-     "label": "3,830 (2011–2014)",
-     "profile": "3,830 career receiving yards (2011–2014) · No. 1 on the combined list"
-    },
-    {
-     "name": "Ron Sellers",
-     "yards": 3598,
-     "label": "3,598 (1966–1968)",
-     "profile": "3,598 career receiving yards (1966–1968) · No. 2 on the combined list"
-    },
-    {
-     "name": "Peter Warrick",
-     "yards": 3517,
-     "label": "3,517 (1996–1999)",
-     "profile": "3,517 career receiving yards (1996–1999) · No. 3 on the combined list"
-    },
-    {
-     "name": "E.G. Green",
-     "yards": 2920,
-     "label": "2,920 (1994–1997)",
-     "profile": "2,920 career receiving yards (1994–1997) · No. 4 on the combined list"
-    },
-    {
-     "name": "Kez McCorvey",
-     "yards": 2660,
-     "label": "2,660 (1991–1994)",
-     "profile": "2,660 career receiving yards (1991–1994) · No. 5 on the combined list"
-    },
-    {
-     "name": "Greg Carr",
-     "yards": 2574,
-     "label": "2,574 (2005–2008)",
-     "profile": "2,574 career receiving yards (2005–2008) · No. 6 on the combined list"
-    },
-    {
-     "name": "Barry Smith",
-     "yards": 2392,
-     "label": "2,392 (1970–1972)",
-     "profile": "2,392 career receiving yards (1970–1972) · No. 8 on the combined list"
-    }
-   ],
-   "sig": "fcrec"
-  },
-  {
-   "type": "mc",
-   "label": "Heisman",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Which of these finished highest in Heisman Trophy voting that season?",
-   "options": [
-    "Chris Weinke (Florida State, 2000)",
-    "Kyle Pitts (Florida, 2020)",
-    "Tim Tebow (Florida, 2009)",
-    "Rex Grossman (Florida, 2001)"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    0,
-    2
-   ],
-   "reveal": "Chris Weinke: 1st in 2000 · Rex Grossman: 2nd in 2001 · Tim Tebow: 5th in 2009 · Kyle Pitts: 10th in 2020",
-   "sig": "hmChris Weinke2000,Kyle Pitts2020,Rex Grossman2001,Tim Tebow2009",
-   "more": {
-    "title": "Florida and Florida State top-10 Heisman finishes (seasons with checked voting)",
-    "rows": [
-     "1st: Chris Weinke (FSU) 2000",
-     "1st: Tim Tebow (FLA) 2007",
-     "1st: Jameis Winston (FSU) 2013",
-     "2nd: Rex Grossman (FLA) 2001",
-     "3rd: Tim Tebow (FLA) 2008",
-     "4th: Kyle Trask (FLA) 2020",
-     "5th: Tim Tebow (FLA) 2009",
-     "5th: Jordan Travis (FSU) 2023",
-     "6th: Jameis Winston (FSU) 2014",
-     "7th: Dalvin Cook (FSU) 2015",
-     "10th: Kyle Pitts (FLA) 2020"
-    ]
-   }
+   "year": 2018,
+   "stat": "Rushing season",
+   "aSchool": "FSU",
+   "other": "FLA",
+   "aName": "Cam Akers (RB)",
+   "bName": "Lamical Perine (RB)",
+   "A": {
+    "big": "706",
+    "sm": "rush yds · 6 TD"
+   },
+   "B": {
+    "big": "826",
+    "sm": "rush yds · 7 TD"
+   },
+   "flip": true,
+   "sig": "drush2018Cam Akers,Lamical Perine"
   }
  ]
 }

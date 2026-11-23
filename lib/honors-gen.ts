@@ -174,3 +174,51 @@ export function genHeismanMC(h: HonorsData, a: SchoolKey, b: SchoolKey, rng: Rng
   }
   return null;
 }
+
+// ---------- vs other programs (owner, Nov 2026): both rivals plus two peer schools, four options ----------
+const SEC16 = new Set(["ALA", "AUB", "LSU", "TENN", "FLA", "VAN", "MIZ", "UK", "OU", "TAMU", "UGA", "SC", "TEX", "ARK", "MISS", "MSST"]);
+function peerMC(rng: Rng, a: SchoolKey, b: SchoolKey, count: (k: SchoolKey) => number, schools: SchoolKey[], minGap: number) {
+  // peers come from the rivals' world (SEC peers for SEC games, everyone in the data otherwise), leaning toward strong programs
+  const pool = schools.filter(k => k !== a && k !== b && (SEC16.has(a) && SEC16.has(b) ? SEC16.has(k) : true));
+  const strong = [...pool].sort((x, y) => count(y) - count(x)).slice(0, Math.max(4, Math.ceil(pool.length / 2)));
+  for (let t = 0; t < 12; t++) {
+    const peers = shuffle(rng, strong).slice(0, 2), four = [a, b, ...peers], v = four.map(count);
+    const top = Math.max(...v), second = [...v].sort((x, y) => y - x)[1];
+    if (top - second >= minGap && top > 0) return { four, v, best: four[v.indexOf(top)] };
+  }
+  return null;
+}
+
+export function genPeerDraftMC(d: DraftData, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
+  const full = coveredFrom(d.years, d.to), schools = [...new Set(d.picks.map(p => p.school))];
+  for (const [from, kind, what] of shuffle(rng, [[2010, "r1", "first-round picks"], [2015, "r1", "first-round picks"], [2005, "top10", "top-10 picks"]] as const)) {
+    if (from < full) continue;
+    const count = (k: SchoolKey) => d.picks.filter(p => p.school === k && p.year >= from && hit(p, kind)).length;
+    const m = peerMC(rng, a, b, count, schools, 2);
+    if (!m) continue;
+    const order = shuffle(rng, [0, 1, 2, 3]), opts = [m.best, ...m.four.filter(k => k !== m.best)];
+    return { type: "mc", label: "Vs. the Field", verified: true, pitted: true,
+      prompt: `From the ${from} draft through ${d.to}, which of these schools produced the most NFL ${what}?`,
+      options: opts.map(name), answer: 0, order,
+      reveal: m.four.map((k, i) => ({ k, n: m.v[i] })).sort((x, y) => y.n - x.n).map(x => `${name(x.k)} ${x.n}`).join(" · ") + ".",
+      sig: "pd" + kind + from + [...m.four].sort().join("") } as Question;
+  }
+  return null;
+}
+
+export function genPeerAwardMC(h: HonorsData, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
+  const schools = [...new Set([...h.wins.map(w => w.school), a, b])];
+  for (const from of shuffle(rng, [2000, 2010])) {
+    const count = (k: SchoolKey) => h.wins.filter(w => w.school === k && w.year >= from).length;
+    const m = peerMC(rng, a, b, count, schools, 2);
+    if (!m) continue;
+    const opts = [m.best, ...m.four.filter(k => k !== m.best)];
+    return { type: "mc", label: "Vs. the Field", verified: true, pitted: true,
+      prompt: `From ${from} through 2025, which of these schools had the most winners of major national awards?`,
+      options: opts.map(name), answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
+      reveal: m.four.map((k, i) => ({ k, n: m.v[i] })).sort((x, y) => y.n - x.n).map(x => `${name(x.k)} ${x.n}`).join(" · ") + ".",
+      info: { title: "Which awards count?", text: h.awards.map(x => `${x.name}: ${x.for}`).join(" · ") },
+      sig: "pa" + from + [...m.four].sort().join("") } as Question;
+  }
+  return null;
+}

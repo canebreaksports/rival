@@ -8,37 +8,40 @@ import { SCHOOL } from "./schools";
 import { fmt } from "./generators";
 import { posName, profileLine, yds } from "./profile";
 
-export interface LeaderSeason { name: string; season: number; rush: number; rec: number; margin: number; pos?: string }
+export interface LeaderSeason { name: string; season: number; rush: number; rec: number; rushTD?: number; recTD?: number; margin: number; pos?: string }
 export interface SeasonLeaders { source: string; from: number; to: number; schools: Record<SchoolKey, LeaderSeason[]> }
 
 const name = (k: SchoolKey) => SCHOOL[k].name;
 const gameGap = (a: number) => Math.max(15, 0.12 * a);
 const totalGap = (a: number, b: number) => Math.max(25, 0.1 * Math.max(a, b));
-const THRESH = { rush: [800, 900, 1000, 1100, 1200, 1300, 1500], rec: [600, 700, 800, 850, 900, 1000, 1100] };
+const THRESH = { rush: [800, 900, 1000, 1100, 1200, 1300, 1500], rec: [600, 700, 800, 850, 900, 1000, 1100], rushTD: [9, 10, 12, 15], recTD: [7, 9, 10, 12] };
+type SK = keyof typeof THRESH;
 
 /** 1. Season counts over a window, e.g. "From 2018 through 2025, which school had more 850-yard receiving seasons?" */
 export function genSeasonCount(sl: SeasonLeaders, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
   const A = sl.schools[a] ?? [], B = sl.schools[b] ?? [];
-  const cands: { k: "rush" | "rec"; t: number; from: number }[] = [];
-  for (const k of ["rush", "rec"] as const) for (const t of THRESH[k]) for (const from of [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]) {
+  const cands: { k: SK; t: number; from: number }[] = [];
+  const v = (s: LeaderSeason, k: SK) => s[k] ?? 0, td = (k: SK) => k === "rushTD" || k === "recTD";
+  for (const k of Object.keys(THRESH) as SK[]) for (const t of THRESH[k]) for (const from of [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]) {
     const rows = [...A, ...B].filter(s => s.season >= from && s.season <= sl.to);
-    if (rows.some(s => Math.abs(s[k] - t) < s.margin)) continue;                // nobody close enough to the line to flip the count
-    const n = (L: typeof A) => L.filter(s => s.season >= from && s.season <= sl.to && s[k] >= t).length;
+    if (td(k) ? rows.some(s => v(s, k) === t || v(s, k) === t - 1) : rows.some(s => Math.abs(v(s, k) - t) < s.margin)) continue; // nobody close enough to flip it
+    const n = (L: typeof A) => L.filter(s => s.season >= from && s.season <= sl.to && v(s, k) >= t).length;
     if (n(A) + n(B) < 2 || n(A) + n(B) > 14) continue;                           // something to count, a list short enough to read
     cands.push({ k, t, from });
   }
   if (!cands.length) return null;
   const { k, t, from } = pick(rng, cands);
-  const on = (L: typeof A) => L.filter(s => s.season >= from && s.season <= sl.to && s[k] >= t);
+  const on = (L: typeof A) => L.filter(s => s.season >= from && s.season <= sl.to && v(s, k) >= t);
   const list = (L: typeof A) => on(L).map(s => {
     const again = on(L).filter(x => x.name === s.name && x.season !== s.season).map(x => x.season);
-    return { name: s.name, yards: s[k], season: s.season, profile: profileLine(posName(s.pos),
-      `${s.season}: ${yds(s.rush, "rushing")}, ${yds(s.rec, "receiving")} yds`, again.length && `also on this list in ${again.join(" and ")}`) };
+    return { name: s.name, yards: v(s, k), season: s.season, profile: profileLine(posName(s.pos),
+      `${s.season}: ${yds(s.rush, "rushing")}, ${yds(s.rec, "receiving")} yds${td(k) ? `, ${v(s, k)} ${k === "rushTD" ? "rushing" : "receiving"} TD` : ""}`, again.length && `also on this list in ${again.join(" and ")}`) };
   });
-  const what = k === "rush" ? "rushing" : "receiving";
+  const what = k === "rush" ? "rushing" : k === "rec" ? "receiving" : "";
   return {
     type: "count", label: "Since " + from, a, b, threshold: t, verified: true, pitted: true,
-    prompt: `From ${from} through ${sl.to}, which school had more ${fmt(t)}-yard ${what} seasons?`,
+    prompt: td(k) ? `From ${from} through ${sl.to}, which school had more seasons with ${t}+ ${k === "rushTD" ? "rushing" : "receiving"} touchdowns by one player?`
+      : `From ${from} through ${sl.to}, which school had more ${fmt(t)}-yard ${what} seasons?`,
     A: list(A), B: list(B), sig: "ts" + k + t + from,
   };
 }
