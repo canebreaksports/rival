@@ -3,6 +3,7 @@ import type { CuratedItem, Dataset, FrozenSet, Game, Question, QType, SchoolKey 
 import { pick, seededRng, shuffle, type Rng } from "./rng";
 import { genCareerRecRank } from "./notable-gen";
 import { genWalkoffCount, genWalkoffMC } from "./walkoff-gen";
+import { genTopSeasons, genTopVs } from "./fillin-gen";
 import { PROGRAM_STATS, SCHOOL, programValue } from "./data";
 import { genGameCount, genSeasonCount, genVsLeaderMC } from "./trend-gen";
 import { genAwardCount, genAwardMC, genDraftCount, genDraftMC, genHeismanCount, genHeismanMC } from "./honors-gen";
@@ -10,7 +11,7 @@ import { genGameMoment, genGameRank, genLongestGameMoment, genLongestSeriesMC, g
 import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 18; // v18: higher/lower only on notable players (lib/notable.ts); // v17: 10 questions in every set (bigger generated pool, second fill pass); // v16: walk-offs (final play or OT), a record-book career ranking every week; v15: Notables Rank It; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
+export const ENGINE_VERSION = 20; // v20: Name Them by default, years only for walk-offs; bonus answers hidden until the bonus ends; // v19: fill-in questions (combined top 10 seasons, top 5 vs each other), ⓘ award explainers; // v18: higher/lower only on notable players (lib/notable.ts); // v17: 10 questions in every set (bigger generated pool, second fill pass); // v16: walk-offs (final play or OT), a record-book career ranking every week; v15: Notables Rank It; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean }
@@ -159,7 +160,9 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
       if (sigs.has(q.sig)) continue;
       if (q.type === "count" && [...q.A, ...q.B].every(x => x.season)) {
         const r = rng(); // always drawn, so the rest of the set doesn't shift
-        q.bonus = q.sig.startsWith("hc") ? "names" : q.sig.startsWith("wo") || r < 0.4 ? "years" : "names"; // Heisman: always players; walk-offs: always years
+        // Name the players by default (owner, Nov 2026: "name more players than years"). Years only where the year IS the
+        // answer and there's no player to name: walk-offs (and curated items like Saban vs 9-win Auburn).
+        void r; q.bonus = q.sig.startsWith("wo") ? "years" : "names";
       }
       sigs.add(q.sig); out.push(q);
     }
@@ -170,6 +173,15 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
     const rush = rng() < 0.4, cr = rush ? (data.career as unknown as import("./notable-gen").CareerReceiving) : data.careerRec;
     const q = cr ? genCareerRecRank(cr, teams[0], teams[1], rng, rush) ?? (data.careerRec ? genCareerRecRank(data.careerRec, teams[0], teams[1], rng) : null) : null;
     if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q) }
+  }
+  // Fill-in every week (owner, Nov 2026: "we want more fill in questions"): combined top 10 seasons or top 5 against each other
+  if (teams.length > 1) {
+    const rvF = data.rivalry?.pairs[pairKey(teams[0], teams[1])];
+    const fills = shuffle(rng, [() => (data.seasonRecs ? genTopSeasons(data.seasonRecs, teams[0], teams[1], rng) : null),
+      () => (rvF ? genTopVs(rvF, teams[0], teams[1], rng) : null)]);
+    for (const f of fills) { const q = f(); if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q); break } }
+    if (data.seasonRecs) gens.push(() => genTopSeasons(data.seasonRecs!, teams[0], teams[1], rng));
+    if (rvF) gens.push(() => genTopVs(rvF, teams[0], teams[1], rng));
   }
   if (rng() < 0.7) { const u = genUpset(c); if (u) { sigs.add(u.sig); out.push(u) } }
   let trapped = rng() < 0.25;
@@ -187,7 +199,7 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
 /** Per-set caps (spec §2). Trap and upset limits apply across generated and curated questions. */
 export function caps(progCap: number, pitted = false): Record<QType, number> {
   // Pitted sets lean on cross-school formats, so they get more room (owner's call, Nov 2026).
-  return pitted ? { moment: 4, prog: progCap, h2h: 4, rank: 3, count: 2, duel: 3, cross: 1, mc: 2 }
+  return pitted ? { moment: 4, prog: progCap, h2h: 4, rank: 3, count: 4, duel: 3, cross: 1, mc: 2 }
     : { moment: 4, prog: progCap, h2h: 3, rank: 2, count: 1, duel: 2, cross: 1, mc: 2 };
 }
 
@@ -216,7 +228,7 @@ export function involvesBoth(q: Question, a: SchoolKey, b: SchoolKey): boolean {
 
 /** Generator family of a question, from its signature prefix (e.g. "vs" = totals against each other). */
 export const questionKind = (q: Question) =>
-  q.sig.match(/^(gm|vs|tv|ts|tg|dc|dm|ac|am|hc|hm|sc|td|gr|lp|lg|mx|nx|nr|wo|wm|pp|tr|tp|d|u|h|r|c|g|k|p)/)?.[1] ?? q.sig.slice(0, 2);
+  q.sig.match(/^(gm|vs|tv|ts|tg|dc|dm|ac|am|hc|hm|sc|td|gr|lp|lg|mx|nx|nr|wo|wm|fs|fv|pp|tr|tp|d|u|h|r|c|g|k|p)/)?.[1] ?? q.sig.slice(0, 2);
 // may appear twice in a set: program pit, curated items, game moments, plain head-to-heads
 const REPEATABLE = new Set(["g", "gm", "h"]);
 const CURATED_MAX = 3; // hand-written questions per set

@@ -6,8 +6,8 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-23T20:03:20.666Z",
- "engine": 18,
+ "generatedAt": "2026-11-23T20:10:46.023Z",
+ "engine": 20,
  "questions": [
   {
    "type": "count",
@@ -17,6 +17,10 @@
    "threshold": 0,
    "verified": true,
    "pitted": true,
+   "info": {
+    "title": "What is the Bronko Nagurski Trophy?",
+    "text": "The Bronko Nagurski Trophy is given each year to college football's best defensive player."
+   },
    "prompt": "From 2000 through 2025, which school had more Bronko Nagurski Trophy winners?",
    "A": [
     {
@@ -37,79 +41,6 @@
    "B": [],
    "sig": "acnagurski2000",
    "bonus": "names"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Texas–Texas A&M games, highest first.",
-   "items": [
-    {
-     "label": "Cyrus Gray (TAMU) · 2010",
-     "value": 223,
-     "school": "TAMU"
-    },
-    {
-     "label": "Cody Johnson (TEX) · 2010",
-     "value": 107,
-     "school": "TEX"
-    },
-    {
-     "label": "Jorvorskie Lane (TAMU) · 2007",
-     "value": 69,
-     "school": "TAMU"
-    },
-    {
-     "label": "Tre Wisner (TEX) · 2025",
-     "value": 155,
-     "school": "TEX"
-    }
-   ],
-   "sig": "grrushCody Johnson2010,Cyrus Gray2010,Jorvorskie Lane2007,Tre Wisner2025",
-   "more": {
-    "title": "Top rushing games in this rivalry (box scores)",
-    "rows": [
-     "1. Cyrus Gray (TAMU) 2010: 223",
-     "2. Tre Wisner (TEX) 2024: 186",
-     "3. Colt McCoy (TEX) 2009: 175",
-     "4. Tre Wisner (TEX) 2025: 155",
-     "5. Stephen McGee (TAMU) 2005: 108",
-     "6. Tre' Newton (TEX) 2009: 107",
-     "7. Cody Johnson (TEX) 2010: 107",
-     "8. Jorvorskie Lane (TAMU) 2005: 104"
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 24, 2006",
-    "winner": "TAMU",
-    "loser": "TEX",
-    "ws": 12,
-    "ls": 7,
-    "venue": "DKR-Texas Memorial Stadium"
-   },
-   "prompt": "What was the difference in total yards in Texas A&M's 12–7 win over Texas?",
-   "options": [
-    "Texas A&M +72 yards",
-    "Texas +42 yards",
-    "Texas +182 yards",
-    "Texas +72 yards"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    1,
-    2,
-    3
-   ],
-   "reveal": "Texas A&M +72. Texas A&M had 302 total yards, Texas 230.",
-   "sig": "td2006-11-24total"
   },
   {
    "type": "rank",
@@ -166,27 +97,133 @@
    "prompt": "Rank these from highest to lowest (yards).",
    "items": [
     {
-     "label": "Kellen Mond (TAMU QB) · career rushing yards",
-     "value": 1616,
-     "school": "TAMU"
-    },
-    {
-     "label": "Keaontay Ingram (TEX RB) · career rushing yards",
-     "value": 1811,
+     "label": "Keaontay Ingram (TEX RB) · 2020 yards from scrimmage",
+     "value": 353,
      "school": "TEX"
     },
     {
-     "label": "Johnathan Gray (TEX RB) · 2012 rushing yards",
-     "value": 701,
+     "label": "Jalen Wydermyer (TAMU TE) · 2021 receiving yards",
+     "value": 515,
+     "school": "TAMU"
+    },
+    {
+     "label": "Roschon Johnson (TEX RB) · career rushing yards",
+     "value": 2189,
      "school": "TEX"
     },
     {
-     "label": "Isaiah Spiller (TAMU RB) · 2019 yards from scrimmage",
-     "value": 1149,
-     "school": "TAMU"
+     "label": "Bijan Robinson (TEX RB) · 2021 receiving yards",
+     "value": 295,
+     "school": "TEX"
     }
    ],
-   "sig": "mxydsIsaiah Spiller2019 yards from scrimmage,Johnathan Gray2012 rushing yards,Keaontay Ingramcareer rushing yards,Kellen Mondcareer rushing yards"
+   "sig": "mxydsBijan Robinson2021 receiving yards,Jalen Wydermyer2021 receiving yards,Keaontay Ingram2020 yards from scrimmage,Roschon Johnsoncareer rushing yards"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 25, 2005",
+    "winner": "TEX",
+    "loser": "TAMU",
+    "ws": 40,
+    "ls": 29,
+    "venue": "Kyle Field"
+   },
+   "prompt": "In this game, did Vince Young (Texas) throw for more or less than",
+   "line": "200 passing yards",
+   "answer": "under",
+   "reveal": "Less. Vince Young had 162 passing yards and 1 TD in this game.",
+   "check": {
+    "value": 162,
+    "line": 200
+   },
+   "sig": "gm2005-11-25Vince Youngpass"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more rushing TDs in a single season?",
+   "A": {
+    "label": "Kellen Mond (QB) · 2018 TAMU",
+    "value": 7,
+    "school": "TAMU"
+   },
+   "B": {
+    "label": "Ricky Williams (RB) · 1995 TEX",
+    "value": 8,
+    "school": "TEX"
+   },
+   "unit": "rushing TDs",
+   "sig": "hKellen Mond2018,Ricky Williams1995rushTD",
+   "more": {
+    "title": "Top 6: single-season rushing TDs (TEX, TAMU players in our data)",
+    "rows": [
+     "1. Ricky Williams (TEX 1998) 29",
+     "2. Ricky Williams (TEX 1997) 25",
+     "3. Johnny Manziel (TAMU 2012) 21",
+     "4. Bijan Robinson (TEX 2022) 18",
+     "5. Sam Ehlinger (TEX 2018) 16",
+     "6. D'Onta Foreman (TEX 2016) 15"
+    ]
+   }
+  },
+  {
+   "type": "moment",
+   "label": "Longest Play",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 24, 2011",
+    "winner": "TEX",
+    "loser": "TAMU",
+    "ws": 27,
+    "ls": 25,
+    "venue": "Kyle Field"
+   },
+   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
+   "line": "62.5 yards",
+   "answer": "under",
+   "reveal": "Less. The longest was Blaine Irby's 41-yard catch for Texas; Texas A&M's longest was 29 yards (Jeff Fuller).",
+   "check": {
+    "value": 41,
+    "line": 62.5
+   },
+   "sig": "lg2011-11-24"
+  },
+  {
+   "type": "mc",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 26, 2009",
+    "winner": "TEX",
+    "loser": "TAMU",
+    "ws": 49,
+    "ls": 39,
+    "venue": "Kyle Field"
+   },
+   "prompt": "What was the difference in rushing yards in Texas's 49–39 win over Texas A&M?",
+   "options": [
+    "Texas +103 yards",
+    "Texas +173 yards",
+    "Texas +193 yards",
+    "Texas A&M +173 yards"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    3,
+    1,
+    2
+   ],
+   "reveal": "Texas +103. Texas had 293 rushing yards, Texas A&M 190.",
+   "sig": "td2009-11-26rush"
   },
   {
    "type": "count",
@@ -265,97 +302,123 @@
     }
    ],
    "sig": "dcr32015ol",
-   "bonus": "years"
+   "bonus": "names"
   },
   {
-   "type": "moment",
-   "label": "Rivalry Game",
+   "type": "count",
+   "label": "Fill In",
+   "a": "TEX",
+   "b": "TAMU",
+   "threshold": 0,
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Nov 27, 2008",
-    "winner": "TEX",
-    "loser": "TAMU",
-    "ws": 49,
-    "ls": 9,
-    "venue": "DKR-Texas Memorial Stadium"
-   },
-   "prompt": "In this game, did Quan Cosby (Texas) have more or less than",
-   "line": "100 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Quan Cosby had 80 receiving yards on 6 catches and 1 TD in this game.",
-   "check": {
-    "value": 80,
-    "line": 100
-   },
-   "sig": "gm2008-11-27Quan Cosbyrec"
+   "bonus": "names",
+   "prompt": "Texas and Texas A&M's combined top 10 single-season rushing yards: which school has more seasons on the list?",
+   "A": [
+    {
+     "name": "Ricky Williams",
+     "yards": 2124,
+     "season": 1998,
+     "label": "1998: 2,124",
+     "profile": "1998 season, 2,124 rushing yards · No. 1 on the combined list"
+    },
+    {
+     "name": "D'Onta Foreman",
+     "yards": 2028,
+     "season": 2016,
+     "label": "2016: 2,028",
+     "profile": "2016 season, 2,028 rushing yards · No. 2 on the combined list"
+    },
+    {
+     "name": "Ricky Williams",
+     "yards": 1893,
+     "season": 1997,
+     "label": "1997: 1,893",
+     "profile": "1997 season, 1,893 rushing yards · No. 3 on the combined list"
+    },
+    {
+     "name": "Cedric Benson",
+     "yards": 1834,
+     "season": 2004,
+     "label": "2004: 1,834",
+     "profile": "2004 season, 1,834 rushing yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Earl Campbell",
+     "yards": 1744,
+     "season": 1977,
+     "label": "1977: 1,744",
+     "profile": "1977 season, 1,744 rushing yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Jamaal Charles",
+     "yards": 1619,
+     "season": 2007,
+     "label": "2007: 1,619",
+     "profile": "2007 season, 1,619 rushing yards · No. 9 on the combined list"
+    },
+    {
+     "name": "Bijan Robinson",
+     "yards": 1580,
+     "season": 2022,
+     "label": "2022: 1,580",
+     "profile": "2022 season, 1,580 rushing yards · No. 10 on the combined list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Trayveon Williams",
+     "yards": 1760,
+     "season": 2018,
+     "label": "2018: 1,760",
+     "profile": "2018 season, 1,760 rushing yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Darren Lewis",
+     "yards": 1692,
+     "season": 1988,
+     "label": "1988: 1,692",
+     "profile": "1988 season, 1,692 rushing yards · No. 7 on the combined list"
+    },
+    {
+     "name": "Darren Lewis",
+     "yards": 1691,
+     "season": 1990,
+     "label": "1990: 1,691",
+     "profile": "1990 season, 1,691 rushing yards · No. 8 on the combined list"
+    }
+   ],
+   "sig": "fsrush"
   },
   {
-   "type": "moment",
-   "label": "Rivalry Game",
+   "type": "rank",
+   "label": "Notables",
    "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 24, 2006",
-    "winner": "TAMU",
-    "loser": "TEX",
-    "ws": 12,
-    "ls": 7,
-    "venue": "DKR-Texas Memorial Stadium"
-   },
-   "prompt": "In this game, did Colt McCoy (Texas) throw for more or less than",
-   "line": "100 passing yards",
-   "answer": "over",
-   "reveal": "More. Colt McCoy had 160 passing yards and 0 TD in this game.",
-   "check": {
-    "value": 160,
-    "line": 100
-   },
-   "sig": "gm2006-11-24Colt McCoypass"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
-   "A": {
-    "label": "Jalen Wydermyer (TAMU TE)",
-    "value": 16,
-    "school": "TAMU"
-   },
-   "B": {
-    "label": "Bijan Robinson (TEX RB)",
-    "value": 8,
-    "school": "TEX"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Jalen Wydermyer 16 vs. Bijan Robinson 8.",
-   "sig": "urecTDBijan RobinsonJalen Wydermyer"
-  },
-  {
-   "type": "moment",
-   "label": "Longest Play",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 23, 2007",
-    "winner": "TAMU",
-    "loser": "TEX",
-    "ws": 38,
-    "ls": 30,
-    "venue": "Kyle Field"
-   },
-   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
-   "line": "82.5 yards",
-   "answer": "under",
-   "reveal": "Less. The longest was Earvin Taylor's 66-yard catch for Texas A&M; Texas's longest was 62 yards (Jamaal Charles).",
-   "check": {
-    "value": 66,
-    "line": 82.5
-   },
-   "sig": "lg2007-11-23"
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Isaiah Spiller (TAMU RB) · career yards from scrimmage",
+     "value": 3578,
+     "school": "TAMU"
+    },
+    {
+     "label": "Ricky Williams (TEX RB) · 1995 rushing yards",
+     "value": 1052,
+     "school": "TEX"
+    },
+    {
+     "label": "Devon Achane (TAMU RB) · 2022 yards from scrimmage",
+     "value": 1298,
+     "school": "TAMU"
+    },
+    {
+     "label": "Bijan Robinson (TEX RB) · 2022 rushing yards",
+     "value": 1578,
+     "school": "TEX"
+    }
+   ],
+   "sig": "nxydsBijan Robinson2022 rushing yards,Devon Achane2022 yards from scrimmage,Isaiah Spillercareer yards from scrimmage,Ricky Williams1995 rushing yards"
   }
  ]
 }

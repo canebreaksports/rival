@@ -9,11 +9,12 @@ import rivalry from "@/data/rivalry.json";
 import leaders from "@/data/season-leaders.json";
 import careerRec from "@/data/career-receiving.json";
 import walkoffs from "@/data/walkoffs.json";
+import seasonRecs from "@/data/season-records.json";
 import draft from "@/data/draft.json";
 import honors from "@/data/honors.json";
 import type { Dataset, School, SchoolKey } from "./types";
 
-export const DATA = { schools, seasons, players, career, schedule, curated, rivalry, leaders, draft, honors, careerRec, walkoffs } as unknown as Dataset;
+export const DATA = { schools, seasons, players, career, schedule, curated, rivalry, leaders, draft, honors, careerRec, walkoffs, seasonRecs } as unknown as Dataset;
 
 export { SCHOOL } from "./schools";
 

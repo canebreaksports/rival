@@ -71,6 +71,10 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
 
   // after a question is answered, progress is saved as already past it (see settle)
   const savePast = (np: Progress) => save({ ...np, i: np.i + 1 >= n ? np.i : np.i + 1, done: np.i + 1 >= n });
+  const [bonusDoneAt, setBonusDoneAt] = useState(-1);
+  const hasBonus = q?.type === "count" || (q?.type === "mc" && !!q.years);
+  const afterBonus = !hasBonus || bonusDoneAt === p.i; // More lists and full reveals would give the bonus answers away
+  const finishBonus = (pts: number) => { addBonus(pts); setBonusDoneAt(p.i) };
   const addBonus = (pts: number) => setP(x => {
     const qpts = [...(x.qpts ?? [])]; qpts[x.i] = (qpts[x.i] ?? 0) + pts;
     const np = { ...x, pts: x.pts + pts, qpts }; savePast(np); return np;
@@ -100,9 +104,11 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
             <b>{reveal.ok ? "TOUCHDOWN ✓" : "FUMBLE ✗"}</b><br />{reveal.msg}
           </div>
         )}
-        {reveal && q.more && q.more.rows.length > 0 && <div className="more"><div className="kind">More · {q.more.title}</div>{q.more.rows.map(r => <div key={r}>{r}</div>)}</div>}
-        {reveal && q.type === "count" ? <NameThem q={q} onDone={addBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
-          : reveal && q.type === "mc" && q.years ? <NameYears q={q.years} prompt={q.years.prompt} onDone={addBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
+        {reveal && q.info && <Info key={"i" + p.i} info={q.info} />}
+        {reveal && afterBonus && q.type === "mc" && q.years && <div className="more">{q.reveal}</div>}
+        {reveal && afterBonus && q.more && q.more.rows.length > 0 && <div className="more"><div className="kind">More · {q.more.title}</div>{q.more.rows.map(r => <div key={r}>{r}</div>)}</div>}
+        {reveal && q.type === "count" ? <NameThem q={q} onDone={finishBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
+          : reveal && q.type === "mc" && q.years ? <NameYears q={q.years} prompt={q.years.prompt} onDone={finishBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
           : reveal && <div className="next show"><button className="btn" onClick={next}>{p.i === n - 1 ? "Final Whistle" : "Next Play →"}</button></div>}
       </div>
       <div className="streak">{p.streak > 1 ? `🔥 ${p.streak} in a row` : `Question ${p.i + 1} of ${n}`}</div>
@@ -111,6 +117,15 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
 }
 
 // ---------------------------------------------------------------------------
+
+/** ⓘ explainer shown after answering and before the bonus, e.g. what the Doak Walker Award is. */
+function Info({ info }: { info: { title: string; text: string } }) {
+  const [open, setOpen] = useState(false);
+  return <div className="info">
+    <button className="btn ghost" style={{ width: "auto", padding: "6px 12px", fontSize: 14 }} aria-expanded={open} onClick={() => setOpen(!open)}>ⓘ {info.title}</button>
+    {open && <div className="guess info" role="note" style={{ marginTop: 8 }}>{info.text}</div>}
+  </div>;
+}
 
 function kindLabel(q: Question) {
   switch (q.type) {
@@ -141,7 +156,8 @@ function revealText(q: Question): ReactNode {
     case "moment": return q.reveal;
     case "h2h": return <>{q.A.label}: {h2hFmt(q, q.A.value)} · {q.B.label}: {h2hFmt(q, q.B.value)}{q.note && <><br />{q.note}</>}</>;
     case "duel": return `${SCHOOL[q.aSchool].name}: ${q.aName} (${q.A.big}). ${SCHOOL[q.other].name}: ${q.bName} (${q.B.big}).`;
-    case "cross": case "mc": return q.reveal;
+    case "cross": return q.reveal;
+    case "mc": return q.years ? `${q.options[q.answer]}.` : q.reveal; // the full reveal lists the years: hold it until the bonus is over
     case "rank": return "";
   }
 }

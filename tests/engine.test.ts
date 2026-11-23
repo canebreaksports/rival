@@ -253,7 +253,7 @@ describe("sets", () => {
       expect(count(qs, q => q.type === "h2h")).toBeLessThanOrEqual(4);   // pitted caps
       expect(count(qs, q => q.type === "rank")).toBeLessThanOrEqual(3);
       expect(count(qs, q => q.type === "duel")).toBeLessThanOrEqual(3);
-      expect(count(qs, q => q.type === "count")).toBeLessThanOrEqual(2); // pitted: career count + a weekly trend count
+      expect(count(qs, q => q.type === "count")).toBeLessThanOrEqual(4); // pitted: two edge counts + fill-ins
       for (const q of qs) expect(validateQuestion(q)).toEqual([]);
     }
   });

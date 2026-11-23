@@ -6,37 +6,93 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-23T20:03:21.102Z",
- "engine": 18,
+ "generatedAt": "2026-11-23T20:10:46.600Z",
+ "engine": 20,
  "questions": [
   {
    "type": "count",
-   "label": "Awards",
+   "label": "Fill In",
    "a": "OU",
    "b": "MIZ",
    "threshold": 0,
    "verified": true,
    "pitted": true,
-   "prompt": "From 2010 through 2025, which school had more Heisman Trophy winners?",
+   "bonus": "names",
+   "prompt": "Since 2006, which school has more players in the top 5 for yards from scrimmage against the other?",
    "A": [
     {
-     "name": "Baker Mayfield",
-     "yards": 2017,
-     "season": 2017,
-     "label": "QB",
-     "profile": "QB · won the Heisman Trophy (most outstanding player)"
+     "name": "Ryan Broyles",
+     "yards": 349,
+     "label": "349 in 3 games",
+     "profile": "349 yards from scrimmage against Missouri in 3 games · No. 1"
     },
     {
-     "name": "Kyler Murray",
-     "yards": 2018,
-     "season": 2018,
-     "label": "QB",
-     "profile": "QB · won the Heisman Trophy (most outstanding player)"
+     "name": "Chris Brown",
+     "yards": 313,
+     "label": "313 in 3 games",
+     "profile": "313 yards from scrimmage against Missouri in 3 games · No. 2"
+    },
+    {
+     "name": "Allen Patrick",
+     "yards": 292,
+     "label": "292 in 3 games",
+     "profile": "292 yards from scrimmage against Missouri in 3 games · No. 3"
+    },
+    {
+     "name": "Juaquin Iglesias",
+     "yards": 255,
+     "label": "255 in 4 games",
+     "profile": "255 yards from scrimmage against Missouri in 4 games · No. 4"
     }
    ],
-   "B": [],
-   "sig": "acheisman2010",
-   "bonus": "years"
+   "B": [
+    {
+     "name": "Jeremy Maclin",
+     "yards": 242,
+     "label": "242 in 3 games",
+     "profile": "242 yards from scrimmage against Oklahoma in 3 games · No. 5"
+    }
+   ],
+   "sig": "fvscrim"
+  },
+  {
+   "type": "mc",
+   "label": "Heisman",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Which of these finished highest in Heisman Trophy voting that season?",
+   "options": [
+    "Sam Bradford (Oklahoma, 2008)",
+    "Baker Mayfield (Oklahoma, 2015)",
+    "Cody Schrader (Missouri, 2023)",
+    "Quentin Griffin (Oklahoma, 2002)"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    2,
+    1,
+    0
+   ],
+   "reveal": "Sam Bradford: 1st in 2008 · Baker Mayfield: 4th in 2015 · Cody Schrader: 8th in 2023 · Quentin Griffin: 10th in 2002",
+   "sig": "hmBaker Mayfield2015,Cody Schrader2023,Quentin Griffin2002,Sam Bradford2008",
+   "more": {
+    "title": "Oklahoma and Missouri top-10 Heisman finishes (seasons with checked voting)",
+    "rows": [
+     "1st: Jason White (OU) 2003",
+     "1st: Sam Bradford (OU) 2008",
+     "1st: Baker Mayfield (OU) 2017",
+     "1st: Kyler Murray (OU) 2018",
+     "2nd: Josh Heupel (OU) 2000",
+     "2nd: Adrian Peterson (OU) 2004",
+     "2nd: Jalen Hurts (OU) 2019",
+     "3rd: Jason White (OU) 2004",
+     "3rd: Baker Mayfield (OU) 2016",
+     "4th: Chase Daniel (MIZ) 2007",
+     "4th: Baker Mayfield (OU) 2015",
+     "4th: Dede Westbrook (OU) 2016"
+    ]
+   }
   },
   {
    "type": "rank",
@@ -87,79 +143,6 @@
   },
   {
    "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more yards from scrimmage in a single season?",
-   "A": {
-    "label": "Larry Rountree III (RB) · 2019 MIZ",
-    "value": 899,
-    "school": "MIZ"
-   },
-   "B": {
-    "label": "Kennedy Brooks (RB) · 2019 OU",
-    "value": 1090,
-    "school": "OU"
-   },
-   "unit": "yards from scrimmage",
-   "sig": "hKennedy Brooks2019,Larry Rountree III2019scrim",
-   "more": {
-    "title": "Top 6: single-season yards from scrimmage (OU, MIZ players in our data)",
-    "rows": [
-     "1. Adrian Peterson (OU 2004) 1,937",
-     "2. Tyler Badie (MIZ 2021) 1,934",
-     "3. Samaje Perine (OU 2014) 1,821",
-     "4. Joe Mixon (OU 2016) 1,812",
-     "5. Cody Schrader (MIZ 2023) 1,808",
-     "6. Eric Gray (OU 2022) 1,593"
-    ]
-   }
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Oklahoma–Missouri games, highest first.",
-   "items": [
-    {
-     "label": "Henry Josey (MIZ) · 2011",
-     "value": 133,
-     "school": "MIZ"
-    },
-    {
-     "label": "Roy Finch (OU) · 2010",
-     "value": 59,
-     "school": "OU"
-    },
-    {
-     "label": "James Franklin (MIZ) · 2011",
-     "value": 103,
-     "school": "MIZ"
-    },
-    {
-     "label": "Allen Patrick (OU) · 2006",
-     "value": 162,
-     "school": "OU"
-    }
-   ],
-   "sig": "grrushAllen Patrick2006,Henry Josey2011,James Franklin2011,Roy Finch2010",
-   "more": {
-    "title": "Top rushing games in this rivalry (box scores)",
-    "rows": [
-     "1. Allen Patrick (OU) 2006: 162",
-     "2. Henry Josey (MIZ) 2011: 133",
-     "3. Chris Brown (OU) 2008: 122",
-     "4. Mossis Madu (OU) 2008: 114",
-     "5. James Franklin (MIZ) 2011: 103",
-     "6. Allen Patrick (OU) 2007: 88",
-     "7. Chase Daniel (MIZ) 2006: 75",
-     "8. De'Vion Moore (MIZ) 2010: 73"
-    ]
-   }
-  },
-  {
-   "type": "h2h",
    "label": "Against Each Other",
    "verified": true,
    "flip": true,
@@ -190,110 +173,90 @@
    }
   },
   {
-   "type": "moment",
-   "label": "Rivalry Game",
+   "type": "count",
+   "label": "Fill In",
+   "a": "OU",
+   "b": "MIZ",
+   "threshold": 0,
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Dec 6, 2008",
-    "winner": "OU",
-    "loser": "MIZ",
-    "ws": 62,
-    "ls": 21,
-    "venue": "Memorial Stadium (Norman, OK) · Neutral site"
-   },
-   "prompt": "In this game, did Jermaine Gresham (Oklahoma) have more or less than",
-   "line": "60 receiving yards",
-   "answer": "over",
-   "reveal": "More. Jermaine Gresham had 82 receiving yards on 8 catches and 0 TD in this game.",
-   "check": {
-    "value": 82,
-    "line": 60
-   },
-   "sig": "gm2008-12-06Jermaine Greshamrec"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Oct 13, 2007",
-    "winner": "OU",
-    "loser": "MIZ",
-    "ws": 41,
-    "ls": 31,
-    "venue": "Memorial Stadium (Norman, OK)"
-   },
-   "prompt": "In this game, did Chase Daniel (Missouri) throw for more or less than",
-   "line": "300 passing yards",
-   "answer": "over",
-   "reveal": "More. Chase Daniel had 361 passing yards and 1 TD in this game.",
-   "check": {
-    "value": 361,
-    "line": 300
-   },
-   "sig": "gm2007-10-13Chase Danielpass"
-  },
-  {
-   "type": "rank",
-   "label": "Notables",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
+   "bonus": "names",
+   "prompt": "Oklahoma and Missouri's combined top 10 single-season rushing yards: which school has more seasons on the list?",
+   "A": [
     {
-     "label": "Kyler Murray (OU QB) · 2018 rushing TDs",
-     "value": 12,
-     "school": "OU"
+     "name": "Adrian Peterson",
+     "yards": 1925,
+     "season": 2004,
+     "label": "2004: 1,925",
+     "profile": "2004 season, 1,925 rushing yards · No. 1 on the combined list"
     },
     {
-     "label": "Larry Rountree III (MIZ RB) · 2020 rushing TDs",
-     "value": 14,
-     "school": "MIZ"
+     "name": "Billy Sims",
+     "yards": 1896,
+     "season": 1978,
+     "label": "1978: 1,896",
+     "profile": "1978 season, 1,896 rushing yards · No. 2 on the combined list"
     },
     {
-     "label": "CeeDee Lamb (OU WR) · 2018 receiving TDs",
-     "value": 11,
-     "school": "OU"
+     "name": "Quentin Griffin",
+     "yards": 1884,
+     "season": 2002,
+     "label": "2002: 1,884",
+     "profile": "2002 season, 1,884 rushing yards · No. 3 on the combined list"
     },
     {
-     "label": "Samaje Perine (OU RB) · career rushing TDs",
-     "value": 49,
-     "school": "OU"
+     "name": "Greg Pruitt",
+     "yards": 1760,
+     "season": 1971,
+     "label": "1971: 1,760",
+     "profile": "1971 season, 1,760 rushing yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Samaje Perine",
+     "yards": 1713,
+     "season": 2014,
+     "label": "2014: 1,713",
+     "profile": "2014 season, 1,713 rushing yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Billy Sims",
+     "yards": 1670,
+     "season": 1979,
+     "label": "1979: 1,670",
+     "profile": "1979 season, 1,670 rushing yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Steve Owens",
+     "yards": 1649,
+     "season": 1968,
+     "label": "1968: 1,649",
+     "profile": "1968 season, 1,649 rushing yards · No. 7 on the combined list"
     }
    ],
-   "sig": "nxTDCeeDee Lamb2018 receiving TDs,Kyler Murray2018 rushing TDs,Larry Rountree III2020 rushing TDs,Samaje Perinecareer rushing TDs"
-  },
-  {
-   "type": "mc",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 9, 2024",
-    "winner": "MIZ",
-    "loser": "OU",
-    "ws": 30,
-    "ls": 23,
-    "venue": "Memorial Stadium"
-   },
-   "prompt": "What was the difference in total yards in Missouri's 30–23 win over Oklahoma?",
-   "options": [
-    "Missouri +21 yards",
-    "Oklahoma +21 yards",
-    "Missouri +151 yards",
-    "Missouri +131 yards"
+   "B": [
+    {
+     "name": "Ahmad Hardy",
+     "yards": 1649,
+     "season": 2025,
+     "label": "2025: 1,649",
+     "profile": "2025 season, 1,649 rushing yards · No. 8 on the combined list"
+    },
+    {
+     "name": "Cody Schrader",
+     "yards": 1627,
+     "season": 2023,
+     "label": "2023: 1,627",
+     "profile": "2023 season, 1,627 rushing yards · No. 9 on the combined list"
+    },
+    {
+     "name": "Tyler Badie",
+     "yards": 1604,
+     "season": 2021,
+     "label": "2021: 1,604",
+     "profile": "2021 season, 1,604 rushing yards · No. 10 on the combined list"
+    }
    ],
-   "answer": 0,
-   "order": [
-    3,
-    0,
-    1,
-    2
-   ],
-   "reveal": "Missouri +21. Oklahoma had 257 total yards, Missouri 278.",
-   "sig": "td2024-11-09total"
+   "sig": "fsrush"
   },
   {
    "type": "count",
@@ -320,7 +283,121 @@
     }
    ],
    "sig": "tsrush15002022",
-   "bonus": "years"
+   "bonus": "names"
+  },
+  {
+   "type": "mc",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Dec 6, 2008",
+    "winner": "OU",
+    "loser": "MIZ",
+    "ws": 62,
+    "ls": 21,
+    "venue": "Memorial Stadium (Norman, OK) · Neutral site"
+   },
+   "prompt": "What was the difference in rushing yards in Oklahoma's 62–21 win over Missouri?",
+   "options": [
+    "Oklahoma +183 yards",
+    "Oklahoma +253 yards",
+    "Oklahoma +293 yards",
+    "Missouri +133 yards"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    1,
+    3,
+    2
+   ],
+   "reveal": "Oklahoma +183. Missouri had 60 rushing yards, Oklahoma 243.",
+   "sig": "td2008-12-06rush"
+  },
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "OU",
+   "b": "MIZ",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "info": {
+    "title": "What is the Heisman Trophy?",
+    "text": "The Heisman Trophy is given each year to college football's most outstanding player."
+   },
+   "prompt": "From 2010 through 2025, which school had more Heisman Trophy winners?",
+   "A": [
+    {
+     "name": "Baker Mayfield",
+     "yards": 2017,
+     "season": 2017,
+     "label": "QB",
+     "profile": "QB · won the Heisman Trophy (most outstanding player)"
+    },
+    {
+     "name": "Kyler Murray",
+     "yards": 2018,
+     "season": 2018,
+     "label": "QB",
+     "profile": "QB · won the Heisman Trophy (most outstanding player)"
+    }
+   ],
+   "B": [],
+   "sig": "acheisman2010",
+   "bonus": "names"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receptions (at the school shown)?",
+   "A": {
+    "label": "Larry Rountree III (MIZ RB)",
+    "value": 47,
+    "school": "MIZ"
+   },
+   "B": {
+    "label": "Samaje Perine (OU RB)",
+    "value": 40,
+    "school": "OU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Larry Rountree III 47 vs. Samaje Perine 40.",
+   "sig": "urecNSamaje PerineLarry Rountree III"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Cody Schrader (MIZ RB) · career total TDs (rushing + receiving)",
+     "value": 23,
+     "school": "MIZ"
+    },
+    {
+     "label": "Joe Mixon (OU RB) · career rushing TDs",
+     "value": 17,
+     "school": "OU"
+    },
+    {
+     "label": "Jalen Saunders (OU WR) · career receiving TDs",
+     "value": 11,
+     "school": "OU"
+    },
+    {
+     "label": "Luther Burden III (MIZ WR) · career rushing TDs",
+     "value": 5,
+     "school": "MIZ"
+    }
+   ],
+   "sig": "mxTDCody Schradercareer total TDs (rushing + receiving),Jalen Saunderscareer receiving TDs,Joe Mixoncareer rushing TDs,Luther Burden IIIcareer rushing TDs"
   }
  ]
 }

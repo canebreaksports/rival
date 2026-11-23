@@ -56,6 +56,7 @@ export interface Dataset {
   leaders?: import("./trend-gen").SeasonLeaders;
   careerRec?: import("./notable-gen").CareerReceiving;
   walkoffs?: import("./walkoff-gen").WalkoffData;
+  seasonRecs?: import("./fillin-gen").SeasonRecords;
   draft?: import("./honors-gen").DraftData;
   honors?: import("./honors-gen").HonorsData;
 }
@@ -70,7 +71,8 @@ export interface RivalryPair { games: RivalryGame[]; vs: VsTotal[]; vsFrom?: num
 // ---- questions: fully self-contained so frozen sets need no data at runtime ----
 interface QBase { label: string; verified: boolean; sig: string; trap?: boolean; upset?: boolean; pair?: string; pairPart?: 1 | 2; pitted?: boolean;
   more?: { title: string; rows: string[] }; // extra examples shown after answering (a mini leaderboard)
-  bonus?: "names" | "years" }               // Name Them variant for count questions // pitted: about both schools by construction
+  bonus?: "names" | "years";
+  info?: { title: string; text: string } } // ⓘ button after answering, before the bonus (e.g. "What is the Doak Walker Award?")               // Name Them variant for count questions // pitted: about both schools by construction
 export interface CountEntry { name: string; yards: number; active?: boolean; season?: number; profile?: string; label?: string } // label: shown instead of yards (e.g. "No. 3 pick") // season: season/game counts; profile: hint 2
 export interface Item { label: string; value: number; school?: SchoolKey } // school: who the item belongs to (pitted checks)
 

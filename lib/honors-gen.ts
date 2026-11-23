@@ -92,7 +92,10 @@ export function genAwardCount(h: HonorsData, a: SchoolKey, b: SchoolKey, rng: Rn
     .map(w => ({ name: w.name, yards: w.year, season: w.year, label: key ? (w.pos || "winner") : awardName(w.award),
       profile: [w.pos, `won the ${awardName(w.award)} (${h.awards.find(x => x.key === w.award)?.for ?? ""})`].filter(Boolean).join(" · ") }));
   const what = key ? `${awardName(key)} winners` : "winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)";
-  return { type: "count", label: "Awards", a, b, threshold: 0, verified: true, pitted: true,
+  const aw = key ? h.awards.find(x => x.key === key)! : null;
+  const info = aw ? { title: `What is the ${aw.name}?`, text: `The ${aw.name} is given each year to college football's ${aw.for}.` }
+    : { title: "Which awards count?", text: h.awards.map(x => `${x.name}: ${x.for}`).join(" · ") };
+  return { type: "count", label: "Awards", a, b, threshold: 0, verified: true, pitted: true, info,
     prompt: `From ${from} through 2025, which school had more ${what}?`, A: list(a), B: list(b), sig: "ac" + (key ?? "all") + from };
 }
 
@@ -145,6 +148,7 @@ export function genHeismanCount(h: HonorsData, a: SchoolKey, b: SchoolKey, rng: 
   const list = (s: SchoolKey): CountEntry[] => h.heisman.filter(v => v.school === s && v.year >= from && v.place <= top)
     .map(v => ({ name: v.name, yards: v.place, season: v.year, label: `${ord(v.place)} place`, profile: `${v.pos} · ${v.year} Heisman voting: ${v.points.toLocaleString("en-US")} points` }));
   return { type: "count", label: "Heisman", a, b, threshold: 0, verified: true, pitted: true,
+    info: { title: "How Heisman voting works", text: "The Heisman Trophy goes to college football's most outstanding player. Voters rank three players: a 1st-place vote is worth 3 points, 2nd place 2 and 3rd place 1, and the finish follows total points." },
     prompt: top === 1 ? `From ${from} through 2025, which school had more Heisman Trophy winners?` : `From ${from} through 2025, which school had more top-${top} finishes in Heisman Trophy voting?`,
     A: list(a), B: list(b), sig: "hc" + top + from };
 }

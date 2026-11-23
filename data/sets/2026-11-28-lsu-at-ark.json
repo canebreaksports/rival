@@ -6,126 +6,68 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-23T20:03:20.887Z",
- "engine": 18,
+ "generatedAt": "2026-11-23T20:10:46.332Z",
+ "engine": 20,
  "questions": [
-  {
-   "type": "mc",
-   "label": "Heisman",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Which of these finished highest in Heisman Trophy voting that season?",
-   "options": [
-    "Joe Burrow (LSU, 2019)",
-    "Darren McFadden (Arkansas, 2006)",
-    "Glenn Dorsey (LSU, 2007)",
-    "Leonard Fournette (LSU, 2015)"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    3,
-    2,
-    1
-   ],
-   "reveal": "Joe Burrow: 1st in 2019 · Darren McFadden: 2nd in 2006 · Leonard Fournette: 6th in 2015 · Glenn Dorsey: 9th in 2007",
-   "sig": "hmDarren McFadden2006,Glenn Dorsey2007,Joe Burrow2019,Leonard Fournette2015",
-   "more": {
-    "title": "LSU and Arkansas top-10 Heisman finishes (seasons with checked voting)",
-    "rows": [
-     "1st: Joe Burrow (LSU) 2019",
-     "1st: Jayden Daniels (LSU) 2023",
-     "2nd: Darren McFadden (ARK) 2006",
-     "2nd: Darren McFadden (ARK) 2007",
-     "5th: Tyrann Mathieu (LSU) 2011",
-     "6th: Leonard Fournette (LSU) 2015",
-     "7th: Ryan Mallett (ARK) 2010",
-     "9th: Glenn Dorsey (LSU) 2007"
-    ]
-   }
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Kevin Faulk finish his LSU career with more or less than",
-   "line": "5,450 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. Kevin Faulk had 5,157 yards from scrimmage in his career.",
-   "check": {
-    "value": 5157,
-    "line": 5450
-   },
-   "sig": "ppKevin Faulkcareer|Rakeem Boydcareerscrim0",
-   "pair": "ppKevin Faulkcareer|Rakeem Boydcareerscrim",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Rakeem Boyd finish his Arkansas career with more or less than",
-   "line": "2,100 yards from scrimmage",
-   "answer": "over",
-   "reveal": "More. Rakeem Boyd had 2,534 yards from scrimmage in his career.",
-   "check": {
-    "value": 2534,
-    "line": 2100
-   },
-   "sig": "ppKevin Faulkcareer|Rakeem Boydcareerscrim1",
-   "pair": "ppKevin Faulkcareer|Rakeem Boydcareerscrim",
-   "pairPart": 2
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2019,
-   "stat": "Rushing season",
-   "aSchool": "ARK",
-   "other": "LSU",
-   "aName": "Rakeem Boyd (RB)",
-   "bName": "Clyde Edwards-Helaire (RB)",
-   "A": {
-    "big": "1,133",
-    "sm": "rush yds · 8 TD"
-   },
-   "B": {
-    "big": "1,415",
-    "sm": "rush yds · 16 TD"
-   },
-   "flip": true,
-   "sig": "drush2019Clyde Edwards-Helaire,Rakeem Boyd"
-  },
   {
    "type": "mc",
    "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 14, 2015",
+    "date": "Nov 15, 2014",
     "winner": "ARK",
     "loser": "LSU",
-    "ws": 31,
-    "ls": 14,
-    "venue": "Tiger Stadium (LA)"
+    "ws": 17,
+    "ls": 0,
+    "venue": "Razorback Stadium"
    },
-   "prompt": "What was the difference in total yards in Arkansas's 31–14 win over LSU?",
+   "prompt": "What was the difference in total yards in Arkansas's 17–0 win over LSU?",
    "options": [
-    "Arkansas +110 yards",
-    "LSU +20 yards",
-    "LSU +110 yards",
-    "LSU +240 yards"
+    "Arkansas +141 yards",
+    "LSU +91 yards",
+    "Arkansas +251 yards",
+    "Arkansas +51 yards"
    ],
    "answer": 0,
    "order": [
+    2,
     3,
     1,
-    0,
-    2
+    0
    ],
-   "reveal": "Arkansas +110. LSU had 330 total yards, Arkansas 440.",
-   "sig": "td2015-11-14total"
+   "reveal": "Arkansas +141. Arkansas had 264 total yards, LSU 123.",
+   "sig": "td2014-11-15total"
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Derrius Guice (LSU RB) · 2016 yards from scrimmage",
+     "value": 1493,
+     "school": "LSU"
+    },
+    {
+     "label": "Darren McFadden (ARK RB) · 2005 yards from scrimmage",
+     "value": 1165,
+     "school": "ARK"
+    },
+    {
+     "label": "Justin Jefferson (LSU WR) · 2019 receiving yards",
+     "value": 1540,
+     "school": "LSU"
+    },
+    {
+     "label": "Kevin Faulk (LSU RB) · career rushing yards",
+     "value": 4557,
+     "school": "LSU"
+    }
+   ],
+   "sig": "nxydsDarren McFadden2005 yards from scrimmage,Derrius Guice2016 yards from scrimmage,Justin Jefferson2019 receiving yards,Kevin Faulkcareer rushing yards"
   },
   {
    "type": "count",
@@ -135,6 +77,10 @@
    "threshold": 0,
    "verified": true,
    "pitted": true,
+   "info": {
+    "title": "What is the Davey O'Brien Award?",
+    "text": "The Davey O'Brien Award is given each year to college football's best quarterback."
+   },
    "prompt": "From 2015 through 2025, which school had more Davey O'Brien Award winners?",
    "A": [
     {
@@ -157,111 +103,49 @@
    "bonus": "names"
   },
   {
-   "type": "count",
-   "label": "Since 2022",
-   "a": "LSU",
-   "b": "ARK",
-   "threshold": 1000,
+   "type": "moment",
+   "label": "Series History",
    "verified": true,
    "pitted": true,
-   "prompt": "From 2022 through 2025, which school had more 1,000-yard rushing seasons?",
-   "A": [
-    {
-     "name": "Jayden Daniels",
-     "yards": 1134,
-     "season": 2023,
-     "profile": "Quarterback · 2023: 1,134 rushing, 0 receiving yds"
-    }
-   ],
-   "B": [
-    {
-     "name": "Raheim Sanders",
-     "yards": 1443,
-     "season": 2022,
-     "profile": "Running back · 2022: 1,443 rushing, 271 receiving yds"
-    },
-    {
-     "name": "Michael Washington",
-     "yards": 1068,
-     "season": 2025,
-     "profile": "Running back · 2025: 1,068 rushing, 226 receiving yds"
-    }
-   ],
-   "sig": "tsrush10002022",
-   "bonus": "names"
+   "prompt": "From 2000 through 2025, did LSU beat Arkansas more or fewer than",
+   "line": "19.5 times",
+   "answer": "under",
+   "reveal": "Fewer. LSU went 18–8 against Arkansas from 2000 to 2025 (26 meetings, on-field results).",
+   "check": {
+    "value": 18,
+    "line": 19.5
+   },
+   "sig": "scLSUARK"
   },
   {
    "type": "rank",
-   "label": "Notables",
+   "label": "Fresh Mix",
    "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
-     "label": "Derrius Guice (LSU RB) · career yards from scrimmage",
-     "value": 3324,
-     "school": "LSU"
-    },
-    {
-     "label": "Darren McFadden (ARK RB) · 2007 rushing yards",
-     "value": 1830,
+     "label": "Alex Collins (ARK RB) · career rushing TDs",
+     "value": 36,
      "school": "ARK"
     },
     {
-     "label": "Kevin Faulk (LSU RB) · career rushing yards",
-     "value": 4557,
+     "label": "Justin Jefferson (LSU WR) · 2019 receiving TDs",
+     "value": 18,
      "school": "LSU"
     },
     {
-     "label": "Leonard Fournette (LSU RB) · 2015 rushing yards",
-     "value": 1953,
-     "school": "LSU"
-    }
-   ],
-   "sig": "nxydsDarren McFadden2007 rushing yards,Derrius Guicecareer yards from scrimmage,Kevin Faulkcareer rushing yards,Leonard Fournette2015 rushing yards"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game receiving performances in LSU–Arkansas games, highest first.",
-   "items": [
-    {
-     "label": "Ja'Marr Chase (LSU) · 2019",
-     "value": 144,
-     "school": "LSU"
-    },
-    {
-     "label": "Cobi Hamilton (ARK) · 2011",
-     "value": 75,
+     "label": "Andrew Armstrong (ARK WR) · career total TDs (rushing + receiving)",
+     "value": 6,
      "school": "ARK"
     },
     {
-     "label": "Justin Jefferson (LSU) · 2018",
-     "value": 117,
-     "school": "LSU"
-    },
-    {
-     "label": "Bennie Brazell (LSU) · 2005",
-     "value": 50,
-     "school": "LSU"
+     "label": "Raheim Sanders (ARK RB) · 2022 rushing TDs",
+     "value": 10,
+     "school": "ARK"
     }
    ],
-   "sig": "grrecBennie Brazell2005,Cobi Hamilton2011,Ja'Marr Chase2019,Justin Jefferson2018",
-   "more": {
-    "title": "Top receiving games in this rivalry (box scores)",
-    "rows": [
-     "1. Ja'Marr Chase (LSU) 2019: 144",
-     "2. Michael Woods (ARK) 2020: 140",
-     "3. Rueben Randle (LSU) 2011: 134",
-     "4. Brian Thomas Jr. (LSU) 2023: 133",
-     "5. D.J. Chark (LSU) 2017: 130",
-     "6. Malik Nabers (LSU) 2023: 130",
-     "7. Greg Childs (ARK) 2009: 124",
-     "8. Justin Jefferson (LSU) 2018: 117"
-    ]
-   }
+   "sig": "mxTDAlex Collinscareer rushing TDs,Andrew Armstrongcareer total TDs (rushing + receiving),Justin Jefferson2019 receiving TDs,Raheim Sanders2022 rushing TDs"
   },
   {
    "type": "rank",
@@ -309,6 +193,123 @@
      "10. Treylon Burks (Arkansas, 2019–21) 2,399"
     ]
    }
+  },
+  {
+   "type": "moment",
+   "label": "Longest Play",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 12, 2016",
+    "winner": "LSU",
+    "loser": "ARK",
+    "ws": 38,
+    "ls": 10,
+    "venue": "Razorback Stadium"
+   },
+   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
+   "line": "78.5 yards",
+   "answer": "over",
+   "reveal": "More. The longest was Derrius Guice's 96-yard run for LSU; Arkansas's longest was 54 yards (Rawleigh Williams III).",
+   "check": {
+    "value": 96,
+    "line": 78.5
+   },
+   "sig": "lg2016-11-12"
+  },
+  {
+   "type": "count",
+   "label": "Since 2022",
+   "a": "LSU",
+   "b": "ARK",
+   "threshold": 1000,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2022 through 2025, which school had more 1,000-yard rushing seasons?",
+   "A": [
+    {
+     "name": "Jayden Daniels",
+     "yards": 1134,
+     "season": 2023,
+     "profile": "Quarterback · 2023: 1,134 rushing, 0 receiving yds"
+    }
+   ],
+   "B": [
+    {
+     "name": "Raheim Sanders",
+     "yards": 1443,
+     "season": 2022,
+     "profile": "Running back · 2022: 1,443 rushing, 271 receiving yds"
+    },
+    {
+     "name": "Michael Washington",
+     "yards": 1068,
+     "season": 2025,
+     "profile": "Running back · 2025: 1,068 rushing, 226 receiving yds"
+    }
+   ],
+   "sig": "tsrush10002022",
+   "bonus": "names"
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "LSU",
+   "b": "ARK",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Since 2011, which school has more players in the top 4 for yards from scrimmage against the other?",
+   "A": [
+    {
+     "name": "Derrius Guice",
+     "yards": 405,
+     "label": "405 in 3 games",
+     "profile": "405 yards from scrimmage against Arkansas in 3 games · No. 1"
+    },
+    {
+     "name": "Clyde Edwards-Helaire",
+     "yards": 314,
+     "label": "314 in 2 games",
+     "profile": "314 yards from scrimmage against Arkansas in 2 games · No. 2"
+    },
+    {
+     "name": "Leonard Fournette",
+     "yards": 278,
+     "label": "278 in 3 games",
+     "profile": "278 yards from scrimmage against Arkansas in 3 games · No. 3"
+    },
+    {
+     "name": "Jeremy Hill",
+     "yards": 249,
+     "label": "249 in 2 games",
+     "profile": "249 yards from scrimmage against Arkansas in 2 games · No. 4"
+    }
+   ],
+   "B": [],
+   "sig": "fvscrim"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Clyde Edwards-Helaire (LSU RB)",
+    "value": 595,
+    "school": "LSU"
+   },
+   "B": {
+    "label": "Darren McFadden (ARK RB)",
+    "value": 365,
+    "school": "ARK"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Clyde Edwards-Helaire 595 vs. Darren McFadden 365.",
+   "sig": "urecDarren McFaddenClyde Edwards-Helaire"
   }
  ]
 }

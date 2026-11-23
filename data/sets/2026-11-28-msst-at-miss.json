@@ -6,8 +6,8 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-23T20:03:20.987Z",
- "engine": 18,
+ "generatedAt": "2026-11-23T20:10:46.471Z",
+ "engine": 20,
  "questions": [
   {
    "type": "count",
@@ -50,7 +50,37 @@
    ],
    "B": [],
    "sig": "dctop502010db",
-   "bonus": "years"
+   "bonus": "names"
+  },
+  {
+   "type": "mc",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2013",
+    "winner": "MSST",
+    "loser": "MISS",
+    "ws": 17,
+    "ls": 10,
+    "venue": "Davis Wade Stadium"
+   },
+   "prompt": "What was the difference in total yards in Mississippi State's 17–10 win over Ole Miss?",
+   "options": [
+    "Ole Miss +22 yards",
+    "Mississippi State +108 yards",
+    "Mississippi State +52 yards",
+    "Ole Miss +152 yards"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    0,
+    2,
+    3
+   ],
+   "reveal": "Ole Miss +22. Mississippi State had 296 total yards, Ole Miss 318.",
+   "sig": "td2013-11-28total"
   },
   {
    "type": "h2h",
@@ -59,18 +89,18 @@
    "flip": true,
    "prompt": "In Mississippi State–Ole Miss games since 2007, who had more rushing yards against the other school?",
    "A": {
-    "label": "Vick Ballard (MSST) vs. Ole Miss",
-    "value": 187,
+    "label": "Dillon Johnson (MSST) vs. Ole Miss",
+    "value": 120,
     "school": "MSST"
    },
    "B": {
-    "label": "Brandon Bolden (MISS) vs. Mississippi State",
-    "value": 105,
+    "label": "Ulysses Bentley IV (MISS) vs. Mississippi State",
+    "value": 199,
     "school": "MISS"
    },
    "unit": "rushing yds",
-   "note": "Vick Ballard: 187 in 2 games. Brandon Bolden: 105 in 4 games.",
-   "sig": "vsrushBrandon Bolden,Vick Ballard",
+   "note": "Dillon Johnson: 120 in 3 games. Ulysses Bentley IV: 199 in 2 games.",
+   "sig": "vsrushDillon Johnson,Ulysses Bentley IV",
    "more": {
     "title": "Top rushing yards against the other school since 2007",
     "rows": [
@@ -112,6 +142,58 @@
     }
    ],
    "sig": "nxydsA.J. Brown2017 receiving yards,Dexter McCluster2009 yards from scrimmage,Jo'quavious Markscareer yards from scrimmage,Kylin Hillcareer rushing yards"
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "MSST",
+   "b": "MISS",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Since 2007, which school has more players in the top 6 for yards from scrimmage against the other?",
+   "A": [
+    {
+     "name": "LaDarius Perkins",
+     "yards": 405,
+     "label": "405 in 4 games",
+     "profile": "405 yards from scrimmage against Ole Miss in 4 games · No. 1"
+    },
+    {
+     "name": "Nick Fitzgerald",
+     "yards": 391,
+     "label": "391 in 3 games",
+     "profile": "391 yards from scrimmage against Ole Miss in 3 games · No. 2"
+    },
+    {
+     "name": "Aeris Williams",
+     "yards": 350,
+     "label": "350 in 3 games",
+     "profile": "350 yards from scrimmage against Ole Miss in 3 games · No. 3"
+    },
+    {
+     "name": "Kylin Hill",
+     "yards": 335,
+     "label": "335 in 3 games",
+     "profile": "335 yards from scrimmage against Ole Miss in 3 games · No. 5"
+    }
+   ],
+   "B": [
+    {
+     "name": "Jaylen Walton",
+     "yards": 347,
+     "label": "347 in 3 games",
+     "profile": "347 yards from scrimmage against Mississippi State in 3 games · No. 4"
+    },
+    {
+     "name": "Jerrion Ealy",
+     "yards": 333,
+     "label": "333 in 3 games",
+     "profile": "333 yards from scrimmage against Mississippi State in 3 games · No. 6"
+    }
+   ],
+   "sig": "fvscrim"
   },
   {
    "type": "rank",
@@ -161,32 +243,98 @@
    }
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
+   "type": "moment",
+   "label": "Longest Play",
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more career rushing yards?",
-   "A": {
-    "label": "Dexter McCluster (RB) · career, MISS",
-    "value": 1955,
-    "school": "MISS"
+   "pitted": true,
+   "game": {
+    "date": "Nov 27, 2010",
+    "winner": "MSST",
+    "loser": "MISS",
+    "ws": 31,
+    "ls": 23,
+    "venue": "Vaught-Hemingway Stadium"
    },
-   "B": {
-    "label": "Nick Fitzgerald (QB) · career, MSST",
-    "value": 3607,
-    "school": "MSST"
+   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
+   "line": "93.5 yards",
+   "answer": "under",
+   "reveal": "Less. The longest was LaDarius Perkins's 71-yard catch for Mississippi State; Ole Miss's longest was 28 yards (Brandon Bolden).",
+   "check": {
+    "value": 71,
+    "line": 93.5
    },
-   "unit": "rushing yards",
-   "sig": "hDexter McClustercareer,Nick Fitzgeraldcareerrush",
+   "sig": "lg2010-11-27"
+  },
+  {
+   "type": "mc",
+   "label": "Awards",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Which of these players won the Maxwell Award, given to the nation's best all-around player?",
+   "options": [
+    "Eli Manning (Ole Miss)",
+    "Josh Robinson (Mississippi State)",
+    "Patrick Willis (Ole Miss)",
+    "Matt Corral (Ole Miss)"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    2,
+    3,
+    1
+   ],
+   "reveal": "Eli Manning (Ole Miss) won the Maxwell Award in 2003.",
+   "sig": "ammaxwell2003",
    "more": {
-    "title": "Top 6: career rushing yards (MSST, MISS players in our data)",
+    "title": "Every Mississippi State and Ole Miss winner of the Maxwell Award",
     "rows": [
-     "1. Nick Fitzgerald (MSST) 3,607",
-     "2. Quinshon Judkins (MISS) 2,725",
-     "3. Aeris Williams (MSST) 2,557",
-     "4. Kylin Hill (MSST) 2,535",
-     "5. Dak Prescott (MSST) 2,521",
-     "6. Jerrion Ealy (MISS) 2,235"
+     "2003: Eli Manning (MISS)"
+    ]
+   }
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Henry Parrish Jr. (RB) · 2020 MISS",
+     "value": 263,
+     "school": "MISS"
+    },
+    {
+     "label": "Kylin Hill (RB) · 2017 MSST",
+     "value": 393,
+     "school": "MSST"
+    },
+    {
+     "label": "Dak Prescott (QB) · 2013 MSST",
+     "value": 829,
+     "school": "MSST"
+    },
+    {
+     "label": "Josh Robinson (RB) · 2013 MSST",
+     "value": 459,
+     "school": "MSST"
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Henry Parrish Jr.'s best year was 2024 (693), not 2020; Kylin Hill's best year was 2019 (1,350), not 2017; Dak Prescott's best year was 2014 (986), not 2013; Josh Robinson's best year was 2014 (1,203), not 2013.",
+   "sig": "trrushDak Prescott2013,Henry Parrish Jr.2020,Josh Robinson2013,Kylin Hill2017",
+   "more": {
+    "title": "Top 8: single-season rushing yards (MISS, MSST players in our data)",
+    "rows": [
+     "1. Quinshon Judkins (MISS 2022) 1,567",
+     "2. Nick Fitzgerald (MSST 2016) 1,375",
+     "3. Kylin Hill (MSST 2019) 1,350",
+     "4. Josh Robinson (MSST 2014) 1,203",
+     "5. Dexter McCluster (MISS 2009) 1,169",
+     "6. Quinshon Judkins (MISS 2023) 1,158",
+     "7. Nick Fitzgerald (MSST 2018) 1,121",
+     "8. Aeris Williams (MSST 2017) 1,107"
     ]
    }
   },
@@ -216,103 +364,6 @@
    ],
    "sig": "tsrush13002021",
    "bonus": "names"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
-   "A": {
-    "label": "Nick Fitzgerald (MSST QB)",
-    "value": 46,
-    "school": "MSST"
-   },
-   "B": {
-    "label": "Quinshon Judkins (MISS RB)",
-    "value": 31,
-    "school": "MISS"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Nick Fitzgerald 46 vs. Quinshon Judkins 31.",
-   "sig": "urushTDQuinshon JudkinsNick Fitzgerald"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Jerrion Ealy (MISS RB) · 2019 rushing TDs",
-     "value": 6,
-     "school": "MISS"
-    },
-    {
-     "label": "Dillon Johnson (MSST RB) · career rushing TDs",
-     "value": 11,
-     "school": "MSST"
-    },
-    {
-     "label": "Josh Robinson (MSST RB) · career total TDs (rushing + receiving)",
-     "value": 16,
-     "school": "MSST"
-    },
-    {
-     "label": "Seydou Traore (MSST TE) · 2025 receiving TDs",
-     "value": 5,
-     "school": "MSST"
-    }
-   ],
-   "sig": "mxTDDillon Johnsoncareer rushing TDs,Jerrion Ealy2019 rushing TDs,Josh Robinsoncareer total TDs (rushing + receiving),Seydou Traore2025 receiving TDs"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 28, 2020",
-    "winner": "MISS",
-    "loser": "MSST",
-    "ws": 31,
-    "ls": 24,
-    "venue": "Vaught-Hemingway Stadium"
-   },
-   "prompt": "In this game, did Jaden Walley (Mississippi State) have more or less than",
-   "line": "225 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Jaden Walley had 176 receiving yards on 9 catches and 0 TD in this game.",
-   "check": {
-    "value": 176,
-    "line": 225
-   },
-   "sig": "gm2020-11-28Jaden Walleyrec"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 23, 2007",
-    "winner": "MSST",
-    "loser": "MISS",
-    "ws": 17,
-    "ls": 14,
-    "venue": "Davis Wade Stadium"
-   },
-   "prompt": "In this game, did BenJarvus Green-Ellis (Ole Miss) run for more or less than",
-   "line": "140 rushing yards",
-   "answer": "under",
-   "reveal": "Less. BenJarvus Green-Ellis had 117 rushing yards on 29 carries and 1 TD in this game.",
-   "check": {
-    "value": 117,
-    "line": 140
-   },
-   "sig": "gm2007-11-23BenJarvus Green-Ellisrush"
   }
  ]
 }
