@@ -28,7 +28,7 @@ export function CoachClient({ games }: { games: GameSummary[] }) {
   const keys = DATA.schools.map(s => s.key);
   const opts = { verifiedOnly: false };
   return <section>
-    <h1>RI<span>V</span>AL</h1>
+    <h1>PIT<span>T</span>ED</h1>
     <div className="tag">Coach · Preview Mode</div>
     <p className="note" style={{ marginTop: 0 }}>Testing only. Weekly runs here use separate progress, so they don&apos;t use up your real run.</p>
 

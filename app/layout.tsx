@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "RIVAL by Canebreak · SEC Football Trivia",
-  description: "Weekly SEC college football trivia. The schools playing each other get one set of 10 questions, same for everyone, one run each.",
+  title: "PITTED · Your school vs. theirs. Every game week.",
+  description: "PITTED: weekly SEC college football trivia. The schools playing each other get one set of 10 questions, same for everyone, one run each.",
 };
 export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover", themeColor: "#0b1410" };
 

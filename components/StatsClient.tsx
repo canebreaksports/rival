@@ -34,7 +34,7 @@ export function StatsClient() {
   const tot = Object.values(bySchool).reduce((t, r) => ({ own: t.own + r.own, other: t.other + r.other, done: t.done + r.done }), { own: 0, other: 0, done: 0 });
 
   return <section>
-    <h1>RI<span>V</span>AL</h1>
+    <h1>PIT<span>T</span>ED</h1>
     <div className="tag">Coach · Player Stats</div>
     {!data?.configured && <form className="row" onSubmit={e => { e.preventDefault(); void load(key) }}>
       <input type="password" value={key} onChange={e => setKey(e.target.value)} placeholder="Stats key" aria-label="Stats key" style={{ flex: 1, background: "#050a07", color: "var(--chalk)", border: "1px solid var(--line)", borderRadius: 10, padding: 12 }} />

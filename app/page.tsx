@@ -5,8 +5,8 @@ import { gameSummaries } from "@/lib/summaries";
 
 export default function Home() {
   return <section>
-    <h1>RI<span>V</span>AL</h1>
-    <div className="byline">by Canebreak</div>
+    <h1>PIT<span>T</span>ED</h1>
+    <div className="byline">Your school vs. theirs. Every game week.</div>
     <div className="tag">College Football · SEC Edition</div>
     <FanBar />
     <WeekView games={gameSummaries()} />

@@ -317,10 +317,10 @@ function Final({ p, n, questions, weekly, away, home, nextUnlock, onExit, onAgai
   const hintText = hints ? `💡 ${hints} hint${hints > 1 ? "s" : ""} used (${hints * POINTS.hint} pts)` : "💡 No hints";
   async function share() {
     const title = away && home ? `${SCHOOL[away].name} ${weekly ? "@" : "vs"} ${SCHOOL[home].name}` : "SEC Mix";
-    const text = [`RIVAL by Canebreak · ${title}`, p.marks ?? "", `${p.pts} pts · ${p.right}/${n} · 🔥 best streak ${p.best}`, hintText].filter(Boolean).join("\n");
+    const text = [`PITTED · ${title}`, p.marks ?? "", `${p.pts} pts · ${p.right}/${n} · 🔥 best streak ${p.best}`, hintText].filter(Boolean).join("\n");
     const url = typeof window !== "undefined" ? window.location.origin : "";
     try {
-      if (navigator.share) { await navigator.share({ title: "RIVAL by Canebreak", text, url }); setShared("Shared") }
+      if (navigator.share) { await navigator.share({ title: "PITTED", text, url }); setShared("Shared") }
       else { await navigator.clipboard.writeText(`${text}\n${url}`); setShared("Copied to clipboard") }
     } catch { setShared(null) } // share sheet dismissed
   }
