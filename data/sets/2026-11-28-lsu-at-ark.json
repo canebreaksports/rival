@@ -6,59 +6,67 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-23T16:23:16.325Z",
- "engine": 14,
+ "generatedAt": "2026-11-23T16:29:53.774Z",
+ "engine": 15,
  "questions": [
   {
-   "type": "duel",
-   "label": "Fresh Mix",
+   "type": "count",
+   "label": "Awards",
+   "a": "LSU",
+   "b": "ARK",
+   "threshold": 0,
    "verified": true,
-   "year": 2015,
-   "stat": "Rushing season",
-   "aSchool": "ARK",
-   "other": "LSU",
-   "aName": "Alex Collins (RB)",
-   "bName": "Leonard Fournette (RB)",
-   "A": {
-    "big": "1,577",
-    "sm": "rush yds · 20 TD"
-   },
-   "B": {
-    "big": "1,953",
-    "sm": "rush yds · 22 TD"
-   },
-   "flip": false,
-   "sig": "drush2015Alex Collins,Leonard Fournette"
+   "pitted": true,
+   "prompt": "From 2015 through 2025, which school had more Davey O'Brien Award winners?",
+   "A": [
+    {
+     "name": "Joe Burrow",
+     "yards": 2019,
+     "season": 2019,
+     "label": "winner",
+     "profile": "won the Davey O'Brien Award (best quarterback)"
+    },
+    {
+     "name": "Jayden Daniels",
+     "yards": 2023,
+     "season": 2023,
+     "label": "winner",
+     "profile": "won the Davey O'Brien Award (best quarterback)"
+    }
+   ],
+   "B": [],
+   "sig": "acobrien2015",
+   "bonus": "names"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
+   "type": "rank",
+   "label": "Notables",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more rushing yards in a single season?",
-   "A": {
-    "label": "Jayden Daniels (QB) · 2022 LSU",
-    "value": 885,
-    "school": "LSU"
-   },
-   "B": {
-    "label": "Felix Jones (RB) · 2006 ARK",
-    "value": 1168,
-    "school": "ARK"
-   },
-   "unit": "rushing yards",
-   "sig": "hFelix Jones2006,Jayden Daniels2022rush",
-   "more": {
-    "title": "Top 6: single-season rushing yards (LSU, ARK players in our data)",
-    "rows": [
-     "1. Leonard Fournette (LSU 2015) 1,953",
-     "2. Darren McFadden (ARK 2007) 1,830",
-     "3. Darren McFadden (ARK 2006) 1,647",
-     "4. Alex Collins (ARK 2015) 1,577",
-     "5. Raheim Sanders (ARK 2022) 1,443",
-     "6. Clyde Edwards-Helaire (LSU 2019) 1,415"
-    ]
-   }
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Leonard Fournette (LSU RB) · career rushing TDs",
+     "value": 40,
+     "school": "LSU"
+    },
+    {
+     "label": "Raheim Sanders (ARK RB) · 2022 rushing TDs",
+     "value": 10,
+     "school": "ARK"
+    },
+    {
+     "label": "Kevin Faulk (LSU RB) · career total TDs (rushing + receiving)",
+     "value": 50,
+     "school": "LSU"
+    },
+    {
+     "label": "Alex Collins (ARK RB) · career total TDs (rushing + receiving)",
+     "value": 36,
+     "school": "ARK"
+    }
+   ],
+   "sig": "nxTDAlex Collinscareer total TDs (rushing + receiving),Kevin Faulkcareer total TDs (rushing + receiving),Leonard Fournettecareer rushing TDs,Raheim Sanders2022 rushing TDs"
   },
   {
    "type": "prog",
@@ -108,79 +116,104 @@
    "bonus": "names"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Clyde Edwards-Helaire finish his LSU career with more or less than",
-   "line": "650 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Clyde Edwards-Helaire had 595 receiving yards in his career.",
-   "check": {
-    "value": 595,
-    "line": 650
-   },
-   "sig": "ppClyde Edwards-Helairecareer|Treylon Burkscareerrec0",
-   "pair": "ppClyde Edwards-Helairecareer|Treylon Burkscareerrec",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Treylon Burks finish his Arkansas career with more or less than",
-   "line": "2,600 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Treylon Burks had 2,399 receiving yards in his career.",
-   "check": {
-    "value": 2399,
-    "line": 2600
-   },
-   "sig": "ppClyde Edwards-Helairecareer|Treylon Burkscareerrec1",
-   "pair": "ppClyde Edwards-Helairecareer|Treylon Burkscareerrec",
-   "pairPart": 2
-  },
-  {
    "type": "rank",
-   "label": "Fresh Mix",
+   "label": "Rivalry Games",
    "verified": true,
-   "prompt": "Rank these seasons by receiving TDs, highest first.",
+   "unit": "yds",
+   "prompt": "Rank these single-game receiving performances in LSU–Arkansas games, highest first.",
    "items": [
     {
-     "label": "Cheyenne O'Grady (TE) · 2018 ARK",
-     "value": 6,
-     "school": "ARK"
-    },
-    {
-     "label": "Justin Jefferson (WR) · 2019 LSU",
-     "value": 18,
+     "label": "Jarvis Landry (LSU) · 2012",
+     "value": 75,
      "school": "LSU"
     },
     {
-     "label": "Andrew Armstrong (WR) · 2023 ARK",
-     "value": 5,
+     "label": "Luke Hasz (ARK) · 2023",
+     "value": 116,
      "school": "ARK"
     },
     {
-     "label": "Treylon Burks (WR) · 2021 ARK",
-     "value": 11,
-     "school": "ARK"
+     "label": "Ja'Marr Chase (LSU) · 2019",
+     "value": 144,
+     "school": "LSU"
+    },
+    {
+     "label": "Bennie Brazell (LSU) · 2005",
+     "value": 50,
+     "school": "LSU"
     }
    ],
-   "unit": "TD",
-   "sig": "rsea|recTDAndrew Armstrong2023,Cheyenne O'Grady2018,Justin Jefferson2019,Treylon Burks2021",
+   "sig": "grrecBennie Brazell2005,Ja'Marr Chase2019,Jarvis Landry2012,Luke Hasz2023",
    "more": {
-    "title": "Top 8: single-season receiving TDs (LSU, ARK players in our data)",
+    "title": "Top receiving games in this rivalry (box scores)",
     "rows": [
-     "1. Justin Jefferson (LSU 2019) 18",
-     "2. Treylon Burks (ARK 2021) 11",
-     "3. Treylon Burks (ARK 2020) 7",
-     "4. Justin Jefferson (LSU 2018) 6",
-     "5. Cheyenne O'Grady (ARK 2018) 6",
-     "6. Andrew Armstrong (ARK 2023) 5",
-     "7. Jonathan Nance (ARK 2017) 5",
-     "8. Cheyenne O'Grady (ARK 2019) 3"
+     "1. Ja'Marr Chase (LSU) 2019: 144",
+     "2. Michael Woods (ARK) 2020: 140",
+     "3. Rueben Randle (LSU) 2011: 134",
+     "4. Brian Thomas Jr. (LSU) 2023: 133",
+     "5. D.J. Chark (LSU) 2017: 130",
+     "6. Malik Nabers (LSU) 2023: 130",
+     "7. Greg Childs (ARK) 2009: 124",
+     "8. Justin Jefferson (LSU) 2018: 117"
     ]
    }
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 15, 2025",
+    "winner": "LSU",
+    "loser": "ARK",
+    "ws": 23,
+    "ls": 22,
+    "venue": "Tiger Stadium (LA)"
+   },
+   "prompt": "In this game, did Taylen Green (Arkansas) throw for more or less than",
+   "line": "200 passing yards",
+   "answer": "under",
+   "reveal": "Less. Taylen Green had 165 passing yards and 0 TD in this game.",
+   "check": {
+    "value": 165,
+    "line": 200
+   },
+   "sig": "gm2025-11-15Taylen Greenpass"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · LSU vs Arkansas",
+   "a": "LSU",
+   "b": "ARK",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    0,
+    5
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2015,
+   "stat": "Rushing season",
+   "aSchool": "ARK",
+   "other": "LSU",
+   "aName": "Alex Collins (RB)",
+   "bName": "Leonard Fournette (RB)",
+   "A": {
+    "big": "1,577",
+    "sm": "rush yds · 20 TD"
+   },
+   "B": {
+    "big": "1,953",
+    "sm": "rush yds · 22 TD"
+   },
+   "flip": false,
+   "sig": "drush2015Alex Collins,Leonard Fournette"
   },
   {
    "type": "rank",
@@ -211,58 +244,6 @@
     }
    ],
    "sig": "mxTDJayden Danielscareer rushing TDs,Joe Burrow2018 rushing TDs,Jonathan Nancecareer total TDs (rushing + receiving),Raheim Sanders2022 rushing TDs"
-  },
-  {
-   "type": "count",
-   "label": "Awards",
-   "a": "LSU",
-   "b": "ARK",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2015 through 2025, which school had more Davey O'Brien Award winners?",
-   "A": [
-    {
-     "name": "Joe Burrow",
-     "yards": 2019,
-     "season": 2019,
-     "label": "winner",
-     "profile": "won the Davey O'Brien Award (best quarterback)"
-    },
-    {
-     "name": "Jayden Daniels",
-     "yards": 2023,
-     "season": 2023,
-     "label": "winner",
-     "profile": "won the Davey O'Brien Award (best quarterback)"
-    }
-   ],
-   "B": [],
-   "sig": "acobrien2015",
-   "bonus": "names"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 23, 2012",
-    "winner": "LSU",
-    "loser": "ARK",
-    "ws": 20,
-    "ls": 13,
-    "venue": "Razorback Stadium"
-   },
-   "prompt": "In this game, did Jeremy Hill (LSU) run for more or less than",
-   "line": "100 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Jeremy Hill had 77 rushing yards on 18 carries and 1 TD in this game.",
-   "check": {
-    "value": 77,
-    "line": 100
-   },
-   "sig": "gm2012-11-23Jeremy Hillrush"
   }
  ]
 }

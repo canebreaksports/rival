@@ -69,10 +69,16 @@ function pickPack(all: Agg[]): Agg[] {
 
 const file = path.join(process.cwd(), "data", "players.json");
 const data = JSON.parse(fs.readFileSync(file, "utf8")) as { players: Player[]; seasons: PlayerSeason[] };
+// --add "Name,Name": append just these players (from any CFBD school) and leave every existing row alone,
+// so record-book corrections made after the original import survive.
+const ADD = (flags.find(f => f.startsWith("--add="))?.slice(6) ?? "").split(",").map(s => s.trim()).filter(Boolean);
 for (const [key, team] of Object.entries(TEAMS)) {
-  const pack = pickPack(aggregate(key, team));
-  data.players = data.players.filter(p => p.school !== key);
-  data.seasons = data.seasons.filter(s => s.school !== key);
+  const pack = ADD.length ? aggregate(key, team).filter(a => ADD.includes(a.name) && !data.players.some(p => p.name === a.name && p.school === key))
+    : pickPack(aggregate(key, team));
+  if (!ADD.length) {
+    data.players = data.players.filter(p => p.school !== key);
+    data.seasons = data.seasons.filter(s => s.school !== key);
+  }
   for (const a of pack) {
     data.players.push({ name: a.name, school: key, pos: a.pos!, ...(STARS.has(a.name) ? { star: true } : {}) });
     const seas = [...a.seasons.values()].sort((x, y) => (x.year as number) - (y.year as number));

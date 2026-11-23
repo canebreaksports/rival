@@ -6,8 +6,8 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-23T16:23:16.588Z",
- "engine": 14,
+ "generatedAt": "2026-11-23T16:29:54.114Z",
+ "engine": 15,
  "questions": [
   {
    "type": "h2h",
@@ -40,46 +40,137 @@
    }
   },
   {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2015",
+    "winner": "TENN",
+    "loser": "VAN",
+    "ws": 53,
+    "ls": 28,
+    "venue": "Neyland Stadium"
+   },
+   "prompt": "In this game, did Jalen Hurd (Tennessee) run for more or less than",
+   "line": "140 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Jalen Hurd had 120 rushing yards on 19 carries and 1 TD in this game.",
+   "check": {
+    "value": 120,
+    "line": 140
+   },
+   "sig": "gm2015-11-28Jalen Hurdrush"
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Denarius Moore (Tennessee, 2007–10)",
+     "value": 2004,
+     "school": "TENN"
+    },
+    {
+     "label": "Will Sheppard (Vanderbilt, 2020–23)",
+     "value": 2067,
+     "school": "VAN"
+    },
+    {
+     "label": "Cedrick Wilson (Tennessee, 1997–00)",
+     "value": 2137,
+     "school": "TENN"
+    },
+    {
+     "label": "Jordan Matthews (Vanderbilt, 2010–13)",
+     "value": 3759,
+     "school": "VAN"
+    }
+   ],
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Tennessee Volunteers football statistical leaders\" career receiving yards table (revision 1387103812), which cites the school record book; fetched 2026-11-23; Wikipedia \"Vanderbilt Commodores football statistical leaders\" career receiving yards table (revision 1385775995), which cites the school record book; fetched 2026-11-23",
+   "sig": "nrCedrick Wilson,Denarius Moore,Jordan Matthews,Will Sheppard",
+   "more": {
+    "title": "Career receiving yards, Tennessee and Vanderbilt (careers ending 2000 or later)",
+    "rows": [
+     "1. Jordan Matthews (Vanderbilt, 2010–13) 3,759",
+     "2. Dan Stricker (Vanderbilt, 1999–02) 2,880",
+     "3. Earl Bennett (Vanderbilt, 2005–07) 2,852",
+     "4. Kalija Lipscomb (Vanderbilt, 2016–19) 2,356",
+     "5. Jauan Jennings (Tennessee, 2015–19) 2,153",
+     "6. Robert Meachem (Tennessee, 2004–06) 2,140",
+     "7. Cedrick Wilson (Tennessee, 1997–00) 2,137",
+     "8. Will Sheppard (Vanderbilt, 2020–23) 2,067",
+     "9. Denarius Moore (Tennessee, 2007–10) 2,004"
+    ]
+   }
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2022,
+   "stat": "Rushing season",
+   "aSchool": "VAN",
+   "other": "TENN",
+   "aName": "Re'Mahn Davis (RB)",
+   "bName": "Dylan Sampson (RB)",
+   "A": {
+    "big": "926",
+    "sm": "rush yds · 4 TD"
+   },
+   "B": {
+    "big": "397",
+    "sm": "rush yds · 6 TD"
+   },
+   "flip": true,
+   "sig": "drush2022Dylan Sampson,Re'Mahn Davis"
+  },
+  {
    "type": "prog",
    "label": "Program Pit · Tennessee vs Vanderbilt",
    "a": "TENN",
    "b": "VAN",
-   "prompt": "Whose best season since 2000 had more wins?",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
    "values": [
-    11,
-    10
+    6,
+    1
    ],
    "verified": true,
-   "sig": "gpeakW"
+   "sig": "gwin10"
   },
   {
-   "type": "count",
-   "label": "NFL Draft",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 0,
+   "type": "rank",
+   "label": "Notables",
    "verified": true,
-   "pitted": true,
-   "prompt": "From the 2015 draft through 2026, which school had more linebackers taken in the first three rounds?",
-   "A": [],
-   "B": [
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
     {
-     "name": "Zach Cunningham",
-     "yards": 57,
-     "season": 2017,
-     "label": "No. 57 pick",
-     "profile": "Inside Linebacker · 2017 draft, round 2"
+     "label": "Jalin Hyatt (TENN WR) · 2022 receiving TDs",
+     "value": 15,
+     "school": "TENN"
     },
     {
-     "name": "Oren Burks",
-     "yards": 88,
-     "season": 2018,
-     "label": "No. 88 pick",
-     "profile": "Outside Linebacker · 2018 draft, round 3"
+     "label": "Ralph Webb (VAN RB) · 2016 rushing TDs",
+     "value": 13,
+     "school": "VAN"
+    },
+    {
+     "label": "Dylan Sampson (TENN RB) · career rushing TDs",
+     "value": 35,
+     "school": "TENN"
+    },
+    {
+     "label": "Diego Pavia (VAN QB) · 2025 rushing TDs",
+     "value": 10,
+     "school": "VAN"
     }
    ],
-   "sig": "dcr32015lb",
-   "bonus": "names"
+   "sig": "nxTDDiego Pavia2025 rushing TDs,Dylan Sampsoncareer rushing TDs,Jalin Hyatt2022 receiving TDs,Ralph Webb2016 rushing TDs"
   },
   {
    "type": "count",
@@ -115,8 +206,8 @@
    "flip": true,
    "prompt": "In Tennessee–Vanderbilt games since 2012, who had more rushing yards against the other school?",
    "A": {
-    "label": "Joshua Dobbs (TENN) vs. Vanderbilt",
-    "value": 260,
+    "label": "Alvin Kamara (TENN) vs. Vanderbilt",
+    "value": 168,
     "school": "TENN"
    },
    "B": {
@@ -125,8 +216,8 @@
     "school": "VAN"
    },
    "unit": "rushing yds",
-   "note": "Joshua Dobbs: 260 in 4 games. Dallas Rivers: 125 in 4 games.",
-   "sig": "vsrushDallas Rivers,Joshua Dobbs",
+   "note": "Alvin Kamara: 168 in 2 games. Dallas Rivers: 125 in 4 games.",
+   "sig": "vsrushAlvin Kamara,Dallas Rivers",
    "more": {
     "title": "Top rushing yards against the other school since 2012",
     "rows": [
@@ -140,63 +231,63 @@
    }
   },
   {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 28, 2015",
-    "winner": "TENN",
-    "loser": "VAN",
-    "ws": 53,
-    "ls": 28,
-    "venue": "Neyland Stadium"
-   },
-   "prompt": "In this game, did Jalen Hurd (Tennessee) run for more or less than",
-   "line": "140 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Jalen Hurd had 120 rushing yards on 19 carries and 1 TD in this game.",
-   "check": {
-    "value": 120,
-    "line": 140
-   },
-   "sig": "gm2015-11-28Jalen Hurdrush"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 26, 2016",
-    "winner": "VAN",
-    "loser": "TENN",
-    "ws": 45,
-    "ls": 34,
-    "venue": "FirstBank Stadium"
-   },
-   "prompt": "In this game, did Josh Malone (Tennessee) have more or less than",
-   "line": "140 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Josh Malone had 121 receiving yards on 7 catches and 1 TD in this game.",
-   "check": {
-    "value": 121,
-    "line": 140
-   },
-   "sig": "gm2016-11-26Josh Malonerec"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "type": "count",
+   "label": "NFL Draft",
    "a": "TENN",
    "b": "VAN",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    6,
-    1
-   ],
+   "threshold": 0,
    "verified": true,
-   "sig": "gwin10"
+   "pitted": true,
+   "prompt": "From the 2015 draft through 2026, which school had more linebackers taken in the first three rounds?",
+   "A": [],
+   "B": [
+    {
+     "name": "Zach Cunningham",
+     "yards": 57,
+     "season": 2017,
+     "label": "No. 57 pick",
+     "profile": "Inside Linebacker · 2017 draft, round 2"
+    },
+    {
+     "name": "Oren Burks",
+     "yards": 88,
+     "season": 2018,
+     "label": "No. 88 pick",
+     "profile": "Outside Linebacker · 2018 draft, round 3"
+    }
+   ],
+   "sig": "dcr32015lb",
+   "bonus": "names"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Will Sheppard (VAN WR) · 2023 receiving yards",
+     "value": 684,
+     "school": "VAN"
+    },
+    {
+     "label": "Dylan Sampson (TENN RB) · career yards from scrimmage",
+     "value": 2826,
+     "school": "TENN"
+    },
+    {
+     "label": "Joshua Dobbs (TENN QB) · 2016 rushing yards",
+     "value": 831,
+     "school": "TENN"
+    },
+    {
+     "label": "Re'Mahn Davis (VAN RB) · 2022 rushing yards",
+     "value": 926,
+     "school": "VAN"
+    }
+   ],
+   "sig": "mxydsDylan Sampsoncareer yards from scrimmage,Joshua Dobbs2016 rushing yards,Re'Mahn Davis2022 rushing yards,Will Sheppard2023 receiving yards"
   }
  ]
 }

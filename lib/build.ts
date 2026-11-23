@@ -1,6 +1,7 @@
 // Set building (spec §6): candidate pool, caps, weekly seeding, plus Coach free-play builders.
 import type { CuratedItem, Dataset, FrozenSet, Game, Question, QType, SchoolKey } from "./types";
 import { pick, seededRng, shuffle, type Rng } from "./rng";
+import { genCareerRecRank } from "./notable-gen";
 import { PROGRAM_STATS, SCHOOL, programValue } from "./data";
 import { genGameCount, genSeasonCount, genVsLeaderMC } from "./trend-gen";
 import { genAwardCount, genAwardMC, genDraftCount, genDraftMC, genHeismanCount, genHeismanMC } from "./honors-gen";
@@ -8,7 +9,7 @@ import { genGameMoment, genGameRank, genLongestGameMoment, genLongestSeriesMC, g
 import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 14; // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
+export const ENGINE_VERSION = 15; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean }
@@ -106,7 +107,8 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
   const out: Question[] = [], sigs = new Set<string>();
   const gens: Gen[] = teams.length > 1
     ? [() => genRank(c), () => genH2H(c, teams), () => genH2H(c, teams), () => genDuel(c, teams), () => genMixedRank(c, teams), () => genMixedRank(c, teams),
-       () => genTrapRank(c), () => genPropPair(c, teams)]
+       () => genTrapRank(c), () => genPropPair(c, teams), () => genMixedRank(c, teams, true), () => genMixedRank(c, teams, true),
+       ...(data.careerRec ? [() => genCareerRecRank(data.careerRec!, teams[0], teams[1], rng), () => genCareerRecRank(data.careerRec!, teams[0], teams[1], rng)] : [])]
     : [() => genRank(c), () => genPOU(c), () => genPOU(c), () => genH2H(c, teams), () => genTrapRank(c), () => genTrapPOU(c)];
   // Rivalry questions: games the two schools played against each other (weighted up: the heart of pitted mode)
   const rv = teams.length > 1 ? data.rivalry?.pairs[pairKey(teams[0], teams[1])] : undefined;
@@ -204,7 +206,7 @@ export function involvesBoth(q: Question, a: SchoolKey, b: SchoolKey): boolean {
 
 /** Generator family of a question, from its signature prefix (e.g. "vs" = totals against each other). */
 export const questionKind = (q: Question) =>
-  q.sig.match(/^(gm|vs|tv|ts|tg|dc|dm|ac|am|hc|hm|sc|td|gr|lp|lg|mx|pp|tr|tp|d|u|h|r|c|g|k|p)/)?.[1] ?? q.sig.slice(0, 2);
+  q.sig.match(/^(gm|vs|tv|ts|tg|dc|dm|ac|am|hc|hm|sc|td|gr|lp|lg|mx|nx|nr|pp|tr|tp|d|u|h|r|c|g|k|p)/)?.[1] ?? q.sig.slice(0, 2);
 // may appear twice in a set: program pit, curated items, game moments, plain head-to-heads
 const REPEATABLE = new Set(["g", "gm", "h"]);
 const CURATED_MAX = 3; // hand-written questions per set

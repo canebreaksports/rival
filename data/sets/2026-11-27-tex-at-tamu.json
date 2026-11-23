@@ -6,125 +6,9 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-23T16:23:16.112Z",
- "engine": 14,
+ "generatedAt": "2026-11-23T16:29:53.558Z",
+ "engine": 15,
  "questions": [
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2018, did Keaontay Ingram (Texas) have more or less than",
-   "line": "3.5 rushing TDs",
-   "answer": "under",
-   "reveal": "Less. Keaontay Ingram had 3 rushing TDs in 2018.",
-   "check": {
-    "value": 3,
-    "line": 3.5
-   },
-   "sig": "ppKeaontay Ingram2018|Isaiah Spiller2019rushTD0",
-   "pair": "ppKeaontay Ingram2018|Isaiah Spiller2019rushTD",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2019, did Isaiah Spiller (Texas A&M) have more or less than",
-   "line": "8.5 rushing TDs",
-   "answer": "over",
-   "reveal": "More. Isaiah Spiller had 10 rushing TDs in 2019.",
-   "check": {
-    "value": 10,
-    "line": 8.5
-   },
-   "sig": "ppKeaontay Ingram2018|Isaiah Spiller2019rushTD1",
-   "pair": "ppKeaontay Ingram2018|Isaiah Spiller2019rushTD",
-   "pairPart": 2
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more career yards from scrimmage?",
-   "A": {
-    "label": "Roschon Johnson (RB) · career, TEX",
-    "value": 2609,
-    "school": "TEX"
-   },
-   "B": {
-    "label": "Trayveon Williams (RB) · career, TAMU",
-    "value": 3939,
-    "school": "TAMU"
-   },
-   "unit": "yards from scrimmage",
-   "sig": "hRoschon Johnsoncareer,Trayveon Williamscareerscrim",
-   "more": {
-    "title": "Top 6: career yards from scrimmage (TEX, TAMU players in our data)",
-    "rows": [
-     "1. Ricky Williams (TEX) 7,267",
-     "2. Bijan Robinson (TEX) 4,215",
-     "3. Trayveon Williams (TAMU) 3,939",
-     "4. Isaiah Spiller (TAMU) 3,578",
-     "5. Johnathan Gray (TEX) 3,024",
-     "6. Devon Achane (TAMU) 2,930"
-    ]
-   }
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": true,
-   "prompt": "In Texas–Texas A&M games since 2005, who had more receiving yards against the other school?",
-   "A": {
-    "label": "Brandon Collins (TEX) vs. Texas A&M",
-    "value": 103,
-    "school": "TEX"
-   },
-   "B": {
-    "label": "Earvin Taylor (TAMU) vs. Texas",
-    "value": 129,
-    "school": "TAMU"
-   },
-   "unit": "receiving yds",
-   "note": "Brandon Collins: 103 in 1 game. Earvin Taylor: 129 in 2 games.",
-   "sig": "vsrecBrandon Collins,Earvin Taylor",
-   "more": {
-    "title": "Top receiving yards against the other school since 2005",
-    "rows": [
-     "1. Jeff Fuller (TAMU) 344 in 4 games",
-     "2. Jordan Shipley (TEX) 234 in 4 games",
-     "3. Quan Cosby (TEX) 193 in 4 games",
-     "4. Malcolm Williams (TEX) 168 in 3 games",
-     "5. Mike Goodson (TAMU) 156 in 3 games",
-     "6. Earvin Taylor (TAMU) 129 in 2 games"
-    ]
-   }
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 28, 2025",
-    "winner": "TEX",
-    "loser": "TAMU",
-    "ws": 27,
-    "ls": 17,
-    "venue": "DKR-Texas Memorial Stadium"
-   },
-   "prompt": "In this game, did Tre Wisner (Texas) run for more or less than",
-   "line": "200 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Tre Wisner had 155 rushing yards on 19 carries and 0 TD in this game.",
-   "check": {
-    "value": 155,
-    "line": 200
-   },
-   "sig": "gm2025-11-28Tre Wisnerrush"
-  },
   {
    "type": "count",
    "label": "Awards",
@@ -162,8 +46,8 @@
    "flip": true,
    "prompt": "Who had more college rushing touchdowns (at the school shown)?",
    "A": {
-    "label": "Tyrone Swoopes (TEX QB)",
-    "value": 24,
+    "label": "Roschon Johnson (TEX RB)",
+    "value": 23,
     "school": "TEX"
    },
    "B": {
@@ -172,21 +56,70 @@
     "school": "TAMU"
    },
    "unit": "",
-   "note": "🚨 Upset: Tyrone Swoopes 24 vs. Devon Achane 21.",
-   "sig": "urushTDDevon AchaneTyrone Swoopes"
+   "note": "🚨 Upset: Roschon Johnson 23 vs. Devon Achane 21.",
+   "sig": "urushTDDevon AchaneRoschon Johnson"
   },
   {
-   "type": "prog",
-   "label": "Program Pit · Texas vs Texas A&M",
-   "a": "TEX",
-   "b": "TAMU",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    5,
-    5
-   ],
+   "type": "rank",
+   "label": "Notables",
    "verified": true,
-   "sig": "glosing"
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Ricky Williams (TEX RB) · 1996 rushing yards",
+     "value": 1320,
+     "school": "TEX"
+    },
+    {
+     "label": "Isaiah Spiller (TAMU RB) · 2020 rushing yards",
+     "value": 1040,
+     "school": "TAMU"
+    },
+    {
+     "label": "D'Onta Foreman (TEX RB) · career yards from scrimmage",
+     "value": 2928,
+     "school": "TEX"
+    },
+    {
+     "label": "Bijan Robinson (TEX RB) · 2022 yards from scrimmage",
+     "value": 1892,
+     "school": "TEX"
+    }
+   ],
+   "sig": "nxydsBijan Robinson2022 yards from scrimmage,D'Onta Foremancareer yards from scrimmage,Isaiah Spiller2020 rushing yards,Ricky Williams1996 rushing yards"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2022, did Xavier Worthy (Texas) have more or less than",
+   "line": "9.5 receiving TDs",
+   "answer": "under",
+   "reveal": "Less. Xavier Worthy had 9 receiving TDs in 2022.",
+   "check": {
+    "value": 9,
+    "line": 9.5
+   },
+   "sig": "ppXavier Worthy2022|Jalen Wydermyer2021recTD0",
+   "pair": "ppXavier Worthy2022|Jalen Wydermyer2021recTD",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2021, did Jalen Wydermyer (Texas A&M) have more or less than",
+   "line": "3.5 receiving TDs",
+   "answer": "over",
+   "reveal": "More. Jalen Wydermyer had 4 receiving TDs in 2021.",
+   "check": {
+    "value": 4,
+    "line": 3.5
+   },
+   "sig": "ppXavier Worthy2022|Jalen Wydermyer2021recTD1",
+   "pair": "ppXavier Worthy2022|Jalen Wydermyer2021recTD",
+   "pairPart": 2
   },
   {
    "type": "count",
@@ -268,34 +201,110 @@
    "bonus": "years"
   },
   {
+   "type": "mc",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2025",
+    "winner": "TEX",
+    "loser": "TAMU",
+    "ws": 27,
+    "ls": 17,
+    "venue": "DKR-Texas Memorial Stadium"
+   },
+   "prompt": "What was the difference in total yards in Texas's 27–17 win over Texas A&M?",
+   "options": [
+    "Texas +60 yards",
+    "Texas +130 yards",
+    "Texas +30 yards",
+    "Texas +10 yards"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    0,
+    1,
+    3
+   ],
+   "reveal": "Texas +60. Texas A&M had 337 total yards, Texas 397.",
+   "sig": "td2025-11-28total"
+  },
+  {
+   "type": "mc",
+   "label": "Heisman",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Which of these finished highest in Heisman Trophy voting that season?",
+   "options": [
+    "Johnny Manziel (Texas A&M, 2012)",
+    "Cedric Benson (Texas, 2004)",
+    "Colt McCoy (Texas, 2008)",
+    "Bijan Robinson (Texas, 2022)"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    3,
+    0,
+    2
+   ],
+   "reveal": "Johnny Manziel: 1st in 2012 · Colt McCoy: 2nd in 2008 · Cedric Benson: 6th in 2004 · Bijan Robinson: 9th in 2022",
+   "sig": "hmBijan Robinson2022,Cedric Benson2004,Colt McCoy2008,Johnny Manziel2012",
+   "more": {
+    "title": "Texas and Texas A&M top-10 Heisman finishes (seasons with checked voting)",
+    "rows": [
+     "1st: Johnny Manziel (TAMU) 2012",
+     "2nd: Colt McCoy (TEX) 2008",
+     "3rd: Colt McCoy (TEX) 2009",
+     "5th: Johnny Manziel (TAMU) 2013",
+     "6th: Cedric Benson (TEX) 2004",
+     "9th: Bijan Robinson (TEX) 2022"
+    ]
+   }
+  },
+  {
    "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
-     "label": "Devon Achane (TAMU RB) · 2022 rushing yards",
-     "value": 1102,
-     "school": "TAMU"
-    },
-    {
-     "label": "Johnathan Gray (TEX RB) · 2012 rushing yards",
-     "value": 701,
+     "label": "Roschon Johnson (TEX RB) · career total TDs (rushing + receiving)",
+     "value": 26,
      "school": "TEX"
     },
     {
-     "label": "Josh Reynolds (TAMU WR) · 2015 receiving yards",
-     "value": 907,
+     "label": "Trayveon Williams (TAMU RB) · career rushing TDs",
+     "value": 34,
      "school": "TAMU"
     },
     {
-     "label": "Collin Johnson (TEX WR) · career receiving yards",
-     "value": 2627,
+     "label": "Devon Achane (TAMU RB) · 2022 receiving TDs",
+     "value": 3,
+     "school": "TAMU"
+    },
+    {
+     "label": "Xavier Worthy (TEX WR) · 2023 receiving TDs",
+     "value": 5,
      "school": "TEX"
     }
    ],
-   "sig": "mxydsCollin Johnsoncareer receiving yards,Devon Achane2022 rushing yards,Johnathan Gray2012 rushing yards,Josh Reynolds2015 receiving yards"
+   "sig": "mxTDDevon Achane2022 receiving TDs,Roschon Johnsoncareer total TDs (rushing + receiving),Trayveon Williamscareer rushing TDs,Xavier Worthy2023 receiving TDs"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Texas A&M",
+   "a": "TEX",
+   "b": "TAMU",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    13,
+    2
+   ],
+   "verified": true,
+   "sig": "gwin10"
   }
  ]
 }

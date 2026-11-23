@@ -1,0 +1,1060 @@
+{
+ "ALA": {
+  "verified": true,
+  "list": [
+   {
+    "name": "DeVonta Smith",
+    "yards": 3965,
+    "from": 2017,
+    "to": 2020
+   },
+   {
+    "name": "Amari Cooper",
+    "yards": 3463,
+    "from": 2012,
+    "to": 2014
+   },
+   {
+    "name": "D. J. Hall",
+    "yards": 2923,
+    "from": 2004,
+    "to": 2007
+   },
+   {
+    "name": "Calvin Ridley",
+    "yards": 2781,
+    "from": 2015,
+    "to": 2017
+   },
+   {
+    "name": "Jerry Jeudy",
+    "yards": 2742,
+    "from": 2017,
+    "to": 2019
+   },
+   {
+    "name": "Julio Jones",
+    "yards": 2653,
+    "from": 2008,
+    "to": 2010
+   },
+   {
+    "name": "John Metchie III",
+    "yards": 2081,
+    "from": 2019,
+    "to": 2021
+   },
+   {
+    "name": "Ozzie Newsome",
+    "yards": 2070,
+    "from": 1974,
+    "to": 1977
+   },
+   {
+    "name": "Ryan Coleman-Williams",
+    "yards": 2063,
+    "from": 2024,
+    "to": 2026,
+    "active": true
+   },
+   {
+    "name": "Jaylen Waddle",
+    "yards": 1999,
+    "from": 2018,
+    "to": 2020
+   }
+  ],
+  "source": "Wikipedia \"Alabama Crimson Tide football statistical leaders\" career receiving yards table (revision 1386991921), which cites the school record book; fetched 2026-11-23"
+ },
+ "AUB": {
+  "verified": true,
+  "list": [
+   {
+    "name": "Terry Beasley",
+    "yards": 2507,
+    "from": 1969,
+    "to": 1971
+   },
+   {
+    "name": "Tyrone Goodson",
+    "yards": 2283,
+    "from": 1994,
+    "to": 1997
+   },
+   {
+    "name": "Karsten Bailey",
+    "yards": 2174,
+    "from": 1995,
+    "to": 1998
+   },
+   {
+    "name": "Seth Williams",
+    "yards": 2124,
+    "from": 2018,
+    "to": 2020
+   },
+   {
+    "name": "Courtney Taylor",
+    "yards": 2098,
+    "from": 2003,
+    "to": 2006
+   },
+   {
+    "name": "Emory Blake",
+    "yards": 2022,
+    "from": 2009,
+    "to": 2012
+   },
+   {
+    "name": "Frank Sanders",
+    "yards": 1998,
+    "from": 1991,
+    "to": 1994
+   },
+   {
+    "name": "Darvin Adams",
+    "yards": 1978,
+    "from": 2008,
+    "to": 2010
+   },
+   {
+    "name": "Freddy Weygand",
+    "yards": 1946,
+    "from": 1985,
+    "to": 1988
+   },
+   {
+    "name": "Lawyer Tillman",
+    "yards": 1808,
+    "from": 1985,
+    "to": 1988
+   }
+  ],
+  "source": "Wikipedia \"Auburn Tigers football statistical leaders\" career receiving yards table (revision 1351164605), which cites the school record book; fetched 2026-11-23"
+ },
+ "LSU": {
+  "verified": true,
+  "list": [
+   {
+    "name": "Malik Nabers",
+    "yards": 3003,
+    "from": 2021,
+    "to": 2023
+   },
+   {
+    "name": "Josh Reed",
+    "yards": 3001,
+    "from": 1999,
+    "to": 2001
+   },
+   {
+    "name": "Wendell Davis",
+    "yards": 2708,
+    "from": 1984,
+    "to": 1987
+   },
+   {
+    "name": "Eric Martin",
+    "yards": 2625,
+    "from": 1981,
+    "to": 1984
+   },
+   {
+    "name": "Michael Clayton",
+    "yards": 2582,
+    "from": 2001,
+    "to": 2003
+   },
+   {
+    "name": "Brandon LaFell",
+    "yards": 2517,
+    "from": 2006,
+    "to": 2009
+   },
+   {
+    "name": "Justin Jefferson",
+    "yards": 2415,
+    "from": 2017,
+    "to": 2019
+   },
+   {
+    "name": "Dwayne Bowe",
+    "yards": 2403,
+    "from": 2003,
+    "to": 2006
+   },
+   {
+    "name": "Odell Beckham Jr.",
+    "yards": 2340,
+    "from": 2011,
+    "to": 2013
+   },
+   {
+    "name": "Tony Moss",
+    "yards": 2196,
+    "from": 1986,
+    "to": 1989
+   }
+  ],
+  "source": "Wikipedia \"LSU Tigers football statistical leaders\" career receiving yards table (revision 1384674394), which cites the school record book; fetched 2026-11-23"
+ },
+ "TENN": {
+  "verified": true,
+  "list": [
+   {
+    "name": "Joey Kent",
+    "yards": 2814,
+    "from": 1993,
+    "to": 1996
+   },
+   {
+    "name": "Marcus Nash",
+    "yards": 2447,
+    "from": 1994,
+    "to": 1997
+   },
+   {
+    "name": "Peerless Price",
+    "yards": 2298,
+    "from": 1995,
+    "to": 1998
+   },
+   {
+    "name": "Jauan Jennings",
+    "yards": 2153,
+    "from": 2015,
+    "to": 2019
+   },
+   {
+    "name": "Robert Meachem",
+    "yards": 2140,
+    "from": 2004,
+    "to": 2006
+   },
+   {
+    "name": "Cedrick Wilson",
+    "yards": 2137,
+    "from": 1997,
+    "to": 2000
+   },
+   {
+    "name": "Tim McGee",
+    "yards": 2042,
+    "from": 1982,
+    "to": 1985
+   },
+   {
+    "name": "Denarius Moore",
+    "yards": 2004,
+    "from": 2007,
+    "to": 2010
+   },
+   {
+    "name": "Larry Seivers",
+    "yards": 1924,
+    "from": 1973,
+    "to": 1976
+   },
+   {
+    "name": "Carl Pickens",
+    "yards": 1875,
+    "from": 1989,
+    "to": 1991
+   }
+  ],
+  "source": "Wikipedia \"Tennessee Volunteers football statistical leaders\" career receiving yards table (revision 1387103812), which cites the school record book; fetched 2026-11-23"
+ },
+ "FLA": {
+  "verified": true,
+  "list": [
+   {
+    "name": "Carlos Alvarez",
+    "yards": 2563,
+    "from": 1969,
+    "to": 1971
+   },
+   {
+    "name": "Jabar Gaffney",
+    "yards": 2375,
+    "from": 2000,
+    "to": 2001
+   },
+   {
+    "name": "Andre Caldwell",
+    "yards": 2349,
+    "from": 2003,
+    "to": 2007
+   },
+   {
+    "name": "Reidel Anthony",
+    "yards": 2274,
+    "from": 1994,
+    "to": 1996
+   },
+   {
+    "name": "Jack Jackson",
+    "yards": 2266,
+    "from": 1992,
+    "to": 1994
+   },
+   {
+    "name": "Dallas Baker",
+    "yards": 2236,
+    "from": 2003,
+    "to": 2006
+   },
+   {
+    "name": "Ike Hilliard",
+    "yards": 2214,
+    "from": 1994,
+    "to": 1996
+   },
+   {
+    "name": "Jacquez Green",
+    "yards": 2181,
+    "from": 1995,
+    "to": 1997
+   },
+   {
+    "name": "Willie Jackson",
+    "yards": 2172,
+    "from": 1990,
+    "to": 1993
+   },
+   {
+    "name": "Chris Doering",
+    "yards": 2107,
+    "from": 1992,
+    "to": 1995
+   }
+  ],
+  "source": "Wikipedia \"Florida Gators football statistical leaders\" career receiving yards table (revision 1385857120), which cites the school record book; fetched 2026-11-23"
+ },
+ "VAN": {
+  "verified": true,
+  "list": [
+   {
+    "name": "Jordan Matthews",
+    "yards": 3759,
+    "from": 2010,
+    "to": 2013
+   },
+   {
+    "name": "Boo Mitchell",
+    "yards": 2964,
+    "from": 1985,
+    "to": 1988
+   },
+   {
+    "name": "Dan Stricker",
+    "yards": 2880,
+    "from": 1999,
+    "to": 2002
+   },
+   {
+    "name": "Earl Bennett",
+    "yards": 2852,
+    "from": 2005,
+    "to": 2007
+   },
+   {
+    "name": "Kalija Lipscomb",
+    "yards": 2356,
+    "from": 2016,
+    "to": 2019
+   },
+   {
+    "name": "Junior Sherrill",
+    "yards": 2335,
+    "from": 2023,
+    "to": 2026,
+    "active": true
+   },
+   {
+    "name": "Martin Cox",
+    "yards": 2275,
+    "from": 1975,
+    "to": 1978
+   },
+   {
+    "name": "Chuck Scott",
+    "yards": 2219,
+    "from": 1981,
+    "to": 1984
+   },
+   {
+    "name": "Will Sheppard",
+    "yards": 2067,
+    "from": 2020,
+    "to": 2023
+   },
+   {
+    "name": "Clarence Sevillian",
+    "yards": 1978,
+    "from": 1989,
+    "to": 1992
+   }
+  ],
+  "source": "Wikipedia \"Vanderbilt Commodores football statistical leaders\" career receiving yards table (revision 1385775995), which cites the school record book; fetched 2026-11-23"
+ },
+ "MIZ": {
+  "verified": true,
+  "list": [
+   {
+    "name": "Danario Alexander",
+    "yards": 2778,
+    "from": 2006,
+    "to": 2009
+   },
+   {
+    "name": "Justin Gage",
+    "yards": 2704,
+    "from": 1999,
+    "to": 2002
+   },
+   {
+    "name": "Chase Coffman",
+    "yards": 2659,
+    "from": 2005,
+    "to": 2008
+   },
+   {
+    "name": "J'Mon Moore",
+    "yards": 2477,
+    "from": 2014,
+    "to": 2017
+   },
+   {
+    "name": "Jeremy Maclin",
+    "yards": 2315,
+    "from": 2007,
+    "to": 2008
+   },
+   {
+    "name": "Luther Burden III",
+    "yards": 2263,
+    "from": 2022,
+    "to": 2024
+   },
+   {
+    "name": "Martin Rucker",
+    "yards": 2175,
+    "from": 2004,
+    "to": 2007
+   },
+   {
+    "name": "Victor Bailey",
+    "yards": 2144,
+    "from": 1990,
+    "to": 1992
+   },
+   {
+    "name": "William Franklin",
+    "yards": 2125,
+    "from": 2004,
+    "to": 2007
+   },
+   {
+    "name": "T.J. Moe",
+    "yards": 2101,
+    "from": 2009,
+    "to": 2012
+   }
+  ],
+  "source": "Wikipedia \"Missouri Tigers football statistical leaders\" career receiving yards table (revision 1385738145), which cites the school record book; fetched 2026-11-23"
+ },
+ "UK": {
+  "verified": true,
+  "list": [
+   {
+    "name": "Craig Yeast",
+    "yards": 2899,
+    "from": 1995,
+    "to": 1998
+   },
+   {
+    "name": "Keenan Burton",
+    "yards": 2376,
+    "from": 2003,
+    "to": 2007
+   },
+   {
+    "name": "Derek Abney",
+    "yards": 2339,
+    "from": 2000,
+    "to": 2003
+   },
+   {
+    "name": "Garrett Johnson",
+    "yards": 2089,
+    "from": 2014,
+    "to": 2017
+   },
+   {
+    "name": "Dane Key",
+    "yards": 1870,
+    "from": 2022,
+    "to": 2024
+   },
+   {
+    "name": "Dicky Lyons Jr.",
+    "yards": 1752,
+    "from": 2004,
+    "to": 2008
+   },
+   {
+    "name": "Quentin McCord",
+    "yards": 1743,
+    "from": 1996,
+    "to": 2000
+   },
+   {
+    "name": "La'Rod King",
+    "yards": 1706,
+    "from": 2009,
+    "to": 2012
+   },
+   {
+    "name": "Randall Cobb",
+    "yards": 1661,
+    "from": 2008,
+    "to": 2010
+   },
+   {
+    "name": "Barion Brown",
+    "yards": 1528,
+    "from": 2022,
+    "to": 2024
+   }
+  ],
+  "source": "Wikipedia \"Kentucky Wildcats football statistical leaders\" career receiving yards table (revision 1381777200), which cites the school record book; fetched 2026-11-23"
+ },
+ "OU": {
+  "verified": true,
+  "list": [
+   {
+    "name": "Ryan Broyles",
+    "yards": 4586,
+    "from": 2008,
+    "to": 2011
+   },
+   {
+    "name": "Sterling Shepard",
+    "yards": 3482,
+    "from": 2012,
+    "to": 2015
+   },
+   {
+    "name": "CeeDee Lamb",
+    "yards": 3292,
+    "from": 2017,
+    "to": 2019
+   },
+   {
+    "name": "Mark Clayton",
+    "yards": 3241,
+    "from": 2001,
+    "to": 2004
+   },
+   {
+    "name": "Juaquin Iglesias",
+    "yards": 2861,
+    "from": 2005,
+    "to": 2008
+   },
+   {
+    "name": "Kenny Stills",
+    "yards": 2594,
+    "from": 2010,
+    "to": 2012
+   },
+   {
+    "name": "Marquise Brown",
+    "yards": 2413,
+    "from": 2017,
+    "to": 2018
+   },
+   {
+    "name": "Marvin Mims Jr.",
+    "yards": 2398,
+    "from": 2020,
+    "to": 2022
+   },
+   {
+    "name": "Malcolm Kelly",
+    "yards": 2285,
+    "from": 2005,
+    "to": 2007
+   },
+   {
+    "name": "Dede Westbrook",
+    "yards": 2267,
+    "from": 2015,
+    "to": 2016
+   }
+  ],
+  "source": "Wikipedia \"Oklahoma Sooners football statistical leaders\" career receiving yards table (revision 1373733678), which cites the school record book; fetched 2026-11-23"
+ },
+ "TAMU": {
+  "verified": true,
+  "list": [
+   {
+    "name": "Ryan Swope",
+    "yards": 3117,
+    "from": 2009,
+    "to": 2012
+   },
+   {
+    "name": "Jeff Fuller",
+    "yards": 3092,
+    "from": 2008,
+    "to": 2011
+   },
+   {
+    "name": "Christian Kirk",
+    "yards": 2856,
+    "from": 2015,
+    "to": 2017
+   },
+   {
+    "name": "Josh Reynolds",
+    "yards": 2788,
+    "from": 2014,
+    "to": 2016
+   },
+   {
+    "name": "Terrence Murphy",
+    "yards": 2600,
+    "from": 2001,
+    "to": 2004
+   },
+   {
+    "name": "Mike Evans",
+    "yards": 2499,
+    "from": 2012,
+    "to": 2013
+   },
+   {
+    "name": "Ainias Smith",
+    "yards": 2407,
+    "from": 2019,
+    "to": 2023
+   },
+   {
+    "name": "Uzoma Nwachukwu",
+    "yards": 2239,
+    "from": 2009,
+    "to": 2012
+   },
+   {
+    "name": "Jhamon Ausbon",
+    "yards": 1818,
+    "from": 2017,
+    "to": 2019
+   },
+   {
+    "name": "Bethel Johnson",
+    "yards": 1740,
+    "from": 1999,
+    "to": 2002
+   }
+  ],
+  "source": "Wikipedia \"Texas A&M Aggies football statistical leaders\" career receiving yards table (revision 1385856132), which cites the school record book; fetched 2026-11-23"
+ },
+ "UGA": {
+  "verified": true,
+  "list": [
+   {
+    "name": "Terrence Edwards",
+    "yards": 3093,
+    "from": 1999,
+    "to": 2002
+   },
+   {
+    "name": "Fred Gibson",
+    "yards": 2884,
+    "from": 2001,
+    "to": 2004
+   },
+   {
+    "name": "A. J. Green",
+    "yards": 2619,
+    "from": 2008,
+    "to": 2010
+   },
+   {
+    "name": "Tavarres King",
+    "yards": 2602,
+    "from": 2008,
+    "to": 2012
+   },
+   {
+    "name": "Brock Bowers",
+    "yards": 2538,
+    "from": 2021,
+    "to": 2023
+   },
+   {
+    "name": "Brice Hunter",
+    "yards": 2373,
+    "from": 1992,
+    "to": 1995
+   },
+   {
+    "name": "Malcolm Mitchell",
+    "yards": 2350,
+    "from": 2012,
+    "to": 2015
+   },
+   {
+    "name": "Mohamed Massaquoi",
+    "yards": 2282,
+    "from": 2005,
+    "to": 2008
+   },
+   {
+    "name": "Lindsay Scott",
+    "yards": 2098,
+    "from": 1978,
+    "to": 1981
+   },
+   {
+    "name": "Reggie Brown",
+    "yards": 2008,
+    "from": 2000,
+    "to": 2004
+   }
+  ],
+  "source": "Wikipedia \"Georgia Bulldogs football statistical leaders\" career receiving yards table (revision 1385737765), which cites the school record book; fetched 2026-11-23"
+ },
+ "SC": {
+  "verified": true,
+  "list": [
+   {
+    "name": "Bryan Edwards",
+    "yards": 3045,
+    "from": 2016,
+    "to": 2019
+   },
+   {
+    "name": "Alshon Jeffery",
+    "yards": 3042,
+    "from": 2009,
+    "to": 2011
+   },
+   {
+    "name": "Kenny McKinley",
+    "yards": 2781,
+    "from": 2005,
+    "to": 2008
+   },
+   {
+    "name": "Sterling Sharpe",
+    "yards": 2497,
+    "from": 1983,
+    "to": 1987
+   },
+   {
+    "name": "Zola Davis",
+    "yards": 2354,
+    "from": 1995,
+    "to": 1998
+   },
+   {
+    "name": "Sidney Rice",
+    "yards": 2233,
+    "from": 2005,
+    "to": 2006
+   },
+   {
+    "name": "Robert Brooks",
+    "yards": 2211,
+    "from": 1988,
+    "to": 1991
+   },
+   {
+    "name": "Shi Smith",
+    "yards": 2204,
+    "from": 2017,
+    "to": 2020
+   },
+   {
+    "name": "Jermale Kelly",
+    "yards": 2179,
+    "from": 1997,
+    "to": 2000
+   },
+   {
+    "name": "Pharoh Cooper",
+    "yards": 2163,
+    "from": 2013,
+    "to": 2015
+   }
+  ],
+  "source": "Wikipedia \"South Carolina Gamecocks football statistical leaders\" career receiving yards table (revision 1384437077), which cites the school record book; fetched 2026-11-23"
+ },
+ "TEX": {
+  "verified": true,
+  "list": [
+   {
+    "name": "Roy Williams",
+    "yards": 3866,
+    "from": 2000,
+    "to": 2003
+   },
+   {
+    "name": "Jordan Shipley",
+    "yards": 3191,
+    "from": 2006,
+    "to": 2009
+   },
+   {
+    "name": "Mike Adams",
+    "yards": 3032,
+    "from": 1992,
+    "to": 1996
+   },
+   {
+    "name": "Xavier Worthy",
+    "yards": 2755,
+    "from": 2021,
+    "to": 2023
+   },
+   {
+    "name": "Mike Davis",
+    "yards": 2753,
+    "from": 2010,
+    "to": 2013
+   },
+   {
+    "name": "Collin Johnson",
+    "yards": 2624,
+    "from": 2016,
+    "to": 2019
+   },
+   {
+    "name": "Quan Cosby",
+    "yards": 2598,
+    "from": 2005,
+    "to": 2008
+   },
+   {
+    "name": "Jaxon Shipley",
+    "yards": 2510,
+    "from": 2011,
+    "to": 2014
+   },
+   {
+    "name": "Devin Duvernay",
+    "yards": 2468,
+    "from": 2016,
+    "to": 2019
+   },
+   {
+    "name": "B. J. Johnson",
+    "yards": 2389,
+    "from": 2000,
+    "to": 2003
+   }
+  ],
+  "source": "Wikipedia \"Texas Longhorns football statistical leaders\" career receiving yards table (revision 1385899717), which cites the school record book; fetched 2026-11-23"
+ },
+ "ARK": {
+  "verified": true,
+  "list": [
+   {
+    "name": "Jarius Wright",
+    "yards": 2934,
+    "from": 2008,
+    "to": 2011
+   },
+   {
+    "name": "Anthony Lucas",
+    "yards": 2879,
+    "from": 1996,
+    "to": 1999
+   },
+   {
+    "name": "Cobi Hamilton",
+    "yards": 2854,
+    "from": 2009,
+    "to": 2012
+   },
+   {
+    "name": "Anthony Eubanks",
+    "yards": 2440,
+    "from": 1994,
+    "to": 1997
+   },
+   {
+    "name": "Joe Adams",
+    "yards": 2410,
+    "from": 2008,
+    "to": 2011
+   },
+   {
+    "name": "Treylon Burks",
+    "yards": 2399,
+    "from": 2019,
+    "to": 2021
+   },
+   {
+    "name": "Marcus Monk",
+    "yards": 2151,
+    "from": 2004,
+    "to": 2007
+   },
+   {
+    "name": "George Wilson",
+    "yards": 2151,
+    "from": 2000,
+    "to": 2003
+   },
+   {
+    "name": "Greg Childs",
+    "yards": 2066,
+    "from": 2008,
+    "to": 2011
+   },
+   {
+    "name": "James Shibest",
+    "yards": 1920,
+    "from": 1983,
+    "to": 1986
+   }
+  ],
+  "source": "Wikipedia \"Arkansas Razorbacks football statistical leaders\" career receiving yards table (revision 1385849336), which cites the school record book; fetched 2026-11-23"
+ },
+ "MISS": {
+  "verified": true,
+  "list": [
+   {
+    "name": "A. J. Brown",
+    "yards": 2984,
+    "from": 2016,
+    "to": 2018
+   },
+   {
+    "name": "Shay Hodge",
+    "yards": 2646,
+    "from": 2006,
+    "to": 2009
+   },
+   {
+    "name": "Chris Collins",
+    "yards": 2621,
+    "from": 2000,
+    "to": 2003
+   },
+   {
+    "name": "Elijah Moore",
+    "yards": 2441,
+    "from": 2018,
+    "to": 2020
+   },
+   {
+    "name": "Laquon Treadwell",
+    "yards": 2393,
+    "from": 2013,
+    "to": 2015
+   },
+   {
+    "name": "Donte Moncrief",
+    "yards": 2371,
+    "from": 2011,
+    "to": 2013
+   },
+   {
+    "name": "Evan Engram",
+    "yards": 2320,
+    "from": 2013,
+    "to": 2016
+   },
+   {
+    "name": "Willie Green",
+    "yards": 2274,
+    "from": 1986,
+    "to": 1989
+   },
+   {
+    "name": "Jordan Watkins",
+    "yards": 2096,
+    "from": 2022,
+    "to": 2024
+   },
+   {
+    "name": "Grant Heard",
+    "yards": 2029,
+    "from": 1996,
+    "to": 2000
+   }
+  ],
+  "source": "Wikipedia \"Ole Miss Rebels football statistical leaders\" career receiving yards table (revision 1386157185), which cites the school record book; fetched 2026-11-23"
+ },
+ "MSST": {
+  "verified": true,
+  "list": [
+   {
+    "name": "Fred Ross",
+    "yards": 2528,
+    "from": 2013,
+    "to": 2016
+   },
+   {
+    "name": "Chad Bumphis",
+    "yards": 2270,
+    "from": 2009,
+    "to": 2012
+   },
+   {
+    "name": "Mardye McDole",
+    "yards": 2214,
+    "from": 1977,
+    "to": 1980
+   },
+   {
+    "name": "David Smith",
+    "yards": 2168,
+    "from": 1968,
+    "to": 1970
+   },
+   {
+    "name": "Eric Moulds",
+    "yards": 2022,
+    "from": 1993,
+    "to": 1995
+   },
+   {
+    "name": "Justin Jenkins",
+    "yards": 1974,
+    "from": 2000,
+    "to": 2003
+   },
+   {
+    "name": "De'Runnya Wilson",
+    "yards": 1949,
+    "from": 2013,
+    "to": 2015
+   },
+   {
+    "name": "Sammy Milner",
+    "yards": 1806,
+    "from": 1968,
+    "to": 1970
+   },
+   {
+    "name": "Danny Knight",
+    "yards": 1773,
+    "from": 1980,
+    "to": 1983
+   },
+   {
+    "name": "Jaden Walley",
+    "yards": 1743,
+    "from": 2020,
+    "to": 2024
+   }
+  ],
+  "source": "Wikipedia \"Mississippi State Bulldogs football statistical leaders\" career receiving yards table (revision 1385863841), which cites the school record book; fetched 2026-11-23"
+ }
+}

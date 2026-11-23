@@ -194,20 +194,29 @@ function facts(c: Ctx, unit: "TD" | "yds"): Fact[] {
   }
   return out;
 }
-export function genMixedRank(c: Ctx, teams: SchoolKey[]): Question | null {
-  const unit = c.rng() < 0.6 ? "TD" : "yds", all = shuffle(c.rng, facts(c, unit));
+/** Big enough to be famous on its own: a star or award winner with a strong number, or a huge number by anyone. */
+function notableFact(c: Ctx, f: Fact) {
+  const car = f.kind.startsWith("car"), td = /TDs/.test(f.what), fam = isStar(c, f.p) || c.honored.has(f.p.name + "|" + f.p.school);
+  const [mid, high] = td ? (car ? [25, 35] : [10, 12]) : car ? [2500, 3000] : [1000, 1300];
+  return f.value >= (fam ? mid : high);
+}
+
+/** Mixed Rank It. notableOnly ("Notables"): only famous players and big seasons, e.g. Mike Evans 2013 receiving TDs,
+ *  Vince Young 2004 rushing TDs, Johnny Manziel 2012 rushing TDs, Josh Reynolds 2014 receiving TDs (owner's request, Nov 2026). */
+export function genMixedRank(c: Ctx, teams: SchoolKey[], notableOnly = false): Question | null {
+  const unit = c.rng() < 0.6 ? "TD" : "yds", all = shuffle(c.rng, facts(c, unit).filter(f => !notableOnly || notableFact(c, f)));
   for (let t = 0; t < 10; t++) {
     const picks: Fact[] = [];
-    const big = (f: Fact) => (isStar(c, f.p) || c.honored.has(f.p.name + "|" + f.p.school)) && f.value >= (f.kind.startsWith("car") ? 2500 : 1000);
+    const big = (f: Fact) => notableOnly || ((isStar(c, f.p) || c.honored.has(f.p.name + "|" + f.p.school)) && f.value >= (f.kind.startsWith("car") ? 2500 : 1000));
     const ok = (f: Fact) => !picks.some(x => x.p.name === f.p.name || !clear(unit === "TD" ? "rushTD" : "rush", x.value, f.value, isApprox(x.p) || isApprox(f.p), big(x) && big(f)));
     for (const team of shuffle(c.rng, teams)) { const f = all.find(x => x.p.school === team && ok(x)); if (f) picks.push(f) } // both schools
     for (const f of shuffle(c.rng, all)) { if (picks.length === 4) break; if (ok(f) && !picks.some(x => x.kind === f.kind && picks.length < 3)) picks.push(f) }
     if (picks.length < 4 || new Set(picks.map(x => x.kind)).size < 3 || !bothSchools(c, picks.map(f => f.p))) continue; // ≥3 stat framings
     return {
-      type: "rank", label: c.label, verified: picks.every(f => f.p.verified), unit,
+      type: "rank", label: notableOnly ? "Notables" : c.label, verified: picks.every(f => f.p.verified), unit,
       prompt: `Rank these from highest to lowest (${unit === "TD" ? "touchdowns" : "yards"}).`,
       items: picks.map(f => ({ label: `${f.p.name} (${f.p.school} ${pos(c, f.p)}) · ${f.what}`, value: f.value, school: f.p.school })),
-      sig: "mx" + unit + picks.map(f => f.p.name + f.what).sort(),
+      sig: (notableOnly ? "nx" : "mx") + unit + picks.map(f => f.p.name + f.what).sort(),
     };
   }
   return null;

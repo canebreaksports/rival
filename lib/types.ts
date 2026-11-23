@@ -54,6 +54,7 @@ export interface Dataset {
   curated: { matchups: Matchup[]; teamPacks: Record<SchoolKey, CuratedItem[]> };
   rivalry?: { source: string; boxFrom: number; pairs: Record<string, RivalryPair> };
   leaders?: import("./trend-gen").SeasonLeaders;
+  careerRec?: import("./notable-gen").CareerReceiving;
   draft?: import("./honors-gen").DraftData;
   honors?: import("./honors-gen").HonorsData;
 }

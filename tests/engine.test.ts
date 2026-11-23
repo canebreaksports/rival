@@ -1,3 +1,4 @@
+import { genCareerRecRank } from "@/lib/notable-gen";
 import { pairKey } from "@/lib/rivalry-gen";
 import { genVsLeaderMC } from "@/lib/trend-gen";
 import { describe, expect, it } from "vitest";
@@ -78,13 +79,30 @@ describe("player-first sets", () => {
   });
   it("generated rank questions mix both schools", () => {
     for (let i = 0; i < 300; i++) for (const q of generate(DATA, ["AUB", "TENN"], 7, mulberry32(i), ALL))
-      if (q.type === "rank" && !q.trap && !q.sig.startsWith("mx")) expect(new Set(q.items.map(x => x.label.split(" ").pop())).size).toBeGreaterThan(1);
+      if (q.type === "rank" && !q.trap && !/^(mx|nx|nr)/.test(q.sig)) expect(new Set(q.items.map(x => x.label.split(" ").pop())).size).toBeGreaterThan(1);
   });
   it("sets with player data on both sides are mostly player questions and ≤2 program", () => {
     for (let i = 0; i < 300; i++) for (const [a, b] of [["LSU", "TENN"], ["AUB", "ALA"]]) {
       const qs = buildRound(DATA, a, b, mulberry32(i), VERIFIED);
       expect(qs.filter(q => q.type === "prog").length).toBeLessThanOrEqual(2);
     }
+  });
+});
+
+describe("Notables Rank It", () => {
+  it("career receiving ranks use record-book totals, two players per school, 25+ yards apart", () => {
+    let seen = 0;
+    for (let i = 0; i < 60; i++) for (const [a, b] of [["TEX", "TAMU"], ["AUB", "ALA"], ["OU", "MIZ"]] as const) {
+      const q = genCareerRecRank(DATA.careerRec!, a, b, mulberry32(i));
+      if (!q || q.type !== "rank") continue;
+      seen++;
+      expect(validateQuestion(q)).toEqual([]);
+      for (const s of [a, b]) expect(q.items.filter(x => x.school === s).length).toBe(2);
+      for (const it of q.items) expect(DATA.careerRec![it.school!].list.some(e => it.label.startsWith(e.name + " (") && e.yards === it.value)).toBe(true);
+      const v = q.items.map(x => x.value).sort((x, y) => y - x);
+      v.slice(1).forEach((x, j) => expect(v[j] - x).toBeGreaterThanOrEqual(25));
+    }
+    expect(seen).toBeGreaterThan(100);
   });
 });
 
@@ -107,7 +125,7 @@ describe("approximate-source margins (CollegeFootballData packs)", () => {
       if (/^(gm|vs|gr|gs|sc|td)/.test(q.sig)) continue; // rivalry questions have their own margins (checked above)
       if (q.type === "h2h" && !q.ypc && /yards/.test(q.prompt + q.unit) && !/touchdowns|TDs|receptions/.test(q.prompt + q.unit) && (approx(q.A.label) || approx(q.B.label)))
         expect(Math.abs(q.A.value - q.B.value)).toBeGreaterThanOrEqual(gap(q.A.value, q.B.value));
-      if (q.type === "rank" && q.unit === "yds") { // adjacent pairs involving an approximate value
+      if (q.type === "rank" && q.unit === "yds" && !q.sig.startsWith("nr")) { // adjacent pairs involving an approximate value (nr = exact record-book totals)
         const v = [...q.items].sort((a, b) => b.value - a.value);
         v.slice(1).forEach((x, j) => { if (approx(x.label) || approx(v[j].label)) expect(v[j].value - x.value).toBeGreaterThanOrEqual(gap(v[j].value, x.value)) });
       }

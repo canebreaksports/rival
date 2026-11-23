@@ -921,6 +921,12 @@
    "school": "TEX",
    "pos": "QB",
    "star": true
+  },
+  {
+   "name": "Mike Evans",
+   "school": "TAMU",
+   "pos": "WR",
+   "star": true
   }
  ],
  "seasons": [
@@ -9368,6 +9374,36 @@
    "rush": 3127,
    "rushTD": 37,
    "att": 457
+  },
+  {
+   "name": "Mike Evans",
+   "school": "TAMU",
+   "year": 2012,
+   "source": "CollegeFootballData API (api.collegefootballdata.com/stats/player/season), fetched 2026-11-17. Play-by-play derived; can differ from official totals by a few yards",
+   "verified": true,
+   "recTD": 5,
+   "recN": 82,
+   "rec": 1105
+  },
+  {
+   "name": "Mike Evans",
+   "school": "TAMU",
+   "year": 2013,
+   "source": "CollegeFootballData API (api.collegefootballdata.com/stats/player/season), fetched 2026-11-17. Play-by-play derived; can differ from official totals by a few yards",
+   "verified": true,
+   "recN": 69,
+   "recTD": 12,
+   "rec": 1394
+  },
+  {
+   "name": "Mike Evans",
+   "school": "TAMU",
+   "year": "career",
+   "source": "CollegeFootballData API (api.collegefootballdata.com/stats/player/season), fetched 2026-11-17. Play-by-play derived; can differ from official totals by a few yards (sum of seasons at this school)",
+   "verified": true,
+   "rec": 2499,
+   "recN": 151,
+   "recTD": 17
   }
  ]
 }
