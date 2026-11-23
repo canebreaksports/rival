@@ -6,7 +6,7 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-23T15:49:23.488Z",
+ "generatedAt": "2026-11-23T15:54:09.493Z",
  "engine": 13,
  "questions": [
   {
@@ -197,7 +197,7 @@
    ],
    "B": [],
    "sig": "hc12010",
-   "bonus": "years"
+   "bonus": "names"
   },
   {
    "type": "mc",

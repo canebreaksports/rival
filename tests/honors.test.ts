@@ -35,6 +35,9 @@ describe("honors questions", () => {
     }
     expect(seen).toBeGreaterThan(0);
   });
+  it("Heisman count questions always use Name Them (players), never Name the Years", () => {
+    for (const { q } of all) if (q.type === "count" && q.sig.startsWith("hc")) expect(q.bonus ?? "names").toBe("names");
+  });
   it("draft and Heisman multiple choice have a single clear answer", () => {
     for (const { q } of all) if (q.type === "mc" && /^(dm|hm)/.test(q.sig)) expect(validateQuestion(q)).toEqual([]);
   });

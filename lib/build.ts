@@ -115,7 +115,10 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
       if (out.length >= 2) break;
       const q = f();
       if (!q || sigs.has(q.sig)) continue;
-      if (q.type === "count" && [...q.A, ...q.B].every(x => x.season)) q.bonus = rng() < 0.4 ? "years" : "names"; // "Name the years" variant
+      if (q.type === "count" && [...q.A, ...q.B].every(x => x.season)) {
+        const r = rng(); // always drawn, so the rest of the set doesn't shift
+        q.bonus = q.sig.startsWith("hc") ? "names" : r < 0.4 ? "years" : "names"; // Heisman questions always name the players
+      }
       sigs.add(q.sig); out.push(q);
     }
   }
