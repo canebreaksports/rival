@@ -45,8 +45,11 @@ describe("frozen sets", () => {
       if (/touchdown/.test(q.line)) expect(q.check!.line).toBeGreaterThanOrEqual(1.5);
     }
   });
-  it("from this week on, no QB-vs-QB upsets on rushing stats (a running QB vs a passing QB isn't an upset)", () => {
-    for (const s of sets.filter(s => s.game.date >= "2026-11-22")) for (const q of s.questions)
-      if (q.type === "h2h" && q.upset && /rushing|per carry|best college season/i.test(q.prompt)) expect(/ QB\)/.test(q.A.label) && / QB\)/.test(q.B.label), s.slug).toBe(false);
+  it("from this week on, QB-vs-QB rushing upsets only between two running QBs (1,200+ career rushing yards)", () => {
+    const career = (label: string, school: string) => DATA.players.seasons.find(p => p.year === "career" && p.school === school && label.startsWith(p.name + " ("));
+    for (const s of sets.filter(s => s.game.date >= "2026-11-22")) for (const q of s.questions) {
+      if (q.type !== "h2h" || !q.upset || !/rushing|per carry|best college season/i.test(q.prompt) || !(/ QB\)/.test(q.A.label) && / QB\)/.test(q.B.label))) continue;
+      for (const side of [q.A, q.B]) { const p = career(side.label, side.school!)!; expect(p.rush ?? 0, `${s.slug}: ${side.label}`).toBeGreaterThanOrEqual(1200) }
+    }
   });
 });

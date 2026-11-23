@@ -6,8 +6,8 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-23T23:38:23.661Z",
- "engine": 37,
+ "generatedAt": "2026-11-23T23:42:06.608Z",
+ "engine": 39,
  "questions": [
   {
    "type": "rank",
@@ -289,20 +289,20 @@
    "upset": true,
    "verified": true,
    "flip": true,
-   "prompt": "Who had more college receptions (at the school shown)?",
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
    "A": {
-    "label": "Jaylen Walton (MISS RB)",
-    "value": 74,
-    "school": "MISS"
-   },
-   "B": {
-    "label": "Josh Robinson (MSST RB)",
-    "value": 43,
+    "label": "Nick Fitzgerald (MSST QB)",
+    "value": 46,
     "school": "MSST"
    },
+   "B": {
+    "label": "Quinshon Judkins (MISS RB)",
+    "value": 31,
+    "school": "MISS"
+   },
    "unit": "",
-   "note": "🚨 Upset: Jaylen Walton 74 vs. Josh Robinson 43.",
-   "sig": "urecNJosh RobinsonJaylen Walton"
+   "note": "🚨 Upset: Nick Fitzgerald 46 vs. Quinshon Judkins 31.",
+   "sig": "urushTDQuinshon JudkinsNick Fitzgerald"
   },
   {
    "type": "h2h",
