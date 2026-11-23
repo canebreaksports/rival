@@ -1,10 +1,14 @@
 // Who counts as a notable player (owner's rule, Nov 2026: no higher/lower questions on obscure players).
 // Notable = a star (players.json), an award winner or Heisman top-5 finisher, a first-round NFL pick,
-// a school top-10 career rusher or receiver, or a 1,000-yard rushing or receiving season (2012+ season leaders).
+// a school top-10 career rusher or receiver, a school top-10 single season (rushing or receiving, any era),
+// a 1,000-yard rushing or receiving season (2012+ season leaders), or the owner's own list below.
 import type { Dataset } from "./types";
 
 export const playerKey = (name: string, school: string) =>
   name.toLowerCase().replace(/\s*\([^)]*\)/g, "").replace(/['’.]/g, "").replace(/\b(jr|sr|ii|iii|iv)\b/g, "").replace(/\s+/g, " ").trim() + "|" + school;
+
+/** Players the owner has called notable by name (name, school). */
+export const OWNER_NOTABLE: [string, string][] = [["Dexter McCluster", "MISS"]];
 
 const CACHE = new WeakMap<Dataset, Set<string>>();
 export function notablePlayers(data: Dataset): Set<string> {
@@ -20,6 +24,8 @@ export function notablePlayers(data: Dataset): Set<string> {
   }
   for (const [k, l] of Object.entries(data.careerRec ?? {})) for (const e of l.list) add(e.name, k);
   for (const [k, L] of Object.entries(data.leaders?.schools ?? {})) for (const x of L) if (x.rush >= 1000 || x.rec >= 1000) add(x.name, k);
+  for (const [k, r] of Object.entries(data.seasonRecs ?? {})) for (const x of [...(r.rush ?? []), ...(r.rec ?? [])]) add(x.name, k);
+  for (const [n, k] of OWNER_NOTABLE) add(n, k);
   CACHE.set(data, s);
   return s;
 }
