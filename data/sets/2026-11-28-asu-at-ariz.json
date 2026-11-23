@@ -6,8 +6,8 @@
   "away": "ASU",
   "home": "ARIZ"
  },
- "generatedAt": "2026-11-23T21:57:46.906Z",
- "engine": 28,
+ "generatedAt": "2026-11-23T22:01:05.449Z",
+ "engine": 29,
  "questions": [
   {
    "type": "count",
@@ -233,6 +233,51 @@
    ],
    "note": "Career totals from each school's record book. Sources: Wikipedia \"Arizona State Sun Devils football statistical leaders\" career rushing yards table (revision 1387163761), which cites the school record book; fetched 2026-11-17; Wikipedia \"Arizona Wildcats football statistical leaders\" career rushing yards table (revision 1387112364), which cites the school record book; fetched 2026-11-17",
    "sig": "nrrushingJ. J. Taylor,Ka'Deem Carey,Wilford White,Woody Green",
+   "names": {
+    "prompt": "Bonus: name the other 6 players in Arizona State and Arizona's combined top 10 for career rushing yards.",
+    "a": "ASU",
+    "b": "ARIZ",
+    "A": [
+     {
+      "name": "Freddie Williams",
+      "yards": 3424,
+      "label": "3,424",
+      "profile": "3,424 career rushing yards · No. 5 on the combined list"
+     },
+     {
+      "name": "J. R. Redmond",
+      "yards": 3299,
+      "label": "3,299",
+      "profile": "3,299 career rushing yards · No. 7 on the combined list"
+     },
+     {
+      "name": "Demario Richard",
+      "yards": 3202,
+      "label": "3,202",
+      "profile": "3,202 career rushing yards · No. 9 on the combined list"
+     }
+    ],
+    "B": [
+     {
+      "name": "Trung Canidate",
+      "yards": 3824,
+      "label": "3,824",
+      "profile": "3,824 career rushing yards · No. 3 on the combined list"
+     },
+     {
+      "name": "Ontiwaun Carter",
+      "yards": 3501,
+      "label": "3,501",
+      "profile": "3,501 career rushing yards · No. 4 on the combined list"
+     },
+     {
+      "name": "Art Luppino",
+      "yards": 3381,
+      "label": "3,381",
+      "profile": "3,381 career rushing yards · No. 6 on the combined list"
+     }
+    ]
+   },
    "more": {
     "title": "Career rushing yards, Arizona State and Arizona (school top 10s)",
     "rows": [

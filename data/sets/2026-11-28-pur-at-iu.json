@@ -6,8 +6,8 @@
   "away": "PUR",
   "home": "IU"
  },
- "generatedAt": "2026-11-23T21:57:48.054Z",
- "engine": 28,
+ "generatedAt": "2026-11-23T22:01:06.491Z",
+ "engine": 29,
  "questions": [
   {
    "type": "count",
@@ -180,6 +180,63 @@
    ],
    "note": "Career totals from each school's record book. Sources: Wikipedia \"Purdue Boilermakers football statistical leaders\" career rushing yards table (revision 1387405885), which cites the school record book; fetched 2026-11-17; Wikipedia \"Indiana Hoosiers football statistical leaders\" career rushing yards table (revision 1387103435), which cites the school record book; fetched 2026-11-17",
    "sig": "nrrushingAntwaan Randle El,Montrell Lowe,Scott Dierking,Tevin Coleman",
+   "names": {
+    "prompt": "Bonus: name the other 8 players in Purdue and Indiana's combined top 10 for career rushing yards.",
+    "a": "PUR",
+    "b": "IU",
+    "A": [
+     {
+      "name": "Mike Alstott",
+      "yards": 3635,
+      "label": "3,635",
+      "profile": "3,635 career rushing yards · No. 3 on the combined list"
+     },
+     {
+      "name": "Kory Sheets",
+      "yards": 3341,
+      "label": "3,341",
+      "profile": "3,341 career rushing yards · No. 5 on the combined list"
+     },
+     {
+      "name": "Otis Armstrong",
+      "yards": 3315,
+      "label": "3,315",
+      "profile": "3,315 career rushing yards · No. 6 on the combined list"
+     }
+    ],
+    "B": [
+     {
+      "name": "Anthony Thompson",
+      "yards": 5299,
+      "label": "5,299",
+      "profile": "5,299 career rushing yards · No. 1 on the combined list"
+     },
+     {
+      "name": "Alex Smith",
+      "yards": 3492,
+      "label": "3,492",
+      "profile": "3,492 career rushing yards · No. 4 on the combined list"
+     },
+     {
+      "name": "Mike Harkrader",
+      "yards": 3257,
+      "label": "3,257",
+      "profile": "3,257 career rushing yards · No. 7 on the combined list"
+     },
+     {
+      "name": "Levron Williams",
+      "yards": 3095,
+      "label": "3,095",
+      "profile": "3,095 career rushing yards · No. 9 on the combined list"
+     },
+     {
+      "name": "Vaughn Dunbar",
+      "yards": 3029,
+      "label": "3,029",
+      "profile": "3,029 career rushing yards · No. 10 on the combined list"
+     }
+    ]
+   },
    "more": {
     "title": "Career rushing yards, Purdue and Indiana (school top 10s)",
     "rows": [

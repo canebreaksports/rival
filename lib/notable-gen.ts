@@ -4,6 +4,7 @@
 import type { Question, SchoolKey } from "./types";
 import { shuffle, type Rng } from "./rng";
 import { SCHOOL } from "./schools";
+import { combinedTopCareers, type CareerLists } from "./fillin-gen";
 
 export interface RecvEntry { name: string; yards: number; from?: number; to?: number; active?: boolean }
 export type CareerReceiving = Record<string, { source: string; verified: boolean; list: RecvEntry[] }>;
@@ -27,12 +28,19 @@ export function genCareerRecRank(cr: CareerReceiving, a: SchoolKey, b: SchoolKey
     }
     if (picks.length < 4) continue;
     const sorted = [...pool].sort((x, y) => y.yards - x.yards);
+    // Bonus (owner, Nov 2026): name the rest of the two schools' combined top 10, all eras, from the record books
+    const top = combinedTopCareers(cr as unknown as CareerLists, a, b), rest = top?.filter(e => !picks.some(p => p.name === e.name && p.school === e.school));
+    const yrs = (e: { from?: number; to?: number }) => (e.from && e.to ? ` (${e.from}–${e.to})` : "");
+    const entry = (e: NonNullable<typeof top>[0]) => ({ name: e.name, yards: e.yards, label: `${e.yards.toLocaleString("en-US")}${yrs(e)}`,
+      profile: `${e.yards.toLocaleString("en-US")} career ${what} yards${yrs(e)} · No. ${top!.indexOf(e) + 1} on the combined list` });
+    const names = rest && rest.length >= 2 ? { prompt: `Bonus: name the other ${rest.length} players in ${SCHOOL[a].name} and ${SCHOOL[b].name}'s combined top 10 for career ${what} yards.`,
+      a, b, A: rest.filter(e => e.school === a).map(entry), B: rest.filter(e => e.school === b).map(entry) } : undefined;
     return {
       type: "rank", label: "Notables", verified: cr[a].verified && cr[b].verified, pitted: true, unit: "yds",
       prompt: `Rank these ${who} by career ${what} yards at their school, highest first.`,
       items: picks.map(e => ({ label: label(e), value: e.yards, school: e.school })),
       note: `Career totals from each school's record book. Sources: ${cr[a].source}; ${cr[b].source}`,
-      sig: "nr" + what + picks.map(e => e.name).sort(),
+      sig: "nr" + what + picks.map(e => e.name).sort(), ...(names ? { names } : {}),
       more: { title: `Career ${what} yards, ${SCHOOL[a].name} and ${SCHOOL[b].name}${rushing ? " (school top 10s)" : ` (careers ending ${MODERN} or later)`}`,
         rows: sorted.slice(0, 10).map((e, i) => `${i + 1}. ${label(e)} ${e.yards.toLocaleString("en-US")}`) },
     } as Question;

@@ -6,8 +6,8 @@
   "away": "USC",
   "home": "UCLA"
  },
- "generatedAt": "2026-11-23T21:57:48.416Z",
- "engine": 28,
+ "generatedAt": "2026-11-23T22:01:06.847Z",
+ "engine": 29,
  "questions": [
   {
    "type": "rank",
@@ -247,6 +247,51 @@
    ],
    "note": "Career totals from each school's record book. Sources: Wikipedia \"USC Trojans football statistical leaders\" career rushing yards table (revision 1387109358), which cites the school record book; fetched 2026-11-17; Wikipedia \"UCLA Bruins football statistical leaders\" career rushing yards table (revision 1385843112), which cites the school record book; fetched 2026-11-17",
    "sig": "nrrushingGaston Green,Marcus Allen,Paul Perkins,Ricky Bell",
+   "names": {
+    "prompt": "Bonus: name the other 6 players in USC and UCLA's combined top 10 for career rushing yards.",
+    "a": "USC",
+    "b": "UCLA",
+    "A": [
+     {
+      "name": "Charles White",
+      "yards": 6245,
+      "label": "6,245",
+      "profile": "6,245 career rushing yards · No. 1 on the combined list"
+     },
+     {
+      "name": "Anthony Davis",
+      "yards": 3724,
+      "label": "3,724",
+      "profile": "3,724 career rushing yards · No. 5 on the combined list"
+     },
+     {
+      "name": "Ronald Jones II",
+      "yards": 3619,
+      "label": "3,619",
+      "profile": "3,619 career rushing yards · No. 7 on the combined list"
+     },
+     {
+      "name": "O. J. Simpson",
+      "yards": 3423,
+      "label": "3,423",
+      "profile": "3,423 career rushing yards · No. 9 on the combined list"
+     },
+     {
+      "name": "Mike Garrett",
+      "yards": 3221,
+      "label": "3,221",
+      "profile": "3,221 career rushing yards · No. 10 on the combined list"
+     }
+    ],
+    "B": [
+     {
+      "name": "Johnathan Franklin",
+      "yards": 4403,
+      "label": "4,403",
+      "profile": "4,403 career rushing yards · No. 3 on the combined list"
+     }
+    ]
+   },
    "more": {
     "title": "Career rushing yards, USC and UCLA (school top 10s)",
     "rows": [

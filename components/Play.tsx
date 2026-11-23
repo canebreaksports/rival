@@ -72,7 +72,7 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
   // after a question is answered, progress is saved as already past it (see settle)
   const savePast = (np: Progress) => save({ ...np, i: np.i + 1 >= n ? np.i : np.i + 1, done: np.i + 1 >= n });
   const [bonusDoneAt, setBonusDoneAt] = useState(-1);
-  const hasBonus = q?.type === "count" || (q?.type === "mc" && !!q.years);
+  const hasBonus = q?.type === "count" || (q?.type === "mc" && !!q.years) || (q?.type === "rank" && !!q.names);
   const afterBonus = !hasBonus || bonusDoneAt === p.i; // More lists and full reveals would give the bonus answers away
   const finishBonus = (pts: number) => { addBonus(pts); setBonusDoneAt(p.i) };
   const addBonus = (pts: number) => setP(x => {
@@ -108,6 +108,7 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
         {reveal && afterBonus && q.type === "mc" && q.years && <div className="more">{q.reveal}</div>}
         {reveal && afterBonus && q.more && q.more.rows.length > 0 && <div className="more"><div className="kind">More · {q.more.title}</div>{q.more.rows.map(r => <div key={r}>{r}</div>)}</div>}
         {reveal && q.type === "count" ? <NameThem q={q} onDone={finishBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
+          : reveal && q.type === "rank" && q.names ? <NameNames q={q.names} prompt={q.names.prompt} onDone={finishBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
           : reveal && q.type === "mc" && q.years ? <NameYears q={q.years} prompt={q.years.prompt} onDone={finishBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
           : reveal && <div className="next show"><button className="btn" onClick={next}>{p.i === n - 1 ? "Final Whistle" : "Next Play →"}</button></div>}
       </div>
@@ -304,7 +305,7 @@ function NameYears({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
   </div>;
 }
 
-function NameNames({ q, onDone, onHint, onNext, last }: { q: Extract<Question, { type: "count" }>; onDone: (pts: number) => void; onHint: () => void; onNext: () => void; last: boolean }) {
+function NameNames({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extract<Question, { type: "count" }>, "a" | "b" | "A" | "B">; prompt?: string; onDone: (pts: number) => void; onHint: () => void; onNext: () => void; last: boolean }) {
   // Every occurrence is its own slot: a player with two qualifying seasons (or games) has to be named twice.
   const slots = [...q.A.map(x => ({ ...x, t: q.a })), ...q.B.map(x => ({ ...x, t: q.b }))];
   const unique = [...new Map(slots.map(x => [x.t + "|" + x.name, x])).values()];
@@ -368,7 +369,7 @@ function NameNames({ q, onDone, onHint, onNext, last }: { q: Extract<Question, {
     <div className="kind">Bonus · Name Them</div>
     <div className="hintnote">Hints: year, then profile, then initials · {POINTS.hint} each</div>
     <div className="prompt" style={{ fontSize: 15, margin: "6px 0 10px" }}>
-      Name all {slots.length} one at a time, from either school{hasYears && slots.length !== unique.length ? " (a player on the list twice must be named twice)" : ""}. +{POINTS.name} each, hints {POINTS.hint}. Last names are fine. {MISSES} misses and you&apos;re out.</div>
+      {prompt && <>{prompt} </>}Name all {slots.length} one at a time, from either school{hasYears && slots.length !== unique.length ? " (a player on the list twice must be named twice)" : ""}. +{POINTS.name} each, hints {POINTS.hint}. Last names are fine. {MISSES} misses and you&apos;re out.</div>
     {!over && <>
       <div className="tally" aria-live="polite">
         <span>{filled.length} of {slots.length} named</span>

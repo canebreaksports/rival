@@ -6,8 +6,8 @@
   "away": "MICH",
   "home": "OSU"
  },
- "generatedAt": "2026-11-23T21:57:47.603Z",
- "engine": 28,
+ "generatedAt": "2026-11-23T22:01:06.116Z",
+ "engine": 29,
  "questions": [
   {
    "type": "moment",
@@ -147,6 +147,51 @@
    ],
    "note": "Career totals from each school's record book. Sources: Wikipedia \"Michigan Wolverines football statistical leaders\" career rushing yards table (revision 1352691178), which cites the school record book; fetched 2026-11-17; Wikipedia \"Ohio State Buckeyes football statistical leaders\" career rushing yards table (revision 1387105526), which cites the school record book; fetched 2026-11-17",
    "sig": "nrrushingDenard Robinson,Eddie George,Ezekiel Elliott,Tyrone Wheatley",
+   "names": {
+    "prompt": "Bonus: name the other 6 players in Michigan and Ohio State's combined top 10 for career rushing yards.",
+    "a": "MICH",
+    "b": "OSU",
+    "A": [
+     {
+      "name": "Mike Hart",
+      "yards": 5040,
+      "label": "5,040",
+      "profile": "5,040 career rushing yards · No. 2 on the combined list"
+     },
+     {
+      "name": "Anthony Thomas",
+      "yards": 4472,
+      "label": "4,472",
+      "profile": "4,472 career rushing yards · No. 4 on the combined list"
+     },
+     {
+      "name": "Jamie Morris",
+      "yards": 4392,
+      "label": "4,392",
+      "profile": "4,392 career rushing yards · No. 6 on the combined list"
+     },
+     {
+      "name": "Butch Woolfolk",
+      "yards": 3850,
+      "label": "3,850",
+      "profile": "3,850 career rushing yards · No. 9 on the combined list"
+     }
+    ],
+    "B": [
+     {
+      "name": "Archie Griffin",
+      "yards": 5589,
+      "label": "5,589",
+      "profile": "5,589 career rushing yards · No. 1 on the combined list"
+     },
+     {
+      "name": "J. K. Dobbins",
+      "yards": 4459,
+      "label": "4,459",
+      "profile": "4,459 career rushing yards · No. 5 on the combined list"
+     }
+    ]
+   },
    "more": {
     "title": "Career rushing yards, Michigan and Ohio State (school top 10s)",
     "rows": [

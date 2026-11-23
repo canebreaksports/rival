@@ -30,7 +30,8 @@ export function reviewQuestion(q: Question): ReviewItem {
         options: ["More", "Less"], answer: q.answer === "over" ? "More" : "Less", detail: q.reveal, flags };
     case "rank": {
       const order = rankOrder(q).map((i, s) => `${s + 1}. ${q.items[i].label} (${f(q.items[i].value)})`).join("\n");
-      return { kind: `Rank It · ${q.label}`, prompt: `${game ? `[${game}] ` : ""}${q.prompt}`, options: q.items.map(x => x.label), answer: order, detail: q.note, flags };
+      const bonus = q.names ? `\n${q.names.prompt}\n${[q.names.a, q.names.b].map(k => `${n(k)}: ${(k === q.names!.a ? q.names!.A : q.names!.B).map(x => `${x.name} (${x.label ?? f(x.yards)})`).join(", ") || "none"}`).join("\n")}` : "";
+      return { kind: `Rank It · ${q.label}`, prompt: `${game ? `[${game}] ` : ""}${q.prompt}`, options: q.items.map(x => x.label), answer: order, detail: (q.note ?? "") + bonus, flags };
     }
     case "h2h": {
       const w = q.A.value > q.B.value ? q.A : q.B, fmtv = (v: number) => (q.ypc ? v.toFixed(1) + " ypc" : f(v));
@@ -56,7 +57,7 @@ export function formatOf(q: Question): string {
     case "prog": return "Pick a school: A / B / Tied";
     case "count": return q.bonus === "years" ? "Pick a school: A / B / Tied, then Name the Years bonus (one year at a time, 3 misses, hints −10)" : "Pick a school: A / B / Tied, then Name Them bonus (one name at a time, 3 misses, hints −10)";
     case "moment": return q.pair ? "Higher or lower: More / Less (paired, 1 of 2 back to back)" : "Higher or lower: More / Less";
-    case "rank": return "Rank It: tap 4 in order, highest first";
+    case "rank": return "Rank It: tap 4 in order, highest first" + (q.names ? ", then Name Them bonus: complete the combined top 10 (3 misses, hints −10)" : "");
     case "h2h": return "Head to head: pick 1 of 2";
     case "duel": return "Blind stat duel: pick Player X or Y";
     case "cross": return "Multiple choice: pick 1 of 4";

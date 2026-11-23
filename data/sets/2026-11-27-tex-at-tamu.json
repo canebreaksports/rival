@@ -6,8 +6,8 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-23T21:57:46.760Z",
- "engine": 28,
+ "generatedAt": "2026-11-23T22:01:05.332Z",
+ "engine": 29,
  "questions": [
   {
    "type": "count",
@@ -317,6 +317,57 @@
    ],
    "note": "Career totals from each school's record book. Sources: Wikipedia \"Texas Longhorns football statistical leaders\" career rushing yards table (revision 1385899717), which cites the school record book; fetched 2026-11-17; Wikipedia \"Texas A&M Aggies football statistical leaders\" career rushing yards table (revision 1385856132), which cites the school record book; fetched 2026-11-17",
    "sig": "nrrushingCedric Benson,Chris Gilbert,Cyrus Gray,Darren Lewis",
+   "names": {
+    "prompt": "Bonus: name the other 7 players in Texas and Texas A&M's combined top 10 for career rushing yards.",
+    "a": "TEX",
+    "b": "TAMU",
+    "A": [
+     {
+      "name": "Ricky Williams",
+      "yards": 6279,
+      "label": "6,279",
+      "profile": "6,279 career rushing yards · No. 1 on the combined list"
+     },
+     {
+      "name": "Earl Campbell",
+      "yards": 4443,
+      "label": "4,443",
+      "profile": "4,443 career rushing yards · No. 4 on the combined list"
+     },
+     {
+      "name": "Bijan Robinson",
+      "yards": 3410,
+      "label": "3,410",
+      "profile": "3,410 career rushing yards · No. 6 on the combined list"
+     },
+     {
+      "name": "Jamaal Charles",
+      "yards": 3328,
+      "label": "3,328",
+      "profile": "3,328 career rushing yards · No. 8 on the combined list"
+     }
+    ],
+    "B": [
+     {
+      "name": "Curtis Dickey",
+      "yards": 3703,
+      "label": "3,703",
+      "profile": "3,703 career rushing yards · No. 5 on the combined list"
+     },
+     {
+      "name": "Trayveon Williams",
+      "yards": 3379,
+      "label": "3,379",
+      "profile": "3,379 career rushing yards · No. 7 on the combined list"
+     },
+     {
+      "name": "Greg Hill",
+      "yards": 3262,
+      "label": "3,262",
+      "profile": "3,262 career rushing yards · No. 10 on the combined list"
+     }
+    ]
+   },
    "more": {
     "title": "Career rushing yards, Texas and Texas A&M (school top 10s)",
     "rows": [

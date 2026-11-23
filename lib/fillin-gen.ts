@@ -46,6 +46,15 @@ export function genTopVs(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rng):
 
 export interface CareerEntry { name: string; yards: number; from?: number; to?: number; active?: boolean }
 export type CareerLists = Record<string, { source: string; verified: boolean; list: CareerEntry[] }>;
+/** Both schools' combined top N careers from their record books, or null unless provably complete. */
+export function combinedTopCareers(L: CareerLists, a: SchoolKey, b: SchoolKey, N = 10) {
+  if (!L[a]?.list.length || !L[b]?.list.length || [a, b].some(s => L[s].list.some(e => e.active))) return null;
+  const all = [a, b].flatMap(s => L[s].list.map(e => ({ ...e, school: s }))).sort((x, y) => y.yards - x.yards), top = all.slice(0, N);
+  if (all.length > N && all[N - 1].yards === all[N].yards) return null;                        // a tie straddles the cutoff
+  if ([a, b].some(s => top.filter(x => x.school === s).length >= L[s].list.length)) return null; // a school's next one is unknown
+  return top;
+}
+
 /** Combined top 10 career rushing or receiving yards from both record books (active players' totals still change: skip them). */
 export function genTopCareer(rush: CareerLists, rec: CareerLists, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
   const opts = ([["rush", rush], ["rec", rec]] as const).filter(([, L]) => L[a]?.list.length && L[b]?.list.length);

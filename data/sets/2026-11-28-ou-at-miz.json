@@ -6,8 +6,8 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-23T21:57:47.944Z",
- "engine": 28,
+ "generatedAt": "2026-11-23T22:01:06.374Z",
+ "engine": 29,
  "questions": [
   {
    "type": "rank",
@@ -70,6 +70,57 @@
    ],
    "note": "Career totals from each school's record book. Sources: Wikipedia \"Oklahoma Sooners football statistical leaders\" career receiving yards table (revision 1373733678), which cites the school record book; fetched 2026-11-23; Wikipedia \"Missouri Tigers football statistical leaders\" career receiving yards table (revision 1385738145), which cites the school record book; fetched 2026-11-23",
    "sig": "nrreceivingChase Coffman,Luther Burden III,Mark Clayton,Ryan Broyles",
+   "names": {
+    "prompt": "Bonus: name the other 7 players in Oklahoma and Missouri's combined top 10 for career receiving yards.",
+    "a": "OU",
+    "b": "MIZ",
+    "A": [
+     {
+      "name": "Sterling Shepard",
+      "yards": 3482,
+      "label": "3,482 (2012–2015)",
+      "profile": "3,482 career receiving yards (2012–2015) · No. 2 on the combined list"
+     },
+     {
+      "name": "CeeDee Lamb",
+      "yards": 3292,
+      "label": "3,292 (2017–2019)",
+      "profile": "3,292 career receiving yards (2017–2019) · No. 3 on the combined list"
+     },
+     {
+      "name": "Juaquin Iglesias",
+      "yards": 2861,
+      "label": "2,861 (2005–2008)",
+      "profile": "2,861 career receiving yards (2005–2008) · No. 5 on the combined list"
+     },
+     {
+      "name": "Kenny Stills",
+      "yards": 2594,
+      "label": "2,594 (2010–2012)",
+      "profile": "2,594 career receiving yards (2010–2012) · No. 9 on the combined list"
+     }
+    ],
+    "B": [
+     {
+      "name": "Danario Alexander",
+      "yards": 2778,
+      "label": "2,778 (2006–2009)",
+      "profile": "2,778 career receiving yards (2006–2009) · No. 6 on the combined list"
+     },
+     {
+      "name": "Justin Gage",
+      "yards": 2704,
+      "label": "2,704 (1999–2002)",
+      "profile": "2,704 career receiving yards (1999–2002) · No. 7 on the combined list"
+     },
+     {
+      "name": "J'Mon Moore",
+      "yards": 2477,
+      "label": "2,477 (2014–2017)",
+      "profile": "2,477 career receiving yards (2014–2017) · No. 10 on the combined list"
+     }
+    ]
+   },
    "more": {
     "title": "Career receiving yards, Oklahoma and Missouri (careers ending 2000 or later)",
     "rows": [

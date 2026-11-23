@@ -80,7 +80,7 @@ export type Question = QBase & (
   | { type: "prog"; a: SchoolKey; b: SchoolKey; prompt: string; values: [number, number] }
   | { type: "moment"; game?: GameBox & { loser: SchoolKey }; prompt: string; line: string; answer: "over" | "under"; reveal: string;
       check?: { value: number; line: number } }
-  | { type: "rank"; prompt: string; items: Item[]; unit: string; note?: string; game?: GameBox & { loser: SchoolKey } }
+  | { type: "rank"; prompt: string; items: Item[]; unit: string; note?: string; game?: GameBox & { loser: SchoolKey }; names?: YearsBonus }
   | { type: "h2h"; prompt: string; A: Item; B: Item; unit: string; ypc?: boolean; note?: string; flip: boolean }
   | { type: "count"; a: SchoolKey; b: SchoolKey; threshold: number; prompt?: string; A: CountEntry[]; B: CountEntry[] }
   | { type: "duel"; year: number; stat: string; aSchool: SchoolKey; other: SchoolKey; aName: string; bName: string; A: { big: string; sm: string }; B: { big: string; sm: string }; flip: boolean }

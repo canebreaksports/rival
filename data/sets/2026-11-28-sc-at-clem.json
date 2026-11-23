@@ -6,8 +6,8 @@
   "away": "SC",
   "home": "CLEM"
  },
- "generatedAt": "2026-11-23T21:57:48.181Z",
- "engine": 28,
+ "generatedAt": "2026-11-23T22:01:06.617Z",
+ "engine": 29,
  "questions": [
   {
    "type": "rank",
@@ -40,6 +40,57 @@
    ],
    "note": "Career totals from each school's record book. Sources: Wikipedia \"South Carolina Gamecocks football statistical leaders\" career rushing yards table (revision 1384437077), which cites the school record book; fetched 2026-11-17; Wikipedia \"Clemson Tigers football statistical leaders\" career rushing yards table (revision 1383648805), which cites the school record book; fetched 2026-11-17",
    "sig": "nrrushingGeorge Rogers,Raymond Priester,Thomas Dendy,Travis Etienne",
+   "names": {
+    "prompt": "Bonus: name the other 7 players in South Carolina and Clemson's combined top 10 for career rushing yards.",
+    "a": "SC",
+    "b": "CLEM",
+    "A": [
+     {
+      "name": "Brandon Bennett",
+      "yards": 3055,
+      "label": "3,055",
+      "profile": "3,055 career rushing yards · No. 8 on the combined list"
+     },
+     {
+      "name": "Harold Green",
+      "yards": 3005,
+      "label": "3,005",
+      "profile": "3,005 career rushing yards · No. 10 on the combined list"
+     }
+    ],
+    "B": [
+     {
+      "name": "James Davis",
+      "yards": 3881,
+      "label": "3,881",
+      "profile": "3,881 career rushing yards · No. 4 on the combined list"
+     },
+     {
+      "name": "C. J. Spiller",
+      "yards": 3547,
+      "label": "3,547",
+      "profile": "3,547 career rushing yards · No. 5 on the combined list"
+     },
+     {
+      "name": "Andre Ellington",
+      "yards": 3436,
+      "label": "3,436",
+      "profile": "3,436 career rushing yards · No. 6 on the combined list"
+     },
+     {
+      "name": "Wayne Gallman",
+      "yards": 3429,
+      "label": "3,429",
+      "profile": "3,429 career rushing yards · No. 7 on the combined list"
+     },
+     {
+      "name": "Travis Zachery",
+      "yards": 3043,
+      "label": "3,043",
+      "profile": "3,043 career rushing yards · No. 9 on the combined list"
+     }
+    ]
+   },
    "more": {
     "title": "Career rushing yards, South Carolina and Clemson (school top 10s)",
     "rows": [

@@ -6,8 +6,8 @@
   "away": "LOU",
   "home": "UK"
  },
- "generatedAt": "2026-11-23T21:57:47.351Z",
- "engine": 28,
+ "generatedAt": "2026-11-23T22:01:05.832Z",
+ "engine": 29,
  "questions": [
   {
    "type": "count",
@@ -233,6 +233,63 @@
    ],
    "note": "Career totals from each school's record book. Sources: Wikipedia \"Louisville Cardinals football statistical leaders\" career receiving yards table (revision 1379530191), which cites the school record book; fetched 2026-11-23; Wikipedia \"Kentucky Wildcats football statistical leaders\" career receiving yards table (revision 1381777200), which cites the school record book; fetched 2026-11-23",
    "sig": "nrreceivingDicky Lyons Jr.,Garrett Johnson,Harry Douglas,J. R. Russell",
+   "names": {
+    "prompt": "Bonus: name the other 8 players in Louisville and Kentucky's combined top 10 for career receiving yards.",
+    "a": "LOU",
+    "b": "UK",
+    "A": [
+     {
+      "name": "Arnold Jackson",
+      "yards": 3670,
+      "label": "3,670 (1997–2000)",
+      "profile": "3,670 career receiving yards (1997–2000) · No. 1 on the combined list"
+     },
+     {
+      "name": "Ibn Green",
+      "yards": 2830,
+      "label": "2,830 (1996–1999)",
+      "profile": "2,830 career receiving yards (1996–1999) · No. 4 on the combined list"
+     },
+     {
+      "name": "DeVante Parker",
+      "yards": 2775,
+      "label": "2,775 (2011–2014)",
+      "profile": "2,775 career receiving yards (2011–2014) · No. 5 on the combined list"
+     },
+     {
+      "name": "Dez Fitzpatrick",
+      "yards": 2589,
+      "label": "2,589 (2017–2020)",
+      "profile": "2,589 career receiving yards (2017–2020) · No. 7 on the combined list"
+     },
+     {
+      "name": "Jaylen Smith",
+      "yards": 2561,
+      "label": "2,561 (2015–2018)",
+      "profile": "2,561 career receiving yards (2015–2018) · No. 8 on the combined list"
+     }
+    ],
+    "B": [
+     {
+      "name": "Craig Yeast",
+      "yards": 2899,
+      "label": "2,899 (1995–1998)",
+      "profile": "2,899 career receiving yards (1995–1998) · No. 3 on the combined list"
+     },
+     {
+      "name": "Keenan Burton",
+      "yards": 2376,
+      "label": "2,376 (2003–2007)",
+      "profile": "2,376 career receiving yards (2003–2007) · No. 9 on the combined list"
+     },
+     {
+      "name": "Derek Abney",
+      "yards": 2339,
+      "label": "2,339 (2000–2003)",
+      "profile": "2,339 career receiving yards (2000–2003) · No. 10 on the combined list"
+     }
+    ]
+   },
    "more": {
     "title": "Career receiving yards, Louisville and Kentucky (careers ending 2000 or later)",
     "rows": [
