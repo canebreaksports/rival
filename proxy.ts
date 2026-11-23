@@ -14,4 +14,4 @@ export function proxy(request: NextRequest) {
   });
 }
 
-export const config = { matcher: ["/coach", "/coach/:path*", "/api/approvals"] };
+export const config = { matcher: ["/coach", "/coach/:path*", "/api/approvals", "/api/approvals/:path*"] };
