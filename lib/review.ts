@@ -54,7 +54,7 @@ export const weekOf = (date: string) => sundayOf(date);
 export function formatOf(q: Question): string {
   switch (q.type) {
     case "prog": return "Pick a school: A / B / Tied";
-    case "count": return "Pick a school: A / B / Tied, then Name Them bonus (one name at a time, 3 misses, hints −10)";
+    case "count": return q.bonus === "years" ? "Pick a school: A / B / Tied, then Name the Years bonus (one year at a time, 3 misses, hints −10)" : "Pick a school: A / B / Tied, then Name Them bonus (one name at a time, 3 misses, hints −10)";
     case "moment": return q.pair ? "Higher or lower: More / Less (paired, 1 of 2 back to back)" : "Higher or lower: More / Less";
     case "rank": return "Rank It: tap 4 in order, highest first";
     case "h2h": return "Head to head: pick 1 of 2";
@@ -73,6 +73,7 @@ export function reviewMarkdown(week: string, sets: FrozenSet[]): string {
       if (r.options && q.type !== "rank") lines.push(`   Options: ${r.options.join(" / ")}  `);
       lines.push(...r.answer.split("\n").map(a => `   **${a}**  `));
       if (r.detail) lines.push(...r.detail.split("\n").map(d => `   ${d}  `));
+      if (q.more?.rows.length) lines.push(`   *More · ${q.more.title}:* ${q.more.rows.join(" · ")}  `);
       lines.push("");
     });
   }

@@ -6,9 +6,108 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-23T15:04:52.262Z",
+ "generatedAt": "2026-11-23T15:49:23.488Z",
  "engine": 13,
  "questions": [
+  {
+   "type": "count",
+   "label": "Since 2020",
+   "a": "OU",
+   "b": "MIZ",
+   "threshold": 1200,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2020 through 2025, which school had more 1,200-yard rushing seasons?",
+   "A": [
+    {
+     "name": "Kennedy Brooks",
+     "yards": 1253,
+     "season": 2021,
+     "profile": "Running back · 2021: 1,253 rushing, 73 receiving yds"
+    },
+    {
+     "name": "Eric Gray",
+     "yards": 1364,
+     "season": 2022,
+     "profile": "Running back · 2022: 1,364 rushing, 229 receiving yds"
+    }
+   ],
+   "B": [
+    {
+     "name": "Tyler Badie",
+     "yards": 1604,
+     "season": 2021,
+     "profile": "Running back · 2021: 1,604 rushing, 330 receiving yds"
+    },
+    {
+     "name": "Cody Schrader",
+     "yards": 1617,
+     "season": 2023,
+     "profile": "Running back · 2023: 1,617 rushing, 191 receiving yds"
+    },
+    {
+     "name": "Ahmad Hardy",
+     "yards": 1649,
+     "season": 2025,
+     "profile": "Running back · 2025: 1,649 rushing, 22 receiving yds"
+    }
+   ],
+   "sig": "tsrush12002020",
+   "bonus": "names"
+  },
+  {
+   "type": "moment",
+   "label": "Longest Play",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Dec 6, 2008",
+    "winner": "OU",
+    "loser": "MIZ",
+    "ws": 62,
+    "ls": 21,
+    "venue": "Memorial Stadium (Norman, OK) · Neutral site"
+   },
+   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
+   "line": "61.5 yards",
+   "answer": "under",
+   "reveal": "Less. The longest was Danario Alexander's 39-yard catch for Missouri; Oklahoma's longest was 37 yards (Mossis Madu).",
+   "check": {
+    "value": 39,
+    "line": 61.5
+   },
+   "sig": "lg2008-12-06"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more receiving TDs in a single season?",
+   "A": {
+    "label": "Mark Andrews (TE) · 2017 OU",
+    "value": 8,
+    "school": "OU"
+   },
+   "B": {
+    "label": "Johnathon Johnson (WR) · 2018 MIZ",
+    "value": 5,
+    "school": "MIZ"
+   },
+   "unit": "receiving TDs",
+   "sig": "hJohnathon Johnson2018,Mark Andrews2017recTD",
+   "more": {
+    "title": "Top 6: single-season receiving TDs (OU, MIZ players in our data)",
+    "rows": [
+     "1. CeeDee Lamb (OU 2019) 14",
+     "2. Albert Okwuegbunam (MIZ 2017) 11",
+     "3. Sterling Shepard (OU 2015) 11",
+     "4. CeeDee Lamb (OU 2018) 11",
+     "5. J'Mon Moore (MIZ 2017) 10",
+     "6. Luther Burden III (MIZ 2023) 9"
+    ]
+   }
+  },
   {
    "type": "moment",
    "label": "Fresh Mix",
@@ -42,99 +141,6 @@
    "pairPart": 2
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more career yards from scrimmage?",
-   "A": {
-    "label": "Ish Witter (RB) · career, MIZ",
-    "value": 2698,
-    "school": "MIZ"
-   },
-   "B": {
-    "label": "Eric Gray (RB) · career, OU",
-    "value": 2234,
-    "school": "OU"
-   },
-   "unit": "yards from scrimmage",
-   "sig": "hEric Graycareer,Ish Wittercareerscrim"
-  },
-  {
-   "type": "count",
-   "label": "Since 2020",
-   "a": "OU",
-   "b": "MIZ",
-   "threshold": 900,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2020 through 2025, which school had more 900-yard rushing seasons?",
-   "A": [
-    {
-     "name": "Kennedy Brooks",
-     "yards": 1253,
-     "season": 2021,
-     "profile": "Running back · 2021: 1,253 rushing, 73 receiving yds"
-    },
-    {
-     "name": "Eric Gray",
-     "yards": 1364,
-     "season": 2022,
-     "profile": "Running back · 2022: 1,364 rushing, 229 receiving yds"
-    }
-   ],
-   "B": [
-    {
-     "name": "Larry Rountree III",
-     "yards": 972,
-     "season": 2020,
-     "profile": "Running back · 2020: 972 rushing, 100 receiving yds"
-    },
-    {
-     "name": "Tyler Badie",
-     "yards": 1604,
-     "season": 2021,
-     "profile": "Running back · 2021: 1,604 rushing, 330 receiving yds"
-    },
-    {
-     "name": "Cody Schrader",
-     "yards": 1617,
-     "season": 2023,
-     "profile": "Running back · 2023: 1,617 rushing, 191 receiving yds"
-    },
-    {
-     "name": "Ahmad Hardy",
-     "yards": 1649,
-     "season": 2025,
-     "profile": "Running back · 2025: 1,649 rushing, 22 receiving yds"
-    }
-   ],
-   "sig": "tsrush9002020"
-  },
-  {
-   "type": "moment",
-   "label": "Longest Play",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Dec 6, 2008",
-    "winner": "OU",
-    "loser": "MIZ",
-    "ws": 62,
-    "ls": 21,
-    "venue": "Memorial Stadium (Norman, OK) · Neutral site"
-   },
-   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
-   "line": "61.5 yards",
-   "answer": "under",
-   "reveal": "Less. The longest was Danario Alexander's 39-yard catch for Missouri; Oklahoma's longest was 37 yards (Mossis Madu).",
-   "check": {
-    "value": 39,
-    "line": 61.5
-   },
-   "sig": "lg2008-12-06"
-  },
-  {
    "type": "rank",
    "label": "Fresh Mix",
    "verified": true,
@@ -165,25 +171,6 @@
    "sig": "mxTDAdrian Petersoncareer total TDs (rushing + receiving),Jalen Saunderscareer total TDs (rushing + receiving),Johnathon Johnsoncareer receiving TDs,Larry Rountree III2017 rushing TDs"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving TDs in a single season?",
-   "A": {
-    "label": "Mark Andrews (TE) · 2017 OU",
-    "value": 8,
-    "school": "OU"
-   },
-   "B": {
-    "label": "Johnathon Johnson (WR) · 2018 MIZ",
-    "value": 5,
-    "school": "MIZ"
-   },
-   "unit": "receiving TDs",
-   "sig": "hJohnathon Johnson2018,Mark Andrews2017recTD"
-  },
-  {
    "type": "count",
    "label": "Heisman",
    "a": "OU",
@@ -209,28 +196,8 @@
     }
    ],
    "B": [],
-   "sig": "hc12010"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receiving yards (at the school shown)?",
-   "A": {
-    "label": "Ish Witter (MIZ RB)",
-    "value": 280,
-    "school": "MIZ"
-   },
-   "B": {
-    "label": "Adrian Peterson (OU RB)",
-    "value": 198,
-    "school": "OU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Ish Witter 280 vs. Adrian Peterson 198.",
-   "sig": "urecAdrian PetersonIsh Witter"
+   "sig": "hc12010",
+   "bonus": "years"
   },
   {
    "type": "mc",
@@ -261,6 +228,49 @@
    ],
    "reveal": "Oklahoma +273. Missouri had 354 total yards, Oklahoma 627.",
    "sig": "td2008-12-06total"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Oklahoma vs Missouri",
+   "a": "OU",
+   "b": "MIZ",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    0,
+    1
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more career yards from scrimmage?",
+   "A": {
+    "label": "Ish Witter (RB) · career, MIZ",
+    "value": 2698,
+    "school": "MIZ"
+   },
+   "B": {
+    "label": "Eric Gray (RB) · career, OU",
+    "value": 2234,
+    "school": "OU"
+   },
+   "unit": "yards from scrimmage",
+   "sig": "hEric Graycareer,Ish Wittercareerscrim",
+   "more": {
+    "title": "Top 6: career yards from scrimmage (OU, MIZ players in our data)",
+    "rows": [
+     "1. Samaje Perine (OU) 4,443",
+     "2. Adrian Peterson (OU) 4,243",
+     "3. Larry Rountree III (MIZ) 4,009",
+     "4. Tyler Badie (MIZ) 3,889",
+     "5. Kennedy Brooks (OU) 3,529",
+     "6. Joe Mixon (OU) 2,921"
+    ]
+   }
   }
  ]
 }

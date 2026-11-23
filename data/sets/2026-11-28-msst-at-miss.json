@@ -6,39 +6,9 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-23T15:04:52.259Z",
+ "generatedAt": "2026-11-23T15:49:23.482Z",
  "engine": 13,
  "questions": [
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Dillon Johnson (MSST RB) · career yards from scrimmage",
-     "value": 2062,
-     "school": "MSST"
-    },
-    {
-     "label": "Jordan Wilkins (MISS RB) · 2014 yards from scrimmage",
-     "value": 367,
-     "school": "MISS"
-    },
-    {
-     "label": "De'Runnya Wilson (MSST WR) · 2014 receiving yards",
-     "value": 680,
-     "school": "MSST"
-    },
-    {
-     "label": "Jo'quavious Marks (MSST RB) · career yards from scrimmage",
-     "value": 3108,
-     "school": "MSST"
-    }
-   ],
-   "sig": "mxydsDe'Runnya Wilson2014 receiving yards,Dillon Johnsoncareer yards from scrimmage,Jo'quavious Markscareer yards from scrimmage,Jordan Wilkins2014 yards from scrimmage"
-  },
   {
    "type": "count",
    "label": "Awards",
@@ -80,39 +50,91 @@
      "profile": "won the Lou Groza Award (best kicker)"
     }
    ],
-   "sig": "acall2000"
+   "sig": "acall2000",
+   "bonus": "names"
   },
   {
    "type": "mc",
-   "label": "Awards",
+   "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
-   "prompt": "Which of these players won the Maxwell Award, given to the nation's best all-around player?",
+   "game": {
+    "date": "Nov 28, 2020",
+    "winner": "MISS",
+    "loser": "MSST",
+    "ws": 31,
+    "ls": 24,
+    "venue": "Vaught-Hemingway Stadium"
+   },
+   "prompt": "What was the difference in rushing yards in Ole Miss's 31–24 win over Mississippi State?",
    "options": [
-    "Eli Manning (Ole Miss)",
-    "Johnthan Banks (Mississippi State)",
-    "Matt Corral (Ole Miss)",
-    "Kylin Hill (Mississippi State)"
+    "Ole Miss +124 yards",
+    "Mississippi State +54 yards",
+    "Ole Miss +14 yards",
+    "Mississippi State +34 yards"
    ],
    "answer": 0,
    "order": [
-    0,
-    3,
     2,
-    1
+    1,
+    0,
+    3
    ],
-   "reveal": "Eli Manning (Ole Miss) won the Maxwell Award in 2003.",
-   "sig": "ammaxwell2003"
+   "reveal": "Ole Miss +124. Ole Miss had 163 rushing yards, Mississippi State 39.",
+   "sig": "td2020-11-28rush"
+  },
+  {
+   "type": "rank",
+   "label": "Rivalry Games",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these single-game receiving performances in Mississippi State–Ole Miss games, highest first.",
+   "items": [
+    {
+     "label": "Fred Ross (MSST) · 2015",
+     "value": 117,
+     "school": "MSST"
+    },
+    {
+     "label": "Braylon Sanders (MISS) · 2019",
+     "value": 88,
+     "school": "MISS"
+    },
+    {
+     "label": "Chad Bumphis (MSST) · 2009",
+     "value": 52,
+     "school": "MSST"
+    },
+    {
+     "label": "Jaden Walley (MSST) · 2020",
+     "value": 176,
+     "school": "MSST"
+    }
+   ],
+   "sig": "grrecBraylon Sanders2019,Chad Bumphis2009,Fred Ross2015,Jaden Walley2020",
+   "more": {
+    "title": "Top receiving games in this rivalry (box scores)",
+    "rows": [
+     "1. Evan Engram (MISS) 2014: 176",
+     "2. Jaden Walley (MSST) 2020: 176",
+     "3. Donte Moncrief (MISS) 2012: 173",
+     "4. A.J. Brown (MISS) 2017: 167",
+     "5. Chad Bumphis (MSST) 2012: 146",
+     "6. LaDarius Perkins (MSST) 2010: 140",
+     "7. Elijah Moore (MISS) 2020: 139",
+     "8. Dontario Drummond (MISS) 2021: 138"
+    ]
+   }
   },
   {
    "type": "count",
-   "label": "Since 2012",
+   "label": "Since 2018",
    "a": "MSST",
    "b": "MISS",
    "threshold": 1500,
    "verified": true,
    "pitted": true,
-   "prompt": "From 2012 through 2025, which school had more 1,500-yard rushing seasons?",
+   "prompt": "From 2018 through 2025, which school had more 1,500-yard rushing seasons?",
    "A": [],
    "B": [
     {
@@ -128,7 +150,43 @@
      "profile": "Running back · 2025: 1,567 rushing, 177 receiving yds"
     }
    ],
-   "sig": "tsrush15002012"
+   "sig": "tsrush15002018",
+   "bonus": "years"
+  },
+  {
+   "type": "mc",
+   "label": "NFL Draft",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Which of these Mississippi State and Ole Miss players was drafted highest?",
+   "options": [
+    "Jonathan Mingo (Ole Miss)",
+    "Marcus Johnson (Ole Miss)",
+    "Dorsett Davis (Mississippi State)",
+    "Johnthan Banks (Mississippi State)"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    1,
+    0,
+    3
+   ],
+   "reveal": "Jonathan Mingo: No. 39 overall in 2023 · Johnthan Banks: No. 43 overall in 2013 · Marcus Johnson: No. 49 overall in 2005 · Dorsett Davis: No. 96 overall in 2002",
+   "sig": "dmDorsett Davis,Johnthan Banks,Jonathan Mingo,Marcus Johnson",
+   "more": {
+    "title": "Highest-drafted Mississippi State and Ole Miss players since 2000",
+    "rows": [
+     "1. Eli Manning (MISS) No. 1, 2004",
+     "2. Charles Cross (MSST) No. 9, 2022",
+     "3. Patrick Willis (MISS) No. 11, 2007",
+     "4. Fletcher Cox (MSST) No. 12, 2012",
+     "5. Laremy Tunsil (MISS) No. 13, 2016",
+     "6. Emmanuel Forbes (MSST) No. 16, 2023",
+     "7. Walter Nolen (MISS) No. 16, 2025",
+     "8. Jeffery Simmons (MSST) No. 19, 2019"
+    ]
+   }
   },
   {
    "type": "h2h",
@@ -147,78 +205,101 @@
     "school": "MSST"
    },
    "unit": "receiving TDs",
-   "sig": "hCody Core2014,Fred Ross2016recTD"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": false,
-   "prompt": "In Mississippi State–Ole Miss games since 2007, who had more rushing yards against the other school?",
-   "A": {
-    "label": "Kylin Hill (MSST) vs. Ole Miss",
-    "value": 322,
-    "school": "MSST"
-   },
-   "B": {
-    "label": "Quinshon Judkins (MISS) vs. Mississippi State",
-    "value": 210,
-    "school": "MISS"
-   },
-   "unit": "rushing yds",
-   "note": "Kylin Hill: 322 in 3 games. Quinshon Judkins: 210 in 2 games.",
-   "sig": "vsrushKylin Hill,Quinshon Judkins"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more career rushing yards?",
-   "A": {
-    "label": "Jordan Wilkins (RB) · career, MISS",
-    "value": 1751,
-    "school": "MISS"
-   },
-   "B": {
-    "label": "Josh Robinson (RB) · career, MSST",
-    "value": 1997,
-    "school": "MSST"
-   },
-   "unit": "rushing yards",
-   "sig": "hJordan Wilkinscareer,Josh Robinsoncareerrush"
+   "sig": "hCody Core2014,Fred Ross2016recTD",
+   "more": {
+    "title": "Top 6: single-season receiving TDs (MSST, MISS players in our data)",
+    "rows": [
+     "1. Fred Ross (MSST 2016) 12",
+     "2. A.J. Brown (MISS 2017) 11",
+     "3. De'Runnya Wilson (MSST 2015) 10",
+     "4. De'Runnya Wilson (MSST 2014) 9",
+     "5. Elijah Moore (MISS 2020) 8",
+     "6. Evan Engram (MISS 2016) 8"
+    ]
+   }
   },
   {
    "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2015, did Aeris Williams (Mississippi State) have more or less than",
-   "line": "4.5 rushing TDs",
+   "prompt": "Did Aeris Williams finish his Mississippi State career with more or less than",
+   "line": "3,350 yards from scrimmage",
    "answer": "under",
-   "reveal": "Less. Aeris Williams had 3 rushing TDs in 2015.",
+   "reveal": "Less. Aeris Williams had 2,862 yards from scrimmage in his career.",
    "check": {
-    "value": 3,
-    "line": 4.5
+    "value": 2862,
+    "line": 3350
    },
-   "sig": "ppAeris Williams2015|Jerrion Ealy2019rushTD0",
-   "pair": "ppAeris Williams2015|Jerrion Ealy2019rushTD",
+   "sig": "ppAeris Williamscareer|Henry Parrish Jr.careerscrim0",
+   "pair": "ppAeris Williamscareer|Henry Parrish Jr.careerscrim",
    "pairPart": 1
   },
   {
    "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2019, did Jerrion Ealy (Ole Miss) have more or less than",
-   "line": "6.5 rushing TDs",
+   "prompt": "Did Henry Parrish Jr. finish his Ole Miss career with more or less than",
+   "line": "2,000 yards from scrimmage",
    "answer": "under",
-   "reveal": "Less. Jerrion Ealy had 6 rushing TDs in 2019.",
+   "reveal": "Less. Henry Parrish Jr. had 1,823 yards from scrimmage in his career.",
    "check": {
-    "value": 6,
-    "line": 6.5
+    "value": 1823,
+    "line": 2000
    },
-   "sig": "ppAeris Williams2015|Jerrion Ealy2019rushTD1",
-   "pair": "ppAeris Williams2015|Jerrion Ealy2019rushTD",
+   "sig": "ppAeris Williamscareer|Henry Parrish Jr.careerscrim1",
+   "pair": "ppAeris Williamscareer|Henry Parrish Jr.careerscrim",
    "pairPart": 2
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more career rushing TDs?",
+   "A": {
+    "label": "Dillon Johnson (RB) · career, MSST",
+    "value": 11,
+    "school": "MSST"
+   },
+   "B": {
+    "label": "Dexter McCluster (RB) · career, MISS",
+    "value": 15,
+    "school": "MISS"
+   },
+   "unit": "rushing TDs",
+   "sig": "hDexter McClustercareer,Dillon JohnsoncareerrushTD",
+   "more": {
+    "title": "Top 6: career rushing TDs (MSST, MISS players in our data)",
+    "rows": [
+     "1. Nick Fitzgerald (MSST) 46",
+     "2. Dak Prescott (MSST) 41",
+     "3. Quinshon Judkins (MISS) 31",
+     "4. Jo'quavious Marks (MSST) 22",
+     "5. Jerrion Ealy (MISS) 20",
+     "6. Matt Corral (MISS) 18"
+    ]
+   }
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Dexter McCluster (MISS RB)",
+    "value": 1703,
+    "school": "MISS"
+   },
+   "B": {
+    "label": "Josh Robinson (MSST RB)",
+    "value": 493,
+    "school": "MSST"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Dexter McCluster 1,703 vs. Josh Robinson 493.",
+   "sig": "urecJosh RobinsonDexter McCluster"
   }
  ]
 }

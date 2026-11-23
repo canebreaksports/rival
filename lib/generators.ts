@@ -58,6 +58,14 @@ const ranksClear = (k: string, ps: PlayerSeason[], val: (p: PlayerSeason) => num
 /** In a matchup (two schools), a multi-player question must include players from both. */
 const bothSchools = (c: Ctx, ps: PlayerSeason[]) => c.teams.length < 2 || c.teams.every(t => ps.some(p => p.school === t));
 
+/** Top-N leaderboard for a stat among the pool (both schools), for the "More:" list after answering. */
+function leaders(c: Ctx, rows: PlayerSeason[], k: GenStat, sc: "car" | "sea", n: number) {
+  const seen = new Set<string>();
+  const top = [...rows].filter(p => p[k] != null).sort((x, y) => y[k]! - x[k]!).filter(p => { const id = p.name + p.year; if (seen.has(id)) return false; seen.add(id); return true }).slice(0, n);
+  return { title: `Top ${top.length}: ${sc === "car" ? "career" : "single-season"} ${ST[k][0]} (${[...new Set(top.map(p => p.school))].join(", ")} players in our data)`,
+    rows: top.map((p, i) => `${i + 1}. ${p.name} (${p.school}${p.year === "career" ? "" : " " + p.year}) ${fmt(p[k]!)}`) };
+}
+
 const pos = (c: Ctx, p: PlayerSeason): Pos => c.info.get(p.name + "|" + p.school)?.pos ?? "RB";
 const isStar = (c: Ctx, p: PlayerSeason) => !!c.info.get(p.name + "|" + p.school)?.star;
 /** Close calls are allowed only between notable players in notable seasons (owner's rule):
@@ -95,7 +103,7 @@ export function genRank(c: Ctx): Question | null {
     type: "rank", label: c.label, verified: allVerified(...picks),
     prompt: sc === "car" ? `Rank these players by career ${ST[k][0]} (at that school), highest first.` : `Rank these seasons by ${ST[k][0]}, highest first.`,
     items: picks.map(p => ({ label: tag(c, p), value: p[k]!, school: p.school })), unit: ST[k][1],
-    sig: "r" + key + picks.map(p => p.name + p.year).sort(),
+    sig: "r" + key + picks.map(p => p.name + p.year).sort(), more: leaders(c, g[key], k, sc, 8),
   };
 }
 
@@ -158,7 +166,7 @@ export function genH2H(c: Ctx, teams: SchoolKey[]): Question | null {
       type: "h2h", label: c.label, verified: allVerified(a, b), flip: c.rng() < 0.5,
       prompt: sc === "car" ? `Who had more career ${ST[k][0]}?` : `Who had more ${ST[k][0]} in a single season?`,
       A: { label: tag(c, a), value: a[k]!, school: a.school }, B: { label: tag(c, b), value: b[k]!, school: b.school }, unit: ST[k][0],
-      sig: "h" + [a.name + a.year, b.name + b.year].sort() + k,
+      sig: "h" + [a.name + a.year, b.name + b.year].sort() + k, more: leaders(c, g[key], k, sc, 6),
     };
   }
   return null;
@@ -238,7 +246,7 @@ export function genTrapRank(c: Ctx): Question | null {
     return {
       type: "rank", label: c.label, trap: true, verified: allVerified(...picks),
       prompt: `Rank these seasons by ${ST[k][0]}, highest first.`, items: picks.map(p => ({ label: tag(c, p), value: p[k]!, school: p.school })),
-      unit: ST[k][1], note: trapNote(c, picks, k), sig: "tr" + k + picks.map(p => p.name + p.year).sort(),
+      unit: ST[k][1], note: trapNote(c, picks, k), sig: "tr" + k + picks.map(p => p.name + p.year).sort(), more: leaders(c, sea, k, "sea", 8),
     };
   }
   return null;

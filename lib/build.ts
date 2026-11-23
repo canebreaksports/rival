@@ -111,7 +111,13 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
         () => (data.honors ? genAwardCount(data.honors, a, b, rng) : null),
         () => (data.honors ? genHeismanCount(data.honors, a, b, rng) : null)]); return f() },
     ]);
-    for (const f of tries) { if (out.length >= 2) break; const q = f(); if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q) } }
+    for (const f of tries) {
+      if (out.length >= 2) break;
+      const q = f();
+      if (!q || sigs.has(q.sig)) continue;
+      if (q.type === "count" && [...q.A, ...q.B].every(x => x.season)) q.bonus = rng() < 0.4 ? "years" : "names"; // "Name the years" variant
+      sigs.add(q.sig); out.push(q);
+    }
   }
   if (rng() < 0.7) { const u = genUpset(c); if (u) { sigs.add(u.sig); out.push(u) } }
   let trapped = rng() < 0.25;

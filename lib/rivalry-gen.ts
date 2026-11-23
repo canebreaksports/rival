@@ -67,6 +67,8 @@ export function genVsH2H(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rng, 
         A: item(x), B: item(y), unit: k === "rush" ? "rushing yds" : "receiving yds",
         note: `${x.name}: ${fmt(x[k])} in ${games(x)}. ${y.name}: ${fmt(y[k])} in ${games(y)}.`,
         sig: "vs" + k + [x.name, y.name].sort(),
+        more: { title: `Top ${k === "rush" ? "rushing" : "receiving"} yards against the other school since ${since}`,
+          rows: [...pr.vs].sort((p, q) => q[k] - p[k]).slice(0, 6).map((v, i) => `${i + 1}. ${v.name} (${v.school}) ${fmt(v[k])} in ${v.games} game${v.games > 1 ? "s" : ""}`) },
       };
     }
   }
@@ -90,6 +92,9 @@ export function genGameRank(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rn
       prompt: `Rank these single-game ${cat === "rush" ? "rushing" : "receiving"} performances in ${name(a)}–${name(b)} games, highest first.`,
       items: picks.map(x => ({ label: `${x.p.name} (${x.school}) · ${x.g.season}${x.g.bowl ? " postseason" : ""}`, value: x.p.yds, school: x.school })),
       sig: "gr" + cat + picks.map(x => x.p.name + x.g.season).sort(),
+      more: { title: `Top ${cat === "rush" ? "rushing" : "receiving"} games in this rivalry (box scores)`,
+        rows: [...perfs].sort((p, q) => q.p.yds - p.p.yds).filter((x, i, arr) => arr.findIndex(y => y.p.name === x.p.name && y.g === x.g) === i).slice(0, 8)
+          .map((x, i) => `${i + 1}. ${x.p.name} (${x.school}) ${x.g.season}: ${fmt(x.p.yds)}`) },
     };
   }
   return null;
@@ -164,6 +169,8 @@ export function genLongestSeriesMC(pr: RivalryPair, a: SchoolKey, b: SchoolKey, 
     options: picks.map(label), answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
     reveal: [...picks].sort((x, y) => y.p.yds - x.p.yds).map(x => `${x.p.name} ${x.g.season}: ${x.p.yds}-yard ${x.p.kind === "rush" ? "run" : "catch"}`).join(" · "),
     sig: "lp" + top.g.date,
+    more: { title: `Longest plays in ${name(a)}–${name(b)} games since ${from}`,
+      rows: sorted.slice(0, 8).map((x, i) => `${i + 1}. ${x.p.name} (${x.school}) ${x.g.season}: ${x.p.yds}-yard ${x.p.kind === "rush" ? "run" : "catch"}`) },
   };
 }
 

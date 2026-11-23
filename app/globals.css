@@ -126,3 +126,5 @@ table.stats{width:100%;border-collapse:collapse;font-size:12px}
 table.stats th{font:700 11px Oswald;letter-spacing:1px;color:var(--gold);text-align:left;padding:6px 4px;border-bottom:1px solid var(--line)}
 table.stats td{padding:6px 4px;border-bottom:1px solid #1d3326}
 table.stats td:not(:first-child),table.stats th:not(:first-child){text-align:right}
+.more{margin-top:12px;font-size:12px;line-height:1.6;color:var(--dim);background:#050a07;border-radius:10px;padding:10px 12px}
+.more .kind{margin-bottom:4px}

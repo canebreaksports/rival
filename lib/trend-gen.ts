@@ -88,6 +88,8 @@ export function genVsLeaderMC(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: 
       options: opts.map(label), answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
       reveal: opts.map(v => `${label(v)} ${fmt(val(v))} in ${v.games} game${v.games > 1 ? "s" : ""}`).join(" · "),
       sig: "tv" + k,
+      more: { title: `Top ${what} against the other school since ${from}`,
+        rows: ranked.slice(0, 8).map((v, i) => `${i + 1}. ${label(v)} ${fmt(val(v))} in ${v.games} game${v.games > 1 ? "s" : ""}`) },
     };
   }
   return null;

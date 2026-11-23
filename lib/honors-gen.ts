@@ -51,7 +51,10 @@ export function genDraftMC(d: DraftData, a: SchoolKey, b: SchoolKey, rng: Rng): 
       prompt: `Which of these ${name(a)} and ${name(b)} players was drafted highest?`,
       options: [best, ...picks.filter(p => p !== best)].map(label), answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
       reveal: picks.sort((x, y) => x.overall - y.overall).map(p => `${p.name}: No. ${p.overall} overall in ${p.year}`).join(" · "),
-      sig: "dm" + picks.map(p => p.name).sort() };
+      sig: "dm" + picks.map(p => p.name).sort(),
+      more: { title: `Highest-drafted ${name(a)} and ${name(b)} players since ${d.from}`,
+        rows: d.picks.filter(p => p.school === a || p.school === b).sort((x, y) => x.overall - y.overall || x.year - y.year).slice(0, 8)
+          .map((p, i) => `${i + 1}. ${p.name} (${p.school}) No. ${p.overall}, ${p.year}`) } };
   }
   return null;
 }
@@ -104,7 +107,9 @@ export function genAwardMC(h: HonorsData, a: SchoolKey, b: SchoolKey, rng: Rng, 
     return { type: "mc", label: "Awards", verified: true, pitted: true,
       prompt: `Which of these players won the ${aw.name}, given to the nation's ${aw.for}?`,
       options: opts, answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
-      reveal: `${w.name} (${name(w.school)}) won the ${aw.name} in ${w.year}.`, sig: "am" + w.award + w.year };
+      reveal: `${w.name} (${name(w.school)}) won the ${aw.name} in ${w.year}.`, sig: "am" + w.award + w.year,
+      more: { title: `Every ${name(a)} and ${name(b)} winner of the ${aw.name}`,
+        rows: h.everWon.filter(x => x.award === w.award && (x.school === a || x.school === b)).sort((x, y) => x.year - y.year).map(x => `${x.year}: ${x.name} (${x.school})`) } };
   }
   return null;
 }
@@ -143,7 +148,9 @@ export function genHeismanMC(h: HonorsData, a: SchoolKey, b: SchoolKey, rng: Rng
       prompt: "Which of these finished highest in Heisman Trophy voting that season?",
       options: [top, ...picks.filter(p => p !== top)].map(label), answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
       reveal: [...picks].sort((x, y) => x.place - y.place).map(p => `${p.name}: ${ord(p.place)} in ${p.year}`).join(" · "),
-      sig: "hm" + picks.map(p => p.name + p.year).sort() };
+      sig: "hm" + picks.map(p => p.name + p.year).sort(),
+      more: { title: `${name(a)} and ${name(b)} top-10 Heisman finishes (seasons with checked voting)`,
+        rows: pool.filter(v => v.place <= 10).sort((x, y) => x.place - y.place || x.year - y.year).slice(0, 12).map(v => `${ord(v.place)}: ${v.name} (${v.school}) ${v.year}`) } };
   }
   return null;
 }

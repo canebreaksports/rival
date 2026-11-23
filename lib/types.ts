@@ -66,7 +66,9 @@ export interface VsTotal { name: string; school: SchoolKey; games: number; rush:
 export interface RivalryPair { games: RivalryGame[]; vs: VsTotal[]; vsFrom?: number } // vsFrom: every game since then has a box score
 
 // ---- questions: fully self-contained so frozen sets need no data at runtime ----
-interface QBase { label: string; verified: boolean; sig: string; trap?: boolean; upset?: boolean; pair?: string; pairPart?: 1 | 2; pitted?: boolean } // pitted: about both schools by construction
+interface QBase { label: string; verified: boolean; sig: string; trap?: boolean; upset?: boolean; pair?: string; pairPart?: 1 | 2; pitted?: boolean;
+  more?: { title: string; rows: string[] }; // extra examples shown after answering (a mini leaderboard)
+  bonus?: "names" | "years" }               // Name Them variant for count questions // pitted: about both schools by construction
 export interface CountEntry { name: string; yards: number; active?: boolean; season?: number; profile?: string; label?: string } // label: shown instead of yards (e.g. "No. 3 pick") // season: season/game counts; profile: hint 2
 export interface Item { label: string; value: number; school?: SchoolKey } // school: who the item belongs to (pitted checks)
 
