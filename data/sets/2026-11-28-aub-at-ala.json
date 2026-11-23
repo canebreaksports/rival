@@ -6,8 +6,8 @@
   "away": "AUB",
   "home": "ALA"
  },
- "generatedAt": "2026-11-23T21:55:19.346Z",
- "engine": 27,
+ "generatedAt": "2026-11-23T21:57:47.132Z",
+ "engine": 28,
  "questions": [
   {
    "type": "count",
@@ -197,133 +197,6 @@
    "verified": true,
    "pitted": true,
    "bonus": "names",
-   "prompt": "Auburn and Alabama's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
-   "A": [
-    {
-     "name": "Tre Mason",
-     "yards": 1816,
-     "season": 2013,
-     "label": "2013: 1,816",
-     "profile": "2013 season, 1,816 rushing yards · No. 2 on the combined list"
-    },
-    {
-     "name": "Bo Jackson",
-     "yards": 1786,
-     "season": 1985,
-     "label": "1985: 1,786",
-     "profile": "1985 season, 1,786 rushing yards · No. 3 on the combined list"
-    },
-    {
-     "name": "Cameron Artis-Payne",
-     "yards": 1608,
-     "season": 2014,
-     "label": "2014: 1,608",
-     "profile": "2014 season, 1,608 rushing yards · No. 6 on the combined list"
-    },
-    {
-     "name": "Rudi Johnson",
-     "yards": 1567,
-     "season": 2000,
-     "label": "2000: 1,567",
-     "profile": "2000 season, 1,567 rushing yards · No. 7 on the combined list"
-    },
-    {
-     "name": "Cam Newton",
-     "yards": 1473,
-     "season": 2010,
-     "label": "2010: 1,473",
-     "profile": "2010 season, 1,473 rushing yards · No. 8 on the combined list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Derrick Henry",
-     "yards": 2219,
-     "season": 2015,
-     "label": "2015: 2,219",
-     "profile": "2015 season, 2,219 rushing yards · No. 1 on the combined list"
-    },
-    {
-     "name": "Trent Richardson",
-     "yards": 1679,
-     "season": 2011,
-     "label": "2011: 1,679",
-     "profile": "2011 season, 1,679 rushing yards · No. 4 on the combined list"
-    },
-    {
-     "name": "Mark Ingram II",
-     "yards": 1658,
-     "season": 2009,
-     "label": "2009: 1,658",
-     "profile": "2009 season, 1,658 rushing yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Bobby Humphrey",
-     "yards": 1471,
-     "season": 1986,
-     "label": "1986: 1,471",
-     "profile": "1986 season, 1,471 rushing yards · No. 9 on the combined list"
-    },
-    {
-     "name": "Najee Harris",
-     "yards": 1466,
-     "season": 2020,
-     "label": "2020: 1,466",
-     "profile": "2020 season, 1,466 rushing yards · No. 10 on the combined list"
-    }
-   ],
-   "sig": "fsrush"
-  },
-  {
-   "label": "Iron Bowl",
-   "verified": true,
-   "sig": "kIron Bowl2",
-   "type": "mc",
-   "pitted": true,
-   "prompt": "Who had more carries: Tre Mason in the 2013 SEC Championship Game (vs. Missouri) or Derrick Henry in the 2015 Iron Bowl?",
-   "options": [
-    "Tre Mason",
-    "Derrick Henry",
-    "Same number"
-   ],
-   "answer": 2,
-   "reveal": "Same number: 46 each. Mason ran 46 times for 304 yards and 4 touchdowns in Auburn's 59–42 SEC title win over Missouri. Henry ran 46 times for 271 yards and a touchdown in Alabama's 29–13 Iron Bowl win.",
-   "order": [
-    2,
-    0,
-    1
-   ]
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
-   "A": {
-    "label": "Jalen Milroe (ALA QB)",
-    "value": 33,
-    "school": "ALA"
-   },
-   "B": {
-    "label": "Cam Newton (AUB QB)",
-    "value": 20,
-    "school": "AUB"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Jalen Milroe 33 vs. Cam Newton 20.",
-   "sig": "urushTDCam NewtonJalen Milroe"
-  },
-  {
-   "type": "count",
-   "label": "Fill In",
-   "a": "AUB",
-   "b": "ALA",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
    "prompt": "Auburn and Alabama's combined top 10 career rushing yards: which school has more players on the list?",
    "A": [
     {
@@ -390,6 +263,95 @@
     }
    ],
    "sig": "fcrush"
+  },
+  {
+   "label": "Iron Bowl",
+   "verified": true,
+   "sig": "kIron Bowl2",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "Who had more carries: Tre Mason in the 2013 SEC Championship Game (vs. Missouri) or Derrick Henry in the 2015 Iron Bowl?",
+   "options": [
+    "Tre Mason",
+    "Derrick Henry",
+    "Same number"
+   ],
+   "answer": 2,
+   "reveal": "Same number: 46 each. Mason ran 46 times for 304 yards and 4 touchdowns in Auburn's 59–42 SEC title win over Missouri. Henry ran 46 times for 271 yards and a touchdown in Alabama's 29–13 Iron Bowl win.",
+   "order": [
+    2,
+    0,
+    1
+   ]
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
+   "A": {
+    "label": "Jalen Milroe (ALA QB)",
+    "value": 33,
+    "school": "ALA"
+   },
+   "B": {
+    "label": "Cam Newton (AUB QB)",
+    "value": 20,
+    "school": "AUB"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jalen Milroe 33 vs. Cam Newton 20.",
+   "sig": "urushTDCam NewtonJalen Milroe"
+  },
+  {
+   "type": "count",
+   "label": "SEC Record Book",
+   "a": "AUB",
+   "b": "ALA",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Which school has more seasons in the SEC's all-time top 10 for single-season rushing yards?",
+   "A": [
+    {
+     "name": "Tre Mason",
+     "yards": 1816,
+     "season": 2013,
+     "label": "2013: 1,816",
+     "profile": "2013 season, 1,816 rushing yards · No. 5 in SEC history"
+    },
+    {
+     "name": "Bo Jackson",
+     "yards": 1786,
+     "season": 1985,
+     "label": "1985: 1,786",
+     "profile": "1985 season, 1,786 rushing yards · No. 6 in SEC history"
+    }
+   ],
+   "B": [
+    {
+     "name": "Derrick Henry",
+     "yards": 2219,
+     "season": 2015,
+     "label": "2015: 2,219",
+     "profile": "2015 season, 2,219 rushing yards · No. 1 in SEC history"
+    },
+    {
+     "name": "Trent Richardson",
+     "yards": 1679,
+     "season": 2011,
+     "label": "2011: 1,679",
+     "profile": "2011 season, 1,679 rushing yards · No. 10 in SEC history"
+    }
+   ],
+   "sig": "strush",
+   "info": {
+    "title": "How the SEC list works",
+    "text": "Seasons played as an SEC member, through 2025, from every member school's record book. The full top 10: 1. Derrick Henry (ALA 2015) 2,219 · 2. Leonard Fournette (LSU 2015) 1,953 · 3. Herschel Walker (UGA 1981) 1,891 · 4. Darren McFadden (ARK 2007) 1,830 · 5. Tre Mason (AUB 2013) 1,816 · 6. Bo Jackson (AUB 1985) 1,786 · 7. Trayveon Williams (TAMU 2018) 1,760 · 8. Herschel Walker (UGA 1982) 1,752 · 9. Charles Alexander (LSU 1977) 1,686 · 10. Trent Richardson (ALA 2011) 1,679"
+   }
   },
   {
    "type": "rank",

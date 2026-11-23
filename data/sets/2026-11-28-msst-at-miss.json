@@ -6,9 +6,119 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-23T21:55:20.040Z",
- "engine": 27,
+ "generatedAt": "2026-11-23T21:57:47.816Z",
+ "engine": 28,
  "questions": [
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Mississippi State–Ole Miss games since 2007, who had more rushing yards against the other school?",
+   "A": {
+    "label": "Dillon Johnson (MSST) vs. Ole Miss",
+    "value": 120,
+    "school": "MSST"
+   },
+   "B": {
+    "label": "Ulysses Bentley IV (MISS) vs. Mississippi State",
+    "value": 199,
+    "school": "MISS"
+   },
+   "unit": "rushing yds",
+   "note": "Dillon Johnson: 120 in 3 games. Ulysses Bentley IV: 199 in 2 games.",
+   "sig": "vsrushDillon Johnson,Ulysses Bentley IV",
+   "more": {
+    "title": "Top rushing yards against the other school since 2007",
+    "rows": [
+     "1. Nick Fitzgerald (MSST) 391 in 3 games",
+     "2. Aeris Williams (MSST) 330 in 3 games",
+     "3. Kylin Hill (MSST) 322 in 3 games",
+     "4. Jaylen Walton (MISS) 278 in 3 games",
+     "5. Jerrion Ealy (MISS) 235 in 3 games",
+     "6. Chris Relf (MSST) 229 in 4 games"
+    ]
+   }
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Kylin Hill finish his Mississippi State career with more or less than",
+   "line": "7.5 receiving TDs",
+   "answer": "under",
+   "reveal": "Less. Kylin Hill had 6 receiving TDs in his career.",
+   "check": {
+    "value": 6,
+    "line": 7.5
+   },
+   "sig": "ppKylin Hillcareer|A.J. BrowncareerrecTD0",
+   "pair": "ppKylin Hillcareer|A.J. BrowncareerrecTD",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did A.J. Brown finish his Ole Miss career with more or less than",
+   "line": "21.5 receiving TDs",
+   "answer": "under",
+   "reveal": "Less. A.J. Brown had 19 receiving TDs in his career.",
+   "check": {
+    "value": 19,
+    "line": 21.5
+   },
+   "sig": "ppKylin Hillcareer|A.J. BrowncareerrecTD1",
+   "pair": "ppKylin Hillcareer|A.J. BrowncareerrecTD",
+   "pairPart": 2
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Walter Packer (Mississippi State)",
+     "value": 2820,
+     "school": "MSST"
+    },
+    {
+     "label": "Brandon Bolden (Ole Miss)",
+     "value": 2604,
+     "school": "MISS"
+    },
+    {
+     "label": "Dou Innocent (Ole Miss)",
+     "value": 2322,
+     "school": "MISS"
+    },
+    {
+     "label": "Anthony Dixon (Mississippi State)",
+     "value": 3994,
+     "school": "MSST"
+    }
+   ],
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Mississippi State Bulldogs football statistical leaders\" career rushing yards table (revision 1385863841), which cites the school record book; fetched 2026-11-17; Wikipedia \"Ole Miss Rebels football statistical leaders\" career rushing yards table (revision 1386157185), which cites the school record book; fetched 2026-11-17",
+   "sig": "nrrushingAnthony Dixon,Brandon Bolden,Dou Innocent,Walter Packer",
+   "more": {
+    "title": "Career rushing yards, Mississippi State and Ole Miss (school top 10s)",
+    "rows": [
+     "1. Anthony Dixon (Mississippi State) 3,994",
+     "2. Nick Fitzgerald (Mississippi State) 3,607",
+     "3. Jerious Norwood (Mississippi State) 3,212",
+     "4. Deuce McAllister (Ole Miss) 3,060",
+     "5. Walter Packer (Mississippi State) 2,820",
+     "6. Joe Gunn (Ole Miss) 2,749",
+     "7. Quinshon Judkins (Ole Miss) 2,725",
+     "8. Michael Davis (Mississippi State) 2,721",
+     "9. Kayo Dottley (Ole Miss) 2,654",
+     "10. Brandon Bolden (Ole Miss) 2,604"
+    ]
+   }
+  },
   {
    "type": "count",
    "label": "Fill In",
@@ -86,135 +196,41 @@
    "sig": "fcrec"
   },
   {
-   "type": "count",
-   "label": "Fill In",
-   "a": "MSST",
-   "b": "MISS",
-   "threshold": 0,
+   "type": "mc",
+   "label": "Walk-offs",
    "verified": true,
    "pitted": true,
-   "bonus": "names",
-   "prompt": "Mississippi State and Ole Miss's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
-   "A": [
-    {
-     "name": "Anthony Dixon",
-     "yards": 1391,
-     "season": 2009,
-     "label": "2009: 1,391",
-     "profile": "2009 season, 1,391 rushing yards · No. 3 on the combined list"
-    },
-    {
-     "name": "Nick Fitzgerald",
-     "yards": 1385,
-     "season": 2016,
-     "label": "2016: 1,385",
-     "profile": "2016 season, 1,385 rushing yards · No. 4 on the combined list"
-    },
-    {
-     "name": "J.J. Johnson",
-     "yards": 1383,
-     "season": 1998,
-     "label": "1998: 1,383",
-     "profile": "1998 season, 1,383 rushing yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Kylin Hill",
-     "yards": 1350,
-     "season": 2019,
-     "label": "2019: 1,350",
-     "profile": "2019 season, 1,350 rushing yards · No. 6 on the combined list"
-    },
-    {
-     "name": "Josh Robinson",
-     "yards": 1203,
-     "season": 2014,
-     "label": "2014: 1,203",
-     "profile": "2014 season, 1,203 rushing yards · No. 8 on the combined list"
-    },
-    {
-     "name": "Wayne Jones",
-     "yards": 1193,
-     "season": 1973,
-     "label": "1973: 1,193",
-     "profile": "1973 season, 1,193 rushing yards · No. 9 on the combined list"
-    },
-    {
-     "name": "Vick Ballard",
-     "yards": 1189,
-     "season": 2011,
-     "label": "2011: 1,189",
-     "profile": "2011 season, 1,189 rushing yards · No. 10 on the combined list"
-    }
+   "prompt": "Of the 19 Mississippi State–Ole Miss games since 2007, how many were won on the final play or in overtime? (Counts: a game-winning score as time expired in the 4th quarter, or any overtime win.)",
+   "options": [
+    "1",
+    "3",
+    "4",
+    "2"
    ],
-   "B": [
-    {
-     "name": "Quinshon Judkins",
-     "yards": 1567,
-     "season": 2022,
-     "label": "2022: 1,567",
-     "profile": "2022 season, 1,567 rushing yards · No. 1 on the combined list"
-    },
-    {
-     "name": "Kewan Lacy",
-     "yards": 1567,
-     "season": 2025,
-     "label": "2025: 1,567",
-     "profile": "2025 season, 1,567 rushing yards · No. 2 on the combined list"
-    },
-    {
-     "name": "Kayo Dottley",
-     "yards": 1312,
-     "season": 1949,
-     "label": "1949: 1,312",
-     "profile": "1949 season, 1,312 rushing yards · No. 7 on the combined list"
-    }
+   "answer": 0,
+   "order": [
+    3,
+    1,
+    0,
+    2
    ],
-   "sig": "fsrush"
-  },
-  {
-   "type": "rank",
-   "label": "Notables",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Quinshon Judkins (MISS RB) · 2023 rushing yards",
-     "value": 1158,
-     "school": "MISS"
-    },
-    {
-     "label": "Kylin Hill (MSST RB) · 2019 yards from scrimmage",
-     "value": 1530,
-     "school": "MSST"
-    },
-    {
-     "label": "A.J. Brown (MISS WR) · 2018 receiving yards",
-     "value": 1355,
-     "school": "MISS"
-    },
-    {
-     "label": "Dexter McCluster (MISS RB) · career yards from scrimmage",
-     "value": 3658,
-     "school": "MISS"
-    }
-   ],
-   "sig": "nxydsA.J. Brown2018 receiving yards,Dexter McClustercareer yards from scrimmage,Kylin Hill2019 yards from scrimmage,Quinshon Judkins2023 rushing yards"
-  },
-  {
-   "type": "moment",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, did Ole Miss beat Mississippi State more or fewer than",
-   "line": "16.5 times",
-   "answer": "under",
-   "reveal": "Fewer. Ole Miss went 15–11 against Mississippi State from 2000 to 2025 (26 meetings, on-field results).",
-   "check": {
-    "value": 15,
-    "line": 16.5
+   "reveal": "1: 2013 overtime win, Mississippi State 17–10.",
+   "years": {
+    "prompt": "Name the season it happened.",
+    "a": "MSST",
+    "b": "MISS",
+    "A": [
+     {
+      "name": "Overtime win: Mississippi State 17, Ole Miss 10",
+      "yards": 7,
+      "season": 2013,
+      "label": "17–10 (OT)",
+      "profile": "Overtime win, 17–10"
+     }
+    ],
+    "B": []
    },
-   "sig": "scMISSMSST"
+   "sig": "wm2007"
   },
   {
    "type": "mc",
@@ -239,96 +255,31 @@
    "sig": "mm45"
   },
   {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
-   "items": [
-    {
-     "label": "Jerrion Ealy (RB) · 2020 MISS",
-     "value": 900,
-     "school": "MISS"
-    },
-    {
-     "label": "Josh Robinson (RB) · 2013 MSST",
-     "value": 574,
-     "school": "MSST"
-    },
-    {
-     "label": "Aeris Williams (RB) · 2016 MSST",
-     "value": 765,
-     "school": "MSST"
-    },
-    {
-     "label": "Quinshon Judkins (RB) · 2023 MISS",
-     "value": 1307,
-     "school": "MISS"
-    }
-   ],
-   "unit": "yds",
-   "note": "🪤 Trap: Jerrion Ealy's best year was 2021 (986), not 2020; Josh Robinson's best year was 2014 (1,573), not 2013; Aeris Williams's best year was 2017 (1,249), not 2016; Quinshon Judkins's best year was 2022 (1,699), not 2023.",
-   "sig": "trscrimAeris Williams2016,Jerrion Ealy2020,Josh Robinson2013,Quinshon Judkins2023",
-   "more": {
-    "title": "Top 8: single-season yards from scrimmage (MISS, MSST players in our data)",
-    "rows": [
-     "1. Quinshon Judkins (MISS 2022) 1,699",
-     "2. Dexter McCluster (MISS 2009) 1,689",
-     "3. Josh Robinson (MSST 2014) 1,573",
-     "4. Kylin Hill (MSST 2019) 1,530",
-     "5. Quinshon Judkins (MISS 2023) 1,307",
-     "6. Dexter McCluster (MISS 2008) 1,280",
-     "7. Jordan Wilkins (MISS 2017) 1,252",
-     "8. Aeris Williams (MSST 2017) 1,249"
-    ]
-   }
-  },
-  {
-   "type": "rank",
-   "label": "Notables",
+   "type": "count",
+   "label": "Since 2021",
+   "a": "MSST",
+   "b": "MISS",
+   "threshold": 1300,
    "verified": true,
    "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
-   "items": [
+   "prompt": "From 2021 through 2025, which school had more 1,300-yard rushing seasons?",
+   "A": [],
+   "B": [
     {
-     "label": "Walter Packer (Mississippi State)",
-     "value": 2820,
-     "school": "MSST"
+     "name": "Quinshon Judkins",
+     "yards": 1567,
+     "season": 2022,
+     "profile": "Running back · 2022: 1,567 rushing, 132 receiving yds"
     },
     {
-     "label": "Brandon Bolden (Ole Miss)",
-     "value": 2604,
-     "school": "MISS"
-    },
-    {
-     "label": "Dou Innocent (Ole Miss)",
-     "value": 2322,
-     "school": "MISS"
-    },
-    {
-     "label": "Anthony Dixon (Mississippi State)",
-     "value": 3994,
-     "school": "MSST"
+     "name": "Kewan Lacy",
+     "yards": 1567,
+     "season": 2025,
+     "profile": "Running back · 2025: 1,567 rushing, 177 receiving yds"
     }
    ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"Mississippi State Bulldogs football statistical leaders\" career rushing yards table (revision 1385863841), which cites the school record book; fetched 2026-11-17; Wikipedia \"Ole Miss Rebels football statistical leaders\" career rushing yards table (revision 1386157185), which cites the school record book; fetched 2026-11-17",
-   "sig": "nrrushingAnthony Dixon,Brandon Bolden,Dou Innocent,Walter Packer",
-   "more": {
-    "title": "Career rushing yards, Mississippi State and Ole Miss (school top 10s)",
-    "rows": [
-     "1. Anthony Dixon (Mississippi State) 3,994",
-     "2. Nick Fitzgerald (Mississippi State) 3,607",
-     "3. Jerious Norwood (Mississippi State) 3,212",
-     "4. Deuce McAllister (Ole Miss) 3,060",
-     "5. Walter Packer (Mississippi State) 2,820",
-     "6. Joe Gunn (Ole Miss) 2,749",
-     "7. Quinshon Judkins (Ole Miss) 2,725",
-     "8. Michael Davis (Mississippi State) 2,721",
-     "9. Kayo Dottley (Ole Miss) 2,654",
-     "10. Brandon Bolden (Ole Miss) 2,604"
-    ]
-   }
+   "sig": "tsrush13002021",
+   "bonus": "names"
   },
   {
    "type": "count",
@@ -374,62 +325,90 @@
    "bonus": "names"
   },
   {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": true,
-   "prompt": "In Mississippi State–Ole Miss games since 2007, who had more receiving yards against the other school?",
-   "A": {
-    "label": "Deddrick Thomas (MSST) vs. Ole Miss",
-    "value": 105,
-    "school": "MSST"
-   },
-   "B": {
-    "label": "Donte Moncrief (MISS) vs. Mississippi State",
-    "value": 217,
-    "school": "MISS"
-   },
-   "unit": "receiving yds",
-   "note": "Deddrick Thomas: 105 in 3 games. Donte Moncrief: 217 in 3 games.",
-   "sig": "vsrecDeddrick Thomas,Donte Moncrief",
-   "more": {
-    "title": "Top receiving yards against the other school since 2007",
-    "rows": [
-     "1. A.J. Brown (MISS) 310 in 3 games",
-     "2. Dontario Drummond (MISS) 272 in 3 games",
-     "3. Jaden Walley (MSST) 260 in 3 games",
-     "4. Fred Ross (MSST) 253 in 3 games",
-     "5. Chad Bumphis (MSST) 242 in 4 games",
-     "6. De'Runnya Wilson (MSST) 227 in 3 games"
-    ]
-   }
-  },
-  {
    "type": "count",
-   "label": "Since 2021",
+   "label": "Fill In",
    "a": "MSST",
    "b": "MISS",
-   "threshold": 1300,
+   "threshold": 0,
    "verified": true,
    "pitted": true,
-   "prompt": "From 2021 through 2025, which school had more 1,300-yard rushing seasons?",
-   "A": [],
-   "B": [
+   "bonus": "names",
+   "prompt": "Mississippi State and Ole Miss's combined top 10 single-season receiving yards (through 2025): which school has more seasons on the list?",
+   "A": [
     {
-     "name": "Quinshon Judkins",
-     "yards": 1567,
-     "season": 2022,
-     "profile": "Running back · 2022: 1,567 rushing, 132 receiving yds"
+     "name": "Brenen Thompson",
+     "yards": 1054,
+     "season": 2025,
+     "label": "2025: 1,054",
+     "profile": "2025 season, 1,054 receiving yards · No. 6 on the combined list"
     },
     {
-     "name": "Kewan Lacy",
-     "yards": 1567,
-     "season": 2025,
-     "profile": "Running back · 2025: 1,567 rushing, 177 receiving yds"
+     "name": "Makai Polk",
+     "yards": 1046,
+     "season": 2021,
+     "label": "2021: 1,046",
+     "profile": "2021 season, 1,046 receiving yards · No. 7 on the combined list"
+    },
+    {
+     "name": "Mardye McDole",
+     "yards": 1035,
+     "season": 1978,
+     "label": "1978: 1,035",
+     "profile": "1978 season, 1,035 receiving yards · No. 8 on the combined list"
     }
    ],
-   "sig": "tsrush13002021",
-   "bonus": "names"
+   "B": [
+    {
+     "name": "A. J. Brown",
+     "yards": 1320,
+     "season": 2018,
+     "label": "2018: 1,320",
+     "profile": "2018 season, 1,320 receiving yards · No. 1 on the combined list"
+    },
+    {
+     "name": "A. J. Brown",
+     "yards": 1252,
+     "season": 2017,
+     "label": "2017: 1,252",
+     "profile": "2017 season, 1,252 receiving yards · No. 2 on the combined list"
+    },
+    {
+     "name": "Elijah Moore",
+     "yards": 1193,
+     "season": 2020,
+     "label": "2020: 1,193",
+     "profile": "2020 season, 1,193 receiving yards · No. 3 on the combined list"
+    },
+    {
+     "name": "Laquon Treadwell",
+     "yards": 1153,
+     "season": 2015,
+     "label": "2015: 1,153",
+     "profile": "2015 season, 1,153 receiving yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Shay Hodge",
+     "yards": 1135,
+     "season": 2009,
+     "label": "2009: 1,135",
+     "profile": "2009 season, 1,135 receiving yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Tre Harris",
+     "yards": 1030,
+     "season": 2024,
+     "label": "2024: 1,030",
+     "profile": "2024 season, 1,030 receiving yards · No. 9 on the combined list"
+    },
+    {
+     "name": "Dontario Drummond",
+     "yards": 1028,
+     "season": 2021,
+     "label": "2021: 1,028",
+     "profile": "2021 season, 1,028 receiving yards · No. 10 on the combined list"
+    }
+   ],
+   "sig": "fsrec"
   }
  ]
 }

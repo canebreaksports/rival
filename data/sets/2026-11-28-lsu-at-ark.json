@@ -6,8 +6,8 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-23T21:55:19.763Z",
- "engine": 27,
+ "generatedAt": "2026-11-23T21:57:47.472Z",
+ "engine": 28,
  "questions": [
   {
    "type": "rank",
@@ -71,79 +71,44 @@
   },
   {
    "type": "count",
-   "label": "Fill In",
+   "label": "SEC Record Book",
    "a": "LSU",
    "b": "ARK",
    "threshold": 0,
    "verified": true,
    "pitted": true,
    "bonus": "names",
-   "prompt": "LSU and Arkansas's combined top 10 career rushing yards: which school has more players on the list?",
+   "prompt": "Which school has more seasons in the SEC's all-time top 10 for single-season rushing yards?",
    "A": [
     {
-     "name": "Kevin Faulk",
-     "yards": 4557,
-     "label": "4,557",
-     "profile": "4,557 career rushing yards · No. 2 on the combined list"
-    },
-    {
-     "name": "Dalton Hilliard",
-     "yards": 4050,
-     "label": "4,050",
-     "profile": "4,050 career rushing yards · No. 3 on the combined list"
+     "name": "Leonard Fournette",
+     "yards": 1953,
+     "season": 2015,
+     "label": "2015: 1,953",
+     "profile": "2015 season, 1,953 rushing yards · No. 2 in SEC history"
     },
     {
      "name": "Charles Alexander",
-     "yards": 4035,
-     "label": "4,035",
-     "profile": "4,035 career rushing yards · No. 4 on the combined list"
-    },
-    {
-     "name": "Leonard Fournette",
-     "yards": 3830,
-     "label": "3,830",
-     "profile": "3,830 career rushing yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Derrius Guice",
-     "yards": 3074,
-     "label": "3,074",
-     "profile": "3,074 career rushing yards · No. 9 on the combined list"
+     "yards": 1686,
+     "season": 1977,
+     "label": "1977: 1,686",
+     "profile": "1977 season, 1,686 rushing yards · No. 9 in SEC history"
     }
    ],
    "B": [
     {
      "name": "Darren McFadden",
-     "yards": 4590,
-     "label": "4,590",
-     "profile": "4,590 career rushing yards · No. 1 on the combined list"
-    },
-    {
-     "name": "Alex Collins",
-     "yards": 3703,
-     "label": "3,703",
-     "profile": "3,703 career rushing yards · No. 6 on the combined list"
-    },
-    {
-     "name": "Ben Cowins",
-     "yards": 3570,
-     "label": "3,570",
-     "profile": "3,570 career rushing yards · No. 7 on the combined list"
-    },
-    {
-     "name": "Dickey Morton",
-     "yards": 3317,
-     "label": "3,317",
-     "profile": "3,317 career rushing yards · No. 8 on the combined list"
-    },
-    {
-     "name": "Cedric Cobbs",
-     "yards": 3018,
-     "label": "3,018",
-     "profile": "3,018 career rushing yards · No. 10 on the combined list"
+     "yards": 1830,
+     "season": 2007,
+     "label": "2007: 1,830",
+     "profile": "2007 season, 1,830 rushing yards · No. 4 in SEC history"
     }
    ],
-   "sig": "fcrush"
+   "sig": "strush",
+   "info": {
+    "title": "How the SEC list works",
+    "text": "Seasons played as an SEC member, through 2025, from every member school's record book. The full top 10: 1. Derrick Henry (ALA 2015) 2,219 · 2. Leonard Fournette (LSU 2015) 1,953 · 3. Herschel Walker (UGA 1981) 1,891 · 4. Darren McFadden (ARK 2007) 1,830 · 5. Tre Mason (AUB 2013) 1,816 · 6. Bo Jackson (AUB 1985) 1,786 · 7. Trayveon Williams (TAMU 2018) 1,760 · 8. Herschel Walker (UGA 1982) 1,752 · 9. Charles Alexander (LSU 1977) 1,686 · 10. Trent Richardson (ALA 2011) 1,679"
+   }
   },
   {
    "type": "mc",
@@ -176,82 +141,72 @@
    "verified": true,
    "pitted": true,
    "bonus": "names",
-   "prompt": "LSU and Arkansas's combined top 10 single-season receiving yards (through 2025): which school has more seasons on the list?",
+   "prompt": "LSU and Arkansas's combined top 10 career receiving yards: which school has more players on the list?",
    "A": [
     {
-     "name": "Ja'Marr Chase",
-     "yards": 1780,
-     "season": 2019,
-     "label": "2019: 1,780",
-     "profile": "2019 season, 1,780 receiving yards · No. 1 on the combined list"
+     "name": "Malik Nabers",
+     "yards": 3003,
+     "label": "3,003 (2021–2023)",
+     "profile": "3,003 career receiving yards (2021–2023) · No. 1 on the combined list"
     },
     {
      "name": "Josh Reed",
-     "yards": 1740,
-     "season": 2001,
-     "label": "2001: 1,740",
-     "profile": "2001 season, 1,740 receiving yards · No. 2 on the combined list"
-    },
-    {
-     "name": "Malik Nabers",
-     "yards": 1569,
-     "season": 2023,
-     "label": "2023: 1,569",
-     "profile": "2023 season, 1,569 receiving yards · No. 3 on the combined list"
-    },
-    {
-     "name": "Justin Jefferson",
-     "yards": 1540,
-     "season": 2019,
-     "label": "2019: 1,540",
-     "profile": "2019 season, 1,540 receiving yards · No. 4 on the combined list"
+     "yards": 3001,
+     "label": "3,001 (1999–2001)",
+     "profile": "3,001 career receiving yards (1999–2001) · No. 2 on the combined list"
     },
     {
      "name": "Wendell Davis",
-     "yards": 1244,
-     "season": 1986,
-     "label": "1986: 1,244",
-     "profile": "1986 season, 1,244 receiving yards · No. 6 on the combined list"
+     "yards": 2708,
+     "label": "2,708 (1984–1987)",
+     "profile": "2,708 career receiving yards (1984–1987) · No. 6 on the combined list"
     },
     {
-     "name": "Jarvis Landry",
-     "yards": 1193,
-     "season": 2013,
-     "label": "2013: 1,193",
-     "profile": "2013 season, 1,193 receiving yards · No. 7 on the combined list"
+     "name": "Eric Martin",
+     "yards": 2625,
+     "label": "2,625 (1981–1984)",
+     "profile": "2,625 career receiving yards (1981–1984) · No. 7 on the combined list"
     },
     {
-     "name": "Brian Thomas Jr.",
-     "yards": 1177,
-     "season": 2023,
-     "label": "2023: 1,177",
-     "profile": "2023 season, 1,177 receiving yards · No. 8 on the combined list"
+     "name": "Michael Clayton",
+     "yards": 2582,
+     "label": "2,582 (2001–2003)",
+     "profile": "2,582 career receiving yards (2001–2003) · No. 8 on the combined list"
     },
     {
-     "name": "Odell Beckham Jr.",
-     "yards": 1152,
-     "season": 2013,
-     "label": "2013: 1,152",
-     "profile": "2013 season, 1,152 receiving yards · No. 9 on the combined list"
+     "name": "Brandon LaFell",
+     "yards": 2517,
+     "label": "2,517 (2006–2009)",
+     "profile": "2,517 career receiving yards (2006–2009) · No. 9 on the combined list"
     }
    ],
    "B": [
     {
-     "name": "Cobi Hamilton",
-     "yards": 1335,
-     "season": 2012,
-     "label": "2012: 1,335",
-     "profile": "2012 season, 1,335 receiving yards · No. 5 on the combined list"
+     "name": "Jarius Wright",
+     "yards": 2934,
+     "label": "2,934 (2008–2011)",
+     "profile": "2,934 career receiving yards (2008–2011) · No. 3 on the combined list"
     },
     {
-     "name": "Andrew Armstrong",
-     "yards": 1140,
-     "season": 2024,
-     "label": "2024: 1,140",
-     "profile": "2024 season, 1,140 receiving yards · No. 10 on the combined list"
+     "name": "Anthony Lucas",
+     "yards": 2879,
+     "label": "2,879 (1996–1999)",
+     "profile": "2,879 career receiving yards (1996–1999) · No. 4 on the combined list"
+    },
+    {
+     "name": "Cobi Hamilton",
+     "yards": 2854,
+     "label": "2,854 (2009–2012)",
+     "profile": "2,854 career receiving yards (2009–2012) · No. 5 on the combined list"
+    },
+    {
+     "name": "Anthony Eubanks",
+     "yards": 2440,
+     "label": "2,440 (1994–1997)",
+     "profile": "2,440 career receiving yards (1994–1997) · No. 10 on the combined list"
     }
    ],
-   "sig": "fsrec"
+   "sig": "fcrec"
   },
   {
    "type": "rank",

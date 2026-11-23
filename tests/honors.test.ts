@@ -81,3 +81,13 @@ describe("walk-offs (final play or overtime)", () => {
     }
   });
 });
+
+import { secTop10 } from "@/lib/fillin-gen";
+describe("SEC record-book top 10 (merged from member schools, seasons as SEC members)", () => {
+  it("rushing: Henry 2015 first, Ricky Williams's pre-SEC Texas season excluded, provably complete", () => {
+    const t = secTop10(DW.seasonRecs!, "rush")!;
+    expect(t[0]).toMatchObject({ name: "Derrick Henry", season: 2015, yards: 2219 });
+    expect(t.some(x => x.name === "Ricky Williams")).toBe(false);
+    expect(t).toHaveLength(10);
+  });
+});

@@ -6,107 +6,88 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-23T21:55:20.510Z",
- "engine": 27,
+ "generatedAt": "2026-11-23T21:57:48.289Z",
+ "engine": 28,
  "questions": [
   {
-   "type": "rank",
-   "label": "Rivalry Games",
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
    "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game receiving performances in Tennessee–Vanderbilt games, highest first.",
-   "items": [
-    {
-     "label": "Trent Sherfield (VAN) · 2015",
-     "value": 85,
-     "school": "VAN"
-    },
-    {
-     "label": "Jauan Jennings (TENN) · 2018",
-     "value": 51,
-     "school": "TENN"
-    },
-    {
-     "label": "Josh Malone (TENN) · 2016",
-     "value": 121,
-     "school": "TENN"
-    },
-    {
-     "label": "Trent Sherfield (VAN) · 2016",
-     "value": 184,
-     "school": "VAN"
-    }
-   ],
-   "sig": "grrecJauan Jennings2018,Josh Malone2016,Trent Sherfield2015,Trent Sherfield2016",
-   "more": {
-    "title": "Top receiving games in this rivalry (box scores)",
-    "rows": [
-     "1. Trent Sherfield (VAN) 2016: 184",
-     "2. Earl Bennett (VAN) 2005: 167",
-     "3. Jordan Matthews (VAN) 2013: 133",
-     "4. Velus Jones Jr. (TENN) 2020: 125",
-     "5. Ramel Keyton (TENN) 2023: 122",
-     "6. Josh Malone (TENN) 2016: 121",
-     "7. Dont'E Thornton (TENN) 2024: 118",
-     "8. Caleb Scott (VAN) 2016: 117"
-    ]
-   }
+   "flip": false,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Jared Pinkney (VAN TE)",
+    "value": 14,
+    "school": "VAN"
+   },
+   "B": {
+    "label": "Jamal Lewis (TENN RB)",
+    "value": 4,
+    "school": "TENN"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jared Pinkney 14 vs. Jamal Lewis 4.",
+   "sig": "urecTDJamal LewisJared Pinkney"
   },
   {
    "type": "mc",
-   "label": "Longest Play",
+   "label": "Awards",
    "verified": true,
    "pitted": true,
-   "prompt": "Since 2012, what was the longest offensive play in a Tennessee–Vanderbilt game?",
+   "prompt": "Which of these players won the Biletnikoff Award, given to the nation's best receiver?",
    "options": [
-    "Eric Gray (Tennessee), 2019: run",
-    "Ty Chandler (Tennessee), 2018: run",
-    "Will Sheppard (Vanderbilt), 2023: catch",
-    "Dont'E Thornton (Tennessee), 2024: catch"
+    "Jalin Hyatt (Tennessee)",
+    "Kalija Lipscomb (Vanderbilt)",
+    "Jared Pinkney (Vanderbilt)",
+    "Trent Sherfield (Vanderbilt)"
    ],
    "answer": 0,
    "order": [
+    2,
     0,
-    3,
     1,
-    2
+    3
    ],
-   "reveal": "Eric Gray 2019: 94-yard run · Dont'E Thornton 2024: 86-yard catch · Ty Chandler 2018: 75-yard run · Will Sheppard 2023: 27-yard catch",
-   "sig": "lp2019-11-30",
+   "reveal": "Jalin Hyatt (Tennessee) won the Biletnikoff Award in 2022.",
+   "sig": "ambiletnikoff2022",
    "more": {
-    "title": "Longest plays in Tennessee–Vanderbilt games since 2012",
+    "title": "Every Tennessee and Vanderbilt winner of the Biletnikoff Award",
     "rows": [
-     "1. Eric Gray (TENN) 2019: 94-yard run",
-     "2. Dont'E Thornton (TENN) 2024: 86-yard catch",
-     "3. Jaylen Wright (TENN) 2022: 83-yard run",
-     "4. Trent Sherfield (VAN) 2016: 76-yard catch",
-     "5. Ty Chandler (TENN) 2018: 75-yard run",
-     "6. Velus Jones Jr. (TENN) 2020: 74-yard catch",
-     "7. Zac Stacy (VAN) 2012: 72-yard catch",
-     "8. Will Sheppard (VAN) 2021: 56-yard catch"
+     "2022: Jalin Hyatt (TENN)"
     ]
    }
   },
   {
-   "type": "duel",
-   "label": "Fresh Mix",
+   "type": "h2h",
+   "label": "Against Each Other",
    "verified": true,
-   "year": 2022,
-   "stat": "Rushing season",
-   "aSchool": "VAN",
-   "other": "TENN",
-   "aName": "Re'Mahn Davis (RB)",
-   "bName": "Dylan Sampson (RB)",
+   "flip": false,
+   "prompt": "In Tennessee–Vanderbilt games since 2012, who had more rushing yards against the other school?",
    "A": {
-    "big": "926",
-    "sm": "rush yds · 4 TD"
+    "label": "Jabari Small (TENN) vs. Vanderbilt",
+    "value": 260,
+    "school": "TENN"
    },
    "B": {
-    "big": "397",
-    "sm": "rush yds · 6 TD"
+    "label": "Ralph Webb (VAN) vs. Tennessee",
+    "value": 481,
+    "school": "VAN"
    },
-   "flip": true,
-   "sig": "drush2022Dylan Sampson,Re'Mahn Davis"
+   "unit": "rushing yds",
+   "note": "Jabari Small: 260 in 4 games. Ralph Webb: 481 in 4 games.",
+   "sig": "vsrushJabari Small,Ralph Webb",
+   "more": {
+    "title": "Top rushing yards against the other school since 2012",
+    "rows": [
+     "1. Ralph Webb (VAN) 481 in 4 games",
+     "2. Jaylen Wright (TENN) 347 in 3 games",
+     "3. Dylan Sampson (TENN) 346 in 3 games",
+     "4. Eric Gray (TENN) 320 in 2 games",
+     "5. Jabari Small (TENN) 260 in 4 games",
+     "6. Joshua Dobbs (TENN) 260 in 4 games"
+    ]
+   }
   },
   {
    "type": "mc",
@@ -129,6 +110,94 @@
    ],
    "reveal": "56 points: Tennessee 56, Vanderbilt 0 (Nov 26, 2022).",
    "sig": "mm56"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these players by career rushing TDs (at that school), highest first.",
+   "items": [
+    {
+     "label": "Dylan Sampson (RB) · career, TENN",
+     "value": 35,
+     "school": "TENN"
+    },
+    {
+     "label": "Diego Pavia (QB) · career, VAN",
+     "value": 18,
+     "school": "VAN"
+    },
+    {
+     "label": "Arian Foster (RB) · career, TENN",
+     "value": 23,
+     "school": "TENN"
+    },
+    {
+     "label": "Ralph Webb (RB) · career, VAN",
+     "value": 32,
+     "school": "VAN"
+    }
+   ],
+   "unit": "TD",
+   "sig": "rcar|rushTDArian Fostercareer,Diego Paviacareer,Dylan Sampsoncareer,Ralph Webbcareer",
+   "more": {
+    "title": "Top 7: career rushing TDs (TENN, VAN players in our data)",
+    "rows": [
+     "1. Dylan Sampson (TENN) 35",
+     "2. Joshua Dobbs (TENN) 32",
+     "3. Ralph Webb (VAN) 32",
+     "4. Arian Foster (TENN) 23",
+     "5. Ke'Shawn Vaughn (VAN) 21",
+     "6. Diego Pavia (VAN) 18",
+     "7. Jamal Lewis (TENN) 17"
+    ]
+   }
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Dan Stricker (Vanderbilt, 1999–02)",
+     "value": 2880,
+     "school": "VAN"
+    },
+    {
+     "label": "Denarius Moore (Tennessee, 2007–10)",
+     "value": 2004,
+     "school": "TENN"
+    },
+    {
+     "label": "Jauan Jennings (Tennessee, 2015–19)",
+     "value": 2153,
+     "school": "TENN"
+    },
+    {
+     "label": "Earl Bennett (Vanderbilt, 2005–07)",
+     "value": 2852,
+     "school": "VAN"
+    }
+   ],
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Tennessee Volunteers football statistical leaders\" career receiving yards table (revision 1387103812), which cites the school record book; fetched 2026-11-23; Wikipedia \"Vanderbilt Commodores football statistical leaders\" career receiving yards table (revision 1385775995), which cites the school record book; fetched 2026-11-23",
+   "sig": "nrreceivingDan Stricker,Denarius Moore,Earl Bennett,Jauan Jennings",
+   "more": {
+    "title": "Career receiving yards, Tennessee and Vanderbilt (careers ending 2000 or later)",
+    "rows": [
+     "1. Jordan Matthews (Vanderbilt, 2010–13) 3,759",
+     "2. Dan Stricker (Vanderbilt, 1999–02) 2,880",
+     "3. Earl Bennett (Vanderbilt, 2005–07) 2,852",
+     "4. Kalija Lipscomb (Vanderbilt, 2016–19) 2,356",
+     "5. Jauan Jennings (Tennessee, 2015–19) 2,153",
+     "6. Robert Meachem (Tennessee, 2004–06) 2,140",
+     "7. Cedrick Wilson (Tennessee, 1997–00) 2,137",
+     "8. Will Sheppard (Vanderbilt, 2020–23) 2,067",
+     "9. Denarius Moore (Tennessee, 2007–10) 2,004"
+    ]
+   }
   },
   {
    "type": "count",
@@ -244,101 +313,6 @@
    "bonus": "names"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
-   "A": {
-    "label": "Jared Pinkney (VAN TE)",
-    "value": 14,
-    "school": "VAN"
-   },
-   "B": {
-    "label": "Jamal Lewis (TENN RB)",
-    "value": 4,
-    "school": "TENN"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Jared Pinkney 14 vs. Jamal Lewis 4.",
-   "sig": "urecTDJamal LewisJared Pinkney"
-  },
-  {
-   "type": "rank",
-   "label": "Notables",
-   "verified": true,
-   "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
-   "items": [
-    {
-     "label": "Dan Stricker (Vanderbilt, 1999–02)",
-     "value": 2880,
-     "school": "VAN"
-    },
-    {
-     "label": "Denarius Moore (Tennessee, 2007–10)",
-     "value": 2004,
-     "school": "TENN"
-    },
-    {
-     "label": "Jauan Jennings (Tennessee, 2015–19)",
-     "value": 2153,
-     "school": "TENN"
-    },
-    {
-     "label": "Earl Bennett (Vanderbilt, 2005–07)",
-     "value": 2852,
-     "school": "VAN"
-    }
-   ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"Tennessee Volunteers football statistical leaders\" career receiving yards table (revision 1387103812), which cites the school record book; fetched 2026-11-23; Wikipedia \"Vanderbilt Commodores football statistical leaders\" career receiving yards table (revision 1385775995), which cites the school record book; fetched 2026-11-23",
-   "sig": "nrreceivingDan Stricker,Denarius Moore,Earl Bennett,Jauan Jennings",
-   "more": {
-    "title": "Career receiving yards, Tennessee and Vanderbilt (careers ending 2000 or later)",
-    "rows": [
-     "1. Jordan Matthews (Vanderbilt, 2010–13) 3,759",
-     "2. Dan Stricker (Vanderbilt, 1999–02) 2,880",
-     "3. Earl Bennett (Vanderbilt, 2005–07) 2,852",
-     "4. Kalija Lipscomb (Vanderbilt, 2016–19) 2,356",
-     "5. Jauan Jennings (Tennessee, 2015–19) 2,153",
-     "6. Robert Meachem (Tennessee, 2004–06) 2,140",
-     "7. Cedrick Wilson (Tennessee, 1997–00) 2,137",
-     "8. Will Sheppard (Vanderbilt, 2020–23) 2,067",
-     "9. Denarius Moore (Tennessee, 2007–10) 2,004"
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "label": "Awards",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Which of these players won the Biletnikoff Award, given to the nation's best receiver?",
-   "options": [
-    "Jalin Hyatt (Tennessee)",
-    "Kalija Lipscomb (Vanderbilt)",
-    "Jared Pinkney (Vanderbilt)",
-    "Trent Sherfield (Vanderbilt)"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    2,
-    0,
-    1
-   ],
-   "reveal": "Jalin Hyatt (Tennessee) won the Biletnikoff Award in 2022.",
-   "sig": "ambiletnikoff2022",
-   "more": {
-    "title": "Every Tennessee and Vanderbilt winner of the Biletnikoff Award",
-    "rows": [
-     "2022: Jalin Hyatt (TENN)"
-    ]
-   }
-  },
-  {
    "type": "count",
    "label": "NFL Draft",
    "a": "TENN",
@@ -366,6 +340,27 @@
    ],
    "sig": "dcr32015lb",
    "bonus": "names"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2022,
+   "stat": "Receiving season",
+   "aSchool": "TENN",
+   "other": "VAN",
+   "aName": "Jalin Hyatt (WR)",
+   "bName": "Will Sheppard (WR)",
+   "A": {
+    "big": "1,267",
+    "sm": "rec yds · 15 TD"
+   },
+   "B": {
+    "big": "776",
+    "sm": "rec yds · 9 TD"
+   },
+   "flip": false,
+   "sig": "drec2022Jalin Hyatt,Will Sheppard"
   }
  ]
 }
