@@ -6,154 +6,9 @@
   "away": "USC",
   "home": "UCLA"
  },
- "generatedAt": "2026-11-23T23:42:07.337Z",
- "engine": 39,
+ "generatedAt": "2026-11-23T23:47:38.841Z",
+ "engine": 42,
  "questions": [
-  {
-   "type": "count",
-   "label": "Since 2020",
-   "a": "USC",
-   "b": "UCLA",
-   "threshold": 1000,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2020 through 2025, which school had more 1,000-yard receiving seasons?",
-   "A": [
-    {
-     "name": "Drake London",
-     "yards": 1084,
-     "season": 2021,
-     "profile": "Wide receiver · 2021: 2 rushing, 1,084 receiving yds"
-    },
-    {
-     "name": "Tahj Washington",
-     "yards": 1062,
-     "season": 2023,
-     "profile": "Wide receiver · 2023: 10 rushing, 1,062 receiving yds"
-    },
-    {
-     "name": "Makai Lemon",
-     "yards": 1156,
-     "season": 2025,
-     "profile": "Wide receiver · 2025: 4 rushing, 1,156 receiving yds"
-    }
-   ],
-   "B": [],
-   "sig": "tsrec10002020",
-   "bonus": "names"
-  },
-  {
-   "type": "mc",
-   "label": "Ranked Wins",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2015, which school has more wins over AP-ranked opponents, and how many?",
-   "options": [
-    "USC, 16",
-    "USC, 19",
-    "UCLA, 11",
-    "UCLA, 14"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    0,
-    1,
-    2
-   ],
-   "reveal": "USC 16, UCLA 11 (through 2025). Latest: USC: 2023 vs. No. 16 Louisville 42–28, 2024 vs. No. 13 LSU 27–20, 2025 vs. No. 15 Michigan 31–13; UCLA: 2022 vs. No. 11 Utah 42–32, 2023 vs. No. 13 Washington State 25–17, 2025 vs. No. 7 Penn State 42–37.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
-   },
-   "sig": "rw2015"
-  },
-  {
-   "type": "count",
-   "label": "Fill In",
-   "a": "USC",
-   "b": "UCLA",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "USC and UCLA's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
-   "A": [
-    {
-     "name": "Marcus Allen",
-     "yards": 2427,
-     "season": 1981,
-     "label": "1981: 2,427",
-     "profile": "1981 season, 2,427 rushing yards · No. 1 on the combined list"
-    },
-    {
-     "name": "Charles White",
-     "yards": 2050,
-     "season": 1979,
-     "label": "1979: 2,050",
-     "profile": "1979 season, 2,050 rushing yards · No. 2 on the combined list"
-    },
-    {
-     "name": "Ricky Bell",
-     "yards": 1957,
-     "season": 1975,
-     "label": "1975: 1,957",
-     "profile": "1975 season, 1,957 rushing yards · No. 3 on the combined list"
-    },
-    {
-     "name": "O. J. Simpson",
-     "yards": 1880,
-     "season": 1968,
-     "label": "1968: 1,880",
-     "profile": "1968 season, 1,880 rushing yards · No. 4 on the combined list"
-    },
-    {
-     "name": "Charles White",
-     "yards": 1859,
-     "season": 1978,
-     "label": "1978: 1,859",
-     "profile": "1978 season, 1,859 rushing yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Reggie Bush",
-     "yards": 1740,
-     "season": 2005,
-     "label": "2005: 1,740",
-     "profile": "2005 season, 1,740 rushing yards · No. 6 on the combined list"
-    },
-    {
-     "name": "Marcus Allen",
-     "yards": 1563,
-     "season": 1980,
-     "label": "1980: 1,563",
-     "profile": "1980 season, 1,563 rushing yards · No. 10 on the combined list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Johnathan Franklin",
-     "yards": 1734,
-     "season": 2012,
-     "label": "2012: 1,734",
-     "profile": "2012 season, 1,734 rushing yards · No. 7 on the combined list"
-    },
-    {
-     "name": "Paul Perkins",
-     "yards": 1575,
-     "season": 2014,
-     "label": "2014: 1,575",
-     "profile": "2014 season, 1,575 rushing yards · No. 8 on the combined list"
-    },
-    {
-     "name": "Karim Abdul-Jabbar",
-     "yards": 1571,
-     "season": 1995,
-     "label": "1995: 1,571",
-     "profile": "1995 season, 1,571 rushing yards · No. 9 on the combined list"
-    }
-   ],
-   "sig": "fsrush"
-  },
   {
    "type": "rank",
    "label": "Notables",
@@ -270,147 +125,101 @@
   },
   {
    "type": "moment",
-   "label": "Longest Play",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 30, 2013",
-    "winner": "UCLA",
-    "loser": "USC",
-    "ws": 35,
-    "ls": 14,
-    "venue": "Los Angeles Memorial Coliseum"
-   },
-   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
-   "line": "54.5 yards",
-   "answer": "under",
-   "reveal": "Less. The longest was Paul Perkins's 36-yard catch for UCLA; USC's longest was 33 yards (Javorius Allen).",
-   "check": {
-    "value": 36,
-    "line": 54.5
-   },
-   "sig": "lg2013-11-30"
-  },
-  {
-   "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more career rushing yards?",
+   "prompt": "In 2016, did Sam Darnold (USC) have more or less than",
+   "line": "200 rushing yards",
+   "answer": "over",
+   "reveal": "More. Sam Darnold had 250 rushing yards in 2016.",
+   "check": {
+    "value": 250,
+    "line": 200
+   },
+   "sig": "ppSam Darnold2016|Joshua Kelley2019rush0",
+   "pair": "ppSam Darnold2016|Joshua Kelley2019rush",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2019, did Joshua Kelley (UCLA) have more or less than",
+   "line": "1,200 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Joshua Kelley had 1,060 rushing yards in 2019.",
+   "check": {
+    "value": 1060,
+    "line": 1200
+   },
+   "sig": "ppSam Darnold2016|Joshua Kelley2019rush1",
+   "pair": "ppSam Darnold2016|Joshua Kelley2019rush",
+   "pairPart": 2
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2014,
+   "stat": "Receiving season",
+   "aSchool": "UCLA",
+   "other": "USC",
+   "aName": "Jordan Payton (WR)",
+   "bName": "JuJu Smith-Schuster (WR)",
    "A": {
-    "label": "Dorian Thompson-Robinson (QB) · career, UCLA",
-    "value": 1838,
-    "school": "UCLA"
+    "big": "954",
+    "sm": "rec yds · 7 TD"
    },
    "B": {
-    "label": "Jo'quavious Marks (RB) · career, USC",
-    "value": 1133,
-    "school": "USC"
+    "big": "724",
+    "sm": "rec yds · 5 TD"
    },
-   "unit": "rushing yards",
-   "sig": "hDorian Thompson-Robinsoncareer,Jo'quavious Markscareerrush",
-   "more": {
-    "title": "Top 6: career rushing yards (UCLA, USC players in our data)",
-    "rows": [
-     "1. Paul Perkins (UCLA) 3,488",
-     "2. Zach Charbonnet (UCLA) 2,496",
-     "3. Joshua Kelley (UCLA) 2,303",
-     "4. Dorian Thompson-Robinson (UCLA) 1,838",
-     "5. Brett Hundley (UCLA) 1,747",
-     "6. Jo'quavious Marks (USC) 1,133"
-    ]
-   }
+   "flip": true,
+   "sig": "drec2014Jordan Payton,JuJu Smith-Schuster"
   },
   {
    "type": "rank",
    "label": "Fresh Mix",
+   "trap": true,
    "verified": true,
-   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "prompt": "Rank these seasons by receiving yards, highest first.",
    "items": [
     {
-     "label": "Paul Perkins (RB) · 2013 UCLA",
-     "value": 573,
+     "label": "Tyler Vaughns (WR) · 2017 USC",
+     "value": 809,
+     "school": "USC"
+    },
+    {
+     "label": "Jordan Payton (WR) · 2014 UCLA",
+     "value": 954,
      "school": "UCLA"
     },
     {
-     "label": "Sam Darnold (QB) · 2016 USC",
-     "value": 250,
+     "label": "JuJu Smith-Schuster (WR) · 2014 USC",
+     "value": 724,
      "school": "USC"
     },
     {
-     "label": "Keaontay Ingram (RB) · 2021 USC",
-     "value": 911,
-     "school": "USC"
-    },
-    {
-     "label": "Brett Hundley (QB) · 2013 UCLA",
-     "value": 748,
+     "label": "Zach Charbonnet (RB) · 2022 UCLA",
+     "value": 321,
      "school": "UCLA"
     }
    ],
    "unit": "yds",
-   "sig": "rsea|rushBrett Hundley2013,Keaontay Ingram2021,Paul Perkins2013,Sam Darnold2016",
+   "note": "🪤 Trap: Tyler Vaughns's best year was 2019 (912), not 2017; Jordan Payton's best year was 2015 (1,106), not 2014; JuJu Smith-Schuster's best year was 2015 (1,454), not 2014.",
+   "sig": "trrecJordan Payton2014,JuJu Smith-Schuster2014,Tyler Vaughns2017,Zach Charbonnet2022",
    "more": {
-    "title": "Top 8: single-season rushing yards (UCLA, USC players in our data)",
+    "title": "Top 8: single-season receiving yards (USC, UCLA players in our data)",
     "rows": [
-     "1. Paul Perkins (UCLA 2014) 1,572",
-     "2. Zach Charbonnet (UCLA 2022) 1,359",
-     "3. Paul Perkins (UCLA 2015) 1,343",
-     "4. Joshua Kelley (UCLA 2018) 1,243",
-     "5. Zach Charbonnet (UCLA 2021) 1,137",
-     "6. Jo'quavious Marks (USC 2024) 1,133",
-     "7. Joshua Kelley (UCLA 2019) 1,060",
-     "8. Keaontay Ingram (USC 2021) 911"
+     "1. JuJu Smith-Schuster (USC 2015) 1,454",
+     "2. Jordan Payton (UCLA 2015) 1,106",
+     "3. Jordan Payton (UCLA 2014) 954",
+     "4. JuJu Smith-Schuster (USC 2016) 914",
+     "5. Tyler Vaughns (USC 2019) 912",
+     "6. Tyler Vaughns (USC 2017) 809",
+     "7. JuJu Smith-Schuster (USC 2014) 724",
+     "8. Tyler Vaughns (USC 2018) 678"
     ]
    }
-  },
-  {
-   "type": "mc",
-   "label": "Rankings",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Of the 26 USC–UCLA games from 2000 through 2025, how many featured a team ranked No. 1 in the AP poll?",
-   "options": [
-    "2",
-    "1",
-    "3",
-    "0"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    0,
-    1,
-    3
-   ],
-   "reveal": "2: 2004 (No. 1 USC 29, UCLA 24) · 2005 (No. 1 USC 66, No. 11 UCLA 19).",
-   "info": {
-    "title": "Which poll?",
-    "text": "The AP Top 25 in force the week of each game; bowl and championship games use the last regular-season poll. Tied teams share a rank."
-   },
-   "years": {
-    "prompt": "Name the 2 seasons.",
-    "a": "USC",
-    "b": "UCLA",
-    "A": [
-     {
-      "name": "No. 1 USC 29, UCLA 24",
-      "yards": 0,
-      "season": 2004,
-      "label": "No. 1 USC 29, UCLA 24",
-      "profile": "No. 1 USC 29, UCLA 24"
-     },
-     {
-      "name": "No. 1 USC 66, No. 11 UCLA 19",
-      "yards": 0,
-      "season": 2005,
-      "label": "No. 1 USC 66, No. 11 UCLA 19",
-      "profile": "No. 1 USC 66, No. 11 UCLA 19"
-     }
-    ],
-    "B": []
-   },
-   "sig": "rkn1"
   },
   {
    "type": "count",
@@ -443,6 +252,151 @@
     }
    ],
    "sig": "acgroza2000",
+   "bonus": "names"
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "USC",
+   "b": "UCLA",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "USC and UCLA's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
+   "A": [
+    {
+     "name": "Marcus Allen",
+     "yards": 2427,
+     "season": 1981,
+     "label": "1981: 2,427",
+     "profile": "1981 season, 2,427 rushing yards · No. 1 on the combined list"
+    },
+    {
+     "name": "Charles White",
+     "yards": 2050,
+     "season": 1979,
+     "label": "1979: 2,050",
+     "profile": "1979 season, 2,050 rushing yards · No. 2 on the combined list"
+    },
+    {
+     "name": "Ricky Bell",
+     "yards": 1957,
+     "season": 1975,
+     "label": "1975: 1,957",
+     "profile": "1975 season, 1,957 rushing yards · No. 3 on the combined list"
+    },
+    {
+     "name": "O. J. Simpson",
+     "yards": 1880,
+     "season": 1968,
+     "label": "1968: 1,880",
+     "profile": "1968 season, 1,880 rushing yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Charles White",
+     "yards": 1859,
+     "season": 1978,
+     "label": "1978: 1,859",
+     "profile": "1978 season, 1,859 rushing yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Reggie Bush",
+     "yards": 1740,
+     "season": 2005,
+     "label": "2005: 1,740",
+     "profile": "2005 season, 1,740 rushing yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Marcus Allen",
+     "yards": 1563,
+     "season": 1980,
+     "label": "1980: 1,563",
+     "profile": "1980 season, 1,563 rushing yards · No. 10 on the combined list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Johnathan Franklin",
+     "yards": 1734,
+     "season": 2012,
+     "label": "2012: 1,734",
+     "profile": "2012 season, 1,734 rushing yards · No. 7 on the combined list"
+    },
+    {
+     "name": "Paul Perkins",
+     "yards": 1575,
+     "season": 2014,
+     "label": "2014: 1,575",
+     "profile": "2014 season, 1,575 rushing yards · No. 8 on the combined list"
+    },
+    {
+     "name": "Karim Abdul-Jabbar",
+     "yards": 1571,
+     "season": 1995,
+     "label": "1995: 1,571",
+     "profile": "1995 season, 1,571 rushing yards · No. 9 on the combined list"
+    }
+   ],
+   "sig": "fsrush"
+  },
+  {
+   "type": "mc",
+   "label": "Ranked Wins",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2015, which school has more wins over AP-ranked opponents, and how many?",
+   "options": [
+    "USC, 16",
+    "USC, 19",
+    "UCLA, 11",
+    "UCLA, 14"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    0,
+    1,
+    2
+   ],
+   "reveal": "USC 16, UCLA 11 (through 2025). Latest: USC: 2023 vs. No. 16 Louisville 42–28, 2024 vs. No. 13 LSU 27–20, 2025 vs. No. 15 Michigan 31–13; UCLA: 2022 vs. No. 11 Utah 42–32, 2023 vs. No. 13 Washington State 25–17, 2025 vs. No. 7 Penn State 42–37.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   },
+   "sig": "rw2015"
+  },
+  {
+   "type": "count",
+   "label": "Since 2020",
+   "a": "USC",
+   "b": "UCLA",
+   "threshold": 1000,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2020 through 2025, which school had more 1,000-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Drake London",
+     "yards": 1084,
+     "season": 2021,
+     "profile": "Wide receiver · 2021: 2 rushing, 1,084 receiving yds"
+    },
+    {
+     "name": "Tahj Washington",
+     "yards": 1062,
+     "season": 2023,
+     "profile": "Wide receiver · 2023: 10 rushing, 1,062 receiving yds"
+    },
+    {
+     "name": "Makai Lemon",
+     "yards": 1156,
+     "season": 2025,
+     "profile": "Wide receiver · 2025: 4 rushing, 1,156 receiving yds"
+    }
+   ],
+   "B": [],
+   "sig": "tsrec10002020",
    "bonus": "names"
   }
  ]

@@ -6,9 +6,70 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-23T23:42:05.463Z",
- "engine": 39,
+ "generatedAt": "2026-11-23T23:47:37.134Z",
+ "engine": 42,
  "questions": [
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Devon Achane (TAMU RB) · 2021 receiving yards",
+     "value": 261,
+     "school": "TAMU"
+    },
+    {
+     "label": "Sam Ehlinger (TEX QB) · 2018 rushing yards",
+     "value": 482,
+     "school": "TEX"
+    },
+    {
+     "label": "Ricky Williams (TEX RB) · 1996 yards from scrimmage",
+     "value": 1627,
+     "school": "TEX"
+    },
+    {
+     "label": "Vince Young (TEX QB) · 2003 rushing yards",
+     "value": 998,
+     "school": "TEX"
+    }
+   ],
+   "sig": "mxydsDevon Achane2021 receiving yards,Ricky Williams1996 yards from scrimmage,Sam Ehlinger2018 rushing yards,Vince Young2003 rushing yards"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Texas–Texas A&M games since 2005, who had more receiving yards against the other school?",
+   "A": {
+    "label": "James Kirkendoll (TEX) vs. Texas A&M",
+    "value": 115,
+    "school": "TEX"
+   },
+   "B": {
+    "label": "Jeff Fuller (TAMU) vs. Texas",
+    "value": 344,
+    "school": "TAMU"
+   },
+   "unit": "receiving yds",
+   "note": "James Kirkendoll: 115 in 2 games. Jeff Fuller: 344 in 4 games.",
+   "sig": "vsrecJames Kirkendoll,Jeff Fuller",
+   "more": {
+    "title": "Top receiving yards against the other school since 2005",
+    "rows": [
+     "1. Jeff Fuller (TAMU) 344 in 4 games",
+     "2. Jordan Shipley (TEX) 234 in 4 games",
+     "3. Quan Cosby (TEX) 193 in 4 games",
+     "4. Malcolm Williams (TEX) 168 in 3 games",
+     "5. Mike Goodson (TAMU) 156 in 3 games",
+     "6. Earvin Taylor (TAMU) 129 in 2 games"
+    ]
+   }
+  },
   {
    "type": "mc",
    "label": "Ranked Wins",
@@ -36,51 +97,26 @@
    "sig": "rw2018"
   },
   {
-   "type": "count",
-   "label": "SEC Record Book",
-   "a": "TEX",
-   "b": "TAMU",
-   "threshold": 0,
+   "type": "mc",
+   "label": "Series History",
    "verified": true,
    "pitted": true,
-   "bonus": "names",
-   "prompt": "Which school has more seasons in the SEC's all-time top 10 for single-season rushing yards?",
-   "A": [],
-   "B": [
-    {
-     "name": "Trayveon Williams",
-     "yards": 1760,
-     "season": 2018,
-     "label": "2018: 1,760",
-     "profile": "2018 season, 1,760 rushing yards · No. 7 in SEC history"
-    }
+   "prompt": "From 2000 through 2025, what's the longest winning streak by either school in the Texas–Texas A&M series?",
+   "options": [
+    "6 straight",
+    "9 straight",
+    "3 straight",
+    "7 straight"
    ],
-   "sig": "strush",
-   "info": {
-    "title": "How the SEC list works",
-    "text": "Seasons played as an SEC member, through 2025, from every member school's record book. The full top 10: 1. Derrick Henry (ALA 2015) 2,219 · 2. Leonard Fournette (LSU 2015) 1,953 · 3. Herschel Walker (UGA 1981) 1,891 · 4. Darren McFadden (ARK 2007) 1,830 · 5. Tre Mason (AUB 2013) 1,816 · 6. Bo Jackson (AUB 1985) 1,786 · 7. Trayveon Williams (TAMU 2018) 1,760 · 8. Herschel Walker (UGA 1982) 1,752 · 9. Charles Alexander (LSU 1977) 1,686 · 10. Trent Richardson (ALA 2011) 1,679"
-   }
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receiving yards (at the school shown)?",
-   "A": {
-    "label": "Jalen Wydermyer (TAMU TE)",
-    "value": 1468,
-    "school": "TAMU"
-   },
-   "B": {
-    "label": "Bijan Robinson (TEX RB)",
-    "value": 805,
-    "school": "TEX"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Jalen Wydermyer 1,468 vs. Bijan Robinson 805.",
-   "sig": "urecBijan RobinsonJalen Wydermyer"
+   "answer": 0,
+   "order": [
+    2,
+    0,
+    3,
+    1
+   ],
+   "reveal": "6 straight: Texas won every meeting from 2000 through 2005.",
+   "sig": "msTEX2000"
   },
   {
    "type": "count",
@@ -120,34 +156,31 @@
    "bonus": "names"
   },
   {
-   "type": "rank",
-   "label": "Fresh Mix",
+   "type": "count",
+   "label": "Since 2015",
+   "a": "TEX",
+   "b": "TAMU",
+   "threshold": 1100,
    "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
+   "pitted": true,
+   "prompt": "From 2015 through 2025, which school had more 1,100-yard receiving seasons?",
+   "A": [
     {
-     "label": "Vince Young (TEX QB) · 2004 rushing TDs",
-     "value": 14,
-     "school": "TEX"
+     "name": "Lil'Jordan Humphrey",
+     "yards": 1176,
+     "season": 2018,
+     "profile": "Wide receiver · 2018: 25 rushing, 1,176 receiving yds"
     },
     {
-     "label": "Isaiah Spiller (TAMU RB) · 2020 rushing TDs",
-     "value": 9,
-     "school": "TAMU"
-    },
-    {
-     "label": "Devon Achane (TAMU RB) · 2022 receiving TDs",
-     "value": 3,
-     "school": "TAMU"
-    },
-    {
-     "label": "Christian Kirk (TAMU WR) · career total TDs (rushing + receiving)",
-     "value": 26,
-     "school": "TAMU"
+     "name": "Devin Duvernay",
+     "yards": 1386,
+     "season": 2019,
+     "profile": "Wide receiver · 2019: 24 rushing, 1,386 receiving yds"
     }
    ],
-   "sig": "mxTDChristian Kirkcareer total TDs (rushing + receiving),Devon Achane2022 receiving TDs,Isaiah Spiller2020 rushing TDs,Vince Young2004 rushing TDs"
+   "B": [],
+   "sig": "tsrec11002015",
+   "bonus": "names"
   },
   {
    "type": "rank",
@@ -248,126 +281,66 @@
    }
   },
   {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Rank these players by career receiving yards (at that school), highest first.",
-   "items": [
-    {
-     "label": "Christian Kirk (WR) · career, TAMU",
-     "value": 2856,
-     "school": "TAMU"
-    },
-    {
-     "label": "Bijan Robinson (RB) · career, TEX",
-     "value": 805,
-     "school": "TEX"
-    },
-    {
-     "label": "Devon Achane (RB) · career, TAMU",
-     "value": 554,
-     "school": "TAMU"
-    },
-    {
-     "label": "Ricky Williams (RB) · career, TEX",
-     "value": 988,
-     "school": "TEX"
-    }
-   ],
-   "unit": "yds",
-   "sig": "rcar|recBijan Robinsoncareer,Christian Kirkcareer,Devon Achanecareer,Ricky Williamscareer",
-   "more": {
-    "title": "Top 8: career receiving yards (TAMU, TEX players in our data)",
-    "rows": [
-     "1. Christian Kirk (TAMU) 2,856",
-     "2. Josh Reynolds (TAMU) 2,788",
-     "3. Xavier Worthy (TEX) 2,755",
-     "4. Collin Johnson (TEX) 2,627",
-     "5. Mike Evans (TAMU) 2,499",
-     "6. Ricky Williams (TEX) 988",
-     "7. Bijan Robinson (TEX) 805",
-     "8. Isaiah Spiller (TAMU) 585"
-    ]
-   }
-  },
-  {
-   "type": "count",
-   "label": "Since 2015",
-   "a": "TEX",
-   "b": "TAMU",
-   "threshold": 1100,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2015 through 2025, which school had more 1,100-yard receiving seasons?",
-   "A": [
-    {
-     "name": "Lil'Jordan Humphrey",
-     "yards": 1176,
-     "season": 2018,
-     "profile": "Wide receiver · 2018: 25 rushing, 1,176 receiving yds"
-    },
-    {
-     "name": "Devin Duvernay",
-     "yards": 1386,
-     "season": 2019,
-     "profile": "Wide receiver · 2019: 24 rushing, 1,386 receiving yds"
-    }
-   ],
-   "B": [],
-   "sig": "tsrec11002015",
-   "bonus": "names"
-  },
-  {
    "type": "h2h",
    "label": "Fresh Mix",
+   "upset": true,
    "verified": true,
    "flip": true,
-   "prompt": "Who had more rushing TDs in a single season?",
+   "prompt": "Who had more college receptions (at the school shown)?",
    "A": {
-    "label": "Sam Ehlinger (QB) · 2019 TEX",
-    "value": 7,
-    "school": "TEX"
-   },
-   "B": {
-    "label": "Devon Achane (RB) · 2022 TAMU",
-    "value": 8,
+    "label": "Jalen Wydermyer (TAMU TE)",
+    "value": 118,
     "school": "TAMU"
    },
-   "unit": "rushing TDs",
-   "sig": "hDevon Achane2022,Sam Ehlinger2019rushTD",
-   "more": {
-    "title": "Top 6: single-season rushing TDs (TEX, TAMU players in our data)",
-    "rows": [
-     "1. Ricky Williams (TEX 1998) 29",
-     "2. Ricky Williams (TEX 1997) 25",
-     "3. Johnny Manziel (TAMU 2012) 21",
-     "4. Bijan Robinson (TEX 2022) 18",
-     "5. Sam Ehlinger (TEX 2018) 16",
-     "6. D'Onta Foreman (TEX 2016) 15"
-    ]
-   }
+   "B": {
+    "label": "D'Onta Foreman (TEX RB)",
+    "value": 13,
+    "school": "TEX"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jalen Wydermyer 118 vs. D'Onta Foreman 13.",
+   "sig": "urecND'Onta ForemanJalen Wydermyer"
   },
   {
-   "type": "mc",
+   "type": "moment",
    "label": "Series History",
    "verified": true,
    "pitted": true,
-   "prompt": "From 2000 through 2025, what's the longest winning streak by either school in the Texas–Texas A&M series?",
-   "options": [
-    "6 straight",
-    "9 straight",
-    "3 straight",
-    "7 straight"
+   "prompt": "From 2000 through 2025, did Texas A&M beat Texas more or fewer than",
+   "line": "3.5 times",
+   "answer": "under",
+   "reveal": "Fewer. Texas A&M went 3–11 against Texas from 2000 to 2025 (14 meetings, on-field results).",
+   "check": {
+    "value": 3,
+    "line": 3.5
+   },
+   "sig": "scTAMUTEX"
+  },
+  {
+   "type": "count",
+   "label": "SEC Record Book",
+   "a": "TEX",
+   "b": "TAMU",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Which school has more seasons in the SEC's all-time top 10 for single-season rushing yards?",
+   "A": [],
+   "B": [
+    {
+     "name": "Trayveon Williams",
+     "yards": 1760,
+     "season": 2018,
+     "label": "2018: 1,760",
+     "profile": "2018 season, 1,760 rushing yards · No. 7 in SEC history"
+    }
    ],
-   "answer": 0,
-   "order": [
-    2,
-    0,
-    3,
-    1
-   ],
-   "reveal": "6 straight: Texas won every meeting from 2000 through 2005.",
-   "sig": "msTEX2000"
+   "sig": "strush",
+   "info": {
+    "title": "How the SEC list works",
+    "text": "Seasons played as an SEC member, through 2025, from every member school's record book. The full top 10: 1. Derrick Henry (ALA 2015) 2,219 · 2. Leonard Fournette (LSU 2015) 1,953 · 3. Herschel Walker (UGA 1981) 1,891 · 4. Darren McFadden (ARK 2007) 1,830 · 5. Tre Mason (AUB 2013) 1,816 · 6. Bo Jackson (AUB 1985) 1,786 · 7. Trayveon Williams (TAMU 2018) 1,760 · 8. Herschel Walker (UGA 1982) 1,752 · 9. Charles Alexander (LSU 1977) 1,686 · 10. Trent Richardson (ALA 2011) 1,679"
+   }
   }
  ],
  "rev": 1

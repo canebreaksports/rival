@@ -1,4 +1,5 @@
 // Honors questions (pitted): NFL draft, major awards, Heisman voting. Both schools in every question.
+import type { RivalryPair } from "./types";
 import type { CountEntry, Question, SchoolKey } from "./types";
 import { pick, shuffle, type Rng } from "./rng";
 import { SCHOOL } from "./schools";
@@ -219,6 +220,38 @@ export function genPeerAwardMC(h: HonorsData, a: SchoolKey, b: SchoolKey, rng: R
       reveal: m.four.map((k, i) => ({ k, n: m.v[i] })).sort((x, y) => y.n - x.n).map(x => `${name(x.k)} ${x.n}`).join(" · ") + ".",
       info: { title: "Which awards count?", text: h.awards.map(x => `${x.name}: ${x.for}`).join(" · ") },
       sig: "pa" + from + [...m.four].sort().join("") } as Question;
+  }
+  return null;
+}
+
+// ---------- Heisman seasons vs. the rival (owner, Nov 2026) ----------
+// "Rank these Heisman contenders' rushing yards against their rival in their Heisman season": top-10 Heisman finishers
+// from both schools, their line in that season's rivalry game (box scores), single-game margins between every pair.
+const pnorm = (n: string) => n.toLowerCase().replace(/['’.]/g, "").replace(/\b(jr|sr|ii|iii|iv)\b/g, "").replace(/\s+/g, " ").trim();
+const ordp = (n: number) => (n === 1 ? "winner" : `${n}${n === 2 ? "nd" : n === 3 ? "rd" : "th"} place`);
+export function genHeismanVsRivalRank(h: HonorsData, pr: RivalryPair | undefined, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
+  if (!pr) return null;
+  const finals = h.heisman.filter(v => (v.school === a || v.school === b) && v.place <= 10);
+  for (const [cat, what] of shuffle(rng, [["rush", "rushing yards"], ["rec", "receiving yards"], ["pass", "passing yards"]] as const)) {
+    type Row = { v: HeismanVote; g: RivalryPair["games"][number]; p: { name: string; cat: string; yds: number; td: number; n?: number } };
+    const rows: Row[] = finals.flatMap((v): Row[] => {
+      const g = pr.games.find(x => x.season === v.year && !!x.box && x.date < `${v.year + 1}-01-01` && x.date >= `${v.year}-08-01`); // the regular-season meeting
+      const p = g?.box?.[v.school]?.find(x => x.cat === cat && pnorm(x.name) === pnorm(v.name));
+      return g && p && p.yds >= (cat === "pass" ? 100 : 30) ? [{ v, g, p }] : [];
+    });
+    const gap = (x: number, y: number) => Math.abs(x - y) >= Math.max(15, 0.12 * Math.max(x, y)); // single-game box-score margin
+    for (let t = 0; t < 20; t++) {
+      const pick: Row[] = [], fits = (r: Row) => pick.every(y => gap(y.p.yds, r.p.yds) && y.v.name !== r.v.name); // one season per player
+      for (const s of shuffle(rng, [a, b])) { const r = shuffle(rng, rows).find(x => x.v.school === s && fits(x)); if (r) pick.push(r) }
+      for (const r of shuffle(rng, rows)) { if (pick.length === 4) break; if (fits(r)) pick.push(r) }
+      if (pick.length < 3 || new Set(pick.map(x => x.v.school)).size < 2) continue; // three is fine when a series has fewer contenders
+      const opp = (k: SchoolKey) => name(k === a ? b : a);
+      return { type: "rank", label: "Heisman vs. Rival", verified: true, pitted: true, unit: "yds",
+        prompt: `Rank these Heisman contenders by ${what} against their rival in their Heisman season, highest first.`,
+        items: pick.map(x => ({ label: `${x.v.name} (${x.v.year} Heisman ${ordp(x.v.place)}) vs. ${opp(x.v.school)}`, value: x.p.yds, school: x.v.school })),
+        note: pick.map(x => `${x.v.name}: ${x.p.yds} ${what}${x.p.n ? ` on ${x.p.n} ${cat === "rush" ? "carries" : cat === "rec" ? "catches" : "completions"}` : ""}, ${x.p.td} TD (${x.g.date})`).join(" · "),
+        sig: "hv" + cat + pick.map(x => x.v.name + x.v.year).sort() } as Question;
+    }
   }
   return null;
 }

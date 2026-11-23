@@ -6,31 +6,9 @@
   "away": "PUR",
   "home": "IU"
  },
- "generatedAt": "2026-11-23T23:42:06.901Z",
- "engine": 39,
+ "generatedAt": "2026-11-23T23:47:38.447Z",
+ "engine": 42,
  "questions": [
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "In which year was the highest-scoring Purdue–Indiana game from 2000 through 2025?",
-   "options": [
-    "2013",
-    "2019",
-    "2025",
-    "2009"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    2,
-    3,
-    0
-   ],
-   "reveal": "2013: Indiana 56, Purdue 36 (92 points, Nov 30, 2013). Next highest: 2012, Purdue 56–35 (91).",
-   "sig": "mh2013"
-  },
   {
    "type": "h2h",
    "label": "Fresh Mix",
@@ -39,8 +17,8 @@
    "flip": true,
    "prompt": "Who had more college receptions (at the school shown)?",
    "A": {
-    "label": "Devin Mockobee (PUR RB)",
-    "value": 85,
+    "label": "Payne Durham (PUR TE)",
+    "value": 126,
     "school": "PUR"
    },
    "B": {
@@ -49,29 +27,43 @@
     "school": "IU"
    },
    "unit": "",
-   "note": "🚨 Upset: Devin Mockobee 85 vs. Tevin Coleman 54.",
-   "sig": "urecNTevin ColemanDevin Mockobee"
+   "note": "🚨 Upset: Payne Durham 126 vs. Tevin Coleman 54.",
+   "sig": "urecNTevin ColemanPayne Durham"
   },
   {
-   "type": "duel",
-   "label": "Fresh Mix",
+   "type": "mc",
+   "label": "NFL Draft",
    "verified": true,
-   "year": 2019,
-   "stat": "Receiving season",
-   "aSchool": "IU",
-   "other": "PUR",
-   "aName": "Ty Fryfogle (WR)",
-   "bName": "David Bell (WR)",
-   "A": {
-    "big": "604",
-    "sm": "rec yds · 3 TD"
-   },
-   "B": {
-    "big": "1,035",
-    "sm": "rec yds · 7 TD"
-   },
-   "flip": false,
-   "sig": "drec2019David Bell,Ty Fryfogle"
+   "pitted": true,
+   "prompt": "Which of these Purdue and Indiana players was drafted highest?",
+   "options": [
+    "Ryan Kerrigan (Purdue)",
+    "Cody Latimer (Indiana)",
+    "D'Angelo Ponds (Indiana)",
+    "Tevin Coleman (Indiana)"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    1,
+    0,
+    3
+   ],
+   "reveal": "Ryan Kerrigan: No. 16 overall in 2011 · D'Angelo Ponds: No. 50 overall in 2026 · Cody Latimer: No. 56 overall in 2014 · Tevin Coleman: No. 73 overall in 2015",
+   "sig": "dmCody Latimer,D'Angelo Ponds,Ryan Kerrigan,Tevin Coleman",
+   "more": {
+    "title": "Highest-drafted Purdue and Indiana players since 2000",
+    "rows": [
+     "1. Fernando Mendoza (IU) No. 1, 2026",
+     "2. Ryan Kerrigan (PUR) No. 16, 2011",
+     "3. Anthony Spencer (PUR) No. 26, 2007",
+     "4. Dustin Keller (PUR) No. 30, 2008",
+     "5. George Karlaftis (PUR) No. 30, 2022",
+     "6. Omar Cooper Jr. (IU) No. 30, 2026",
+     "7. Drew Brees (PUR) No. 32, 2001",
+     "8. Rodger Saffold (IU) No. 33, 2010"
+    ]
+   }
   },
   {
    "type": "rank",
@@ -178,32 +170,6 @@
    }
   },
   {
-   "type": "mc",
-   "label": "Ranked Wins",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2020, which school has more wins over AP-ranked opponents, and how many?",
-   "options": [
-    "Indiana, 9",
-    "Indiana, 10",
-    "Purdue, 4",
-    "Purdue, 8"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    0,
-    1,
-    3
-   ],
-   "reveal": "Indiana 9, Purdue 4 (through 2025). Latest: Indiana: 2025 vs. No. 11 Alabama 38–3, 2025 vs. No. 5 Oregon 56–22, 2025 vs. No. 10 Miami 27–21; Purdue: 2021 vs. No. 5 Michigan State 40–29, 2022 vs. No. 21 Minnesota 20–10, 2022 vs. No. 21 Illinois 31–24.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
-   },
-   "sig": "rw2020"
-  },
-  {
    "type": "count",
    "label": "Awards",
    "a": "PUR",
@@ -249,6 +215,138 @@
    ],
    "sig": "acall2010",
    "bonus": "names"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Ty Fryfogle (IU WR) · 2018 receiving yards",
+     "value": 381,
+     "school": "IU"
+    },
+    {
+     "label": "Markell Jones (PUR RB) · career receiving yards",
+     "value": 627,
+     "school": "PUR"
+    },
+    {
+     "label": "Kaelon Black (IU RB) · 2025 yards from scrimmage",
+     "value": 1075,
+     "school": "IU"
+    },
+    {
+     "label": "Stevie Scott (IU RB) · 2019 rushing yards",
+     "value": 845,
+     "school": "IU"
+    }
+   ],
+   "sig": "mxydsKaelon Black2025 yards from scrimmage,Markell Jonescareer receiving yards,Stevie Scott2019 rushing yards,Ty Fryfogle2018 receiving yards"
+  },
+  {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "In which year was the highest-scoring Purdue–Indiana game from 2000 through 2025?",
+   "options": [
+    "2013",
+    "2019",
+    "2025",
+    "2009"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    2,
+    3,
+    0
+   ],
+   "reveal": "2013: Indiana 56, Purdue 36 (92 points, Nov 30, 2013). Next highest: 2012, Purdue 56–35 (91).",
+   "sig": "mh2013"
+  },
+  {
+   "type": "count",
+   "label": "Since 2018",
+   "a": "PUR",
+   "b": "IU",
+   "threshold": 1100,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2018 through 2025, which school had more 1,100-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Rondale Moore",
+     "yards": 1258,
+     "season": 2018,
+     "profile": "Wide receiver · 2018: 213 rushing, 1,258 receiving yds"
+    },
+    {
+     "name": "David Bell",
+     "yards": 1286,
+     "season": 2021,
+     "profile": "Wide receiver · 2021: 39 rushing, 1,286 receiving yds"
+    },
+    {
+     "name": "Charlie Jones",
+     "yards": 1361,
+     "season": 2022,
+     "profile": "Wide receiver · 2022: 3 rushing, 1,361 receiving yds"
+    }
+   ],
+   "B": [],
+   "sig": "tsrec11002018",
+   "bonus": "names"
+  },
+  {
+   "type": "mc",
+   "label": "Ranked Wins",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2020, which school has more wins over AP-ranked opponents, and how many?",
+   "options": [
+    "Indiana, 9",
+    "Indiana, 10",
+    "Purdue, 4",
+    "Purdue, 8"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    0,
+    1,
+    3
+   ],
+   "reveal": "Indiana 9, Purdue 4 (through 2025). Latest: Indiana: 2025 vs. No. 11 Alabama 38–3, 2025 vs. No. 5 Oregon 56–22, 2025 vs. No. 10 Miami 27–21; Purdue: 2021 vs. No. 5 Michigan State 40–29, 2022 vs. No. 21 Minnesota 20–10, 2022 vs. No. 21 Illinois 31–24.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   },
+   "sig": "rw2020"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2019,
+   "stat": "Receiving season",
+   "aSchool": "PUR",
+   "other": "IU",
+   "aName": "David Bell (WR)",
+   "bName": "Ty Fryfogle (WR)",
+   "A": {
+    "big": "1,035",
+    "sm": "rec yds · 7 TD"
+   },
+   "B": {
+    "big": "604",
+    "sm": "rec yds · 3 TD"
+   },
+   "flip": true,
+   "sig": "drec2019David Bell,Ty Fryfogle"
   },
   {
    "type": "count",
@@ -335,98 +433,6 @@
     }
    ],
    "sig": "fsrec"
-  },
-  {
-   "type": "count",
-   "label": "Since 2018",
-   "a": "PUR",
-   "b": "IU",
-   "threshold": 1100,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2018 through 2025, which school had more 1,100-yard receiving seasons?",
-   "A": [
-    {
-     "name": "Rondale Moore",
-     "yards": 1258,
-     "season": 2018,
-     "profile": "Wide receiver · 2018: 213 rushing, 1,258 receiving yds"
-    },
-    {
-     "name": "David Bell",
-     "yards": 1286,
-     "season": 2021,
-     "profile": "Wide receiver · 2021: 39 rushing, 1,286 receiving yds"
-    },
-    {
-     "name": "Charlie Jones",
-     "yards": 1361,
-     "season": 2022,
-     "profile": "Wide receiver · 2022: 3 rushing, 1,361 receiving yds"
-    }
-   ],
-   "B": [],
-   "sig": "tsrec11002018",
-   "bonus": "names"
-  },
-  {
-   "type": "mc",
-   "label": "Awards",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Which of these players won the Davey O'Brien Award, given to the nation's best quarterback?",
-   "options": [
-    "Fernando Mendoza (Indiana)",
-    "Drew Brees (Purdue)",
-    "Peyton Ramsey (Indiana)",
-    "Zander Diamont (Indiana)"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    3,
-    0,
-    1
-   ],
-   "reveal": "Fernando Mendoza (Indiana) won the Davey O'Brien Award in 2025.",
-   "sig": "amobrien2025",
-   "more": {
-    "title": "Every Purdue and Indiana winner of the Davey O'Brien Award",
-    "rows": [
-     "2025: Fernando Mendoza (IU)"
-    ]
-   }
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": false,
-   "prompt": "In Purdue–Indiana games since 2005, who had more rushing yards against the other school?",
-   "A": {
-    "label": "Akeem Hunt (PUR) vs. Indiana",
-    "value": 288,
-    "school": "PUR"
-   },
-   "B": {
-    "label": "Tre Roberson (IU) vs. Purdue",
-    "value": 231,
-    "school": "IU"
-   },
-   "unit": "rushing yds",
-   "note": "Akeem Hunt: 288 in 4 games. Tre Roberson: 231 in 2 games.",
-   "sig": "vsrushAkeem Hunt,Tre Roberson",
-   "more": {
-    "title": "Top rushing yards against the other school since 2005",
-    "rows": [
-     "1. Markell Jones (PUR) 443 in 4 games",
-     "2. Stephen Houston (IU) 407 in 3 games",
-     "3. Kory Sheets (PUR) 307 in 4 games",
-     "4. Akeem Hunt (PUR) 288 in 4 games",
-     "5. Jaycen Taylor (PUR) 257 in 3 games",
-     "6. Marcus Thigpen (IU) 243 in 4 games"
-    ]
-   }
   }
  ]
 }

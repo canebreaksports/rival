@@ -6,155 +6,124 @@
   "away": "FLA",
   "home": "FSU"
  },
- "generatedAt": "2026-11-23T23:42:05.300Z",
- "engine": 39,
+ "generatedAt": "2026-11-23T23:47:36.934Z",
+ "engine": 42,
  "questions": [
   {
    "type": "rank",
-   "label": "Fresh Mix",
+   "label": "Notables",
    "verified": true,
-   "prompt": "Rank these players by career rushing TDs (at that school), highest first.",
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
-     "label": "Jordan Travis (QB) · career, FSU",
-     "value": 31,
-     "school": "FSU"
-    },
-    {
-     "label": "Lamical Perine (RB) · career, FLA",
-     "value": 22,
+     "label": "Tim Tebow (FLA QB) · career rushing TDs",
+     "value": 57,
      "school": "FLA"
     },
     {
-     "label": "Cam Akers (RB) · career, FSU",
-     "value": 27,
+     "label": "Dalvin Cook (FSU RB) · career rushing TDs",
+     "value": 46,
      "school": "FSU"
     },
     {
-     "label": "Lawrance Toafili (RB) · career, FSU",
-     "value": 15,
-     "school": "FSU"
+     "label": "Kyle Pitts (FLA TE) · 2020 receiving TDs",
+     "value": 12,
+     "school": "FLA"
+    },
+    {
+     "label": "Kelvin Taylor (FLA RB) · 2015 rushing TDs",
+     "value": 13,
+     "school": "FLA"
     }
    ],
-   "unit": "TD",
-   "sig": "rcar|rushTDCam Akerscareer,Jordan Traviscareer,Lamical Perinecareer,Lawrance Toafilicareer",
-   "more": {
-    "title": "Top 8: career rushing TDs (FLA, FSU players in our data)",
-    "rows": [
-     "1. Tim Tebow (FLA) 57",
-     "2. Dalvin Cook (FSU) 46",
-     "3. Jordan Travis (FSU) 31",
-     "4. Cam Akers (FSU) 27",
-     "5. Kelvin Taylor (FLA) 23",
-     "6. Lamical Perine (FLA) 22",
-     "7. Montrell Johnson (FLA) 21",
-     "8. Lawrance Toafili (FSU) 15"
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "label": "Rankings",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Of the 25 Florida–Florida State games from 2000 through 2025, how many featured a team ranked No. 1 in the AP poll?",
-   "options": [
-    "2",
-    "0",
-    "4",
-    "5"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    0,
-    2,
-    3
-   ],
-   "reveal": "2: 2009 (No. 1 Florida 37, Florida State 10) · 2014 (No. 1 Florida State 24, Florida 19).",
-   "info": {
-    "title": "Which poll?",
-    "text": "The AP Top 25 in force the week of each game; bowl and championship games use the last regular-season poll. Tied teams share a rank."
-   },
-   "years": {
-    "prompt": "Name the 2 seasons.",
-    "a": "FLA",
-    "b": "FSU",
-    "A": [
-     {
-      "name": "No. 1 Florida 37, Florida State 10",
-      "yards": 0,
-      "season": 2009,
-      "label": "No. 1 Florida 37, Florida State 10",
-      "profile": "No. 1 Florida 37, Florida State 10"
-     }
-    ],
-    "B": [
-     {
-      "name": "No. 1 Florida State 24, Florida 19",
-      "yards": 0,
-      "season": 2014,
-      "label": "No. 1 Florida State 24, Florida 19",
-      "profile": "No. 1 Florida State 24, Florida 19"
-     }
-    ]
-   },
-   "sig": "rkn1"
+   "sig": "nxTDDalvin Cookcareer rushing TDs,Kelvin Taylor2015 rushing TDs,Kyle Pitts2020 receiving TDs,Tim Tebowcareer rushing TDs"
   },
   {
    "type": "count",
-   "label": "Awards",
+   "label": "Fill In",
    "a": "FLA",
    "b": "FSU",
    "threshold": 0,
    "verified": true,
    "pitted": true,
-   "info": {
-    "title": "What is the Maxwell Award?",
-    "text": "The Maxwell Award is given each year to college football's best all-around player."
-   },
-   "prompt": "From 2000 through 2025, which school had more Maxwell Award winners?",
+   "bonus": "names",
+   "prompt": "Florida and Florida State's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
    "A": [
     {
-     "name": "Tim Tebow",
-     "yards": 2007,
-     "season": 2007,
-     "label": "QB",
-     "profile": "QB · won the Maxwell Award (best all-around player)"
+     "name": "Emmitt Smith",
+     "yards": 1599,
+     "season": 1989,
+     "label": "1989: 1,599",
+     "profile": "1989 season, 1,599 rushing yards · No. 3 on the combined list"
     },
     {
-     "name": "Tim Tebow",
-     "yards": 2008,
-     "season": 2008,
-     "label": "QB",
-     "profile": "QB · won the Maxwell Award (best all-around player)"
+     "name": "Emmitt Smith",
+     "yards": 1341,
+     "season": 1987,
+     "label": "1987: 1,341",
+     "profile": "1987 season, 1,341 rushing yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Jimmy DuBose",
+     "yards": 1307,
+     "season": 1975,
+     "label": "1975: 1,307",
+     "profile": "1975 season, 1,307 rushing yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Fred Taylor",
+     "yards": 1292,
+     "season": 1997,
+     "label": "1997: 1,292",
+     "profile": "1997 season, 1,292 rushing yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Errict Rhett",
+     "yards": 1289,
+     "season": 1993,
+     "label": "1993: 1,289",
+     "profile": "1993 season, 1,289 rushing yards · No. 7 on the combined list"
+    },
+    {
+     "name": "Ciatrick Fason",
+     "yards": 1267,
+     "season": 2004,
+     "label": "2004: 1,267",
+     "profile": "2004 season, 1,267 rushing yards · No. 8 on the combined list"
     }
    ],
-   "B": [],
-   "sig": "acmaxwell2000",
-   "bonus": "names"
-  },
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "In which year was the highest-scoring Florida–Florida State game from 2000 through 2025?",
-   "options": [
-    "2022",
-    "2024",
-    "2014",
-    "2008"
+   "B": [
+    {
+     "name": "Dalvin Cook",
+     "yards": 1765,
+     "season": 2016,
+     "label": "2016: 1,765",
+     "profile": "2016 season, 1,765 rushing yards · No. 1 on the combined list"
+    },
+    {
+     "name": "Dalvin Cook",
+     "yards": 1691,
+     "season": 2015,
+     "label": "2015: 1,691",
+     "profile": "2015 season, 1,691 rushing yards · No. 2 on the combined list"
+    },
+    {
+     "name": "Warrick Dunn",
+     "yards": 1242,
+     "season": 1995,
+     "label": "1995: 1,242",
+     "profile": "1995 season, 1,242 rushing yards · No. 9 on the combined list"
+    },
+    {
+     "name": "Sammie Smith",
+     "yards": 1230,
+     "season": 1987,
+     "label": "1987: 1,230",
+     "profile": "1987 season, 1,230 rushing yards · No. 10 on the combined list"
+    }
    ],
-   "answer": 0,
-   "order": [
-    0,
-    2,
-    3,
-    1
-   ],
-   "reveal": "2022: Florida State 45, Florida 38 (83 points, Nov 25, 2022). Next highest: 2003, Florida State 38–34 (72).",
-   "sig": "mh2022"
+   "sig": "fsrush"
   },
   {
    "type": "rank",
@@ -258,34 +227,161 @@
    }
   },
   {
-   "type": "h2h",
+   "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more career rushing yards?",
+   "prompt": "Did Lamical Perine finish his Florida career with more or less than",
+   "line": "9.5 receiving TDs",
+   "answer": "under",
+   "reveal": "Less. Lamical Perine had 8 receiving TDs in his career.",
+   "check": {
+    "value": 8,
+    "line": 9.5
+   },
+   "sig": "ppLamical Perinecareer|Cam AkerscareerrecTD0",
+   "pair": "ppLamical Perinecareer|Cam AkerscareerrecTD",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Cam Akers finish his Florida State career with more or less than",
+   "line": "6.5 receiving TDs",
+   "answer": "over",
+   "reveal": "More. Cam Akers had 7 receiving TDs in his career.",
+   "check": {
+    "value": 7,
+    "line": 6.5
+   },
+   "sig": "ppLamical Perinecareer|Cam AkerscareerrecTD1",
+   "pair": "ppLamical Perinecareer|Cam AkerscareerrecTD",
+   "pairPart": 2
+  },
+  {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "In which year was the highest-scoring Florida–Florida State game from 2000 through 2025?",
+   "options": [
+    "2022",
+    "2024",
+    "2014",
+    "2008"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    2,
+    3,
+    1
+   ],
+   "reveal": "2022: Florida State 45, Florida 38 (83 points, Nov 25, 2022). Next highest: 2003, Florida State 38–34 (72).",
+   "sig": "mh2022"
+  },
+  {
+   "type": "mc",
+   "label": "Rankings",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Of the 25 Florida–Florida State games from 2000 through 2025, how many featured a team ranked No. 1 in the AP poll?",
+   "options": [
+    "2",
+    "0",
+    "4",
+    "5"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    0,
+    2,
+    3
+   ],
+   "reveal": "2: 2009 (No. 1 Florida 37, Florida State 10) · 2014 (No. 1 Florida State 24, Florida 19).",
+   "info": {
+    "title": "Which poll?",
+    "text": "The AP Top 25 in force the week of each game; bowl and championship games use the last regular-season poll. Tied teams share a rank."
+   },
+   "years": {
+    "prompt": "Name the 2 seasons.",
+    "a": "FLA",
+    "b": "FSU",
+    "A": [
+     {
+      "name": "No. 1 Florida 37, Florida State 10",
+      "yards": 0,
+      "season": 2009,
+      "label": "No. 1 Florida 37, Florida State 10",
+      "profile": "No. 1 Florida 37, Florida State 10"
+     }
+    ],
+    "B": [
+     {
+      "name": "No. 1 Florida State 24, Florida 19",
+      "yards": 0,
+      "season": 2014,
+      "label": "No. 1 Florida State 24, Florida 19",
+      "profile": "No. 1 Florida State 24, Florida 19"
+     }
+    ]
+   },
+   "sig": "rkn1"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
    "A": {
-    "label": "Lamical Perine (RB) · career, FLA",
-    "value": 2485,
+    "label": "Kyle Pitts (FLA TE)",
+    "value": 18,
     "school": "FLA"
    },
    "B": {
-    "label": "Dalvin Cook (RB) · career, FSU",
-    "value": 4464,
+    "label": "Dalvin Cook (FSU RB)",
+    "value": 2,
     "school": "FSU"
    },
-   "unit": "rushing yards",
-   "sig": "hDalvin Cookcareer,Lamical Perinecareerrush",
-   "more": {
-    "title": "Top 6: career rushing yards (FSU, FLA players in our data)",
-    "rows": [
-     "1. Dalvin Cook (FSU) 4,464",
-     "2. Tim Tebow (FLA) 2,947",
-     "3. Cam Akers (FSU) 2,874",
-     "4. Lamical Perine (FLA) 2,485",
-     "5. Montrell Johnson (FLA) 2,251",
-     "6. Kelvin Taylor (FLA) 2,108"
-    ]
-   }
+   "unit": "",
+   "note": "🚨 Upset: Kyle Pitts 18 vs. Dalvin Cook 2.",
+   "sig": "urecTDDalvin CookKyle Pitts"
+  },
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "FLA",
+   "b": "FSU",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "info": {
+    "title": "What is the Maxwell Award?",
+    "text": "The Maxwell Award is given each year to college football's best all-around player."
+   },
+   "prompt": "From 2000 through 2025, which school had more Maxwell Award winners?",
+   "A": [
+    {
+     "name": "Tim Tebow",
+     "yards": 2007,
+     "season": 2007,
+     "label": "QB",
+     "profile": "QB · won the Maxwell Award (best all-around player)"
+    },
+    {
+     "name": "Tim Tebow",
+     "yards": 2008,
+     "season": 2008,
+     "label": "QB",
+     "profile": "QB · won the Maxwell Award (best all-around player)"
+    }
+   ],
+   "B": [],
+   "sig": "acmaxwell2000",
+   "bonus": "names"
   },
   {
    "type": "count",
@@ -326,156 +422,6 @@
    ],
    "sig": "tsrushTD122016",
    "bonus": "names"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receptions (at the school shown)?",
-   "A": {
-    "label": "Kyle Pitts (FLA TE)",
-    "value": 100,
-    "school": "FLA"
-   },
-   "B": {
-    "label": "Dalvin Cook (FSU RB)",
-    "value": 79,
-    "school": "FSU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Kyle Pitts 100 vs. Dalvin Cook 79.",
-   "sig": "urecNDalvin CookKyle Pitts"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game receiving performances in Florida–Florida State games, highest first.",
-   "items": [
-    {
-     "label": "Nick O'Leary (FSU) · 2013",
-     "value": 52,
-     "school": "FSU"
-    },
-    {
-     "label": "Chad Jackson (FLA) · 2005",
-     "value": 97,
-     "school": "FLA"
-    },
-    {
-     "label": "Andre Jerome Caldwell (FLA) · 2006",
-     "value": 124,
-     "school": "FLA"
-    },
-    {
-     "label": "Chauncey Stovall (FSU) · 2004",
-     "value": 181,
-     "school": "FSU"
-    }
-   ],
-   "sig": "grrecAndre Jerome Caldwell2006,Chad Jackson2005,Chauncey Stovall2004,Nick O'Leary2013",
-   "more": {
-    "title": "Top receiving games in this rivalry (box scores)",
-    "rows": [
-     "1. Kelvin Benjamin (FSU) 2013: 212",
-     "2. Chauncey Stovall (FSU) 2004: 181",
-     "3. Ricky Pearsall (FLA) 2022: 148",
-     "4. Tamorrion Terry (FSU) 2019: 131",
-     "5. Andre Jerome Caldwell (FLA) 2006: 124",
-     "6. Trevon Grimes (FLA) 2018: 118",
-     "7. Lawayne McCoy (FSU) 2025: 117",
-     "8. Chad Jackson (FLA) 2005: 97"
-    ]
-   }
-  },
-  {
-   "type": "count",
-   "label": "Fill In",
-   "a": "FLA",
-   "b": "FSU",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "Florida and Florida State's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
-   "A": [
-    {
-     "name": "Emmitt Smith",
-     "yards": 1599,
-     "season": 1989,
-     "label": "1989: 1,599",
-     "profile": "1989 season, 1,599 rushing yards · No. 3 on the combined list"
-    },
-    {
-     "name": "Emmitt Smith",
-     "yards": 1341,
-     "season": 1987,
-     "label": "1987: 1,341",
-     "profile": "1987 season, 1,341 rushing yards · No. 4 on the combined list"
-    },
-    {
-     "name": "Jimmy DuBose",
-     "yards": 1307,
-     "season": 1975,
-     "label": "1975: 1,307",
-     "profile": "1975 season, 1,307 rushing yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Fred Taylor",
-     "yards": 1292,
-     "season": 1997,
-     "label": "1997: 1,292",
-     "profile": "1997 season, 1,292 rushing yards · No. 6 on the combined list"
-    },
-    {
-     "name": "Errict Rhett",
-     "yards": 1289,
-     "season": 1993,
-     "label": "1993: 1,289",
-     "profile": "1993 season, 1,289 rushing yards · No. 7 on the combined list"
-    },
-    {
-     "name": "Ciatrick Fason",
-     "yards": 1267,
-     "season": 2004,
-     "label": "2004: 1,267",
-     "profile": "2004 season, 1,267 rushing yards · No. 8 on the combined list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Dalvin Cook",
-     "yards": 1765,
-     "season": 2016,
-     "label": "2016: 1,765",
-     "profile": "2016 season, 1,765 rushing yards · No. 1 on the combined list"
-    },
-    {
-     "name": "Dalvin Cook",
-     "yards": 1691,
-     "season": 2015,
-     "label": "2015: 1,691",
-     "profile": "2015 season, 1,691 rushing yards · No. 2 on the combined list"
-    },
-    {
-     "name": "Warrick Dunn",
-     "yards": 1242,
-     "season": 1995,
-     "label": "1995: 1,242",
-     "profile": "1995 season, 1,242 rushing yards · No. 9 on the combined list"
-    },
-    {
-     "name": "Sammie Smith",
-     "yards": 1230,
-     "season": 1987,
-     "label": "1987: 1,230",
-     "profile": "1987 season, 1,230 rushing yards · No. 10 on the combined list"
-    }
-   ],
-   "sig": "fsrush"
   }
  ]
 }

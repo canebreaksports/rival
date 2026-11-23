@@ -6,78 +6,29 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-23T23:42:06.764Z",
- "engine": 39,
+ "generatedAt": "2026-11-23T23:47:38.320Z",
+ "engine": 42,
  "questions": [
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Oklahoma–Missouri series?",
-   "options": [
-    "41 points",
-    "53 points",
-    "50 points",
-    "31 points"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    2,
-    0,
-    3
-   ],
-   "reveal": "41 points: Oklahoma 62, Missouri 21 (Dec 6, 2008).",
-   "sig": "mm41"
-  },
-  {
-   "type": "count",
-   "label": "Since 2022",
-   "a": "OU",
-   "b": "MIZ",
-   "threshold": 1500,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2022 through 2025, which school had more 1,500-yard rushing seasons?",
-   "A": [],
-   "B": [
-    {
-     "name": "Cody Schrader",
-     "yards": 1617,
-     "season": 2023,
-     "profile": "Running back · 2023: 1,617 rushing, 191 receiving yds"
-    },
-    {
-     "name": "Ahmad Hardy",
-     "yards": 1649,
-     "season": 2025,
-     "profile": "Running back · 2025: 1,649 rushing, 22 receiving yds"
-    }
-   ],
-   "sig": "tsrush15002022",
-   "bonus": "names"
-  },
   {
    "type": "h2h",
    "label": "Fresh Mix",
    "upset": true,
    "verified": true,
    "flip": false,
-   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "prompt": "Who had more college receptions (at the school shown)?",
    "A": {
-    "label": "Tyler Badie (MIZ RB)",
-    "value": 1149,
+    "label": "Luther Burden III (MIZ WR)",
+    "value": 188,
     "school": "MIZ"
    },
    "B": {
-    "label": "Adrian Peterson (OU RB)",
-    "value": 198,
+    "label": "CeeDee Lamb (OU WR)",
+    "value": 172,
     "school": "OU"
    },
    "unit": "",
-   "note": "🚨 Upset: Tyler Badie 1,149 vs. Adrian Peterson 198.",
-   "sig": "urecAdrian PetersonTyler Badie"
+   "note": "🚨 Upset: Luther Burden III 188 vs. CeeDee Lamb 172.",
+   "sig": "urecNCeeDee LambLuther Burden III"
   },
   {
    "type": "count",
@@ -111,6 +62,36 @@
    "B": [],
    "sig": "acheisman2010",
    "bonus": "names"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Tyler Badie (MIZ RB) · career receiving TDs",
+     "value": 11,
+     "school": "MIZ"
+    },
+    {
+     "label": "Sterling Shepard (OU WR) · career total TDs (rushing + receiving)",
+     "value": 27,
+     "school": "OU"
+    },
+    {
+     "label": "Jalen Hurts (OU QB) · 2019 rushing TDs",
+     "value": 20,
+     "school": "OU"
+    },
+    {
+     "label": "Damarea Crockett (MIZ RB) · 2018 rushing TDs",
+     "value": 7,
+     "school": "MIZ"
+    }
+   ],
+   "sig": "mxTDDamarea Crockett2018 rushing TDs,Jalen Hurts2019 rushing TDs,Sterling Shepardcareer total TDs (rushing + receiving),Tyler Badiecareer receiving TDs"
   },
   {
    "type": "rank",
@@ -211,6 +192,32 @@
    }
   },
   {
+   "type": "mc",
+   "label": "Ranked Wins",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2015, which school has more wins over AP-ranked opponents, and how many?",
+   "options": [
+    "Oklahoma, 35",
+    "Oklahoma, 31",
+    "Missouri, 8",
+    "Missouri, 38"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    1,
+    3,
+    2
+   ],
+   "reveal": "Oklahoma 35, Missouri 8 (through 2025). Latest: Oklahoma: 2025 vs. No. 14 Tennessee 33–27, 2025 vs. No. 4 Alabama 23–21, 2025 vs. No. 23 Missouri 17–6; Missouri: 2023 vs. No. 14 Tennessee 36–7, 2023 vs. No. 7 Ohio State 14–3, 2024 vs. No. 24 Boston College 27–21.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   },
+   "sig": "rw2015"
+  },
+  {
    "type": "count",
    "label": "Fill In",
    "a": "OU",
@@ -297,121 +304,117 @@
    "sig": "fsrush"
   },
   {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": false,
-   "prompt": "In Oklahoma–Missouri games since 2006, who had more receiving yards against the other school?",
-   "A": {
-    "label": "Ryan Broyles (OU) vs. Missouri",
-    "value": 349,
-    "school": "OU"
-   },
-   "B": {
-    "label": "Wes Kemp (MIZ) vs. Oklahoma",
-    "value": 110,
-    "school": "MIZ"
-   },
-   "unit": "receiving yds",
-   "note": "Ryan Broyles: 349 in 3 games. Wes Kemp: 110 in 2 games.",
-   "sig": "vsrecRyan Broyles,Wes Kemp",
-   "more": {
-    "title": "Top receiving yards against the other school since 2006",
-    "rows": [
-     "1. Ryan Broyles (OU) 349 in 3 games",
-     "2. Juaquin Iglesias (OU) 249 in 4 games",
-     "3. Chase Coffman (MIZ) 207 in 3 games",
-     "4. Jermaine Gresham (OU) 179 in 4 games",
-     "5. Jerrell Jackson (MIZ) 175 in 2 games",
-     "6. Malcolm Kelly (OU) 170 in 3 games"
-    ]
-   }
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more yards from scrimmage in a single season?",
-   "A": {
-    "label": "Samaje Perine (RB) · 2016 OU",
-    "value": 1166,
-    "school": "OU"
-   },
-   "B": {
-    "label": "Tyler Badie (RB) · 2021 MIZ",
-    "value": 1934,
-    "school": "MIZ"
-   },
-   "unit": "yards from scrimmage",
-   "sig": "hSamaje Perine2016,Tyler Badie2021scrim",
-   "more": {
-    "title": "Top 6: single-season yards from scrimmage (OU, MIZ players in our data)",
-    "rows": [
-     "1. Adrian Peterson (OU 2004) 1,937",
-     "2. Tyler Badie (MIZ 2021) 1,934",
-     "3. Samaje Perine (OU 2014) 1,821",
-     "4. Joe Mixon (OU 2016) 1,812",
-     "5. Cody Schrader (MIZ 2023) 1,808",
-     "6. Eric Gray (OU 2022) 1,593"
-    ]
-   }
-  },
-  {
    "type": "mc",
-   "label": "Ranked Wins",
+   "label": "Series History",
    "verified": true,
    "pitted": true,
-   "prompt": "Since 2015, which school has more wins over AP-ranked opponents, and how many?",
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Oklahoma–Missouri series?",
    "options": [
-    "Oklahoma, 35",
-    "Oklahoma, 31",
-    "Missouri, 8",
-    "Missouri, 38"
+    "41 points",
+    "53 points",
+    "50 points",
+    "31 points"
    ],
    "answer": 0,
    "order": [
-    0,
     1,
-    3,
-    2
+    2,
+    0,
+    3
    ],
-   "reveal": "Oklahoma 35, Missouri 8 (through 2025). Latest: Oklahoma: 2025 vs. No. 14 Tennessee 33–27, 2025 vs. No. 4 Alabama 23–21, 2025 vs. No. 23 Missouri 17–6; Missouri: 2023 vs. No. 14 Tennessee 36–7, 2023 vs. No. 7 Ohio State 14–3, 2024 vs. No. 24 Boston College 27–21.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
-   },
-   "sig": "rw2015"
+   "reveal": "41 points: Oklahoma 62, Missouri 21 (Dec 6, 2008).",
+   "sig": "mm41"
   },
   {
    "type": "rank",
-   "label": "Notables",
+   "label": "Fresh Mix",
    "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
+   "prompt": "Rank these players by career rushing TDs (at that school), highest first.",
    "items": [
     {
-     "label": "CeeDee Lamb (OU WR) · 2018 receiving yards",
-     "value": 1155,
-     "school": "OU"
-    },
-    {
-     "label": "Larry Rountree III (MIZ RB) · career yards from scrimmage",
-     "value": 4009,
+     "label": "Luther Burden III (WR) · career, MIZ",
+     "value": 5,
      "school": "MIZ"
     },
     {
-     "label": "Jalen Hurts (OU QB) · 2019 rushing yards",
-     "value": 1298,
+     "label": "Joe Mixon (RB) · career, OU",
+     "value": 17,
      "school": "OU"
     },
     {
-     "label": "Samaje Perine (OU RB) · 2015 yards from scrimmage",
-     "value": 1456,
-     "school": "OU"
+     "label": "Damarea Crockett (RB) · career, MIZ",
+     "value": 19,
+     "school": "MIZ"
+    },
+    {
+     "label": "Tyler Badie (RB) · career, MIZ",
+     "value": 23,
+     "school": "MIZ"
     }
    ],
-   "sig": "nxydsCeeDee Lamb2018 receiving yards,Jalen Hurts2019 rushing yards,Larry Rountree IIIcareer yards from scrimmage,Samaje Perine2015 yards from scrimmage"
+   "unit": "TD",
+   "sig": "rcar|rushTDDamarea Crockettcareer,Joe Mixoncareer,Luther Burden IIIcareer,Tyler Badiecareer",
+   "more": {
+    "title": "Top 8: career rushing TDs (OU, MIZ players in our data)",
+    "rows": [
+     "1. Samaje Perine (OU) 49",
+     "2. Adrian Peterson (OU) 41",
+     "3. Larry Rountree III (MIZ) 40",
+     "4. Kennedy Brooks (OU) 31",
+     "5. Tyler Badie (MIZ) 23",
+     "6. Cody Schrader (MIZ) 23",
+     "7. Jalen Hurts (OU) 20",
+     "8. Damarea Crockett (MIZ) 19"
+    ]
+   }
+  },
+  {
+   "type": "count",
+   "label": "Since 2022",
+   "a": "OU",
+   "b": "MIZ",
+   "threshold": 1500,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2022 through 2025, which school had more 1,500-yard rushing seasons?",
+   "A": [],
+   "B": [
+    {
+     "name": "Cody Schrader",
+     "yards": 1617,
+     "season": 2023,
+     "profile": "Running back · 2023: 1,617 rushing, 191 receiving yds"
+    },
+    {
+     "name": "Ahmad Hardy",
+     "yards": 1649,
+     "season": 2025,
+     "profile": "Running back · 2025: 1,649 rushing, 22 receiving yds"
+    }
+   ],
+   "sig": "tsrush15002022",
+   "bonus": "names"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2017,
+   "stat": "Receiving season",
+   "aSchool": "OU",
+   "other": "MIZ",
+   "aName": "CeeDee Lamb (WR)",
+   "bName": "J'Mon Moore (WR)",
+   "A": {
+    "big": "807",
+    "sm": "rec yds · 7 TD"
+   },
+   "B": {
+    "big": "1,082",
+    "sm": "rec yds · 10 TD"
+   },
+   "flip": false,
+   "sig": "drec2017CeeDee Lamb,J'Mon Moore"
   }
  ],
  "rev": 1

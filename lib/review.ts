@@ -58,7 +58,7 @@ export function formatOf(q: Question): string {
     case "prog": return "Pick a school: A / B / Tied";
     case "count": return q.bonus === "years" ? "Pick a school: A / B / Tied, then Name the Years bonus (one year at a time, 3 misses, hints −10)" : "Pick a school: A / B / Tied, then Name Them bonus (one name at a time, 3 misses, hints −10)";
     case "moment": return q.pair ? "Higher or lower: More / Less (paired, 1 of 2 back to back)" : "Higher or lower: More / Less";
-    case "rank": return "Rank It: tap 4 in order, highest first" + (q.names ? ", then Name Them bonus: complete the combined top 10 (3 misses, hints −10)" : "");
+    case "rank": return `Rank It: tap ${q.items.length} in order, highest first` + (q.names ? ", then Name Them bonus: complete the combined top 10 (3 misses, hints −10)" : "");
     case "h2h": return "Head to head: pick 1 of 2";
     case "duel": return "Blind stat duel: pick Player X or Y";
     case "cross": return "Multiple choice: pick 1 of 4";
