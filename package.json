@@ -11,7 +11,8 @@
     "sets": "tsx scripts/build-sets.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "review": "tsx scripts/review.ts"
+    "review": "tsx scripts/review.ts",
+    "notes": "tsx scripts/review-notes.ts"
   },
   "dependencies": {
     "next": "^16.4.6",

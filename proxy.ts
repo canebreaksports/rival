@@ -6,7 +6,7 @@ import { coachAuthorized } from "@/lib/coach-auth";
 
 export function proxy(request: NextRequest) {
   // the game reads approvals; only the admin can change them
-  if (request.nextUrl.pathname.startsWith("/api/approvals") && request.method === "GET") return NextResponse.next();
+  if (request.nextUrl.pathname === "/api/approvals" && request.method === "GET") return NextResponse.next(); // reviews and notes stay private
   if (coachAuthorized(request.headers.get("authorization"), process.env.COACH_PASSWORD)) return NextResponse.next();
   return new NextResponse("Coach area: password required.", {
     status: 401,

@@ -17,17 +17,17 @@ export default function Publish() {
     <div className="tag" style={{ marginTop: 6 }}>Coach · Publish</div>
     <h2 className="sec" style={{ fontSize: 22 }}>Review and green-light</h2>
     <p className="note" style={{ marginTop: 0, textAlign: "left" }}>Players only see a matchup after you green-light it. If a set changes after you approve it, it goes back to review.
-      Correct answers are in gold. Use ▲/▼ to reorder (saving a new order sends the set back to review). To change a question, tell Claude the matchup and question number.</p>
+      Correct answers are in gold. Review each question: ✅ green light, 🛠 needs work (add a note), or ❌ reject. A set can be published once every question is green-lit. Use ▲/▼ to reorder (a new order sends the set back to review). Claude reads your notes and revises.</p>
     <StorageNote />
     <nav className="note" style={{ display: "flex", flexWrap: "wrap", gap: "6px 12px", textAlign: "left" }}>{weeks.flatMap(w => sets.filter(s => weekOf(s.game.date) === w)).map(s =>
       <a key={s.slug} href={`#${s.slug}`} style={{ color: "var(--gold)", whiteSpace: "nowrap" }}>{s.game.away}@{s.game.home}</a>)}</nav>
     {weeks.map(w => { const mine = sets.filter(s => weekOf(s.game.date) === w); const d = new Date(w + "T12:00:00");
       return <div key={w}>
         <h2 className="sec" style={{ fontSize: 20, marginTop: 18 }}>Week of {d.toLocaleDateString("en-US", { month: "long", day: "numeric" })} · {mine.length} matchups</h2>
-        <WeekApprove slugs={mine.map(s => s.slug)} />
+        <WeekApprove sets={mine.map(s => ({ slug: s.slug, sigs: s.questions.map(q => q.sig) }))} />
         {mine.map(s => <div key={s.slug} id={s.slug} className="review" style={{ scrollMarginTop: 12 }}>
           <h3 className="sec"><Dot k={s.game.away} /> {SCHOOL[s.game.away].name} @ <Dot k={s.game.home} /> {SCHOOL[s.game.home].name} · {s.game.date} · {s.questions.length} Qs</h3>
-          <SetStatus slug={s.slug} />
+          <SetStatus slug={s.slug} sigs={s.questions.map(q => q.sig)} />
           <SetQuestions slug={s.slug} questions={s.questions} />
         </div>)}
       </div>; })}
