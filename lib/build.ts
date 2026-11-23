@@ -4,11 +4,11 @@ import { pick, seededRng, shuffle, type Rng } from "./rng";
 import { PROGRAM_STATS, SCHOOL, programValue } from "./data";
 import { genGameCount, genSeasonCount, genVsLeaderMC } from "./trend-gen";
 import { genAwardCount, genAwardMC, genDraftCount, genDraftMC, genHeismanCount, genHeismanMC } from "./honors-gen";
-import { genGameMoment, genGameRank, genSeriesCount, genTeamDiffMC, genVsH2H, pairKey } from "./rivalry-gen";
+import { genGameMoment, genGameRank, genLongestGameMoment, genLongestSeriesMC, genSeriesCount, genTeamDiffMC, genVsH2H, pairKey } from "./rivalry-gen";
 import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 12; // v12: no close calls unless both sides are notable players in notable seasons (v11: honors)
+export const ENGINE_VERSION = 13; // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean }
@@ -50,6 +50,12 @@ export function curatedQs(items: CuratedItem[], label: string, rng: Rng, o: Buil
         out.push({ ...base, type: "duel", year: it.year, stat: it.stat, aSchool: it.aSchool, other: it.aSchool === pair[0] ? pair[1] : pair[0],
           aName: it.aName, bName: it.bName, A: it.A, B: it.B, flip: rng() < 0.5 });
         break;
+      case "mc": {
+        const game = it.game && pair ? { ...it.game, loser: it.game.winner === pair[0] ? pair[1] : pair[0] } : undefined;
+        out.push({ ...base, type: "mc", pitted: true, prompt: it.prompt, options: it.options, answer: it.answer, reveal: it.reveal,
+          order: shuffle(rng, it.options.map((_, j) => j)), ...(game ? { game } : {}) });
+        break;
+      }
       case "cross":
         if (!pair) return;
         out.push({ ...base, type: "cross", a: pair[0], b: pair[1], prompt: it.prompt, options: it.options, answer: it.answer, reveal: it.reveal,
@@ -83,7 +89,8 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
     const [a, b] = teams, from = data.rivalry!.boxFrom;
     const gm = () => genGameMoment(rv, rng), vs = () => genVsH2H(rv, a, b, rng, from), gr = () => genGameRank(rv, a, b, rng);
     const td = () => genTeamDiffMC(rv, rng); // (single-game Rank It removed at the owner's request, Nov 2026)
-    gens.push(gm, gm, gm, gm, vs, vs, vs, gr, gr, td, td, () => genSeriesCount(rv, a, b, rng));
+    gens.push(gm, gm, gm, gm, vs, vs, vs, gr, gr, td, td, () => genSeriesCount(rv, a, b, rng),
+      () => genLongestSeriesMC(rv, a, b, rng), () => genLongestGameMoment(rv, rng));
   }
   if (teams.length > 1) { // honors multiple choice: drafted highest, award winner, best Heisman finish
     const [a, b] = teams, pl = data.players.players.map(p => ({ name: p.name, school: p.school, pos: p.pos, star: p.star }));
@@ -149,6 +156,13 @@ export function involvesBoth(q: Question, a: SchoolKey, b: SchoolKey): boolean {
   }
 }
 
+/** Generator family of a question, from its signature prefix (e.g. "vs" = totals against each other). */
+export const questionKind = (q: Question) =>
+  q.sig.match(/^(gm|vs|tv|ts|tg|dc|dm|ac|am|hc|hm|sc|td|gr|lp|lg|mx|pp|tr|tp|d|u|h|r|c|g|k|p)/)?.[1] ?? q.sig.slice(0, 2);
+// may appear twice in a set: program pit, curated items, game moments, plain head-to-heads
+const REPEATABLE = new Set(["g", "gm", "h"]);
+const CURATED_MAX = 3; // hand-written questions per set
+
 export function buildRound(data: Dataset, a: SchoolKey, b: SchoolKey, rng: Rng, o: BuildOpts): Question[] {
   const m = findMatchup(data, a, b);
   const gen = generate(data, [a, b], PLAYER_QS, rng, o);
@@ -161,15 +175,20 @@ export function buildRound(data: Dataset, a: SchoolKey, b: SchoolKey, rng: Rng, 
   // Player stats lead. Program comparisons are capped at 2, or 4 while a school still has no player pack.
   const cap = caps(hasPlayerData(data, a, o) && hasPlayerData(data, b, o) ? 2 : 4, true);
   // Paired props travel as one unit: both halves or neither, always adjacent.
-  const all = [...gen, ...rest], units: Question[][] = [];
+  // Hand-written questions for this rivalry come first (they're curated, verified and chosen on purpose), then generated ones.
+  const curated = rest.filter(q => questionKind(q) === "k"), others = rest.filter(q => questionKind(q) !== "k");
+  const all = [...curated, ...gen, ...others], units: Question[][] = [];
   for (const q of all) {
     if (!q.pair) units.push([q]);
     else if (q.pairPart === 1) { const mate = all.find(x => x.pair === q.pair && x.pairPart === 2); if (mate) units.push([q, mate]) }
   }
-  const used: Partial<Record<QType, number>> = {}, picked: Question[][] = [];
+  const used: Partial<Record<QType, number>> = {}, picked: Question[][] = [], kinds: Record<string, number> = {};
   let n = 0, traps = 0, upsets = 0;
   for (const u of units) {
     if (n + u.length > WEEKLY_N) continue;
+    // variety: no question kind twice (e.g. two "yards against each other" head-to-heads); a few kinds may appear twice
+    const kind = questionKind(u[0]);
+    if ((kinds[kind] ?? 0) >= (kind === "k" ? CURATED_MAX : REPEATABLE.has(kind) ? 2 : 1)) continue;
     if (!u.every(q => involvesBoth(q, a, b))) continue;
     if ((used[u[0].type] ?? 0) + u.length > cap[u[0].type]) continue;
     if (u[0].trap && traps >= 1) continue;
@@ -177,7 +196,7 @@ export function buildRound(data: Dataset, a: SchoolKey, b: SchoolKey, rng: Rng, 
     used[u[0].type] = (used[u[0].type] ?? 0) + u.length;
     if (u[0].trap) traps++;
     if (u[0].upset) upsets++;
-    picked.push(u); n += u.length;
+    picked.push(u); n += u.length; kinds[kind] = (kinds[kind] ?? 0) + 1;
   }
   return shuffle(rng, picked).flat();
 }

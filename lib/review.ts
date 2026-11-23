@@ -50,13 +50,26 @@ export function reviewQuestion(q: Question): ReviewItem {
 /** Sunday a game's week unlocks, as YYYY-MM-DD. */
 export const weekOf = (date: string) => sundayOf(date);
 
+/** How the player answers, in plain words. */
+export function formatOf(q: Question): string {
+  switch (q.type) {
+    case "prog": return "Pick a school: A / B / Tied";
+    case "count": return "Pick a school: A / B / Tied, then Name Them bonus (one name at a time, 3 misses, hints −10)";
+    case "moment": return q.pair ? "Higher or lower: More / Less (paired, 1 of 2 back to back)" : "Higher or lower: More / Less";
+    case "rank": return "Rank It: tap 4 in order, highest first";
+    case "h2h": return "Head to head: pick 1 of 2";
+    case "duel": return "Blind stat duel: pick Player X or Y";
+    case "cross": case "mc": return "Multiple choice: pick 1 of 4";
+  }
+}
+
 export function reviewMarkdown(week: string, sets: FrozenSet[]): string {
   const lines = [`# RIVAL · questions for the week of ${week}`, "", `${sets.length} matchups. Answers in **bold**.`, ""];
   for (const s of sets) {
     lines.push(`## ${n(s.game.away)} @ ${n(s.game.home)} · ${s.game.date} (${s.questions.length} questions)`, "");
     s.questions.forEach((q, i) => {
       const r = reviewQuestion(q);
-      lines.push(`${i + 1}. *${r.kind}*${r.flags.length ? ` · ${r.flags.join(" · ")}` : ""}  `, `   ${r.prompt}  `);
+      lines.push(`${i + 1}. *${r.kind}*${r.flags.length ? ` · ${r.flags.join(" · ")}` : ""}  `, `   Format: ${formatOf(q)}  `, `   ${r.prompt}  `);
       if (r.options && q.type !== "rank") lines.push(`   Options: ${r.options.join(" / ")}  `);
       lines.push(...r.answer.split("\n").map(a => `   **${a}**  `));
       if (r.detail) lines.push(...r.detail.split("\n").map(d => `   ${d}  `));

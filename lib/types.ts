@@ -39,6 +39,7 @@ export type CuratedItem = Sourced & (
   | { type: "moment"; prompt: string; line: string; answer: "over" | "under"; reveal: string; game?: GameBox }
   | { type: "duel"; year: number; stat: string; aSchool: SchoolKey; aName: string; bName: string; A: { big: string; sm: string }; B: { big: string; sm: string } }
   | { type: "cross"; prompt: string; options: string[]; answer: number; reveal: string }
+  | { type: "mc"; prompt: string; options: string[]; answer: number; reveal: string; game?: GameBox }
   | { type: "rank"; prompt: string; items: { label: string; value: number }[]; unit: string; trap?: boolean; note?: string }
   | { type: "h2h"; prompt: string; A: { label: string; value: number }; B: { label: string; value: number }; unit: string }
 );
@@ -60,7 +61,7 @@ export interface Dataset {
 // ---- games between two schools (data/rivalry.json) ----
 export interface Perf { name: string; cat: "rush" | "rec" | "pass"; yds: number; td: number; n?: number }
 export interface TeamLine { total: number; rush: number; pass: number; to: number }
-export interface RivalryGame { season: number; date: string; home: SchoolKey; away: SchoolKey; hp: number; ap: number; venue: string; neutral?: boolean; bowl?: boolean; box?: Record<SchoolKey, Perf[]>; team?: Record<SchoolKey, TeamLine> }
+export interface RivalryGame { season: number; date: string; home: SchoolKey; away: SchoolKey; hp: number; ap: number; venue: string; neutral?: boolean; bowl?: boolean; box?: Record<SchoolKey, Perf[]>; team?: Record<SchoolKey, TeamLine>; long?: Record<SchoolKey, { name: string; yds: number; kind: "rush" | "catch" }> }
 export interface VsTotal { name: string; school: SchoolKey; games: number; rush: number; rushTD: number; car: number; rec: number; recTD: number; recN: number }
 export interface RivalryPair { games: RivalryGame[]; vs: VsTotal[]; vsFrom?: number } // vsFrom: every game since then has a box score
 

@@ -290,7 +290,8 @@ export function genUpset(c: Ctx): Question | null {
     if (!recv && (ps === "WR" || ps === "TE")) continue;     // a WR/TE "star" losing on rushing isn't one either
     if (!recv && po === "RB" && ps !== "RB") continue;       // an RB out-rushing a QB isn't an upset
     if (recv && ps === "QB") continue;                       // a QB star on receiving stats
-    if (k === "ypc" && ((o.att ?? 0) < 5 || (s.att ?? 0) < 5)) continue;
+    // averages only between real samples: both players 100+ carries (owner's rule: no small sample vs large)
+    if (k === "ypc" && ((o.att ?? 0) < 100 || (s.att ?? 0) < 100)) continue;
     cands.push({ k, s, o, vs, vo, w: ps !== po ? 3 : 2 }); // cross-position pairs weighted highest
   }
   if (!cands.length) return null;

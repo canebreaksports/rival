@@ -6,9 +6,60 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-19T14:51:33.260Z",
- "engine": 12,
+ "generatedAt": "2026-11-23T15:04:52.262Z",
+ "engine": 13,
  "questions": [
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Mark Andrews finish his Oklahoma career with more or less than",
+   "line": "1,550 receiving yards",
+   "answer": "over",
+   "reveal": "More. Mark Andrews had 1,765 receiving yards in his career.",
+   "check": {
+    "value": 1765,
+    "line": 1550
+   },
+   "sig": "ppMark Andrewscareer|Johnathon Johnsoncareerrec0",
+   "pair": "ppMark Andrewscareer|Johnathon Johnsoncareerrec",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Johnathon Johnson finish his Missouri career with more or less than",
+   "line": "1,850 receiving yards",
+   "answer": "over",
+   "reveal": "More. Johnathon Johnson had 2,190 receiving yards in his career.",
+   "check": {
+    "value": 2190,
+    "line": 1850
+   },
+   "sig": "ppMark Andrewscareer|Johnathon Johnsoncareerrec1",
+   "pair": "ppMark Andrewscareer|Johnathon Johnsoncareerrec",
+   "pairPart": 2
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more career yards from scrimmage?",
+   "A": {
+    "label": "Ish Witter (RB) · career, MIZ",
+    "value": 2698,
+    "school": "MIZ"
+   },
+   "B": {
+    "label": "Eric Gray (RB) · career, OU",
+    "value": 2234,
+    "school": "OU"
+   },
+   "unit": "yards from scrimmage",
+   "sig": "hEric Graycareer,Ish Wittercareerscrim"
+  },
   {
    "type": "count",
    "label": "Since 2020",
@@ -62,110 +113,75 @@
   },
   {
    "type": "moment",
-   "label": "Rivalry Game",
+   "label": "Longest Play",
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Oct 13, 2007",
+    "date": "Dec 6, 2008",
     "winner": "OU",
     "loser": "MIZ",
-    "ws": 41,
-    "ls": 31,
-    "venue": "Memorial Stadium (Norman, OK)"
+    "ws": 62,
+    "ls": 21,
+    "venue": "Memorial Stadium (Norman, OK) · Neutral site"
    },
-   "prompt": "In this game, did Juaquin Iglesias (Oklahoma) have more or less than",
-   "line": "60 receiving yards",
-   "answer": "over",
-   "reveal": "More. Juaquin Iglesias had 77 receiving yards on 7 catches and 1 TD in this game.",
+   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
+   "line": "61.5 yards",
+   "answer": "under",
+   "reveal": "Less. The longest was Danario Alexander's 39-yard catch for Missouri; Oklahoma's longest was 37 yards (Mossis Madu).",
    "check": {
-    "value": 77,
-    "line": 60
+    "value": 39,
+    "line": 61.5
    },
-   "sig": "gm2007-10-13Juaquin Iglesiasrec"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": true,
-   "prompt": "In Oklahoma–Missouri games since 2006, who had more receiving yards against the other school?",
-   "A": {
-    "label": "Juaquin Iglesias (OU) vs. Missouri",
-    "value": 249,
-    "school": "OU"
-   },
-   "B": {
-    "label": "Martin Rucker (MIZ) vs. Oklahoma",
-    "value": 140,
-    "school": "MIZ"
-   },
-   "unit": "receiving yds",
-   "note": "Juaquin Iglesias: 249 in 4 games. Martin Rucker: 140 in 3 games.",
-   "sig": "vsrecJuaquin Iglesias,Martin Rucker"
+   "sig": "lg2008-12-06"
   },
   {
    "type": "rank",
-   "label": "Rivalry Games",
+   "label": "Fresh Mix",
    "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Oklahoma–Missouri games, highest first.",
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
    "items": [
     {
-     "label": "James Franklin (MIZ) · 2011",
-     "value": 103,
-     "school": "MIZ"
-    },
-    {
-     "label": "Chris Brown (OU) · 2007",
-     "value": 67,
+     "label": "Jalen Saunders (OU WR) · career total TDs (rushing + receiving)",
+     "value": 11,
      "school": "OU"
     },
     {
-     "label": "Henry Josey (MIZ) · 2011",
-     "value": 133,
+     "label": "Larry Rountree III (MIZ RB) · 2017 rushing TDs",
+     "value": 6,
      "school": "MIZ"
     },
     {
-     "label": "Allen Patrick (OU) · 2006",
-     "value": 162,
+     "label": "Johnathon Johnson (MIZ WR) · career receiving TDs",
+     "value": 13,
+     "school": "MIZ"
+    },
+    {
+     "label": "Adrian Peterson (OU RB) · career total TDs (rushing + receiving)",
+     "value": 42,
      "school": "OU"
     }
    ],
-   "sig": "grrushAllen Patrick2006,Chris Brown2007,Henry Josey2011,James Franklin2011"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Oklahoma vs Missouri",
-   "a": "OU",
-   "b": "MIZ",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    2,
-    9
-   ],
-   "verified": true,
-   "sig": "glosing"
+   "sig": "mxTDAdrian Petersoncareer total TDs (rushing + receiving),Jalen Saunderscareer total TDs (rushing + receiving),Johnathon Johnsoncareer receiving TDs,Larry Rountree III2017 rushing TDs"
   },
   {
    "type": "h2h",
    "label": "Fresh Mix",
-   "upset": true,
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receptions (at the school shown)?",
+   "flip": true,
+   "prompt": "Who had more receiving TDs in a single season?",
    "A": {
-    "label": "Tyler Badie (MIZ RB)",
-    "value": 126,
-    "school": "MIZ"
-   },
-   "B": {
-    "label": "Samaje Perine (OU RB)",
-    "value": 40,
+    "label": "Mark Andrews (TE) · 2017 OU",
+    "value": 8,
     "school": "OU"
    },
-   "unit": "",
-   "note": "🚨 Upset: Tyler Badie 126 vs. Samaje Perine 40.",
-   "sig": "urecNSamaje PerineTyler Badie"
+   "B": {
+    "label": "Johnathon Johnson (WR) · 2018 MIZ",
+    "value": 5,
+    "school": "MIZ"
+   },
+   "unit": "receiving TDs",
+   "sig": "hJohnathon Johnson2018,Mark Andrews2017recTD"
   },
   {
    "type": "count",
@@ -196,53 +212,25 @@
    "sig": "hc12010"
   },
   {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Oklahoma–Missouri games, highest first.",
-   "items": [
-    {
-     "label": "Dominique Whaley (OU) · 2011",
-     "value": 68,
-     "school": "OU"
-    },
-    {
-     "label": "James Franklin (MIZ) · 2011",
-     "value": 103,
-     "school": "MIZ"
-    },
-    {
-     "label": "Allen Patrick (OU) · 2006",
-     "value": 162,
-     "school": "OU"
-    },
-    {
-     "label": "Henry Josey (MIZ) · 2011",
-     "value": 133,
-     "school": "MIZ"
-    }
-   ],
-   "sig": "grrushAllen Patrick2006,Dominique Whaley2011,Henry Josey2011,James Franklin2011"
-  },
-  {
    "type": "h2h",
    "label": "Fresh Mix",
+   "upset": true,
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving TDs in a single season?",
+   "flip": false,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
    "A": {
-    "label": "Mark Andrews (TE) · 2017 OU",
-    "value": 8,
-    "school": "OU"
-   },
-   "B": {
-    "label": "Johnathon Johnson (WR) · 2018 MIZ",
-    "value": 5,
+    "label": "Ish Witter (MIZ RB)",
+    "value": 280,
     "school": "MIZ"
    },
-   "unit": "receiving TDs",
-   "sig": "hJohnathon Johnson2018,Mark Andrews2017recTD"
+   "B": {
+    "label": "Adrian Peterson (OU RB)",
+    "value": 198,
+    "school": "OU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Ish Witter 280 vs. Adrian Peterson 198.",
+   "sig": "urecAdrian PetersonIsh Witter"
   },
   {
    "type": "mc",
@@ -250,29 +238,29 @@
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Sep 24, 2011",
+    "date": "Dec 6, 2008",
     "winner": "OU",
     "loser": "MIZ",
-    "ws": 38,
-    "ls": 28,
-    "venue": "Memorial Stadium (Norman, OK)"
+    "ws": 62,
+    "ls": 21,
+    "venue": "Memorial Stadium (Norman, OK) · Neutral site"
    },
-   "prompt": "What was the difference in rushing yards in Oklahoma's 38–28 win over Missouri?",
+   "prompt": "What was the difference in total yards in Oklahoma's 62–21 win over Missouri?",
    "options": [
-    "Missouri +97 yards",
-    "Missouri +47 yards",
-    "Oklahoma +187 yards",
-    "Oklahoma +227 yards"
+    "Oklahoma +273 yards",
+    "Oklahoma +143 yards",
+    "Oklahoma +163 yards",
+    "Missouri +163 yards"
    ],
    "answer": 0,
    "order": [
-    3,
-    0,
     1,
-    2
+    2,
+    3,
+    0
    ],
-   "reveal": "Missouri +97. Missouri had 241 rushing yards, Oklahoma 144.",
-   "sig": "td2011-09-24rush"
+   "reveal": "Oklahoma +273. Missouri had 354 total yards, Oklahoma 627.",
+   "sig": "td2008-12-06total"
   }
  ]
 }

@@ -6,107 +6,38 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-19T14:51:33.257Z",
- "engine": 12,
+ "generatedAt": "2026-11-23T15:04:52.259Z",
+ "engine": 13,
  "questions": [
   {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 23, 2017",
-    "winner": "MISS",
-    "loser": "MSST",
-    "ws": 31,
-    "ls": 28,
-    "venue": "Davis Wade Stadium"
-   },
-   "prompt": "In this game, did D.K. Metcalf (Ole Miss) have more or less than",
-   "line": "90 receiving yards",
-   "answer": "under",
-   "reveal": "Less. D.K. Metcalf had 67 receiving yards on 2 catches and 1 TD in this game.",
-   "check": {
-    "value": 67,
-    "line": 90
-   },
-   "sig": "gm2017-11-23D.K. Metcalfrec"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 28, 2009",
-    "winner": "MSST",
-    "loser": "MISS",
-    "ws": 41,
-    "ls": 27,
-    "venue": "Davis Wade Stadium"
-   },
-   "prompt": "In this game, did Chris Relf (Mississippi State) run for more or less than",
-   "line": "160 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Chris Relf had 131 rushing yards on 15 carries and 1 TD in this game.",
-   "check": {
-    "value": 131,
-    "line": 160
-   },
-   "sig": "gm2009-11-28Chris Relfrush"
-  },
-  {
    "type": "rank",
-   "label": "Rivalry Games",
+   "label": "Fresh Mix",
    "verified": true,
    "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Mississippi State–Ole Miss games, highest first.",
+   "prompt": "Rank these from highest to lowest (yards).",
    "items": [
     {
-     "label": "Ulysses Bentley IV (MISS) · 2023",
-     "value": 63,
+     "label": "Dillon Johnson (MSST RB) · career yards from scrimmage",
+     "value": 2062,
+     "school": "MSST"
+    },
+    {
+     "label": "Jordan Wilkins (MISS RB) · 2014 yards from scrimmage",
+     "value": 367,
      "school": "MISS"
     },
     {
-     "label": "Boobie Dixon (MSST) · 2009",
-     "value": 133,
+     "label": "De'Runnya Wilson (MSST WR) · 2014 receiving yards",
+     "value": 680,
      "school": "MSST"
     },
     {
-     "label": "Kylin Hill (MSST) · 2018",
-     "value": 108,
-     "school": "MSST"
-    },
-    {
-     "label": "Kamario Taylor (MSST) · 2025",
-     "value": 173,
+     "label": "Jo'quavious Marks (MSST RB) · career yards from scrimmage",
+     "value": 3108,
      "school": "MSST"
     }
    ],
-   "sig": "grrushBoobie Dixon2009,Kamario Taylor2025,Kylin Hill2018,Ulysses Bentley IV2023"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 24, 2022",
-    "winner": "MSST",
-    "loser": "MISS",
-    "ws": 24,
-    "ls": 22,
-    "venue": "Vaught-Hemingway Stadium"
-   },
-   "prompt": "In this game, did Will Rogers (Mississippi State) throw for more or less than",
-   "line": "325 passing yards",
-   "answer": "under",
-   "reveal": "Less. Will Rogers had 239 passing yards and 2 TD in this game.",
-   "check": {
-    "value": 239,
-    "line": 325
-   },
-   "sig": "gm2022-11-24Will Rogerspass"
+   "sig": "mxydsDe'Runnya Wilson2014 receiving yards,Dillon Johnsoncareer yards from scrimmage,Jo'quavious Markscareer yards from scrimmage,Jordan Wilkins2014 yards from scrimmage"
   },
   {
    "type": "count",
@@ -152,84 +83,26 @@
    "sig": "acall2000"
   },
   {
-   "type": "rank",
-   "label": "Rivalry Games",
+   "type": "mc",
+   "label": "Awards",
    "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game receiving performances in Mississippi State–Ole Miss games, highest first.",
-   "items": [
-    {
-     "label": "Jordan Thomas (MSST) · 2017",
-     "value": 65,
-     "school": "MSST"
-    },
-    {
-     "label": "Deuce Alexander (MISS) · 2025",
-     "value": 94,
-     "school": "MISS"
-    },
-    {
-     "label": "Elijah Moore (MISS) · 2020",
-     "value": 139,
-     "school": "MISS"
-    },
-    {
-     "label": "Jaden Walley (MSST) · 2020",
-     "value": 176,
-     "school": "MSST"
-    }
+   "pitted": true,
+   "prompt": "Which of these players won the Maxwell Award, given to the nation's best all-around player?",
+   "options": [
+    "Eli Manning (Ole Miss)",
+    "Johnthan Banks (Mississippi State)",
+    "Matt Corral (Ole Miss)",
+    "Kylin Hill (Mississippi State)"
    ],
-   "sig": "grrecDeuce Alexander2025,Elijah Moore2020,Jaden Walley2020,Jordan Thomas2017"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": false,
-   "prompt": "In Mississippi State–Ole Miss games since 2007, who had more receiving yards against the other school?",
-   "A": {
-    "label": "Jaden Walley (MSST) vs. Ole Miss",
-    "value": 260,
-    "school": "MSST"
-   },
-   "B": {
-    "label": "Markeith Summers (MISS) vs. Mississippi State",
-    "value": 146,
-    "school": "MISS"
-   },
-   "unit": "receiving yds",
-   "note": "Jaden Walley: 260 in 3 games. Markeith Summers: 146 in 3 games.",
-   "sig": "vsrecJaden Walley,Markeith Summers"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Dexter McCluster (MISS RB) · 2009 rushing TDs",
-     "value": 8,
-     "school": "MISS"
-    },
-    {
-     "label": "Nick Fitzgerald (MSST QB) · 2017 rushing TDs",
-     "value": 14,
-     "school": "MSST"
-    },
-    {
-     "label": "Cody Core (MISS WR) · 2014 receiving TDs",
-     "value": 6,
-     "school": "MISS"
-    },
-    {
-     "label": "Kylin Hill (MSST RB) · career total TDs (rushing + receiving)",
-     "value": 22,
-     "school": "MSST"
-    }
+   "answer": 0,
+   "order": [
+    0,
+    3,
+    2,
+    1
    ],
-   "sig": "mxTDCody Core2014 receiving TDs,Dexter McCluster2009 rushing TDs,Kylin Hillcareer total TDs (rushing + receiving),Nick Fitzgerald2017 rushing TDs"
+   "reveal": "Eli Manning (Ole Miss) won the Maxwell Award in 2003.",
+   "sig": "ammaxwell2003"
   },
   {
    "type": "count",
@@ -256,6 +129,96 @@
     }
    ],
    "sig": "tsrush15002012"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more receiving TDs in a single season?",
+   "A": {
+    "label": "Cody Core (WR) · 2014 MISS",
+    "value": 6,
+    "school": "MISS"
+   },
+   "B": {
+    "label": "Fred Ross (WR) · 2016 MSST",
+    "value": 12,
+    "school": "MSST"
+   },
+   "unit": "receiving TDs",
+   "sig": "hCody Core2014,Fred Ross2016recTD"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": false,
+   "prompt": "In Mississippi State–Ole Miss games since 2007, who had more rushing yards against the other school?",
+   "A": {
+    "label": "Kylin Hill (MSST) vs. Ole Miss",
+    "value": 322,
+    "school": "MSST"
+   },
+   "B": {
+    "label": "Quinshon Judkins (MISS) vs. Mississippi State",
+    "value": 210,
+    "school": "MISS"
+   },
+   "unit": "rushing yds",
+   "note": "Kylin Hill: 322 in 3 games. Quinshon Judkins: 210 in 2 games.",
+   "sig": "vsrushKylin Hill,Quinshon Judkins"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more career rushing yards?",
+   "A": {
+    "label": "Jordan Wilkins (RB) · career, MISS",
+    "value": 1751,
+    "school": "MISS"
+   },
+   "B": {
+    "label": "Josh Robinson (RB) · career, MSST",
+    "value": 1997,
+    "school": "MSST"
+   },
+   "unit": "rushing yards",
+   "sig": "hJordan Wilkinscareer,Josh Robinsoncareerrush"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2015, did Aeris Williams (Mississippi State) have more or less than",
+   "line": "4.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. Aeris Williams had 3 rushing TDs in 2015.",
+   "check": {
+    "value": 3,
+    "line": 4.5
+   },
+   "sig": "ppAeris Williams2015|Jerrion Ealy2019rushTD0",
+   "pair": "ppAeris Williams2015|Jerrion Ealy2019rushTD",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2019, did Jerrion Ealy (Ole Miss) have more or less than",
+   "line": "6.5 rushing TDs",
+   "answer": "under",
+   "reveal": "Less. Jerrion Ealy had 6 rushing TDs in 2019.",
+   "check": {
+    "value": 6,
+    "line": 6.5
+   },
+   "sig": "ppAeris Williams2015|Jerrion Ealy2019rushTD1",
+   "pair": "ppAeris Williams2015|Jerrion Ealy2019rushTD",
+   "pairPart": 2
   }
  ]
 }

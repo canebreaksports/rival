@@ -6,29 +6,128 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-19T14:51:33.263Z",
- "engine": 12,
+ "generatedAt": "2026-11-23T15:04:52.266Z",
+ "engine": 13,
  "questions": [
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    1,
+    12
+   ],
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
-   "A": {
-    "label": "Jared Pinkney (VAN TE)",
-    "value": 14,
-    "school": "VAN"
+   "sig": "gwin3"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Will Sheppard (VAN WR) · 2023 receiving yards",
+     "value": 684,
+     "school": "VAN"
+    },
+    {
+     "label": "Dylan Sampson (TENN RB) · career yards from scrimmage",
+     "value": 2826,
+     "school": "TENN"
+    },
+    {
+     "label": "Joshua Dobbs (TENN QB) · 2016 rushing yards",
+     "value": 831,
+     "school": "TENN"
+    },
+    {
+     "label": "Re'Mahn Davis (VAN RB) · 2022 rushing yards",
+     "value": 926,
+     "school": "VAN"
+    }
+   ],
+   "sig": "mxydsDylan Sampsoncareer yards from scrimmage,Joshua Dobbs2016 rushing yards,Re'Mahn Davis2022 rushing yards,Will Sheppard2023 receiving yards"
+  },
+  {
+   "type": "mc",
+   "label": "Awards",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Which of these players won the Biletnikoff Award, given to the nation's best receiver?",
+   "options": [
+    "Jalin Hyatt (Tennessee)",
+    "Trent Sherfield (Vanderbilt)",
+    "Jared Pinkney (Vanderbilt)",
+    "Kalija Lipscomb (Vanderbilt)"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    0,
+    2,
+    1
+   ],
+   "reveal": "Jalin Hyatt (Tennessee) won the Biletnikoff Award in 2022.",
+   "sig": "ambiletnikoff2022"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 1997, did Jamal Lewis (Tennessee) have more or less than",
+   "line": "1,400 yards from scrimmage",
+   "answer": "over",
+   "reveal": "More. Jamal Lewis had 1,630 yards from scrimmage in 1997.",
+   "check": {
+    "value": 1630,
+    "line": 1400
    },
-   "B": {
-    "label": "Arian Foster (TENN RB)",
-    "value": 2,
-    "school": "TENN"
+   "sig": "ppJamal Lewis1997|Ralph Webb2015scrim0",
+   "pair": "ppJamal Lewis1997|Ralph Webb2015scrim",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2015, did Ralph Webb (Vanderbilt) have more or less than",
+   "line": "1,500 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Ralph Webb had 1,340 yards from scrimmage in 2015.",
+   "check": {
+    "value": 1340,
+    "line": 1500
    },
-   "unit": "",
-   "note": "🚨 Upset: Jared Pinkney 14 vs. Arian Foster 2.",
-   "sig": "urecTDArian FosterJared Pinkney"
+   "sig": "ppJamal Lewis1997|Ralph Webb2015scrim1",
+   "pair": "ppJamal Lewis1997|Ralph Webb2015scrim",
+   "pairPart": 2
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 30, 2024",
+    "winner": "TENN",
+    "loser": "VAN",
+    "ws": 36,
+    "ls": 23,
+    "venue": "FirstBank Stadium"
+   },
+   "prompt": "In this game, did Dont'E Thornton (Tennessee) have more or less than",
+   "line": "150 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Dont'E Thornton had 118 receiving yards on 3 catches and 2 TD in this game.",
+   "check": {
+    "value": 118,
+    "line": 150
+   },
+   "sig": "gm2024-11-30Dont'E Thorntonrec"
   },
   {
    "type": "count",
@@ -60,92 +159,6 @@
    "sig": "hc52019"
   },
   {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": false,
-   "prompt": "In Tennessee–Vanderbilt games since 2012, who had more receiving yards against the other school?",
-   "A": {
-    "label": "Squirrel White (TENN) vs. Vanderbilt",
-    "value": 128,
-    "school": "TENN"
-   },
-   "B": {
-    "label": "Junior Sherrill (VAN) vs. Tennessee",
-    "value": 158,
-    "school": "VAN"
-   },
-   "unit": "receiving yds",
-   "note": "Squirrel White: 128 in 2 games. Junior Sherrill: 158 in 3 games.",
-   "sig": "vsrecJunior Sherrill,Squirrel White"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Tennessee–Vanderbilt games, highest first.",
-   "items": [
-    {
-     "label": "Re'Mahn Davis (VAN) · 2022",
-     "value": 60,
-     "school": "VAN"
-    },
-    {
-     "label": "Joshua Dobbs (TENN) · 2015",
-     "value": 93,
-     "school": "TENN"
-    },
-    {
-     "label": "Dylan Sampson (TENN) · 2022",
-     "value": 131,
-     "school": "TENN"
-    },
-    {
-     "label": "Arian Foster (TENN) · 2005",
-     "value": 223,
-     "school": "TENN"
-    }
-   ],
-   "sig": "grrushArian Foster2005,Dylan Sampson2022,Joshua Dobbs2015,Re'Mahn Davis2022"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
-   "a": "TENN",
-   "b": "VAN",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    6,
-    1
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 30, 2024",
-    "winner": "TENN",
-    "loser": "VAN",
-    "ws": 36,
-    "ls": 23,
-    "venue": "FirstBank Stadium"
-   },
-   "prompt": "In this game, did Dont'E Thornton (Tennessee) have more or less than",
-   "line": "150 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Dont'E Thornton had 118 receiving yards on 3 catches and 2 TD in this game.",
-   "check": {
-    "value": 118,
-    "line": 150
-   },
-   "sig": "gm2024-11-30Dont'E Thorntonrec"
-  },
-  {
    "type": "mc",
    "label": "Since 2012",
    "verified": true,
@@ -168,34 +181,25 @@
    "sig": "tvrec"
   },
   {
-   "type": "rank",
+   "type": "h2h",
    "label": "Fresh Mix",
+   "upset": true,
    "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Diego Pavia (VAN QB) · career rushing yards",
-     "value": 1662,
-     "school": "VAN"
-    },
-    {
-     "label": "Joshua Dobbs (TENN QB) · 2016 rushing yards",
-     "value": 831,
-     "school": "TENN"
-    },
-    {
-     "label": "Dylan Sampson (TENN RB) · 2023 yards from scrimmage",
-     "value": 779,
-     "school": "TENN"
-    },
-    {
-     "label": "Keyon Brooks (VAN RB) · 2020 receiving yards",
-     "value": 260,
-     "school": "VAN"
-    }
-   ],
-   "sig": "mxydsDiego Paviacareer rushing yards,Dylan Sampson2023 yards from scrimmage,Joshua Dobbs2016 rushing yards,Keyon Brooks2020 receiving yards"
+   "flip": false,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Jared Pinkney (VAN TE)",
+    "value": 14,
+    "school": "VAN"
+   },
+   "B": {
+    "label": "Arian Foster (TENN RB)",
+    "value": 2,
+    "school": "TENN"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jared Pinkney 14 vs. Arian Foster 2.",
+   "sig": "urecTDArian FosterJared Pinkney"
   },
   {
    "type": "moment",
@@ -203,44 +207,22 @@
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 19, 2005",
-    "winner": "VAN",
-    "loser": "TENN",
-    "ws": 28,
+    "date": "Nov 17, 2007",
+    "winner": "TENN",
+    "loser": "VAN",
+    "ws": 25,
     "ls": 24,
     "venue": "Neyland Stadium"
    },
-   "prompt": "In this game, did George Smith (Vanderbilt) have more or less than",
-   "line": "50 receiving yards",
-   "answer": "over",
-   "reveal": "More. George Smith had 68 receiving yards on 4 catches and 0 TD in this game.",
+   "prompt": "In this game, did Erik Ainge (Tennessee) have more or fewer than",
+   "line": "3.5 touchdown passes",
+   "answer": "under",
+   "reveal": "Less. Erik Ainge had 245 passing yards and 3 TD in this game.",
    "check": {
-    "value": 68,
-    "line": 50
+    "value": 3,
+    "line": 3.5
    },
-   "sig": "gm2005-11-19George Smithrec"
-  },
-  {
-   "type": "mc",
-   "label": "Awards",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Which of these players won the Biletnikoff Award, given to the nation's best receiver?",
-   "options": [
-    "Jalin Hyatt (Tennessee)",
-    "Trent Sherfield (Vanderbilt)",
-    "Jared Pinkney (Vanderbilt)",
-    "Kalija Lipscomb (Vanderbilt)"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    0,
-    2,
-    1
-   ],
-   "reveal": "Jalin Hyatt (Tennessee) won the Biletnikoff Award in 2022.",
-   "sig": "ambiletnikoff2022"
+   "sig": "gm2007-11-17Erik Aingepasstd"
   }
  ]
 }

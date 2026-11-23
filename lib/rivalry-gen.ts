@@ -142,3 +142,44 @@ export function genTeamDiffMC(pr: RivalryPair, rng: Rng): Question | null {
   }
   return null;
 }
+
+// ---- longest offensive play (rush or catch) ----
+type Long = { name: string; yds: number; kind: "rush" | "catch" };
+const longOf = (g: RivalryGame) => (g as RivalryGame & { long?: Record<SchoolKey, Long> }).long;
+
+/** 7. "Since <year>, what was the longest offensive play in an A–B game?" (multiple choice, the true longest wins). */
+export function genLongestSeriesMC(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
+  const from = pr.vsFrom; if (from == null) return null;
+  const plays = pr.games.filter(g => g.season >= from && longOf(g)).flatMap(g => Object.entries(longOf(g)!).map(([school, p]) => ({ g, school, p })));
+  if (plays.length < 4) return null;
+  const sorted = [...plays].sort((x, y) => y.p.yds - x.p.yds), top = sorted[0];
+  if (top.p.yds - sorted[1].p.yds < 5) return null; // a clear longest play only
+  const picks = [top];
+  for (const x of shuffle(rng, sorted.slice(1))) { if (picks.length === 4) break; if (!picks.some(y => y.g === x.g || Math.abs(y.p.yds - x.p.yds) < 5)) picks.push(x) }
+  if (picks.length < 4 || new Set(picks.map(x => x.school)).size < 2) return null;
+  const label = (x: (typeof picks)[0]) => `${x.p.name} (${name(x.school)}), ${x.g.season}: ${x.p.kind === "rush" ? "run" : "catch"}`;
+  return {
+    type: "mc", label: "Longest Play", verified: SRC_VERIFIED, pitted: true,
+    prompt: `Since ${from}, what was the longest offensive play in a ${name(a)}–${name(b)} game?`,
+    options: picks.map(label), answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
+    reveal: [...picks].sort((x, y) => y.p.yds - x.p.yds).map(x => `${x.p.name} ${x.g.season}: ${x.p.yds}-yard ${x.p.kind === "rush" ? "run" : "catch"}`).join(" · "),
+    sig: "lp" + top.g.date,
+  };
+}
+
+/** 8. One game: "In this game, was the longest offensive play more or less than X yards?" */
+export function genLongestGameMoment(pr: RivalryPair, rng: Rng): Question | null {
+  const games = pr.games.filter(g => g.hp !== g.ap && longOf(g) && Object.keys(longOf(g)!).length === 2);
+  if (!games.length) return null;
+  const g = pick(rng, games);
+  const [w, l] = Object.entries(longOf(g)!).sort((x, y) => y[1].yds - x[1].yds);
+  const v = w[1].yds, dir = rng() < 0.5 ? -1 : 1;
+  const line = Math.max(9.5, Math.round(v + dir * (8 + rng() * 15)) + 0.5 * dir); // at least 8 yards off, .5 so no push
+  const answer = v > line ? "over" : "under";
+  return {
+    type: "moment", label: "Longest Play", verified: SRC_VERIFIED, pitted: true, game: gameBox(g),
+    prompt: "In this game, was the longest offensive play (run or catch) more or less than", line: `${line} yards`, answer,
+    reveal: `${answer === "over" ? "More" : "Less"}. The longest was ${w[1].name}'s ${v}-yard ${w[1].kind === "rush" ? "run" : "catch"} for ${name(w[0])}; ${name(l[0])}'s longest was ${l[1].yds} yards (${l[1].name}).`,
+    check: { value: v, line }, sig: "lg" + g.date,
+  };
+}

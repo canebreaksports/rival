@@ -6,111 +6,80 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-19T14:51:33.254Z",
- "engine": 12,
+ "generatedAt": "2026-11-23T15:04:52.257Z",
+ "engine": 13,
  "questions": [
+  {
+   "type": "moment",
+   "label": "Longest Play",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 13, 2021",
+    "winner": "ARK",
+    "loser": "LSU",
+    "ws": 16,
+    "ls": 13,
+    "venue": "Tiger Stadium (LA)"
+   },
+   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
+   "line": "59.5 yards",
+   "answer": "under",
+   "reveal": "Less. The longest was Dominique Johnson's 43-yard catch for Arkansas; LSU's longest was 29 yards (Jack Bech).",
+   "check": {
+    "value": 43,
+    "line": 59.5
+   },
+   "sig": "lg2021-11-13"
+  },
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "LSU",
+   "b": "ARK",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2015 through 2025, which school had more Walter Camp Award winners?",
+   "A": [
+    {
+     "name": "Joe Burrow",
+     "yards": 2019,
+     "season": 2019,
+     "label": "QB",
+     "profile": "QB · won the Walter Camp Award (player of the year)"
+    },
+    {
+     "name": "Jayden Daniels",
+     "yards": 2023,
+     "season": 2023,
+     "label": "QB",
+     "profile": "QB · won the Walter Camp Award (player of the year)"
+    }
+   ],
+   "B": [],
+   "sig": "accamp2015"
+  },
   {
    "type": "h2h",
    "label": "Fresh Mix",
    "upset": true,
    "verified": true,
    "flip": false,
-   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
    "A": {
-    "label": "Treylon Burks (ARK WR)",
-    "value": 5.8,
+    "label": "Taylen Green (ARK QB)",
+    "value": 16,
     "school": "ARK"
    },
    "B": {
     "label": "Joe Burrow (LSU QB)",
-    "value": 3.2,
+    "value": 12,
     "school": "LSU"
    },
    "unit": "",
-   "ypc": true,
-   "note": "🚨 Upset: Treylon Burks 5.8 per carry (38 carries) vs. Joe Burrow 3.2 per carry (243 carries).",
-   "sig": "uypcJoe BurrowTreylon Burks"
-  },
-  {
-   "type": "mc",
-   "label": "Since 2011",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2011, which player from either school has the most yards from scrimmage against the other?",
-   "options": [
-    "Derrius Guice (LSU)",
-    "Clyde Edwards-Helaire (LSU)",
-    "Leonard Fournette (LSU)",
-    "Alex Collins (Arkansas)"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    1,
-    2,
-    0
-   ],
-   "reveal": "Derrius Guice (LSU) 405 in 3 games · Clyde Edwards-Helaire (LSU) 314 in 2 games · Leonard Fournette (LSU) 278 in 3 games · Alex Collins (Arkansas) 215 in 3 games",
-   "sig": "tvscrim"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Arkansas",
-   "a": "LSU",
-   "b": "ARK",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    15,
-    11
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 10, 2018",
-    "winner": "LSU",
-    "loser": "ARK",
-    "ws": 24,
-    "ls": 17,
-    "venue": "Razorback Stadium"
-   },
-   "prompt": "In this game, did Cheyenne O'Grady (Arkansas) have more or less than",
-   "line": "50 receiving yards",
-   "answer": "over",
-   "reveal": "More. Cheyenne O'Grady had 75 receiving yards on 6 catches and 2 TD in this game.",
-   "check": {
-    "value": 75,
-    "line": 50
-   },
-   "sig": "gm2018-11-10Cheyenne O'Gradyrec"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 28, 2009",
-    "winner": "LSU",
-    "loser": "ARK",
-    "ws": 33,
-    "ls": 30,
-    "venue": "Tiger Stadium (LA)"
-   },
-   "prompt": "In this game, did Dennis Johnson (Arkansas) run for more or less than",
-   "line": "60 rushing yards",
-   "answer": "over",
-   "reveal": "More. Dennis Johnson had 78 rushing yards on 9 carries and 0 TD in this game.",
-   "check": {
-    "value": 78,
-    "line": 60
-   },
-   "sig": "gm2009-11-28Dennis Johnsonrush"
+   "note": "🚨 Upset: Taylen Green 16 vs. Joe Burrow 12.",
+   "sig": "urushTDJoe BurrowTaylen Green"
   },
   {
    "type": "count",
@@ -176,32 +145,26 @@
    "sig": "cLSUARK3000"
   },
   {
-   "type": "count",
-   "label": "Awards",
-   "a": "LSU",
-   "b": "ARK",
-   "threshold": 0,
+   "type": "mc",
+   "label": "NFL Draft",
    "verified": true,
    "pitted": true,
-   "prompt": "From 2015 through 2025, which school had more Walter Camp Award winners?",
-   "A": [
-    {
-     "name": "Joe Burrow",
-     "yards": 2019,
-     "season": 2019,
-     "label": "QB",
-     "profile": "QB · won the Walter Camp Award (player of the year)"
-    },
-    {
-     "name": "Jayden Daniels",
-     "yards": 2023,
-     "season": 2023,
-     "label": "QB",
-     "profile": "QB · won the Walter Camp Award (player of the year)"
-    }
+   "prompt": "Which of these LSU and Arkansas players was drafted highest?",
+   "options": [
+    "Morris Claiborne (LSU)",
+    "Chris Houston (Arkansas)",
+    "Andrew Whitworth (LSU)",
+    "Jarvis Landry (LSU)"
    ],
-   "B": [],
-   "sig": "accamp2015"
+   "answer": 0,
+   "order": [
+    3,
+    0,
+    2,
+    1
+   ],
+   "reveal": "Morris Claiborne: No. 6 overall in 2012 · Chris Houston: No. 41 overall in 2007 · Andrew Whitworth: No. 55 overall in 2006 · Jarvis Landry: No. 63 overall in 2014",
+   "sig": "dmAndrew Whitworth,Chris Houston,Jarvis Landry,Morris Claiborne"
   },
   {
    "type": "moment",
@@ -209,64 +172,115 @@
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 12, 2016",
+    "date": "Nov 28, 2009",
     "winner": "LSU",
     "loser": "ARK",
-    "ws": 38,
-    "ls": 10,
-    "venue": "Razorback Stadium"
+    "ws": 33,
+    "ls": 30,
+    "venue": "Tiger Stadium (LA)"
    },
-   "prompt": "In this game, did Malachi Dupre (LSU) have more or less than",
-   "line": "80 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Malachi Dupre had 60 receiving yards on 2 catches and 0 TD in this game.",
+   "prompt": "In this game, did Dennis Johnson (Arkansas) run for more or less than",
+   "line": "60 rushing yards",
+   "answer": "over",
+   "reveal": "More. Dennis Johnson had 78 rushing yards on 9 carries and 0 TD in this game.",
    "check": {
-    "value": 60,
-    "line": 80
+    "value": 78,
+    "line": 60
    },
-   "sig": "gm2016-11-12Malachi Duprerec"
+   "sig": "gm2009-11-28Dennis Johnsonrush"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2019,
+   "stat": "Rushing season",
+   "aSchool": "LSU",
+   "other": "ARK",
+   "aName": "Joe Burrow (QB)",
+   "bName": "Rakeem Boyd (RB)",
+   "A": {
+    "big": "368",
+    "sm": "rush yds · 5 TD"
+   },
+   "B": {
+    "big": "1,133",
+    "sm": "rush yds · 8 TD"
+   },
+   "flip": false,
+   "sig": "drush2019Joe Burrow,Rakeem Boyd"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Derrius Guice (LSU RB) · 2016 rushing TDs",
+     "value": 15,
+     "school": "LSU"
+    },
+    {
+     "label": "Treylon Burks (ARK WR) · 2021 receiving TDs",
+     "value": 11,
+     "school": "ARK"
+    },
+    {
+     "label": "Leonard Fournette (LSU RB) · career rushing TDs",
+     "value": 40,
+     "school": "LSU"
+    },
+    {
+     "label": "Rashod Dubinion (ARK RB) · career rushing TDs",
+     "value": 8,
+     "school": "ARK"
+    }
+   ],
+   "sig": "mxTDDerrius Guice2016 rushing TDs,Leonard Fournettecareer rushing TDs,Rashod Dubinioncareer rushing TDs,Treylon Burks2021 receiving TDs"
+  },
+  {
+   "type": "mc",
+   "label": "Since 2011",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2011, which player from either school has the most yards from scrimmage against the other?",
+   "options": [
+    "Derrius Guice (LSU)",
+    "Clyde Edwards-Helaire (LSU)",
+    "Leonard Fournette (LSU)",
+    "Alex Collins (Arkansas)"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    1,
+    2,
+    0
+   ],
+   "reveal": "Derrius Guice (LSU) 405 in 3 games · Clyde Edwards-Helaire (LSU) 314 in 2 games · Leonard Fournette (LSU) 278 in 3 games · Alex Collins (Arkansas) 215 in 3 games",
+   "sig": "tvscrim"
   },
   {
    "type": "h2h",
-   "label": "Fresh Mix",
+   "label": "Against Each Other",
    "verified": true,
    "flip": true,
-   "prompt": "Who had more rushing TDs in a single season?",
+   "prompt": "In LSU–Arkansas games since 2011, who had more rushing yards against the other school?",
    "A": {
-    "label": "Darren McFadden (RB) · 2007 ARK",
-    "value": 16,
-    "school": "ARK"
-   },
-   "B": {
-    "label": "Kevin Faulk (RB) · 1995 LSU",
-    "value": 6,
+    "label": "Tyrion Davis-Price (LSU) vs. Arkansas",
+    "value": 211,
     "school": "LSU"
    },
-   "unit": "rushing TDs",
-   "sig": "hDarren McFadden2007,Kevin Faulk1995rushTD"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 25, 2011",
-    "winner": "LSU",
-    "loser": "ARK",
-    "ws": 41,
-    "ls": 17,
-    "venue": "Tiger Stadium (LA)"
+   "B": {
+    "label": "Devwah Whaley (ARK) vs. LSU",
+    "value": 115,
+    "school": "ARK"
    },
-   "prompt": "In this game, did Kenny Hilliard (LSU) run for more or less than",
-   "line": "80 rushing yards",
-   "answer": "over",
-   "reveal": "More. Kenny Hilliard had 102 rushing yards on 19 carries and 1 TD in this game.",
-   "check": {
-    "value": 102,
-    "line": 80
-   },
-   "sig": "gm2011-11-25Kenny Hilliardrush"
+   "unit": "rushing yds",
+   "note": "Tyrion Davis-Price: 211 in 3 games. Devwah Whaley: 115 in 3 games.",
+   "sig": "vsrushDevwah Whaley,Tyrion Davis-Price"
   }
  ]
 }

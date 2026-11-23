@@ -26,11 +26,12 @@ type CfbdBox = { id: number; teams: { team: string; points: number; categories: 
 type TeamBox = { id: number; teams: { team: string; points: number; stats: { category: string; stat: string }[] }[] };
 export interface Perf { name: string; cat: "rush" | "rec" | "pass"; yds: number; td: number; n?: number }
 export interface TeamLine { total: number; rush: number; pass: number; to: number }
-export interface RivalryGame { season: number; date: string; home: string; away: string; hp: number; ap: number; venue: string; neutral?: boolean; bowl?: boolean; box?: Record<string, Perf[]>; team?: Record<string, TeamLine>; boxSrc?: "cfbd" | "espn" }
+export interface LongPlay { name: string; yds: number; kind: "rush" | "catch" }
+export interface RivalryGame { season: number; date: string; home: string; away: string; hp: number; ap: number; venue: string; neutral?: boolean; bowl?: boolean; box?: Record<string, Perf[]>; team?: Record<string, TeamLine>; boxSrc?: "cfbd" | "espn"; long?: Record<string, LongPlay> }
 export interface VsTotal { name: string; school: string; games: number; rush: number; rushTD: number; car: number; rec: number; recTD: number; recN: number }
 
 // One team's box in a source-neutral shape: player → stats
-type Line = { rush?: number; rushTD?: number; car?: number; rec?: number; recTD?: number; recN?: number; pass?: number; passTD?: number };
+type Line = { rush?: number; rushTD?: number; car?: number; rec?: number; recTD?: number; recN?: number; pass?: number; passTD?: number; longRush?: number; longRec?: number };
 type TeamPlayers = Map<string, Line>;
 
 const read = <T>(dir: string): T[] => fs.existsSync(path.join(cache, dir)) ? fs.readdirSync(path.join(cache, dir)).flatMap(f => JSON.parse(fs.readFileSync(path.join(cache, dir, f), "utf8")) as T[]) : [];
@@ -50,8 +51,8 @@ function fromCfbd(b: CfbdBox): Record<string, TeamPlayers> {
     const m: TeamPlayers = new Map(), k = KEY[t.team];
     const put = (cat: string, type: string, f: keyof Line) => t.categories.find(c => c.name === cat)?.types.find(x => x.name === type)?.athletes
       .forEach(a => { if (/^team$/i.test(a.name)) return; const l = m.get(a.name) ?? {}; l[f] = Number(a.stat) || 0; m.set(a.name, l) });
-    put("rushing", "YDS", "rush"); put("rushing", "TD", "rushTD"); put("rushing", "CAR", "car");
-    put("receiving", "YDS", "rec"); put("receiving", "TD", "recTD"); put("receiving", "REC", "recN");
+    put("rushing", "YDS", "rush"); put("rushing", "TD", "rushTD"); put("rushing", "CAR", "car"); put("rushing", "LONG", "longRush");
+    put("receiving", "YDS", "rec"); put("receiving", "TD", "recTD"); put("receiving", "REC", "recN"); put("receiving", "LONG", "longRec");
     put("passing", "YDS", "pass"); put("passing", "TD", "passTD");
     out[k] = m;
   }
@@ -94,8 +95,8 @@ function fromEspn(id: number, g: Game): { players: Record<string, TeamPlayers>; 
       const i = s?.keys.indexOf(key) ?? -1; if (!s || i < 0) return;
       for (const a of s.athletes) { const n = a.athlete.displayName; if (/^team$/i.test(n)) continue; const l = m.get(n) ?? {}; l[f] = Number(a.stats[i]) || 0; m.set(n, l) }
     };
-    put(rush, "rushingYards", "rush"); put(rush, "rushingTouchdowns", "rushTD"); put(rush, "rushingAttempts", "car");
-    put(rec, "receivingYards", "rec"); put(rec, "receivingTouchdowns", "recTD"); put(rec, "receptions", "recN");
+    put(rush, "rushingYards", "rush"); put(rush, "rushingTouchdowns", "rushTD"); put(rush, "rushingAttempts", "car"); put(rush, "longRushing", "longRush");
+    put(rec, "receivingYards", "rec"); put(rec, "receivingTouchdowns", "recTD"); put(rec, "receptions", "recN"); put(rec, "longReception", "longRec");
     put(pass, "passingYards", "pass"); put(pass, "passingTouchdowns", "passTD");
     players[k] = m;
   }
@@ -160,6 +161,14 @@ for (const g of [...games.values()].sort((x, y) => x.startDate.localeCompare(y.s
       ];
     }
     lines.set(rg, players);
+    // each team's longest play from scrimmage: the longest rush or catch by any of its players
+    rg.long = {};
+    for (const [k, m] of Object.entries(players)) {
+      let best: LongPlay | null = null;
+      for (const [name, l] of m) for (const [v, kind] of [[l.longRush, "rush"], [l.longRec, "catch"]] as const)
+        if (v != null && v > 0 && (!best || v > best.yds)) best = { name, yds: v, kind };
+      if (best) rg.long[k] = best;
+    }
   }
   p.games.push(rg);
 }
