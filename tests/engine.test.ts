@@ -3,7 +3,7 @@ import { pairKey } from "@/lib/rivalry-gen";
 import { genVsLeaderMC } from "@/lib/trend-gen";
 import { describe, expect, it } from "vitest";
 import { DATA } from "@/lib/data";
-import { buildRound, generate, weeklySet, WEEKLY_N, weekKey, findMatchup, involvesBoth } from "@/lib/build";
+import { programQs, buildRound, generate, weeklySet, WEEKLY_N, weekKey, findMatchup, involvesBoth } from "@/lib/build";
 import { seededRng, mulberry32 } from "@/lib/rng";
 import { validateData, validateQuestion } from "@/lib/validate";
 import { liveGames, nextGames, dateOf, windowOf, isLive } from "@/lib/gating";
@@ -319,9 +319,7 @@ describe("names and scoring", () => {
     expect(scoreRank(q, [3, 2, 1, 0]).base).toBe(50);
   });
   it("Georgia and Oklahoma tie on total wins 2000–2025 (spec §4.1 example)", () => {
-    const qs = buildRound(DATA, "UGA", "OU", seededRng("t"), VERIFIED);
-    const all = Array.from({ length: 60 }, (_, i) => buildRound(DATA, "UGA", "OU", mulberry32(i), VERIFIED)).flat();
-    const tw = [...qs, ...all].find(q => q.type === "prog" && q.prompt.includes("total games"));
+    const tw = programQs(DATA, "UGA", "OU", VERIFIED).find(q => q.type === "prog" && q.prompt.includes("total games"));
     expect(tw && tw.type === "prog" && tw.values).toEqual([271, 271]);
     expect(correctAnswer(tw!)).toBe("t");
   });

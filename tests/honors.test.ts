@@ -73,7 +73,7 @@ describe("walk-offs (final play or overtime)", () => {
   it("every prompt spells out what counts, and the bonus is Name the Years", () => {
     for (const k of Object.keys(W.pairs)) {
       const [a, b] = k.split("|") as [any, any];
-      for (const q of [genWalkoffCount(W, a, b), genWalkoffMC(W, a, b, () => 0.5)]) if (q) {
+      for (const q of [genWalkoffCount(W, a, b), genWalkoffMC(W, a, b, () => 0.5)]) if (q && (q.type === "count" || q.type === "mc")) {
         expect(q.prompt).toMatch(/as time expired in the 4th quarter, or any overtime win/);
         if (q.type === "count") expect(q.bonus).toBe("years");
         if (q.type === "mc") expect(q.years!.A.length + q.years!.B.length).toBe(Number(q.options[q.answer]));

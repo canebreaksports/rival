@@ -6,29 +6,49 @@
   "away": "AUB",
   "home": "ALA"
  },
- "generatedAt": "2026-11-23T19:49:00.361Z",
- "engine": 16,
+ "generatedAt": "2026-11-23T19:52:54.648Z",
+ "engine": 17,
  "questions": [
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
+   "label": "Iron Bowl",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
-   "A": {
-    "label": "Philip Lutzenkirchen (AUB TE)",
-    "value": 14,
-    "school": "AUB"
+   "sig": "kIron Bowl0",
+   "type": "moment",
+   "prompt": "Chris Davis returned Alabama's missed field goal for the 'Kick Six.' Was that field-goal attempt longer or shorter than",
+   "line": "55 yards",
+   "answer": "over",
+   "reveal": "Longer. Alabama tried a 57-yard field goal; it fell short and Chris Davis returned it 109 yards for the touchdown that won it 34–28.",
+   "game": {
+    "date": "Nov 30, 2013",
+    "winner": "AUB",
+    "ws": 34,
+    "ls": 28,
+    "venue": "Jordan-Hare Stadium",
+    "loser": "ALA"
+   }
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 25, 2023",
+    "winner": "ALA",
+    "loser": "AUB",
+    "ws": 27,
+    "ls": 24,
+    "venue": "Jordan-Hare Stadium"
    },
-   "B": {
-    "label": "Najee Harris (ALA RB)",
-    "value": 11,
-    "school": "ALA"
+   "prompt": "In this game, did Jermaine Burton (Alabama) have more or less than",
+   "line": "80 receiving yards",
+   "answer": "over",
+   "reveal": "More. Jermaine Burton had 107 receiving yards on 4 catches and 1 TD in this game.",
+   "check": {
+    "value": 107,
+    "line": 80
    },
-   "unit": "",
-   "note": "🚨 Upset: Philip Lutzenkirchen 14 vs. Najee Harris 11.",
-   "sig": "urecTDNajee HarrisPhilip Lutzenkirchen"
+   "sig": "gm2023-11-25Jermaine Burtonrec"
   },
   {
    "type": "rank",
@@ -73,101 +93,6 @@
      "7. Najee Harris (ALA 2019) 1,224",
      "8. Nick Marshall (AUB 2013) 1,068"
     ]
-   }
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 25, 2023",
-    "winner": "ALA",
-    "loser": "AUB",
-    "ws": 27,
-    "ls": 24,
-    "venue": "Jordan-Hare Stadium"
-   },
-   "prompt": "In this game, did Jermaine Burton (Alabama) have more or less than",
-   "line": "80 receiving yards",
-   "answer": "over",
-   "reveal": "More. Jermaine Burton had 107 receiving yards on 4 catches and 1 TD in this game.",
-   "check": {
-    "value": 107,
-    "line": 80
-   },
-   "sig": "gm2023-11-25Jermaine Burtonrec"
-  },
-  {
-   "type": "count",
-   "label": "Awards",
-   "a": "AUB",
-   "b": "ALA",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, which school had more Doak Walker Award winners?",
-   "A": [],
-   "B": [
-    {
-     "name": "Trent Richardson",
-     "yards": 2011,
-     "season": 2011,
-     "label": "winner",
-     "profile": "won the Doak Walker Award (best running back)"
-    },
-    {
-     "name": "Derrick Henry",
-     "yards": 2015,
-     "season": 2015,
-     "label": "winner",
-     "profile": "won the Doak Walker Award (best running back)"
-    },
-    {
-     "name": "Najee Harris",
-     "yards": 2020,
-     "season": 2020,
-     "label": "winner",
-     "profile": "won the Doak Walker Award (best running back)"
-    }
-   ],
-   "sig": "acdoak2000",
-   "bonus": "years"
-  },
-  {
-   "label": "Iron Bowl",
-   "verified": true,
-   "sig": "kIron Bowl2",
-   "type": "moment",
-   "prompt": "Derrick Henry carried the load. Did he have more or fewer than",
-   "line": "50 carries",
-   "answer": "under",
-   "reveal": "Fewer. Derrick Henry carried 46 times for 271 yards.",
-   "game": {
-    "date": "Nov 28, 2015",
-    "winner": "ALA",
-    "ws": 29,
-    "ls": 13,
-    "venue": "Bryant-Denny Stadium",
-    "loser": "AUB"
-   }
-  },
-  {
-   "label": "Iron Bowl",
-   "verified": true,
-   "sig": "kIron Bowl0",
-   "type": "moment",
-   "prompt": "Chris Davis returned Alabama's missed field goal for the 'Kick Six.' Was that field-goal attempt longer or shorter than",
-   "line": "55 yards",
-   "answer": "over",
-   "reveal": "Longer. Alabama tried a 57-yard field goal; it fell short and Chris Davis returned it 109 yards for the touchdown that won it 34–28.",
-   "game": {
-    "date": "Nov 30, 2013",
-    "winner": "AUB",
-    "ws": 34,
-    "ls": 28,
-    "venue": "Jordan-Hare Stadium",
-    "loser": "ALA"
    }
   },
   {
@@ -249,6 +174,42 @@
    }
   },
   {
+   "type": "count",
+   "label": "Awards",
+   "a": "AUB",
+   "b": "ALA",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, which school had more Doak Walker Award winners?",
+   "A": [],
+   "B": [
+    {
+     "name": "Trent Richardson",
+     "yards": 2011,
+     "season": 2011,
+     "label": "winner",
+     "profile": "won the Doak Walker Award (best running back)"
+    },
+    {
+     "name": "Derrick Henry",
+     "yards": 2015,
+     "season": 2015,
+     "label": "winner",
+     "profile": "won the Doak Walker Award (best running back)"
+    },
+    {
+     "name": "Najee Harris",
+     "yards": 2020,
+     "season": 2020,
+     "label": "winner",
+     "profile": "won the Doak Walker Award (best running back)"
+    }
+   ],
+   "sig": "acdoak2000",
+   "bonus": "years"
+  },
+  {
    "label": "Iron Bowl",
    "verified": true,
    "sig": "kIron Bowl5",
@@ -264,10 +225,10 @@
    "answer": 0,
    "reveal": "0–5. Auburn won all five: 2007 (finished 9–4), 2010 (14–0), 2013 (12–2), 2017 (10–4) and 2019 (9–4). Against every other Auburn team, Saban's Alabama went 12–0.",
    "order": [
-    3,
-    0,
     2,
-    1
+    1,
+    3,
+    0
    ],
    "years": {
     "prompt": "Name the five seasons Auburn beat Saban's Alabama with a 9-win team.",
@@ -312,6 +273,27 @@
     ],
     "B": []
    }
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Philip Lutzenkirchen (AUB TE)",
+    "value": 14,
+    "school": "AUB"
+   },
+   "B": {
+    "label": "Najee Harris (ALA RB)",
+    "value": 11,
+    "school": "ALA"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Philip Lutzenkirchen 14 vs. Najee Harris 11.",
+   "sig": "urecTDNajee HarrisPhilip Lutzenkirchen"
   },
   {
    "type": "count",
@@ -364,6 +346,24 @@
    ],
    "sig": "tsrush8002022",
    "bonus": "years"
+  },
+  {
+   "label": "Iron Bowl",
+   "verified": true,
+   "sig": "kIron Bowl2",
+   "type": "moment",
+   "prompt": "Derrick Henry carried the load. Did he have more or fewer than",
+   "line": "50 carries",
+   "answer": "under",
+   "reveal": "Fewer. Derrick Henry carried 46 times for 271 yards.",
+   "game": {
+    "date": "Nov 28, 2015",
+    "winner": "ALA",
+    "ws": 29,
+    "ls": 13,
+    "venue": "Bryant-Denny Stadium",
+    "loser": "AUB"
+   }
   }
  ]
 }

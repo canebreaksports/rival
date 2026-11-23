@@ -6,29 +6,82 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-23T19:49:00.560Z",
- "engine": 16,
+ "generatedAt": "2026-11-23T19:52:54.894Z",
+ "engine": 17,
  "questions": [
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
+   "type": "count",
+   "label": "NFL Draft",
+   "a": "MSST",
+   "b": "MISS",
+   "threshold": 0,
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
+   "pitted": true,
+   "prompt": "From the 2010 draft through 2026, which school had more defensive backs taken in the top 50?",
+   "A": [
+    {
+     "name": "Darius Slay",
+     "yards": 36,
+     "season": 2013,
+     "label": "No. 36 pick",
+     "profile": "Cornerback · 2013 draft, round 2"
+    },
+    {
+     "name": "Johnthan Banks",
+     "yards": 43,
+     "season": 2013,
+     "label": "No. 43 pick",
+     "profile": "Cornerback · 2013 draft, round 2"
+    },
+    {
+     "name": "Johnathan Abram",
+     "yards": 27,
+     "season": 2019,
+     "label": "No. 27 pick",
+     "profile": "Safety · 2019 draft, round 1"
+    },
+    {
+     "name": "Emmanuel Forbes",
+     "yards": 16,
+     "season": 2023,
+     "label": "No. 16 pick",
+     "profile": "Cornerback · 2023 draft, round 1"
+    }
+   ],
+   "B": [],
+   "sig": "dctop502010db",
+   "bonus": "years"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Mississippi State–Ole Miss games since 2007, who had more rushing yards against the other school?",
    "A": {
-    "label": "Nick Fitzgerald (MSST QB)",
-    "value": 46,
+    "label": "Vick Ballard (MSST) vs. Ole Miss",
+    "value": 187,
     "school": "MSST"
    },
    "B": {
-    "label": "Quinshon Judkins (MISS RB)",
-    "value": 31,
+    "label": "Brandon Bolden (MISS) vs. Mississippi State",
+    "value": 105,
     "school": "MISS"
    },
-   "unit": "",
-   "note": "🚨 Upset: Nick Fitzgerald 46 vs. Quinshon Judkins 31.",
-   "sig": "urushTDQuinshon JudkinsNick Fitzgerald"
+   "unit": "rushing yds",
+   "note": "Vick Ballard: 187 in 2 games. Brandon Bolden: 105 in 4 games.",
+   "sig": "vsrushBrandon Bolden,Vick Ballard",
+   "more": {
+    "title": "Top rushing yards against the other school since 2007",
+    "rows": [
+     "1. Nick Fitzgerald (MSST) 391 in 3 games",
+     "2. Aeris Williams (MSST) 330 in 3 games",
+     "3. Kylin Hill (MSST) 322 in 3 games",
+     "4. Jaylen Walton (MISS) 278 in 3 games",
+     "5. Jerrion Ealy (MISS) 235 in 3 games",
+     "6. Chris Relf (MSST) 229 in 4 games"
+    ]
+   }
   },
   {
    "type": "rank",
@@ -108,101 +161,82 @@
    }
   },
   {
-   "type": "count",
-   "label": "NFL Draft",
-   "a": "MSST",
-   "b": "MISS",
-   "threshold": 0,
+   "type": "h2h",
+   "label": "Fresh Mix",
    "verified": true,
-   "pitted": true,
-   "prompt": "From the 2010 draft through 2026, which school had more defensive backs taken in the top 50?",
-   "A": [
-    {
-     "name": "Darius Slay",
-     "yards": 36,
-     "season": 2013,
-     "label": "No. 36 pick",
-     "profile": "Cornerback · 2013 draft, round 2"
-    },
-    {
-     "name": "Johnthan Banks",
-     "yards": 43,
-     "season": 2013,
-     "label": "No. 43 pick",
-     "profile": "Cornerback · 2013 draft, round 2"
-    },
-    {
-     "name": "Johnathan Abram",
-     "yards": 27,
-     "season": 2019,
-     "label": "No. 27 pick",
-     "profile": "Safety · 2019 draft, round 1"
-    },
-    {
-     "name": "Emmanuel Forbes",
-     "yards": 16,
-     "season": 2023,
-     "label": "No. 16 pick",
-     "profile": "Cornerback · 2023 draft, round 1"
-    }
-   ],
-   "B": [],
-   "sig": "dctop502010db",
-   "bonus": "years"
+   "flip": false,
+   "prompt": "Who had more career rushing yards?",
+   "A": {
+    "label": "Dexter McCluster (RB) · career, MISS",
+    "value": 1955,
+    "school": "MISS"
+   },
+   "B": {
+    "label": "Nick Fitzgerald (QB) · career, MSST",
+    "value": 3607,
+    "school": "MSST"
+   },
+   "unit": "rushing yards",
+   "sig": "hDexter McClustercareer,Nick Fitzgeraldcareerrush",
+   "more": {
+    "title": "Top 6: career rushing yards (MSST, MISS players in our data)",
+    "rows": [
+     "1. Nick Fitzgerald (MSST) 3,607",
+     "2. Quinshon Judkins (MISS) 2,725",
+     "3. Aeris Williams (MSST) 2,557",
+     "4. Kylin Hill (MSST) 2,535",
+     "5. Dak Prescott (MSST) 2,521",
+     "6. Jerrion Ealy (MISS) 2,235"
+    ]
+   }
   },
   {
-   "type": "moment",
-   "label": "Rivalry Game",
+   "type": "count",
+   "label": "Since 2021",
+   "a": "MSST",
+   "b": "MISS",
+   "threshold": 1300,
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Nov 28, 2020",
-    "winner": "MISS",
-    "loser": "MSST",
-    "ws": 31,
-    "ls": 24,
-    "venue": "Vaught-Hemingway Stadium"
-   },
-   "prompt": "In this game, did Dontario Drummond (Ole Miss) have more or less than",
-   "line": "110 receiving yards",
-   "answer": "under",
-   "reveal": "Less. Dontario Drummond had 84 receiving yards on 2 catches and 1 TD in this game.",
-   "check": {
-    "value": 84,
-    "line": 110
-   },
-   "sig": "gm2020-11-28Dontario Drummondrec"
+   "prompt": "From 2021 through 2025, which school had more 1,300-yard rushing seasons?",
+   "A": [],
+   "B": [
+    {
+     "name": "Quinshon Judkins",
+     "yards": 1567,
+     "season": 2022,
+     "profile": "Running back · 2022: 1,567 rushing, 132 receiving yds"
+    },
+    {
+     "name": "Kewan Lacy",
+     "yards": 1567,
+     "season": 2025,
+     "profile": "Running back · 2025: 1,567 rushing, 177 receiving yds"
+    }
+   ],
+   "sig": "tsrush13002021",
+   "bonus": "names"
   },
   {
    "type": "h2h",
-   "label": "Against Each Other",
+   "label": "Fresh Mix",
+   "upset": true,
    "verified": true,
-   "flip": true,
-   "prompt": "In Mississippi State–Ole Miss games since 2007, who had more rushing yards against the other school?",
+   "flip": false,
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
    "A": {
-    "label": "Vick Ballard (MSST) vs. Ole Miss",
-    "value": 187,
+    "label": "Nick Fitzgerald (MSST QB)",
+    "value": 46,
     "school": "MSST"
    },
    "B": {
-    "label": "Brandon Bolden (MISS) vs. Mississippi State",
-    "value": 105,
+    "label": "Quinshon Judkins (MISS RB)",
+    "value": 31,
     "school": "MISS"
    },
-   "unit": "rushing yds",
-   "note": "Vick Ballard: 187 in 2 games. Brandon Bolden: 105 in 4 games.",
-   "sig": "vsrushBrandon Bolden,Vick Ballard",
-   "more": {
-    "title": "Top rushing yards against the other school since 2007",
-    "rows": [
-     "1. Nick Fitzgerald (MSST) 391 in 3 games",
-     "2. Aeris Williams (MSST) 330 in 3 games",
-     "3. Kylin Hill (MSST) 322 in 3 games",
-     "4. Jaylen Walton (MISS) 278 in 3 games",
-     "5. Jerrion Ealy (MISS) 235 in 3 games",
-     "6. Chris Relf (MSST) 229 in 4 games"
-    ]
-   }
+   "unit": "",
+   "note": "🚨 Upset: Nick Fitzgerald 46 vs. Quinshon Judkins 31.",
+   "sig": "urushTDQuinshon JudkinsNick Fitzgerald"
   },
   {
    "type": "rank",
@@ -235,31 +269,50 @@
    "sig": "mxTDDillon Johnsoncareer rushing TDs,Jerrion Ealy2019 rushing TDs,Josh Robinsoncareer total TDs (rushing + receiving),Seydou Traore2025 receiving TDs"
   },
   {
-   "type": "count",
-   "label": "Since 2021",
-   "a": "MSST",
-   "b": "MISS",
-   "threshold": 1300,
+   "type": "moment",
+   "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
-   "prompt": "From 2021 through 2025, which school had more 1,300-yard rushing seasons?",
-   "A": [],
-   "B": [
-    {
-     "name": "Quinshon Judkins",
-     "yards": 1567,
-     "season": 2022,
-     "profile": "Running back · 2022: 1,567 rushing, 132 receiving yds"
-    },
-    {
-     "name": "Kewan Lacy",
-     "yards": 1567,
-     "season": 2025,
-     "profile": "Running back · 2025: 1,567 rushing, 177 receiving yds"
-    }
-   ],
-   "sig": "tsrush13002021",
-   "bonus": "names"
+   "game": {
+    "date": "Nov 28, 2020",
+    "winner": "MISS",
+    "loser": "MSST",
+    "ws": 31,
+    "ls": 24,
+    "venue": "Vaught-Hemingway Stadium"
+   },
+   "prompt": "In this game, did Dontario Drummond (Ole Miss) have more or less than",
+   "line": "110 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Dontario Drummond had 84 receiving yards on 2 catches and 1 TD in this game.",
+   "check": {
+    "value": 84,
+    "line": 110
+   },
+   "sig": "gm2020-11-28Dontario Drummondrec"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2008",
+    "winner": "MISS",
+    "loser": "MSST",
+    "ws": 45,
+    "ls": 0,
+    "venue": "Vaught-Hemingway Stadium"
+   },
+   "prompt": "In this game, did Dexter McCluster (Ole Miss) run for more or less than",
+   "line": "90 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Dexter McCluster had 68 rushing yards on 9 carries and 1 TD in this game.",
+   "check": {
+    "value": 68,
+    "line": 90
+   },
+   "sig": "gm2008-11-28Dexter McClusterrush"
   }
  ]
 }

@@ -10,7 +10,7 @@ import { genGameMoment, genGameRank, genLongestGameMoment, genLongestSeriesMC, g
 import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 16; // v16: walk-offs (final play or OT), a record-book career ranking every week; v15: Notables Rank It; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
+export const ENGINE_VERSION = 17; // v17: 10 questions in every set (bigger generated pool, second fill pass); // v16: walk-offs (final play or OT), a record-book career ranking every week; v15: Notables Rank It; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean }
@@ -72,7 +72,7 @@ const teamQs = (data: Dataset, k: SchoolKey, rng: Rng, o: BuildOpts) =>
   data.curated.teamPacks[k] ? curatedQs(data.curated.teamPacks[k], SCHOOL[k].name, rng, o) : [];
 
 /** Generated player questions per set. Program comparisons only fill gaps. */
-export const PLAYER_QS = 10; // up to a full set from generated questions; caps and the pitted rule still apply
+export const PLAYER_QS = 18; // up to a full set from generated questions; caps and the pitted rule still apply
 
 /** About n generated player questions: ≤1 upset (attempted first 70% of the time), ≤1 trap (allowed 75% of the time). */
 // Every "since <year>" count question a matchup can produce, enumerated once per matchup with a fixed seed
@@ -242,11 +242,13 @@ export function buildRound(data: Dataset, a: SchoolKey, b: SchoolKey, rng: Rng, 
   }
   const used: Partial<Record<QType, number>> = {}, picked: Question[][] = [], kinds: Record<string, number> = {};
   let n = 0, traps = 0, upsets = 0;
-  for (const u of units) {
-    if (n + u.length > WEEKLY_N) continue;
-    // variety: no question kind twice (e.g. two "yards against each other" head-to-heads); a few kinds may appear twice
+  // Pass 1: variety (no question kind twice, a few may appear twice). Pass 2, only if the set is still short of 10:
+  // any kind may appear twice (owner: every set gets 10 questions). Caps, traps and upsets hold in both passes.
+  for (const pass of [1, 2]) for (const u of units) {
+    if (n >= WEEKLY_N) break;
+    if (n + u.length > WEEKLY_N || picked.includes(u)) continue;
     const kind = questionKind(u[0]);
-    if ((kinds[kind] ?? 0) >= (kind === "k" ? CURATED_MAX : REPEATABLE.has(kind) ? 2 : 1)) continue;
+    if ((kinds[kind] ?? 0) >= (kind === "k" ? CURATED_MAX : REPEATABLE.has(kind) || pass === 2 ? 2 : 1)) continue;
     if (!u.every(q => involvesBoth(q, a, b))) continue;
     if ((used[u[0].type] ?? 0) + u.length > cap[u[0].type]) continue;
     if (u[0].trap && traps >= 1) continue;

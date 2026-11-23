@@ -6,9 +6,220 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-23T19:49:00.465Z",
- "engine": 16,
+ "generatedAt": "2026-11-23T19:52:54.754Z",
+ "engine": 17,
  "questions": [
+  {
+   "type": "mc",
+   "label": "Heisman",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Which of these finished highest in Heisman Trophy voting that season?",
+   "options": [
+    "Joe Burrow (LSU, 2019)",
+    "Darren McFadden (Arkansas, 2006)",
+    "Glenn Dorsey (LSU, 2007)",
+    "Leonard Fournette (LSU, 2015)"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    3,
+    2,
+    1
+   ],
+   "reveal": "Joe Burrow: 1st in 2019 · Darren McFadden: 2nd in 2006 · Leonard Fournette: 6th in 2015 · Glenn Dorsey: 9th in 2007",
+   "sig": "hmDarren McFadden2006,Glenn Dorsey2007,Joe Burrow2019,Leonard Fournette2015",
+   "more": {
+    "title": "LSU and Arkansas top-10 Heisman finishes (seasons with checked voting)",
+    "rows": [
+     "1st: Joe Burrow (LSU) 2019",
+     "1st: Jayden Daniels (LSU) 2023",
+     "2nd: Darren McFadden (ARK) 2006",
+     "2nd: Darren McFadden (ARK) 2007",
+     "5th: Tyrann Mathieu (LSU) 2011",
+     "6th: Leonard Fournette (LSU) 2015",
+     "7th: Ryan Mallett (ARK) 2010",
+     "9th: Glenn Dorsey (LSU) 2007"
+    ]
+   }
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Kevin Faulk finish his LSU career with more or less than",
+   "line": "5,450 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Kevin Faulk had 5,157 yards from scrimmage in his career.",
+   "check": {
+    "value": 5157,
+    "line": 5450
+   },
+   "sig": "ppKevin Faulkcareer|Rashod Dubinioncareerscrim0",
+   "pair": "ppKevin Faulkcareer|Rashod Dubinioncareerscrim",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Did Rashod Dubinion finish his Arkansas career with more or less than",
+   "line": "1,000 yards from scrimmage",
+   "answer": "over",
+   "reveal": "More. Rashod Dubinion had 1,203 yards from scrimmage in his career.",
+   "check": {
+    "value": 1203,
+    "line": 1000
+   },
+   "sig": "ppKevin Faulkcareer|Rashod Dubinioncareerscrim1",
+   "pair": "ppKevin Faulkcareer|Rashod Dubinioncareerscrim",
+   "pairPart": 2
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2019,
+   "stat": "Rushing season",
+   "aSchool": "ARK",
+   "other": "LSU",
+   "aName": "Rakeem Boyd (RB)",
+   "bName": "Clyde Edwards-Helaire (RB)",
+   "A": {
+    "big": "1,133",
+    "sm": "rush yds · 8 TD"
+   },
+   "B": {
+    "big": "1,415",
+    "sm": "rush yds · 16 TD"
+   },
+   "flip": true,
+   "sig": "drush2019Clyde Edwards-Helaire,Rakeem Boyd"
+  },
+  {
+   "type": "mc",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 14, 2015",
+    "winner": "ARK",
+    "loser": "LSU",
+    "ws": 31,
+    "ls": 14,
+    "venue": "Tiger Stadium (LA)"
+   },
+   "prompt": "What was the difference in total yards in Arkansas's 31–14 win over LSU?",
+   "options": [
+    "Arkansas +110 yards",
+    "LSU +20 yards",
+    "LSU +110 yards",
+    "LSU +240 yards"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    1,
+    0,
+    2
+   ],
+   "reveal": "Arkansas +110. LSU had 330 total yards, Arkansas 440.",
+   "sig": "td2015-11-14total"
+  },
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "LSU",
+   "b": "ARK",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2015 through 2025, which school had more Davey O'Brien Award winners?",
+   "A": [
+    {
+     "name": "Joe Burrow",
+     "yards": 2019,
+     "season": 2019,
+     "label": "winner",
+     "profile": "won the Davey O'Brien Award (best quarterback)"
+    },
+    {
+     "name": "Jayden Daniels",
+     "yards": 2023,
+     "season": 2023,
+     "label": "winner",
+     "profile": "won the Davey O'Brien Award (best quarterback)"
+    }
+   ],
+   "B": [],
+   "sig": "acobrien2015",
+   "bonus": "names"
+  },
+  {
+   "type": "count",
+   "label": "Since 2022",
+   "a": "LSU",
+   "b": "ARK",
+   "threshold": 1000,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2022 through 2025, which school had more 1,000-yard rushing seasons?",
+   "A": [
+    {
+     "name": "Jayden Daniels",
+     "yards": 1134,
+     "season": 2023,
+     "profile": "Quarterback · 2023: 1,134 rushing, 0 receiving yds"
+    }
+   ],
+   "B": [
+    {
+     "name": "Raheim Sanders",
+     "yards": 1443,
+     "season": 2022,
+     "profile": "Running back · 2022: 1,443 rushing, 271 receiving yds"
+    },
+    {
+     "name": "Michael Washington",
+     "yards": 1068,
+     "season": 2025,
+     "profile": "Running back · 2025: 1,068 rushing, 226 receiving yds"
+    }
+   ],
+   "sig": "tsrush10002022",
+   "bonus": "names"
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Derrius Guice (LSU RB) · career yards from scrimmage",
+     "value": 3324,
+     "school": "LSU"
+    },
+    {
+     "label": "Darren McFadden (ARK RB) · 2007 rushing yards",
+     "value": 1830,
+     "school": "ARK"
+    },
+    {
+     "label": "Kevin Faulk (LSU RB) · career rushing yards",
+     "value": 4557,
+     "school": "LSU"
+    },
+    {
+     "label": "Leonard Fournette (LSU RB) · 2015 rushing yards",
+     "value": 1953,
+     "school": "LSU"
+    }
+   ],
+   "sig": "nxydsDarren McFadden2007 rushing yards,Derrius Guicecareer yards from scrimmage,Kevin Faulkcareer rushing yards,Leonard Fournette2015 rushing yards"
+  },
   {
    "type": "rank",
    "label": "Rivalry Games",
@@ -51,165 +262,6 @@
      "8. Justin Jefferson (LSU) 2018: 117"
     ]
    }
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · LSU vs Arkansas",
-   "a": "LSU",
-   "b": "ARK",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    13,
-    3
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2019,
-   "stat": "Rushing season",
-   "aSchool": "ARK",
-   "other": "LSU",
-   "aName": "Rakeem Boyd (RB)",
-   "bName": "Clyde Edwards-Helaire (RB)",
-   "A": {
-    "big": "1,133",
-    "sm": "rush yds · 8 TD"
-   },
-   "B": {
-    "big": "1,415",
-    "sm": "rush yds · 16 TD"
-   },
-   "flip": true,
-   "sig": "drush2019Clyde Edwards-Helaire,Rakeem Boyd"
-  },
-  {
-   "type": "rank",
-   "label": "Notables",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Derrius Guice (LSU RB) · career yards from scrimmage",
-     "value": 3324,
-     "school": "LSU"
-    },
-    {
-     "label": "Darren McFadden (ARK RB) · 2007 rushing yards",
-     "value": 1830,
-     "school": "ARK"
-    },
-    {
-     "label": "Kevin Faulk (LSU RB) · career rushing yards",
-     "value": 4557,
-     "school": "LSU"
-    },
-    {
-     "label": "Leonard Fournette (LSU RB) · 2015 rushing yards",
-     "value": 1953,
-     "school": "LSU"
-    }
-   ],
-   "sig": "nxydsDarren McFadden2007 rushing yards,Derrius Guicecareer yards from scrimmage,Kevin Faulkcareer rushing yards,Leonard Fournette2015 rushing yards"
-  },
-  {
-   "type": "count",
-   "label": "Awards",
-   "a": "LSU",
-   "b": "ARK",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2015 through 2025, which school had more Davey O'Brien Award winners?",
-   "A": [
-    {
-     "name": "Joe Burrow",
-     "yards": 2019,
-     "season": 2019,
-     "label": "winner",
-     "profile": "won the Davey O'Brien Award (best quarterback)"
-    },
-    {
-     "name": "Jayden Daniels",
-     "yards": 2023,
-     "season": 2023,
-     "label": "winner",
-     "profile": "won the Davey O'Brien Award (best quarterback)"
-    }
-   ],
-   "B": [],
-   "sig": "acobrien2015",
-   "bonus": "names"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Kevin Faulk finish his LSU career with more or less than",
-   "line": "5,450 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. Kevin Faulk had 5,157 yards from scrimmage in his career.",
-   "check": {
-    "value": 5157,
-    "line": 5450
-   },
-   "sig": "ppKevin Faulkcareer|Rashod Dubinioncareerscrim0",
-   "pair": "ppKevin Faulkcareer|Rashod Dubinioncareerscrim",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Rashod Dubinion finish his Arkansas career with more or less than",
-   "line": "1,000 yards from scrimmage",
-   "answer": "over",
-   "reveal": "More. Rashod Dubinion had 1,203 yards from scrimmage in his career.",
-   "check": {
-    "value": 1203,
-    "line": 1000
-   },
-   "sig": "ppKevin Faulkcareer|Rashod Dubinioncareerscrim1",
-   "pair": "ppKevin Faulkcareer|Rashod Dubinioncareerscrim",
-   "pairPart": 2
-  },
-  {
-   "type": "count",
-   "label": "Since 2022",
-   "a": "LSU",
-   "b": "ARK",
-   "threshold": 1000,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2022 through 2025, which school had more 1,000-yard rushing seasons?",
-   "A": [
-    {
-     "name": "Jayden Daniels",
-     "yards": 1134,
-     "season": 2023,
-     "profile": "Quarterback · 2023: 1,134 rushing, 0 receiving yds"
-    }
-   ],
-   "B": [
-    {
-     "name": "Raheim Sanders",
-     "yards": 1443,
-     "season": 2022,
-     "profile": "Running back · 2022: 1,443 rushing, 271 receiving yds"
-    },
-    {
-     "name": "Michael Washington",
-     "yards": 1068,
-     "season": 2025,
-     "profile": "Running back · 2025: 1,068 rushing, 226 receiving yds"
-    }
-   ],
-   "sig": "tsrush10002022",
-   "bonus": "names"
   },
   {
    "type": "rank",
@@ -255,41 +307,6 @@
      "8. Joe Adams (Arkansas, 2008–11) 2,410",
      "9. Dwayne Bowe (LSU, 2003–06) 2,403",
      "10. Treylon Burks (Arkansas, 2019–21) 2,399"
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "label": "Heisman",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Which of these finished highest in Heisman Trophy voting that season?",
-   "options": [
-    "Joe Burrow (LSU, 2019)",
-    "Darren McFadden (Arkansas, 2006)",
-    "Glenn Dorsey (LSU, 2007)",
-    "Leonard Fournette (LSU, 2015)"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    3,
-    2,
-    1
-   ],
-   "reveal": "Joe Burrow: 1st in 2019 · Darren McFadden: 2nd in 2006 · Leonard Fournette: 6th in 2015 · Glenn Dorsey: 9th in 2007",
-   "sig": "hmDarren McFadden2006,Glenn Dorsey2007,Joe Burrow2019,Leonard Fournette2015",
-   "more": {
-    "title": "LSU and Arkansas top-10 Heisman finishes (seasons with checked voting)",
-    "rows": [
-     "1st: Joe Burrow (LSU) 2019",
-     "1st: Jayden Daniels (LSU) 2023",
-     "2nd: Darren McFadden (ARK) 2006",
-     "2nd: Darren McFadden (ARK) 2007",
-     "5th: Tyrann Mathieu (LSU) 2011",
-     "6th: Leonard Fournette (LSU) 2015",
-     "7th: Ryan Mallett (ARK) 2010",
-     "9th: Glenn Dorsey (LSU) 2007"
     ]
    }
   }
