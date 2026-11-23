@@ -6,343 +6,197 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-23T15:54:09.498Z",
- "engine": 13,
+ "generatedAt": "2026-11-23T16:23:16.588Z",
+ "engine": 14,
  "questions": [
   {
-   "type": "mc",
-   "label": "Since 2012",
+   "type": "h2h",
+   "label": "Fresh Mix",
    "verified": true,
-   "pitted": true,
-   "prompt": "Since 2012, which player from either school has the most receiving yards against the other?",
-   "options": [
-    "Trent Sherfield (Vanderbilt)",
-    "Jordan Matthews (Vanderbilt)",
-    "Will Sheppard (Vanderbilt)",
-    "Jauan Jennings (Tennessee)"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    2,
-    1,
-    0
-   ],
-   "reveal": "Trent Sherfield (Vanderbilt) 350 in 3 games · Jordan Matthews (Vanderbilt) 248 in 2 games · Will Sheppard (Vanderbilt) 190 in 3 games · Jauan Jennings (Tennessee) 182 in 3 games",
-   "sig": "tvrec",
+   "flip": true,
+   "prompt": "Who had more receiving yards in a single season?",
+   "A": {
+    "label": "Trent Sherfield (WR) · 2015 VAN",
+    "value": 659,
+    "school": "VAN"
+   },
+   "B": {
+    "label": "Jalin Hyatt (WR) · 2022 TENN",
+    "value": 1267,
+    "school": "TENN"
+   },
+   "unit": "receiving yards",
+   "sig": "hJalin Hyatt2022,Trent Sherfield2015rec",
    "more": {
-    "title": "Top receiving yards against the other school since 2012",
+    "title": "Top 6: single-season receiving yards (TENN, VAN players in our data)",
     "rows": [
-     "1. Trent Sherfield (Vanderbilt) 350 in 3 games",
-     "2. Jordan Matthews (Vanderbilt) 248 in 2 games",
-     "3. Will Sheppard (Vanderbilt) 190 in 3 games",
-     "4. Kalija Lipscomb (Vanderbilt) 187 in 3 games",
-     "5. Caleb Scott (Vanderbilt) 183 in 3 games",
-     "6. Jauan Jennings (Tennessee) 182 in 3 games",
-     "7. Jalin Hyatt (Tennessee) 167 in 2 games",
-     "8. Junior Sherrill (Vanderbilt) 158 in 3 games"
+     "1. Jalin Hyatt (TENN 2022) 1,267",
+     "2. Kalija Lipscomb (VAN 2018) 916",
+     "3. Will Sheppard (VAN 2022) 776",
+     "4. Jared Pinkney (VAN 2018) 774",
+     "5. Trent Sherfield (VAN 2017) 729",
+     "6. Will Sheppard (VAN 2023) 684"
     ]
    }
   },
   {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    11,
+    10
+   ],
+   "verified": true,
+   "sig": "gpeakW"
+  },
+  {
    "type": "count",
-   "label": "Heisman",
+   "label": "NFL Draft",
    "a": "TENN",
    "b": "VAN",
    "threshold": 0,
    "verified": true,
    "pitted": true,
-   "prompt": "From 2019 through 2025, which school had more top-5 finishes in Heisman Trophy voting?",
-   "A": [
-    {
-     "name": "Hendon Hooker",
-     "yards": 5,
-     "season": 2022,
-     "label": "5th place",
-     "profile": "QB · 2022 Heisman voting: 226 points"
-    }
-   ],
+   "prompt": "From the 2015 draft through 2026, which school had more linebackers taken in the first three rounds?",
+   "A": [],
    "B": [
     {
-     "name": "Diego Pavia",
-     "yards": 2,
-     "season": 2025,
-     "label": "2nd place",
-     "profile": "QB · 2025 Heisman voting: 1,435 points"
+     "name": "Zach Cunningham",
+     "yards": 57,
+     "season": 2017,
+     "label": "No. 57 pick",
+     "profile": "Inside Linebacker · 2017 draft, round 2"
+    },
+    {
+     "name": "Oren Burks",
+     "yards": 88,
+     "season": 2018,
+     "label": "No. 88 pick",
+     "profile": "Outside Linebacker · 2018 draft, round 3"
     }
    ],
-   "sig": "hc52019",
+   "sig": "dcr32015lb",
    "bonus": "names"
   },
   {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Tennessee–Vanderbilt games, highest first.",
-   "items": [
-    {
-     "label": "Alvin Kamara (TENN) · 2015",
-     "value": 99,
-     "school": "TENN"
-    },
-    {
-     "label": "Diego Pavia (VAN) · 2025",
-     "value": 165,
-     "school": "VAN"
-    },
-    {
-     "label": "Cassen Jackson-Garrison (VAN) · 2005",
-     "value": 60,
-     "school": "VAN"
-    },
-    {
-     "label": "LaMarcus Coker (TENN) · 2006",
-     "value": 126,
-     "school": "TENN"
-    }
-   ],
-   "sig": "grrushAlvin Kamara2015,Cassen Jackson-Garrison2005,Diego Pavia2025,LaMarcus Coker2006",
-   "more": {
-    "title": "Top rushing games in this rivalry (box scores)",
-    "rows": [
-     "1. Eric Gray (TENN) 2019: 246",
-     "2. Arian Foster (TENN) 2005: 223",
-     "3. Dylan Sampson (TENN) 2024: 178",
-     "4. Montario Hardesty (TENN) 2009: 171",
-     "5. Diego Pavia (VAN) 2025: 165",
-     "6. Ralph Webb (VAN) 2017: 163",
-     "7. Jaylen Wright (TENN) 2022: 160",
-     "8. Ralph Webb (VAN) 2015: 149"
-    ]
-   }
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
-   "a": "TENN",
-   "b": "VAN",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    9,
-    21
-   ],
-   "verified": true,
-   "sig": "glosing"
-  },
-  {
    "type": "count",
-   "label": "School Count",
+   "label": "Since 2022",
    "a": "TENN",
    "b": "VAN",
-   "threshold": 2250,
-   "A": [
-    {
-     "name": "Travis Henry",
-     "yards": 3078,
-     "profile": "No. 1 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Arian Foster",
-     "yards": 2964,
-     "profile": "Running back · Tennessee 2005–2008 · No. 2 on Tennessee's career rushing list · 23 career rushing TDs"
-    },
-    {
-     "name": "James Stewart",
-     "yards": 2890,
-     "profile": "No. 3 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Johnnie Jones",
-     "yards": 2852,
-     "profile": "No. 4 on Tennessee's career rushing list"
-    },
-    {
-     "name": "DeSean Bishop",
-     "yards": 2694,
-     "active": true,
-     "profile": "No. 5 on Tennessee's career rushing list · still active"
-    },
-    {
-     "name": "Jamal Lewis",
-     "yards": 2677,
-     "profile": "Running back · Tennessee 1997–1999 · No. 6 on Tennessee's career rushing list · 17 career rushing TDs"
-    },
-    {
-     "name": "Jalen Hurd",
-     "yards": 2638,
-     "profile": "No. 7 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Cedric Houston",
-     "yards": 2634,
-     "profile": "No. 8 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Jay Graham",
-     "yards": 2609,
-     "profile": "No. 9 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Dylan Sampson",
-     "yards": 2492,
-     "profile": "Running back · Tennessee 2022–2024 · No. 10 on Tennessee's career rushing list · 35 career rushing TDs"
-    },
-    {
-     "name": "Montario Hardesty",
-     "yards": 2391,
-     "profile": "No. 11 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Curt Watson",
-     "yards": 2364,
-     "profile": "No. 12 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Reggie Cobb",
-     "yards": 2360,
-     "profile": "No. 13 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Travis Stephens",
-     "yards": 2336,
-     "profile": "No. 14 on Tennessee's career rushing list"
-    },
-    {
-     "name": "Jaylen Wright",
-     "yards": 2297,
-     "profile": "No. 15 on Tennessee's career rushing list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Ralph Webb",
-     "yards": 4173,
-     "profile": "Running back · Vanderbilt 2014–2017 · No. 1 on Vanderbilt's career rushing list · 32 career rushing TDs"
-    },
-    {
-     "name": "Zac Stacy",
-     "yards": 3143,
-     "profile": "No. 2 on Vanderbilt's career rushing list"
-    },
-    {
-     "name": "Frank Mordica",
-     "yards": 2632,
-     "profile": "No. 3 on Vanderbilt's career rushing list"
-    },
-    {
-     "name": "Carl Woods",
-     "yards": 2490,
-     "profile": "No. 4 on Vanderbilt's career rushing list"
-    },
-    {
-     "name": "Ke'Shawn Vaughn",
-     "yards": 2272,
-     "profile": "Running back · Vanderbilt 2018–2019 · No. 5 on Vanderbilt's career rushing list · 21 career rushing TDs"
-    }
-   ],
-   "verified": true,
-   "sig": "cTENNVAN2250"
-  },
-  {
-   "type": "mc",
-   "label": "NFL Draft",
+   "threshold": 900,
    "verified": true,
    "pitted": true,
-   "prompt": "Which of these Tennessee and Vanderbilt players was drafted highest?",
-   "options": [
-    "Omarr Norman-Lott (Tennessee)",
-    "Earl Bennett (Vanderbilt)",
-    "Alvin Kamara (Tennessee)",
-    "Brad Cottam (Tennessee)"
+   "prompt": "From 2022 through 2025, which school had more 900-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Jalin Hyatt",
+     "yards": 1267,
+     "season": 2022,
+     "profile": "Wide receiver · 2022: 0 rushing, 1,267 receiving yds"
+    },
+    {
+     "name": "Chris Brazzell II",
+     "yards": 1017,
+     "season": 2025,
+     "profile": "Wide receiver · 2025: 0 rushing, 1,017 receiving yds"
+    }
    ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    2,
-    0
-   ],
-   "reveal": "Omarr Norman-Lott: No. 63 overall in 2025 · Alvin Kamara: No. 67 overall in 2017 · Earl Bennett: No. 70 overall in 2008 · Brad Cottam: No. 76 overall in 2008",
-   "sig": "dmAlvin Kamara,Brad Cottam,Earl Bennett,Omarr Norman-Lott",
-   "more": {
-    "title": "Highest-drafted Tennessee and Vanderbilt players since 2000",
-    "rows": [
-     "1. Jamal Lewis (TENN) No. 5, 2000",
-     "2. Eric Berry (TENN) No. 5, 2010",
-     "3. John Henderson (TENN) No. 9, 2002",
-     "4. Jerod Mayo (TENN) No. 10, 2008",
-     "5. Darnell Wright (TENN) No. 10, 2023",
-     "6. Jay Cutler (VAN) No. 11, 2006",
-     "7. Shaun Ellis (TENN) No. 12, 2000",
-     "8. Donte' Stallworth (TENN) No. 13, 2002"
-    ]
-   }
+   "B": [],
+   "sig": "tsrec9002022",
+   "bonus": "names"
   },
   {
    "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
+   "label": "Against Each Other",
    "verified": true,
    "flip": true,
-   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "prompt": "In Tennessee–Vanderbilt games since 2012, who had more rushing yards against the other school?",
    "A": {
-    "label": "Mike Wright (VAN QB)",
-    "value": 5.2,
-    "school": "VAN"
-   },
-   "B": {
-    "label": "Arian Foster (TENN RB)",
-    "value": 4.6,
+    "label": "Joshua Dobbs (TENN) vs. Vanderbilt",
+    "value": 260,
     "school": "TENN"
    },
-   "unit": "",
-   "ypc": true,
-   "note": "🚨 Upset: Mike Wright 5.2 per carry (175 carries) vs. Arian Foster 4.6 per carry (650 carries).",
-   "sig": "uypcArian FosterMike Wright"
+   "B": {
+    "label": "Dallas Rivers (VAN) vs. Tennessee",
+    "value": 125,
+    "school": "VAN"
+   },
+   "unit": "rushing yds",
+   "note": "Joshua Dobbs: 260 in 4 games. Dallas Rivers: 125 in 4 games.",
+   "sig": "vsrushDallas Rivers,Joshua Dobbs",
+   "more": {
+    "title": "Top rushing yards against the other school since 2012",
+    "rows": [
+     "1. Ralph Webb (VAN) 481 in 4 games",
+     "2. Jaylen Wright (TENN) 347 in 3 games",
+     "3. Dylan Sampson (TENN) 346 in 3 games",
+     "4. Eric Gray (TENN) 320 in 2 games",
+     "5. Jabari Small (TENN) 260 in 4 games",
+     "6. Joshua Dobbs (TENN) 260 in 4 games"
+    ]
+   }
   },
   {
-   "type": "rank",
-   "label": "Fresh Mix",
+   "type": "moment",
+   "label": "Rivalry Game",
    "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Keyon Brooks (VAN RB) · 2019 rushing yards",
-     "value": 252,
-     "school": "VAN"
-    },
-    {
-     "label": "Dylan Sampson (TENN RB) · 2023 rushing yards",
-     "value": 604,
-     "school": "TENN"
-    },
-    {
-     "label": "Ralph Webb (VAN RB) · career yards from scrimmage",
-     "value": 4745,
-     "school": "VAN"
-    },
-    {
-     "label": "Will Sheppard (VAN WR) · career receiving yards",
-     "value": 2067,
-     "school": "VAN"
-    }
-   ],
-   "sig": "mxydsDylan Sampson2023 rushing yards,Keyon Brooks2019 rushing yards,Ralph Webbcareer yards from scrimmage,Will Sheppardcareer receiving yards"
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2015",
+    "winner": "TENN",
+    "loser": "VAN",
+    "ws": 53,
+    "ls": 28,
+    "venue": "Neyland Stadium"
+   },
+   "prompt": "In this game, did Jalen Hurd (Tennessee) run for more or less than",
+   "line": "140 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Jalen Hurd had 120 rushing yards on 19 carries and 1 TD in this game.",
+   "check": {
+    "value": 120,
+    "line": 140
+   },
+   "sig": "gm2015-11-28Jalen Hurdrush"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 26, 2016",
+    "winner": "VAN",
+    "loser": "TENN",
+    "ws": 45,
+    "ls": 34,
+    "venue": "FirstBank Stadium"
+   },
+   "prompt": "In this game, did Josh Malone (Tennessee) have more or less than",
+   "line": "140 receiving yards",
+   "answer": "under",
+   "reveal": "Less. Josh Malone had 121 receiving yards on 7 catches and 1 TD in this game.",
+   "check": {
+    "value": 121,
+    "line": 140
+   },
+   "sig": "gm2016-11-26Josh Malonerec"
   },
   {
    "type": "prog",
    "label": "Program Pit · Tennessee vs Vanderbilt",
    "a": "TENN",
    "b": "VAN",
-   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
    "values": [
-    1,
-    12
+    6,
+    1
    ],
    "verified": true,
-   "sig": "gwin3"
+   "sig": "gwin10"
   }
  ]
 }

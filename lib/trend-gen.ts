@@ -20,7 +20,7 @@ const THRESH = { rush: [800, 900, 1000, 1100, 1200, 1300, 1500], rec: [600, 700,
 export function genSeasonCount(sl: SeasonLeaders, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
   const A = sl.schools[a] ?? [], B = sl.schools[b] ?? [];
   const cands: { k: "rush" | "rec"; t: number; from: number }[] = [];
-  for (const k of ["rush", "rec"] as const) for (const t of THRESH[k]) for (const from of [2012, 2014, 2016, 2018, 2020]) {
+  for (const k of ["rush", "rec"] as const) for (const t of THRESH[k]) for (const from of [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]) {
     const rows = [...A, ...B].filter(s => s.season >= from && s.season <= sl.to);
     if (rows.some(s => Math.abs(s[k] - t) < s.margin)) continue;                // nobody close enough to the line to flip the count
     const n = (L: typeof A) => L.filter(s => s.season >= from && s.season <= sl.to && s[k] >= t).length;

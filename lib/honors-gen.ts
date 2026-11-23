@@ -20,23 +20,39 @@ function coveredFrom(years: number[], to: number) {
 }
 
 // ---------- NFL draft ----------
+type DraftKind = "r1" | "top10" | "top50" | "r3";
+const GROUPS: Record<string, { label: string; pos: string[] }> = {
+  all: { label: "", pos: [] },
+  qb: { label: "quarterbacks", pos: ["Quarterback"] },
+  rb: { label: "running backs", pos: ["Running Back", "Fullback"] },
+  wr: { label: "wide receivers and tight ends", pos: ["Wide Receiver", "Tight End"] },
+  ol: { label: "offensive linemen", pos: ["Offensive Tackle", "Offensive Guard", "Center"] },
+  dl: { label: "defensive linemen", pos: ["Defensive Tackle", "Defensive End", "Defensive Edge"] },
+  lb: { label: "linebackers", pos: ["Linebacker", "Outside Linebacker", "Inside Linebacker"] },
+  db: { label: "defensive backs", pos: ["Cornerback", "Safety", "Defensive Back"] },
+};
+const KIND_TEXT: Record<DraftKind, string> = { r1: "first-round", top10: "top-10", top50: "top-50", r3: "first-three-round" };
 export function genDraftCount(d: DraftData, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
   const full = coveredFrom(d.years, d.to);
-  const cands: { from: number; kind: "r1" | "top10" | "top50" }[] = [];
-  for (const kind of ["r1", "top10", "top50"] as const) for (const from of [2010, 2014, 2017, 2020, 2022]) {
-    if (from < full) continue;
-    const n = d.picks.filter(p => (p.school === a || p.school === b) && p.year >= from && hit(p, kind)).length;
-    if (n >= 2 && n <= 14) cands.push({ from, kind });
-  }
+  const cands: { from: number; kind: DraftKind; g: string }[] = [];
+  for (const g of Object.keys(GROUPS)) for (const kind of (g === "all" ? ["r1", "top10", "top50"] : ["r1", "top50", "r3"]) as DraftKind[])
+    for (const from of g === "all" ? [2010, 2014, 2017, 2020, 2022] : [2000, 2005, 2010, 2015]) {
+      if (from < full) continue;
+      const n = d.picks.filter(p => (p.school === a || p.school === b) && p.year >= from && hit(p, kind, g)).length;
+      if (n >= 2 && n <= 14) cands.push({ from, kind, g });
+    }
   if (!cands.length) return null;
-  const { from, kind } = pick(rng, cands);
-  const list = (k: SchoolKey): CountEntry[] => d.picks.filter(p => p.school === k && p.year >= from && hit(p, kind))
+  const { from, kind, g } = pick(rng, cands);
+  const list = (k: SchoolKey): CountEntry[] => d.picks.filter(p => p.school === k && p.year >= from && hit(p, kind, g))
     .map(p => ({ name: p.name, yards: p.overall, season: p.year, label: `No. ${p.overall} pick`, profile: `${p.pos} · ${p.year} draft, round ${p.round}` }));
-  const what = kind === "r1" ? "first-round NFL draft picks" : kind === "top10" ? "top-10 NFL draft picks" : "top-50 NFL draft picks";
+  const what = g === "all" ? `${KIND_TEXT[kind]} NFL draft picks` : `${GROUPS[g].label} taken in the ${kind === "r1" ? "first round" : kind === "r3" ? "first three rounds" : "top 50"}`;
   return { type: "count", label: "NFL Draft", a, b, threshold: 0, verified: true, pitted: true,
-    prompt: `From the ${from} draft through ${d.to}, which school produced more ${what}?`, A: list(a), B: list(b), sig: "dc" + kind + from };
+    prompt: g === "all" ? `From the ${from} draft through ${d.to}, which school produced more ${what}?`
+      : `From the ${from} draft through ${d.to}, which school had more ${what}?`,
+    A: list(a), B: list(b), sig: "dc" + kind + from + (g === "all" ? "" : g) };
 }
-const hit = (p: DraftPick, kind: "r1" | "top10" | "top50") => (kind === "r1" ? p.round === 1 : kind === "top10" ? p.overall <= 10 : p.overall <= 50);
+const hit = (p: DraftPick, kind: DraftKind, g = "all") =>
+  (g === "all" || GROUPS[g].pos.includes(p.pos)) && (kind === "r1" ? p.round === 1 : kind === "top10" ? p.overall <= 10 : kind === "r3" ? p.round <= 3 : p.overall <= 50);
 
 export function genDraftMC(d: DraftData, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
   const pool = d.picks.filter(p => (p.school === a || p.school === b) && p.round <= 3);

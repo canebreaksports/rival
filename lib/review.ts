@@ -43,7 +43,7 @@ export function reviewQuestion(q: Question): ReviewItem {
     case "cross":
     case "mc":
       return { kind: q.type === "cross" ? "Crossover" : q.label, prompt: `${game ? `[${game}] ` : ""}${q.prompt}`, options: q.order.map(i => q.options[i]),
-        answer: q.options[q.answer], detail: q.reveal, flags };
+        answer: q.options[q.answer], detail: q.reveal + (q.type === "mc" && q.years ? `\nName the Years: ${[...q.years.A, ...q.years.B].map(x => `${x.season} (${x.profile})`).join(", ")}` : ""), flags };
   }
 }
 
@@ -59,7 +59,8 @@ export function formatOf(q: Question): string {
     case "rank": return "Rank It: tap 4 in order, highest first";
     case "h2h": return "Head to head: pick 1 of 2";
     case "duel": return "Blind stat duel: pick Player X or Y";
-    case "cross": case "mc": return "Multiple choice: pick 1 of 4";
+    case "cross": return "Multiple choice: pick 1 of 4";
+    case "mc": return q.years ? "Multiple choice: pick 1 of 4, then Name the Years bonus (one year at a time, 3 misses, hints −10)" : "Multiple choice: pick 1 of 4";
   }
 }
 

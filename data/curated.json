@@ -10,7 +10,7 @@
      "prompt": "Chris Davis returned Alabama's missed field goal for the 'Kick Six.' Was that field-goal attempt longer or shorter than",
      "line": "55 yards",
      "answer": "over",
-     "reveal": "Longer. Alabama tried a 57-yard field goal; it fell short and Chris Davis returned it 109 yards for the touchdown that won it 34\u201328.",
+     "reveal": "Longer. Alabama tried a 57-yard field goal; it fell short and Chris Davis returned it 109 yards for the touchdown that won it 34–28.",
      "game": {
       "date": "Nov 30, 2013",
       "winner": "AUB",
@@ -18,7 +18,7 @@
       "ls": 28,
       "venue": "Jordan-Hare Stadium"
      },
-     "source": "Wikipedia \"2013 Iron Bowl\" (revision 1386900797): 57-yard attempt, 109-yard return, 34\u201328",
+     "source": "Wikipedia \"2013 Iron Bowl\" (revision 1386900797): 57-yard attempt, 109-yard return, 34–28",
      "verified": true
     },
     {
@@ -26,7 +26,7 @@
      "prompt": "Cam Newton and Auburn came from behind to win. Was the biggest deficit they overcame more or less than",
      "line": "25 points",
      "answer": "under",
-     "reveal": "Auburn was down 24\u20130 in the second quarter, then came back to win by one.",
+     "reveal": "Auburn was down 24–0 in the second quarter, then came back to win by one.",
      "game": {
       "date": "Nov 26, 2010",
       "winner": "AUB",
@@ -34,7 +34,7 @@
       "ls": 27,
       "venue": "Bryant-Denny Stadium"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
@@ -66,7 +66,7 @@
       "ls": 24,
       "venue": "Jordan-Hare Stadium"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
@@ -84,22 +84,65 @@
      },
      "aName": "Cam Newton",
      "bName": "Mark Ingram",
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
      "type": "mc",
-     "prompt": "Under Nick Saban (2007\u20132023), what was Alabama's record against Auburn teams that finished the season with 9 or more wins?",
+     "prompt": "Under Nick Saban (2007–2023), what was Alabama's record against Auburn teams that finished the season with 9 or more wins?",
      "options": [
-      "0\u20135",
-      "2\u20133",
-      "3\u20132",
-      "5\u20130"
+      "0–5",
+      "2–3",
+      "3–2",
+      "5–0"
      ],
      "answer": 0,
-     "reveal": "0\u20135. Auburn won all five: 2007 (finished 9\u20134), 2010 (14\u20130), 2013 (12\u20132), 2017 (10\u20134) and 2019 (9\u20134). Against every other Auburn team, Saban's Alabama went 12\u20130.",
-     "source": "Iron Bowl results: CollegeFootballData /games. Auburn final records: CollegeFootballData /games, matched for all 17 seasons by Wikipedia \"List of Auburn Tigers football seasons\" (revision 1382122272). Saban at Alabama 2007\u20132023: Wikipedia \"Nick Saban\" (revision 1387234359)",
-     "verified": true
+     "reveal": "0–5. Auburn won all five: 2007 (finished 9–4), 2010 (14–0), 2013 (12–2), 2017 (10–4) and 2019 (9–4). Against every other Auburn team, Saban's Alabama went 12–0.",
+     "source": "Iron Bowl results: CollegeFootballData /games. Auburn final records: CollegeFootballData /games, matched for all 17 seasons by Wikipedia \"List of Auburn Tigers football seasons\" (revision 1382122272). Saban at Alabama 2007–2023: Wikipedia \"Nick Saban\" (revision 1387234359)",
+     "verified": true,
+     "years": {
+      "prompt": "Name the five seasons Auburn beat Saban's Alabama with a 9-win team.",
+      "a": "AUB",
+      "b": "ALA",
+      "A": [
+       {
+        "name": "Auburn 17, Alabama 10",
+        "yards": 0,
+        "season": 2007,
+        "label": "finished 9–4",
+        "profile": "Jordan-Hare"
+       },
+       {
+        "name": "Auburn 28, Alabama 27",
+        "yards": 0,
+        "season": 2010,
+        "label": "finished 14–0",
+        "profile": "Bryant-Denny"
+       },
+       {
+        "name": "Auburn 34, Alabama 28 (Kick Six)",
+        "yards": 0,
+        "season": 2013,
+        "label": "finished 12–2",
+        "profile": "Jordan-Hare"
+       },
+       {
+        "name": "Auburn 26, Alabama 14",
+        "yards": 0,
+        "season": 2017,
+        "label": "finished 10–4",
+        "profile": "Jordan-Hare"
+       },
+       {
+        "name": "Auburn 48, Alabama 45",
+        "yards": 0,
+        "season": 2019,
+        "label": "finished 9–4",
+        "profile": "Jordan-Hare"
+       }
+      ],
+      "B": []
+     }
     }
    ]
   },
@@ -122,7 +165,7 @@
       "ot": true,
       "venue": "Bryant-Denny Stadium"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
@@ -136,9 +179,9 @@
       "winner": "ALA",
       "ws": 21,
       "ls": 0,
-      "venue": "Superdome \u00b7 BCS Title"
+      "venue": "Superdome · BCS Title"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
@@ -154,7 +197,7 @@
       "ls": 41,
       "venue": "Bryant-Denny Stadium"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
@@ -164,15 +207,15 @@
      "aSchool": "ALA",
      "A": {
       "big": "2,219",
-      "sm": "yds \u00b7 28 TD"
+      "sm": "yds · 28 TD"
      },
      "B": {
       "big": "1,953",
-      "sm": "yds \u00b7 22 TD"
+      "sm": "yds · 22 TD"
      },
      "aName": "Derrick Henry",
      "bName": "Leonard Fournette",
-     "source": "Sports Reference player pages (derrick-henry-2, Leonard Fournette); spec \u00a74.9 example",
+     "source": "Sports Reference player pages (derrick-henry-2, Leonard Fournette); spec §4.9 example",
      "verified": true
     },
     {
@@ -182,15 +225,15 @@
      "aSchool": "LSU",
      "A": {
       "big": "5,671",
-      "sm": "pass yds \u00b7 60 TD"
+      "sm": "pass yds · 60 TD"
      },
      "B": {
       "big": "2,840",
-      "sm": "pass yds \u00b7 33 TD"
+      "sm": "pass yds · 33 TD"
      },
      "aName": "Joe Burrow",
      "bName": "Tua Tagovailoa",
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
@@ -208,7 +251,7 @@
      },
      "aName": "Jayden Daniels",
      "bName": "Jalen Milroe",
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
@@ -222,7 +265,7 @@
      ],
      "answer": 0,
      "reveal": "Nick Saban won it all at LSU in 2003, then six more at Alabama.",
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7). Passing stats and coaching facts are not in any verified dataset",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7). Passing stats and coaching facts are not in any verified dataset",
      "verified": false
     }
    ]
@@ -245,7 +288,7 @@
       "ls": 49,
       "venue": "Neyland Stadium"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
@@ -259,7 +302,7 @@
      ],
      "answer": 0,
      "reveal": "Lane Kiffin coached Tennessee in 2009 and was Alabama's OC from 2014 to 2016.",
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7). Passing stats and coaching facts are not in any verified dataset",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7). Passing stats and coaching facts are not in any verified dataset",
      "verified": false
     }
    ]
@@ -281,9 +324,9 @@
       "ws": 26,
       "ls": 23,
       "ot": true,
-      "venue": "Mercedes-Benz Stadium \u00b7 CFP Title"
+      "venue": "Mercedes-Benz Stadium · CFP Title"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
@@ -297,9 +340,9 @@
       "winner": "ALA",
       "ws": 41,
       "ls": 24,
-      "venue": "Mercedes-Benz Stadium \u00b7 SEC Title"
+      "venue": "Mercedes-Benz Stadium · SEC Title"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
@@ -313,9 +356,9 @@
       "winner": "UGA",
       "ws": 33,
       "ls": 18,
-      "venue": "Lucas Oil Stadium \u00b7 CFP Title"
+      "venue": "Lucas Oil Stadium · CFP Title"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
@@ -331,7 +374,7 @@
       "ls": 34,
       "venue": "Bryant-Denny Stadium"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     }
    ]
@@ -352,9 +395,9 @@
       "winner": "FLA",
       "ws": 31,
       "ls": 20,
-      "venue": "Georgia Dome \u00b7 SEC Title"
+      "venue": "Georgia Dome · SEC Title"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     }
    ]
@@ -377,7 +420,7 @@
       "ls": 24,
       "venue": "Bryant-Denny Stadium"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
@@ -387,15 +430,15 @@
      "aSchool": "TAMU",
      "A": {
       "big": "3,706",
-      "sm": "pass yds \u00b7 26 TD"
+      "sm": "pass yds · 26 TD"
      },
      "B": {
       "big": "2,933",
-      "sm": "pass yds \u00b7 30 TD"
+      "sm": "pass yds · 30 TD"
      },
      "aName": "Johnny Manziel",
      "bName": "AJ McCarron",
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     }
    ]
@@ -418,7 +461,7 @@
       "ls": 23,
       "venue": "Neyland Stadium"
      },
-     "source": "Box score: auburntigers.com / utsports.com stats (spec \u00a74.2, \u00a78.7)",
+     "source": "Box score: auburntigers.com / utsports.com stats (spec §4.2, §8.7)",
      "verified": true
     },
     {
@@ -426,25 +469,25 @@
      "prompt": "Rank these single seasons by rushing yards, highest first.",
      "items": [
       {
-       "label": "Kenny Irons \u00b7 2005 AUB",
+       "label": "Kenny Irons · 2005 AUB",
        "value": 1293
       },
       {
-       "label": "Tre Mason \u00b7 2012 AUB",
+       "label": "Tre Mason · 2012 AUB",
        "value": 1002
       },
       {
-       "label": "Arian Foster \u00b7 2008 TENN",
+       "label": "Arian Foster · 2008 TENN",
        "value": 570
       },
       {
-       "label": "Dylan Sampson \u00b7 2022 TENN",
+       "label": "Dylan Sampson · 2022 TENN",
        "value": 397
       }
      ],
      "unit": "yds",
      "trap": true,
-     "note": "\ud83e\udea4 Trap: Mason's big year was 2013 (1,816), Foster's was 2007 (1,193), and Sampson's was 2024 (1,485).",
+     "note": "🪤 Trap: Mason's big year was 2013 (1,816), Foster's was 2007 (1,193), and Sampson's was 2024 (1,485).",
      "source": "Sports Reference player pages (matches data/players.json)",
      "verified": true
     },
@@ -453,19 +496,19 @@
      "prompt": "Rank these single seasons by rushing yards, highest first.",
      "items": [
       {
-       "label": "Tre Mason \u00b7 2013 AUB",
+       "label": "Tre Mason · 2013 AUB",
        "value": 1816
       },
       {
-       "label": "Dylan Sampson \u00b7 2024 TENN",
+       "label": "Dylan Sampson · 2024 TENN",
        "value": 1485
       },
       {
-       "label": "Jamal Lewis \u00b7 1997 TENN",
+       "label": "Jamal Lewis · 1997 TENN",
        "value": 1364
       },
       {
-       "label": "Kenny Irons \u00b7 2005 AUB",
+       "label": "Kenny Irons · 2005 AUB",
        "value": 1293
       }
      ],
@@ -485,7 +528,7 @@
       "value": 4
      },
      "unit": "rec TD",
-     "source": "Sports Reference player pages (matches data/players.json); spec \u00a74.5 example",
+     "source": "Sports Reference player pages (matches data/players.json); spec §4.5 example",
      "verified": true
     },
     {
@@ -500,7 +543,7 @@
       "value": 3228
      },
      "unit": "scrimmage yds",
-     "source": "Sports Reference player pages (matches data/players.json); spec \u00a74.5 example",
+     "source": "Sports Reference player pages (matches data/players.json); spec §4.5 example",
      "verified": true
     },
     {
@@ -508,19 +551,19 @@
      "prompt": "Rank these from highest to lowest (touchdowns).",
      "items": [
       {
-       "label": "Arian Foster (TENN RB) \u00b7 career total TDs (rushing + receiving)",
+       "label": "Arian Foster (TENN RB) · career total TDs (rushing + receiving)",
        "value": 25
       },
       {
-       "label": "Cam Newton (AUB QB) \u00b7 2010 rushing TDs",
+       "label": "Cam Newton (AUB QB) · 2010 rushing TDs",
        "value": 20
       },
       {
-       "label": "Ronnie Brown (AUB RB) \u00b7 career total TDs (rushing + receiving)",
+       "label": "Ronnie Brown (AUB RB) · career total TDs (rushing + receiving)",
        "value": 30
       },
       {
-       "label": "Josh Dobbs (TENN QB) \u00b7 career rushing TDs",
+       "label": "Josh Dobbs (TENN QB) · career rushing TDs",
        "value": 32
       }
      ],
@@ -548,7 +591,7 @@
       "ls": 38,
       "venue": "Jordan-Hare Stadium"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
@@ -566,7 +609,7 @@
      },
      "aName": "Kerryon Johnson",
      "bName": "Nick Chubb",
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     }
    ]
@@ -589,7 +632,7 @@
       "ls": 7,
       "venue": "Jacksonville"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
@@ -603,11 +646,11 @@
      },
      "B": {
       "big": "895",
-      "sm": "rushing yds \u00b7 23 TD"
+      "sm": "rushing yds · 23 TD"
      },
      "aName": "Knowshon Moreno",
      "bName": "Tim Tebow (a QB led Florida in rushing!)",
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     }
    ]
@@ -630,7 +673,7 @@
       "ls": 31,
       "venue": "Sanford Stadium"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
@@ -648,7 +691,7 @@
      },
      "aName": "Stetson Bennett",
      "bName": "Hendon Hooker",
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     }
    ]
@@ -671,7 +714,7 @@
       "ls": 32,
       "venue": "Ben Hill Griffin Stadium"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     }
    ]
@@ -683,7 +726,7 @@
    "items": [
     {
      "type": "cross",
-     "prompt": "Started his career at one school, then won the Heisman at the other. Heisman-year line: 2,854 pass yds \u00b7 30 pass TD \u00b7 1,473 rush yds \u00b7 20 rush TD.",
+     "prompt": "Started his career at one school, then won the Heisman at the other. Heisman-year line: 2,854 pass yds · 30 pass TD · 1,473 rush yds · 20 rush TD.",
      "options": [
       "Cam Newton",
       "Tim Tebow",
@@ -692,7 +735,7 @@
      ],
      "answer": 0,
      "reveal": "Cam Newton began at Florida behind Tebow. He won the 2010 Heisman and national title at Auburn.",
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7). Passing stats and coaching facts are not in any verified dataset",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7). Passing stats and coaching facts are not in any verified dataset",
      "verified": false
     }
    ]
@@ -713,7 +756,7 @@
      ],
      "answer": 0,
      "reveal": "Steve Spurrier won the 1966 Heisman at Florida and later became South Carolina's winningest coach.",
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7). Passing stats and coaching facts are not in any verified dataset",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7). Passing stats and coaching facts are not in any verified dataset",
      "verified": false
     }
    ]
@@ -735,9 +778,9 @@
       "ws": 74,
       "ls": 72,
       "ot": true,
-      "venue": "Kyle Field \u00b7 7 OT"
+      "venue": "Kyle Field · 7 OT"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     }
    ]
@@ -760,7 +803,7 @@
       "ls": 30,
       "venue": "Cotton Bowl"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     },
     {
@@ -774,9 +817,9 @@
       "winner": "TEX",
       "ws": 34,
       "ls": 3,
-      "venue": "Cotton Bowl \u00b7 First as SEC foes"
+      "venue": "Cotton Bowl · First as SEC foes"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     }
    ]
@@ -791,7 +834,7 @@
      "prompt": "The rivalry came back after a long break. How many years since the last meeting: more or less than",
      "line": "10 years",
      "answer": "over",
-     "reveal": "13 years. The last game before this was Texas's 27\u201325 win on Thanksgiving 2011.",
+     "reveal": "13 years. The last game before this was Texas's 27–25 win on Thanksgiving 2011.",
      "game": {
       "date": "Nov 30, 2024",
       "winner": "TEX",
@@ -799,7 +842,7 @@
       "ls": 7,
       "venue": "Kyle Field"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     }
    ]
@@ -811,7 +854,7 @@
    "items": [
     {
      "type": "cross",
-     "prompt": "Went 26\u20132 as the starter at one school, then threw for 3,851 yards and ran for 1,298 at the other.",
+     "prompt": "Went 26–2 as the starter at one school, then threw for 3,851 yards and ran for 1,298 at the other.",
      "options": [
       "Jalen Hurts",
       "Kyler Murray",
@@ -820,7 +863,7 @@
      ],
      "answer": 0,
      "reveal": "Jalen Hurts went from Alabama to Oklahoma in 2019 and finished second in Heisman voting.",
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7). Passing stats and coaching facts are not in any verified dataset",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7). Passing stats and coaching facts are not in any verified dataset",
      "verified": false
     }
    ]
@@ -841,7 +884,7 @@
      ],
      "answer": 0,
      "reveal": "Steve Sarkisian was Alabama's OC for the 2020 title team, then took the Texas job in 2021.",
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7). Passing stats and coaching facts are not in any verified dataset",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7). Passing stats and coaching facts are not in any verified dataset",
      "verified": false
     }
    ]
@@ -856,8 +899,8 @@
      "prompt": "All-time series: does Tennessee have more or fewer than",
      "line": "20.5 wins over LSU",
      "answer": "over",
-     "reveal": "Over. Tennessee leads 21\u201310\u20133. The teams last met in 2022.",
-     "source": "Winsipedia LSU vs Tennessee matchup page (spec \u00a78.5). All-time record / last meeting can drift: confirm with a second source",
+     "reveal": "Over. Tennessee leads 21–10–3. The teams last met in 2022.",
+     "source": "Winsipedia LSU vs Tennessee matchup page (spec §8.5). All-time record / last meeting can drift: confirm with a second source",
      "verified": false
     },
     {
@@ -865,8 +908,8 @@
      "prompt": "LSU's biggest win over Tennessee came in 2011. Was the margin more or less than",
      "line": "27.5 points",
      "answer": "over",
-     "reveal": "Over. LSU won 38\u20137, a 31-point margin.",
-     "source": "Winsipedia LSU vs Tennessee matchup page (spec \u00a78.5)",
+     "reveal": "Over. LSU won 38–7, a 31-point margin.",
+     "source": "Winsipedia LSU vs Tennessee matchup page (spec §8.5)",
      "verified": true
     }
    ]
@@ -881,8 +924,8 @@
      "prompt": "Oklahoma's biggest win over Texas A&M came in 2003. Was the margin more or less than",
      "line": "70 points",
      "answer": "over",
-     "reveal": "Over. Oklahoma won 77\u20130.",
-     "source": "Winsipedia Texas A&M vs Oklahoma matchup page (spec \u00a78.5)",
+     "reveal": "Over. Oklahoma won 77–0.",
+     "source": "Winsipedia Texas A&M vs Oklahoma matchup page (spec §8.5)",
      "verified": true
     },
     {
@@ -890,8 +933,8 @@
      "prompt": "All-time series: does Oklahoma have more or fewer than",
      "line": "18.5 wins over Texas A&M",
      "answer": "over",
-     "reveal": "Over. Oklahoma leads 19\u201312. Before 2026, their last meeting was the 2013 Cotton Bowl after the 2012 season.",
-     "source": "Winsipedia Texas A&M vs Oklahoma matchup page (spec \u00a78.5). All-time record / last meeting can drift: confirm with a second source",
+     "reveal": "Over. Oklahoma leads 19–12. Before 2026, their last meeting was the 2013 Cotton Bowl after the 2012 season.",
+     "source": "Winsipedia Texas A&M vs Oklahoma matchup page (spec §8.5). All-time record / last meeting can drift: confirm with a second source",
      "verified": false
     }
    ]
@@ -906,8 +949,8 @@
      "prompt": "All-time series: does Texas have more or fewer than",
      "line": "55.5 wins over Arkansas",
      "answer": "over",
-     "reveal": "Over. Texas leads 58\u201323 through 2025.",
-     "source": "Winsipedia Arkansas vs Texas matchup page (spec \u00a78.5). All-time record / last meeting can drift: confirm with a second source",
+     "reveal": "Over. Texas leads 58–23 through 2025.",
+     "source": "Winsipedia Arkansas vs Texas matchup page (spec §8.5). All-time record / last meeting can drift: confirm with a second source",
      "verified": false
     },
     {
@@ -915,8 +958,8 @@
      "prompt": "Texas's longest win streak in the series is more or fewer than",
      "line": "12.5 games",
      "answer": "over",
-     "reveal": "Over. Texas won 14 straight from 1894 to 1932. Arkansas's best is 4 (1935\u201338).",
-     "source": "Winsipedia Arkansas vs Texas matchup page (spec \u00a78.5)",
+     "reveal": "Over. Texas won 14 straight from 1894 to 1932. Arkansas's best is 4 (1935–38).",
+     "source": "Winsipedia Arkansas vs Texas matchup page (spec §8.5)",
      "verified": true
     }
    ]
@@ -932,7 +975,7 @@
      "line": "19.5 games",
      "answer": "over",
      "reveal": "Over. Florida won 22 straight from 1989 to 2012.",
-     "source": "Winsipedia Vanderbilt vs Florida matchup page (spec \u00a78.5)",
+     "source": "Winsipedia Vanderbilt vs Florida matchup page (spec §8.5)",
      "verified": true
     },
     {
@@ -940,8 +983,8 @@
      "prompt": "Florida's biggest win over Vanderbilt came in 2001. Was the margin more or less than",
      "line": "50.5 points",
      "answer": "over",
-     "reveal": "Over. Florida won 71\u201313, a 58-point margin.",
-     "source": "Winsipedia Vanderbilt vs Florida matchup page (spec \u00a78.5)",
+     "reveal": "Over. Florida won 71–13, a 58-point margin.",
+     "source": "Winsipedia Vanderbilt vs Florida matchup page (spec §8.5)",
      "verified": true
     }
    ]
@@ -957,7 +1000,7 @@
      "line": "4.5 games",
      "answer": "over",
      "reveal": "Over. Kentucky won 5 straight from 2015 to 2019.",
-     "source": "Winsipedia Kentucky vs Missouri matchup page (spec \u00a78.5)",
+     "source": "Winsipedia Kentucky vs Missouri matchup page (spec §8.5)",
      "verified": true
     },
     {
@@ -965,8 +1008,8 @@
      "prompt": "Missouri's biggest win over Kentucky came in 2013. Was the margin more or less than",
      "line": "27.5 points",
      "answer": "over",
-     "reveal": "Over. Missouri won 48\u201317, a 31-point margin.",
-     "source": "Winsipedia Kentucky vs Missouri matchup page (spec \u00a78.5)",
+     "reveal": "Over. Missouri won 48–17, a 31-point margin.",
+     "source": "Winsipedia Kentucky vs Missouri matchup page (spec §8.5)",
      "verified": true
     }
    ]
@@ -981,8 +1024,8 @@
      "prompt": "Georgia's biggest win over South Carolina came in 2022. Was the margin more or less than",
      "line": "35.5 points",
      "answer": "over",
-     "reveal": "Over. Georgia won 48\u20137, a 41-point margin.",
-     "source": "Winsipedia Georgia vs South Carolina matchup page (spec \u00a78.5)",
+     "reveal": "Over. Georgia won 48–7, a 41-point margin.",
+     "source": "Winsipedia Georgia vs South Carolina matchup page (spec §8.5)",
      "verified": true
     }
    ]
@@ -1005,7 +1048,7 @@
       "ls": 20,
       "venue": "Vaught-Hemingway Stadium"
      },
-     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec \u00a78.7)",
+     "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
     }
    ]

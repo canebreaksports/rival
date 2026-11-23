@@ -1,3 +1,5 @@
+import { pairKey } from "@/lib/rivalry-gen";
+import { genVsLeaderMC } from "@/lib/trend-gen";
 import { describe, expect, it } from "vitest";
 import { DATA } from "@/lib/data";
 import { buildRound, generate, weeklySet, WEEKLY_N, weekKey, findMatchup, involvesBoth } from "@/lib/build";
@@ -192,9 +194,8 @@ describe("no close calls", () => {
 });
 
 describe("weekly trend questions (since <year>)", () => {
-  const TREND = /^t[sgv]/;
-  it("every scheduled matchup gets at least one", () => {
-    const missing = DATA.schedule.games.filter(g => !buildRound(DATA, g.away, g.home, seededRng(g.date), VERIFIED).some(q => TREND.test(q.sig)));
+  it("every scheduled matchup gets at least one weekly count (an edge for one school)", () => {
+    const missing = DATA.schedule.games.filter(g => !buildRound(DATA, g.away, g.home, seededRng(g.date), VERIFIED).some(q => /^(ts|tg|dc|ac|hc)/.test(q.sig)));
     expect(missing.map(g => g.away + "@" + g.home)).toEqual([]);
   });
   it("season counts list exactly the seasons over the line, none within the margin", () => {
@@ -210,8 +211,9 @@ describe("weekly trend questions (since <year>)", () => {
   });
   it("most-yards-against multiple choice has a clear winner and both schools among the options", () => {
     let seen = 0;
-    for (let i = 0; i < 150; i++) for (const [a, b] of [["LSU", "TENN"], ["UGA", "SC"], ["AUB", "ALA"]]) for (const q of buildRound(DATA, a, b, mulberry32(i), VERIFIED)) {
-      if (q.type !== "mc" || !q.sig.startsWith("tv")) continue;
+    for (let i = 0; i < 50; i++) for (const [a, b] of [["LSU", "TENN"], ["UGA", "SC"], ["AUB", "ALA"]] as const) {
+      const pr = DATA.rivalry!.pairs[pairKey(a, b)], q = pr && genVsLeaderMC(pr, a, b, mulberry32(i));
+      if (!q || q.type !== "mc") continue;
       seen++;
       expect(validateQuestion(q)).toEqual([]);
       const names = [a, b].map(k => DATA.schools.find(s => s.key === k)!.name);

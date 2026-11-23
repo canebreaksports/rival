@@ -102,6 +102,7 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
         )}
         {reveal && q.more && q.more.rows.length > 0 && <div className="more"><div className="kind">More · {q.more.title}</div>{q.more.rows.map(r => <div key={r}>{r}</div>)}</div>}
         {reveal && q.type === "count" ? <NameThem q={q} onDone={addBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
+          : reveal && q.type === "mc" && q.years ? <NameYears q={q.years} prompt={q.years.prompt} onDone={addBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
           : reveal && <div className="next show"><button className="btn" onClick={next}>{p.i === n - 1 ? "Final Whistle" : "Next Play →"}</button></div>}
       </div>
       <div className="streak">{p.streak > 1 ? `🔥 ${p.streak} in a row` : `Question ${p.i + 1} of ${n}`}</div>
@@ -223,7 +224,7 @@ function NameThem(props: { q: Extract<Question, { type: "count" }>; onDone: (pts
 }
 
 /** "Name the years": each blank is a season for a school; one correct year fills every blank with that year. */
-function NameYears({ q, onDone, onHint, onNext, last }: { q: Extract<Question, { type: "count" }>; onDone: (pts: number) => void; onHint: () => void; onNext: () => void; last: boolean }) {
+function NameYears({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extract<Question, { type: "count" }>, "a" | "b" | "A" | "B">; prompt?: string; onDone: (pts: number) => void; onHint: () => void; onNext: () => void; last: boolean }) {
   const MISSES = 3;
   const entries = [...q.A.map(x => ({ ...x, t: q.a })), ...q.B.map(x => ({ ...x, t: q.b }))];
   const slots = [...new Map(entries.map(x => [x.t + "|" + x.season, { t: x.t, year: x.season!, who: entries.filter(e => e.t === x.t && e.season === x.season) }])).values()]
@@ -253,24 +254,25 @@ function NameYears({ q, onDone, onHint, onNext, last }: { q: Extract<Question, {
   const nextShow = slots.map((_, i) => i).find(i => open(i) && !shown.includes(i));
   const decTarget = [...shown].reverse().find(i => open(i) && !decade.includes(i));
   const by = (k: SchoolKey) => slots.map((s, i) => ({ ...s, i })).filter(s => s.t === k);
+  const schools = prompt ? [q.a, q.b].filter(k => by(k).length) : [q.a, q.b]; // a custom bonus lists only the school with entries
   const view = (s: ReturnType<typeof by>[0]) => filled.includes(s.i) ? <span key={s.i} className="slot ok">{s.year}</span>
     : shown.includes(s.i) ? <span key={s.i} className="slot hint">{decade.includes(s.i) ? String(s.year).slice(0, 3) + "_" : "?"} · {s.who.map(w => w.name).join(", ")}</span>
     : <span key={s.i} className="slot" aria-label="unnamed">▢</span>;
   return <div className="bonus">
     <div className="kind">Bonus · Name the Years</div>
-    <div className="hintnote">Hints: the player, then the decade · {POINTS.hint} each</div>
-    <div className="prompt" style={{ fontSize: 15, margin: "6px 0 10px" }}>Name the {slots.length} seasons one at a time, from either school. +{POINTS.name} each. {MISSES} misses and you&apos;re out.</div>
+    <div className="hintnote">Hints: the {prompt ? "score" : "player"}, then the decade · {POINTS.hint} each</div>
+    <div className="prompt" style={{ fontSize: 15, margin: "6px 0 10px" }}>{prompt ?? `Name the ${slots.length} seasons one at a time, from either school.`} +{POINTS.name} each. {MISSES} misses and you&apos;re out.</div>
     {!over && <>
       <div className="tally" aria-live="polite"><span>{filled.length} of {slots.length} named</span>
         <span aria-label={`${misses.length} of ${MISSES} misses`}>{Array.from({ length: MISSES }, (_, i) => (i < misses.length ? "✗" : "○")).join(" ")}</span></div>
-      {[q.a, q.b].map(k => <div key={k} className="slots"><b>{SCHOOL[k].name}</b> {by(k).length ? by(k).map(view) : <span className="slot">none</span>}</div>)}
+      {schools.map(k => <div key={k} className="slots"><b>{SCHOOL[k].name}</b> {by(k).length ? by(k).map(view) : <span className="slot">none</span>}</div>)}
       <form className="row" onSubmit={guess}>
         <input type="text" inputMode="numeric" value={text} onChange={e => setText(e.target.value)} placeholder="e.g. 2015" aria-label="Year" autoComplete="off" enterKeyHint="go" autoFocus />
         <button className="btn" type="submit" style={{ width: "auto" }}>Enter</button>
       </form>
       {msg && <div className={`guess ${msg.tone}`} role="status">{msg.text}</div>}
       <div className="row">
-        <button className="btn ghost" disabled={nextShow == null} onClick={() => { if (nextShow != null) { setShown([...shown, nextShow]); onHint() } }}>Player {POINTS.hint}</button>
+        <button className="btn ghost" disabled={nextShow == null} onClick={() => { if (nextShow != null) { setShown([...shown, nextShow]); onHint() } }}>{prompt ? "Score" : "Player"} {POINTS.hint}</button>
         <button className="btn ghost" disabled={decTarget == null} onClick={() => { if (decTarget != null) { setDecade([...decade, decTarget]); onHint() } }}>Decade {POINTS.hint}</button>
       </div>
       <button className="btn ghost" style={{ marginTop: 10 }} onClick={() => finish(filled)}>I&apos;m done</button>
@@ -278,7 +280,7 @@ function NameYears({ q, onDone, onHint, onNext, last }: { q: Extract<Question, {
     {over && <>
       <div className={`reveal show ${filled.length ? "good" : "bad"}`}>
         <b>{filled.length} of {slots.length} named · +{filled.length * POINTS.name}</b>
-        {[q.a, q.b].map(k => <div key={k} style={{ marginTop: 10 }}><b>{SCHOOL[k].name}</b>
+        {schools.map(k => <div key={k} style={{ marginTop: 10 }}><b>{SCHOOL[k].name}</b>
           {by(k).length ? by(k).map(s => <div key={s.i}>{filled.includes(s.i) ? "✅" : "▫️"} {s.year}: {s.who.map(w => `${w.name} (${w.label ?? fmt(w.yards)})`).join(", ")}</div>) : <div>None</div>}</div>)}
       </div>
       <div className="next show"><button className="btn" onClick={onNext}>{last ? "Final Whistle" : "Next Play →"}</button></div>

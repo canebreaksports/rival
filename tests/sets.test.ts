@@ -23,4 +23,15 @@ describe("frozen sets", () => {
       for (const q of s.questions) { expect(q.verified).toBe(true); expect(validateQuestion(q)).toEqual([]) }
     }
   });
+  it("from this week on, both schools get an edge: one count each school leads", () => {
+    for (const s of sets.filter(s => s.game.date >= "2026-11-22")) {
+      const leads = s.questions.filter(q => q.type === "count").map(q => (q.type === "count" ? Math.sign(q.A.length - q.B.length) : 0));
+      expect(leads, s.slug).toContain(1); expect(leads, s.slug).toContain(-1);
+      expect(s.questions.filter(q => /^d[cm]/.test(q.sig)).length, s.slug).toBeLessThanOrEqual(1); // the draft is a side dish
+    }
+  });
+  it("the Saban question carries a Name the Years bonus", () => {
+    const q = sets.find(s => s.slug === "2026-11-28-aub-at-ala")!.questions.find(q => q.type === "mc" && q.prompt.includes("Saban"));
+    expect(q && q.type === "mc" && q.years?.A.map(x => x.season)).toEqual([2007, 2010, 2013, 2017, 2019]);
+  });
 });

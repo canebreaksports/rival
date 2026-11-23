@@ -6,39 +6,184 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-23T15:54:09.493Z",
- "engine": 13,
+ "generatedAt": "2026-11-23T16:23:16.512Z",
+ "engine": 14,
  "questions": [
   {
-   "type": "count",
-   "label": "Since 2020",
-   "a": "OU",
-   "b": "MIZ",
-   "threshold": 1200,
+   "type": "moment",
+   "label": "Rivalry Game",
    "verified": true,
    "pitted": true,
-   "prompt": "From 2020 through 2025, which school had more 1,200-yard rushing seasons?",
+   "game": {
+    "date": "Dec 1, 2007",
+    "winner": "OU",
+    "loser": "MIZ",
+    "ws": 38,
+    "ls": 17,
+    "venue": "Alamodome"
+   },
+   "prompt": "In this game, did Jeremy Maclin (Missouri) have more or less than",
+   "line": "50 receiving yards",
+   "answer": "over",
+   "reveal": "More. Jeremy Maclin had 69 receiving yards on 8 catches and 0 TD in this game.",
+   "check": {
+    "value": 69,
+    "line": 50
+   },
+   "sig": "gm2007-12-01Jeremy Maclinrec"
+  },
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "OU",
+   "b": "MIZ",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2010 through 2025, which school had more Heisman Trophy winners?",
    "A": [
     {
-     "name": "Kennedy Brooks",
-     "yards": 1253,
-     "season": 2021,
-     "profile": "Running back · 2021: 1,253 rushing, 73 receiving yds"
+     "name": "Baker Mayfield",
+     "yards": 2017,
+     "season": 2017,
+     "label": "QB",
+     "profile": "QB · won the Heisman Trophy (most outstanding player)"
     },
     {
-     "name": "Eric Gray",
-     "yards": 1364,
-     "season": 2022,
-     "profile": "Running back · 2022: 1,364 rushing, 229 receiving yds"
+     "name": "Kyler Murray",
+     "yards": 2018,
+     "season": 2018,
+     "label": "QB",
+     "profile": "QB · won the Heisman Trophy (most outstanding player)"
     }
    ],
-   "B": [
+   "B": [],
+   "sig": "acheisman2010",
+   "bonus": "years"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more receiving yards in a single season?",
+   "A": {
+    "label": "J'Mon Moore (WR) · 2015 MIZ",
+    "value": 350,
+    "school": "MIZ"
+   },
+   "B": {
+    "label": "Sterling Shepard (WR) · 2014 OU",
+    "value": 970,
+    "school": "OU"
+   },
+   "unit": "receiving yards",
+   "sig": "hJ'Mon Moore2015,Sterling Shepard2014rec",
+   "more": {
+    "title": "Top 6: single-season receiving yards (OU, MIZ players in our data)",
+    "rows": [
+     "1. CeeDee Lamb (OU 2019) 1,327",
+     "2. Sterling Shepard (OU 2015) 1,288",
+     "3. Luther Burden III (MIZ 2023) 1,205",
+     "4. CeeDee Lamb (OU 2018) 1,155",
+     "5. J'Mon Moore (MIZ 2017) 1,082",
+     "6. J'Mon Moore (MIZ 2016) 1,012"
+    ]
+   }
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
     {
-     "name": "Tyler Badie",
-     "yards": 1604,
-     "season": 2021,
-     "profile": "Running back · 2021: 1,604 rushing, 330 receiving yds"
+     "label": "J'Mon Moore (MIZ WR) · 2016 receiving yards",
+     "value": 1012,
+     "school": "MIZ"
     },
+    {
+     "label": "Eric Gray (OU RB) · 2021 yards from scrimmage",
+     "value": 641,
+     "school": "OU"
+    },
+    {
+     "label": "Adrian Peterson (OU RB) · 2004 rushing yards",
+     "value": 1925,
+     "school": "OU"
+    },
+    {
+     "label": "Johnathon Johnson (MIZ WR) · 2018 receiving yards",
+     "value": 737,
+     "school": "MIZ"
+    }
+   ],
+   "sig": "mxydsAdrian Peterson2004 rushing yards,Eric Gray2021 yards from scrimmage,J'Mon Moore2016 receiving yards,Johnathon Johnson2018 receiving yards"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": false,
+   "prompt": "In Oklahoma–Missouri games since 2006, who had more rushing yards against the other school?",
+   "A": {
+    "label": "Chris Brown (OU) vs. Missouri",
+    "value": 260,
+    "school": "OU"
+   },
+   "B": {
+    "label": "Henry Josey (MIZ) vs. Oklahoma",
+    "value": 197,
+    "school": "MIZ"
+   },
+   "unit": "rushing yds",
+   "note": "Chris Brown: 260 in 3 games. Henry Josey: 197 in 2 games.",
+   "sig": "vsrushChris Brown,Henry Josey",
+   "more": {
+    "title": "Top rushing yards against the other school since 2006",
+    "rows": [
+     "1. Allen Patrick (OU) 294 in 3 games",
+     "2. Chris Brown (OU) 260 in 3 games",
+     "3. Henry Josey (MIZ) 197 in 2 games",
+     "4. Mossis Madu (OU) 114 in 2 games",
+     "5. Chase Daniel (MIZ) 113 in 4 games",
+     "6. James Franklin (MIZ) 106 in 2 games"
+    ]
+   }
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Albert Okwuegbunam (MIZ TE)",
+    "value": 23,
+    "school": "MIZ"
+   },
+   "B": {
+    "label": "Samaje Perine (OU RB)",
+    "value": 2,
+    "school": "OU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Albert Okwuegbunam 23 vs. Samaje Perine 2.",
+   "sig": "urecTDSamaje PerineAlbert Okwuegbunam"
+  },
+  {
+   "type": "count",
+   "label": "Since 2022",
+   "a": "OU",
+   "b": "MIZ",
+   "threshold": 1500,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2022 through 2025, which school had more 1,500-yard rushing seasons?",
+   "A": [],
+   "B": [
     {
      "name": "Cody Schrader",
      "yards": 1617,
@@ -52,182 +197,8 @@
      "profile": "Running back · 2025: 1,649 rushing, 22 receiving yds"
     }
    ],
-   "sig": "tsrush12002020",
-   "bonus": "names"
-  },
-  {
-   "type": "moment",
-   "label": "Longest Play",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Dec 6, 2008",
-    "winner": "OU",
-    "loser": "MIZ",
-    "ws": 62,
-    "ls": 21,
-    "venue": "Memorial Stadium (Norman, OK) · Neutral site"
-   },
-   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
-   "line": "61.5 yards",
-   "answer": "under",
-   "reveal": "Less. The longest was Danario Alexander's 39-yard catch for Missouri; Oklahoma's longest was 37 yards (Mossis Madu).",
-   "check": {
-    "value": 39,
-    "line": 61.5
-   },
-   "sig": "lg2008-12-06"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving TDs in a single season?",
-   "A": {
-    "label": "Mark Andrews (TE) · 2017 OU",
-    "value": 8,
-    "school": "OU"
-   },
-   "B": {
-    "label": "Johnathon Johnson (WR) · 2018 MIZ",
-    "value": 5,
-    "school": "MIZ"
-   },
-   "unit": "receiving TDs",
-   "sig": "hJohnathon Johnson2018,Mark Andrews2017recTD",
-   "more": {
-    "title": "Top 6: single-season receiving TDs (OU, MIZ players in our data)",
-    "rows": [
-     "1. CeeDee Lamb (OU 2019) 14",
-     "2. Albert Okwuegbunam (MIZ 2017) 11",
-     "3. Sterling Shepard (OU 2015) 11",
-     "4. CeeDee Lamb (OU 2018) 11",
-     "5. J'Mon Moore (MIZ 2017) 10",
-     "6. Luther Burden III (MIZ 2023) 9"
-    ]
-   }
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Mark Andrews finish his Oklahoma career with more or less than",
-   "line": "1,550 receiving yards",
-   "answer": "over",
-   "reveal": "More. Mark Andrews had 1,765 receiving yards in his career.",
-   "check": {
-    "value": 1765,
-    "line": 1550
-   },
-   "sig": "ppMark Andrewscareer|Johnathon Johnsoncareerrec0",
-   "pair": "ppMark Andrewscareer|Johnathon Johnsoncareerrec",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Did Johnathon Johnson finish his Missouri career with more or less than",
-   "line": "1,850 receiving yards",
-   "answer": "over",
-   "reveal": "More. Johnathon Johnson had 2,190 receiving yards in his career.",
-   "check": {
-    "value": 2190,
-    "line": 1850
-   },
-   "sig": "ppMark Andrewscareer|Johnathon Johnsoncareerrec1",
-   "pair": "ppMark Andrewscareer|Johnathon Johnsoncareerrec",
-   "pairPart": 2
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Jalen Saunders (OU WR) · career total TDs (rushing + receiving)",
-     "value": 11,
-     "school": "OU"
-    },
-    {
-     "label": "Larry Rountree III (MIZ RB) · 2017 rushing TDs",
-     "value": 6,
-     "school": "MIZ"
-    },
-    {
-     "label": "Johnathon Johnson (MIZ WR) · career receiving TDs",
-     "value": 13,
-     "school": "MIZ"
-    },
-    {
-     "label": "Adrian Peterson (OU RB) · career total TDs (rushing + receiving)",
-     "value": 42,
-     "school": "OU"
-    }
-   ],
-   "sig": "mxTDAdrian Petersoncareer total TDs (rushing + receiving),Jalen Saunderscareer total TDs (rushing + receiving),Johnathon Johnsoncareer receiving TDs,Larry Rountree III2017 rushing TDs"
-  },
-  {
-   "type": "count",
-   "label": "Heisman",
-   "a": "OU",
-   "b": "MIZ",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2010 through 2025, which school had more Heisman Trophy winners?",
-   "A": [
-    {
-     "name": "Baker Mayfield",
-     "yards": 1,
-     "season": 2017,
-     "label": "1st place",
-     "profile": "QB · 2017 Heisman voting: 2,398 points"
-    },
-    {
-     "name": "Kyler Murray",
-     "yards": 1,
-     "season": 2018,
-     "label": "1st place",
-     "profile": "QB · 2018 Heisman voting: 2,167 points"
-    }
-   ],
-   "B": [],
-   "sig": "hc12010",
-   "bonus": "names"
-  },
-  {
-   "type": "mc",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Dec 6, 2008",
-    "winner": "OU",
-    "loser": "MIZ",
-    "ws": 62,
-    "ls": 21,
-    "venue": "Memorial Stadium (Norman, OK) · Neutral site"
-   },
-   "prompt": "What was the difference in total yards in Oklahoma's 62–21 win over Missouri?",
-   "options": [
-    "Oklahoma +273 yards",
-    "Oklahoma +143 yards",
-    "Oklahoma +163 yards",
-    "Missouri +163 yards"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    2,
-    3,
-    0
-   ],
-   "reveal": "Oklahoma +273. Missouri had 354 total yards, Oklahoma 627.",
-   "sig": "td2008-12-06total"
+   "sig": "tsrush15002022",
+   "bonus": "years"
   },
   {
    "type": "prog",
@@ -243,34 +214,17 @@
    "sig": "gwin3"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
+   "type": "prog",
+   "label": "Program Pit · Oklahoma vs Missouri",
+   "a": "OU",
+   "b": "MIZ",
+   "prompt": "Whose best season since 2000 had more wins?",
+   "values": [
+    13,
+    12
+   ],
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more career yards from scrimmage?",
-   "A": {
-    "label": "Ish Witter (RB) · career, MIZ",
-    "value": 2698,
-    "school": "MIZ"
-   },
-   "B": {
-    "label": "Eric Gray (RB) · career, OU",
-    "value": 2234,
-    "school": "OU"
-   },
-   "unit": "yards from scrimmage",
-   "sig": "hEric Graycareer,Ish Wittercareerscrim",
-   "more": {
-    "title": "Top 6: career yards from scrimmage (OU, MIZ players in our data)",
-    "rows": [
-     "1. Samaje Perine (OU) 4,443",
-     "2. Adrian Peterson (OU) 4,243",
-     "3. Larry Rountree III (MIZ) 4,009",
-     "4. Tyler Badie (MIZ) 3,889",
-     "5. Kennedy Brooks (OU) 3,529",
-     "6. Joe Mixon (OU) 2,921"
-    ]
-   }
+   "sig": "gpeakW"
   }
  ]
 }

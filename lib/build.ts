@@ -8,7 +8,7 @@ import { genGameMoment, genGameRank, genLongestGameMoment, genLongestSeriesMC, g
 import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 13; // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
+export const ENGINE_VERSION = 14; // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean }
@@ -53,7 +53,7 @@ export function curatedQs(items: CuratedItem[], label: string, rng: Rng, o: Buil
       case "mc": {
         const game = it.game && pair ? { ...it.game, loser: it.game.winner === pair[0] ? pair[1] : pair[0] } : undefined;
         out.push({ ...base, type: "mc", pitted: true, prompt: it.prompt, options: it.options, answer: it.answer, reveal: it.reveal,
-          order: shuffle(rng, it.options.map((_, j) => j)), ...(game ? { game } : {}) });
+          order: shuffle(rng, it.options.map((_, j) => j)), ...(game ? { game } : {}), ...(it.years ? { years: it.years } : {}) });
         break;
       }
       case "cross":
@@ -73,12 +73,37 @@ const teamQs = (data: Dataset, k: SchoolKey, rng: Rng, o: BuildOpts) =>
 export const PLAYER_QS = 10; // up to a full set from generated questions; caps and the pitted rule still apply
 
 /** About n generated player questions: ≤1 upset (attempted first 70% of the time), ≤1 trap (allowed 75% of the time). */
+// Every "since <year>" count question a matchup can produce, enumerated once per matchup with a fixed seed
+// (so it doesn't depend on, or consume, the set's own random stream) and cached.
+const CANDS = new WeakMap<Dataset, Map<string, Question[]>>();
+function countCandidates(data: Dataset, a: SchoolKey, b: SchoolKey): Question[] {
+  let m = CANDS.get(data); if (!m) CANDS.set(data, (m = new Map()));
+  const key = a + "@" + b, hit = m.get(key); if (hit) return hit;
+  const rng = seededRng("cands:" + key), rv = data.rivalry?.pairs[pairKey(a, b)];
+  const fams: (() => Question | null)[] = [
+    () => (data.leaders ? genSeasonCount(data.leaders, a, b, rng) : null),
+    () => (rv ? genGameCount(rv, a, b, rng, data.leaders) : null),
+    () => (data.draft ? genDraftCount(data.draft, a, b, rng) : null),
+    () => (data.honors ? genAwardCount(data.honors, a, b, rng) : null),
+    () => (data.honors ? genHeismanCount(data.honors, a, b, rng) : null),
+  ];
+  const out: Question[] = [], seen = new Set<string>();
+  for (const f of fams) for (let t = 0; t < 60; t++) {
+    const q = f();
+    if (q && q.type === "count" && !seen.has(q.sig)) { seen.add(q.sig); out.push(q) }
+  }
+  out.sort((x, y) => (x.sig < y.sig ? -1 : 1)); // stable order, whatever order the sampling found them in
+  m.set(key, out);
+  return out;
+}
+
 export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng, o: BuildOpts): Question[] {
   const c = makeCtx(data, teams, rng, o.verifiedOnly);
   if (c.pool.length < 4) return [];
   // Pitted (two schools): only formats that involve both, incl. paired props (one player per school, back to back).
   // Single-player props and trap props stay in Team Deep Dive.
   type Gen = () => Question | Question[] | null;
+  const out: Question[] = [], sigs = new Set<string>();
   const gens: Gen[] = teams.length > 1
     ? [() => genRank(c), () => genH2H(c, teams), () => genH2H(c, teams), () => genDuel(c, teams), () => genMixedRank(c, teams), () => genMixedRank(c, teams),
        () => genTrapRank(c), () => genPropPair(c, teams)]
@@ -94,27 +119,39 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
   }
   if (teams.length > 1) { // honors multiple choice: drafted highest, award winner, best Heisman finish
     const [a, b] = teams, pl = data.players.players.map(p => ({ name: p.name, school: p.school, pos: p.pos, star: p.star }));
-    if (data.draft) gens.push(() => genDraftMC(data.draft!, a, b, rng));
+    const draftMC = rng() < 0.3; // the NFL draft is a side dish: the "drafted highest" question shows up now and then (owner's call, Nov 2026)
+    if (data.draft && draftMC) gens.push(() => (out.some(q => q.sig.startsWith("dc")) ? null : genDraftMC(data.draft!, a, b, rng)));
     if (data.honors) gens.push(() => genAwardMC(data.honors!, a, b, rng, pl), () => genHeismanMC(data.honors!, a, b, rng));
   }
-  const out: Question[] = [], sigs = new Set<string>();
-  // Weekly "since <year>" trend questions come first so every matchup gets them (up to 2: one count, one other)
+  // Weekly "since <year>" count questions come first. Each fan base gets an advantage: one count where the away
+  // school leads and one where the home school leads, from different question families (owner's call, Nov 2026).
   if (teams.length > 1) {
     const [a, b] = teams, rv0 = data.rivalry?.pairs[pairKey(a, b)];
-    const tries = shuffle(rng, [
-      () => (data.leaders ? genSeasonCount(data.leaders, a, b, rng) : null),
-      () => (rv0 ? genGameCount(rv0, a, b, rng, data.leaders) : null),
-      () => (rv0 ? genVsLeaderMC(rv0, a, b, rng) : null),
-      // honors: draft, awards, Heisman voting (one of these may take a weekly slot)
-      () => { const f = pick(rng, [
-        () => (data.draft ? genDraftCount(data.draft, a, b, rng) : null),
-        () => (data.honors ? genAwardCount(data.honors, a, b, rng) : null),
-        () => (data.honors ? genHeismanCount(data.honors, a, b, rng) : null)]); return f() },
-    ]);
-    for (const f of tries) {
-      if (out.length >= 2) break;
-      const q = f();
-      if (!q || sigs.has(q.sig)) continue;
+    const cands = countCandidates(data, a, b).map(q => structuredClone(q)); // copies: bonus gets set on the chosen ones
+    const lead = (q: Question) => (q.type !== "count" ? 0 : Math.sign(q.A.length - q.B.length));
+    const aLead = shuffle(rng, cands.filter(q => lead(q) > 0)), bLead = shuffle(rng, cands.filter(q => lead(q) < 0));
+    const chosen: Question[] = [];
+    // College stats first: the NFL draft only supplies an edge when no college-only pairing exists (owner's call, Nov 2026)
+    let qa: Question | undefined, qb: Question | undefined;
+    const isDraft = (q: Question) => questionKind(q) === "dc";
+    for (const draftOk of [false, true]) {
+      if (qa) break;
+      for (const x of aLead) {
+        const y = bLead.find(q => questionKind(q) !== questionKind(x) && (draftOk || (!isDraft(x) && !isDraft(q))));
+        if (y) { qa = x; qb = y; break }
+      }
+    }
+    if (!qa) { qa = aLead[0]; qb = bLead[0] }
+    if (qa && qb && questionKind(qa) !== questionKind(qb)) chosen.push(...shuffle(rng, [qa, qb]));
+    else { // one school leads everything this week: best available, plus the leader-vs-the-other multiple choice
+      const one = [qa, qb, ...shuffle(rng, cands)].find(q => q && !isDraft(q)) ?? qa ?? qb;
+      if (one) chosen.push(one);
+      const mc = rv0 ? genVsLeaderMC(rv0, a, b, rng) : null;
+      if (mc) chosen.push(mc);
+      else { const two = [...aLead, ...bLead, ...cands].find(q => one && questionKind(q) !== questionKind(one)); if (two) chosen.push(two) }
+    }
+    for (const q of chosen.slice(0, 2)) {
+      if (sigs.has(q.sig)) continue;
       if (q.type === "count" && [...q.A, ...q.B].every(x => x.season)) {
         const r = rng(); // always drawn, so the rest of the set doesn't shift
         q.bonus = q.sig.startsWith("hc") ? "names" : r < 0.4 ? "years" : "names"; // Heisman questions always name the players

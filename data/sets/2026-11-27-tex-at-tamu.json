@@ -6,255 +6,23 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-23T15:54:09.481Z",
- "engine": 13,
+ "generatedAt": "2026-11-23T16:23:16.112Z",
+ "engine": 14,
  "questions": [
   {
-   "type": "mc",
-   "label": "Since 2005",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2005, which player from either school has the most rushing yards against the other?",
-   "options": [
-    "Tre Wisner (Texas)",
-    "Jorvorskie Lane (Texas A&M)",
-    "Cyrus Gray (Texas A&M)",
-    "Colt McCoy (Texas)"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    2,
-    0,
-    1
-   ],
-   "reveal": "Tre Wisner (Texas) 341 in 2 games · Jorvorskie Lane (Texas A&M) 243 in 4 games · Cyrus Gray (Texas A&M) 237 in 3 games · Colt McCoy (Texas) 234 in 4 games",
-   "sig": "tvrush",
-   "more": {
-    "title": "Top rushing yards against the other school since 2005",
-    "rows": [
-     "1. Tre Wisner (Texas) 341 in 2 games",
-     "2. Jorvorskie Lane (Texas A&M) 243 in 4 games",
-     "3. Cyrus Gray (Texas A&M) 237 in 3 games",
-     "4. Colt McCoy (Texas) 234 in 4 games",
-     "5. Cody Johnson (Texas) 218 in 4 games",
-     "6. Stephen McGee (Texas A&M) 213 in 4 games",
-     "7. Mike Goodson (Texas A&M) 163 in 3 games",
-     "8. Jamaal Charles (Texas) 142 in 3 games"
-    ]
-   }
-  },
-  {
-   "type": "count",
-   "label": "Since 2018",
-   "a": "TEX",
-   "b": "TAMU",
-   "threshold": 1100,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2018 through 2025, which school had more 1,100-yard receiving seasons?",
-   "A": [
-    {
-     "name": "Lil'Jordan Humphrey",
-     "yards": 1176,
-     "season": 2018,
-     "profile": "Wide receiver · 2018: 25 rushing, 1,176 receiving yds"
-    },
-    {
-     "name": "Devin Duvernay",
-     "yards": 1386,
-     "season": 2019,
-     "profile": "Wide receiver · 2019: 24 rushing, 1,386 receiving yds"
-    }
-   ],
-   "B": [],
-   "sig": "tsrec11002018",
-   "bonus": "names"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": false,
-   "prompt": "In Texas–Texas A&M games since 2005, who had more rushing yards against the other school?",
-   "A": {
-    "label": "Jamaal Charles (TEX) vs. Texas A&M",
-    "value": 142,
-    "school": "TEX"
-   },
-   "B": {
-    "label": "Stephen McGee (TAMU) vs. Texas",
-    "value": 213,
-    "school": "TAMU"
-   },
-   "unit": "rushing yds",
-   "note": "Jamaal Charles: 142 in 3 games. Stephen McGee: 213 in 4 games.",
-   "sig": "vsrushJamaal Charles,Stephen McGee",
-   "more": {
-    "title": "Top rushing yards against the other school since 2005",
-    "rows": [
-     "1. Tre Wisner (TEX) 341 in 2 games",
-     "2. Jorvorskie Lane (TAMU) 243 in 4 games",
-     "3. Cyrus Gray (TAMU) 237 in 3 games",
-     "4. Colt McCoy (TEX) 234 in 4 games",
-     "5. Cody Johnson (TEX) 218 in 4 games",
-     "6. Stephen McGee (TAMU) 213 in 4 games"
-    ]
-   }
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2021,
-   "stat": "Rushing season",
-   "aSchool": "TEX",
-   "other": "TAMU",
-   "aName": "Bijan Robinson (RB)",
-   "bName": "Devon Achane (RB)",
-   "A": {
-    "big": "1,127",
-    "sm": "rush yds · 11 TD"
-   },
-   "B": {
-    "big": "910",
-    "sm": "rush yds · 9 TD"
-   },
-   "flip": true,
-   "sig": "drush2021Bijan Robinson,Devon Achane"
-  },
-  {
-   "type": "moment",
-   "label": "Longest Play",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 30, 2024",
-    "winner": "TEX",
-    "loser": "TAMU",
-    "ws": 17,
-    "ls": 7,
-    "venue": "Kyle Field"
-   },
-   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
-   "line": "33.5 yards",
-   "answer": "over",
-   "reveal": "More. The longest was Matthew Golden's 44-yard catch for Texas; Texas A&M's longest was 27 yards (Terry Bussey).",
-   "check": {
-    "value": 44,
-    "line": 33.5
-   },
-   "sig": "lg2024-11-30"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
-   "A": {
-    "label": "Roschon Johnson (TEX RB)",
-    "value": 3,
-    "school": "TEX"
-   },
-   "B": {
-    "label": "Isaiah Spiller (TAMU RB)",
-    "value": 1,
-    "school": "TAMU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Roschon Johnson 3 vs. Isaiah Spiller 1.",
-   "sig": "urecTDIsaiah SpillerRoschon Johnson"
-  },
-  {
-   "type": "mc",
-   "label": "Awards",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Which of these players won the Maxwell Award, given to the nation's best all-around player?",
-   "options": [
-    "Vince Young (Texas)",
-    "Johnny Manziel (Texas A&M)",
-    "Isaiah Spiller (Texas A&M)",
-    "D'Onta Foreman (Texas)"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    0,
-    2
-   ],
-   "reveal": "Vince Young (Texas) won the Maxwell Award in 2005.",
-   "sig": "ammaxwell2005",
-   "more": {
-    "title": "Every Texas and Texas A&M winner of the Maxwell Award",
-    "rows": [
-     "1965: Tommy Nobis (TEX)",
-     "1998: Ricky Williams (TEX)",
-     "2005: Vince Young (TEX)",
-     "2009: Colt McCoy (TEX)"
-    ]
-   }
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Texas–Texas A&M games, highest first.",
-   "items": [
-    {
-     "label": "Jorvorskie Lane (TAMU) · 2005",
-     "value": 104,
-     "school": "TAMU"
-    },
-    {
-     "label": "Tre Wisner (TEX) · 2024",
-     "value": 186,
-     "school": "TEX"
-    },
-    {
-     "label": "Marcel Reed (TAMU) · 2025",
-     "value": 71,
-     "school": "TAMU"
-    },
-    {
-     "label": "Tre Wisner (TEX) · 2025",
-     "value": 155,
-     "school": "TEX"
-    }
-   ],
-   "sig": "grrushJorvorskie Lane2005,Marcel Reed2025,Tre Wisner2024,Tre Wisner2025",
-   "more": {
-    "title": "Top rushing games in this rivalry (box scores)",
-    "rows": [
-     "1. Cyrus Gray (TAMU) 2010: 223",
-     "2. Tre Wisner (TEX) 2024: 186",
-     "3. Colt McCoy (TEX) 2009: 175",
-     "4. Tre Wisner (TEX) 2025: 155",
-     "5. Stephen McGee (TAMU) 2005: 108",
-     "6. Tre' Newton (TEX) 2009: 107",
-     "7. Cody Johnson (TEX) 2010: 107",
-     "8. Jorvorskie Lane (TAMU) 2005: 104"
-    ]
-   }
-  },
-  {
    "type": "moment",
    "label": "Fresh Mix",
    "verified": true,
-   "prompt": "In 2020, did Bijan Robinson (Texas) have more or less than",
-   "line": "775 rushing yards",
+   "prompt": "In 2018, did Keaontay Ingram (Texas) have more or less than",
+   "line": "3.5 rushing TDs",
    "answer": "under",
-   "reveal": "Less. Bijan Robinson had 703 rushing yards in 2020.",
+   "reveal": "Less. Keaontay Ingram had 3 rushing TDs in 2018.",
    "check": {
-    "value": 703,
-    "line": 775
+    "value": 3,
+    "line": 3.5
    },
-   "sig": "ppBijan Robinson2020|Isaiah Spiller2019rush0",
-   "pair": "ppBijan Robinson2020|Isaiah Spiller2019rush",
+   "sig": "ppKeaontay Ingram2018|Isaiah Spiller2019rushTD0",
+   "pair": "ppKeaontay Ingram2018|Isaiah Spiller2019rushTD",
    "pairPart": 1
   },
   {
@@ -262,16 +30,272 @@
    "label": "Fresh Mix",
    "verified": true,
    "prompt": "In 2019, did Isaiah Spiller (Texas A&M) have more or less than",
-   "line": "1,075 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Isaiah Spiller had 946 rushing yards in 2019.",
+   "line": "8.5 rushing TDs",
+   "answer": "over",
+   "reveal": "More. Isaiah Spiller had 10 rushing TDs in 2019.",
    "check": {
-    "value": 946,
-    "line": 1075
+    "value": 10,
+    "line": 8.5
    },
-   "sig": "ppBijan Robinson2020|Isaiah Spiller2019rush1",
-   "pair": "ppBijan Robinson2020|Isaiah Spiller2019rush",
+   "sig": "ppKeaontay Ingram2018|Isaiah Spiller2019rushTD1",
+   "pair": "ppKeaontay Ingram2018|Isaiah Spiller2019rushTD",
    "pairPart": 2
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more career yards from scrimmage?",
+   "A": {
+    "label": "Roschon Johnson (RB) · career, TEX",
+    "value": 2609,
+    "school": "TEX"
+   },
+   "B": {
+    "label": "Trayveon Williams (RB) · career, TAMU",
+    "value": 3939,
+    "school": "TAMU"
+   },
+   "unit": "yards from scrimmage",
+   "sig": "hRoschon Johnsoncareer,Trayveon Williamscareerscrim",
+   "more": {
+    "title": "Top 6: career yards from scrimmage (TEX, TAMU players in our data)",
+    "rows": [
+     "1. Ricky Williams (TEX) 7,267",
+     "2. Bijan Robinson (TEX) 4,215",
+     "3. Trayveon Williams (TAMU) 3,939",
+     "4. Isaiah Spiller (TAMU) 3,578",
+     "5. Johnathan Gray (TEX) 3,024",
+     "6. Devon Achane (TAMU) 2,930"
+    ]
+   }
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": true,
+   "prompt": "In Texas–Texas A&M games since 2005, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Brandon Collins (TEX) vs. Texas A&M",
+    "value": 103,
+    "school": "TEX"
+   },
+   "B": {
+    "label": "Earvin Taylor (TAMU) vs. Texas",
+    "value": 129,
+    "school": "TAMU"
+   },
+   "unit": "receiving yds",
+   "note": "Brandon Collins: 103 in 1 game. Earvin Taylor: 129 in 2 games.",
+   "sig": "vsrecBrandon Collins,Earvin Taylor",
+   "more": {
+    "title": "Top receiving yards against the other school since 2005",
+    "rows": [
+     "1. Jeff Fuller (TAMU) 344 in 4 games",
+     "2. Jordan Shipley (TEX) 234 in 4 games",
+     "3. Quan Cosby (TEX) 193 in 4 games",
+     "4. Malcolm Williams (TEX) 168 in 3 games",
+     "5. Mike Goodson (TAMU) 156 in 3 games",
+     "6. Earvin Taylor (TAMU) 129 in 2 games"
+    ]
+   }
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2025",
+    "winner": "TEX",
+    "loser": "TAMU",
+    "ws": 27,
+    "ls": 17,
+    "venue": "DKR-Texas Memorial Stadium"
+   },
+   "prompt": "In this game, did Tre Wisner (Texas) run for more or less than",
+   "line": "200 rushing yards",
+   "answer": "under",
+   "reveal": "Less. Tre Wisner had 155 rushing yards on 19 carries and 0 TD in this game.",
+   "check": {
+    "value": 155,
+    "line": 200
+   },
+   "sig": "gm2025-11-28Tre Wisnerrush"
+  },
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "TEX",
+   "b": "TAMU",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, which school had more Bronko Nagurski Trophy winners?",
+   "A": [
+    {
+     "name": "Derrick Johnson",
+     "yards": 2004,
+     "season": 2004,
+     "label": "LB",
+     "profile": "LB · won the Bronko Nagurski Trophy (best defensive player)"
+    },
+    {
+     "name": "Brian Orakpo",
+     "yards": 2008,
+     "season": 2008,
+     "label": "DE",
+     "profile": "DE · won the Bronko Nagurski Trophy (best defensive player)"
+    }
+   ],
+   "B": [],
+   "sig": "acnagurski2000",
+   "bonus": "names"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
+   "A": {
+    "label": "Tyrone Swoopes (TEX QB)",
+    "value": 24,
+    "school": "TEX"
+   },
+   "B": {
+    "label": "Devon Achane (TAMU RB)",
+    "value": 21,
+    "school": "TAMU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Tyrone Swoopes 24 vs. Devon Achane 21.",
+   "sig": "urushTDDevon AchaneTyrone Swoopes"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Texas vs Texas A&M",
+   "a": "TEX",
+   "b": "TAMU",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    5,
+    5
+   ],
+   "verified": true,
+   "sig": "glosing"
+  },
+  {
+   "type": "count",
+   "label": "NFL Draft",
+   "a": "TEX",
+   "b": "TAMU",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From the 2015 draft through 2026, which school had more offensive linemen taken in the first three rounds?",
+   "A": [
+    {
+     "name": "Connor Williams",
+     "yards": 50,
+     "season": 2018,
+     "label": "No. 50 pick",
+     "profile": "Offensive Guard · 2018 draft, round 2"
+    },
+    {
+     "name": "Samuel Cosmi",
+     "yards": 51,
+     "season": 2021,
+     "label": "No. 51 pick",
+     "profile": "Offensive Tackle · 2021 draft, round 2"
+    },
+    {
+     "name": "Kelvin Banks Jr.",
+     "yards": 9,
+     "season": 2025,
+     "label": "No. 9 pick",
+     "profile": "Offensive Tackle · 2025 draft, round 1"
+    }
+   ],
+   "B": [
+    {
+     "name": "Cedric Ogbuehi",
+     "yards": 21,
+     "season": 2015,
+     "label": "No. 21 pick",
+     "profile": "Offensive Tackle · 2015 draft, round 1"
+    },
+    {
+     "name": "Germain Ifedi",
+     "yards": 31,
+     "season": 2016,
+     "label": "No. 31 pick",
+     "profile": "Offensive Tackle · 2016 draft, round 1"
+    },
+    {
+     "name": "Erik McCoy",
+     "yards": 48,
+     "season": 2019,
+     "label": "No. 48 pick",
+     "profile": "Center · 2019 draft, round 2"
+    },
+    {
+     "name": "Kenyon Green",
+     "yards": 15,
+     "season": 2022,
+     "label": "No. 15 pick",
+     "profile": "Offensive Guard · 2022 draft, round 1"
+    },
+    {
+     "name": "Chase Bisontis",
+     "yards": 34,
+     "season": 2026,
+     "label": "No. 34 pick",
+     "profile": "Offensive Guard · 2026 draft, round 2"
+    },
+    {
+     "name": "Trey Zuhn III",
+     "yards": 91,
+     "season": 2026,
+     "label": "No. 91 pick",
+     "profile": "Center · 2026 draft, round 3"
+    }
+   ],
+   "sig": "dcr32015ol",
+   "bonus": "years"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Devon Achane (TAMU RB) · 2022 rushing yards",
+     "value": 1102,
+     "school": "TAMU"
+    },
+    {
+     "label": "Johnathan Gray (TEX RB) · 2012 rushing yards",
+     "value": 701,
+     "school": "TEX"
+    },
+    {
+     "label": "Josh Reynolds (TAMU WR) · 2015 receiving yards",
+     "value": 907,
+     "school": "TAMU"
+    },
+    {
+     "label": "Collin Johnson (TEX WR) · career receiving yards",
+     "value": 2627,
+     "school": "TEX"
+    }
+   ],
+   "sig": "mxydsCollin Johnsoncareer receiving yards,Devon Achane2022 rushing yards,Johnathan Gray2012 rushing yards,Josh Reynolds2015 receiving yards"
   }
  ]
 }

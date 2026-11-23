@@ -45,8 +45,12 @@ describe("honors questions", () => {
     let seen = 0;
     for (const { q, a, b } of all) if (q.type === "count" && q.sig.startsWith("dc")) {
       seen++;
-      const [, kind, fromS] = q.sig.match(/^dc(r1|top10|top50)(\d{4})$/)!, from = Number(fromS);
-      const ok = (p: (typeof D.picks)[0]) => (kind === "r1" ? p.round === 1 : kind === "top10" ? p.overall <= 10 : p.overall <= 50);
+      const [, kind, fromS, g] = q.sig.match(/^dc(r1|top10|top50|r3)(\d{4})(\w*)$/)!, from = Number(fromS);
+      const POS: Record<string, string[]> = { qb: ["Quarterback"], rb: ["Running Back", "Fullback"], wr: ["Wide Receiver", "Tight End"],
+        ol: ["Offensive Tackle", "Offensive Guard", "Center"], dl: ["Defensive Tackle", "Defensive End", "Defensive Edge"],
+        lb: ["Linebacker", "Outside Linebacker", "Inside Linebacker"], db: ["Cornerback", "Safety", "Defensive Back"] };
+      const ok = (p: (typeof D.picks)[0]) => (!g || POS[g].includes(p.pos)) &&
+        (kind === "r1" ? p.round === 1 : kind === "top10" ? p.overall <= 10 : kind === "r3" ? p.round <= 3 : p.overall <= 50);
       for (const [s, L] of [[a, q.A], [b, q.B]] as const)
         expect(L.map(x => x.name + x.season).sort()).toEqual(D.picks.filter(p => p.school === s && p.year >= from && ok(p)).map(p => p.name + p.year).sort());
     }
