@@ -244,3 +244,23 @@ export function genMarginMC(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rn
     sig: "mm" + top,
   };
 }
+
+/** "In which year was the highest-scoring game in the series?" (owner, Nov 2026), four years, 2000–2025. */
+export function genHighScoreMC(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
+  const gs = seriesGames(pr);
+  if (gs.length < 8) return null;
+  const tot = (g: RivalryGame) => g.hp + g.ap, top = Math.max(...gs.map(tot)), best = gs.filter(g => tot(g) === top);
+  if (best.length > 1 || new Set(gs.map(g => g.season)).size < 4) return null;          // a tie, or two games one season: ambiguous year
+  const g = best[0];
+  if (gs.filter(x => x.season === g.season).length > 1) return null;
+  const others = shuffle(rng, [...new Set(gs.filter(x => x.season !== g.season).map(x => x.season))]).slice(0, 3);
+  const w = winner(g), l = loser(g), ws = Math.max(g.hp, g.ap), ls = Math.min(g.hp, g.ap);
+  const next = [...gs].sort((x, y) => tot(y) - tot(x))[1];
+  return {
+    type: "mc", label: "Series History", verified: SRC_VERIFIED, pitted: true,
+    prompt: `In which year was the highest-scoring ${name(a)}–${name(b)} game from 2000 through 2025?`,
+    options: [String(g.season), ...others.map(String)], answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
+    reveal: `${g.season}: ${name(w)} ${ws}, ${name(l)} ${ls} (${top} points, ${longDate(g.date)}). Next highest: ${next.season}, ${name(winner(next))} ${Math.max(next.hp, next.ap)}–${Math.min(next.hp, next.ap)} (${tot(next)}).`,
+    sig: "mh" + g.season,
+  };
+}

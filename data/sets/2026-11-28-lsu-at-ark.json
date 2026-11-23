@@ -6,86 +6,9 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-23T22:23:56.448Z",
- "engine": 35,
+ "generatedAt": "2026-11-23T22:29:43.697Z",
+ "engine": 36,
  "questions": [
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receiving yards (at the school shown)?",
-   "A": {
-    "label": "Clyde Edwards-Helaire (LSU RB)",
-    "value": 595,
-    "school": "LSU"
-   },
-   "B": {
-    "label": "Raheim Sanders (ARK RB)",
-    "value": 455,
-    "school": "ARK"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Clyde Edwards-Helaire 595 vs. Raheim Sanders 455.",
-   "sig": "urecRaheim SandersClyde Edwards-Helaire"
-  },
-  {
-   "type": "count",
-   "label": "SEC Record Book",
-   "a": "LSU",
-   "b": "ARK",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "Which school has more seasons in the SEC's all-time top 10 for single-season rushing yards?",
-   "A": [
-    {
-     "name": "Leonard Fournette",
-     "yards": 1953,
-     "season": 2015,
-     "label": "2015: 1,953",
-     "profile": "2015 season, 1,953 rushing yards · No. 2 in SEC history"
-    },
-    {
-     "name": "Charles Alexander",
-     "yards": 1686,
-     "season": 1977,
-     "label": "1977: 1,686",
-     "profile": "1977 season, 1,686 rushing yards · No. 9 in SEC history"
-    }
-   ],
-   "B": [
-    {
-     "name": "Darren McFadden",
-     "yards": 1830,
-     "season": 2007,
-     "label": "2007: 1,830",
-     "profile": "2007 season, 1,830 rushing yards · No. 4 in SEC history"
-    }
-   ],
-   "sig": "strush",
-   "info": {
-    "title": "How the SEC list works",
-    "text": "Seasons played as an SEC member, through 2025, from every member school's record book. The full top 10: 1. Derrick Henry (ALA 2015) 2,219 · 2. Leonard Fournette (LSU 2015) 1,953 · 3. Herschel Walker (UGA 1981) 1,891 · 4. Darren McFadden (ARK 2007) 1,830 · 5. Tre Mason (AUB 2013) 1,816 · 6. Bo Jackson (AUB 1985) 1,786 · 7. Trayveon Williams (TAMU 2018) 1,760 · 8. Herschel Walker (UGA 1982) 1,752 · 9. Charles Alexander (LSU 1977) 1,686 · 10. Trent Richardson (ALA 2011) 1,679"
-   }
-  },
-  {
-   "type": "moment",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, did LSU beat Arkansas more or fewer than",
-   "line": "17.5 times",
-   "answer": "over",
-   "reveal": "More. LSU went 18–8 against Arkansas from 2000 to 2025 (26 meetings, on-field results).",
-   "check": {
-    "value": 18,
-    "line": 17.5
-   },
-   "sig": "scLSUARK"
-  },
   {
    "type": "rank",
    "label": "Notables",
@@ -185,78 +108,189 @@
    }
   },
   {
-   "type": "mc",
-   "label": "Series History",
+   "type": "count",
+   "label": "SEC Record Book",
+   "a": "LSU",
+   "b": "ARK",
+   "threshold": 0,
    "verified": true,
    "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the LSU–Arkansas series?",
-   "options": [
-    "36 points",
-    "29 points",
-    "42 points",
-    "45 points"
+   "bonus": "names",
+   "prompt": "Which school has more seasons in the SEC's all-time top 10 for single-season rushing yards?",
+   "A": [
+    {
+     "name": "Leonard Fournette",
+     "yards": 1953,
+     "season": 2015,
+     "label": "2015: 1,953",
+     "profile": "2015 season, 1,953 rushing yards · No. 2 in SEC history"
+    },
+    {
+     "name": "Charles Alexander",
+     "yards": 1686,
+     "season": 1977,
+     "label": "1977: 1,686",
+     "profile": "1977 season, 1,686 rushing yards · No. 9 in SEC history"
+    }
    ],
-   "answer": 0,
-   "order": [
-    0,
-    3,
-    1,
-    2
+   "B": [
+    {
+     "name": "Darren McFadden",
+     "yards": 1830,
+     "season": 2007,
+     "label": "2007: 1,830",
+     "profile": "2007 season, 1,830 rushing yards · No. 4 in SEC history"
+    }
    ],
-   "reveal": "36 points: LSU 56, Arkansas 20 (Nov 23, 2019).",
-   "sig": "mm36"
+   "sig": "strush",
+   "info": {
+    "title": "How the SEC list works",
+    "text": "Seasons played as an SEC member, through 2025, from every member school's record book. The full top 10: 1. Derrick Henry (ALA 2015) 2,219 · 2. Leonard Fournette (LSU 2015) 1,953 · 3. Herschel Walker (UGA 1981) 1,891 · 4. Darren McFadden (ARK 2007) 1,830 · 5. Tre Mason (AUB 2013) 1,816 · 6. Bo Jackson (AUB 1985) 1,786 · 7. Trayveon Williams (TAMU 2018) 1,760 · 8. Herschel Walker (UGA 1982) 1,752 · 9. Charles Alexander (LSU 1977) 1,686 · 10. Trent Richardson (ALA 2011) 1,679"
+   }
   },
   {
    "type": "mc",
-   "label": "Walk-offs",
+   "label": "Heisman",
    "verified": true,
    "pitted": true,
-   "prompt": "Of the 23 LSU–Arkansas games since 2003, how many were won on the final play or in overtime? (Counts: a game-winning score as time expired in the 4th quarter, or any overtime win.)",
+   "prompt": "Which of these finished highest in Heisman Trophy voting that season?",
    "options": [
-    "3",
-    "6",
-    "1",
-    "4"
+    "Jayden Daniels (LSU, 2023)",
+    "Darren McFadden (Arkansas, 2007)",
+    "Glenn Dorsey (LSU, 2007)",
+    "Leonard Fournette (LSU, 2015)"
    ],
    "answer": 0,
    "order": [
-    2,
-    3,
     1,
-    0
+    3,
+    0,
+    2
    ],
-   "reveal": "3: 2007 overtime win, Arkansas 50–48 · 2009 overtime win, LSU 33–30 · 2021 overtime win, Arkansas 16–13.",
-   "years": {
-    "prompt": "Name the 3 seasons it happened.",
-    "a": "LSU",
-    "b": "ARK",
-    "A": [
-     {
-      "name": "Overtime win: LSU 33, Arkansas 30",
-      "yards": 3,
-      "season": 2009,
-      "label": "33–30 (OT)",
-      "profile": "Overtime win, 33–30"
-     }
-    ],
-    "B": [
-     {
-      "name": "Overtime win: Arkansas 50, LSU 48",
-      "yards": 2,
-      "season": 2007,
-      "label": "50–48 (OT)",
-      "profile": "Overtime win, 50–48"
-     },
-     {
-      "name": "Overtime win: Arkansas 16, LSU 13",
-      "yards": 3,
-      "season": 2021,
-      "label": "16–13 (OT)",
-      "profile": "Overtime win, 16–13"
-     }
+   "reveal": "Jayden Daniels: 1st in 2023 · Darren McFadden: 2nd in 2007 · Leonard Fournette: 6th in 2015 · Glenn Dorsey: 9th in 2007",
+   "sig": "hmDarren McFadden2007,Glenn Dorsey2007,Jayden Daniels2023,Leonard Fournette2015",
+   "more": {
+    "title": "LSU and Arkansas top-10 Heisman finishes (seasons with checked voting)",
+    "rows": [
+     "1st: Joe Burrow (LSU) 2019",
+     "1st: Jayden Daniels (LSU) 2023",
+     "2nd: Darren McFadden (ARK) 2006",
+     "2nd: Darren McFadden (ARK) 2007",
+     "5th: Tyrann Mathieu (LSU) 2011",
+     "6th: Leonard Fournette (LSU) 2015",
+     "7th: Ryan Mallett (ARK) 2010",
+     "9th: Glenn Dorsey (LSU) 2007"
     ]
+   }
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Whose best college season had more yards from scrimmage?",
+   "A": {
+    "label": "Clyde Edwards-Helaire (LSU RB)",
+    "value": 1868,
+    "school": "LSU"
    },
-   "sig": "wm2003"
+   "B": {
+    "label": "Raheim Sanders (ARK RB)",
+    "value": 1714,
+    "school": "ARK"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Clyde Edwards-Helaire 1,868 vs. Raheim Sanders 1,714.",
+   "sig": "upeakScrimRaheim SandersClyde Edwards-Helaire"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2019,
+   "stat": "Rushing season",
+   "aSchool": "ARK",
+   "other": "LSU",
+   "aName": "Rakeem Boyd (RB)",
+   "bName": "Clyde Edwards-Helaire (RB)",
+   "A": {
+    "big": "1,133",
+    "sm": "rush yds · 8 TD"
+   },
+   "B": {
+    "big": "1,415",
+    "sm": "rush yds · 16 TD"
+   },
+   "flip": false,
+   "sig": "drush2019Clyde Edwards-Helaire,Rakeem Boyd"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Leonard Fournette (LSU RB) · career receiving yards",
+     "value": 526,
+     "school": "LSU"
+    },
+    {
+     "label": "Alex Collins (ARK RB) · 2014 rushing yards",
+     "value": 1100,
+     "school": "ARK"
+    },
+    {
+     "label": "Jonathan Williams (ARK RB) · career rushing yards",
+     "value": 2321,
+     "school": "ARK"
+    },
+    {
+     "label": "Kevin Faulk (LSU RB) · career yards from scrimmage",
+     "value": 5157,
+     "school": "LSU"
+    }
+   ],
+   "sig": "mxydsAlex Collins2014 rushing yards,Jonathan Williamscareer rushing yards,Kevin Faulkcareer yards from scrimmage,Leonard Fournettecareer receiving yards"
+  },
+  {
+   "type": "count",
+   "label": "Walk-offs",
+   "a": "LSU",
+   "b": "ARK",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "years",
+   "prompt": "Since 2003, which school has more wins over the other on the final play or in overtime? (Counts: a game-winning score as time expired in the 4th quarter, or any overtime win.)",
+   "A": [
+    {
+     "name": "Overtime win: LSU 33, Arkansas 30",
+     "yards": 3,
+     "season": 2009,
+     "label": "33–30 (OT)",
+     "profile": "Overtime win, 33–30"
+    }
+   ],
+   "B": [
+    {
+     "name": "Overtime win: Arkansas 50, LSU 48",
+     "yards": 2,
+     "season": 2007,
+     "label": "50–48 (OT)",
+     "profile": "Overtime win, 50–48"
+    },
+    {
+     "name": "Overtime win: Arkansas 16, LSU 13",
+     "yards": 3,
+     "season": 2021,
+     "label": "16–13 (OT)",
+     "profile": "Overtime win, 16–13"
+    }
+   ],
+   "sig": "wo2003"
   },
   {
    "type": "count",
@@ -296,98 +330,48 @@
    "label": "Ranked Wins",
    "verified": true,
    "pitted": true,
-   "prompt": "Since 2020, which school has more wins over AP-ranked opponents, and how many?",
+   "prompt": "Since 2018, which school has more wins over AP-ranked opponents, and how many?",
    "options": [
-    "LSU, 8",
-    "LSU, 9",
+    "LSU, 20",
+    "LSU, 16",
     "Arkansas, 6",
-    "Arkansas, 7"
+    "Arkansas, 23"
    ],
    "answer": 0,
    "order": [
-    1,
     3,
-    2,
-    0
+    0,
+    1,
+    2
    ],
-   "reveal": "LSU 8, Arkansas 6 (through 2025). Latest: LSU: 2023 vs. No. 21 Missouri 49–39, 2024 vs. No. 9 Ole Miss 29–26, 2025 vs. No. 4 Clemson 17–10; Arkansas: 2022 vs. No. 23 Cincinnati 31–24, 2022 vs. No. 14 Ole Miss 42–27, 2024 vs. No. 4 Tennessee 19–14.",
+   "reveal": "LSU 20, Arkansas 6 (through 2025). Latest: LSU: 2023 vs. No. 21 Missouri 49–39, 2024 vs. No. 9 Ole Miss 29–26, 2025 vs. No. 4 Clemson 17–10; Arkansas: 2022 vs. No. 23 Cincinnati 31–24, 2022 vs. No. 14 Ole Miss 42–27, 2024 vs. No. 4 Tennessee 19–14.",
    "info": {
     "title": "What counts as a ranked win?",
     "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
    },
-   "sig": "rw2020"
+   "sig": "rw2018"
   },
   {
    "type": "mc",
-   "label": "NFL Draft",
+   "label": "Series History",
    "verified": true,
    "pitted": true,
-   "prompt": "Which of these LSU and Arkansas players was drafted highest?",
+   "prompt": "In which year was the highest-scoring LSU–Arkansas game from 2000 through 2025?",
    "options": [
-    "Tyson Jackson (LSU)",
-    "Marcus Harrison (Arkansas)",
-    "Damien Lewis (LSU)",
-    "Tre'Davious White (LSU)"
+    "2007",
+    "2005",
+    "2011",
+    "2014"
    ],
    "answer": 0,
    "order": [
-    2,
-    0,
     3,
-    1
+    1,
+    0,
+    2
    ],
-   "reveal": "Tyson Jackson: No. 3 overall in 2009 · Tre'Davious White: No. 27 overall in 2017 · Damien Lewis: No. 69 overall in 2020 · Marcus Harrison: No. 90 overall in 2008",
-   "sig": "dmDamien Lewis,Marcus Harrison,Tre'Davious White,Tyson Jackson",
-   "more": {
-    "title": "Highest-drafted LSU and Arkansas players since 2000",
-    "rows": [
-     "1. JaMarcus Russell (LSU) No. 1, 2007",
-     "2. Joe Burrow (LSU) No. 1, 2020",
-     "3. Jayden Daniels (LSU) No. 2, 2024",
-     "4. Tyson Jackson (LSU) No. 3, 2009",
-     "5. Derek Stingley Jr. (LSU) No. 3, 2022",
-     "6. Darren McFadden (ARK) No. 4, 2008",
-     "7. Leonard Fournette (LSU) No. 4, 2017",
-     "8. Will Campbell (LSU) No. 4, 2025"
-    ]
-   }
-  },
-  {
-   "type": "count",
-   "label": "Walk-offs",
-   "a": "LSU",
-   "b": "ARK",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "years",
-   "prompt": "Since 2003, which school has more wins over the other on the final play or in overtime? (Counts: a game-winning score as time expired in the 4th quarter, or any overtime win.)",
-   "A": [
-    {
-     "name": "Overtime win: LSU 33, Arkansas 30",
-     "yards": 3,
-     "season": 2009,
-     "label": "33–30 (OT)",
-     "profile": "Overtime win, 33–30"
-    }
-   ],
-   "B": [
-    {
-     "name": "Overtime win: Arkansas 50, LSU 48",
-     "yards": 2,
-     "season": 2007,
-     "label": "50–48 (OT)",
-     "profile": "Overtime win, 50–48"
-    },
-    {
-     "name": "Overtime win: Arkansas 16, LSU 13",
-     "yards": 3,
-     "season": 2021,
-     "label": "16–13 (OT)",
-     "profile": "Overtime win, 16–13"
-    }
-   ],
-   "sig": "wo2003"
+   "reveal": "2007: Arkansas 50, LSU 48 (98 points, Nov 23, 2007). Next highest: 2001, LSU 41–38 (79).",
+   "sig": "mh2007"
   }
  ],
  "rev": 1

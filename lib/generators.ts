@@ -309,8 +309,10 @@ const RECV = new Set(["rec", "recN", "recTD"]);
 export function genUpset(c: Ctx): Question | null {
   const car = c.pool.filter(p => p.year === "career");
   const cands: { k: string; s: PlayerSeason; o: PlayerSeason; vs: number; vo: number; w: number }[] = [];
-  for (const [k, u] of Object.entries(UP)) for (const s of car) if (isStar(c, s)) for (const o of car) {
-    if (isStar(c, o) || o.name === s.name || (c.teams.length > 1 && o.school === s.school)) continue;
+  // famous: a star, award winner or Heisman finalist; the winner must be lesser-known (not famous) or play another position
+  const famous = (p: PlayerSeason) => isStar(c, p) || c.honored.has(p.name + "|" + p.school);
+  for (const [k, u] of Object.entries(UP)) for (const s of car) if (famous(s)) for (const o of car) {
+    if (o.name === s.name || (c.teams.length > 1 && o.school === s.school) || (famous(o) && pos(c, o) === pos(c, s))) continue;
     const vs = u.g(c, s), vo = u.g(c, o);
     if (vs == null || vo == null || vo <= vs || !clear(k === "peakRush" || k === "peakScrim" ? "rush" : k, vo, vs, isApprox(s) || isApprox(o))) continue;
     const ps = pos(c, s), po = pos(c, o), recv = RECV.has(k);
@@ -321,7 +323,7 @@ export function genUpset(c: Ctx): Question | null {
     // averages only between real samples: both players 100+ carries (owner's rule: no small sample vs large)
     if (k === "ypc" && ((o.att ?? 0) < 100 || (s.att ?? 0) < 100)) continue;
     if (k === "recN" ? vo < 50 : k !== "ypc" && !notable(k, vo, !k.startsWith("peak"))) continue; // no "1 TD vs 0" upsets: the winner's number has to mean something
-    cands.push({ k, s, o, vs, vo, w: ps !== po ? 3 : 2 }); // cross-position pairs weighted highest
+    cands.push({ k, s, o, vs, vo, w: ps !== po ? (famous(o) ? 2 : 5) : 2 }); // out-of-position, lesser-known winners first (the Lutzenkirchen kind)
   }
   if (!cands.length) return null;
   let r = c.rng() * cands.reduce((a, x) => a + x.w, 0);

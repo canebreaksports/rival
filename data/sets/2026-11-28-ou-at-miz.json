@@ -6,159 +6,30 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-23T22:23:56.867Z",
- "engine": 35,
+ "generatedAt": "2026-11-23T22:29:44.153Z",
+ "engine": 36,
  "questions": [
   {
-   "type": "count",
-   "label": "Fill In",
-   "a": "OU",
-   "b": "MIZ",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "Oklahoma and Missouri's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
-   "A": [
-    {
-     "name": "Adrian Peterson",
-     "yards": 1925,
-     "season": 2004,
-     "label": "2004: 1,925",
-     "profile": "2004 season, 1,925 rushing yards · No. 1 on the combined list"
-    },
-    {
-     "name": "Billy Sims",
-     "yards": 1896,
-     "season": 1978,
-     "label": "1978: 1,896",
-     "profile": "1978 season, 1,896 rushing yards · No. 2 on the combined list"
-    },
-    {
-     "name": "Quentin Griffin",
-     "yards": 1884,
-     "season": 2002,
-     "label": "2002: 1,884",
-     "profile": "2002 season, 1,884 rushing yards · No. 3 on the combined list"
-    },
-    {
-     "name": "Greg Pruitt",
-     "yards": 1760,
-     "season": 1971,
-     "label": "1971: 1,760",
-     "profile": "1971 season, 1,760 rushing yards · No. 4 on the combined list"
-    },
-    {
-     "name": "Samaje Perine",
-     "yards": 1713,
-     "season": 2014,
-     "label": "2014: 1,713",
-     "profile": "2014 season, 1,713 rushing yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Billy Sims",
-     "yards": 1670,
-     "season": 1979,
-     "label": "1979: 1,670",
-     "profile": "1979 season, 1,670 rushing yards · No. 6 on the combined list"
-    },
-    {
-     "name": "Steve Owens",
-     "yards": 1649,
-     "season": 1968,
-     "label": "1968: 1,649",
-     "profile": "1968 season, 1,649 rushing yards · No. 7 on the combined list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Ahmad Hardy",
-     "yards": 1649,
-     "season": 2025,
-     "label": "2025: 1,649",
-     "profile": "2025 season, 1,649 rushing yards · No. 8 on the combined list"
-    },
-    {
-     "name": "Cody Schrader",
-     "yards": 1627,
-     "season": 2023,
-     "label": "2023: 1,627",
-     "profile": "2023 season, 1,627 rushing yards · No. 9 on the combined list"
-    },
-    {
-     "name": "Tyler Badie",
-     "yards": 1604,
-     "season": 2021,
-     "label": "2021: 1,604",
-     "profile": "2021 season, 1,604 rushing yards · No. 10 on the combined list"
-    }
-   ],
-   "sig": "fsrush"
-  },
-  {
    "type": "mc",
-   "label": "Ranked Wins",
+   "label": "Series History",
    "verified": true,
    "pitted": true,
-   "prompt": "Since 2020, which school has more wins over AP-ranked opponents, and how many?",
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Oklahoma–Missouri series?",
    "options": [
-    "Oklahoma, 15",
-    "Oklahoma, 20",
-    "Missouri, 7",
-    "Missouri, 11"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    1,
-    3,
-    2
-   ],
-   "reveal": "Oklahoma 15, Missouri 7 (through 2025). Latest: Oklahoma: 2025 vs. No. 14 Tennessee 33–27, 2025 vs. No. 4 Alabama 23–21, 2025 vs. No. 23 Missouri 17–6; Missouri: 2023 vs. No. 14 Tennessee 36–7, 2023 vs. No. 7 Ohio State 14–3, 2024 vs. No. 24 Boston College 27–21.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
-   },
-   "sig": "rw2020"
-  },
-  {
-   "type": "mc",
-   "label": "Heisman",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Which of these finished highest in Heisman Trophy voting that season?",
-   "options": [
-    "Sam Bradford (Oklahoma, 2008)",
-    "Cody Schrader (Missouri, 2023)",
-    "Jason White (Oklahoma, 2004)",
-    "Adrian Peterson (Oklahoma, 2004)"
+    "41 points",
+    "53 points",
+    "50 points",
+    "31 points"
    ],
    "answer": 0,
    "order": [
     1,
+    2,
     0,
-    3,
-    2
+    3
    ],
-   "reveal": "Sam Bradford: 1st in 2008 · Adrian Peterson: 2nd in 2004 · Jason White: 3rd in 2004 · Cody Schrader: 8th in 2023",
-   "sig": "hmAdrian Peterson2004,Cody Schrader2023,Jason White2004,Sam Bradford2008",
-   "more": {
-    "title": "Oklahoma and Missouri top-10 Heisman finishes (seasons with checked voting)",
-    "rows": [
-     "1st: Jason White (OU) 2003",
-     "1st: Sam Bradford (OU) 2008",
-     "1st: Baker Mayfield (OU) 2017",
-     "1st: Kyler Murray (OU) 2018",
-     "2nd: Josh Heupel (OU) 2000",
-     "2nd: Adrian Peterson (OU) 2004",
-     "2nd: Jalen Hurts (OU) 2019",
-     "3rd: Jason White (OU) 2004",
-     "3rd: Baker Mayfield (OU) 2016",
-     "4th: Chase Daniel (MIZ) 2007",
-     "4th: Baker Mayfield (OU) 2015",
-     "4th: Dede Westbrook (OU) 2016"
-    ]
-   }
+   "reveal": "41 points: Oklahoma 62, Missouri 21 (Dec 6, 2008).",
+   "sig": "mm41"
   },
   {
    "type": "count",
@@ -186,6 +57,27 @@
    ],
    "sig": "tsrush15002022",
    "bonus": "names"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Tyler Badie (MIZ RB)",
+    "value": 1149,
+    "school": "MIZ"
+   },
+   "B": {
+    "label": "Adrian Peterson (OU RB)",
+    "value": 198,
+    "school": "OU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Tyler Badie 1,149 vs. Adrian Peterson 198.",
+   "sig": "urecAdrian PetersonTyler Badie"
   },
   {
    "type": "count",
@@ -219,27 +111,6 @@
    "B": [],
    "sig": "acheisman2010",
    "bonus": "names"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receptions (at the school shown)?",
-   "A": {
-    "label": "Eric Gray (OU RB)",
-    "value": 56,
-    "school": "OU"
-   },
-   "B": {
-    "label": "Cody Schrader (MIZ RB)",
-    "value": 41,
-    "school": "MIZ"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Eric Gray 56 vs. Cody Schrader 41.",
-   "sig": "urecNCody SchraderEric Gray"
   },
   {
    "type": "rank",
@@ -340,71 +211,207 @@
    }
   },
   {
+   "type": "count",
+   "label": "Fill In",
+   "a": "OU",
+   "b": "MIZ",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Oklahoma and Missouri's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
+   "A": [
+    {
+     "name": "Adrian Peterson",
+     "yards": 1925,
+     "season": 2004,
+     "label": "2004: 1,925",
+     "profile": "2004 season, 1,925 rushing yards · No. 1 on the combined list"
+    },
+    {
+     "name": "Billy Sims",
+     "yards": 1896,
+     "season": 1978,
+     "label": "1978: 1,896",
+     "profile": "1978 season, 1,896 rushing yards · No. 2 on the combined list"
+    },
+    {
+     "name": "Quentin Griffin",
+     "yards": 1884,
+     "season": 2002,
+     "label": "2002: 1,884",
+     "profile": "2002 season, 1,884 rushing yards · No. 3 on the combined list"
+    },
+    {
+     "name": "Greg Pruitt",
+     "yards": 1760,
+     "season": 1971,
+     "label": "1971: 1,760",
+     "profile": "1971 season, 1,760 rushing yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Samaje Perine",
+     "yards": 1713,
+     "season": 2014,
+     "label": "2014: 1,713",
+     "profile": "2014 season, 1,713 rushing yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Billy Sims",
+     "yards": 1670,
+     "season": 1979,
+     "label": "1979: 1,670",
+     "profile": "1979 season, 1,670 rushing yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Steve Owens",
+     "yards": 1649,
+     "season": 1968,
+     "label": "1968: 1,649",
+     "profile": "1968 season, 1,649 rushing yards · No. 7 on the combined list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Ahmad Hardy",
+     "yards": 1649,
+     "season": 2025,
+     "label": "2025: 1,649",
+     "profile": "2025 season, 1,649 rushing yards · No. 8 on the combined list"
+    },
+    {
+     "name": "Cody Schrader",
+     "yards": 1627,
+     "season": 2023,
+     "label": "2023: 1,627",
+     "profile": "2023 season, 1,627 rushing yards · No. 9 on the combined list"
+    },
+    {
+     "name": "Tyler Badie",
+     "yards": 1604,
+     "season": 2021,
+     "label": "2021: 1,604",
+     "profile": "2021 season, 1,604 rushing yards · No. 10 on the combined list"
+    }
+   ],
+   "sig": "fsrush"
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": false,
+   "prompt": "In Oklahoma–Missouri games since 2006, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Ryan Broyles (OU) vs. Missouri",
+    "value": 349,
+    "school": "OU"
+   },
+   "B": {
+    "label": "Wes Kemp (MIZ) vs. Oklahoma",
+    "value": 110,
+    "school": "MIZ"
+   },
+   "unit": "receiving yds",
+   "note": "Ryan Broyles: 349 in 3 games. Wes Kemp: 110 in 2 games.",
+   "sig": "vsrecRyan Broyles,Wes Kemp",
+   "more": {
+    "title": "Top receiving yards against the other school since 2006",
+    "rows": [
+     "1. Ryan Broyles (OU) 349 in 3 games",
+     "2. Juaquin Iglesias (OU) 249 in 4 games",
+     "3. Chase Coffman (MIZ) 207 in 3 games",
+     "4. Jermaine Gresham (OU) 179 in 4 games",
+     "5. Jerrell Jackson (MIZ) 175 in 2 games",
+     "6. Malcolm Kelly (OU) 170 in 3 games"
+    ]
+   }
+  },
+  {
    "type": "h2h",
    "label": "Fresh Mix",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving TDs in a single season?",
+   "flip": false,
+   "prompt": "Who had more yards from scrimmage in a single season?",
    "A": {
-    "label": "Luther Burden III (WR) · 2022 MIZ",
-    "value": 5,
-    "school": "MIZ"
-   },
-   "B": {
-    "label": "Sterling Shepard (WR) · 2015 OU",
-    "value": 11,
+    "label": "Samaje Perine (RB) · 2016 OU",
+    "value": 1166,
     "school": "OU"
    },
-   "unit": "receiving TDs",
-   "sig": "hLuther Burden III2022,Sterling Shepard2015recTD",
+   "B": {
+    "label": "Tyler Badie (RB) · 2021 MIZ",
+    "value": 1934,
+    "school": "MIZ"
+   },
+   "unit": "yards from scrimmage",
+   "sig": "hSamaje Perine2016,Tyler Badie2021scrim",
    "more": {
-    "title": "Top 6: single-season receiving TDs (OU, MIZ players in our data)",
+    "title": "Top 6: single-season yards from scrimmage (OU, MIZ players in our data)",
     "rows": [
-     "1. CeeDee Lamb (OU 2019) 14",
-     "2. Albert Okwuegbunam (MIZ 2017) 11",
-     "3. Sterling Shepard (OU 2015) 11",
-     "4. CeeDee Lamb (OU 2018) 11",
-     "5. J'Mon Moore (MIZ 2017) 10",
-     "6. Luther Burden III (MIZ 2023) 9"
+     "1. Adrian Peterson (OU 2004) 1,937",
+     "2. Tyler Badie (MIZ 2021) 1,934",
+     "3. Samaje Perine (OU 2014) 1,821",
+     "4. Joe Mixon (OU 2016) 1,812",
+     "5. Cody Schrader (MIZ 2023) 1,808",
+     "6. Eric Gray (OU 2022) 1,593"
     ]
    }
   },
   {
    "type": "mc",
-   "label": "Series History",
+   "label": "Ranked Wins",
    "verified": true,
    "pitted": true,
-   "prompt": "From 2000 through 2025, what's the longest winning streak by either school in the Oklahoma–Missouri series?",
+   "prompt": "Since 2015, which school has more wins over AP-ranked opponents, and how many?",
    "options": [
-    "6 straight",
-    "4 straight",
-    "7 straight",
-    "3 straight"
+    "Oklahoma, 35",
+    "Oklahoma, 31",
+    "Missouri, 8",
+    "Missouri, 38"
    ],
    "answer": 0,
    "order": [
-    1,
     0,
-    2,
-    3
+    1,
+    3,
+    2
    ],
-   "reveal": "6 straight: Oklahoma won every meeting from 2002 through 2008.",
-   "sig": "msOU2002"
+   "reveal": "Oklahoma 35, Missouri 8 (through 2025). Latest: Oklahoma: 2025 vs. No. 14 Tennessee 33–27, 2025 vs. No. 4 Alabama 23–21, 2025 vs. No. 23 Missouri 17–6; Missouri: 2023 vs. No. 14 Tennessee 36–7, 2023 vs. No. 7 Ohio State 14–3, 2024 vs. No. 24 Boston College 27–21.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   },
+   "sig": "rw2015"
   },
   {
-   "type": "moment",
-   "label": "Series History",
+   "type": "rank",
+   "label": "Notables",
    "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, did Missouri beat Oklahoma more or fewer than",
-   "line": "1.5 times",
-   "answer": "over",
-   "reveal": "More. Missouri went 2–8 against Oklahoma from 2000 to 2025 (10 meetings, on-field results).",
-   "check": {
-    "value": 2,
-    "line": 1.5
-   },
-   "sig": "scMIZOU"
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "CeeDee Lamb (OU WR) · 2018 receiving yards",
+     "value": 1155,
+     "school": "OU"
+    },
+    {
+     "label": "Larry Rountree III (MIZ RB) · career yards from scrimmage",
+     "value": 4009,
+     "school": "MIZ"
+    },
+    {
+     "label": "Jalen Hurts (OU QB) · 2019 rushing yards",
+     "value": 1298,
+     "school": "OU"
+    },
+    {
+     "label": "Samaje Perine (OU RB) · 2015 yards from scrimmage",
+     "value": 1456,
+     "school": "OU"
+    }
+   ],
+   "sig": "nxydsCeeDee Lamb2018 receiving yards,Jalen Hurts2019 rushing yards,Larry Rountree IIIcareer yards from scrimmage,Samaje Perine2015 yards from scrimmage"
   }
  ],
  "rev": 1
