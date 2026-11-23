@@ -1,6 +1,6 @@
 // npm run sets — builds weekly sets into data/sets/<slug>.json.
 //
-// Freezing rule: once a game's week is about to unlock (36 hours before its Sunday start, to cover every
+// Freezing rule: once a game's week is about to unlock (36 hours before its Monday 7 AM Central start, to cover every
 // US time zone), its set file is never rewritten, so later data or code changes can't alter a live or past set.
 // Future weeks are rebuilt on every run, so new player packs and fixes flow into upcoming sets.
 //

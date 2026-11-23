@@ -14,7 +14,7 @@ export default function ReviewIndex() {
   return <section>
     <h1>PIT<span>T</span>ED</h1>
     <div className="tag">Coach · Weekly Review</div>
-    <p className="note" style={{ marginTop: 0 }}>Every week&apos;s questions with answers. Weeks unlock Sunday at 7 AM Central. A week&apos;s sets keep updating with new data until 36 hours before that (Friday 7 PM Central), then they&apos;re frozen.</p>
+    <p className="note" style={{ marginTop: 0 }}>Every week&apos;s questions with answers. Weeks unlock Monday at 7 AM Central. A week&apos;s sets keep updating with new data until 36 hours before that (Saturday 7 PM Central), then they&apos;re frozen.</p>
     <div className="grid">{weeks.map(w => {
       const mine = sets.filter(s => weekOf(s.game.date) === w);
       const d = new Date(w + "T12:00:00");

@@ -282,18 +282,18 @@ describe("gating", () => {
     expect(liveGames(games, now).map(g => g.away + "@" + g.home)).toContain("LSU@TENN");
     expect(nextGames(games, now).some(g => g.away === "AUB" && g.home === "ALA")).toBe(true);
   });
-  it("Friday games share the Sunday unlock; unlock is Sunday 7 AM Central, lock is 11:59 PM Central on game day", () => {
+  it("Friday games share the Monday unlock; unlock is Monday 7 AM Central, lock is 11:59 PM Central on game day", () => {
     const fri = games.find(g => g.date === "2026-11-27")!, sat = games.find(g => g.date === "2026-11-28")!;
     expect(windowOf(fri).start.getTime()).toBe(windowOf(sat).start.getTime());
-    expect(windowOf(sat).start.toISOString()).toBe("2026-11-22T13:00:00.000Z");      // 7:00 CST (UTC−6)
+    expect(windowOf(sat).start.toISOString()).toBe("2026-11-23T13:00:00.000Z");      // Mon 7:00 CST (UTC−6)
     const sep = games.find(g => g.date === "2026-09-19")!;
-    expect(windowOf(sep).start.toISOString()).toBe("2026-09-13T12:00:00.000Z");      // 7:00 CDT (UTC−5): daylight saving
+    expect(windowOf(sep).start.toISOString()).toBe("2026-09-14T12:00:00.000Z");      // Mon 7:00 CDT (UTC−5): daylight saving
     expect(windowOf(sat).end.toISOString()).toBe("2026-11-29T05:59:59.999Z");        // Sat 11:59:59 PM CST
   });
-  it("is closed just before 7 AM Central Sunday and open just after", () => {
+  it("is closed just before 7 AM Central Monday and open just after", () => {
     const sat = games.find(g => g.date === "2026-11-28")!;
-    expect(isLive(sat, new Date("2026-11-22T12:59:00Z"))).toBe(false);
-    expect(isLive(sat, new Date("2026-11-22T13:00:00Z"))).toBe(true);
+    expect(isLive(sat, new Date("2026-11-23T12:59:00Z"))).toBe(false);
+    expect(isLive(sat, new Date("2026-11-23T13:00:00Z"))).toBe(true);
     expect(isLive(sat, new Date("2026-11-29T06:00:00Z"))).toBe(false);
   });
 });

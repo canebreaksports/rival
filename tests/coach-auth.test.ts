@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { coachAuthorized } from "@/lib/coach-auth";
+import { coachAuthorized, siteAuthorized } from "@/lib/coach-auth";
 const basic = (u: string, p: string) => "Basic " + btoa(`${u}:${p}`);
 describe("coach password", () => {
   it("lets the right password in, with any username", () => {
@@ -13,5 +13,15 @@ describe("coach password", () => {
     expect(coachAuthorized("Basic %%%", "s3cret")).toBe(false);
     expect(coachAuthorized(basic("coach", ""), undefined)).toBe(false);
     expect(coachAuthorized(basic("coach", ""), "")).toBe(false);
+  });
+  it("players' pages take either password; coach pages only the coach password", () => {
+    const env = { PLAYER_PASSWORD: "play", COACH_PASSWORD: "coach" };
+    expect(siteAuthorized("/", basic("x", "play"), env)).toBe(true);
+    expect(siteAuthorized("/play/2026-11-28-aub-at-ala", basic("x", "coach"), env)).toBe(true);
+    expect(siteAuthorized("/", null, env)).toBe(false);
+    expect(siteAuthorized("/coach/review", basic("x", "play"), env)).toBe(false);
+    expect(siteAuthorized("/coach/review", basic("x", "coach"), env)).toBe(true);
+    expect(siteAuthorized("/api/stats", basic("x", "play"), env)).toBe(false);
+    expect(siteAuthorized("/", basic("x", "play"), {})).toBe(false); // nothing configured: locked
   });
 });
