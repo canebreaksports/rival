@@ -45,4 +45,8 @@ describe("frozen sets", () => {
       if (/touchdown/.test(q.line)) expect(q.check!.line).toBeGreaterThanOrEqual(1.5);
     }
   });
+  it("from this week on, no QB-vs-QB upsets on rushing stats (a running QB vs a passing QB isn't an upset)", () => {
+    for (const s of sets.filter(s => s.game.date >= "2026-11-22")) for (const q of s.questions)
+      if (q.type === "h2h" && q.upset && /rushing|per carry|best college season/i.test(q.prompt)) expect(/ QB\)/.test(q.A.label) && / QB\)/.test(q.B.label), s.slug).toBe(false);
+  });
 });

@@ -6,8 +6,8 @@
   "away": "ASU",
   "home": "ARIZ"
  },
- "generatedAt": "2026-11-23T22:29:43.071Z",
- "engine": 36,
+ "generatedAt": "2026-11-23T23:38:22.847Z",
+ "engine": 37,
  "questions": [
   {
    "type": "mc",
@@ -41,21 +41,20 @@
    "upset": true,
    "verified": true,
    "flip": false,
-   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
    "A": {
-    "label": "Khalil Tate (ARIZ QB)",
-    "value": 6.2,
+    "label": "Nick Wilson (ARIZ RB)",
+    "value": 33,
     "school": "ARIZ"
    },
    "B": {
     "label": "Cameron Skattebo (ASU RB)",
-    "value": 5.5,
+    "value": 30,
     "school": "ASU"
    },
    "unit": "",
-   "ypc": true,
-   "note": "🚨 Upset: Khalil Tate 6.2 per carry (366 carries) vs. Cameron Skattebo 5.5 per carry (457 carries).",
-   "sig": "uypcCameron SkatteboKhalil Tate"
+   "note": "🚨 Upset: Nick Wilson 33 vs. Cameron Skattebo 30.",
+   "sig": "urushTDCameron SkatteboNick Wilson"
   },
   {
    "type": "count",

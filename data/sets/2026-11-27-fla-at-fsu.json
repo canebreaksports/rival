@@ -6,8 +6,8 @@
   "away": "FLA",
   "home": "FSU"
  },
- "generatedAt": "2026-11-23T22:29:42.732Z",
- "engine": 36,
+ "generatedAt": "2026-11-23T23:38:22.399Z",
+ "engine": 37,
  "questions": [
   {
    "type": "rank",
@@ -333,20 +333,20 @@
    "upset": true,
    "verified": true,
    "flip": false,
-   "prompt": "Who had more college receptions (at the school shown)?",
+   "prompt": "Who had more college receiving yards (at the school shown)?",
    "A": {
     "label": "Kyle Pitts (FLA TE)",
-    "value": 100,
+    "value": 1492,
     "school": "FLA"
    },
    "B": {
     "label": "Dalvin Cook (FSU RB)",
-    "value": 79,
+    "value": 935,
     "school": "FSU"
    },
    "unit": "",
-   "note": "🚨 Upset: Kyle Pitts 100 vs. Dalvin Cook 79.",
-   "sig": "urecNDalvin CookKyle Pitts"
+   "note": "🚨 Upset: Kyle Pitts 1,492 vs. Dalvin Cook 935.",
+   "sig": "urecDalvin CookKyle Pitts"
   },
   {
    "type": "rank",

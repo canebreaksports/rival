@@ -319,6 +319,7 @@ export function genUpset(c: Ctx): Question | null {
     if (recv && po === "WR" && ps !== "WR") continue;       // a WR out-catching an RB isn't an upset
     if (!recv && (ps === "WR" || ps === "TE")) continue;     // a WR/TE "star" losing on rushing isn't one either
     if (!recv && po === "RB" && ps !== "RB") continue;       // an RB out-rushing a QB isn't an upset
+    if (!recv && ps === "QB" && po === "QB") continue;       // a running QB out-rushing a passing QB isn't one either: pit him against a notable RB
     if (recv && ps === "QB") continue;                       // a QB star on receiving stats
     // averages only between real samples: both players 100+ carries (owner's rule: no small sample vs large)
     if (k === "ypc" && ((o.att ?? 0) < 100 || (s.att ?? 0) < 100)) continue;

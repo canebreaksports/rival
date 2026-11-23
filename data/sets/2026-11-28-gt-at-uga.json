@@ -6,8 +6,8 @@
   "away": "GT",
   "home": "UGA"
  },
- "generatedAt": "2026-11-23T22:29:43.404Z",
- "engine": 36,
+ "generatedAt": "2026-11-23T23:38:23.158Z",
+ "engine": 37,
  "questions": [
   {
    "type": "h2h",
@@ -22,13 +22,13 @@
     "school": "GT"
    },
    "B": {
-    "label": "Stetson Bennett (UGA QB)",
-    "value": 14,
+    "label": "D'Andre Swift (UGA RB)",
+    "value": 20,
     "school": "UGA"
    },
    "unit": "",
-   "note": "🚨 Upset: Haynes King 36 vs. Stetson Bennett 14.",
-   "sig": "urushTDStetson BennettHaynes King"
+   "note": "🚨 Upset: Haynes King 36 vs. D'Andre Swift 20.",
+   "sig": "urushTDD'Andre SwiftHaynes King"
   },
   {
    "type": "mc",

@@ -6,8 +6,8 @@
   "away": "AUB",
   "home": "ALA"
  },
- "generatedAt": "2026-11-23T22:29:43.234Z",
- "engine": 36,
+ "generatedAt": "2026-11-23T23:38:23.004Z",
+ "engine": 37,
  "questions": [
   {
    "label": "Iron Bowl",
@@ -376,21 +376,20 @@
    "upset": true,
    "verified": true,
    "flip": false,
-   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
    "A": {
-    "label": "Nick Marshall (AUB QB)",
-    "value": 5.7,
-    "school": "AUB"
-   },
-   "B": {
-    "label": "Jalen Hurts (ALA QB)",
-    "value": 5.2,
+    "label": "Jalen Milroe (ALA QB)",
+    "value": 33,
     "school": "ALA"
    },
+   "B": {
+    "label": "Tre Mason (AUB RB)",
+    "value": 32,
+    "school": "AUB"
+   },
    "unit": "",
-   "ypc": true,
-   "note": "🚨 Upset: Nick Marshall 5.7 per carry (325 carries) vs. Jalen Hurts 5.2 per carry (381 carries).",
-   "sig": "uypcJalen HurtsNick Marshall"
+   "note": "🚨 Upset: Jalen Milroe 33 vs. Tre Mason 32.",
+   "sig": "urushTDTre MasonJalen Milroe"
   },
   {
    "type": "count",
