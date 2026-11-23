@@ -97,6 +97,7 @@ export interface FrozenSet {
   game: Game;
   generatedAt: string;
   engine: number;   // ENGINE_VERSION used to build it
+  rev?: number;     // bumped by --reset: players' saved progress is keyed with it, so everyone can play the set again
   questions: Question[];
 }
 

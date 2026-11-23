@@ -6,6 +6,7 @@
 //
 //   npm run sets                       rebuild future sets, keep frozen ones, create any that are missing
 //   npm run sets -- --force <slug>     rebuild one frozen set anyway (only if nobody has played it yet)
+//   npm run sets -- --reset <slug>     rebuild one set AND give everyone a fresh run of it (bumps its rev)
 //   npm run sets -- --now 2026-11-20   pretend it is this date (testing)
 import fs from "node:fs";
 import path from "node:path";
@@ -15,7 +16,8 @@ import { windowOf, dateOf } from "../lib/gating";
 import { SETS_DIR } from "../lib/sets";
 
 const args = process.argv.slice(2);
-const force = new Set(args.flatMap((a, i) => (a === "--force" ? [args[i + 1]] : [])));
+const reset = new Set(args.flatMap((a, i) => (a === "--reset" ? [args[i + 1]] : [])));
+const force = new Set([...reset, ...args.flatMap((a, i) => (a === "--force" ? [args[i + 1]] : []))]);
 const nowArg = args.indexOf("--now");
 const now = nowArg >= 0 ? dateOf(args[nowArg + 1]) : new Date();
 const FREEZE_LEAD_MS = 36 * 3600e3;
@@ -28,6 +30,10 @@ for (const g of DATA.schedule.games) {
   const frozen = now.getTime() >= windowOf(g).start.getTime() - FREEZE_LEAD_MS;
   const exists = fs.existsSync(file);
   if (exists && frozen && !force.has(set.slug)) { tally.kept++; continue; }
+  const old = exists ? (JSON.parse(fs.readFileSync(file, "utf8")) as { rev?: number }) : null;
+  const rev = (old?.rev ?? 0) + (reset.has(set.slug) ? 1 : 0);   // keep a set's rev across rebuilds; --reset bumps it
+  if (rev) set.rev = rev;
+  if (reset.has(set.slug)) console.log(`reset ${set.slug}: everyone can play it again (rev ${rev})`);
   if (set.questions.length < 3) tally.thin.push(`${set.slug} (${set.questions.length})`);
   fs.writeFileSync(file, JSON.stringify(set, null, 1) + "\n");
   if (exists) tally.built++; else tally.created++;

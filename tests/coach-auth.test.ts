@@ -15,3 +15,11 @@ describe("coach password", () => {
     expect(coachAuthorized(basic("coach", ""), "")).toBe(false);
   });
 });
+
+import { progressKey } from "@/lib/progress-key";
+describe("set resets", () => {
+  it("a reset set saves progress under a new key, so players get a fresh run", () => {
+    expect(progressKey({ key: "rival:2026-11-28:AUB@ALA" })).toBe("rival:2026-11-28:AUB@ALA");
+    expect(progressKey({ key: "rival:2026-11-28:AUB@ALA", rev: 1 })).toBe("rival:2026-11-28:AUB@ALA#r1");
+  });
+});

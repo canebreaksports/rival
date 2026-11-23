@@ -1,4 +1,5 @@
 "use client";
+import { progressKey } from "@/lib/progress-key";
 // A weekly matchup run. Enforces the game-week window unless `preview` (Coach) is set.
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -16,7 +17,7 @@ export function WeeklyRun({ set, games, preview = false }: { set: FrozenSet; gam
   const [now, setNow] = useState<Date | null>(null);
   const [fan, setF] = useState<Fan | null | undefined>(undefined);
   useEffect(() => { setNow(new Date()); setF(getFan()) }, []);
-  const key = (preview ? PREVIEW_PREFIX : "") + set.key;
+  const key = (preview ? PREVIEW_PREFIX : "") + progressKey(set);
   // count a "start" once, when a fan opens a live matchup they haven't begun (never in Coach preview)
   const startable = !!now && !!fan && !preview && isLive(set.game, now) && set.questions.length >= 3;
   useEffect(() => {
