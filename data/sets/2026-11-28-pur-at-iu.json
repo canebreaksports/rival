@@ -6,157 +6,9 @@
   "away": "PUR",
   "home": "IU"
  },
- "generatedAt": "2026-11-23T21:12:19.907Z",
- "engine": 22,
+ "generatedAt": "2026-11-23T21:55:20.278Z",
+ "engine": 27,
  "questions": [
-  {
-   "type": "count",
-   "label": "Fill In",
-   "a": "PUR",
-   "b": "IU",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "Purdue and Indiana's combined top 10 career rushing yards: which school has more players on the list?",
-   "A": [
-    {
-     "name": "Mike Alstott",
-     "yards": 3635,
-     "label": "3,635",
-     "profile": "3,635 career rushing yards · No. 3 on the combined list"
-    },
-    {
-     "name": "Kory Sheets",
-     "yards": 3341,
-     "label": "3,341",
-     "profile": "3,341 career rushing yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Otis Armstrong",
-     "yards": 3315,
-     "label": "3,315",
-     "profile": "3,315 career rushing yards · No. 6 on the combined list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Anthony Thompson",
-     "yards": 5299,
-     "label": "5,299",
-     "profile": "5,299 career rushing yards · No. 1 on the combined list"
-    },
-    {
-     "name": "Antwaan Randle El",
-     "yards": 3895,
-     "label": "3,895",
-     "profile": "3,895 career rushing yards · No. 2 on the combined list"
-    },
-    {
-     "name": "Alex Smith",
-     "yards": 3492,
-     "label": "3,492",
-     "profile": "3,492 career rushing yards · No. 4 on the combined list"
-    },
-    {
-     "name": "Mike Harkrader",
-     "yards": 3257,
-     "label": "3,257",
-     "profile": "3,257 career rushing yards · No. 7 on the combined list"
-    },
-    {
-     "name": "Tevin Coleman",
-     "yards": 3219,
-     "label": "3,219",
-     "profile": "3,219 career rushing yards · No. 8 on the combined list"
-    },
-    {
-     "name": "Levron Williams",
-     "yards": 3095,
-     "label": "3,095",
-     "profile": "3,095 career rushing yards · No. 9 on the combined list"
-    },
-    {
-     "name": "Vaughn Dunbar",
-     "yards": 3029,
-     "label": "3,029",
-     "profile": "3,029 career rushing yards · No. 10 on the combined list"
-    }
-   ],
-   "sig": "fcrush"
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 28, 2015",
-    "winner": "IU",
-    "loser": "PUR",
-    "ws": 54,
-    "ls": 36,
-    "venue": "Ross-Ade Stadium"
-   },
-   "prompt": "In this game, did Simmie Cobbs Jr. (Indiana) have more or less than",
-   "line": "60 receiving yards",
-   "answer": "over",
-   "reveal": "More. Simmie Cobbs Jr. had 84 receiving yards on 5 catches and 1 TD in this game.",
-   "check": {
-    "value": 84,
-    "line": 60
-   },
-   "sig": "gm2015-11-28Simmie Cobbs Jr.rec"
-  },
-  {
-   "type": "mc",
-   "label": "Awards",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Which of these players won the Davey O'Brien Award, given to the nation's best quarterback?",
-   "options": [
-    "Fernando Mendoza (Indiana)",
-    "Drew Brees (Purdue)",
-    "Peyton Ramsey (Indiana)",
-    "Zander Diamont (Indiana)"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    1,
-    2,
-    3
-   ],
-   "reveal": "Fernando Mendoza (Indiana) won the Davey O'Brien Award in 2025.",
-   "sig": "amobrien2025",
-   "more": {
-    "title": "Every Purdue and Indiana winner of the Davey O'Brien Award",
-    "rows": [
-     "2025: Fernando Mendoza (IU)"
-    ]
-   }
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receptions (at the school shown)?",
-   "A": {
-    "label": "Alexander Horvath (PUR RB)",
-    "value": 69,
-    "school": "PUR"
-   },
-   "B": {
-    "label": "Tevin Coleman (IU RB)",
-    "value": 54,
-    "school": "IU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Alexander Horvath 69 vs. Tevin Coleman 54.",
-   "sig": "urecNTevin ColemanAlexander Horvath"
-  },
   {
    "type": "count",
    "label": "Fill In",
@@ -244,6 +96,27 @@
    "sig": "fsrush"
   },
   {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Payne Durham (PUR TE)",
+    "value": 1275,
+    "school": "PUR"
+   },
+   "B": {
+    "label": "Tevin Coleman (IU RB)",
+    "value": 383,
+    "school": "IU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Payne Durham 1,275 vs. Tevin Coleman 383.",
+   "sig": "urecTevin ColemanPayne Durham"
+  },
+  {
    "type": "count",
    "label": "Since 2018",
    "a": "PUR",
@@ -277,75 +150,49 @@
    "bonus": "names"
   },
   {
-   "type": "mc",
-   "label": "Rivalry Game",
+   "type": "rank",
+   "label": "Notables",
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Nov 28, 2025",
-    "winner": "IU",
-    "loser": "PUR",
-    "ws": 56,
-    "ls": 3,
-    "venue": "Ross-Ade Stadium"
-   },
-   "prompt": "What was the difference in rushing yards in Indiana's 56–3 win over Purdue?",
-   "options": [
-    "Indiana +311 yards",
-    "Indiana +281 yards",
-    "Indiana +381 yards",
-    "Purdue +341 yards"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    0,
-    2,
-    1
-   ],
-   "reveal": "Indiana +311. Indiana had 355 rushing yards, Purdue 44.",
-   "sig": "td2025-11-28rush"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
    "unit": "yds",
-   "prompt": "Rank these single-game receiving performances in Purdue–Indiana games, highest first.",
+   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
    "items": [
     {
-     "label": "James Hardy (IU) · 2006",
-     "value": 151,
-     "school": "IU"
-    },
-    {
-     "label": "Dorien Bryant (PUR) · 2007",
-     "value": 55,
+     "label": "Scott Dierking (Purdue)",
+     "value": 2863,
      "school": "PUR"
     },
     {
-     "label": "Cody Latimer (IU) · 2013",
-     "value": 110,
+     "label": "Montrell Lowe (Purdue)",
+     "value": 2648,
+     "school": "PUR"
+    },
+    {
+     "label": "Antwaan Randle El (Indiana)",
+     "value": 3895,
      "school": "IU"
     },
     {
-     "label": "Dustin Keller (PUR) · 2007",
-     "value": 81,
-     "school": "PUR"
+     "label": "Tevin Coleman (Indiana)",
+     "value": 3219,
+     "school": "IU"
     }
    ],
-   "sig": "grrecCody Latimer2013,Dorien Bryant2007,Dustin Keller2007,James Hardy2006",
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Purdue Boilermakers football statistical leaders\" career rushing yards table (revision 1387405885), which cites the school record book; fetched 2026-11-17; Wikipedia \"Indiana Hoosiers football statistical leaders\" career rushing yards table (revision 1387103435), which cites the school record book; fetched 2026-11-17",
+   "sig": "nrrushingAntwaan Randle El,Montrell Lowe,Scott Dierking,Tevin Coleman",
    "more": {
-    "title": "Top receiving games in this rivalry (box scores)",
+    "title": "Career rushing yards, Purdue and Indiana (school top 10s)",
     "rows": [
-     "1. Elijah Sarratt (IU) 2024: 165",
-     "2. James Hardy (IU) 2006: 151",
-     "3. Danny Anthrop (PUR) 2013: 151",
-     "4. Charlie Jones (PUR) 2022: 143",
-     "5. Brycen Hopkins (PUR) 2019: 142",
-     "6. Rondale Moore (PUR) 2018: 141",
-     "7. Whop Philyor (IU) 2019: 138",
-     "8. Keith Smith (PUR) 2008: 136"
+     "1. Anthony Thompson (Indiana) 5,299",
+     "2. Antwaan Randle El (Indiana) 3,895",
+     "3. Mike Alstott (Purdue) 3,635",
+     "4. Alex Smith (Indiana) 3,492",
+     "5. Kory Sheets (Purdue) 3,341",
+     "6. Otis Armstrong (Purdue) 3,315",
+     "7. Mike Harkrader (Indiana) 3,257",
+     "8. Tevin Coleman (Indiana) 3,219",
+     "9. Levron Williams (Indiana) 3,095",
+     "10. Devin Mockobee (Purdue) 2,983"
     ]
    }
   },
@@ -397,49 +244,184 @@
    "bonus": "names"
   },
   {
-   "type": "rank",
-   "label": "Notables",
+   "type": "count",
+   "label": "Fill In",
+   "a": "PUR",
+   "b": "IU",
+   "threshold": 0,
    "verified": true,
    "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
-   "items": [
+   "bonus": "names",
+   "prompt": "Purdue and Indiana's combined top 10 career receiving yards: which school has more players on the list?",
+   "A": [
     {
-     "label": "Scott Dierking (Purdue)",
-     "value": 2863,
-     "school": "PUR"
+     "name": "John Standeford",
+     "yards": 3788,
+     "label": "3,788 (2000–2003)",
+     "profile": "3,788 career receiving yards (2000–2003) · No. 1 on the combined list"
     },
     {
-     "label": "Montrell Lowe (Purdue)",
-     "value": 2648,
-     "school": "PUR"
+     "name": "Taylor Stubblefield",
+     "yards": 3629,
+     "label": "3,629 (2001–2004)",
+     "profile": "3,629 career receiving yards (2001–2004) · No. 2 on the combined list"
     },
     {
-     "label": "Antwaan Randle El (Indiana)",
-     "value": 3895,
-     "school": "IU"
+     "name": "Dorien Bryant",
+     "yards": 3548,
+     "label": "3,548 (2004–2007)",
+     "profile": "3,548 career receiving yards (2004–2007) · No. 3 on the combined list"
     },
     {
-     "label": "Tevin Coleman (Indiana)",
-     "value": 3219,
-     "school": "IU"
+     "name": "Brian Alford",
+     "yards": 3029,
+     "label": "3,029 (1994–1997)",
+     "profile": "3,029 career receiving yards (1994–1997) · No. 4 on the combined list"
+    },
+    {
+     "name": "David Bell",
+     "yards": 2946,
+     "label": "2,946 (2019–2021)",
+     "profile": "2,946 career receiving yards (2019–2021) · No. 5 on the combined list"
+    },
+    {
+     "name": "Vinny Sutherland",
+     "yards": 2370,
+     "label": "2,370 (1997–2000)",
+     "profile": "2,370 career receiving yards (1997–2000) · No. 8 on the combined list"
+    },
+    {
+     "name": "Greg Orton",
+     "yards": 2356,
+     "label": "2,356 (2005–2008)",
+     "profile": "2,356 career receiving yards (2005–2008) · No. 10 on the combined list"
     }
    ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"Purdue Boilermakers football statistical leaders\" career rushing yards table (revision 1387405885), which cites the school record book; fetched 2026-11-17; Wikipedia \"Indiana Hoosiers football statistical leaders\" career rushing yards table (revision 1387103435), which cites the school record book; fetched 2026-11-17",
-   "sig": "nrrushingAntwaan Randle El,Montrell Lowe,Scott Dierking,Tevin Coleman",
+   "B": [
+    {
+     "name": "James Hardy",
+     "yards": 2740,
+     "label": "2,740 (2005–2007)",
+     "profile": "2,740 career receiving yards (2005–2007) · No. 6 on the combined list"
+    },
+    {
+     "name": "Courtney Roby",
+     "yards": 2524,
+     "label": "2,524 (2001–2004)",
+     "profile": "2,524 career receiving yards (2001–2004) · No. 7 on the combined list"
+    },
+    {
+     "name": "Ernie Jones",
+     "yards": 2361,
+     "label": "2,361 (1984–1987)",
+     "profile": "2,361 career receiving yards (1984–1987) · No. 9 on the combined list"
+    }
+   ],
+   "sig": "fcrec"
+  },
+  {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Purdue–Indiana series?",
+   "options": [
+    "66 points",
+    "72 points",
+    "56 points",
+    "75 points"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    0,
+    1,
+    3
+   ],
+   "reveal": "66 points: Indiana 66, Purdue 0 (Nov 30, 2024).",
+   "sig": "mm66"
+  },
+  {
+   "type": "moment",
+   "label": "Longest Play",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 24, 2012",
+    "winner": "PUR",
+    "loser": "IU",
+    "ws": 56,
+    "ls": 35,
+    "venue": "Ross-Ade Stadium"
+   },
+   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
+   "line": "50.5 yards",
+   "answer": "over",
+   "reveal": "More. The longest was Akeem Shavers's 73-yard catch for Purdue; Indiana's longest was 52 yards (Shane Wynn).",
+   "check": {
+    "value": 73,
+    "line": 50.5
+   },
+   "sig": "lg2012-11-24"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more receiving yards in a single season?",
+   "A": {
+    "label": "DeAngelo Yancey (WR) · 2013 PUR",
+    "value": 546,
+    "school": "PUR"
+   },
+   "B": {
+    "label": "Ty Fryfogle (WR) · 2019 IU",
+    "value": 604,
+    "school": "IU"
+   },
+   "unit": "receiving yards",
+   "sig": "hDeAngelo Yancey2013,Ty Fryfogle2019rec",
    "more": {
-    "title": "Career rushing yards, Purdue and Indiana (school top 10s)",
+    "title": "Top 6: single-season receiving yards (PUR, IU players in our data)",
     "rows": [
-     "1. Anthony Thompson (Indiana) 5,299",
-     "2. Antwaan Randle El (Indiana) 3,895",
-     "3. Mike Alstott (Purdue) 3,635",
-     "4. Alex Smith (Indiana) 3,492",
-     "5. Kory Sheets (Purdue) 3,341",
-     "6. Otis Armstrong (Purdue) 3,315",
-     "7. Mike Harkrader (Indiana) 3,257",
-     "8. Tevin Coleman (Indiana) 3,219",
-     "9. Levron Williams (Indiana) 3,095",
-     "10. Devin Mockobee (Purdue) 2,983"
+     "1. David Bell (PUR 2021) 1,286",
+     "2. Rondale Moore (PUR 2018) 1,258",
+     "3. David Bell (PUR 2019) 1,035",
+     "4. Omar Cooper Jr. (IU 2025) 961",
+     "5. DeAngelo Yancey (PUR 2016) 951",
+     "6. Ty Fryfogle (IU 2020) 726"
+    ]
+   }
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": false,
+   "prompt": "In Purdue–Indiana games since 2005, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Brycen Hopkins (PUR) vs. Indiana",
+    "value": 155,
+    "school": "PUR"
+   },
+   "B": {
+    "label": "Andrew Means (IU) vs. Purdue",
+    "value": 114,
+    "school": "IU"
+   },
+   "unit": "receiving yds",
+   "note": "Brycen Hopkins: 155 in 2 games. Andrew Means: 114 in 3 games.",
+   "sig": "vsrecAndrew Means,Brycen Hopkins",
+   "more": {
+    "title": "Top receiving yards against the other school since 2005",
+    "rows": [
+     "1. James Hardy (IU) 276 in 3 games",
+     "2. DeAngelo Yancey (PUR) 264 in 3 games",
+     "3. Nick Westbrook (IU) 257 in 3 games",
+     "4. Danny Anthrop (PUR) 247 in 2 games",
+     "5. Greg Orton (PUR) 235 in 4 games",
+     "6. Keith Smith (PUR) 221 in 2 games"
     ]
    }
   }

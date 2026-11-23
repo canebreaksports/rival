@@ -78,6 +78,13 @@ const notablePair = (c: Ctx, x: PlayerSeason, y: PlayerSeason, k: string) => not
 const allVerified = (...ps: PlayerSeason[]) => ps.every(p => p.verified);
 const tag = (c: Ctx, p: PlayerSeason) => `${p.name} (${pos(c, p)}) · ${p.year === "career" ? "career, " + p.school : p.year + " " + p.school}`;
 
+/** Comparison rows (owner, Nov 2026: "compare only notable players or seasons"): a notable player (lib/notable.ts),
+ *  or a big row on its own: a season with 1,000+ yards or 10+ TDs, a career with 2,500+ yards or 25+ TDs. */
+const bigRow = (p: PlayerSeason) => p.year === "career"
+  ? Math.max(p.rush ?? 0, p.rec ?? 0, p.scrim ?? 0) >= 2500 || Math.max(p.rushTD ?? 0, p.recTD ?? 0) >= 25
+  : Math.max(p.rush ?? 0, p.rec ?? 0, p.scrim ?? 0) >= 1000 || Math.max(p.rushTD ?? 0, p.recTD ?? 0) >= 10;
+const cmpPool = (c: Ctx) => c.pool.filter(p => c.notable(p.name, p.school) || bigRow(p));
+
 /** Values big enough to be worth asking about (no rankings of 0- and 1-TD seasons). */
 export function notable(k: string, v: number, career: boolean) {
   if (/TD$/.test(k)) return v >= (career ? 5 : 3);
@@ -91,7 +98,7 @@ function groups(pool: PlayerSeason[]) {
 }
 
 export function genRank(c: Ctx): Question | null {
-  const g = groups(c.pool);
+  const g = groups(cmpPool(c));
   const keys = Object.keys(g).filter(k => new Set(g[k].map(p => p[k.split("|")[1] as GenStat])).size >= 4);
   if (!keys.length) return null;
   const key = pick(c.rng, keys), [sc, k] = key.split("|") as ["car" | "sea", GenStat];
@@ -160,7 +167,7 @@ export function genPropPair(c: Ctx, teams: SchoolKey[]): Question[] | null {
 }
 
 export function genH2H(c: Ctx, teams: SchoolKey[]): Question | null {
-  const g = groups(c.pool), keys = Object.keys(g).filter(k => g[k].length >= 2);
+  const g = groups(cmpPool(c)), keys = Object.keys(g).filter(k => g[k].length >= 2);
   if (!keys.length) return null;
   for (let t = 0; t < 12; t++) {
     const key = pick(c.rng, keys), [sc, k] = key.split("|") as ["car" | "sea", GenStat], arr = shuffle(c.rng, g[key]);
@@ -184,7 +191,7 @@ function facts(c: Ctx, unit: "TD" | "yds"): Fact[] {
   const add = (p: PlayerSeason, what: string, value: number | undefined, kind: string) => {
     if (value != null && notable(unit === "TD" ? "xTD" : "x", value, p.year === "career")) out.push({ p, what, value, kind });
   };
-  for (const p of c.pool) {
+  for (const p of cmpPool(c)) {
     const when = p.year === "career" ? "career" : String(p.year);
     if (unit === "TD") {
       if (p.year === "career" && p.rushTD != null && p.recTD != null) add(p, "career total TDs (rushing + receiving)", p.rushTD + p.recTD, "car-tot");
@@ -249,7 +256,7 @@ function trapNote(c: Ctx, recs: PlayerSeason[], k: PeakStat) {
 
 export function genTrapRank(c: Ctx): Question | null {
   for (const k of shuffle(c.rng, PEAK_STATS)) {
-    const sea = c.pool.filter(p => p.year !== "career" && p[k] != null && notable(k, p[k]!, false)), offs = shuffle(c.rng, sea.filter(p => isOff(c, p, k)));
+    const sea = c.pool.filter(p => p.year !== "career" && p[k] != null && notable(k, p[k]!, false) && c.notable(p.name, p.school)), offs = shuffle(c.rng, sea.filter(p => isOff(c, p, k)));
     if (offs.length < 2) continue;
     const picks: PlayerSeason[] = [], names = new Set<string>(), vals = new Set<number>();
     const add = (p: PlayerSeason) => { if (picks.length < 4 && !names.has(p.name) && !vals.has(p[k]!)) { picks.push(p); names.add(p.name); vals.add(p[k]!) } };
@@ -313,6 +320,7 @@ export function genUpset(c: Ctx): Question | null {
     if (recv && ps === "QB") continue;                       // a QB star on receiving stats
     // averages only between real samples: both players 100+ carries (owner's rule: no small sample vs large)
     if (k === "ypc" && ((o.att ?? 0) < 100 || (s.att ?? 0) < 100)) continue;
+    if (k === "recN" ? vo < 50 : k !== "ypc" && !notable(k, vo, !k.startsWith("peak"))) continue; // no "1 TD vs 0" upsets: the winner's number has to mean something
     cands.push({ k, s, o, vs, vo, w: ps !== po ? 3 : 2 }); // cross-position pairs weighted highest
   }
   if (!cands.length) return null;
@@ -362,7 +370,7 @@ export function genDuel(c: Ctx, teams: SchoolKey[]): Question | null {
   if (teams.length < 2) return null;
   const [ta, tb] = teams, cands: [PlayerSeason, PlayerSeason, "rush" | "rec"][] = [];
   for (const k of ["rush", "rec"] as const) {
-    const sea = c.pool.filter(p => p.year !== "career" && (p[k] ?? 0) >= 300 && p[DUEL[k].td] != null);
+    const sea = cmpPool(c).filter(p => p.year !== "career" && (p[k] ?? 0) >= 300 && p[DUEL[k].td] != null);
     for (const a of sea) if (a.school === ta) for (const b of sea)
       if (b.school === tb && b.year === a.year && clear(k, a[k]!, b[k]!, isApprox(a) || isApprox(b), notablePair(c, a, b, k))) cands.push([a, b, k]);
   }

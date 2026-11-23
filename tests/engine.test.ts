@@ -171,25 +171,11 @@ describe("pitted mode", () => {
     }
     expect(pairs).toBeGreaterThan(0);
   });
-  it("rivalry questions come from games between exactly these two schools", () => {
-    let seen = 0;
-    for (let i = 0; i < 200; i++) for (const [a, b] of [["LSU", "TENN"], ["UGA", "SC"], ["AUB", "ALA"]]) for (const q of buildRound(DATA, a, b, mulberry32(i), VERIFIED)) {
-      if (q.type === "moment" && q.game && q.sig.startsWith("gm")) { seen++; expect(new Set([q.game.winner, q.game.loser])).toEqual(new Set([a, b])); expect(q.game.ws).toBeGreaterThan(q.game.ls) }
+  it("no random single-game higher/lower or total-yards difference questions (owner, Nov 2026); series facts stay valid", () => {
+    for (let i = 0; i < 100; i++) for (const [a, b] of [["LSU", "TENN"], ["UGA", "SC"], ["AUB", "ALA"]]) for (const q of buildRound(DATA, a, b, mulberry32(i), VERIFIED)) {
+      expect(q.sig.startsWith("gm") || q.sig.startsWith("td")).toBe(false);
       if (q.type === "moment" && q.sig.startsWith("sc")) expect(validateQuestion(q)).toEqual([]);
     }
-    expect(seen).toBeGreaterThan(0);
-  });
-  it("team-stat multiple choice: 4 distinct options at least 20 yards apart, one true", () => {
-    let seen = 0;
-    for (let i = 0; i < 200; i++) for (const [a, b] of [["AUB", "ALA"], ["UGA", "SC"], ["LSU", "ARK"]]) for (const q of buildRound(DATA, a, b, mulberry32(i), VERIFIED)) {
-      if (q.type !== "mc" || !q.sig.startsWith("td")) continue;
-      seen++;
-      expect(validateQuestion(q)).toEqual([]);
-      const v = q.options.map(o => (o.startsWith(DATA.schools.find(s => s.key === a)!.name + " ") ? 1 : -1) * Number(o.replace(/[^\d]/g, "")));
-      v.forEach((x, i) => v.forEach((y, j) => { if (i < j) expect(Math.abs(x - y)).toBeGreaterThanOrEqual(20) }));
-      expect(q.game).toBeDefined();
-    }
-    expect(seen).toBeGreaterThan(0);
   });
   it("team packs never appear in matchups", () => {
     const key = (x: object) => JSON.stringify(["prompt", "line", "reveal", "items", "A"].map(k => (x as Record<string, unknown>)[k]));
@@ -322,5 +308,16 @@ describe("names and scoring", () => {
     const tw = programQs(DATA, "UGA", "OU", VERIFIED).find(q => q.type === "prog" && q.prompt.includes("total games"));
     expect(tw && tw.type === "prog" && tw.values).toEqual([271, 271]);
     expect(correctAnswer(tw!)).toBe("t");
+  });
+});
+
+import { genStreakMC as gS, genMarginMC as gM } from "@/lib/rivalry-gen";
+describe("series multiple choice: longest streak, largest margin", () => {
+  it("Michigan–Ohio State: Ohio State's 8 straight (2012–2019); largest margin 35 (42–7 in 2008); four distinct options", () => {
+    const pr = DATA.rivalry!.pairs[pairKey("MICH", "OSU")];
+    const s = gS(pr, "MICH", "OSU", mulberry32(1)), m = gM(pr, "MICH", "OSU", mulberry32(1));
+    expect(s && s.type === "mc" && s.options[s.answer]).toBe("8 straight");
+    expect(m && m.type === "mc" && m.options[m.answer]).toBe("35 points");
+    for (const q of [s, m]) if (q && q.type === "mc") { expect(new Set(q.options).size).toBe(4); expect(validateQuestion(q)).toEqual([]) }
   });
 });

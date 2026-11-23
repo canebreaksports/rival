@@ -6,9 +6,216 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-23T21:12:20.186Z",
- "engine": 22,
+ "generatedAt": "2026-11-23T21:55:20.510Z",
+ "engine": 27,
  "questions": [
+  {
+   "type": "rank",
+   "label": "Rivalry Games",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these single-game receiving performances in Tennessee–Vanderbilt games, highest first.",
+   "items": [
+    {
+     "label": "Trent Sherfield (VAN) · 2015",
+     "value": 85,
+     "school": "VAN"
+    },
+    {
+     "label": "Jauan Jennings (TENN) · 2018",
+     "value": 51,
+     "school": "TENN"
+    },
+    {
+     "label": "Josh Malone (TENN) · 2016",
+     "value": 121,
+     "school": "TENN"
+    },
+    {
+     "label": "Trent Sherfield (VAN) · 2016",
+     "value": 184,
+     "school": "VAN"
+    }
+   ],
+   "sig": "grrecJauan Jennings2018,Josh Malone2016,Trent Sherfield2015,Trent Sherfield2016",
+   "more": {
+    "title": "Top receiving games in this rivalry (box scores)",
+    "rows": [
+     "1. Trent Sherfield (VAN) 2016: 184",
+     "2. Earl Bennett (VAN) 2005: 167",
+     "3. Jordan Matthews (VAN) 2013: 133",
+     "4. Velus Jones Jr. (TENN) 2020: 125",
+     "5. Ramel Keyton (TENN) 2023: 122",
+     "6. Josh Malone (TENN) 2016: 121",
+     "7. Dont'E Thornton (TENN) 2024: 118",
+     "8. Caleb Scott (VAN) 2016: 117"
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "label": "Longest Play",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2012, what was the longest offensive play in a Tennessee–Vanderbilt game?",
+   "options": [
+    "Eric Gray (Tennessee), 2019: run",
+    "Ty Chandler (Tennessee), 2018: run",
+    "Will Sheppard (Vanderbilt), 2023: catch",
+    "Dont'E Thornton (Tennessee), 2024: catch"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    3,
+    1,
+    2
+   ],
+   "reveal": "Eric Gray 2019: 94-yard run · Dont'E Thornton 2024: 86-yard catch · Ty Chandler 2018: 75-yard run · Will Sheppard 2023: 27-yard catch",
+   "sig": "lp2019-11-30",
+   "more": {
+    "title": "Longest plays in Tennessee–Vanderbilt games since 2012",
+    "rows": [
+     "1. Eric Gray (TENN) 2019: 94-yard run",
+     "2. Dont'E Thornton (TENN) 2024: 86-yard catch",
+     "3. Jaylen Wright (TENN) 2022: 83-yard run",
+     "4. Trent Sherfield (VAN) 2016: 76-yard catch",
+     "5. Ty Chandler (TENN) 2018: 75-yard run",
+     "6. Velus Jones Jr. (TENN) 2020: 74-yard catch",
+     "7. Zac Stacy (VAN) 2012: 72-yard catch",
+     "8. Will Sheppard (VAN) 2021: 56-yard catch"
+    ]
+   }
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2022,
+   "stat": "Rushing season",
+   "aSchool": "VAN",
+   "other": "TENN",
+   "aName": "Re'Mahn Davis (RB)",
+   "bName": "Dylan Sampson (RB)",
+   "A": {
+    "big": "926",
+    "sm": "rush yds · 4 TD"
+   },
+   "B": {
+    "big": "397",
+    "sm": "rush yds · 6 TD"
+   },
+   "flip": true,
+   "sig": "drush2022Dylan Sampson,Re'Mahn Davis"
+  },
+  {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Tennessee–Vanderbilt series?",
+   "options": [
+    "56 points",
+    "46 points",
+    "62 points",
+    "68 points"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    3,
+    1,
+    0
+   ],
+   "reveal": "56 points: Tennessee 56, Vanderbilt 0 (Nov 26, 2022).",
+   "sig": "mm56"
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "TENN",
+   "b": "VAN",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Tennessee and Vanderbilt's combined top 10 single-season receiving yards (through 2025): which school has more seasons on the list?",
+   "A": [
+    {
+     "name": "Robert Meachem",
+     "yards": 1298,
+     "season": 2006,
+     "label": "2006: 1,298",
+     "profile": "2006 season, 1,298 receiving yards · No. 3 on the combined list"
+    },
+    {
+     "name": "Jalin Hyatt",
+     "yards": 1267,
+     "season": 2022,
+     "label": "2022: 1,267",
+     "profile": "2022 season, 1,267 receiving yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Marcus Nash",
+     "yards": 1170,
+     "season": 1997,
+     "label": "1997: 1,170",
+     "profile": "1997 season, 1,170 receiving yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Justin Hunter",
+     "yards": 1083,
+     "season": 2012,
+     "label": "2012: 1,083",
+     "profile": "2012 season, 1,083 receiving yards · No. 9 on the combined list"
+    },
+    {
+     "name": "Cedric Tillman",
+     "yards": 1081,
+     "season": 2021,
+     "label": "2021: 1,081",
+     "profile": "2021 season, 1,081 receiving yards · No. 10 on the combined list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Jordan Matthews",
+     "yards": 1477,
+     "season": 2013,
+     "label": "2013: 1,477",
+     "profile": "2013 season, 1,477 receiving yards · No. 1 on the combined list"
+    },
+    {
+     "name": "Jordan Matthews",
+     "yards": 1323,
+     "season": 2012,
+     "label": "2012: 1,323",
+     "profile": "2012 season, 1,323 receiving yards · No. 2 on the combined list"
+    },
+    {
+     "name": "Boo Mitchell",
+     "yards": 1213,
+     "season": 1988,
+     "label": "1988: 1,213",
+     "profile": "1988 season, 1,213 receiving yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Earl Bennett",
+     "yards": 1146,
+     "season": 2006,
+     "label": "2006: 1,146",
+     "profile": "2006 season, 1,146 receiving yards · No. 7 on the combined list"
+    },
+    {
+     "name": "Bob Goodridge",
+     "yards": 1114,
+     "season": 1967,
+     "label": "1967: 1,114",
+     "profile": "1967 season, 1,114 receiving yards · No. 8 on the combined list"
+    }
+   ],
+   "sig": "fsrec"
+  },
   {
    "type": "count",
    "label": "Since 2022",
@@ -37,278 +244,25 @@
    "bonus": "names"
   },
   {
-   "type": "rank",
+   "type": "h2h",
    "label": "Fresh Mix",
-   "trap": true,
+   "upset": true,
    "verified": true,
-   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
-   "items": [
-    {
-     "label": "Arian Foster (RB) · 2008 TENN",
-     "value": 736,
-     "school": "TENN"
-    },
-    {
-     "label": "Ke'Shawn Vaughn (RB) · 2019 VAN",
-     "value": 1298,
-     "school": "VAN"
-    },
-    {
-     "label": "Re'Mahn Davis (RB) · 2022 VAN",
-     "value": 1057,
-     "school": "VAN"
-    },
-    {
-     "label": "Ralph Webb (RB) · 2016 VAN",
-     "value": 1449,
-     "school": "VAN"
-    }
-   ],
-   "unit": "yds",
-   "note": "🪤 Trap: Arian Foster's best year was 2007 (1,533), not 2008; Ke'Shawn Vaughn's best year was 2018 (1,414), not 2019.",
-   "sig": "trscrimArian Foster2008,Ke'Shawn Vaughn2019,Ralph Webb2016,Re'Mahn Davis2022",
-   "more": {
-    "title": "Top 8: single-season yards from scrimmage (TENN, VAN players in our data)",
-    "rows": [
-     "1. Jamal Lewis (TENN 1997) 1,630",
-     "2. Dylan Sampson (TENN 2024) 1,626",
-     "3. Arian Foster (TENN 2007) 1,533",
-     "4. Ralph Webb (VAN 2016) 1,449",
-     "5. Ke'Shawn Vaughn (VAN 2018) 1,414",
-     "6. Ralph Webb (VAN 2015) 1,340",
-     "7. Ke'Shawn Vaughn (VAN 2019) 1,298",
-     "8. Re'Mahn Davis (VAN 2022) 1,057"
-    ]
-   }
-  },
-  {
-   "type": "count",
-   "label": "NFL Draft",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From the 2015 draft through 2026, which school had more linebackers taken in the first three rounds?",
-   "A": [],
-   "B": [
-    {
-     "name": "Zach Cunningham",
-     "yards": 57,
-     "season": 2017,
-     "label": "No. 57 pick",
-     "profile": "Inside Linebacker · 2017 draft, round 2"
-    },
-    {
-     "name": "Oren Burks",
-     "yards": 88,
-     "season": 2018,
-     "label": "No. 88 pick",
-     "profile": "Outside Linebacker · 2018 draft, round 3"
-    }
-   ],
-   "sig": "dcr32015lb",
-   "bonus": "names"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Jalin Hyatt (TENN WR) · career receiving TDs",
-     "value": 19,
-     "school": "TENN"
-    },
-    {
-     "label": "Kalija Lipscomb (VAN WR) · 2017 receiving TDs",
-     "value": 8,
-     "school": "VAN"
-    },
-    {
-     "label": "Ralph Webb (VAN RB) · 2015 rushing TDs",
-     "value": 5,
-     "school": "VAN"
-    },
-    {
-     "label": "Joshua Dobbs (TENN QB) · career rushing TDs",
-     "value": 32,
-     "school": "TENN"
-    }
-   ],
-   "sig": "mxTDJalin Hyattcareer receiving TDs,Joshua Dobbscareer rushing TDs,Kalija Lipscomb2017 receiving TDs,Ralph Webb2015 rushing TDs"
-  },
-  {
-   "type": "count",
-   "label": "Fill In",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "Since 2012, which school has more players in the top 5 for yards from scrimmage against the other?",
-   "A": [
-    {
-     "name": "Jaylen Wright",
-     "yards": 356,
-     "label": "356 in 3 games",
-     "profile": "356 yards from scrimmage against Vanderbilt in 3 games · No. 2"
-    },
-    {
-     "name": "Dylan Sampson",
-     "yards": 352,
-     "label": "352 in 3 games",
-     "profile": "352 yards from scrimmage against Vanderbilt in 3 games · No. 4"
-    },
-    {
-     "name": "Eric Gray",
-     "yards": 329,
-     "label": "329 in 2 games",
-     "profile": "329 yards from scrimmage against Vanderbilt in 2 games · No. 5"
-    }
-   ],
-   "B": [
-    {
-     "name": "Ralph Webb",
-     "yards": 506,
-     "label": "506 in 4 games",
-     "profile": "506 yards from scrimmage against Tennessee in 4 games · No. 1"
-    },
-    {
-     "name": "Trent Sherfield",
-     "yards": 354,
-     "label": "354 in 3 games",
-     "profile": "354 yards from scrimmage against Tennessee in 3 games · No. 3"
-    }
-   ],
-   "sig": "fvscrim"
-  },
-  {
-   "type": "moment",
-   "label": "Longest Play",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 25, 2023",
-    "winner": "TENN",
-    "loser": "VAN",
-    "ws": 48,
-    "ls": 24,
-    "venue": "Neyland Stadium"
+   "flip": true,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Jared Pinkney (VAN TE)",
+    "value": 14,
+    "school": "VAN"
    },
-   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
-   "line": "47.5 yards",
-   "answer": "over",
-   "reveal": "More. The longest was Ramel Keyton's 56-yard catch for Tennessee; Vanderbilt's longest was 27 yards (Will Sheppard).",
-   "check": {
-    "value": 56,
-    "line": 47.5
+   "B": {
+    "label": "Jamal Lewis (TENN RB)",
+    "value": 4,
+    "school": "TENN"
    },
-   "sig": "lg2023-11-25"
-  },
-  {
-   "type": "moment",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, did Tennessee beat Vanderbilt more or fewer than",
-   "line": "17.5 times",
-   "answer": "over",
-   "reveal": "More. Tennessee went 19–7 against Vanderbilt from 2000 to 2025 (26 meetings, on-field results).",
-   "check": {
-    "value": 19,
-    "line": 17.5
-   },
-   "sig": "scTENNVAN"
-  },
-  {
-   "type": "count",
-   "label": "Fill In",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "Tennessee and Vanderbilt's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
-   "A": [
-    {
-     "name": "Dylan Sampson",
-     "yards": 1491,
-     "season": 2024,
-     "label": "2024: 1,491",
-     "profile": "2024 season, 1,491 rushing yards · No. 1 on the combined list"
-    },
-    {
-     "name": "Travis Stephens",
-     "yards": 1464,
-     "season": 2001,
-     "label": "2001: 1,464",
-     "profile": "2001 season, 1,464 rushing yards · No. 2 on the combined list"
-    },
-    {
-     "name": "Jay Graham",
-     "yards": 1438,
-     "season": 1995,
-     "label": "1995: 1,438",
-     "profile": "1995 season, 1,438 rushing yards · No. 3 on the combined list"
-    },
-    {
-     "name": "Jamal Lewis",
-     "yards": 1364,
-     "season": 1997,
-     "label": "1997: 1,364",
-     "profile": "1997 season, 1,364 rushing yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Montario Hardesty",
-     "yards": 1345,
-     "season": 2009,
-     "label": "2009: 1,345",
-     "profile": "2009 season, 1,345 rushing yards · No. 6 on the combined list"
-    },
-    {
-     "name": "Travis Henry",
-     "yards": 1314,
-     "season": 2000,
-     "label": "2000: 1,314",
-     "profile": "2000 season, 1,314 rushing yards · No. 7 on the combined list"
-    },
-    {
-     "name": "Johnnie Jones",
-     "yards": 1290,
-     "season": 1984,
-     "label": "1984: 1,290",
-     "profile": "1984 season, 1,290 rushing yards · No. 8 on the combined list"
-    },
-    {
-     "name": "Jalen Hurd",
-     "yards": 1288,
-     "season": 2015,
-     "label": "2015: 1,288",
-     "profile": "2015 season, 1,288 rushing yards · No. 9 on the combined list"
-    },
-    {
-     "name": "Tony Thompson",
-     "yards": 1261,
-     "season": 1990,
-     "label": "1990: 1,261",
-     "profile": "1990 season, 1,261 rushing yards · No. 10 on the combined list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Ralph Webb",
-     "yards": 1384,
-     "season": 2016,
-     "label": "2016: 1,384",
-     "profile": "2016 season, 1,384 rushing yards · No. 4 on the combined list"
-    }
-   ],
-   "sig": "fsrush"
+   "unit": "",
+   "note": "🚨 Upset: Jared Pinkney 14 vs. Jamal Lewis 4.",
+   "sig": "urecTDJamal LewisJared Pinkney"
   },
   {
    "type": "rank",
@@ -357,25 +311,61 @@
    }
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
+   "type": "mc",
+   "label": "Awards",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
-   "A": {
-    "label": "Jared Pinkney (VAN TE)",
-    "value": 14,
-    "school": "VAN"
-   },
-   "B": {
-    "label": "Jamal Lewis (TENN RB)",
-    "value": 4,
-    "school": "TENN"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Jared Pinkney 14 vs. Jamal Lewis 4.",
-   "sig": "urecTDJamal LewisJared Pinkney"
+   "pitted": true,
+   "prompt": "Which of these players won the Biletnikoff Award, given to the nation's best receiver?",
+   "options": [
+    "Jalin Hyatt (Tennessee)",
+    "Kalija Lipscomb (Vanderbilt)",
+    "Jared Pinkney (Vanderbilt)",
+    "Trent Sherfield (Vanderbilt)"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    2,
+    0,
+    1
+   ],
+   "reveal": "Jalin Hyatt (Tennessee) won the Biletnikoff Award in 2022.",
+   "sig": "ambiletnikoff2022",
+   "more": {
+    "title": "Every Tennessee and Vanderbilt winner of the Biletnikoff Award",
+    "rows": [
+     "2022: Jalin Hyatt (TENN)"
+    ]
+   }
+  },
+  {
+   "type": "count",
+   "label": "NFL Draft",
+   "a": "TENN",
+   "b": "VAN",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From the 2015 draft through 2026, which school had more linebackers taken in the first three rounds?",
+   "A": [],
+   "B": [
+    {
+     "name": "Zach Cunningham",
+     "yards": 57,
+     "season": 2017,
+     "label": "No. 57 pick",
+     "profile": "Inside Linebacker · 2017 draft, round 2"
+    },
+    {
+     "name": "Oren Burks",
+     "yards": 88,
+     "season": 2018,
+     "label": "No. 88 pick",
+     "profile": "Outside Linebacker · 2018 draft, round 3"
+    }
+   ],
+   "sig": "dcr32015lb",
+   "bonus": "names"
   }
  ]
 }

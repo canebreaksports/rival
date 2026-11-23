@@ -190,3 +190,57 @@ export function genLongestGameMoment(pr: RivalryPair, rng: Rng): Question | null
     check: { value: v, line }, sig: "lg" + g.date,
   };
 }
+
+// ---- series multiple choice (owner, Nov 2026): longest winning streak, largest margin of victory, four options ----
+const seriesGames = (pr: RivalryPair) => pr.games.filter(g => g.season >= 2000 && g.season <= 2025 && g.hp !== g.ap).sort((x, y) => x.date.localeCompare(y.date));
+const fourNumbers = (rng: Rng, n: number, steps: number[]) => {
+  const opts = [n];
+  for (const d of shuffle(rng, steps)) { const v = n + d; if (v > 0 && !opts.includes(v) && opts.length < 4) opts.push(v) }
+  return opts.length === 4 ? opts : null;
+};
+
+/** Longest winning streak by either school in the series, 2000–2025 (consecutive meetings). */
+export function genStreakMC(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
+  const gs = seriesGames(pr);
+  if (gs.length < 8) return null;
+  let best = { k: "", n: 0, from: 0, to: 0 }, cur = { k: "", n: 0, from: 0, to: 0 };
+  for (const g of gs) {
+    const w = winner(g);
+    cur = w === cur.k ? { ...cur, n: cur.n + 1, to: g.season } : { k: w, n: 1, from: g.season, to: g.season };
+    if (cur.n > best.n) best = { ...cur };
+  }
+  if ([...runs(gs)].filter(r => r.n === best.n).length > 1) return null; // two streaks tie for longest: skip (ambiguous reveal)
+  if (best.n < 3) return null;
+  const opts = fourNumbers(rng, best.n, best.n <= 4 ? [-1, 1, 2, 3] : [-3, -2, -1, 1, 2, 3]);
+  if (!opts) return null;
+  const ongoing = best.to === gs[gs.length - 1].season;
+  return {
+    type: "mc", label: "Series History", verified: SRC_VERIFIED, pitted: true,
+    prompt: `From 2000 through 2025, what's the longest winning streak by either school in the ${name(a)}–${name(b)} series?`,
+    options: opts.map(n => `${n} straight`), answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
+    reveal: `${best.n} straight: ${name(best.k)} won every meeting from ${best.from} through ${best.to}${ongoing ? " (still going after 2025)" : ""}.`,
+    sig: "ms" + best.k + best.from,
+  };
+}
+function* runs(gs: RivalryGame[]) {
+  let cur = { k: "", n: 0 };
+  for (const g of gs) { const w = winner(g); if (w === cur.k) cur.n++; else { if (cur.n) yield cur; cur = { k: w, n: 1 } } }
+  if (cur.n) yield cur;
+}
+
+/** Largest margin of victory in the series, 2000–2025. */
+export function genMarginMC(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
+  const gs = seriesGames(pr);
+  if (gs.length < 8) return null;
+  const m = (g: RivalryGame) => Math.abs(g.hp - g.ap), top = Math.max(...gs.map(m)), at = gs.filter(g => m(g) === top);
+  const opts = fourNumbers(rng, top, [-14, -10, -7, 6, 9, 12]);
+  if (!opts) return null;
+  const g = at[at.length - 1], w = winner(g), l = loser(g), ws = Math.max(g.hp, g.ap), ls = Math.min(g.hp, g.ap);
+  return {
+    type: "mc", label: "Series History", verified: SRC_VERIFIED, pitted: true,
+    prompt: `From 2000 through 2025, what was the largest margin of victory in the ${name(a)}–${name(b)} series?`,
+    options: opts.map(n => `${n} points`), answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
+    reveal: `${top} points: ${name(w)} ${ws}, ${name(l)} ${ls} (${longDate(g.date)})${at.length > 1 ? `; also ${at.slice(0, -1).map(x => `${name(winner(x))} in ${x.season}`).join(", ")}` : ""}.`,
+    sig: "mm" + top,
+  };
+}

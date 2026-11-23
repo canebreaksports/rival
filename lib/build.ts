@@ -4,15 +4,15 @@ import { pick, seededRng, shuffle, type Rng } from "./rng";
 import { genCareerRecRank } from "./notable-gen";
 import overrides from "@/data/overrides.json";
 import { genWalkoffCount, genWalkoffMC } from "./walkoff-gen";
-import { genTopSeasons, genTopVs, genTopCareer, type CareerLists } from "./fillin-gen";
+import { genTopSeasons, genTopCareer, type CareerLists } from "./fillin-gen";
 import { PROGRAM_STATS, SCHOOL, programValue } from "./data";
 import { genGameCount, genSeasonCount, genVsLeaderMC } from "./trend-gen";
 import { genAwardCount, genAwardMC, genDraftCount, genDraftMC, genHeismanCount, genHeismanMC } from "./honors-gen";
-import { genGameMoment, genGameRank, genLongestGameMoment, genLongestSeriesMC, genSeriesCount, genTeamDiffMC, genVsH2H, pairKey } from "./rivalry-gen";
+import { genGameMoment, genGameRank, genLongestGameMoment, genLongestSeriesMC, genSeriesCount, genTeamDiffMC, genVsH2H, pairKey, genStreakMC, genMarginMC } from "./rivalry-gen";
 import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 22; // v22: two fill-ins per set (+ combined career top 10), tighter game lines, rivalry week non-SEC schools; // v21: notable also = school top-10 single seasons + owner list (McCluster); // v20: Name Them by default, years only for walk-offs; bonus answers hidden until the bonus ends; // v19: fill-in questions (combined top 10 seasons, top 5 vs each other), ⓘ award explainers; // v18: higher/lower only on notable players (lib/notable.ts); // v17: 10 questions in every set (bigger generated pool, second fill pass); // v16: walk-offs (final play or OT), a record-book career ranking every week; v15: Notables Rank It; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
+export const ENGINE_VERSION = 27; // v27: series MC (longest streak / largest margin) every week, mc cap 3; // v26: no total-yards difference MC; // v25: no random single-game higher/lower; upsets need a real number; // v24: comparisons only on notable players or big seasons; // v23: no 'top N against each other' fill-ins; // v22: two fill-ins per set (+ combined career top 10), tighter game lines, rivalry week non-SEC schools; // v21: notable also = school top-10 single seasons + owner list (McCluster); // v20: Name Them by default, years only for walk-offs; bonus answers hidden until the bonus ends; // v19: fill-in questions (combined top 10 seasons, top 5 vs each other), ⓘ award explainers; // v18: higher/lower only on notable players (lib/notable.ts); // v17: 10 questions in every set (bigger generated pool, second fill pass); // v16: walk-offs (final play or OT), a record-book career ranking every week; v15: Notables Rank It; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean; skip?: Set<string> } // skip: owner-rejected question signatures
@@ -120,7 +120,9 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
     const [a, b] = teams, from = data.rivalry!.boxFrom;
     const gm = () => genGameMoment(rv, rng, c.notable), vs = () => genVsH2H(rv, a, b, rng, from), gr = () => genGameRank(rv, a, b, rng);
     const td = () => genTeamDiffMC(rv, rng); // (single-game Rank It removed at the owner's request, Nov 2026)
-    gens.push(gm, gm, gm, gm, vs, vs, vs, gr, gr, td, td, () => genSeriesCount(rv, a, b, rng),
+    void gm; // random single-game higher/lower dropped at the owner's request (Nov 2026)
+    void td; // "difference in total yards" multiple choice dropped: too obscure (owner, Nov 2026)
+    gens.push(vs, vs, vs, gr, gr, () => genSeriesCount(rv, a, b, rng),
       () => genLongestSeriesMC(rv, a, b, rng), () => genLongestGameMoment(rv, rng));
   }
   if (teams.length > 1) { // honors multiple choice: drafted highest, award winner, best Heisman finish
@@ -175,13 +177,20 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
     const q = cr ? genCareerRecRank(cr, teams[0], teams[1], rng, rush) ?? (data.careerRec ? genCareerRecRank(data.careerRec, teams[0], teams[1], rng) : null) : null;
     if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q) }
   }
-  // Two fill-ins every week (owner, Nov 2026: "we want more fill in questions"): combined top 10 seasons, combined top 10
-  // careers, or the top 5 against each other
+  // Series multiple choice every week (owner, Nov 2026): longest winning streak or largest margin of victory, four options
   if (teams.length > 1) {
-    const rvF = data.rivalry?.pairs[pairKey(teams[0], teams[1])], [ta, tb] = teams;
+    const pr = data.rivalry?.pairs[pairKey(teams[0], teams[1])];
+    if (pr) for (const f of shuffle(rng, [() => genStreakMC(pr, teams[0], teams[1], rng), () => genMarginMC(pr, teams[0], teams[1], rng)])) {
+      const q = f(); if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q); break }
+    }
+  }
+  // Two fill-ins every week (owner, Nov 2026: "we want more fill in questions"): combined top 10 seasons and combined
+  // top 10 careers. ("Top N against each other" was dropped at the owner's request.)
+  if (teams.length > 1) {
+    const [ta, tb] = teams;
     const fam = [() => (data.seasonRecs ? genTopSeasons(data.seasonRecs, ta, tb, rng) : null),
       () => (data.careerRec ? genTopCareer(data.career as unknown as CareerLists, data.careerRec as unknown as CareerLists, ta, tb, rng) : null),
-      () => (rvF ? genTopVs(rvF, ta, tb, rng) : null)];
+      () => (data.seasonRecs ? genTopSeasons(data.seasonRecs, ta, tb, rng) : null)]; // a second season list (the other stat) if the first was used
     let got = 0;
     for (const f of shuffle(rng, fam)) { if (got >= 2) break; const q = f(); if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q); got++ } }
   }
@@ -201,7 +210,7 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
 /** Per-set caps (spec §2). Trap and upset limits apply across generated and curated questions. */
 export function caps(progCap: number, pitted = false): Record<QType, number> {
   // Pitted sets lean on cross-school formats, so they get more room (owner's call, Nov 2026).
-  return pitted ? { moment: 4, prog: progCap, h2h: 4, rank: 3, count: 4, duel: 3, cross: 1, mc: 2 }
+  return pitted ? { moment: 4, prog: progCap, h2h: 4, rank: 3, count: 4, duel: 3, cross: 1, mc: 3 }
     : { moment: 4, prog: progCap, h2h: 3, rank: 2, count: 1, duel: 2, cross: 1, mc: 2 };
 }
 
@@ -230,7 +239,7 @@ export function involvesBoth(q: Question, a: SchoolKey, b: SchoolKey): boolean {
 
 /** Generator family of a question, from its signature prefix (e.g. "vs" = totals against each other). */
 export const questionKind = (q: Question) =>
-  q.sig.match(/^(gm|vs|tv|ts|tg|dc|dm|ac|am|hc|hm|sc|td|gr|lp|lg|mx|nx|nr|wo|wm|fs|fv|fc|pp|tr|tp|d|u|h|r|c|g|k|p)/)?.[1] ?? q.sig.slice(0, 2);
+  q.sig.match(/^(gm|vs|tv|ts|tg|dc|dm|ac|am|hc|hm|sc|td|gr|lp|lg|mx|nx|nr|wo|wm|fs|fv|fc|ms|mm|pp|tr|tp|d|u|h|r|c|g|k|p)/)?.[1] ?? q.sig.slice(0, 2);
 // may appear twice in a set: program pit, curated items, game moments, plain head-to-heads
 const REPEATABLE = new Set(["g", "gm", "h"]);
 const CURATED_MAX = 3; // hand-written questions per set

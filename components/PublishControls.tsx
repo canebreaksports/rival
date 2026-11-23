@@ -146,3 +146,17 @@ export function SetQuestions({ slug, questions }: { slug: string; questions: Que
     </li>)}</ol>
   </>;
 }
+
+/** Copies every needs-work / rejected question with its note, ready to paste to Claude. */
+export function CopyNotes({ sets }: { sets: { slug: string; title: string; qs: { sig: string; prompt: string }[] }[] }) {
+  const { rv } = useContext(Ctx), [done, setDone] = useState(false);
+  const lines: string[] = [];
+  for (const s of sets) s.qs.forEach((q, i) => {
+    const r = rv[`${s.slug}|${q.sig}`];
+    if (r && r.s !== "ok") lines.push(`${r.s === "work" ? "NEEDS WORK" : "REJECT"} · ${s.title} #${i + 1} (id ${q.sig.slice(0, 40)}): ${q.prompt}${r.note ? `\n  Note: ${r.note}` : ""}`);
+  });
+  if (!lines.length) return null;
+  return <button className="btn" style={{ width: "auto", padding: "6px 14px", margin: "6px 0 10px" }}
+    onClick={() => { navigator.clipboard?.writeText(lines.join("\n")).then(() => { setDone(true); setTimeout(() => setDone(false), 2500) }) }}>
+    {done ? "Copied ✓ paste it to Claude" : `📋 Copy ${lines.length} note${lines.length > 1 ? "s" : ""} for Claude`}</button>;
+}

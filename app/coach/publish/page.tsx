@@ -5,7 +5,8 @@ import { weekOf } from "@/lib/review";
 import { SCHOOL } from "@/lib/schools";
 import { Dot } from "@/components/Dot";
 import { REVIEW_FROM } from "@/lib/approvals";
-import { PublishProvider, SetQuestions, SetStatus, StorageNote, WeekApprove } from "@/components/PublishControls";
+import { CopyNotes, PublishProvider, SetQuestions, SetStatus, StorageNote, WeekApprove } from "@/components/PublishControls";
+import { reviewQuestion } from "@/lib/review";
 
 export const metadata: Metadata = { title: "PITTED · Publish", robots: { index: false, follow: false } };
 
@@ -19,6 +20,7 @@ export default function Publish() {
     <p className="note" style={{ marginTop: 0, textAlign: "left" }}>Players only see a matchup after you green-light it. If a set changes after you approve it, it goes back to review.
       Correct answers are in gold. Review each question: ✅ green light, 🛠 needs work (add a note), or ❌ reject. A set can be published once every question is green-lit. Use ▲/▼ to reorder (a new order sends the set back to review). Claude reads your notes and revises.</p>
     <StorageNote />
+    <CopyNotes sets={sets.map(s => ({ slug: s.slug, title: `${SCHOOL[s.game.away].name} @ ${SCHOOL[s.game.home].name}`, qs: s.questions.map(q => ({ sig: q.sig, prompt: reviewQuestion(q).prompt })) }))} />
     <nav className="note" style={{ display: "flex", flexWrap: "wrap", gap: "6px 12px", textAlign: "left" }}>{weeks.flatMap(w => sets.filter(s => weekOf(s.game.date) === w)).map(s =>
       <a key={s.slug} href={`#${s.slug}`} style={{ color: "var(--gold)", whiteSpace: "nowrap" }}>{s.game.away}@{s.game.home}</a>)}</nav>
     {weeks.map(w => { const mine = sets.filter(s => weekOf(s.game.date) === w); const d = new Date(w + "T12:00:00");

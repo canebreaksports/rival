@@ -6,71 +6,53 @@
   "away": "USC",
   "home": "UCLA"
  },
- "generatedAt": "2026-11-23T21:12:20.331Z",
- "engine": 22,
+ "generatedAt": "2026-11-23T21:55:20.633Z",
+ "engine": 27,
  "questions": [
   {
-   "type": "mc",
-   "label": "Rivalry Game",
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
    "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Dec 12, 2020",
-    "winner": "USC",
-    "loser": "UCLA",
-    "ws": 43,
-    "ls": 38,
-    "venue": "Rose Bowl"
-   },
-   "prompt": "What was the difference in rushing yards in USC's 43–38 win over UCLA?",
-   "options": [
-    "UCLA +85 yards",
-    "UCLA +45 yards",
-    "UCLA +5 yards",
-    "UCLA +155 yards"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    1,
-    2,
-    0
-   ],
-   "reveal": "UCLA +85. UCLA had 185 rushing yards, USC 100.",
-   "sig": "td2020-12-12rush"
-  },
-  {
-   "type": "count",
-   "label": "Since 2021",
-   "a": "USC",
-   "b": "UCLA",
-   "threshold": 1000,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2021 through 2025, which school had more 1,000-yard receiving seasons?",
-   "A": [
+   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
+   "items": [
     {
-     "name": "Drake London",
-     "yards": 1084,
-     "season": 2021,
-     "profile": "Wide receiver · 2021: 2 rushing, 1,084 receiving yds"
+     "label": "Paul Perkins (RB) · 2013 UCLA",
+     "value": 869,
+     "school": "UCLA"
     },
     {
-     "name": "Tahj Washington",
-     "yards": 1062,
-     "season": 2023,
-     "profile": "Wide receiver · 2023: 10 rushing, 1,062 receiving yds"
+     "label": "Joshua Kelley (RB) · 2019 UCLA",
+     "value": 1131,
+     "school": "UCLA"
     },
     {
-     "name": "Makai Lemon",
-     "yards": 1156,
-     "season": 2025,
-     "profile": "Wide receiver · 2025: 4 rushing, 1,156 receiving yds"
+     "label": "Zach Charbonnet (RB) · 2021 UCLA",
+     "value": 1334,
+     "school": "UCLA"
+    },
+    {
+     "label": "Jo'quavious Marks (RB) · 2024 USC",
+     "value": 1454,
+     "school": "USC"
     }
    ],
-   "B": [],
-   "sig": "tsrec10002021",
-   "bonus": "names"
+   "unit": "yds",
+   "note": "🪤 Trap: Paul Perkins's best year was 2014 (1,773), not 2013; Joshua Kelley's best year was 2018 (1,436), not 2019; Zach Charbonnet's best year was 2022 (1,680), not 2021.",
+   "sig": "trscrimJo'quavious Marks2024,Joshua Kelley2019,Paul Perkins2013,Zach Charbonnet2021",
+   "more": {
+    "title": "Top 8: single-season yards from scrimmage (UCLA, USC players in our data)",
+    "rows": [
+     "1. Paul Perkins (UCLA 2014) 1,773",
+     "2. Zach Charbonnet (UCLA 2022) 1,680",
+     "3. Paul Perkins (UCLA 2015) 1,585",
+     "4. Jo'quavious Marks (USC 2024) 1,454",
+     "5. Joshua Kelley (UCLA 2018) 1,436",
+     "6. Zach Charbonnet (UCLA 2021) 1,334",
+     "7. Joshua Kelley (UCLA 2019) 1,131",
+     "8. Paul Perkins (UCLA 2013) 869"
+    ]
+   }
   },
   {
    "type": "count",
@@ -106,184 +88,47 @@
    "bonus": "names"
   },
   {
-   "type": "moment",
-   "label": "Rivalry Game",
+   "type": "mc",
+   "label": "Series History",
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Dec 6, 2008",
-    "winner": "USC",
-    "loser": "UCLA",
-    "ws": 28,
-    "ls": 7,
-    "venue": "Rose Bowl"
-   },
-   "prompt": "In this game, did Mark Sanchez (USC) have more or fewer than",
-   "line": "1.5 touchdown passes",
-   "answer": "over",
-   "reveal": "More. Mark Sanchez had 269 passing yards and 2 TD in this game.",
-   "check": {
-    "value": 2,
-    "line": 1.5
-   },
-   "sig": "gm2008-12-06Mark Sanchezpasstd"
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the USC–UCLA series?",
+   "options": [
+    "50 points",
+    "36 points",
+    "56 points",
+    "43 points"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    3,
+    0,
+    2
+   ],
+   "reveal": "50 points: USC 50, UCLA 0 (Nov 26, 2011).",
+   "sig": "mm50"
   },
   {
-   "type": "count",
-   "label": "Fill In",
-   "a": "USC",
-   "b": "UCLA",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "Since 2004, which school has more players in the top 5 for rushing yards against the other?",
-   "A": [
-    {
-     "name": "Reggie Bush",
-     "yards": 464,
-     "label": "464 in 2 games",
-     "profile": "464 rushing yards against UCLA in 2 games · No. 1"
-    },
-    {
-     "name": "Ronald Jones II",
-     "yards": 306,
-     "label": "306 in 3 games",
-     "profile": "306 rushing yards against UCLA in 3 games · No. 4"
-    },
-    {
-     "name": "Vavae Malepeai",
-     "yards": 303,
-     "label": "303 in 5 games",
-     "profile": "303 rushing yards against UCLA in 5 games · No. 5"
-    }
-   ],
-   "B": [
-    {
-     "name": "Johnathan Franklin",
-     "yards": 363,
-     "label": "363 in 4 games",
-     "profile": "363 rushing yards against USC in 4 games · No. 2"
-    },
-    {
-     "name": "Joshua Kelley",
-     "yards": 334,
-     "label": "334 in 2 games",
-     "profile": "334 rushing yards against USC in 2 games · No. 3"
-    }
-   ],
-   "sig": "fvrush"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in USC–UCLA games, highest first.",
-   "items": [
-    {
-     "label": "Zach Charbonnet (UCLA) · 2022",
-     "value": 95,
-     "school": "UCLA"
-    },
-    {
-     "label": "Curtis McNeal (USC) · 2011",
-     "value": 124,
-     "school": "USC"
-    },
-    {
-     "label": "Bolu Olorunfunmi (UCLA) · 2017",
-     "value": 56,
-     "school": "UCLA"
-    },
-    {
-     "label": "LenDale White (USC) · 2005",
-     "value": 154,
-     "school": "USC"
-    }
-   ],
-   "sig": "grrushBolu Olorunfunmi2017,Curtis McNeal2011,LenDale White2005,Zach Charbonnet2022",
-   "more": {
-    "title": "Top rushing games in this rivalry (box scores)",
-    "rows": [
-     "1. Joshua Kelley (UCLA) 2018: 289",
-     "2. Reggie Bush (USC) 2005: 260",
-     "3. Allen Bradford (USC) 2010: 212",
-     "4. Reggie Bush (USC) 2004: 204",
-     "5. Johnathan Franklin (UCLA) 2012: 171",
-     "6. Zach Charbonnet (UCLA) 2021: 167",
-     "7. Curtis McNeal (USC) 2012: 161",
-     "8. LenDale White (USC) 2005: 154"
-    ]
-   }
-  },
-  {
-   "type": "rank",
-   "label": "Notables",
-   "verified": true,
-   "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
-   "items": [
-    {
-     "label": "Ricky Bell (USC)",
-     "value": 3689,
-     "school": "USC"
-    },
-    {
-     "label": "Marcus Allen (USC)",
-     "value": 4810,
-     "school": "USC"
-    },
-    {
-     "label": "Paul Perkins (UCLA)",
-     "value": 3611,
-     "school": "UCLA"
-    },
-    {
-     "label": "Gaston Green (UCLA)",
-     "value": 3731,
-     "school": "UCLA"
-    }
-   ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"USC Trojans football statistical leaders\" career rushing yards table (revision 1387109358), which cites the school record book; fetched 2026-11-17; Wikipedia \"UCLA Bruins football statistical leaders\" career rushing yards table (revision 1385843112), which cites the school record book; fetched 2026-11-17",
-   "sig": "nrrushingGaston Green,Marcus Allen,Paul Perkins,Ricky Bell",
-   "more": {
-    "title": "Career rushing yards, USC and UCLA (school top 10s)",
-    "rows": [
-     "1. Charles White (USC) 6,245",
-     "2. Marcus Allen (USC) 4,810",
-     "3. Johnathan Franklin (UCLA) 4,403",
-     "4. Gaston Green (UCLA) 3,731",
-     "5. Anthony Davis (USC) 3,724",
-     "6. Ricky Bell (USC) 3,689",
-     "7. Ronald Jones II (USC) 3,619",
-     "8. Paul Perkins (UCLA) 3,611",
-     "9. O. J. Simpson (USC) 3,423",
-     "10. Freeman McNeil (UCLA) 3,195"
-    ]
-   }
-  },
-  {
-   "type": "duel",
+   "type": "h2h",
    "label": "Fresh Mix",
+   "upset": true,
    "verified": true,
-   "year": 2022,
-   "stat": "Rushing season",
-   "aSchool": "USC",
-   "other": "UCLA",
-   "aName": "Caleb Williams (QB)",
-   "bName": "Zach Charbonnet (RB)",
+   "flip": true,
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
    "A": {
-    "big": "382",
-    "sm": "rush yds · 10 TD"
+    "label": "Brett Hundley (UCLA QB)",
+    "value": 30,
+    "school": "UCLA"
    },
    "B": {
-    "big": "1,359",
-    "sm": "rush yds · 14 TD"
+    "label": "Caleb Williams (USC QB)",
+    "value": 21,
+    "school": "USC"
    },
-   "flip": true,
-   "sig": "drush2022Caleb Williams,Zach Charbonnet"
+   "unit": "",
+   "note": "🚨 Upset: Brett Hundley 30 vs. Caleb Williams 21.",
+   "sig": "urushTDCaleb WilliamsBrett Hundley"
   },
   {
    "type": "count",
@@ -373,33 +218,217 @@
   },
   {
    "type": "rank",
-   "label": "Fresh Mix",
+   "label": "Notables",
    "verified": true,
+   "pitted": true,
    "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
+   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
    "items": [
     {
-     "label": "Demetric Felton (UCLA RB) · career receiving yards",
-     "value": 958,
-     "school": "UCLA"
-    },
-    {
-     "label": "Stephen Carr (USC RB) · 2017 yards from scrimmage",
-     "value": 551,
+     "label": "Ricky Bell (USC)",
+     "value": 3689,
      "school": "USC"
     },
     {
-     "label": "Greg Dulcich (UCLA TE) · 2021 receiving yards",
-     "value": 725,
+     "label": "Marcus Allen (USC)",
+     "value": 4810,
+     "school": "USC"
+    },
+    {
+     "label": "Paul Perkins (UCLA)",
+     "value": 3611,
      "school": "UCLA"
     },
     {
-     "label": "Caleb Williams (USC QB) · 2022 rushing yards",
-     "value": 382,
-     "school": "USC"
+     "label": "Gaston Green (UCLA)",
+     "value": 3731,
+     "school": "UCLA"
     }
    ],
-   "sig": "mxydsCaleb Williams2022 rushing yards,Demetric Feltoncareer receiving yards,Greg Dulcich2021 receiving yards,Stephen Carr2017 yards from scrimmage"
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"USC Trojans football statistical leaders\" career rushing yards table (revision 1387109358), which cites the school record book; fetched 2026-11-17; Wikipedia \"UCLA Bruins football statistical leaders\" career rushing yards table (revision 1385843112), which cites the school record book; fetched 2026-11-17",
+   "sig": "nrrushingGaston Green,Marcus Allen,Paul Perkins,Ricky Bell",
+   "more": {
+    "title": "Career rushing yards, USC and UCLA (school top 10s)",
+    "rows": [
+     "1. Charles White (USC) 6,245",
+     "2. Marcus Allen (USC) 4,810",
+     "3. Johnathan Franklin (UCLA) 4,403",
+     "4. Gaston Green (UCLA) 3,731",
+     "5. Anthony Davis (USC) 3,724",
+     "6. Ricky Bell (USC) 3,689",
+     "7. Ronald Jones II (USC) 3,619",
+     "8. Paul Perkins (UCLA) 3,611",
+     "9. O. J. Simpson (USC) 3,423",
+     "10. Freeman McNeil (UCLA) 3,195"
+    ]
+   }
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "Rank these seasons by rushing TDs, highest first.",
+   "items": [
+    {
+     "label": "Caleb Williams (QB) · 2023 USC",
+     "value": 11,
+     "school": "USC"
+    },
+    {
+     "label": "Paul Perkins (RB) · 2014 UCLA",
+     "value": 9,
+     "school": "UCLA"
+    },
+    {
+     "label": "Sam Darnold (QB) · 2017 USC",
+     "value": 5,
+     "school": "USC"
+    },
+    {
+     "label": "Paul Perkins (RB) · 2013 UCLA",
+     "value": 6,
+     "school": "UCLA"
+    }
+   ],
+   "unit": "TD",
+   "sig": "rsea|rushTDCaleb Williams2023,Paul Perkins2013,Paul Perkins2014,Sam Darnold2017",
+   "more": {
+    "title": "Top 8: single-season rushing TDs (UCLA, USC players in our data)",
+    "rows": [
+     "1. Paul Perkins (UCLA 2015) 14",
+     "2. Zach Charbonnet (UCLA 2022) 14",
+     "3. Zach Charbonnet (UCLA 2021) 13",
+     "4. Joshua Kelley (UCLA 2018) 12",
+     "5. Joshua Kelley (UCLA 2019) 12",
+     "6. Dorian Thompson-Robinson (UCLA 2022) 12",
+     "7. Caleb Williams (USC 2023) 11",
+     "8. Brett Hundley (UCLA 2013) 11"
+    ]
+   }
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "USC",
+   "b": "UCLA",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "USC and UCLA's combined top 10 career receiving yards: which school has more players on the list?",
+   "A": [
+    {
+     "name": "Marqise Lee",
+     "yards": 3655,
+     "label": "3,655 (2011–2013)",
+     "profile": "3,655 career receiving yards (2011–2013) · No. 1 on the combined list"
+    },
+    {
+     "name": "Johnnie Morton",
+     "yards": 3201,
+     "label": "3,201 (1990–1993)",
+     "profile": "3,201 career receiving yards (1990–1993) · No. 2 on the combined list"
+    },
+    {
+     "name": "Dwayne Jarrett",
+     "yards": 3138,
+     "label": "3,138 (2004–2006)",
+     "profile": "3,138 career receiving yards (2004–2006) · No. 3 on the combined list"
+    },
+    {
+     "name": "Kareem Kelly",
+     "yards": 3104,
+     "label": "3,104 (1999–2002)",
+     "profile": "3,104 career receiving yards (1999–2002) · No. 4 on the combined list"
+    },
+    {
+     "name": "JuJu Smith-Schuster",
+     "yards": 3092,
+     "label": "3,092 (2014–2016)",
+     "profile": "3,092 career receiving yards (2014–2016) · No. 5 on the combined list"
+    },
+    {
+     "name": "Steve Smith",
+     "yards": 3019,
+     "label": "3,019 (2003–2006)",
+     "profile": "3,019 career receiving yards (2003–2006) · No. 7 on the combined list"
+    },
+    {
+     "name": "Keary Colbert",
+     "yards": 2964,
+     "label": "2,964 (2000–2003)",
+     "profile": "2,964 career receiving yards (2000–2003) · No. 8 on the combined list"
+    },
+    {
+     "name": "Robert Woods",
+     "yards": 2930,
+     "label": "2,930 (2010–2012)",
+     "profile": "2,930 career receiving yards (2010–2012) · No. 9 on the combined list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Danny Farmer",
+     "yards": 3020,
+     "label": "3,020 (1996–1999)",
+     "profile": "3,020 career receiving yards (1996–1999) · No. 6 on the combined list"
+    },
+    {
+     "name": "Craig Bragg",
+     "yards": 2845,
+     "label": "2,845 (2001–2004)",
+     "profile": "2,845 career receiving yards (2001–2004) · No. 10 on the combined list"
+    }
+   ],
+   "sig": "fcrec"
+  },
+  {
+   "type": "count",
+   "label": "Since 2021",
+   "a": "USC",
+   "b": "UCLA",
+   "threshold": 1000,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2021 through 2025, which school had more 1,000-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Drake London",
+     "yards": 1084,
+     "season": 2021,
+     "profile": "Wide receiver · 2021: 2 rushing, 1,084 receiving yds"
+    },
+    {
+     "name": "Tahj Washington",
+     "yards": 1062,
+     "season": 2023,
+     "profile": "Wide receiver · 2023: 10 rushing, 1,062 receiving yds"
+    },
+    {
+     "name": "Makai Lemon",
+     "yards": 1156,
+     "season": 2025,
+     "profile": "Wide receiver · 2025: 4 rushing, 1,156 receiving yds"
+    }
+   ],
+   "B": [],
+   "sig": "tsrec10002021",
+   "bonus": "names"
+  },
+  {
+   "type": "moment",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did USC beat UCLA more or fewer than",
+   "line": "19.5 times",
+   "answer": "under",
+   "reveal": "Fewer. USC went 19–7 against UCLA from 2000 to 2025 (26 meetings, on-field results).",
+   "check": {
+    "value": 19,
+    "line": 19.5
+   },
+   "sig": "scUSCUCLA"
   }
  ]
 }
