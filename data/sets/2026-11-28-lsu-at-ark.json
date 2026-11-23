@@ -6,8 +6,8 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-23T22:01:05.971Z",
- "engine": 29,
+ "generatedAt": "2026-11-23T22:04:17.543Z",
+ "engine": 30,
  "questions": [
   {
    "type": "rank",
@@ -424,5 +424,6 @@
     ]
    }
   }
- ]
+ ],
+ "rev": 1
 }

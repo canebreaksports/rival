@@ -140,6 +140,47 @@
       ],
       "B": []
      }
+    },
+    {
+     "type": "mc",
+     "prompt": "In Alabama's 55–44 Iron Bowl shootout win over Auburn in 2014, how many players finished with 100 or more receiving yards?",
+     "options": [
+      "3",
+      "1",
+      "2",
+      "4"
+     ],
+     "answer": 0,
+     "reveal": "3: Amari Cooper (Alabama) 13 catches for 224 yards and 3 TD, Sammie Coates (Auburn) 5 for 206 and 2 TD, and Duke Williams (Auburn) 7 for 121.",
+     "names": {
+      "prompt": "Bonus: name the three players who topped 100 receiving yards in the 2014 Iron Bowl.",
+      "a": "AUB",
+      "b": "ALA",
+      "A": [
+       {
+        "name": "Sammie Coates",
+        "yards": 206,
+        "label": "5 catches, 206 yds, 2 TD",
+        "profile": "Auburn WR · 5 catches for 206 yards and 2 TD"
+       },
+       {
+        "name": "Duke Williams",
+        "yards": 121,
+        "label": "7 catches, 121 yds",
+        "profile": "Auburn WR · 7 catches for 121 yards"
+       }
+      ],
+      "B": [
+       {
+        "name": "Amari Cooper",
+        "yards": 224,
+        "label": "13 catches, 224 yds, 3 TD",
+        "profile": "Alabama WR · 13 catches for 224 yards and 3 TD"
+       }
+      ]
+     },
+     "source": "2014 Iron Bowl (Nov 29, 2014, Bryant-Denny Stadium, Alabama 55, Auburn 44): CollegeFootballData /games/players, matched by ESPN box score (event 400548323)",
+     "verified": true
     }
    ]
   },

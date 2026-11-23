@@ -12,7 +12,7 @@ import { genGameMoment, genGameRank, genLongestGameMoment, genLongestSeriesMC, g
 import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 29; // v29: career ranking bonus: complete the combined top 10; // v28: SEC record-book top 10 fill-in for SEC vs SEC; // v27: series MC (longest streak / largest margin) every week, mc cap 3; // v26: no total-yards difference MC; // v25: no random single-game higher/lower; upsets need a real number; // v24: comparisons only on notable players or big seasons; // v23: no 'top N against each other' fill-ins; // v22: two fill-ins per set (+ combined career top 10), tighter game lines, rivalry week non-SEC schools; // v21: notable also = school top-10 single seasons + owner list (McCluster); // v20: Name Them by default, years only for walk-offs; bonus answers hidden until the bonus ends; // v19: fill-in questions (combined top 10 seasons, top 5 vs each other), ⓘ award explainers; // v18: higher/lower only on notable players (lib/notable.ts); // v17: 10 questions in every set (bigger generated pool, second fill pass); // v16: walk-offs (final play or OT), a record-book career ranking every week; v15: Notables Rank It; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
+export const ENGINE_VERSION = 30; // v30: MC with a Name Them bonus (2014 Iron Bowl 100-yard receivers); // v29: career ranking bonus: complete the combined top 10; // v28: SEC record-book top 10 fill-in for SEC vs SEC; // v27: series MC (longest streak / largest margin) every week, mc cap 3; // v26: no total-yards difference MC; // v25: no random single-game higher/lower; upsets need a real number; // v24: comparisons only on notable players or big seasons; // v23: no 'top N against each other' fill-ins; // v22: two fill-ins per set (+ combined career top 10), tighter game lines, rivalry week non-SEC schools; // v21: notable also = school top-10 single seasons + owner list (McCluster); // v20: Name Them by default, years only for walk-offs; bonus answers hidden until the bonus ends; // v19: fill-in questions (combined top 10 seasons, top 5 vs each other), ⓘ award explainers; // v18: higher/lower only on notable players (lib/notable.ts); // v17: 10 questions in every set (bigger generated pool, second fill pass); // v16: walk-offs (final play or OT), a record-book career ranking every week; v15: Notables Rank It; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean; skip?: Set<string> } // skip: owner-rejected question signatures
@@ -57,7 +57,7 @@ export function curatedQs(items: CuratedItem[], label: string, rng: Rng, o: Buil
       case "mc": {
         const game = it.game && pair ? { ...it.game, loser: it.game.winner === pair[0] ? pair[1] : pair[0] } : undefined;
         out.push({ ...base, type: "mc", pitted: true, prompt: it.prompt, options: it.options, answer: it.answer, reveal: it.reveal,
-          order: shuffle(rng, it.options.map((_, j) => j)), ...(game ? { game } : {}), ...(it.years ? { years: it.years } : {}) });
+          order: shuffle(rng, it.options.map((_, j) => j)), ...(game ? { game } : {}), ...(it.years ? { years: it.years } : {}), ...(it.names ? { names: it.names } : {}) });
         break;
       }
       case "cross":
@@ -213,7 +213,7 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
 /** Per-set caps (spec §2). Trap and upset limits apply across generated and curated questions. */
 export function caps(progCap: number, pitted = false): Record<QType, number> {
   // Pitted sets lean on cross-school formats, so they get more room (owner's call, Nov 2026).
-  return pitted ? { moment: 4, prog: progCap, h2h: 4, rank: 3, count: 4, duel: 3, cross: 1, mc: 3 }
+  return pitted ? { moment: 4, prog: progCap, h2h: 4, rank: 3, count: 4, duel: 3, cross: 1, mc: 4 }
     : { moment: 4, prog: progCap, h2h: 3, rank: 2, count: 1, duel: 2, cross: 1, mc: 2 };
 }
 
@@ -245,7 +245,7 @@ export const questionKind = (q: Question) =>
   q.sig.match(/^(gm|vs|tv|ts|tg|dc|dm|ac|am|hc|hm|sc|td|gr|lp|lg|mx|nx|nr|wo|wm|fs|fv|fc|st|ms|mm|pp|tr|tp|d|u|h|r|c|g|k|p)/)?.[1] ?? q.sig.slice(0, 2);
 // may appear twice in a set: program pit, curated items, game moments, plain head-to-heads
 const REPEATABLE = new Set(["g", "gm", "h"]);
-const CURATED_MAX = 3; // hand-written questions per set
+const CURATED_MAX = 4; // hand-written questions per set (owner adds them for big rivalries)
 
 export function buildRound(data: Dataset, a: SchoolKey, b: SchoolKey, rng: Rng, o: BuildOpts): Question[] {
   const m = findMatchup(data, a, b);

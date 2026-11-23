@@ -39,7 +39,7 @@ export type CuratedItem = Sourced & (
   | { type: "moment"; prompt: string; line: string; answer: "over" | "under"; reveal: string; game?: GameBox }
   | { type: "duel"; year: number; stat: string; aSchool: SchoolKey; aName: string; bName: string; A: { big: string; sm: string }; B: { big: string; sm: string } }
   | { type: "cross"; prompt: string; options: string[]; answer: number; reveal: string }
-  | { type: "mc"; prompt: string; options: string[]; answer: number; reveal: string; game?: GameBox; years?: YearsBonus }
+  | { type: "mc"; prompt: string; options: string[]; answer: number; reveal: string; game?: GameBox; years?: YearsBonus; names?: YearsBonus }
   | { type: "rank"; prompt: string; items: { label: string; value: number }[]; unit: string; trap?: boolean; note?: string }
   | { type: "h2h"; prompt: string; A: { label: string; value: number }; B: { label: string; value: number }; unit: string }
 );
@@ -85,7 +85,7 @@ export type Question = QBase & (
   | { type: "count"; a: SchoolKey; b: SchoolKey; threshold: number; prompt?: string; A: CountEntry[]; B: CountEntry[] }
   | { type: "duel"; year: number; stat: string; aSchool: SchoolKey; other: SchoolKey; aName: string; bName: string; A: { big: string; sm: string }; B: { big: string; sm: string }; flip: boolean }
   | { type: "cross"; a: SchoolKey; b: SchoolKey; prompt: string; options: string[]; answer: number; reveal: string; order: number[] }
-  | { type: "mc"; prompt: string; options: string[]; answer: number; reveal: string; order: number[]; game?: GameBox & { loser: SchoolKey }; years?: YearsBonus }
+  | { type: "mc"; prompt: string; options: string[]; answer: number; reveal: string; order: number[]; game?: GameBox & { loser: SchoolKey }; years?: YearsBonus; names?: YearsBonus }
 );
 /** Name the Years bonus attached to a multiple-choice question (e.g. the seasons behind Saban's 0–5). */
 export interface YearsBonus { prompt: string; a: SchoolKey; b: SchoolKey; A: CountEntry[]; B: CountEntry[] }

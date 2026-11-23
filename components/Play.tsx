@@ -72,7 +72,7 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
   // after a question is answered, progress is saved as already past it (see settle)
   const savePast = (np: Progress) => save({ ...np, i: np.i + 1 >= n ? np.i : np.i + 1, done: np.i + 1 >= n });
   const [bonusDoneAt, setBonusDoneAt] = useState(-1);
-  const hasBonus = q?.type === "count" || (q?.type === "mc" && !!q.years) || (q?.type === "rank" && !!q.names);
+  const hasBonus = q?.type === "count" || (q?.type === "mc" && !!(q.years || q.names)) || (q?.type === "rank" && !!q.names);
   const afterBonus = !hasBonus || bonusDoneAt === p.i; // More lists and full reveals would give the bonus answers away
   const finishBonus = (pts: number) => { addBonus(pts); setBonusDoneAt(p.i) };
   const addBonus = (pts: number) => setP(x => {
@@ -105,9 +105,10 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
           </div>
         )}
         {reveal && q.info && <Info key={"i" + p.i} info={q.info} />}
-        {reveal && afterBonus && q.type === "mc" && q.years && <div className="more">{q.reveal}</div>}
+        {reveal && afterBonus && q.type === "mc" && (q.years || q.names) && <div className="more">{q.reveal}</div>}
         {reveal && afterBonus && q.more && q.more.rows.length > 0 && <div className="more"><div className="kind">More · {q.more.title}</div>{q.more.rows.map(r => <div key={r}>{r}</div>)}</div>}
         {reveal && q.type === "count" ? <NameThem q={q} onDone={finishBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
+          : reveal && q.type === "mc" && q.names ? <NameNames q={q.names} prompt={q.names.prompt} onDone={finishBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
           : reveal && q.type === "rank" && q.names ? <NameNames q={q.names} prompt={q.names.prompt} onDone={finishBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
           : reveal && q.type === "mc" && q.years ? <NameYears q={q.years} prompt={q.years.prompt} onDone={finishBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
           : reveal && <div className="next show"><button className="btn" onClick={next}>{p.i === n - 1 ? "Final Whistle" : "Next Play →"}</button></div>}
@@ -158,7 +159,7 @@ function revealText(q: Question): ReactNode {
     case "h2h": return <>{q.A.label}: {h2hFmt(q, q.A.value)} · {q.B.label}: {h2hFmt(q, q.B.value)}{q.note && <><br />{q.note}</>}</>;
     case "duel": return `${SCHOOL[q.aSchool].name}: ${q.aName} (${q.A.big}). ${SCHOOL[q.other].name}: ${q.bName} (${q.B.big}).`;
     case "cross": return q.reveal;
-    case "mc": return q.years ? `${q.options[q.answer]}.` : q.reveal; // the full reveal lists the years: hold it until the bonus is over
+    case "mc": return q.years || q.names ? `${q.options[q.answer]}.` : q.reveal; // the full reveal gives the bonus away: hold it // the full reveal lists the years: hold it until the bonus is over
     case "rank": return "";
   }
 }

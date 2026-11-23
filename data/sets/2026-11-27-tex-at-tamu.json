@@ -6,8 +6,8 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-23T22:01:05.332Z",
- "engine": 29,
+ "generatedAt": "2026-11-23T22:04:16.922Z",
+ "engine": 30,
  "questions": [
   {
    "type": "count",
@@ -470,5 +470,6 @@
    ],
    "sig": "fsrush"
   }
- ]
+ ],
+ "rev": 1
 }

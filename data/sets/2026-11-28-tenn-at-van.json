@@ -6,8 +6,8 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-23T22:01:06.723Z",
- "engine": 29,
+ "generatedAt": "2026-11-23T22:04:18.303Z",
+ "engine": 30,
  "questions": [
   {
    "type": "h2h",
@@ -362,5 +362,6 @@
    "flip": false,
    "sig": "drec2022Jalin Hyatt,Will Sheppard"
   }
- ]
+ ],
+ "rev": 1
 }

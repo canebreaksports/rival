@@ -6,8 +6,8 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-23T22:01:06.243Z",
- "engine": 29,
+ "generatedAt": "2026-11-23T22:04:17.802Z",
+ "engine": 30,
  "questions": [
   {
    "type": "h2h",
@@ -461,5 +461,6 @@
    ],
    "sig": "fsrec"
   }
- ]
+ ],
+ "rev": 1
 }
