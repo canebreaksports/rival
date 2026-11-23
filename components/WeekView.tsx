@@ -7,6 +7,7 @@ import { dfmt, liveGames, nextGames, unlockFmt, windowOf } from "@/lib/gating";
 import { SCHOOL } from "@/lib/schools";
 import { store } from "@/lib/storage";
 import { Dot } from "./Dot";
+import { needsApproval, useApproved } from "@/lib/approval-client";
 
 export interface GameSummary { game: Game; slug: string; key: string; n: number; name: string | null }
 
@@ -42,14 +43,17 @@ export function WeekView({ games, now: fixedNow, linkBase = "/play", storagePref
 
 function Card({ g, live, linkBase, storagePrefix }: { g: GameSummary; live: boolean; linkBase: string; storagePrefix: string }) {
   const w = windowOf(g.game), ready = g.n >= 3, sv = store.get(storagePrefix + g.key), played = !!sv?.done;
-  const open = live && ready && !played;
+  const approvedSet = useApproved(), coach = storagePrefix !== ""; // Coach sees every set; players wait for the green light
+  const inReview = !coach && needsApproval(g.slug) && !approvedSet?.has(g.slug);
+  const open = live && ready && !played && !inReview;
   const status = !live ? (ready ? `🔒 Unlocks ${unlockFmt(w.start)} · ${g.n} questions` : `🔒 Unlocks ${unlockFmt(w.start)} · Stats pack coming soon`)
     : played ? `✓ ${sv!.pts.toLocaleString("en-US")} pts · ${sv!.right}/${sv!.n}${sv!.hints ? ` · 💡${sv!.hints}` : ""} · back next week`
     : !ready ? `${dfmt(w.day)} · Stats pack coming soon`
+    : inReview ? (approvedSet ? `${dfmt(w.day)} · Final review · check back soon` : `${dfmt(w.day)} · …`)
     : sv ? `Resume · Q${sv.i + 1} of ${g.n}` : `${dfmt(w.day)} · ${g.n} questions`;
   const { away, home, site } = g.game;
   const body = <>
-    <div className="n">{g.name ?? (site ? `at ${site}` : "SEC Showdown")}</div>
+    <div className="n">{g.name ?? (site ? `at ${site}` : "Showdown")}</div>
     <div className="t"><Dot k={away} />{SCHOOL[away].name} <span className="vs">{site ? "VS" : "@"}</span> <Dot k={home} />{SCHOOL[home].name}</div>
     <div className="q">{status}</div>
   </>;

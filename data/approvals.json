@@ -1,0 +1,5 @@
+{
+ "note": "Owner green lights recorded in the repo (used when Redis is not connected): slug -> content hash approved. Sets before review_from are grandfathered.",
+ "review_from": "2026-11-22",
+ "sets": {}
+}

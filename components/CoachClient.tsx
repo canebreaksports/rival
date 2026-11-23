@@ -32,7 +32,8 @@ export function CoachClient({ games }: { games: GameSummary[] }) {
     <div className="tag">Coach · Preview Mode</div>
     <p className="note" style={{ marginTop: 0 }}>Testing only. Weekly runs here use separate progress, so they don&apos;t use up your real run.</p>
 
-    <Link className="btn" href="/coach/review" style={{ display: "block", textAlign: "center", textDecoration: "none", marginTop: 8 }}>Review This Week&apos;s Questions</Link>
+    <Link className="btn" href="/coach/publish" style={{ display: "block", textAlign: "center", textDecoration: "none", marginTop: 8 }}>Review &amp; Green-Light Sets</Link>
+    <Link className="btn ghost" href="/coach/review" style={{ display: "block", textAlign: "center", textDecoration: "none", marginTop: 8 }}>Past Weeks&apos; Questions</Link>
     <Link className="btn ghost" href="/coach/stats" style={{ display: "block", textAlign: "center", textDecoration: "none", marginTop: 8 }}>Player Stats</Link>
 
     <div className="sec">Simulate a Date</div>

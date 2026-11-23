@@ -9,6 +9,7 @@
 //   npm run sets -- --reset <slug>     rebuild one set AND give everyone a fresh run of it (bumps its rev)
 //   npm run sets -- --now 2026-11-20   pretend it is this date (testing)
 import fs from "node:fs";
+import crypto from "node:crypto";
 import path from "node:path";
 import { DATA } from "../lib/data";
 import { weeklySet } from "../lib/build";
@@ -39,5 +40,12 @@ for (const g of DATA.schedule.games) {
   if (exists) tally.built++; else tally.created++;
   if (frozen && !exists && now <= windowOf(g).end) console.log(`note: created ${set.slug}, whose week is live or about to unlock`);
 }
+// content fingerprints for the publishing gate (lib/approvals.ts): any change to a set's questions needs a fresh green light
+const hashes: Record<string, string> = {};
+for (const f of fs.readdirSync(SETS_DIR).filter(f => f.endsWith(".json")).sort()) {
+  const s = JSON.parse(fs.readFileSync(path.join(SETS_DIR, f), "utf8")) as { slug: string; questions: unknown[] };
+  hashes[s.slug] = crypto.createHash("sha256").update(JSON.stringify(s.questions)).digest("hex").slice(0, 16);
+}
+fs.writeFileSync(path.join(process.cwd(), "data", "set-hashes.json"), JSON.stringify(hashes, null, 1) + "\n");
 console.log(`Sets: ${tally.created} created, ${tally.built} rebuilt, ${tally.kept} frozen and kept.`);
 if (tally.thin.length) console.log(`Fewer than 3 verified questions (shows "Stats pack coming soon"): ${tally.thin.join(", ")}`);
