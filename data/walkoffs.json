@@ -1,0 +1,1402 @@
+{
+ "source": "CollegeFootballData /games (line scores) and /drives (last drive, clock, score), seasons 2001–2025, fetched 2026-11-23. Final-play wins: the winner was tied or trailing and scored on the game's last drive, ending 0:00 in the 4th quarter; overtime: any game decided in overtime.",
+ "pairs": {
+  "ALA|VAN": {
+   "from": 2003,
+   "games": 7,
+   "list": []
+  },
+  "AUB|MISS": {
+   "from": 2003,
+   "games": 21,
+   "list": []
+  },
+  "SC|UGA": {
+   "from": 2003,
+   "games": 21,
+   "list": [
+    {
+     "season": 2019,
+     "date": "2019-10-12",
+     "winner": "SC",
+     "loser": "UGA",
+     "ws": 20,
+     "ls": 17,
+     "how": "ot"
+    }
+   ]
+  },
+  "ARK|TENN": {
+   "from": 2001,
+   "games": 9,
+   "list": [
+    {
+     "season": 2002,
+     "date": "2002-10-05",
+     "winner": "TENN",
+     "loser": "ARK",
+     "ws": 41,
+     "ls": 38,
+     "how": "ot"
+    }
+   ]
+  },
+  "MSST|SC": {
+   "from": 2003,
+   "games": 6,
+   "list": []
+  },
+  "FLA|UK": {
+   "from": 2003,
+   "games": 23,
+   "list": [
+    {
+     "season": 2014,
+     "date": "2014-09-13",
+     "winner": "FLA",
+     "loser": "UK",
+     "ws": 36,
+     "ls": 30,
+     "how": "ot"
+    }
+   ]
+  },
+  "ALA|ARK": {
+   "from": 2003,
+   "games": 21,
+   "list": [
+    {
+     "season": 2003,
+     "date": "2003-09-27",
+     "winner": "ARK",
+     "loser": "ALA",
+     "ws": 34,
+     "ls": 31,
+     "how": "ot"
+    },
+    {
+     "season": 2006,
+     "date": "2006-09-23",
+     "winner": "ARK",
+     "loser": "ALA",
+     "ws": 24,
+     "ls": 23,
+     "how": "ot"
+    }
+   ]
+  },
+  "ALA|SC": {
+   "from": 2001,
+   "games": 8,
+   "list": []
+  },
+  "MISS|UK": {
+   "from": 2001,
+   "games": 10,
+   "list": [
+    {
+     "season": 2020,
+     "date": "2020-10-03",
+     "winner": "MISS",
+     "loser": "UK",
+     "ws": 42,
+     "ls": 41,
+     "how": "ot"
+    }
+   ]
+  },
+  "FLA|MSST": {
+   "from": 2001,
+   "games": 8,
+   "list": []
+  },
+  "ARK|UGA": {
+   "from": 2003,
+   "games": 7,
+   "list": []
+  },
+  "AUB|VAN": {
+   "from": 2003,
+   "games": 8,
+   "list": [
+    {
+     "season": 2025,
+     "date": "2025-11-08",
+     "winner": "VAN",
+     "loser": "AUB",
+     "ws": 45,
+     "ls": 38,
+     "how": "ot"
+    }
+   ]
+  },
+  "LSU|TENN": {
+   "from": 2001,
+   "games": 9,
+   "list": [
+    {
+     "season": 2005,
+     "date": "2005-09-26",
+     "winner": "TENN",
+     "loser": "LSU",
+     "ws": 30,
+     "ls": 27,
+     "how": "ot"
+    },
+    {
+     "season": 2010,
+     "date": "2010-10-02",
+     "winner": "LSU",
+     "loser": "TENN",
+     "ws": 16,
+     "ls": 14,
+     "how": "td"
+    }
+   ]
+  },
+  "TENN|UGA": {
+   "from": 2003,
+   "games": 23,
+   "list": [
+    {
+     "season": 2013,
+     "date": "2013-10-05",
+     "winner": "UGA",
+     "loser": "TENN",
+     "ws": 34,
+     "ls": 31,
+     "how": "ot"
+    },
+    {
+     "season": 2016,
+     "date": "2016-10-01",
+     "winner": "TENN",
+     "loser": "UGA",
+     "ws": 34,
+     "ls": 31,
+     "how": "td"
+    },
+    {
+     "season": 2025,
+     "date": "2025-09-13",
+     "winner": "UGA",
+     "loser": "TENN",
+     "ws": 44,
+     "ls": 41,
+     "how": "ot"
+    }
+   ]
+  },
+  "SC|UK": {
+   "from": 2003,
+   "games": 23,
+   "list": []
+  },
+  "FLA|LSU": {
+   "from": 2003,
+   "games": 23,
+   "list": []
+  },
+  "OU|TEX": {
+   "from": 2003,
+   "games": 24,
+   "list": [
+    {
+     "season": 2020,
+     "date": "2020-10-10",
+     "winner": "OU",
+     "loser": "TEX",
+     "ws": 53,
+     "ls": 45,
+     "how": "ot"
+    }
+   ]
+  },
+  "AUB|MSST": {
+   "from": 2003,
+   "games": 21,
+   "list": [
+    {
+     "season": 2022,
+     "date": "2022-11-05",
+     "winner": "MSST",
+     "loser": "AUB",
+     "ws": 39,
+     "ls": 33,
+     "how": "ot"
+    }
+   ]
+  },
+  "ALA|MISS": {
+   "from": 2004,
+   "games": 20,
+   "list": [
+    {
+     "season": 2005,
+     "date": "2005-10-15",
+     "winner": "ALA",
+     "loser": "MISS",
+     "ws": 13,
+     "ls": 10,
+     "how": "fg"
+    },
+    {
+     "season": 2006,
+     "date": "2006-10-14",
+     "winner": "ALA",
+     "loser": "MISS",
+     "ws": 26,
+     "ls": 23,
+     "how": "ot"
+    }
+   ]
+  },
+  "UGA|VAN": {
+   "from": 2003,
+   "games": 20,
+   "list": [
+    {
+     "season": 2007,
+     "date": "2007-10-13",
+     "winner": "UGA",
+     "loser": "VAN",
+     "ws": 20,
+     "ls": 17,
+     "how": "fg"
+    }
+   ]
+  },
+  "ARK|SC": {
+   "from": 2003,
+   "games": 13,
+   "list": []
+  },
+  "LSU|UK": {
+   "from": 2003,
+   "games": 5,
+   "list": [
+    {
+     "season": 2007,
+     "date": "2007-10-13",
+     "winner": "UK",
+     "loser": "LSU",
+     "ws": 43,
+     "ls": 37,
+     "how": "ot"
+    }
+   ]
+  },
+  "AUB|FLA": {
+   "from": 2001,
+   "games": 6,
+   "list": [
+    {
+     "season": 2002,
+     "date": "2002-10-19",
+     "winner": "FLA",
+     "loser": "AUB",
+     "ws": 30,
+     "ls": 23,
+     "how": "ot"
+    },
+    {
+     "season": 2007,
+     "date": "2007-09-30",
+     "winner": "AUB",
+     "loser": "FLA",
+     "ws": 20,
+     "ls": 17,
+     "how": "fg"
+    }
+   ]
+  },
+  "UGA|UK": {
+   "from": 2004,
+   "games": 22,
+   "list": [
+    {
+     "season": 2016,
+     "date": "2016-11-05",
+     "winner": "UGA",
+     "loser": "UK",
+     "ws": 27,
+     "ls": 24,
+     "how": "fg"
+    }
+   ]
+  },
+  "ALA|TENN": {
+   "from": 2003,
+   "games": 23,
+   "list": [
+    {
+     "season": 2003,
+     "date": "2003-10-25",
+     "winner": "TENN",
+     "loser": "ALA",
+     "ws": 51,
+     "ls": 43,
+     "how": "ot"
+    },
+    {
+     "season": 2022,
+     "date": "2022-10-15",
+     "winner": "TENN",
+     "loser": "ALA",
+     "ws": 52,
+     "ls": 49,
+     "how": "fg"
+    }
+   ]
+  },
+  "LSU|MSST": {
+   "from": 2003,
+   "games": 21,
+   "list": []
+  },
+  "SC|VAN": {
+   "from": 2007,
+   "games": 19,
+   "list": []
+  },
+  "ARK|AUB": {
+   "from": 2003,
+   "games": 23,
+   "list": [
+    {
+     "season": 2015,
+     "date": "2015-10-24",
+     "winner": "ARK",
+     "loser": "AUB",
+     "ws": 54,
+     "ls": 46,
+     "how": "ot"
+    }
+   ]
+  },
+  "MIZ|TEX": {
+   "from": 2006,
+   "games": 4,
+   "list": []
+  },
+  "FLA|UGA": {
+   "from": 2003,
+   "games": 23,
+   "list": [
+    {
+     "season": 2010,
+     "date": "2010-10-30",
+     "winner": "FLA",
+     "loser": "UGA",
+     "ws": 34,
+     "ls": 31,
+     "how": "ot"
+    }
+   ]
+  },
+  "SC|TENN": {
+   "from": 2003,
+   "games": 21,
+   "list": [
+    {
+     "season": 2003,
+     "date": "2003-09-27",
+     "winner": "TENN",
+     "loser": "SC",
+     "ws": 23,
+     "ls": 20,
+     "how": "ot"
+    },
+    {
+     "season": 2007,
+     "date": "2007-10-27",
+     "winner": "TENN",
+     "loser": "SC",
+     "ws": 27,
+     "ls": 24,
+     "how": "ot"
+    },
+    {
+     "season": 2013,
+     "date": "2013-10-19",
+     "winner": "TENN",
+     "loser": "SC",
+     "ws": 23,
+     "ls": 21,
+     "how": "fg"
+    },
+    {
+     "season": 2014,
+     "date": "2014-11-01",
+     "winner": "TENN",
+     "loser": "SC",
+     "ws": 45,
+     "ls": 42,
+     "how": "ot"
+    }
+   ]
+  },
+  "LSU|MISS": {
+   "from": 2003,
+   "games": 23,
+   "list": [
+    {
+     "season": 2006,
+     "date": "2006-11-19",
+     "winner": "LSU",
+     "loser": "MISS",
+     "ws": 23,
+     "ls": 20,
+     "how": "ot"
+    },
+    {
+     "season": 2024,
+     "date": "2024-10-12",
+     "winner": "LSU",
+     "loser": "MISS",
+     "ws": 29,
+     "ls": 26,
+     "how": "ot"
+    }
+   ]
+  },
+  "FLA|VAN": {
+   "from": 2003,
+   "games": 21,
+   "list": [
+    {
+     "season": 2005,
+     "date": "2005-11-06",
+     "winner": "FLA",
+     "loser": "VAN",
+     "ws": 49,
+     "ls": 42,
+     "how": "ot"
+    }
+   ]
+  },
+  "MSST|UK": {
+   "from": 2006,
+   "games": 18,
+   "list": [
+    {
+     "season": 2016,
+     "date": "2016-10-22",
+     "winner": "UK",
+     "loser": "MSST",
+     "ws": 40,
+     "ls": 38,
+     "how": "fg"
+    }
+   ]
+  },
+  "ALA|LSU": {
+   "from": 2003,
+   "games": 24,
+   "list": [
+    {
+     "season": 2005,
+     "date": "2005-11-12",
+     "winner": "LSU",
+     "loser": "ALA",
+     "ws": 16,
+     "ls": 13,
+     "how": "ot"
+    },
+    {
+     "season": 2008,
+     "date": "2008-11-08",
+     "winner": "ALA",
+     "loser": "LSU",
+     "ws": 27,
+     "ls": 21,
+     "how": "ot"
+    },
+    {
+     "season": 2011,
+     "date": "2011-11-06",
+     "winner": "LSU",
+     "loser": "ALA",
+     "ws": 9,
+     "ls": 6,
+     "how": "ot"
+    },
+    {
+     "season": 2014,
+     "date": "2014-11-09",
+     "winner": "ALA",
+     "loser": "LSU",
+     "ws": 20,
+     "ls": 13,
+     "how": "ot"
+    },
+    {
+     "season": 2022,
+     "date": "2022-11-05",
+     "winner": "LSU",
+     "loser": "ALA",
+     "ws": 32,
+     "ls": 31,
+     "how": "ot"
+    }
+   ]
+  },
+  "ARK|MISS": {
+   "from": 2003,
+   "games": 23,
+   "list": [
+    {
+     "season": 2012,
+     "date": "2012-10-27",
+     "winner": "MISS",
+     "loser": "ARK",
+     "ws": 30,
+     "ls": 27,
+     "how": "fg"
+    },
+    {
+     "season": 2015,
+     "date": "2015-11-07",
+     "winner": "ARK",
+     "loser": "MISS",
+     "ws": 53,
+     "ls": 52,
+     "how": "ot"
+    }
+   ]
+  },
+  "OU|TAMU": {
+   "from": 2003,
+   "games": 10,
+   "list": []
+  },
+  "ALA|MSST": {
+   "from": 2003,
+   "games": 21,
+   "list": []
+  },
+  "UK|VAN": {
+   "from": 2007,
+   "games": 19,
+   "list": []
+  },
+  "AUB|UGA": {
+   "from": 2003,
+   "games": 24,
+   "list": []
+  },
+  "FLA|SC": {
+   "from": 2003,
+   "games": 21,
+   "list": [
+    {
+     "season": 2014,
+     "date": "2014-11-15",
+     "winner": "SC",
+     "loser": "FLA",
+     "ws": 23,
+     "ls": 20,
+     "how": "ot"
+    }
+   ]
+  },
+  "MISS|UGA": {
+   "from": 2003,
+   "games": 9,
+   "list": []
+  },
+  "TENN|UK": {
+   "from": 2004,
+   "games": 22,
+   "list": [
+    {
+     "season": 2007,
+     "date": "2007-11-24",
+     "winner": "TENN",
+     "loser": "UK",
+     "ws": 52,
+     "ls": 50,
+     "how": "ot"
+    },
+    {
+     "season": 2009,
+     "date": "2009-11-29",
+     "winner": "TENN",
+     "loser": "UK",
+     "ws": 30,
+     "ls": 24,
+     "how": "ot"
+    }
+   ]
+  },
+  "ARK|MSST": {
+   "from": 2022,
+   "games": 4,
+   "list": []
+  },
+  "ALA|AUB": {
+   "from": 2003,
+   "games": 23,
+   "list": [
+    {
+     "season": 2013,
+     "date": "2013-11-30",
+     "winner": "AUB",
+     "loser": "ALA",
+     "ws": 34,
+     "ls": 28,
+     "how": "ret"
+    },
+    {
+     "season": 2021,
+     "date": "2021-11-27",
+     "winner": "ALA",
+     "loser": "AUB",
+     "ws": 24,
+     "ls": 22,
+     "how": "ot"
+    }
+   ]
+  },
+  "MISS|MSST": {
+   "from": 2007,
+   "games": 19,
+   "list": [
+    {
+     "season": 2013,
+     "date": "2013-11-29",
+     "winner": "MSST",
+     "loser": "MISS",
+     "ws": 17,
+     "ls": 10,
+     "how": "ot"
+    }
+   ]
+  },
+  "TAMU|TEX": {
+   "from": 2003,
+   "games": 11,
+   "list": [
+    {
+     "season": 2011,
+     "date": "2011-11-25",
+     "winner": "TEX",
+     "loser": "TAMU",
+     "ws": 27,
+     "ls": 25,
+     "how": "fg"
+    }
+   ]
+  },
+  "ARK|LSU": {
+   "from": 2003,
+   "games": 23,
+   "list": [
+    {
+     "season": 2007,
+     "date": "2007-11-23",
+     "winner": "ARK",
+     "loser": "LSU",
+     "ws": 50,
+     "ls": 48,
+     "how": "ot"
+    },
+    {
+     "season": 2009,
+     "date": "2009-11-29",
+     "winner": "LSU",
+     "loser": "ARK",
+     "ws": 33,
+     "ls": 30,
+     "how": "ot"
+    },
+    {
+     "season": 2021,
+     "date": "2021-11-14",
+     "winner": "ARK",
+     "loser": "LSU",
+     "ws": 16,
+     "ls": 13,
+     "how": "ot"
+    }
+   ]
+  },
+  "TENN|VAN": {
+   "from": 2004,
+   "games": 22,
+   "list": [
+    {
+     "season": 2011,
+     "date": "2011-11-20",
+     "winner": "TENN",
+     "loser": "VAN",
+     "ws": 27,
+     "ls": 21,
+     "how": "ot"
+    }
+   ]
+  },
+  "MISS|VAN": {
+   "from": 2003,
+   "games": 21,
+   "list": [
+    {
+     "season": 2004,
+     "date": "2004-09-18",
+     "winner": "MISS",
+     "loser": "VAN",
+     "ws": 26,
+     "ls": 23,
+     "how": "ot"
+    },
+    {
+     "season": 2018,
+     "date": "2018-11-18",
+     "winner": "VAN",
+     "loser": "MISS",
+     "ws": 36,
+     "ls": 29,
+     "how": "ot"
+    }
+   ]
+  },
+  "FLA|TENN": {
+   "from": 2003,
+   "games": 23,
+   "list": [
+    {
+     "season": 2017,
+     "date": "2017-09-16",
+     "winner": "FLA",
+     "loser": "TENN",
+     "ws": 26,
+     "ls": 20,
+     "how": "td"
+    },
+    {
+     "season": 2024,
+     "date": "2024-10-12",
+     "winner": "TENN",
+     "loser": "FLA",
+     "ws": 23,
+     "ls": 17,
+     "how": "ot"
+    }
+   ]
+  },
+  "AUB|LSU": {
+   "from": 2003,
+   "games": 21,
+   "list": [
+    {
+     "season": 2005,
+     "date": "2005-10-22",
+     "winner": "LSU",
+     "loser": "AUB",
+     "ws": 20,
+     "ls": 17,
+     "how": "ot"
+    },
+    {
+     "season": 2018,
+     "date": "2018-09-15",
+     "winner": "LSU",
+     "loser": "AUB",
+     "ws": 22,
+     "ls": 21,
+     "how": "fg"
+    }
+   ]
+  },
+  "ARK|OU": {
+   "from": 2001,
+   "games": 1,
+   "list": []
+  },
+  "ALA|OU": {
+   "from": 2003,
+   "games": 6,
+   "list": []
+  },
+  "FLA|MISS": {
+   "from": 2003,
+   "games": 7,
+   "list": []
+  },
+  "ALA|UGA": {
+   "from": 2003,
+   "games": 14,
+   "list": [
+    {
+     "season": 2007,
+     "date": "2007-09-22",
+     "winner": "UGA",
+     "loser": "ALA",
+     "ws": 26,
+     "ls": 23,
+     "how": "ot"
+    },
+    {
+     "season": 2017,
+     "date": "2018-01-09",
+     "winner": "ALA",
+     "loser": "UGA",
+     "ws": 26,
+     "ls": 23,
+     "how": "ot"
+    }
+   ]
+  },
+  "MIZ|OU": {
+   "from": 2003,
+   "games": 9,
+   "list": []
+  },
+  "ARK|UK": {
+   "from": 2003,
+   "games": 5,
+   "list": [
+    {
+     "season": 2003,
+     "date": "2003-11-02",
+     "winner": "ARK",
+     "loser": "UK",
+     "ws": 71,
+     "ls": 63,
+     "how": "ot"
+    }
+   ]
+  },
+  "LSU|SC": {
+   "from": 2003,
+   "games": 8,
+   "list": []
+  },
+  "MSST|TENN": {
+   "from": 2003,
+   "games": 7,
+   "list": [
+    {
+     "season": 2025,
+     "date": "2025-09-27",
+     "winner": "TENN",
+     "loser": "MSST",
+     "ws": 41,
+     "ls": 34,
+     "how": "ot"
+    }
+   ]
+  },
+  "MIZ|TAMU": {
+   "from": 2001,
+   "games": 12,
+   "list": [
+    {
+     "season": 2002,
+     "date": "2002-11-16",
+     "winner": "MIZ",
+     "loser": "TAMU",
+     "ws": 33,
+     "ls": 27,
+     "how": "ot"
+    },
+    {
+     "season": 2011,
+     "date": "2011-10-29",
+     "winner": "MIZ",
+     "loser": "TAMU",
+     "ws": 38,
+     "ls": 31,
+     "how": "ot"
+    }
+   ]
+  },
+  "LSU|TEX": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "ARK|TEX": {
+   "from": 2001,
+   "games": 7,
+   "list": []
+  },
+  "ALA|UK": {
+   "from": 2001,
+   "games": 8,
+   "list": []
+  },
+  "LSU|UGA": {
+   "from": 2001,
+   "games": 11,
+   "list": []
+  },
+  "MSST|VAN": {
+   "from": 2001,
+   "games": 7,
+   "list": []
+  },
+  "AUB|TENN": {
+   "from": 2001,
+   "games": 8,
+   "list": []
+  },
+  "ARK|FLA": {
+   "from": 2001,
+   "games": 9,
+   "list": [
+    {
+     "season": 2023,
+     "date": "2023-11-04",
+     "winner": "ARK",
+     "loser": "FLA",
+     "ws": 39,
+     "ls": 36,
+     "how": "ot"
+    }
+   ]
+  },
+  "MISS|SC": {
+   "from": 2001,
+   "games": 8,
+   "list": []
+  },
+  "ARK|MIZ": {
+   "from": 2001,
+   "games": 14,
+   "list": [
+    {
+     "season": 2020,
+     "date": "2020-12-05",
+     "winner": "MIZ",
+     "loser": "ARK",
+     "ws": 50,
+     "ls": 48,
+     "how": "fg"
+    }
+   ]
+  },
+  "LSU|OU": {
+   "from": 2001,
+   "games": 4,
+   "list": []
+  },
+  "MISS|TENN": {
+   "from": 2001,
+   "games": 6,
+   "list": []
+  },
+  "AUB|UK": {
+   "from": 2001,
+   "games": 8,
+   "list": [
+    {
+     "season": 2010,
+     "date": "2010-10-09",
+     "winner": "AUB",
+     "loser": "UK",
+     "ws": 37,
+     "ls": 34,
+     "how": "fg"
+    }
+   ]
+  },
+  "LSU|VAN": {
+   "from": 2001,
+   "games": 8,
+   "list": []
+  },
+  "TAMU|TENN": {
+   "from": 2005,
+   "games": 3,
+   "list": [
+    {
+     "season": 2016,
+     "date": "2016-10-08",
+     "winner": "TAMU",
+     "loser": "TENN",
+     "ws": 45,
+     "ls": 38,
+     "how": "ot"
+    }
+   ]
+  },
+  "ARK|VAN": {
+   "from": 2006,
+   "games": 4,
+   "list": []
+  },
+  "MSST|UGA": {
+   "from": 2001,
+   "games": 9,
+   "list": []
+  },
+  "ALA|FLA": {
+   "from": 2001,
+   "games": 11,
+   "list": []
+  },
+  "AUB|SC": {
+   "from": 2001,
+   "games": 8,
+   "list": []
+  },
+  "MIZ|SC": {
+   "from": 2001,
+   "games": 15,
+   "list": [
+    {
+     "season": 2013,
+     "date": "2013-10-26",
+     "winner": "SC",
+     "loser": "MIZ",
+     "ws": 27,
+     "ls": 24,
+     "how": "ot"
+    }
+   ]
+  },
+  "MISS|MIZ": {
+   "from": 2001,
+   "games": 4,
+   "list": []
+  },
+  "FLA|OU": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "ARK|TAMU": {
+   "from": 2001,
+   "games": 17,
+   "list": [
+    {
+     "season": 2014,
+     "date": "2014-09-27",
+     "winner": "TAMU",
+     "loser": "ARK",
+     "ws": 35,
+     "ls": 28,
+     "how": "ot"
+    },
+    {
+     "season": 2015,
+     "date": "2015-09-26",
+     "winner": "TAMU",
+     "loser": "ARK",
+     "ws": 28,
+     "ls": 21,
+     "how": "ot"
+    },
+    {
+     "season": 2017,
+     "date": "2017-09-23",
+     "winner": "TAMU",
+     "loser": "ARK",
+     "ws": 50,
+     "ls": 43,
+     "how": "ot"
+    }
+   ]
+  },
+  "TAMU|UGA": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "ALA|TEX": {
+   "from": 2001,
+   "games": 3,
+   "list": []
+  },
+  "LSU|TAMU": {
+   "from": 2001,
+   "games": 15,
+   "list": [
+    {
+     "season": 2018,
+     "date": "2018-11-25",
+     "winner": "TAMU",
+     "loser": "LSU",
+     "ws": 74,
+     "ls": 72,
+     "how": "ot"
+    }
+   ]
+  },
+  "FLA|TAMU": {
+   "from": 2001,
+   "games": 6,
+   "list": []
+  },
+  "MIZ|UGA": {
+   "from": 2001,
+   "games": 12,
+   "list": []
+  },
+  "MISS|TEX": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "MISS|TAMU": {
+   "from": 2001,
+   "games": 11,
+   "list": [
+    {
+     "season": 2013,
+     "date": "2013-10-13",
+     "winner": "TAMU",
+     "loser": "MISS",
+     "ws": 41,
+     "ls": 38,
+     "how": "fg"
+    }
+   ]
+  },
+  "MIZ|VAN": {
+   "from": 2022,
+   "games": 4,
+   "list": [
+    {
+     "season": 2024,
+     "date": "2024-09-21",
+     "winner": "MIZ",
+     "loser": "VAN",
+     "ws": 30,
+     "ls": 27,
+     "how": "ot"
+    }
+   ]
+  },
+  "ALA|MIZ": {
+   "from": 2001,
+   "games": 6,
+   "list": []
+  },
+  "MIZ|UK": {
+   "from": 2019,
+   "games": 5,
+   "list": []
+  },
+  "AUB|TAMU": {
+   "from": 2001,
+   "games": 14,
+   "list": [
+    {
+     "season": 2024,
+     "date": "2024-11-24",
+     "winner": "AUB",
+     "loser": "TAMU",
+     "ws": 43,
+     "ls": 41,
+     "how": "ot"
+    }
+   ]
+  },
+  "FLA|MIZ": {
+   "from": 2001,
+   "games": 12,
+   "list": [
+    {
+     "season": 2021,
+     "date": "2021-11-20",
+     "winner": "MIZ",
+     "loser": "FLA",
+     "ws": 24,
+     "ls": 23,
+     "how": "ot"
+    }
+   ]
+  },
+  "MIZ|TENN": {
+   "from": 2001,
+   "games": 12,
+   "list": [
+    {
+     "season": 2012,
+     "date": "2012-11-10",
+     "winner": "MIZ",
+     "loser": "TENN",
+     "ws": 51,
+     "ls": 48,
+     "how": "ot"
+    }
+   ]
+  },
+  "ALA|TAMU": {
+   "from": 2001,
+   "games": 12,
+   "list": [
+    {
+     "season": 2021,
+     "date": "2021-10-10",
+     "winner": "TAMU",
+     "loser": "ALA",
+     "ws": 41,
+     "ls": 38,
+     "how": "fg"
+    }
+   ]
+  },
+  "TAMU|VAN": {
+   "from": 2001,
+   "games": 3,
+   "list": []
+  },
+  "AUB|MIZ": {
+   "from": 2001,
+   "games": 5,
+   "list": [
+    {
+     "season": 2022,
+     "date": "2022-09-24",
+     "winner": "AUB",
+     "loser": "MIZ",
+     "ws": 17,
+     "ls": 14,
+     "how": "ot"
+    },
+    {
+     "season": 2025,
+     "date": "2025-10-18",
+     "winner": "MIZ",
+     "loser": "AUB",
+     "ws": 23,
+     "ls": 17,
+     "how": "ot"
+    }
+   ]
+  },
+  "SC|TAMU": {
+   "from": 2001,
+   "games": 12,
+   "list": []
+  },
+  "OU|TENN": {
+   "from": 2001,
+   "games": 4,
+   "list": [
+    {
+     "season": 2015,
+     "date": "2015-09-12",
+     "winner": "OU",
+     "loser": "TENN",
+     "ws": 31,
+     "ls": 24,
+     "how": "ot"
+    }
+   ]
+  },
+  "MIZ|MSST": {
+   "from": 2001,
+   "games": 4,
+   "list": []
+  },
+  "LSU|MIZ": {
+   "from": 2001,
+   "games": 3,
+   "list": []
+  },
+  "AUB|OU": {
+   "from": 2001,
+   "games": 3,
+   "list": []
+  },
+  "OU|UGA": {
+   "from": 2001,
+   "games": 1,
+   "list": [
+    {
+     "season": 2017,
+     "date": "2018-01-01",
+     "winner": "UGA",
+     "loser": "OU",
+     "ws": 54,
+     "ls": 48,
+     "how": "ot"
+    }
+   ]
+  },
+  "TAMU|UK": {
+   "from": 2001,
+   "games": 1,
+   "list": [
+    {
+     "season": 2018,
+     "date": "2018-10-06",
+     "winner": "TAMU",
+     "loser": "UK",
+     "ws": 20,
+     "ls": 14,
+     "how": "ot"
+    }
+   ]
+  },
+  "TEX|UGA": {
+   "from": 2001,
+   "games": 4,
+   "list": [
+    {
+     "season": 2024,
+     "date": "2024-12-07",
+     "winner": "UGA",
+     "loser": "TEX",
+     "ws": 22,
+     "ls": 19,
+     "how": "ot"
+    }
+   ]
+  },
+  "MSST|TEX": {
+   "from": 2001,
+   "games": 2,
+   "list": [
+    {
+     "season": 2025,
+     "date": "2025-10-25",
+     "winner": "TEX",
+     "loser": "MSST",
+     "ws": 45,
+     "ls": 38,
+     "how": "ot"
+    }
+   ]
+  },
+  "OU|SC": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "MISS|OU": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "TEX|VAN": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "FLA|TEX": {
+   "from": 2001,
+   "games": 2,
+   "list": []
+  },
+  "TEX|UK": {
+   "from": 2001,
+   "games": 2,
+   "list": [
+    {
+     "season": 2025,
+     "date": "2025-10-18",
+     "winner": "TEX",
+     "loser": "UK",
+     "ws": 16,
+     "ls": 13,
+     "how": "ot"
+    }
+   ]
+  }
+ }
+}

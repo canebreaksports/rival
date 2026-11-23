@@ -6,172 +6,9 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-23T16:29:54.114Z",
- "engine": 15,
+ "generatedAt": "2026-11-23T19:49:00.743Z",
+ "engine": 16,
  "questions": [
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving yards in a single season?",
-   "A": {
-    "label": "Trent Sherfield (WR) · 2015 VAN",
-    "value": 659,
-    "school": "VAN"
-   },
-   "B": {
-    "label": "Jalin Hyatt (WR) · 2022 TENN",
-    "value": 1267,
-    "school": "TENN"
-   },
-   "unit": "receiving yards",
-   "sig": "hJalin Hyatt2022,Trent Sherfield2015rec",
-   "more": {
-    "title": "Top 6: single-season receiving yards (TENN, VAN players in our data)",
-    "rows": [
-     "1. Jalin Hyatt (TENN 2022) 1,267",
-     "2. Kalija Lipscomb (VAN 2018) 916",
-     "3. Will Sheppard (VAN 2022) 776",
-     "4. Jared Pinkney (VAN 2018) 774",
-     "5. Trent Sherfield (VAN 2017) 729",
-     "6. Will Sheppard (VAN 2023) 684"
-    ]
-   }
-  },
-  {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 28, 2015",
-    "winner": "TENN",
-    "loser": "VAN",
-    "ws": 53,
-    "ls": 28,
-    "venue": "Neyland Stadium"
-   },
-   "prompt": "In this game, did Jalen Hurd (Tennessee) run for more or less than",
-   "line": "140 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Jalen Hurd had 120 rushing yards on 19 carries and 1 TD in this game.",
-   "check": {
-    "value": 120,
-    "line": 140
-   },
-   "sig": "gm2015-11-28Jalen Hurdrush"
-  },
-  {
-   "type": "rank",
-   "label": "Notables",
-   "verified": true,
-   "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
-   "items": [
-    {
-     "label": "Denarius Moore (Tennessee, 2007–10)",
-     "value": 2004,
-     "school": "TENN"
-    },
-    {
-     "label": "Will Sheppard (Vanderbilt, 2020–23)",
-     "value": 2067,
-     "school": "VAN"
-    },
-    {
-     "label": "Cedrick Wilson (Tennessee, 1997–00)",
-     "value": 2137,
-     "school": "TENN"
-    },
-    {
-     "label": "Jordan Matthews (Vanderbilt, 2010–13)",
-     "value": 3759,
-     "school": "VAN"
-    }
-   ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"Tennessee Volunteers football statistical leaders\" career receiving yards table (revision 1387103812), which cites the school record book; fetched 2026-11-23; Wikipedia \"Vanderbilt Commodores football statistical leaders\" career receiving yards table (revision 1385775995), which cites the school record book; fetched 2026-11-23",
-   "sig": "nrCedrick Wilson,Denarius Moore,Jordan Matthews,Will Sheppard",
-   "more": {
-    "title": "Career receiving yards, Tennessee and Vanderbilt (careers ending 2000 or later)",
-    "rows": [
-     "1. Jordan Matthews (Vanderbilt, 2010–13) 3,759",
-     "2. Dan Stricker (Vanderbilt, 1999–02) 2,880",
-     "3. Earl Bennett (Vanderbilt, 2005–07) 2,852",
-     "4. Kalija Lipscomb (Vanderbilt, 2016–19) 2,356",
-     "5. Jauan Jennings (Tennessee, 2015–19) 2,153",
-     "6. Robert Meachem (Tennessee, 2004–06) 2,140",
-     "7. Cedrick Wilson (Tennessee, 1997–00) 2,137",
-     "8. Will Sheppard (Vanderbilt, 2020–23) 2,067",
-     "9. Denarius Moore (Tennessee, 2007–10) 2,004"
-    ]
-   }
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2022,
-   "stat": "Rushing season",
-   "aSchool": "VAN",
-   "other": "TENN",
-   "aName": "Re'Mahn Davis (RB)",
-   "bName": "Dylan Sampson (RB)",
-   "A": {
-    "big": "926",
-    "sm": "rush yds · 4 TD"
-   },
-   "B": {
-    "big": "397",
-    "sm": "rush yds · 6 TD"
-   },
-   "flip": true,
-   "sig": "drush2022Dylan Sampson,Re'Mahn Davis"
-  },
-  {
-   "type": "prog",
-   "label": "Program Pit · Tennessee vs Vanderbilt",
-   "a": "TENN",
-   "b": "VAN",
-   "prompt": "Who had more 10-win seasons from 2000–2025?",
-   "values": [
-    6,
-    1
-   ],
-   "verified": true,
-   "sig": "gwin10"
-  },
-  {
-   "type": "rank",
-   "label": "Notables",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Jalin Hyatt (TENN WR) · 2022 receiving TDs",
-     "value": 15,
-     "school": "TENN"
-    },
-    {
-     "label": "Ralph Webb (VAN RB) · 2016 rushing TDs",
-     "value": 13,
-     "school": "VAN"
-    },
-    {
-     "label": "Dylan Sampson (TENN RB) · career rushing TDs",
-     "value": 35,
-     "school": "TENN"
-    },
-    {
-     "label": "Diego Pavia (VAN QB) · 2025 rushing TDs",
-     "value": 10,
-     "school": "VAN"
-    }
-   ],
-   "sig": "nxTDDiego Pavia2025 rushing TDs,Dylan Sampsoncareer rushing TDs,Jalin Hyatt2022 receiving TDs,Ralph Webb2016 rushing TDs"
-  },
   {
    "type": "count",
    "label": "Since 2022",
@@ -200,35 +37,167 @@
    "bonus": "names"
   },
   {
+   "type": "mc",
+   "label": "Walk-offs",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Of the 22 Tennessee–Vanderbilt games since 2004, how many were won on the final play or in overtime? (Counts: a game-winning score as time expired in the 4th quarter, or any overtime win.)",
+   "options": [
+    "1",
+    "0",
+    "3",
+    "4"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    3,
+    2,
+    0
+   ],
+   "reveal": "1: 2011 overtime win, Tennessee 27–21.",
+   "years": {
+    "prompt": "Name the season it happened.",
+    "a": "TENN",
+    "b": "VAN",
+    "A": [
+     {
+      "name": "Overtime win: Tennessee 27, Vanderbilt 21",
+      "yards": 6,
+      "season": 2011,
+      "label": "27–21 (OT)",
+      "profile": "Overtime win, 27–21"
+     }
+    ],
+    "B": []
+   },
+   "sig": "wm2004"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Who had more seasons with 3 wins or fewer from 2000–2025?",
+   "values": [
+    1,
+    12
+   ],
+   "verified": true,
+   "sig": "gwin3"
+  },
+  {
    "type": "h2h",
    "label": "Against Each Other",
    "verified": true,
-   "flip": true,
-   "prompt": "In Tennessee–Vanderbilt games since 2012, who had more rushing yards against the other school?",
+   "flip": false,
+   "prompt": "In Tennessee–Vanderbilt games since 2012, who had more receiving yards against the other school?",
    "A": {
     "label": "Alvin Kamara (TENN) vs. Vanderbilt",
-    "value": 168,
+    "value": 124,
     "school": "TENN"
    },
    "B": {
-    "label": "Dallas Rivers (VAN) vs. Tennessee",
-    "value": 125,
+    "label": "Jordan Matthews (VAN) vs. Tennessee",
+    "value": 248,
     "school": "VAN"
    },
-   "unit": "rushing yds",
-   "note": "Alvin Kamara: 168 in 2 games. Dallas Rivers: 125 in 4 games.",
-   "sig": "vsrushAlvin Kamara,Dallas Rivers",
+   "unit": "receiving yds",
+   "note": "Alvin Kamara: 124 in 2 games. Jordan Matthews: 248 in 2 games.",
+   "sig": "vsrecAlvin Kamara,Jordan Matthews",
    "more": {
-    "title": "Top rushing yards against the other school since 2012",
+    "title": "Top receiving yards against the other school since 2012",
     "rows": [
-     "1. Ralph Webb (VAN) 481 in 4 games",
-     "2. Jaylen Wright (TENN) 347 in 3 games",
-     "3. Dylan Sampson (TENN) 346 in 3 games",
-     "4. Eric Gray (TENN) 320 in 2 games",
-     "5. Jabari Small (TENN) 260 in 4 games",
-     "6. Joshua Dobbs (TENN) 260 in 4 games"
+     "1. Trent Sherfield (VAN) 350 in 3 games",
+     "2. Jordan Matthews (VAN) 248 in 2 games",
+     "3. Will Sheppard (VAN) 190 in 3 games",
+     "4. Kalija Lipscomb (VAN) 187 in 3 games",
+     "5. Caleb Scott (VAN) 183 in 3 games",
+     "6. Jauan Jennings (TENN) 182 in 3 games"
     ]
    }
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Dan Stricker (Vanderbilt, 1999–02)",
+     "value": 2880,
+     "school": "VAN"
+    },
+    {
+     "label": "Denarius Moore (Tennessee, 2007–10)",
+     "value": 2004,
+     "school": "TENN"
+    },
+    {
+     "label": "Jauan Jennings (Tennessee, 2015–19)",
+     "value": 2153,
+     "school": "TENN"
+    },
+    {
+     "label": "Earl Bennett (Vanderbilt, 2005–07)",
+     "value": 2852,
+     "school": "VAN"
+    }
+   ],
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Tennessee Volunteers football statistical leaders\" career receiving yards table (revision 1387103812), which cites the school record book; fetched 2026-11-23; Wikipedia \"Vanderbilt Commodores football statistical leaders\" career receiving yards table (revision 1385775995), which cites the school record book; fetched 2026-11-23",
+   "sig": "nrreceivingDan Stricker,Denarius Moore,Earl Bennett,Jauan Jennings",
+   "more": {
+    "title": "Career receiving yards, Tennessee and Vanderbilt (careers ending 2000 or later)",
+    "rows": [
+     "1. Jordan Matthews (Vanderbilt, 2010–13) 3,759",
+     "2. Dan Stricker (Vanderbilt, 1999–02) 2,880",
+     "3. Earl Bennett (Vanderbilt, 2005–07) 2,852",
+     "4. Kalija Lipscomb (Vanderbilt, 2016–19) 2,356",
+     "5. Jauan Jennings (Tennessee, 2015–19) 2,153",
+     "6. Robert Meachem (Tennessee, 2004–06) 2,140",
+     "7. Cedrick Wilson (Tennessee, 1997–00) 2,137",
+     "8. Will Sheppard (Vanderbilt, 2020–23) 2,067",
+     "9. Denarius Moore (Tennessee, 2007–10) 2,004"
+    ]
+   }
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Tennessee vs Vanderbilt",
+   "a": "TENN",
+   "b": "VAN",
+   "prompt": "Who had more 10-win seasons from 2000–2025?",
+   "values": [
+    6,
+    1
+   ],
+   "verified": true,
+   "sig": "gwin10"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 26, 2016",
+    "winner": "VAN",
+    "loser": "TENN",
+    "ws": 45,
+    "ls": 34,
+    "venue": "FirstBank Stadium"
+   },
+   "prompt": "In this game, did Jauan Jennings (Tennessee) have more or less than",
+   "line": "60 receiving yards",
+   "answer": "over",
+   "reveal": "More. Jauan Jennings had 75 receiving yards on 4 catches and 0 TD in this game.",
+   "check": {
+    "value": 75,
+    "line": 60
+   },
+   "sig": "gm2016-11-26Jauan Jenningsrec"
   },
   {
    "type": "count",
@@ -260,34 +229,39 @@
    "bonus": "names"
   },
   {
-   "type": "rank",
-   "label": "Fresh Mix",
+   "type": "mc",
+   "label": "Longest Play",
    "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Will Sheppard (VAN WR) · 2023 receiving yards",
-     "value": 684,
-     "school": "VAN"
-    },
-    {
-     "label": "Dylan Sampson (TENN RB) · career yards from scrimmage",
-     "value": 2826,
-     "school": "TENN"
-    },
-    {
-     "label": "Joshua Dobbs (TENN QB) · 2016 rushing yards",
-     "value": 831,
-     "school": "TENN"
-    },
-    {
-     "label": "Re'Mahn Davis (VAN RB) · 2022 rushing yards",
-     "value": 926,
-     "school": "VAN"
-    }
+   "pitted": true,
+   "prompt": "Since 2012, what was the longest offensive play in a Tennessee–Vanderbilt game?",
+   "options": [
+    "Eric Gray (Tennessee), 2019: run",
+    "Richie Hoskins (Vanderbilt), 2024: catch",
+    "Will Sheppard (Vanderbilt), 2021: catch",
+    "Steven Scheu (Vanderbilt), 2014: catch"
    ],
-   "sig": "mxydsDylan Sampsoncareer yards from scrimmage,Joshua Dobbs2016 rushing yards,Re'Mahn Davis2022 rushing yards,Will Sheppard2023 receiving yards"
+   "answer": 0,
+   "order": [
+    2,
+    1,
+    3,
+    0
+   ],
+   "reveal": "Eric Gray 2019: 94-yard run · Will Sheppard 2021: 56-yard catch · Steven Scheu 2014: 36-yard catch · Richie Hoskins 2024: 31-yard catch",
+   "sig": "lp2019-11-30",
+   "more": {
+    "title": "Longest plays in Tennessee–Vanderbilt games since 2012",
+    "rows": [
+     "1. Eric Gray (TENN) 2019: 94-yard run",
+     "2. Dont'E Thornton (TENN) 2024: 86-yard catch",
+     "3. Jaylen Wright (TENN) 2022: 83-yard run",
+     "4. Trent Sherfield (VAN) 2016: 76-yard catch",
+     "5. Ty Chandler (TENN) 2018: 75-yard run",
+     "6. Velus Jones Jr. (TENN) 2020: 74-yard catch",
+     "7. Zac Stacy (VAN) 2012: 72-yard catch",
+     "8. Will Sheppard (VAN) 2021: 56-yard catch"
+    ]
+   }
   }
  ]
 }

@@ -55,6 +55,7 @@ export interface Dataset {
   rivalry?: { source: string; boxFrom: number; pairs: Record<string, RivalryPair> };
   leaders?: import("./trend-gen").SeasonLeaders;
   careerRec?: import("./notable-gen").CareerReceiving;
+  walkoffs?: import("./walkoff-gen").WalkoffData;
   draft?: import("./honors-gen").DraftData;
   honors?: import("./honors-gen").HonorsData;
 }

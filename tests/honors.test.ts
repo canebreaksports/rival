@@ -57,3 +57,27 @@ describe("honors questions", () => {
     expect(seen).toBeGreaterThan(0);
   });
 });
+
+import { genWalkoffCount, genWalkoffMC } from "@/lib/walkoff-gen";
+import { DATA as DW } from "@/lib/data";
+describe("walk-offs (final play or overtime)", () => {
+  const W = DW.walkoffs!;
+  it("known games are found and classified", () => {
+    const find = (k: string, y: number) => W.pairs[k]?.list.find(x => x.season === y);
+    expect(find("ALA|AUB", 2013)).toMatchObject({ winner: "AUB", ws: 34, ls: 28, how: "ret" });   // Kick Six
+    expect(find("ALA|AUB", 2021)).toMatchObject({ winner: "ALA", how: "ot" });                    // 4OT
+    expect(find("TAMU|TEX", 2011)).toMatchObject({ winner: "TEX", ws: 27, ls: 25, how: "fg" });    // Tucker at the gun
+    expect(find("TENN|UGA", 2016)).toMatchObject({ winner: "TENN", how: "td" });                  // Hail Mary
+    expect(find("ALA|AUB", 2010)).toBeUndefined();                                                  // Auburn led at the end, no walk-off
+  });
+  it("every prompt spells out what counts, and the bonus is Name the Years", () => {
+    for (const k of Object.keys(W.pairs)) {
+      const [a, b] = k.split("|") as [any, any];
+      for (const q of [genWalkoffCount(W, a, b), genWalkoffMC(W, a, b, () => 0.5)]) if (q) {
+        expect(q.prompt).toMatch(/as time expired in the 4th quarter, or any overtime win/);
+        if (q.type === "count") expect(q.bonus).toBe("years");
+        if (q.type === "mc") expect(q.years!.A.length + q.years!.B.length).toBe(Number(q.options[q.answer]));
+      }
+    }
+  });
+});

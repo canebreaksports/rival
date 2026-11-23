@@ -6,42 +6,101 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-23T16:29:54.006Z",
- "engine": 15,
+ "generatedAt": "2026-11-23T19:49:00.659Z",
+ "engine": 16,
  "questions": [
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
+   "type": "rank",
+   "label": "Notables",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
-   "A": {
-    "label": "Albert Okwuegbunam (MIZ TE)",
-    "value": 23,
-    "school": "MIZ"
-   },
-   "B": {
-    "label": "Samaje Perine (OU RB)",
-    "value": 2,
-    "school": "OU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Albert Okwuegbunam 23 vs. Samaje Perine 2.",
-   "sig": "urecTDSamaje PerineAlbert Okwuegbunam"
+   "pitted": true,
+   "unit": "yds",
+   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Mark Clayton (Oklahoma, 2001–04)",
+     "value": 3241,
+     "school": "OU"
+    },
+    {
+     "label": "Luther Burden III (Missouri, 2022–24)",
+     "value": 2263,
+     "school": "MIZ"
+    },
+    {
+     "label": "Chase Coffman (Missouri, 2005–08)",
+     "value": 2659,
+     "school": "MIZ"
+    },
+    {
+     "label": "Ryan Broyles (Oklahoma, 2008–11)",
+     "value": 4586,
+     "school": "OU"
+    }
+   ],
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Oklahoma Sooners football statistical leaders\" career receiving yards table (revision 1373733678), which cites the school record book; fetched 2026-11-23; Wikipedia \"Missouri Tigers football statistical leaders\" career receiving yards table (revision 1385738145), which cites the school record book; fetched 2026-11-23",
+   "sig": "nrreceivingChase Coffman,Luther Burden III,Mark Clayton,Ryan Broyles",
+   "more": {
+    "title": "Career receiving yards, Oklahoma and Missouri (careers ending 2000 or later)",
+    "rows": [
+     "1. Ryan Broyles (Oklahoma, 2008–11) 4,586",
+     "2. Sterling Shepard (Oklahoma, 2012–15) 3,482",
+     "3. CeeDee Lamb (Oklahoma, 2017–19) 3,292",
+     "4. Mark Clayton (Oklahoma, 2001–04) 3,241",
+     "5. Juaquin Iglesias (Oklahoma, 2005–08) 2,861",
+     "6. Danario Alexander (Missouri, 2006–09) 2,778",
+     "7. Justin Gage (Missouri, 1999–02) 2,704",
+     "8. Chase Coffman (Missouri, 2005–08) 2,659",
+     "9. Kenny Stills (Oklahoma, 2010–12) 2,594",
+     "10. J'Mon Moore (Missouri, 2014–17) 2,477"
+    ]
+   }
   },
   {
-   "type": "prog",
-   "label": "Program Pit · Oklahoma vs Missouri",
-   "a": "OU",
-   "b": "MIZ",
-   "prompt": "Who had more losing seasons from 2000–2025?",
-   "values": [
-    2,
-    9
-   ],
+   "type": "moment",
+   "label": "Rivalry Game",
    "verified": true,
-   "sig": "glosing"
+   "pitted": true,
+   "game": {
+    "date": "Oct 13, 2007",
+    "winner": "OU",
+    "loser": "MIZ",
+    "ws": 41,
+    "ls": 31,
+    "venue": "Memorial Stadium (Norman, OK)"
+   },
+   "prompt": "In this game, did Chris Brown (Oklahoma) run for more or less than",
+   "line": "50 rushing yards",
+   "answer": "over",
+   "reveal": "More. Chris Brown had 67 rushing yards on 13 carries and 3 TD in this game.",
+   "check": {
+    "value": 67,
+    "line": 50
+   },
+   "sig": "gm2007-10-13Chris Brownrush"
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Oct 23, 2010",
+    "winner": "MIZ",
+    "loser": "OU",
+    "ws": 36,
+    "ls": 27,
+    "venue": "Memorial Stadium"
+   },
+   "prompt": "In this game, did Blaine Gabbert (Missouri) throw for more or less than",
+   "line": "250 passing yards",
+   "answer": "over",
+   "reveal": "More. Blaine Gabbert had 308 passing yards and 1 TD in this game.",
+   "check": {
+    "value": 308,
+    "line": 250
+   },
+   "sig": "gm2010-10-23Blaine Gabbertpass"
   },
   {
    "type": "count",
@@ -69,6 +128,62 @@
    ],
    "sig": "tsrush15002022",
    "bonus": "years"
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Kyler Murray (OU QB) · 2018 rushing TDs",
+     "value": 12,
+     "school": "OU"
+    },
+    {
+     "label": "Larry Rountree III (MIZ RB) · 2020 rushing TDs",
+     "value": 14,
+     "school": "MIZ"
+    },
+    {
+     "label": "CeeDee Lamb (OU WR) · 2018 receiving TDs",
+     "value": 11,
+     "school": "OU"
+    },
+    {
+     "label": "Samaje Perine (OU RB) · career rushing TDs",
+     "value": 49,
+     "school": "OU"
+    }
+   ],
+   "sig": "nxTDCeeDee Lamb2018 receiving TDs,Kyler Murray2018 rushing TDs,Larry Rountree III2020 rushing TDs,Samaje Perinecareer rushing TDs"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Oklahoma vs Missouri",
+   "a": "OU",
+   "b": "MIZ",
+   "prompt": "Who won more total games from 2000–2025?",
+   "values": [
+    271,
+    192
+   ],
+   "verified": true,
+   "sig": "gtotalW"
+  },
+  {
+   "type": "prog",
+   "label": "Program Pit · Oklahoma vs Missouri",
+   "a": "OU",
+   "b": "MIZ",
+   "prompt": "Who had more losing seasons from 2000–2025?",
+   "values": [
+    2,
+    9
+   ],
+   "verified": true,
+   "sig": "glosing"
   },
   {
    "type": "count",
@@ -100,27 +215,14 @@
    "bonus": "years"
   },
   {
-   "type": "prog",
-   "label": "Program Pit · Oklahoma vs Missouri",
-   "a": "OU",
-   "b": "MIZ",
-   "prompt": "Whose best season since 2000 had more wins?",
-   "values": [
-    13,
-    12
-   ],
-   "verified": true,
-   "sig": "gpeakW"
-  },
-  {
    "type": "h2h",
    "label": "Against Each Other",
    "verified": true,
-   "flip": false,
+   "flip": true,
    "prompt": "In Oklahoma–Missouri games since 2006, who had more rushing yards against the other school?",
    "A": {
-    "label": "Chris Brown (OU) vs. Missouri",
-    "value": 260,
+    "label": "Allen Patrick (OU) vs. Missouri",
+    "value": 294,
     "school": "OU"
    },
    "B": {
@@ -129,8 +231,8 @@
     "school": "MIZ"
    },
    "unit": "rushing yds",
-   "note": "Chris Brown: 260 in 3 games. Henry Josey: 197 in 2 games.",
-   "sig": "vsrushChris Brown,Henry Josey",
+   "note": "Allen Patrick: 294 in 3 games. Henry Josey: 197 in 2 games.",
+   "sig": "vsrushAllen Patrick,Henry Josey",
    "more": {
     "title": "Top rushing yards against the other school since 2006",
     "rows": [
@@ -144,125 +246,47 @@
    }
   },
   {
-   "type": "moment",
-   "label": "Rivalry Game",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Dec 1, 2007",
-    "winner": "OU",
-    "loser": "MIZ",
-    "ws": 38,
-    "ls": 17,
-    "venue": "Alamodome"
-   },
-   "prompt": "In this game, did Chris Brown (Oklahoma) have more or fewer than",
-   "line": "2.5 rushing touchdowns",
-   "answer": "under",
-   "reveal": "Less. Chris Brown had 71 rushing yards on 23 carries and 2 TD in this game.",
-   "check": {
-    "value": 2,
-    "line": 2.5
-   },
-   "sig": "gm2007-12-01Chris Brownrushtd"
-  },
-  {
    "type": "rank",
-   "label": "Fresh Mix",
+   "label": "Rivalry Games",
    "verified": true,
    "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
+   "prompt": "Rank these single-game rushing performances in Oklahoma–Missouri games, highest first.",
    "items": [
     {
-     "label": "J'Mon Moore (MIZ WR) · 2016 receiving yards",
-     "value": 1012,
-     "school": "MIZ"
-    },
-    {
-     "label": "Eric Gray (OU RB) · 2021 yards from scrimmage",
-     "value": 641,
+     "label": "Chris Brown (OU) · 2007",
+     "value": 71,
      "school": "OU"
     },
     {
-     "label": "Adrian Peterson (OU RB) · 2004 rushing yards",
-     "value": 1925,
-     "school": "OU"
+     "label": "Henry Josey (MIZ) · 2011",
+     "value": 133,
+     "school": "MIZ"
     },
     {
-     "label": "Johnathon Johnson (MIZ WR) · 2018 receiving yards",
-     "value": 737,
+     "label": "James Franklin (MIZ) · 2011",
+     "value": 103,
      "school": "MIZ"
+    },
+    {
+     "label": "Allen Patrick (OU) · 2006",
+     "value": 162,
+     "school": "OU"
     }
    ],
-   "sig": "mxydsAdrian Peterson2004 rushing yards,Eric Gray2021 yards from scrimmage,J'Mon Moore2016 receiving yards,Johnathon Johnson2018 receiving yards"
-  },
-  {
-   "type": "rank",
-   "label": "Notables",
-   "verified": true,
-   "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
-   "items": [
-    {
-     "label": "Kenny Stills (Oklahoma, 2010–12)",
-     "value": 2594,
-     "school": "OU"
-    },
-    {
-     "label": "CeeDee Lamb (Oklahoma, 2017–19)",
-     "value": 3292,
-     "school": "OU"
-    },
-    {
-     "label": "Chase Coffman (Missouri, 2005–08)",
-     "value": 2659,
-     "school": "MIZ"
-    },
-    {
-     "label": "Luther Burden III (Missouri, 2022–24)",
-     "value": 2263,
-     "school": "MIZ"
-    }
-   ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"Oklahoma Sooners football statistical leaders\" career receiving yards table (revision 1373733678), which cites the school record book; fetched 2026-11-23; Wikipedia \"Missouri Tigers football statistical leaders\" career receiving yards table (revision 1385738145), which cites the school record book; fetched 2026-11-23",
-   "sig": "nrCeeDee Lamb,Chase Coffman,Kenny Stills,Luther Burden III",
+   "sig": "grrushAllen Patrick2006,Chris Brown2007,Henry Josey2011,James Franklin2011",
    "more": {
-    "title": "Career receiving yards, Oklahoma and Missouri (careers ending 2000 or later)",
+    "title": "Top rushing games in this rivalry (box scores)",
     "rows": [
-     "1. Ryan Broyles (Oklahoma, 2008–11) 4,586",
-     "2. Sterling Shepard (Oklahoma, 2012–15) 3,482",
-     "3. CeeDee Lamb (Oklahoma, 2017–19) 3,292",
-     "4. Mark Clayton (Oklahoma, 2001–04) 3,241",
-     "5. Juaquin Iglesias (Oklahoma, 2005–08) 2,861",
-     "6. Danario Alexander (Missouri, 2006–09) 2,778",
-     "7. Justin Gage (Missouri, 1999–02) 2,704",
-     "8. Chase Coffman (Missouri, 2005–08) 2,659",
-     "9. Kenny Stills (Oklahoma, 2010–12) 2,594",
-     "10. J'Mon Moore (Missouri, 2014–17) 2,477"
+     "1. Allen Patrick (OU) 2006: 162",
+     "2. Henry Josey (MIZ) 2011: 133",
+     "3. Chris Brown (OU) 2008: 122",
+     "4. Mossis Madu (OU) 2008: 114",
+     "5. James Franklin (MIZ) 2011: 103",
+     "6. Allen Patrick (OU) 2007: 88",
+     "7. Chase Daniel (MIZ) 2006: 75",
+     "8. De'Vion Moore (MIZ) 2010: 73"
     ]
    }
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2018,
-   "stat": "Rushing season",
-   "aSchool": "MIZ",
-   "other": "OU",
-   "aName": "Tyler Badie (RB)",
-   "bName": "Kennedy Brooks (RB)",
-   "A": {
-    "big": "436",
-    "sm": "rush yds · 2 TD"
-   },
-   "B": {
-    "big": "1,056",
-    "sm": "rush yds · 12 TD"
-   },
-   "flip": true,
-   "sig": "drush2018Kennedy Brooks,Tyler Badie"
   }
  ]
 }

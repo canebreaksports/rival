@@ -6,8 +6,8 @@
   "away": "AUB",
   "home": "ALA"
  },
- "generatedAt": "2026-11-23T16:29:53.665Z",
- "engine": 15,
+ "generatedAt": "2026-11-23T19:49:00.361Z",
+ "engine": 16,
  "questions": [
   {
    "type": "h2h",
@@ -22,48 +22,117 @@
     "school": "AUB"
    },
    "B": {
-    "label": "Trent Richardson (ALA RB)",
-    "value": 7,
+    "label": "Najee Harris (ALA RB)",
+    "value": 11,
     "school": "ALA"
    },
    "unit": "",
-   "note": "🚨 Upset: Philip Lutzenkirchen 14 vs. Trent Richardson 7.",
-   "sig": "urecTDTrent RichardsonPhilip Lutzenkirchen"
+   "note": "🚨 Upset: Philip Lutzenkirchen 14 vs. Najee Harris 11.",
+   "sig": "urecTDNajee HarrisPhilip Lutzenkirchen"
   },
   {
-   "type": "mc",
-   "label": "Longest Play",
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
    "verified": true,
-   "pitted": true,
-   "prompt": "Since 2006, what was the longest offensive play in a Auburn–Alabama game?",
-   "options": [
-    "Amari Cooper (Alabama), 2013: catch",
-    "Colin Peek (Alabama), 2009: catch",
-    "Germie Bernard (Alabama), 2024: catch",
-    "Eli Stove (Auburn), 2016: catch"
+   "prompt": "Rank these seasons by rushing yards, highest first.",
+   "items": [
+    {
+     "label": "Jalen Milroe (QB) · 2023 ALA",
+     "value": 531,
+     "school": "ALA"
+    },
+    {
+     "label": "Trent Richardson (RB) · 2010 ALA",
+     "value": 700,
+     "school": "ALA"
+    },
+    {
+     "label": "Kenny Irons (RB) · 2005 AUB",
+     "value": 1293,
+     "school": "AUB"
+    },
+    {
+     "label": "Cam Newton (QB) · 2010 AUB",
+     "value": 1473,
+     "school": "AUB"
+    }
    ],
-   "answer": 0,
-   "order": [
-    0,
-    1,
-    2,
-    3
-   ],
-   "reveal": "Amari Cooper 2013: 99-yard catch · Eli Stove 2016: 55-yard catch · Colin Peek 2009: 33-yard catch · Germie Bernard 2024: 26-yard catch",
-   "sig": "lp2013-11-30",
+   "unit": "yds",
+   "note": "🪤 Trap: Jalen Milroe's best year was 2024 (726), not 2023; Trent Richardson's best year was 2011 (1,679), not 2010.",
+   "sig": "trrushCam Newton2010,Jalen Milroe2023,Kenny Irons2005,Trent Richardson2010",
    "more": {
-    "title": "Longest plays in Auburn–Alabama games since 2006",
+    "title": "Top 8: single-season rushing yards (ALA, AUB players in our data)",
     "rows": [
-     "1. Amari Cooper (ALA) 2013: 99-yard catch",
-     "2. Jason Smith (AUB) 2015: 77-yard catch",
-     "3. Amari Cooper (ALA) 2014: 75-yard catch",
-     "4. Darvin Adams (AUB) 2009: 72-yard catch",
-     "5. Terrell Zachery (AUB) 2010: 70-yard catch",
-     "6. Julio Jones (ALA) 2010: 68-yard catch",
-     "7. Sammie Coates (AUB) 2014: 68-yard catch",
-     "8. Jermaine Burton (ALA) 2023: 68-yard catch"
+     "1. Derrick Henry (ALA 2015) 2,219",
+     "2. Tre Mason (AUB 2013) 1,816",
+     "3. Trent Richardson (ALA 2011) 1,679",
+     "4. Cam Newton (AUB 2010) 1,473",
+     "5. Najee Harris (ALA 2020) 1,466",
+     "6. Kenny Irons (AUB 2005) 1,293",
+     "7. Najee Harris (ALA 2019) 1,224",
+     "8. Nick Marshall (AUB 2013) 1,068"
     ]
    }
+  },
+  {
+   "type": "moment",
+   "label": "Rivalry Game",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 25, 2023",
+    "winner": "ALA",
+    "loser": "AUB",
+    "ws": 27,
+    "ls": 24,
+    "venue": "Jordan-Hare Stadium"
+   },
+   "prompt": "In this game, did Jermaine Burton (Alabama) have more or less than",
+   "line": "80 receiving yards",
+   "answer": "over",
+   "reveal": "More. Jermaine Burton had 107 receiving yards on 4 catches and 1 TD in this game.",
+   "check": {
+    "value": 107,
+    "line": 80
+   },
+   "sig": "gm2023-11-25Jermaine Burtonrec"
+  },
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "AUB",
+   "b": "ALA",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, which school had more Doak Walker Award winners?",
+   "A": [],
+   "B": [
+    {
+     "name": "Trent Richardson",
+     "yards": 2011,
+     "season": 2011,
+     "label": "winner",
+     "profile": "won the Doak Walker Award (best running back)"
+    },
+    {
+     "name": "Derrick Henry",
+     "yards": 2015,
+     "season": 2015,
+     "label": "winner",
+     "profile": "won the Doak Walker Award (best running back)"
+    },
+    {
+     "name": "Najee Harris",
+     "yards": 2020,
+     "season": 2020,
+     "label": "winner",
+     "profile": "won the Doak Walker Award (best running back)"
+    }
+   ],
+   "sig": "acdoak2000",
+   "bonus": "years"
   },
   {
    "label": "Iron Bowl",
@@ -84,46 +153,164 @@
    }
   },
   {
-   "type": "rank",
-   "label": "Rivalry Games",
+   "label": "Iron Bowl",
    "verified": true,
+   "sig": "kIron Bowl0",
+   "type": "moment",
+   "prompt": "Chris Davis returned Alabama's missed field goal for the 'Kick Six.' Was that field-goal attempt longer or shorter than",
+   "line": "55 yards",
+   "answer": "over",
+   "reveal": "Longer. Alabama tried a 57-yard field goal; it fell short and Chris Davis returned it 109 yards for the touchdown that won it 34–28.",
+   "game": {
+    "date": "Nov 30, 2013",
+    "winner": "AUB",
+    "ws": 34,
+    "ls": 28,
+    "venue": "Jordan-Hare Stadium",
+    "loser": "ALA"
+   }
+  },
+  {
+   "type": "h2h",
+   "label": "Against Each Other",
+   "verified": true,
+   "flip": false,
+   "prompt": "In Auburn–Alabama games since 2006, who had more rushing yards against the other school?",
+   "A": {
+    "label": "Ben Tate (AUB) vs. Alabama",
+    "value": 134,
+    "school": "AUB"
+   },
+   "B": {
+    "label": "Glen Coffee (ALA) vs. Auburn",
+    "value": 204,
+    "school": "ALA"
+   },
+   "unit": "rushing yds",
+   "note": "Ben Tate: 134 in 3 games. Glen Coffee: 204 in 2 games.",
+   "sig": "vsrushBen Tate,Glen Coffee",
+   "more": {
+    "title": "Top rushing yards against the other school since 2006",
+    "rows": [
+     "1. Derrick Henry (ALA) 343 in 2 games",
+     "2. T.J. Yeldon (ALA) 306 in 3 games",
+     "3. Jarquez Hunter (AUB) 285 in 4 games",
+     "4. Trent Richardson (ALA) 278 in 3 games",
+     "5. Najee Harris (ALA) 267 in 3 games",
+     "6. Tre Mason (AUB) 256 in 3 games"
+    ]
+   }
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "pitted": true,
    "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Auburn–Alabama games, highest first.",
+   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
    "items": [
     {
-     "label": "Mark-Antony Richards (AUB) · 2020",
-     "value": 57,
-     "school": "AUB"
-    },
-    {
-     "label": "Jalen Hurts (ALA) · 2017",
-     "value": 82,
+     "label": "Amari Cooper (Alabama, 2012–14)",
+     "value": 3463,
      "school": "ALA"
     },
     {
-     "label": "Jarquez Hunter (AUB) · 2022",
-     "value": 134,
+     "label": "Seth Williams (Auburn, 2018–20)",
+     "value": 2124,
      "school": "AUB"
     },
     {
-     "label": "Ashton Daniels (AUB) · 2025",
-     "value": 108,
+     "label": "Darvin Adams (Auburn, 2008–10)",
+     "value": 1978,
      "school": "AUB"
+    },
+    {
+     "label": "Calvin Ridley (Alabama, 2015–17)",
+     "value": 2781,
+     "school": "ALA"
     }
    ],
-   "sig": "grrushAshton Daniels2025,Jalen Hurts2017,Jarquez Hunter2022,Mark-Antony Richards2020",
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Auburn Tigers football statistical leaders\" career receiving yards table (revision 1351164605), which cites the school record book; fetched 2026-11-23; Wikipedia \"Alabama Crimson Tide football statistical leaders\" career receiving yards table (revision 1386991921), which cites the school record book; fetched 2026-11-23",
+   "sig": "nrreceivingAmari Cooper,Calvin Ridley,Darvin Adams,Seth Williams",
    "more": {
-    "title": "Top rushing games in this rivalry (box scores)",
+    "title": "Career receiving yards, Auburn and Alabama (careers ending 2000 or later)",
     "rows": [
-     "1. Derrick Henry (ALA) 2015: 271",
-     "2. Trent Richardson (ALA) 2011: 203",
-     "3. Tre Mason (AUB) 2013: 164",
-     "4. Najee Harris (ALA) 2019: 146",
-     "5. Glen Coffee (ALA) 2008: 144",
-     "6. T.J. Yeldon (ALA) 2013: 141",
-     "7. Jarquez Hunter (AUB) 2022: 134",
-     "8. Eddie Lacy (ALA) 2012: 131"
+     "1. DeVonta Smith (Alabama, 2017–20) 3,965",
+     "2. Amari Cooper (Alabama, 2012–14) 3,463",
+     "3. D. J. Hall (Alabama, 2004–07) 2,923",
+     "4. Calvin Ridley (Alabama, 2015–17) 2,781",
+     "5. Jerry Jeudy (Alabama, 2017–19) 2,742",
+     "6. Julio Jones (Alabama, 2008–10) 2,653",
+     "7. Seth Williams (Auburn, 2018–20) 2,124",
+     "8. Courtney Taylor (Auburn, 2003–06) 2,098",
+     "9. Emory Blake (Auburn, 2009–12) 2,022",
+     "10. Darvin Adams (Auburn, 2008–10) 1,978"
     ]
+   }
+  },
+  {
+   "label": "Iron Bowl",
+   "verified": true,
+   "sig": "kIron Bowl5",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "Under Nick Saban (2007–2023), what was Alabama's record against Auburn teams that finished the season with 9 or more wins?",
+   "options": [
+    "0–5",
+    "2–3",
+    "3–2",
+    "5–0"
+   ],
+   "answer": 0,
+   "reveal": "0–5. Auburn won all five: 2007 (finished 9–4), 2010 (14–0), 2013 (12–2), 2017 (10–4) and 2019 (9–4). Against every other Auburn team, Saban's Alabama went 12–0.",
+   "order": [
+    3,
+    0,
+    2,
+    1
+   ],
+   "years": {
+    "prompt": "Name the five seasons Auburn beat Saban's Alabama with a 9-win team.",
+    "a": "AUB",
+    "b": "ALA",
+    "A": [
+     {
+      "name": "Auburn 17, Alabama 10",
+      "yards": 0,
+      "season": 2007,
+      "label": "finished 9–4",
+      "profile": "Jordan-Hare"
+     },
+     {
+      "name": "Auburn 28, Alabama 27",
+      "yards": 0,
+      "season": 2010,
+      "label": "finished 14–0",
+      "profile": "Bryant-Denny"
+     },
+     {
+      "name": "Auburn 34, Alabama 28 (Kick Six)",
+      "yards": 0,
+      "season": 2013,
+      "label": "finished 12–2",
+      "profile": "Jordan-Hare"
+     },
+     {
+      "name": "Auburn 26, Alabama 14",
+      "yards": 0,
+      "season": 2017,
+      "label": "finished 10–4",
+      "profile": "Jordan-Hare"
+     },
+     {
+      "name": "Auburn 48, Alabama 45",
+      "yards": 0,
+      "season": 2019,
+      "label": "finished 9–4",
+      "profile": "Jordan-Hare"
+     }
+    ],
+    "B": []
    }
   },
   {
@@ -177,176 +364,6 @@
    ],
    "sig": "tsrush8002022",
    "bonus": "years"
-  },
-  {
-   "label": "Iron Bowl",
-   "verified": true,
-   "sig": "kIron Bowl5",
-   "type": "mc",
-   "pitted": true,
-   "prompt": "Under Nick Saban (2007–2023), what was Alabama's record against Auburn teams that finished the season with 9 or more wins?",
-   "options": [
-    "0–5",
-    "2–3",
-    "3–2",
-    "5–0"
-   ],
-   "answer": 0,
-   "reveal": "0–5. Auburn won all five: 2007 (finished 9–4), 2010 (14–0), 2013 (12–2), 2017 (10–4) and 2019 (9–4). Against every other Auburn team, Saban's Alabama went 12–0.",
-   "order": [
-    2,
-    3,
-    1,
-    0
-   ],
-   "years": {
-    "prompt": "Name the five seasons Auburn beat Saban's Alabama with a 9-win team.",
-    "a": "AUB",
-    "b": "ALA",
-    "A": [
-     {
-      "name": "Auburn 17, Alabama 10",
-      "yards": 0,
-      "season": 2007,
-      "label": "finished 9–4",
-      "profile": "Jordan-Hare"
-     },
-     {
-      "name": "Auburn 28, Alabama 27",
-      "yards": 0,
-      "season": 2010,
-      "label": "finished 14–0",
-      "profile": "Bryant-Denny"
-     },
-     {
-      "name": "Auburn 34, Alabama 28 (Kick Six)",
-      "yards": 0,
-      "season": 2013,
-      "label": "finished 12–2",
-      "profile": "Jordan-Hare"
-     },
-     {
-      "name": "Auburn 26, Alabama 14",
-      "yards": 0,
-      "season": 2017,
-      "label": "finished 10–4",
-      "profile": "Jordan-Hare"
-     },
-     {
-      "name": "Auburn 48, Alabama 45",
-      "yards": 0,
-      "season": 2019,
-      "label": "finished 9–4",
-      "profile": "Jordan-Hare"
-     }
-    ],
-    "B": []
-   }
-  },
-  {
-   "label": "Iron Bowl",
-   "verified": true,
-   "sig": "kIron Bowl0",
-   "type": "moment",
-   "prompt": "Chris Davis returned Alabama's missed field goal for the 'Kick Six.' Was that field-goal attempt longer or shorter than",
-   "line": "55 yards",
-   "answer": "over",
-   "reveal": "Longer. Alabama tried a 57-yard field goal; it fell short and Chris Davis returned it 109 yards for the touchdown that won it 34–28.",
-   "game": {
-    "date": "Nov 30, 2013",
-    "winner": "AUB",
-    "ws": 34,
-    "ls": 28,
-    "venue": "Jordan-Hare Stadium",
-    "loser": "ALA"
-   }
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2014,
-   "stat": "Rushing season",
-   "aSchool": "AUB",
-   "other": "ALA",
-   "aName": "Nick Marshall (QB)",
-   "bName": "Derrick Henry (RB)",
-   "A": {
-    "big": "798",
-    "sm": "rush yds · 11 TD"
-   },
-   "B": {
-    "big": "990",
-    "sm": "rush yds · 11 TD"
-   },
-   "flip": true,
-   "sig": "drush2014Derrick Henry,Nick Marshall"
-  },
-  {
-   "type": "count",
-   "label": "Awards",
-   "a": "AUB",
-   "b": "ALA",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, which school had more Doak Walker Award winners?",
-   "A": [],
-   "B": [
-    {
-     "name": "Trent Richardson",
-     "yards": 2011,
-     "season": 2011,
-     "label": "winner",
-     "profile": "won the Doak Walker Award (best running back)"
-    },
-    {
-     "name": "Derrick Henry",
-     "yards": 2015,
-     "season": 2015,
-     "label": "winner",
-     "profile": "won the Doak Walker Award (best running back)"
-    },
-    {
-     "name": "Najee Harris",
-     "yards": 2020,
-     "season": 2020,
-     "label": "winner",
-     "profile": "won the Doak Walker Award (best running back)"
-    }
-   ],
-   "sig": "acdoak2000",
-   "bonus": "years"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Tank Bigsby (AUB RB) · career rushing TDs",
-     "value": 25,
-     "school": "AUB"
-    },
-    {
-     "label": "Trent Richardson (ALA RB) · career total TDs (rushing + receiving)",
-     "value": 42,
-     "school": "ALA"
-    },
-    {
-     "label": "Kenny Irons (AUB RB) · 2006 rushing TDs",
-     "value": 4,
-     "school": "AUB"
-    },
-    {
-     "label": "Ben Obomanu (AUB WR) · career total TDs (rushing + receiving)",
-     "value": 20,
-     "school": "AUB"
-    }
-   ],
-   "sig": "mxTDBen Obomanucareer total TDs (rushing + receiving),Kenny Irons2006 rushing TDs,Tank Bigsbycareer rushing TDs,Trent Richardsoncareer total TDs (rushing + receiving)"
   }
  ]
 }
