@@ -8,7 +8,18 @@ import { sundayOf } from "./gating";
 const n = (k: string) => SCHOOL[k]?.name ?? k;
 const f = (v: number) => v.toLocaleString("en-US");
 
-export interface ReviewItem { kind: string; prompt: string; options?: string[]; answer: string; detail?: string; flags: string[] }
+export interface ReviewItem { kind: string; prompt: string; options?: string[]; answer: string; detail?: string; flags: string[]; bonusList?: string }
+
+/** A question's bonuses in play order (years first, then names), with their answers, for the reviewer. */
+export function bonusesOf(q: Question): { prompt: string; answers: string }[] {
+  const out: { prompt: string; answers: string }[] = [];
+  const g = q as unknown as { years?: { prompt: string; A: CE[]; B: CE[] }; names?: { prompt: string; A: CE[]; B: CE[] } };
+  if (q.type === "count") out.push({ prompt: q.bonus === "years" ? "Name the years" : "Name them", answers: reviewQuestion(q).bonusList ?? "" });
+  if (g.years) out.push({ prompt: g.years.prompt.replace(/^Bonus:\s*/, ""), answers: [...g.years.A, ...g.years.B].map(x => `${x.season} (${x.profile ?? x.name})`).join(", ") });
+  if (g.names) out.push({ prompt: g.names.prompt.replace(/^Bonus:\s*/, ""), answers: [...g.names.A, ...g.names.B].map(x => `${x.name}${x.label ? ` (${x.label})` : ""}`).join(", ") });
+  return out;
+}
+type CE = { name: string; season?: number; profile?: string; label?: string };
 
 export function reviewQuestion(q: Question): ReviewItem {
   const flags = [q.trap && "🪤 trap", q.upset && "🚨 upset", q.pair && `side by side ${q.pairPart}/2`, !q.verified && "UNVERIFIED"].filter(Boolean) as string[];
@@ -23,15 +34,14 @@ export function reviewQuestion(q: Question): ReviewItem {
       const c = correctAnswer(q);
       const list = (k: string, L: typeof q.A) => `${n(k)} (${L.length}): ${L.map(x => `${x.name}${x.season ? " " + x.season : ""} (${x.label ?? f(x.yards)})`).join(", ") || "none"}`;
       return { kind: "School Count + Name Them", prompt: q.prompt ?? `Which school has more ${f(q.threshold)}-yard career rushers?`,
-        options: [n(q.a), n(q.b), "Tied"], answer: c === "t" ? "Tied" : n(c === "a" ? q.a : q.b), detail: `${list(q.a, q.A)}\n${list(q.b, q.B)}`, flags };
+        options: [n(q.a), n(q.b), "Tied"], answer: c === "t" ? "Tied" : n(c === "a" ? q.a : q.b), detail: `${n(q.a)} ${q.A.length} · ${n(q.b)} ${q.B.length}`, flags, bonusList: `${list(q.a, q.A)}\n${list(q.b, q.B)}` } as ReviewItem;
     }
     case "moment":
       return { kind: q.pair ? "Higher or Lower (paired)" : `Higher or Lower · ${q.label}`, prompt: `${game ? `[${game}] ` : ""}${q.prompt} ${q.line}`,
         options: ["More", "Less"], answer: q.answer === "over" ? "More" : "Less", detail: q.reveal, flags };
     case "rank": {
       const order = rankOrder(q).map((i, s) => `${s + 1}. ${q.items[i].label} (${f(q.items[i].value)})`).join("\n");
-      const bonus = q.names ? `\n${q.names.prompt}\n${[q.names.a, q.names.b].map(k => `${n(k)}: ${(k === q.names!.a ? q.names!.A : q.names!.B).map(x => `${x.name} (${x.label ?? f(x.yards)})`).join(", ") || "none"}`).join("\n")}` : "";
-      return { kind: `Rank It · ${q.label}`, prompt: `${game ? `[${game}] ` : ""}${q.prompt}`, options: q.items.map(x => x.label), answer: order, detail: (q.note ?? "") + bonus, flags };
+      return { kind: `Rank It · ${q.label}`, prompt: `${game ? `[${game}] ` : ""}${q.prompt}`, options: q.items.map(x => x.label), answer: order, detail: q.note ?? "", flags };
     }
     case "h2h": {
       const w = q.A.value > q.B.value ? q.A : q.B, fmtv = (v: number) => (q.ypc ? v.toFixed(1) + " ypc" : f(v));
@@ -44,8 +54,7 @@ export function reviewQuestion(q: Question): ReviewItem {
     case "cross":
     case "mc":
       return { kind: q.type === "cross" ? "Crossover" : q.label, prompt: `${game ? `[${game}] ` : ""}${q.prompt}`, options: q.order.map(i => q.options[i]),
-        answer: q.options[q.answer], detail: q.reveal + (q.type === "mc" && q.years ? `\nName the Years: ${[...q.years.A, ...q.years.B].map(x => `${x.season} (${x.profile})`).join(", ")}` : "")
-          + (q.type === "mc" && q.names ? `\n${q.names.prompt} ${[...q.names.A, ...q.names.B].map(x => x.name).join(", ")}` : ""), flags };
+        answer: q.options[q.answer], detail: q.reveal, flags };
   }
 }
 
@@ -77,8 +86,9 @@ export function reviewMarkdown(week: string, sets: FrozenSet[]): string {
       if (q.sig) lines.push(`   <sub>id: ${q.sig.slice(0, 40)}</sub>  `);
       if (r.options && q.type !== "rank") lines.push(`   Options: ${r.options.join(" / ")}  `);
       lines.push(...r.answer.split("\n").map(a => `   **${a}**  `));
-      if (r.detail) lines.push(...r.detail.split("\n").map(d => `   ${d}  `));
-      if (q.after) lines.push(`   *After the bonus:* ${q.after}  `);
+      if (r.detail) lines.push(`   *Players see right after answering:* ${r.detail.replace(/\n/g, " ")}  `);
+      for (const b of bonusesOf(q)) lines.push(`   *Bonus:* ${b.prompt}  `, `   *Bonus answers:* ${b.answers.replace(/\n/g, " · ")}  `);
+      if (q.after) lines.push(`   *Players see after the bonus:* ${q.after}  `);
       if (q.info) lines.push(`   *ⓘ ${q.info.title}:* ${q.info.text}  `);
       if (q.more?.rows.length) lines.push(`   *More · ${q.more.title}:* ${q.more.rows.join(" · ")}  `);
       lines.push("");

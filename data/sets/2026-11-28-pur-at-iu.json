@@ -6,8 +6,8 @@
   "away": "PUR",
   "home": "IU"
  },
- "generatedAt": "2026-11-24T04:22:48.001Z",
- "engine": 56,
+ "generatedAt": "2026-11-24T04:32:48.419Z",
+ "engine": 57,
  "questions": [
   {
    "label": "Purdue–Indiana",
@@ -363,7 +363,7 @@
     "title": "Which awards count?",
     "text": "Heisman Trophy: most outstanding player · Maxwell Award: best all-around player · Walter Camp Award: player of the year · Doak Walker Award: best running back · Biletnikoff Award: best receiver · Davey O'Brien Award: best quarterback · John Mackey Award: best tight end · Outland Trophy: best interior lineman · Chuck Bednarik Award: best defensive player · Bronko Nagurski Trophy: best defensive player · Butkus Award: best linebacker · Jim Thorpe Award: best defensive back · Lombardi Award: best lineman or linebacker · Lou Groza Award: best kicker · Ray Guy Award: best punter"
    },
-   "prompt": "From 2000 through 2025, which school had more winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)?",
+   "prompt": "From 2000 through 2025, which school had more winners of major national awards?",
    "A": [
     {
      "name": "Drew Brees",

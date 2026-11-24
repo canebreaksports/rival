@@ -2,7 +2,7 @@
 // Green-light controls on /coach/publish: status per set, approve one set or a whole week.
 import { createContext, useContext, useEffect, useState } from "react";
 import type { Question } from "@/lib/types";
-import { formatOf, reviewQuestion } from "@/lib/review";
+import { bonusesOf, formatOf, reviewQuestion } from "@/lib/review";
 import { applyOrder, units } from "@/lib/order";
 
 type State = { configured: boolean; approved: string[]; pending: string[]; stale: string[]; order: Record<string, string[]> };
@@ -137,10 +137,12 @@ export function SetQuestions({ slug, questions }: { slug: string; questions: Que
         <div className="rq">{r.prompt}</div>
         {r.options && q.type !== "rank" && <div className="ro">{r.options.join(" / ")}</div>}
         <div className="ra" style={{ whiteSpace: "pre-line" }}>{r.answer}</div>
-        {r.detail && <div className="rd" style={{ whiteSpace: "pre-line" }}>{r.detail}</div>}
-        {q.after && <div className="rd"><b>After the bonus:</b> {q.after}</div>}
+        {r.detail && <div className="rd" style={{ whiteSpace: "pre-line" }}><b>1. Players see right after answering:</b> {r.detail}</div>}
+        {bonusesOf(q).map((bq, j) => <div key={j} className="rd" style={{ borderLeft: "3px solid var(--gold)", paddingLeft: 8, margin: "6px 0" }}>
+          <b>{j + 2}. Bonus:</b> {bq.prompt}<br /><span style={{ opacity: 0.85, whiteSpace: "pre-line" }}><b>Bonus answers (hidden from players until they guess):</b> {bq.answers}</span></div>)}
+        {q.after && <div className="rd"><b>Last: players see after the bonus:</b> {q.after}</div>}
         {q.info && <div className="rd">ⓘ {q.info.title}: {q.info.text}</div>}
-        {q.more?.rows.length ? <div className="rd">More · {q.more.title}: {q.more.rows.join(" · ")}</div> : null}
+        {q.more?.rows.length ? <div className="rd"><b>More list (players see it after the bonus):</b> {q.more.title}: {q.more.rows.join(" · ")}</div> : null}
         <div className="rd" style={{ opacity: 0.5, fontSize: 12 }}>id: {q.sig.slice(0, 40)}</div>
         <QReviewBar slug={slug} sig={q.sig} />
       </div> })}

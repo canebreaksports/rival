@@ -95,7 +95,7 @@ export function genAwardCount(h: HonorsData, a: SchoolKey, b: SchoolKey, rng: Rn
   const list = (s: SchoolKey): CountEntry[] => h.wins.filter(w => w.school === s && w.year >= from && (!key || w.award === key))
     .map(w => ({ name: w.name, yards: w.year, season: w.year, label: key ? (w.pos || "winner") : awardName(w.award),
       profile: [w.pos, `won the ${awardName(w.award)} (${h.awards.find(x => x.key === w.award)?.for ?? ""})`].filter(Boolean).join(" · ") }));
-  const what = key ? `${awardName(key)} winners` : "winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)";
+  const what = key ? `${awardName(key)} winners` : "winners of major national awards"; // the ⓘ button lists them (owner: no award list before the bonus)
   const aw = key ? h.awards.find(x => x.key === key)! : null;
   const info = aw ? { title: `What is the ${aw.name}?`, text: `The ${aw.name} is given each year to college football's ${aw.for}.` }
     : { title: "Which awards count?", text: h.awards.map(x => `${x.name}: ${x.for}`).join(" · ") };

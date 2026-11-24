@@ -153,7 +153,7 @@ more("UCLA|USC", [
 for it in EXTRA["MICH|OSU"]:
   if "Gholston" in it.get("prompt", ""):
     it["names"] = {"prompt": "Bonus: name the game's leading rusher.", "a": "MICH", "b": "OSU", "A": [],
-      "B": [{"name": "Chris Wells", "yards": 222, "label": "39 carries, 222 yds, 2 TD", "profile": "Ohio State RB · 39 carries, 222 yards, 2 TD (career high)"}]}
+      "B": [{"name": "Chris 'Beanie' Wells", "yards": 222, "label": "39 carries, 222 yds, 2 TD", "profile": "Ohio State RB · 39 carries, 222 yards, 2 TD (career high)"}]}
     it["source"] += "; Chris Wells 222 yards: same recap and " + RB
 for it in EXTRA["TENN|VAN"]:
   if "53" in it.get("reveal", ""):
@@ -165,7 +165,7 @@ for it in EXTRA["MISS|MSST"]:
 # ---- owner review round 2 (Nov 2026) ----
 for it in EXTRA["MICH|OSU"]:
   if "Gholston" in it.get("prompt", ""):
-    it["reveal"] = "3 of Ohio State's 4 sacks. Michigan finished with 91 total yards and 15 rushing."; it["after"] = "Chris Wells led everyone with 222 rushing yards (39 carries, 2 TD)."
+    it["reveal"] = "3 of Ohio State's 4 sacks. Michigan finished with 91 total yards and 15 rushing."; it["after"] = "Chris \"Beanie\" Wells led everyone with 222 rushing yards (39 carries, 2 TD)."
 for it in EXTRA["TENN|VAN"]:
   if "53" in it.get("reveal", ""):
     it["reveal"] = "53 passing yards. Vanderbilt also forced three interceptions."; it["after"] = "Joshua Dobbs went 11 of 19 for 53 yards and was picked off twice."
