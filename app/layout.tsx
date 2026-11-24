@@ -3,7 +3,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "PITTED · Your school vs. theirs. Every game week.",
-  description: "PITTED: weekly SEC college football trivia. The schools playing each other get one set of 10 questions, same for everyone, one run each.",
+  description: "PITTED: weekly college football rivalry trivia. The schools playing each other get one set of 10 questions, same for everyone, one run each.",
+  appleWebApp: { capable: true, title: "PITTED", statusBarStyle: "black-translucent" },
+  icons: { icon: [{ url: "/favicon-48.png", sizes: "48x48" }, { url: "/icon-192.png", sizes: "192x192" }], apple: "/apple-touch-icon.png" },
 };
 export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover", themeColor: "#0b1410" };
 

@@ -1,7 +1,8 @@
 "use client";
 // The play screen (spec §3 Play + Final). Works for frozen weekly sets (with saved progress) and Coach free play.
 import { useEffect, useMemo, useState, type ReactNode } from "react";
-import type { Progress, Question, SchoolKey } from "@/lib/types";
+import type { Game, Progress, Question, SchoolKey } from "@/lib/types";
+import { ComeBack } from "./ComeBack";
 import { SCHOOL } from "@/lib/schools";
 import { fmt } from "@/lib/generators";
 import { applyResult, correctAnswer, grade, POINTS, scoreRank } from "@/lib/scoring";
@@ -18,6 +19,7 @@ export interface PlayProps {
   mode?: "weekly" | "dive" | "mix" | "round";
   storageKey?: string | null;   // weekly runs save progress here
   sharePath?: string | null;    // the matchup's page, sent with Share Results
+  games?: Game[];               // the schedule: the final screen shows the weekly streak and next unlock
   nextUnlock?: string | null;   // e.g. "Sun, Nov 22" for the final screen
   onExit: () => void;
   onAgain?: () => void;         // free play only
@@ -27,7 +29,7 @@ export interface PlayProps {
 type Reveal = { ok: boolean; msg: ReactNode; correct: string; chosen: string };
 const fresh = (n: number): Progress => ({ i: 0, pts: 0, streak: 0, best: 0, right: 0, n, done: false });
 
-export function Play({ questions: raw, away, home, mode = "weekly", storageKey, sharePath, nextUnlock, onExit, onAgain, onFinish }: PlayProps) {
+export function Play({ questions: raw, away, home, mode = "weekly", storageKey, sharePath, games, nextUnlock, onExit, onAgain, onFinish }: PlayProps) {
   const questions = useMemo(() => raw.map(q => plainQ(q)), [raw]); // no emojis on the site
   const n = questions.length;
   const [p, setP] = useState<Progress>(() => fresh(n));
@@ -90,7 +92,7 @@ export function Play({ questions: raw, away, home, mode = "weekly", storageKey, 
   });
 
   if (!loaded) return null;
-  if (finished) return <Final p={p} n={n} questions={questions} weekly={mode === "weekly"} away={away} home={home} nextUnlock={nextUnlock} onExit={onExit} onAgain={onAgain} sharePath={sharePath} />;
+  if (finished) return <Final p={p} n={n} questions={questions} weekly={mode === "weekly"} away={away} home={home} nextUnlock={nextUnlock} onExit={onExit} onAgain={onAgain} sharePath={sharePath} games={games} />;
   if (!q) return <p className="note">No questions available.</p>;
 
   return (
@@ -410,7 +412,7 @@ function NameNames({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
 /** Results marks as plain text (older saves stored emoji). */
 const plainMarks = (m: string) => m.replace(/✅/gu, "✓").replace(/🟨/gu, "~").replace(/❌/gu, "✗");
 
-function Final({ p, n, questions, weekly, away, home, nextUnlock, onExit, onAgain, sharePath }: { p: Progress; n: number; questions: Question[]; weekly: boolean; away?: SchoolKey | null; home?: SchoolKey | null; nextUnlock?: string | null; onExit: () => void; onAgain?: () => void; sharePath?: string | null }) {
+function Final({ p, n, questions, weekly, away, home, nextUnlock, onExit, onAgain, sharePath, games }: { p: Progress; n: number; questions: Question[]; weekly: boolean; away?: SchoolKey | null; home?: SchoolKey | null; nextUnlock?: string | null; onExit: () => void; onAgain?: () => void; sharePath?: string | null; games?: Game[] }) {
   const [shared, setShared] = useState<string | null>(null);
   const hints = p.hints ?? 0;
   const hintText = hints ? `${hints} hint${hints > 1 ? "s" : ""} used (${hints * POINTS.hint} pts)` : "No hints used";
@@ -429,6 +431,7 @@ function Final({ p, n, questions, weekly, away, home, nextUnlock, onExit, onAgai
     {p.marks && <div className="marks" aria-label="Question results">{plainMarks(p.marks)}</div>}
     <p>{p.right}/{n} correct · best streak {p.best}<br />{hintText}<br />{grade(n ? p.right / n : 0)}
       {weekly && away && home && <><br /><br />That&apos;s this week&apos;s set for {SCHOOL[away].name} vs {SCHOOL[home].name}.{nextUnlock ? ` New matchups unlock ${nextUnlock}.` : ""}</>}</p>
+    {weekly && games && <ComeBack games={games} compact />}
     <button className="btn" onClick={share}>Share Score &amp; Link</button>
     {weekly && <a className="btn ghost" href="/leaderboard" style={{ display: "block", textAlign: "center", textDecoration: "none", marginTop: 8 }}>School Leaderboard</a>}
     <Breakdown p={p} questions={questions} />
