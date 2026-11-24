@@ -77,7 +77,7 @@ export function formatOf(q: Question): string {
 }
 
 export function reviewMarkdown(week: string, sets: FrozenSet[]): string {
-  const lines = [`# RIVAL · questions for the week of ${week}`, "", `${sets.length} matchups. Answers in **bold**.`, ""];
+  const lines = [`# PITTED · questions for the week of ${week}`, "", `${sets.length} matchups. Answers in **bold**.`, ""];
   for (const s of sets) {
     lines.push(`## ${n(s.game.away)} @ ${n(s.game.home)} · ${s.game.date} (${s.questions.length} questions)`, "");
     s.questions.forEach((q, i) => {
