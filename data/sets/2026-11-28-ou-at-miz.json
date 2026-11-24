@@ -6,163 +6,9 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-24T02:10:32.099Z",
- "engine": 52,
+ "generatedAt": "2026-11-24T02:16:16.978Z",
+ "engine": 53,
  "questions": [
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receptions (at the school shown)?",
-   "A": {
-    "label": "Albert Okwuegbunam (MIZ TE)",
-    "value": 98,
-    "school": "MIZ"
-   },
-   "B": {
-    "label": "Joe Mixon (OU RB)",
-    "value": 65,
-    "school": "OU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Albert Okwuegbunam 98 vs. Joe Mixon 65.",
-   "sig": "urecNJoe MixonAlbert Okwuegbunam"
-  },
-  {
-   "type": "mc",
-   "label": "Ranked Wins",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2010, which school has more wins over AP-ranked opponents, and how many?",
-   "options": [
-    "Oklahoma, 49",
-    "Oklahoma, 54",
-    "Missouri, 17",
-    "Missouri, 45"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    3,
-    2,
-    1
-   ],
-   "reveal": "Oklahoma 49, Missouri 17 (through 2025). Latest: Oklahoma: 2025 vs. No. 14 Tennessee 33–27, 2025 vs. No. 4 Alabama 23–21, 2025 vs. No. 23 Missouri 17–6; Missouri: 2023 vs. No. 14 Tennessee 36–7, 2023 vs. No. 7 Ohio State 14–3, 2024 vs. No. 24 Boston College 27–21.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
-   },
-   "sig": "rw2010"
-  },
-  {
-   "type": "count",
-   "label": "Since 2022",
-   "a": "OU",
-   "b": "MIZ",
-   "threshold": 1500,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2022 through 2025, which school had more 1,500-yard rushing seasons?",
-   "A": [],
-   "B": [
-    {
-     "name": "Cody Schrader",
-     "yards": 1617,
-     "season": 2023,
-     "profile": "Running back · 2023: 1,617 rushing, 191 receiving yds"
-    },
-    {
-     "name": "Ahmad Hardy",
-     "yards": 1649,
-     "season": 2025,
-     "profile": "Running back · 2025: 1,649 rushing, 22 receiving yds"
-    }
-   ],
-   "sig": "tsrush15002022",
-   "bonus": "names"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more career receiving TDs?",
-   "A": {
-    "label": "Sterling Shepard (WR) · career, OU",
-    "value": 26,
-    "school": "OU"
-   },
-   "B": {
-    "label": "J'Mon Moore (WR) · career, MIZ",
-    "value": 21,
-    "school": "MIZ"
-   },
-   "unit": "receiving TDs",
-   "sig": "hJ'Mon Moorecareer,Sterling ShepardcareerrecTD",
-   "more": {
-    "title": "Top 6: career receiving TDs (OU, MIZ players in our data)",
-    "rows": [
-     "1. CeeDee Lamb (OU) 32",
-     "2. Sterling Shepard (OU) 26",
-     "3. Mark Andrews (OU) 22",
-     "4. J'Mon Moore (MIZ) 21",
-     "5. Luther Burden III (MIZ) 20",
-     "6. Tyler Badie (MIZ) 11"
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "label": "Game Story",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Dec 1, 2007",
-    "winner": "OU",
-    "loser": "MIZ",
-    "ws": 38,
-    "ls": 17,
-    "venue": "Alamodome"
-   },
-   "prompt": "The 2007 Oklahoma–Missouri game was a top-10 showdown (No. 1 vs. No. 9), but the teams combined for how many rushing yards?",
-   "options": [
-    "264",
-    "324",
-    "294",
-    "204"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    2,
-    3,
-    1
-   ],
-   "reveal": "264: Oklahoma 166, Missouri 98. 60+ rushing yards: Allen Patrick (Oklahoma) 88, Chris Brown (Oklahoma) 71.",
-   "names": {
-    "prompt": "Bonus: name everyone with 60+ rushing yards in this game.",
-    "a": "OU",
-    "b": "MIZ",
-    "A": [
-     {
-      "name": "Allen Patrick",
-      "yards": 88,
-      "label": "88 yds on 13 carries, 1 TD",
-      "profile": "Oklahoma · 88 rushing yards on 13 carries, 1 TD in this game"
-     },
-     {
-      "name": "Chris Brown",
-      "yards": 71,
-      "label": "71 yds on 23 carries, 2 TD",
-      "profile": "Oklahoma · 71 rushing yards on 23 carries, 2 TD in this game"
-     }
-    ],
-    "B": []
-   },
-   "sig": "gs2007-12-01rush"
-  },
   {
    "type": "count",
    "label": "Awards",
@@ -195,6 +41,176 @@
    "B": [],
    "sig": "acheisman2010",
    "bonus": "names"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Albert Okwuegbunam (MIZ TE)",
+    "value": 23,
+    "school": "MIZ"
+   },
+   "B": {
+    "label": "Joe Mixon (OU RB)",
+    "value": 9,
+    "school": "OU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Albert Okwuegbunam 23 vs. Joe Mixon 9.",
+   "sig": "urecTDJoe MixonAlbert Okwuegbunam"
+  },
+  {
+   "type": "mc",
+   "label": "Rankings",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Of the 10 Oklahoma–Missouri games from 2000 through 2025, how many featured at least one AP top-5 team?",
+   "options": [
+    "6",
+    "8",
+    "9",
+    "7"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    2,
+    3,
+    0
+   ],
+   "reveal": "6: 2002 (No. 3 Oklahoma 31, Missouri 24) · 2003 (No. 1 Oklahoma 34, No. 24 Missouri 13) · 2007 (No. 9 Oklahoma 38, No. 1 Missouri 17) · 2008 (No. 4 Oklahoma 62, No. 19 Missouri 21) · 2010 (No. 18 Missouri 36, No. 3 Oklahoma 27) · 2011 (No. 1 Oklahoma 38, Missouri 28).",
+   "info": {
+    "title": "Which poll?",
+    "text": "The AP Top 25 in force the week of each game; bowl and championship games use the last regular-season poll. Tied teams share a rank."
+   },
+   "years": {
+    "prompt": "Name the 6 seasons.",
+    "a": "OU",
+    "b": "MIZ",
+    "A": [
+     {
+      "name": "No. 3 Oklahoma 31, Missouri 24",
+      "yards": 0,
+      "season": 2002,
+      "label": "No. 3 Oklahoma 31, Missouri 24",
+      "profile": "No. 3 Oklahoma 31, Missouri 24"
+     },
+     {
+      "name": "No. 1 Oklahoma 34, No. 24 Missouri 13",
+      "yards": 0,
+      "season": 2003,
+      "label": "No. 1 Oklahoma 34, No. 24 Missouri 13",
+      "profile": "No. 1 Oklahoma 34, No. 24 Missouri 13"
+     },
+     {
+      "name": "No. 9 Oklahoma 38, No. 1 Missouri 17",
+      "yards": 0,
+      "season": 2007,
+      "label": "No. 9 Oklahoma 38, No. 1 Missouri 17",
+      "profile": "No. 9 Oklahoma 38, No. 1 Missouri 17"
+     },
+     {
+      "name": "No. 4 Oklahoma 62, No. 19 Missouri 21",
+      "yards": 0,
+      "season": 2008,
+      "label": "No. 4 Oklahoma 62, No. 19 Missouri 21",
+      "profile": "No. 4 Oklahoma 62, No. 19 Missouri 21"
+     },
+     {
+      "name": "No. 1 Oklahoma 38, Missouri 28",
+      "yards": 0,
+      "season": 2011,
+      "label": "No. 1 Oklahoma 38, Missouri 28",
+      "profile": "No. 1 Oklahoma 38, Missouri 28"
+     }
+    ],
+    "B": [
+     {
+      "name": "No. 18 Missouri 36, No. 3 Oklahoma 27",
+      "yards": 0,
+      "season": 2010,
+      "label": "No. 18 Missouri 36, No. 3 Oklahoma 27",
+      "profile": "No. 18 Missouri 36, No. 3 Oklahoma 27"
+     }
+    ]
+   },
+   "sig": "rkany5"
+  },
+  {
+   "type": "mc",
+   "label": "Game Story",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Dec 1, 2007",
+    "winner": "OU",
+    "loser": "MIZ",
+    "ws": 38,
+    "ls": 17,
+    "venue": "Alamodome"
+   },
+   "prompt": "The 2007 Oklahoma–Missouri game was a top-10 showdown (No. 1 vs. No. 9), but the teams combined for how many rushing yards?",
+   "options": [
+    "264",
+    "204",
+    "234",
+    "324"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    0,
+    3,
+    2
+   ],
+   "reveal": "264: Oklahoma 166, Missouri 98. 60+ rushing yards: Allen Patrick (Oklahoma) 88, Chris Brown (Oklahoma) 71.",
+   "names": {
+    "prompt": "Bonus: name everyone with 60+ rushing yards in this game.",
+    "a": "OU",
+    "b": "MIZ",
+    "A": [
+     {
+      "name": "Allen Patrick",
+      "yards": 88,
+      "label": "88 yds on 13 carries, 1 TD",
+      "profile": "Oklahoma · 88 rushing yards on 13 carries, 1 TD in this game"
+     },
+     {
+      "name": "Chris Brown",
+      "yards": 71,
+      "label": "71 yds on 23 carries, 2 TD",
+      "profile": "Oklahoma · 71 rushing yards on 23 carries, 2 TD in this game"
+     }
+    ],
+    "B": []
+   },
+   "sig": "gs2007-12-01rush"
+  },
+  {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, what's the longest winning streak by either school in the Oklahoma–Missouri series?",
+   "options": [
+    "6 straight",
+    "8 straight",
+    "7 straight",
+    "9 straight"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    3,
+    0,
+    2
+   ],
+   "reveal": "6 straight: Oklahoma won every meeting from 2002 through 2008.",
+   "sig": "msOU2002"
   },
   {
    "type": "count",
@@ -283,26 +299,116 @@
    "sig": "fsrush"
   },
   {
+   "type": "count",
+   "label": "Since 2022",
+   "a": "OU",
+   "b": "MIZ",
+   "threshold": 1500,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2022 through 2025, which school had more 1,500-yard rushing seasons?",
+   "A": [],
+   "B": [
+    {
+     "name": "Cody Schrader",
+     "yards": 1617,
+     "season": 2023,
+     "profile": "Running back · 2023: 1,617 rushing, 191 receiving yds"
+    },
+    {
+     "name": "Ahmad Hardy",
+     "yards": 1649,
+     "season": 2025,
+     "profile": "Running back · 2025: 1,649 rushing, 22 receiving yds"
+    }
+   ],
+   "sig": "tsrush15002022",
+   "bonus": "names"
+  },
+  {
+   "type": "mc",
+   "label": "Awards",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Which of these players won the Davey O'Brien Award, given to the nation's best quarterback?",
+   "options": [
+    "Kyler Murray (Oklahoma)",
+    "Chase Daniel (Missouri)",
+    "Jalen Hurts (Oklahoma)",
+    "Josh Heupel (Oklahoma)"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    3,
+    0,
+    2
+   ],
+   "reveal": "Kyler Murray (Oklahoma) won the Davey O'Brien Award in 2018.",
+   "sig": "amobrien2018",
+   "more": {
+    "title": "Every Oklahoma and Missouri winner of the Davey O'Brien Award",
+    "rows": [
+     "1978: Billy Sims (OU)",
+     "2003: Jason White (OU)",
+     "2004: Jason White (OU)",
+     "2008: Sam Bradford (OU)",
+     "2017: Baker Mayfield (OU)",
+     "2018: Kyler Murray (OU)"
+    ]
+   }
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Larry Rountree III (MIZ RB) · career total TDs (rushing + receiving)",
+     "value": 40,
+     "school": "MIZ"
+    },
+    {
+     "label": "Kennedy Brooks (OU RB) · 2021 rushing TDs",
+     "value": 13,
+     "school": "OU"
+    },
+    {
+     "label": "CeeDee Lamb (OU WR) · 2019 receiving TDs",
+     "value": 14,
+     "school": "OU"
+    },
+    {
+     "label": "Samaje Perine (OU RB) · 2014 rushing TDs",
+     "value": 21,
+     "school": "OU"
+    }
+   ],
+   "sig": "nxTDCeeDee Lamb2019 receiving TDs,Kennedy Brooks2021 rushing TDs,Larry Rountree IIIcareer total TDs (rushing + receiving),Samaje Perine2014 rushing TDs"
+  },
+  {
    "type": "mc",
    "label": "Heisman",
    "verified": true,
    "pitted": true,
    "prompt": "Which of these finished highest in Heisman Trophy voting that season?",
    "options": [
-    "Kyler Murray (Oklahoma, 2018)",
+    "Sam Bradford (Oklahoma, 2008)",
+    "Quentin Griffin (Oklahoma, 2002)",
     "Chase Daniel (Missouri, 2007)",
-    "Jason White (Oklahoma, 2004)",
-    "Roy Williams (Oklahoma, 2001)"
+    "Cody Schrader (Missouri, 2023)"
    ],
    "answer": 0,
    "order": [
-    1,
-    0,
     3,
+    0,
+    1,
     2
    ],
-   "reveal": "Kyler Murray: 1st in 2018 · Jason White: 3rd in 2004 · Chase Daniel: 4th in 2007 · Roy Williams: 7th in 2001",
-   "sig": "hmChase Daniel2007,Jason White2004,Kyler Murray2018,Roy Williams2001",
+   "reveal": "Sam Bradford: 1st in 2008 · Chase Daniel: 4th in 2007 · Cody Schrader: 8th in 2023 · Quentin Griffin: 10th in 2002",
+   "sig": "hmChase Daniel2007,Cody Schrader2023,Quentin Griffin2002,Sam Bradford2008",
    "more": {
     "title": "Oklahoma and Missouri top-10 Heisman finishes (seasons with checked voting)",
     "rows": [
@@ -320,126 +426,6 @@
      "4th: Dede Westbrook (OU) 2016"
     ]
    }
-  },
-  {
-   "type": "rank",
-   "label": "Notables",
-   "verified": true,
-   "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
-   "items": [
-    {
-     "label": "Mark Clayton (Oklahoma, 2001–04)",
-     "value": 3241,
-     "school": "OU"
-    },
-    {
-     "label": "Juaquin Iglesias (Oklahoma, 2005–08)",
-     "value": 2861,
-     "school": "OU"
-    },
-    {
-     "label": "J'Mon Moore (Missouri, 2014–17)",
-     "value": 2477,
-     "school": "MIZ"
-    },
-    {
-     "label": "Luther Burden III (Missouri, 2022–24)",
-     "value": 2263,
-     "school": "MIZ"
-    }
-   ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"Oklahoma Sooners football statistical leaders\" career receiving yards table (revision 1373733678), which cites the school record book; fetched 2026-11-23; Wikipedia \"Missouri Tigers football statistical leaders\" career receiving yards table (revision 1385738145), which cites the school record book; fetched 2026-11-23",
-   "sig": "nrreceivingJ'Mon Moore,Juaquin Iglesias,Luther Burden III,Mark Clayton",
-   "names": {
-    "prompt": "Bonus: name the other 7 players in Oklahoma and Missouri's combined top 10 for career receiving yards.",
-    "a": "OU",
-    "b": "MIZ",
-    "A": [
-     {
-      "name": "Ryan Broyles",
-      "yards": 4586,
-      "label": "4,586 (2008–2011)",
-      "profile": "4,586 career receiving yards (2008–2011) · No. 1 on the combined list"
-     },
-     {
-      "name": "Sterling Shepard",
-      "yards": 3482,
-      "label": "3,482 (2012–2015)",
-      "profile": "3,482 career receiving yards (2012–2015) · No. 2 on the combined list"
-     },
-     {
-      "name": "CeeDee Lamb",
-      "yards": 3292,
-      "label": "3,292 (2017–2019)",
-      "profile": "3,292 career receiving yards (2017–2019) · No. 3 on the combined list"
-     },
-     {
-      "name": "Kenny Stills",
-      "yards": 2594,
-      "label": "2,594 (2010–2012)",
-      "profile": "2,594 career receiving yards (2010–2012) · No. 9 on the combined list"
-     }
-    ],
-    "B": [
-     {
-      "name": "Danario Alexander",
-      "yards": 2778,
-      "label": "2,778 (2006–2009)",
-      "profile": "2,778 career receiving yards (2006–2009) · No. 6 on the combined list"
-     },
-     {
-      "name": "Justin Gage",
-      "yards": 2704,
-      "label": "2,704 (1999–2002)",
-      "profile": "2,704 career receiving yards (1999–2002) · No. 7 on the combined list"
-     },
-     {
-      "name": "Chase Coffman",
-      "yards": 2659,
-      "label": "2,659 (2005–2008)",
-      "profile": "2,659 career receiving yards (2005–2008) · No. 8 on the combined list"
-     }
-    ]
-   },
-   "more": {
-    "title": "Career receiving yards, Oklahoma and Missouri (careers ending 2000 or later)",
-    "rows": [
-     "1. Ryan Broyles (Oklahoma, 2008–11) 4,586",
-     "2. Sterling Shepard (Oklahoma, 2012–15) 3,482",
-     "3. CeeDee Lamb (Oklahoma, 2017–19) 3,292",
-     "4. Mark Clayton (Oklahoma, 2001–04) 3,241",
-     "5. Juaquin Iglesias (Oklahoma, 2005–08) 2,861",
-     "6. Danario Alexander (Missouri, 2006–09) 2,778",
-     "7. Justin Gage (Missouri, 1999–02) 2,704",
-     "8. Chase Coffman (Missouri, 2005–08) 2,659",
-     "9. Kenny Stills (Oklahoma, 2010–12) 2,594",
-     "10. J'Mon Moore (Missouri, 2014–17) 2,477"
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what's the longest winning streak by either school in the Oklahoma–Missouri series?",
-   "options": [
-    "6 straight",
-    "7 straight",
-    "5 straight",
-    "8 straight"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    1,
-    3,
-    0
-   ],
-   "reveal": "6 straight: Oklahoma won every meeting from 2002 through 2008.",
-   "sig": "msOU2002"
   }
  ],
  "rev": 1

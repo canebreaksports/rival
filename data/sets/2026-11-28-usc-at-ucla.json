@@ -6,9 +6,186 @@
   "away": "USC",
   "home": "UCLA"
  },
- "generatedAt": "2026-11-24T02:10:32.690Z",
- "engine": 52,
+ "generatedAt": "2026-11-24T02:16:17.704Z",
+ "engine": 53,
  "questions": [
+  {
+   "type": "count",
+   "label": "Since 2020",
+   "a": "USC",
+   "b": "UCLA",
+   "threshold": 1000,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2020 through 2025, which school had more 1,000-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Drake London",
+     "yards": 1084,
+     "season": 2021,
+     "profile": "Wide receiver · 2021: 2 rushing, 1,084 receiving yds"
+    },
+    {
+     "name": "Tahj Washington",
+     "yards": 1062,
+     "season": 2023,
+     "profile": "Wide receiver · 2023: 10 rushing, 1,062 receiving yds"
+    },
+    {
+     "name": "Makai Lemon",
+     "yards": 1156,
+     "season": 2025,
+     "profile": "Wide receiver · 2025: 4 rushing, 1,156 receiving yds"
+    }
+   ],
+   "B": [],
+   "sig": "tsrec10002020",
+   "bonus": "names"
+  },
+  {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "In which year was the highest-scoring USC–UCLA game from 2000 through 2025?",
+   "options": [
+    "2021",
+    "2011",
+    "2023",
+    "2005"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    2,
+    3,
+    1
+   ],
+   "reveal": "2021: UCLA 62, USC 33 (95 points, Nov 20, 2021). Next highest: 2022, USC 48–45 (93).",
+   "sig": "mh2021"
+  },
+  {
+   "label": "USC–UCLA",
+   "verified": true,
+   "sig": "kUSC–UCLA1",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "2022: No. 7 USC at No. 16 UCLA. What was the final score?",
+   "options": [
+    "USC 48, UCLA 45",
+    "UCLA 48, USC 45",
+    "USC 55, UCLA 49",
+    "USC 48, UCLA 41"
+   ],
+   "answer": 0,
+   "reveal": "No. 7 USC 48, No. 16 UCLA 45 (2022-11-19, Rose Bowl).",
+   "order": [
+    0,
+    2,
+    1,
+    3
+   ]
+  },
+  {
+   "type": "mc",
+   "label": "Twist",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 17, 2012",
+    "winner": "UCLA",
+    "loser": "USC",
+    "ws": 38,
+    "ls": 28,
+    "venue": "Rose Bowl"
+   },
+   "prompt": "The 2012 USC–UCLA game went to No. 17 UCLA, 38–28, over No. 21 USC. Which team gained more total yards, and by how much?",
+   "options": [
+    "USC by 107",
+    "UCLA by 107",
+    "USC by 50",
+    "UCLA by 50"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    2,
+    0,
+    1
+   ],
+   "reveal": "🔄 Twist: USC out-gained UCLA 513 to 406 and still lost. (USC 172 rushing, 341 passing; UCLA 172 rushing, 234 passing.)",
+   "sig": "xo2012-11-17"
+  },
+  {
+   "type": "mc",
+   "label": "Rankings",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Of the 26 USC–UCLA games from 2000 through 2025, how many featured at least one AP top-5 team?",
+   "options": [
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    3,
+    2,
+    1
+   ],
+   "reveal": "5: 2003 (No. 2 USC 47, UCLA 22) · 2004 (No. 1 USC 29, UCLA 24) · 2005 (No. 1 USC 66, No. 11 UCLA 19) · 2006 (UCLA 13, No. 2 USC 9) · 2008 (No. 5 USC 28, UCLA 7).",
+   "info": {
+    "title": "Which poll?",
+    "text": "The AP Top 25 in force the week of each game; bowl and championship games use the last regular-season poll. Tied teams share a rank."
+   },
+   "years": {
+    "prompt": "Name the 5 seasons.",
+    "a": "USC",
+    "b": "UCLA",
+    "A": [
+     {
+      "name": "No. 2 USC 47, UCLA 22",
+      "yards": 0,
+      "season": 2003,
+      "label": "No. 2 USC 47, UCLA 22",
+      "profile": "No. 2 USC 47, UCLA 22"
+     },
+     {
+      "name": "No. 1 USC 29, UCLA 24",
+      "yards": 0,
+      "season": 2004,
+      "label": "No. 1 USC 29, UCLA 24",
+      "profile": "No. 1 USC 29, UCLA 24"
+     },
+     {
+      "name": "No. 1 USC 66, No. 11 UCLA 19",
+      "yards": 0,
+      "season": 2005,
+      "label": "No. 1 USC 66, No. 11 UCLA 19",
+      "profile": "No. 1 USC 66, No. 11 UCLA 19"
+     },
+     {
+      "name": "No. 5 USC 28, UCLA 7",
+      "yards": 0,
+      "season": 2008,
+      "label": "No. 5 USC 28, UCLA 7",
+      "profile": "No. 5 USC 28, UCLA 7"
+     }
+    ],
+    "B": [
+     {
+      "name": "UCLA 13, No. 2 USC 9",
+      "yards": 0,
+      "season": 2006,
+      "label": "UCLA 13, No. 2 USC 9",
+      "profile": "UCLA 13, No. 2 USC 9"
+     }
+    ]
+   },
+   "sig": "rkany5"
+  },
   {
    "type": "mc",
    "label": "Game Story",
@@ -25,16 +202,16 @@
    "prompt": "The 2021 USC–UCLA game is the highest-scoring game in the series since 2000, but the teams combined for how many rushing yards?",
    "options": [
     "419",
-    "459",
+    "379",
     "339",
-    "499"
+    "459"
    ],
    "answer": 0,
    "order": [
-    2,
     3,
-    0,
-    1
+    1,
+    2,
+    0
    ],
    "reveal": "419: USC 159, UCLA 260. 75+ rushing yards: Zach Charbonnet (UCLA) 167, Keaontay Ingram (USC) 96.",
    "names": {
@@ -61,64 +238,78 @@
    "sig": "gs2021-11-20rush"
   },
   {
-   "type": "mc",
-   "label": "Twist",
+   "label": "USC–UCLA",
    "verified": true,
+   "sig": "kUSC–UCLA0",
+   "type": "mc",
    "pitted": true,
-   "game": {
-    "date": "Nov 17, 2012",
-    "winner": "UCLA",
-    "loser": "USC",
-    "ws": 38,
-    "ls": 28,
-    "venue": "Rose Bowl"
-   },
-   "prompt": "The 2012 USC–UCLA game went to No. 17 UCLA, 38–28, over No. 21 USC. Which team gained more total yards, and by how much?",
+   "prompt": "Of the 26 USC–UCLA games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
    "options": [
-    "USC by 107",
-    "UCLA by 107",
-    "USC by 50",
-    "UCLA by 50"
+    "2",
+    "0",
+    "1",
+    "3"
    ],
    "answer": 0,
+   "reveal": "2: 2000 USC 38, UCLA 35 · 2022 No. 7 USC 48, No. 16 UCLA 45.",
    "order": [
-    3,
     0,
+    2,
     1,
-    2
+    3
    ],
-   "reveal": "🔄 Twist: USC out-gained UCLA 513 to 406 and still lost. (USC 172 rushing, 341 passing; UCLA 172 rushing, 234 passing.)",
-   "sig": "xo2012-11-17"
+   "years": {
+    "prompt": "Name the 2 seasons.",
+    "a": "USC",
+    "b": "UCLA",
+    "A": [
+     {
+      "name": "USC 38, UCLA 35",
+      "yards": 0,
+      "season": 2000,
+      "label": "USC 38, UCLA 35",
+      "profile": "USC 38, UCLA 35"
+     },
+     {
+      "name": "No. 7 USC 48, No. 16 UCLA 45",
+      "yards": 0,
+      "season": 2022,
+      "label": "No. 7 USC 48, No. 16 UCLA 45",
+      "profile": "No. 7 USC 48, No. 16 UCLA 45"
+     }
+    ],
+    "B": []
+   }
   },
   {
-   "type": "mc",
-   "label": "Historic Day",
+   "type": "rank",
+   "label": "Fresh Mix",
    "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 26, 2011",
-    "winner": "USC",
-    "loser": "UCLA",
-    "ws": 50,
-    "ls": 0,
-    "venue": "Los Angeles Memorial Coliseum"
-   },
-   "prompt": "2011: No. 10 USC vs. UCLA. Marqise Lee caught 13 passes. How many receiving yards did he finish with?",
-   "options": [
-    "224",
-    "184",
-    "144",
-    "104"
+   "unit": "yds",
+   "prompt": "Rank these from highest to lowest (yards).",
+   "items": [
+    {
+     "label": "Zach Charbonnet (UCLA RB) · 2022 rushing yards",
+     "value": 1359,
+     "school": "UCLA"
+    },
+    {
+     "label": "Tyler Vaughns (USC WR) · 2020 receiving yards",
+     "value": 406,
+     "school": "USC"
+    },
+    {
+     "label": "Jo'quavious Marks (USC RB) · career rushing yards",
+     "value": 1133,
+     "school": "USC"
+    },
+    {
+     "label": "Sam Darnold (USC QB) · 2016 rushing yards",
+     "value": 250,
+     "school": "USC"
+    }
    ],
-   "answer": 0,
-   "order": [
-    2,
-    0,
-    3,
-    1
-   ],
-   "reveal": "224 receiving yards and 2 TD, the most by anyone in this rivalry since 2004 (box scores). USC won, 50–0.",
-   "sig": "xb2011-11-26Marqise Lee"
+   "sig": "mxydsJo'quavious Markscareer rushing yards,Sam Darnold2016 rushing yards,Tyler Vaughns2020 receiving yards,Zach Charbonnet2022 rushing yards"
   },
   {
    "type": "rank",
@@ -129,9 +320,9 @@
    "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
    "items": [
     {
-     "label": "Ronald Jones II (USC)",
-     "value": 3619,
-     "school": "USC"
+     "label": "Johnathan Franklin (UCLA)",
+     "value": 4403,
+     "school": "UCLA"
     },
     {
      "label": "Freeman McNeil (UCLA)",
@@ -139,18 +330,18 @@
      "school": "UCLA"
     },
     {
-     "label": "Anthony Davis (USC)",
-     "value": 3724,
+     "label": "O. J. Simpson (USC)",
+     "value": 3423,
      "school": "USC"
     },
     {
-     "label": "Johnathan Franklin (UCLA)",
-     "value": 4403,
-     "school": "UCLA"
+     "label": "Marcus Allen (USC)",
+     "value": 4810,
+     "school": "USC"
     }
    ],
    "note": "Career totals from each school's record book. Sources: Wikipedia \"USC Trojans football statistical leaders\" career rushing yards table (revision 1387109358), which cites the school record book; fetched 2026-11-17; Wikipedia \"UCLA Bruins football statistical leaders\" career rushing yards table (revision 1385843112), which cites the school record book; fetched 2026-11-17",
-   "sig": "nrrushingAnthony Davis,Freeman McNeil,Johnathan Franklin,Ronald Jones II",
+   "sig": "nrrushingFreeman McNeil,Johnathan Franklin,Marcus Allen,O. J. Simpson",
    "names": {
     "prompt": "Bonus: name the other 7 players in USC and UCLA's combined top 10 for career rushing yards.",
     "a": "USC",
@@ -163,10 +354,10 @@
       "profile": "6,245 career rushing yards · No. 1 on the combined list"
      },
      {
-      "name": "Marcus Allen",
-      "yards": 4810,
-      "label": "4,810",
-      "profile": "4,810 career rushing yards · No. 2 on the combined list"
+      "name": "Anthony Davis",
+      "yards": 3724,
+      "label": "3,724",
+      "profile": "3,724 career rushing yards · No. 5 on the combined list"
      },
      {
       "name": "Ricky Bell",
@@ -175,10 +366,10 @@
       "profile": "3,689 career rushing yards · No. 6 on the combined list"
      },
      {
-      "name": "O. J. Simpson",
-      "yards": 3423,
-      "label": "3,423",
-      "profile": "3,423 career rushing yards · No. 9 on the combined list"
+      "name": "Ronald Jones II",
+      "yards": 3619,
+      "label": "3,619",
+      "profile": "3,619 career rushing yards · No. 7 on the combined list"
      },
      {
       "name": "Mike Garrett",
@@ -219,136 +410,6 @@
    }
   },
   {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the USC–UCLA series?",
-   "options": [
-    "50 points",
-    "62 points",
-    "36 points",
-    "43 points"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    2,
-    1,
-    0
-   ],
-   "reveal": "50 points: USC 50, UCLA 0 (Nov 26, 2011).",
-   "sig": "mm50"
-  },
-  {
-   "type": "count",
-   "label": "Fill In",
-   "a": "USC",
-   "b": "UCLA",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "USC and UCLA's combined top 10 single-season receiving yards (through 2025): which school has more seasons on the list?",
-   "A": [
-    {
-     "name": "Marqise Lee",
-     "yards": 1721,
-     "season": 2012,
-     "label": "2012: 1,721",
-     "profile": "2012 season, 1,721 receiving yards · No. 1 on the combined list"
-    },
-    {
-     "name": "Johnnie Morton",
-     "yards": 1520,
-     "season": 1993,
-     "label": "1993: 1,520",
-     "profile": "1993 season, 1,520 receiving yards · No. 2 on the combined list"
-    },
-    {
-     "name": "JuJu Smith-Schuster",
-     "yards": 1454,
-     "season": 2015,
-     "label": "2015: 1,454",
-     "profile": "2015 season, 1,454 receiving yards · No. 4 on the combined list"
-    },
-    {
-     "name": "Keyshawn Johnson",
-     "yards": 1434,
-     "season": 1995,
-     "label": "1995: 1,434",
-     "profile": "1995 season, 1,434 receiving yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Keyshawn Johnson",
-     "yards": 1362,
-     "season": 1994,
-     "label": "1994: 1,362",
-     "profile": "1994 season, 1,362 receiving yards · No. 6 on the combined list"
-    },
-    {
-     "name": "Mike Williams",
-     "yards": 1314,
-     "season": 2003,
-     "label": "2003: 1,314",
-     "profile": "2003 season, 1,314 receiving yards · No. 7 on the combined list"
-    },
-    {
-     "name": "Nelson Agholor",
-     "yards": 1313,
-     "season": 2014,
-     "label": "2014: 1,313",
-     "profile": "2014 season, 1,313 receiving yards · No. 8 on the combined list"
-    },
-    {
-     "name": "Robert Woods",
-     "yards": 1292,
-     "season": 2011,
-     "label": "2011: 1,292",
-     "profile": "2011 season, 1,292 receiving yards · No. 9 on the combined list"
-    },
-    {
-     "name": "Michael Pittman Jr.",
-     "yards": 1275,
-     "season": 2019,
-     "label": "2019: 1,275",
-     "profile": "2019 season, 1,275 receiving yards · No. 10 on the combined list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Freddie Mitchell",
-     "yards": 1494,
-     "season": 2000,
-     "label": "2000: 1,494",
-     "profile": "2000 season, 1,494 receiving yards · No. 3 on the combined list"
-    }
-   ],
-   "sig": "fsrec"
-  },
-  {
-   "label": "USC–UCLA",
-   "verified": true,
-   "sig": "kUSC–UCLA1",
-   "type": "mc",
-   "pitted": true,
-   "prompt": "2022: No. 7 USC at No. 16 UCLA. What was the final score?",
-   "options": [
-    "USC 48, UCLA 45",
-    "UCLA 48, USC 45",
-    "USC 55, UCLA 49",
-    "USC 48, UCLA 41"
-   ],
-   "answer": 0,
-   "reveal": "No. 7 USC 48, No. 16 UCLA 45 (2022-11-19, Rose Bowl).",
-   "order": [
-    0,
-    1,
-    2,
-    3
-   ]
-  },
-  {
    "type": "count",
    "label": "Awards",
    "a": "USC",
@@ -380,83 +441,6 @@
    ],
    "sig": "acgroza2000",
    "bonus": "names"
-  },
-  {
-   "type": "count",
-   "label": "Since 2020",
-   "a": "USC",
-   "b": "UCLA",
-   "threshold": 1000,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2020 through 2025, which school had more 1,000-yard receiving seasons?",
-   "A": [
-    {
-     "name": "Drake London",
-     "yards": 1084,
-     "season": 2021,
-     "profile": "Wide receiver · 2021: 2 rushing, 1,084 receiving yds"
-    },
-    {
-     "name": "Tahj Washington",
-     "yards": 1062,
-     "season": 2023,
-     "profile": "Wide receiver · 2023: 10 rushing, 1,062 receiving yds"
-    },
-    {
-     "name": "Makai Lemon",
-     "yards": 1156,
-     "season": 2025,
-     "profile": "Wide receiver · 2025: 4 rushing, 1,156 receiving yds"
-    }
-   ],
-   "B": [],
-   "sig": "tsrec10002020",
-   "bonus": "names"
-  },
-  {
-   "label": "USC–UCLA",
-   "verified": true,
-   "sig": "kUSC–UCLA0",
-   "type": "mc",
-   "pitted": true,
-   "prompt": "Of the 26 USC–UCLA games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
-   "options": [
-    "2",
-    "0",
-    "1",
-    "3"
-   ],
-   "answer": 0,
-   "reveal": "2: 2000 USC 38, UCLA 35 · 2022 No. 7 USC 48, No. 16 UCLA 45.",
-   "order": [
-    3,
-    1,
-    2,
-    0
-   ],
-   "years": {
-    "prompt": "Name the 2 seasons.",
-    "a": "USC",
-    "b": "UCLA",
-    "A": [
-     {
-      "name": "USC 38, UCLA 35",
-      "yards": 0,
-      "season": 2000,
-      "label": "USC 38, UCLA 35",
-      "profile": "USC 38, UCLA 35"
-     },
-     {
-      "name": "No. 7 USC 48, No. 16 UCLA 45",
-      "yards": 0,
-      "season": 2022,
-      "label": "No. 7 USC 48, No. 16 UCLA 45",
-      "profile": "No. 7 USC 48, No. 16 UCLA 45"
-     }
-    ],
-    "B": []
-   }
   }
  ]
 }

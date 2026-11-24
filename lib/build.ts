@@ -14,7 +14,7 @@ import { genGameMoment, genGameRank, genLongestGameMoment, genLongestSeriesMC, g
 import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 52; // v52: marquee curated questions for 13 rivalry-week matchups; Central-time dates in rank/walk-off data; // v51: no generated twist when a curated one exists; // v50: curated 2014 Iron Bowl twist; 6 curated max; // v49: out-gained twist first; historic day skips curated players; // v48: story/twist/historic day up front, rankings in setups; // v47: quiet-star twist needs a real workload; // v46: twist questions (out-gained winner, star's quiet day); // v45: game story prefers famous games and rushing; // v44: game story MC + name the players; // v43: curated Heisman-vs-rival (Iron Bowl), passing QBs out of rushing rankings; // v42: Heisman-vs-rival allows 3 contenders; // v41: Heisman-vs-rival guaranteed when available; // v40: Heisman finalists vs. the rival Rank It; // v39: running QB = 1,200+ career rushing yards; // v38: QB vs QB rushing upsets only between two running QBs; // v37: no QB-vs-QB rushing upsets; // v36: highest-scoring game MC; an upset every week; award winners count as famous; // v35: one combined top-10 fill-in per set; rankings first in the MC rotation; // v34: vs-the-field only via the MC rotation; // v33: TD-season counts, ranked-wins MC, guaranteed MC rotation; // v32: vs-the-field MC (draft, awards); // v31: AP-ranked games MC; // v30: MC with a Name Them bonus (2014 Iron Bowl 100-yard receivers); // v29: career ranking bonus: complete the combined top 10; // v28: SEC record-book top 10 fill-in for SEC vs SEC; // v27: series MC (longest streak / largest margin) every week, mc cap 3; // v26: no total-yards difference MC; // v25: no random single-game higher/lower; upsets need a real number; // v24: comparisons only on notable players or big seasons; // v23: no 'top N against each other' fill-ins; // v22: two fill-ins per set (+ combined career top 10), tighter game lines, rivalry week non-SEC schools; // v21: notable also = school top-10 single seasons + owner list (McCluster); // v20: Name Them by default, years only for walk-offs; bonus answers hidden until the bonus ends; // v19: fill-in questions (combined top 10 seasons, top 5 vs each other), ⓘ award explainers; // v18: higher/lower only on notable players (lib/notable.ts); // v17: 10 questions in every set (bigger generated pool, second fill pass); // v16: walk-offs (final play or OT), a record-book career ranking every week; v15: Notables Rank It; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
+export const ENGINE_VERSION = 53; // v53: 2006 Michigan-Ohio State; a random 5 of 9 weekly types per set; // v52: marquee curated questions for 13 rivalry-week matchups; Central-time dates in rank/walk-off data; // v51: no generated twist when a curated one exists; // v50: curated 2014 Iron Bowl twist; 6 curated max; // v49: out-gained twist first; historic day skips curated players; // v48: story/twist/historic day up front, rankings in setups; // v47: quiet-star twist needs a real workload; // v46: twist questions (out-gained winner, star's quiet day); // v45: game story prefers famous games and rushing; // v44: game story MC + name the players; // v43: curated Heisman-vs-rival (Iron Bowl), passing QBs out of rushing rankings; // v42: Heisman-vs-rival allows 3 contenders; // v41: Heisman-vs-rival guaranteed when available; // v40: Heisman finalists vs. the rival Rank It; // v39: running QB = 1,200+ career rushing yards; // v38: QB vs QB rushing upsets only between two running QBs; // v37: no QB-vs-QB rushing upsets; // v36: highest-scoring game MC; an upset every week; award winners count as famous; // v35: one combined top-10 fill-in per set; rankings first in the MC rotation; // v34: vs-the-field only via the MC rotation; // v33: TD-season counts, ranked-wins MC, guaranteed MC rotation; // v32: vs-the-field MC (draft, awards); // v31: AP-ranked games MC; // v30: MC with a Name Them bonus (2014 Iron Bowl 100-yard receivers); // v29: career ranking bonus: complete the combined top 10; // v28: SEC record-book top 10 fill-in for SEC vs SEC; // v27: series MC (longest streak / largest margin) every week, mc cap 3; // v26: no total-yards difference MC; // v25: no random single-game higher/lower; upsets need a real number; // v24: comparisons only on notable players or big seasons; // v23: no 'top N against each other' fill-ins; // v22: two fill-ins per set (+ combined career top 10), tighter game lines, rivalry week non-SEC schools; // v21: notable also = school top-10 single seasons + owner list (McCluster); // v20: Name Them by default, years only for walk-offs; bonus answers hidden until the bonus ends; // v19: fill-in questions (combined top 10 seasons, top 5 vs each other), ⓘ award explainers; // v18: higher/lower only on notable players (lib/notable.ts); // v17: 10 questions in every set (bigger generated pool, second fill pass); // v16: walk-offs (final play or OT), a record-book career ranking every week; v15: Notables Rank It; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean; skip?: Set<string> } // skip: owner-rejected question signatures
@@ -175,67 +175,41 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
       sigs.add(q.sig); out.push(q);
     }
   }
-  // Game story, twist and historic day, right after the edges so they always make the set (owner, Nov 2026: "apply this theme
-  // across all sets"). Each skips games the earlier ones used; rankings at game time appear in the setups.
+  // Weekly question types (owner, Nov 2026: "all sets don't need the same type of questions"): every set gets the two edges
+  // above; then a seeded random 5 of these 9 types, so matchups in the same week feel different. Each game-based type skips
+  // games an earlier one used; AP ranks at game time appear in the setups.
+  const SLOTS = 5;
   if (teams.length > 1) {
     const [x, y] = teams, pr = data.rivalry?.pairs[pairKey(x, y)], k = [x, y].sort().join("|");
     const gr = data.gameRanks?.pairs[k]?.games, rank: RankLookup = (date, s) => gr?.find(g => g.date === date)?.ranks[s];
-    const used = new Set<string>(), add = (q: Question | null) => { if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q); const d = q.sig.match(/\d{4}-\d{2}-\d{2}/)?.[0]; if (d) used.add(d) } };
-    if (pr) {
-      add(genGameStoryMC(pr, x, y, rng, { walkoffs: data.walkoffs?.pairs[k]?.list, ranks: gr }));
-      const norm = (n: string) => n.toLowerCase().replace(/['’.]/g, "").replace(/\b(jr|sr|ii|iii|iv)\b/g, "").replace(/\s+/g, " ").trim();
-      const season = (n: string, kk: SchoolKey, yr: number) => data.players.seasons.find(p => p.school === kk && p.year === yr && norm(p.name) === norm(n));
-      const tw = [() => genOutgainedMC(pr, x, y, rng, rank, used), () => (data.honors ? genQuietStarMC(data.honors, pr, x, y, rng, season, rank, used) : null)]; // out-gained first
-      const curatedTwist = JSON.stringify(findMatchup(data, x, y)?.items ?? []).includes("🔄 Twist"); // a hand-written twist already covers it
-      if (!curatedTwist) for (const f of tw) { const q = f(); if (q) { add(q); break } }
-      // skip players a hand-written question for this rivalry already features (e.g. Amari Cooper's 2014 Iron Bowl)
-      const m = findMatchup(data, x, y), featured = JSON.stringify(m?.items ?? []);
-      add(genBigDayMC(pr, x, y, rng, (n, s) => c.notable(n, s) && !featured.includes(n), rank, used));
-    }
-  }
-  // Notables career ranking every week (owner's request, Nov 2026: "Mike Evans, Jordan Shipley, Christian Kirk, Xavier Worthy"):
-  // record-book career receiving or rushing, two notable players per school
-  if (teams.length > 1) {
-    const rush = rng() < 0.4, cr = rush ? (data.career as unknown as import("./notable-gen").CareerReceiving) : data.careerRec;
-    const q = cr ? genCareerRecRank(cr, teams[0], teams[1], rng, rush) ?? (data.careerRec ? genCareerRecRank(data.careerRec, teams[0], teams[1], rng) : null) : null;
-    if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q) }
-  }
-  // Series multiple choice every week (owner, Nov 2026): longest winning streak or largest margin of victory, four options
-  if (teams.length > 1) {
-    const pr = data.rivalry?.pairs[pairKey(teams[0], teams[1])];
-    if (pr) for (const f of shuffle(rng, [() => genStreakMC(pr, teams[0], teams[1], rng), () => genMarginMC(pr, teams[0], teams[1], rng),
-      () => genHighScoreMC(pr, teams[0], teams[1], rng)])) {
-      const q = f(); if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q); break }
-    }
-  }
-  // A second multiple choice every week, from a rotation, for variety (owner, Nov 2026): AP-ranked games, ranked wins,
-  // or the two schools against the field (draft, awards)
-  if (teams.length > 1) {
-    const [x, y] = teams, pr = data.rivalry?.pairs[pairKey(x, y)];
-    const rot = [...shuffle(rng, [() => (data.gameRanks ? genRankedMC(data.gameRanks, pr, x, y, rng) : null),
-      () => (data.rankedWins ? genRankedWinsMC(data.rankedWins, x, y, rng) : null)]),
-      ...shuffle(rng, [() => (data.honors ? genPeerAwardMC(data.honors, x, y, rng) : null),
-      () => (data.draft ? genPeerDraftMC(data.draft, x, y, rng) : null)])]; // rankings first; vs. the field when they can't be asked
-    for (const f of rot) { const q = f(); if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q); break } }
-  }
-  // One combined top-10 fill-in per set (owner, Nov 2026: "too many top 10"): the SEC record book for SEC vs SEC, else a
-  // combined single-season list (the career ranking's bonus already covers careers)
-  if (teams.length > 1) {
-    const [ta, tb] = teams;
-    const q = (data.seasonRecs ? genSecTop10(data.seasonRecs, ta, tb, rng) : null) ?? (data.seasonRecs ? genTopSeasons(data.seasonRecs, ta, tb, rng) : null)
-      ?? (data.careerRec ? genTopCareer(data.career as unknown as CareerLists, data.careerRec as unknown as CareerLists, ta, tb, rng) : null);
-    if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q) }
-  }
-  // Heisman contenders vs. the rival, every week the box scores allow (owner, Nov 2026)
-  if (teams.length > 1 && data.honors) {
+    const used = new Set<string>();
+    const add = (q: Question | null) => { if (!q || sigs.has(q.sig)) return false; sigs.add(q.sig); out.push(q); const d = q.sig.match(/\d{4}-\d{2}-\d{2}/)?.[0]; if (d) used.add(d); return true };
     const norm = (n: string) => n.toLowerCase().replace(/['’.]/g, "").replace(/\b(jr|sr|ii|iii|iv)\b/g, "").replace(/\s+/g, " ").trim();
+    const season = (n: string, kk: SchoolKey, yr: number) => data.players.seasons.find(p => p.school === kk && p.year === yr && norm(p.name) === norm(n));
+    const featured = JSON.stringify(findMatchup(data, x, y)?.items ?? []);
     // running QB: 1,200+ career rushing yards at the school (player packs), or on the school's career rushing top 10 (record book)
-    const runner = (n: string, k: SchoolKey) => (data.players.seasons.find(p => p.year === "career" && p.school === k && norm(p.name) === norm(n))?.rush ?? 0) >= 1200
-      || !!data.career[k]?.list.some(e => norm(e.name) === norm(n));
-    const q = genHeismanVsRivalRank(data.honors, data.rivalry?.pairs[pairKey(teams[0], teams[1])], teams[0], teams[1], rng, runner);
-    if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q) }
+    const runner = (n: string, kk: SchoolKey) => (data.players.seasons.find(p => p.year === "career" && p.school === kk && norm(p.name) === norm(n))?.rush ?? 0) >= 1200
+      || !!data.career[kk]?.list.some(e => norm(e.name) === norm(n));
+    const first = (fs: (() => Question | null)[]) => { for (const f of fs) { const q = f(); if (q && !sigs.has(q.sig)) return q } return null };
+    const slots: (() => Question | null)[] = [
+      () => (pr ? genGameStoryMC(pr, x, y, rng, { walkoffs: data.walkoffs?.pairs[k]?.list, ranks: gr }) : null),          // game story
+      () => (!pr || featured.includes("🔄 Twist") ? null : first([() => genOutgainedMC(pr, x, y, rng, rank, used),        // twist (skipped when a
+        () => (data.honors ? genQuietStarMC(data.honors, pr, x, y, rng, season, rank, used) : null)])),                   //  curated twist exists)
+      () => (pr ? genBigDayMC(pr, x, y, rng, (n, s) => c.notable(n, s) && !featured.includes(n), rank, used) : null),    // historic day
+      () => (data.honors ? genHeismanVsRivalRank(data.honors, pr, x, y, rng, runner) : null),                            // Heisman vs. the rival
+      () => { const rush = rng() < 0.4, cr = rush ? (data.career as unknown as import("./notable-gen").CareerReceiving) : data.careerRec; // career ranking
+        return cr ? genCareerRecRank(cr, x, y, rng, rush) ?? (data.careerRec ? genCareerRecRank(data.careerRec, x, y, rng) : null) : null },
+      () => (pr ? first(shuffle(rng, [() => genStreakMC(pr, x, y, rng), () => genMarginMC(pr, x, y, rng), () => genHighScoreMC(pr, x, y, rng)])) : null), // series
+      () => first([...shuffle(rng, [() => (data.gameRanks ? genRankedMC(data.gameRanks, pr, x, y, rng) : null),            // rankings / vs. the field
+        () => (data.rankedWins ? genRankedWinsMC(data.rankedWins, x, y, rng) : null)]),
+        ...shuffle(rng, [() => (data.honors ? genPeerAwardMC(data.honors, x, y, rng) : null), () => (data.draft ? genPeerDraftMC(data.draft, x, y, rng) : null)])]),
+      () => (data.seasonRecs ? genSecTop10(data.seasonRecs, x, y, rng) : null) ?? (data.seasonRecs ? genTopSeasons(data.seasonRecs, x, y, rng) : null)  // one top-10 fill-in
+        ?? (data.careerRec ? genTopCareer(data.career as unknown as CareerLists, data.careerRec as unknown as CareerLists, x, y, rng) : null),
+      () => genUpset(c),                                                                                                  // upset
+    ];
+    let got = 0;
+    for (const f of shuffle(rng, slots)) { if (got >= SLOTS) break; if (add(f())) got++ }
   }
-  { void rng(); const u = genUpset(c); if (u) { sigs.add(u.sig); out.push(u) } } // an upset every week when the data has one (owner, Nov 2026)
   let trapped = rng() < 0.25;
   for (let t = 0; t < n * 40 && out.length < n; t++) { // pitted formats fail often (both-schools rule), so try harder
     const r = pick(rng, gens)();

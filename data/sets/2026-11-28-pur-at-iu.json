@@ -6,300 +6,71 @@
   "away": "PUR",
   "home": "IU"
  },
- "generatedAt": "2026-11-24T02:10:32.254Z",
- "engine": 52,
+ "generatedAt": "2026-11-24T02:16:17.119Z",
+ "engine": 53,
  "questions": [
   {
-   "type": "rank",
-   "label": "Notables",
+   "type": "count",
+   "label": "Since 2018",
+   "a": "PUR",
+   "b": "IU",
+   "threshold": 1100,
    "verified": true,
    "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
-   "items": [
+   "prompt": "From 2018 through 2025, which school had more 1,100-yard receiving seasons?",
+   "A": [
     {
-     "label": "Nick Westbrook-Ikhine (Indiana, 2015–19)",
-     "value": 2226,
-     "school": "IU"
+     "name": "Rondale Moore",
+     "yards": 1258,
+     "season": 2018,
+     "profile": "Wide receiver · 2018: 213 rushing, 1,258 receiving yds"
     },
     {
-     "label": "Vinny Sutherland (Purdue, 1997–00)",
-     "value": 2370,
-     "school": "PUR"
+     "name": "David Bell",
+     "yards": 1286,
+     "season": 2021,
+     "profile": "Wide receiver · 2021: 39 rushing, 1,286 receiving yds"
     },
     {
-     "label": "Taylor Stubblefield (Purdue, 2001–04)",
-     "value": 3629,
-     "school": "PUR"
-    },
-    {
-     "label": "Shane Wynn (Indiana, 2011–14)",
-     "value": 2198,
-     "school": "IU"
+     "name": "Charlie Jones",
+     "yards": 1361,
+     "season": 2022,
+     "profile": "Wide receiver · 2022: 3 rushing, 1,361 receiving yds"
     }
    ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"Purdue Boilermakers football statistical leaders\" career receiving yards table (revision 1387405885), which cites the school record book; fetched 2026-11-23; Wikipedia \"Indiana Hoosiers football statistical leaders\" career receiving yards table (revision 1387103435), which cites the school record book; fetched 2026-11-23",
-   "sig": "nrreceivingNick Westbrook-Ikhine,Shane Wynn,Taylor Stubblefield,Vinny Sutherland",
-   "names": {
-    "prompt": "Bonus: name the other 8 players in Purdue and Indiana's combined top 10 for career receiving yards.",
-    "a": "PUR",
-    "b": "IU",
-    "A": [
-     {
-      "name": "John Standeford",
-      "yards": 3788,
-      "label": "3,788 (2000–2003)",
-      "profile": "3,788 career receiving yards (2000–2003) · No. 1 on the combined list"
-     },
-     {
-      "name": "Dorien Bryant",
-      "yards": 3548,
-      "label": "3,548 (2004–2007)",
-      "profile": "3,548 career receiving yards (2004–2007) · No. 3 on the combined list"
-     },
-     {
-      "name": "Brian Alford",
-      "yards": 3029,
-      "label": "3,029 (1994–1997)",
-      "profile": "3,029 career receiving yards (1994–1997) · No. 4 on the combined list"
-     },
-     {
-      "name": "David Bell",
-      "yards": 2946,
-      "label": "2,946 (2019–2021)",
-      "profile": "2,946 career receiving yards (2019–2021) · No. 5 on the combined list"
-     },
-     {
-      "name": "Greg Orton",
-      "yards": 2356,
-      "label": "2,356 (2005–2008)",
-      "profile": "2,356 career receiving yards (2005–2008) · No. 10 on the combined list"
-     }
-    ],
-    "B": [
-     {
-      "name": "James Hardy",
-      "yards": 2740,
-      "label": "2,740 (2005–2007)",
-      "profile": "2,740 career receiving yards (2005–2007) · No. 6 on the combined list"
-     },
-     {
-      "name": "Courtney Roby",
-      "yards": 2524,
-      "label": "2,524 (2001–2004)",
-      "profile": "2,524 career receiving yards (2001–2004) · No. 7 on the combined list"
-     },
-     {
-      "name": "Ernie Jones",
-      "yards": 2361,
-      "label": "2,361 (1984–1987)",
-      "profile": "2,361 career receiving yards (1984–1987) · No. 9 on the combined list"
-     }
-    ]
-   },
-   "more": {
-    "title": "Career receiving yards, Purdue and Indiana (careers ending 2000 or later)",
-    "rows": [
-     "1. John Standeford (Purdue, 2000–03) 3,788",
-     "2. Taylor Stubblefield (Purdue, 2001–04) 3,629",
-     "3. Dorien Bryant (Purdue, 2004–07) 3,548",
-     "4. David Bell (Purdue, 2019–21) 2,946",
-     "5. James Hardy (Indiana, 2005–07) 2,740",
-     "6. Courtney Roby (Indiana, 2001–04) 2,524",
-     "7. Vinny Sutherland (Purdue, 1997–00) 2,370",
-     "8. Greg Orton (Purdue, 2005–08) 2,356",
-     "9. Ty Fryfogle (Indiana, 2017–21) 2,231",
-     "10. Nick Westbrook-Ikhine (Indiana, 2015–19) 2,226"
-    ]
-   }
+   "B": [],
+   "sig": "tsrec11002018",
+   "bonus": "names"
   },
   {
    "type": "mc",
-   "label": "Twist",
+   "label": "Historic Day",
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 30, 2019",
-    "winner": "IU",
-    "loser": "PUR",
-    "ws": 44,
-    "ls": 41,
+    "date": "Nov 25, 2017",
+    "winner": "PUR",
+    "loser": "IU",
+    "ws": 31,
+    "ls": 24,
     "venue": "Ross-Ade Stadium"
    },
-   "prompt": "The 2019 Purdue–Indiana game went to Indiana, 44–41, over Purdue. Which team gained more total yards, and by how much?",
+   "prompt": "2017: Purdue vs. Indiana. Markell Jones carried 31 times. How many rushing yards did he finish with?",
    "options": [
-    "Purdue by 67",
-    "Indiana by 67",
-    "Purdue by 107",
-    "Indiana by 107"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    0,
-    2
-   ],
-   "reveal": "🔄 Twist: Purdue out-gained Indiana 589 to 522 and still lost. (Purdue 181 rushing, 408 passing; Indiana 185 rushing, 337 passing.)",
-   "sig": "xo2019-11-30"
-  },
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Purdue–Indiana series?",
-   "options": [
-    "66 points",
-    "75 points",
-    "78 points",
-    "56 points"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    3,
-    2,
-    1
-   ],
-   "reveal": "66 points: Indiana 66, Purdue 0 (Nov 30, 2024).",
-   "sig": "mm66"
-  },
-  {
-   "label": "Purdue–Indiana",
-   "verified": true,
-   "sig": "kPurdue–Indiana1",
-   "type": "mc",
-   "pitted": true,
-   "prompt": "2019: Indiana at Purdue. What was the final score?",
-   "options": [
-    "Indiana 44, Purdue 41",
-    "Purdue 44, Indiana 41",
-    "Indiana 51, Purdue 45",
-    "Indiana 44, Purdue 37"
-   ],
-   "answer": 0,
-   "reveal": "Indiana 44, Purdue 41 (2019-11-30, Ross-Ade Stadium).",
-   "order": [
-    1,
-    0,
-    3,
-    2
-   ]
-  },
-  {
-   "type": "mc",
-   "label": "Game Story",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 30, 2013",
-    "winner": "IU",
-    "loser": "PUR",
-    "ws": 56,
-    "ls": 36,
-    "venue": "Memorial Stadium (Bloomington, IN)"
-   },
-   "prompt": "The 2013 Purdue–Indiana game is the highest-scoring game in the series since 2000, but the teams combined for how many rushing yards?",
-   "options": [
-    "432",
-    "512",
-    "472",
-    "392"
+    "217",
+    "177",
+    "137",
+    "97"
    ],
    "answer": 0,
    "order": [
     2,
     1,
-    0,
-    3
+    3,
+    0
    ],
-   "reveal": "432: Purdue 31, Indiana 401. 75+ rushing yards: Tre Roberson (Indiana) 154, Stephen Houston (Indiana) 120, D'Angelo Roberts (Indiana) 113.",
-   "names": {
-    "prompt": "Bonus: name everyone with 75+ rushing yards in this game.",
-    "a": "PUR",
-    "b": "IU",
-    "A": [],
-    "B": [
-     {
-      "name": "Tre Roberson",
-      "yards": 154,
-      "label": "154 yds on 21 carries, 0 TD",
-      "profile": "Indiana · 154 rushing yards on 21 carries, 0 TD in this game"
-     },
-     {
-      "name": "Stephen Houston",
-      "yards": 120,
-      "label": "120 yds on 17 carries, 2 TD",
-      "profile": "Indiana · 120 rushing yards on 17 carries, 2 TD in this game"
-     },
-     {
-      "name": "D'Angelo Roberts",
-      "yards": 113,
-      "label": "113 yds on 14 carries, 0 TD",
-      "profile": "Indiana · 113 rushing yards on 14 carries, 0 TD in this game"
-     }
-    ]
-   },
-   "sig": "gs2013-11-30rush"
-  },
-  {
-   "label": "Purdue–Indiana",
-   "verified": true,
-   "sig": "kPurdue–Indiana0",
-   "type": "mc",
-   "pitted": true,
-   "prompt": "Of the 25 Purdue–Indiana games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
-   "options": [
-    "4",
-    "2",
-    "3",
-    "5"
-   ],
-   "answer": 0,
-   "reveal": "4: 2007 Indiana 27, Purdue 24 · 2010 Indiana 34, Purdue 31 · 2016 Indiana 26, Purdue 24 · 2019 Indiana 44, Purdue 41.",
-   "order": [
-    0,
-    1,
-    2,
-    3
-   ],
-   "years": {
-    "prompt": "Name the 4 seasons.",
-    "a": "PUR",
-    "b": "IU",
-    "A": [],
-    "B": [
-     {
-      "name": "Indiana 27, Purdue 24",
-      "yards": 0,
-      "season": 2007,
-      "label": "Indiana 27, Purdue 24",
-      "profile": "Indiana 27, Purdue 24"
-     },
-     {
-      "name": "Indiana 34, Purdue 31",
-      "yards": 0,
-      "season": 2010,
-      "label": "Indiana 34, Purdue 31",
-      "profile": "Indiana 34, Purdue 31"
-     },
-     {
-      "name": "Indiana 26, Purdue 24",
-      "yards": 0,
-      "season": 2016,
-      "label": "Indiana 26, Purdue 24",
-      "profile": "Indiana 26, Purdue 24"
-     },
-     {
-      "name": "Indiana 44, Purdue 41",
-      "yards": 0,
-      "season": 2019,
-      "label": "Indiana 44, Purdue 41",
-      "profile": "Indiana 44, Purdue 41"
-     }
-    ]
-   }
+   "reveal": "217 rushing yards, the most by anyone in this rivalry since 2005 (box scores). Purdue won, 31–24.",
+   "sig": "xb2017-11-25Markell Jones"
   },
   {
    "type": "count",
@@ -349,37 +120,26 @@
    "bonus": "names"
   },
   {
-   "type": "count",
-   "label": "Since 2018",
-   "a": "PUR",
-   "b": "IU",
-   "threshold": 1100,
+   "label": "Purdue–Indiana",
    "verified": true,
+   "sig": "kPurdue–Indiana1",
+   "type": "mc",
    "pitted": true,
-   "prompt": "From 2018 through 2025, which school had more 1,100-yard receiving seasons?",
-   "A": [
-    {
-     "name": "Rondale Moore",
-     "yards": 1258,
-     "season": 2018,
-     "profile": "Wide receiver · 2018: 213 rushing, 1,258 receiving yds"
-    },
-    {
-     "name": "David Bell",
-     "yards": 1286,
-     "season": 2021,
-     "profile": "Wide receiver · 2021: 39 rushing, 1,286 receiving yds"
-    },
-    {
-     "name": "Charlie Jones",
-     "yards": 1361,
-     "season": 2022,
-     "profile": "Wide receiver · 2022: 3 rushing, 1,361 receiving yds"
-    }
+   "prompt": "2019: Indiana at Purdue. What was the final score?",
+   "options": [
+    "Indiana 44, Purdue 41",
+    "Purdue 44, Indiana 41",
+    "Indiana 51, Purdue 45",
+    "Indiana 44, Purdue 37"
    ],
-   "B": [],
-   "sig": "tsrec11002018",
-   "bonus": "names"
+   "answer": 0,
+   "reveal": "Indiana 44, Purdue 41 (2019-11-30, Ross-Ade Stadium).",
+   "order": [
+    0,
+    2,
+    1,
+    3
+   ]
   },
   {
    "type": "count",
@@ -390,112 +150,245 @@
    "verified": true,
    "pitted": true,
    "bonus": "names",
-   "prompt": "Purdue and Indiana's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
+   "prompt": "Purdue and Indiana's combined top 10 single-season receiving yards (through 2025): which school has more seasons on the list?",
    "A": [
     {
-     "name": "Mike Alstott",
-     "yards": 1436,
-     "season": 1995,
-     "label": "1995: 1,436",
-     "profile": "1995 season, 1,436 rushing yards · No. 6 on the combined list"
+     "name": "Charlie Jones",
+     "yards": 1361,
+     "season": 2022,
+     "label": "2022: 1,361",
+     "profile": "2022 season, 1,361 receiving yards · No. 1 on the combined list"
     },
     {
-     "name": "Otis Armstrong",
-     "yards": 1361,
-     "season": 1972,
-     "label": "1972: 1,361",
-     "profile": "1972 season, 1,361 rushing yards · No. 8 on the combined list"
+     "name": "John Standeford",
+     "yards": 1307,
+     "season": 2002,
+     "label": "2002: 1,307",
+     "profile": "2002 season, 1,307 receiving yards · No. 2 on the combined list"
+    },
+    {
+     "name": "David Bell",
+     "yards": 1286,
+     "season": 2021,
+     "label": "2021: 1,286",
+     "profile": "2021 season, 1,286 receiving yards · No. 3 on the combined list"
+    },
+    {
+     "name": "Rondale Moore",
+     "yards": 1258,
+     "season": 2018,
+     "label": "2018: 1,258",
+     "profile": "2018 season, 1,258 receiving yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Chris Daniels",
+     "yards": 1236,
+     "season": 1999,
+     "label": "1999: 1,236",
+     "profile": "1999 season, 1,236 receiving yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Brian Alford",
+     "yards": 1228,
+     "season": 1997,
+     "label": "1997: 1,228",
+     "profile": "1997 season, 1,228 receiving yards · No. 7 on the combined list"
+    },
+    {
+     "name": "John Standeford",
+     "yards": 1150,
+     "season": 2003,
+     "label": "2003: 1,150",
+     "profile": "2003 season, 1,150 receiving yards · No. 8 on the combined list"
+    },
+    {
+     "name": "Keith Smith",
+     "yards": 1100,
+     "season": 2009,
+     "label": "2009: 1,100",
+     "profile": "2009 season, 1,100 receiving yards · No. 10 on the combined list"
     }
    ],
    "B": [
     {
-     "name": "Tevin Coleman",
-     "yards": 2036,
-     "season": 2014,
-     "label": "2014: 2,036",
-     "profile": "2014 season, 2,036 rushing yards · No. 1 on the combined list"
+     "name": "Ernie Jones",
+     "yards": 1265,
+     "season": 1987,
+     "label": "1987: 1,265",
+     "profile": "1987 season, 1,265 receiving yards · No. 4 on the combined list"
     },
     {
-     "name": "Vaughn Dunbar",
-     "yards": 1805,
-     "season": 1991,
-     "label": "1991: 1,805",
-     "profile": "1991 season, 1,805 rushing yards · No. 2 on the combined list"
-    },
-    {
-     "name": "Anthony Thompson",
-     "yards": 1793,
-     "season": 1989,
-     "label": "1989: 1,793",
-     "profile": "1989 season, 1,793 rushing yards · No. 3 on the combined list"
-    },
-    {
-     "name": "Anthony Thompson",
-     "yards": 1686,
-     "season": 1988,
-     "label": "1988: 1,686",
-     "profile": "1988 season, 1,686 rushing yards · No. 4 on the combined list"
-    },
-    {
-     "name": "Alex Smith",
-     "yards": 1475,
-     "season": 1994,
-     "label": "1994: 1,475",
-     "profile": "1994 season, 1,475 rushing yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Levron Williams",
-     "yards": 1401,
-     "season": 2001,
-     "label": "2001: 1,401",
-     "profile": "2001 season, 1,401 rushing yards · No. 7 on the combined list"
-    },
-    {
-     "name": "Antwaan Randle El",
-     "yards": 1270,
-     "season": 2000,
-     "label": "2000: 1,270",
-     "profile": "2000 season, 1,270 rushing yards · No. 9 on the combined list"
-    },
-    {
-     "name": "Courtney Snyder",
-     "yards": 1254,
-     "season": 1974,
-     "label": "1974: 1,254",
-     "profile": "1974 season, 1,254 rushing yards · No. 10 on the combined list"
+     "name": "James Hardy",
+     "yards": 1125,
+     "season": 2007,
+     "label": "2007: 1,125",
+     "profile": "2007 season, 1,125 receiving yards · No. 9 on the combined list"
     }
    ],
-   "sig": "fsrush"
+   "sig": "fsrec"
+  },
+  {
+   "label": "Purdue–Indiana",
+   "verified": true,
+   "sig": "kPurdue–Indiana0",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "Of the 25 Purdue–Indiana games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+   "options": [
+    "4",
+    "2",
+    "3",
+    "5"
+   ],
+   "answer": 0,
+   "reveal": "4: 2007 Indiana 27, Purdue 24 · 2010 Indiana 34, Purdue 31 · 2016 Indiana 26, Purdue 24 · 2019 Indiana 44, Purdue 41.",
+   "order": [
+    0,
+    3,
+    2,
+    1
+   ],
+   "years": {
+    "prompt": "Name the 4 seasons.",
+    "a": "PUR",
+    "b": "IU",
+    "A": [],
+    "B": [
+     {
+      "name": "Indiana 27, Purdue 24",
+      "yards": 0,
+      "season": 2007,
+      "label": "Indiana 27, Purdue 24",
+      "profile": "Indiana 27, Purdue 24"
+     },
+     {
+      "name": "Indiana 34, Purdue 31",
+      "yards": 0,
+      "season": 2010,
+      "label": "Indiana 34, Purdue 31",
+      "profile": "Indiana 34, Purdue 31"
+     },
+     {
+      "name": "Indiana 26, Purdue 24",
+      "yards": 0,
+      "season": 2016,
+      "label": "Indiana 26, Purdue 24",
+      "profile": "Indiana 26, Purdue 24"
+     },
+     {
+      "name": "Indiana 44, Purdue 41",
+      "yards": 0,
+      "season": 2019,
+      "label": "Indiana 44, Purdue 41",
+      "profile": "Indiana 44, Purdue 41"
+     }
+    ]
+   }
   },
   {
    "type": "mc",
-   "label": "Historic Day",
+   "label": "Series History",
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Nov 25, 2017",
-    "winner": "PUR",
-    "loser": "IU",
-    "ws": 31,
-    "ls": 24,
-    "venue": "Ross-Ade Stadium"
-   },
-   "prompt": "2017: Purdue vs. Indiana. Markell Jones carried 31 times. How many rushing yards did he finish with?",
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Purdue–Indiana series?",
    "options": [
-    "217",
-    "177",
-    "137",
-    "97"
+    "66 points",
+    "59 points",
+    "52 points",
+    "78 points"
    ],
    "answer": 0,
    "order": [
+    0,
+    2,
     1,
+    3
+   ],
+   "reveal": "66 points: Indiana 66, Purdue 0 (Nov 30, 2024).",
+   "sig": "mm66"
+  },
+  {
+   "type": "mc",
+   "label": "Twist",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 30, 2019",
+    "winner": "IU",
+    "loser": "PUR",
+    "ws": 44,
+    "ls": 41,
+    "venue": "Ross-Ade Stadium"
+   },
+   "prompt": "The 2019 Purdue–Indiana game went to Indiana, 44–41, over Purdue. Which team gained more total yards, and by how much?",
+   "options": [
+    "Purdue by 67",
+    "Indiana by 67",
+    "Purdue by 107",
+    "Indiana by 107"
+   ],
+   "answer": 0,
+   "order": [
     0,
     3,
-    2
+    2,
+    1
    ],
-   "reveal": "217 rushing yards, the most by anyone in this rivalry since 2005 (box scores). Purdue won, 31–24.",
-   "sig": "xb2017-11-25Markell Jones"
+   "reveal": "🔄 Twist: Purdue out-gained Indiana 589 to 522 and still lost. (Purdue 181 rushing, 408 passing; Indiana 185 rushing, 337 passing.)",
+   "sig": "xo2019-11-30"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "D.J. Knox (PUR RB)",
+    "value": 517,
+    "school": "PUR"
+   },
+   "B": {
+    "label": "Tevin Coleman (IU RB)",
+    "value": 383,
+    "school": "IU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: D.J. Knox 517 vs. Tevin Coleman 383.",
+   "sig": "urecTevin ColemanD.J. Knox"
+  },
+  {
+   "type": "mc",
+   "label": "Heisman",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Which of these finished highest in Heisman Trophy voting that season?",
+   "options": [
+    "Fernando Mendoza (Indiana, 2025)",
+    "Tevin Coleman (Indiana, 2014)",
+    "Drew Brees (Purdue, 2000)",
+    "Kurtis Rourke (Indiana, 2024)"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    2,
+    0,
+    1
+   ],
+   "reveal": "Fernando Mendoza: 1st in 2025 · Drew Brees: 3rd in 2000 · Tevin Coleman: 7th in 2014 · Kurtis Rourke: 9th in 2024",
+   "sig": "hmDrew Brees2000,Fernando Mendoza2025,Kurtis Rourke2024,Tevin Coleman2014",
+   "more": {
+    "title": "Purdue and Indiana top-10 Heisman finishes (seasons with checked voting)",
+    "rows": [
+     "1st: Fernando Mendoza (IU) 2025",
+     "3rd: Drew Brees (PUR) 2000",
+     "6th: Antwaan Randle El (IU) 2001",
+     "7th: Tevin Coleman (IU) 2014",
+     "9th: Kurtis Rourke (IU) 2024"
+    ]
+   }
   }
  ]
 }

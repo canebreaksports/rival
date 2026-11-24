@@ -6,139 +6,9 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-24T02:10:31.936Z",
- "engine": 52,
+ "generatedAt": "2026-11-24T02:16:16.815Z",
+ "engine": 53,
  "questions": [
-  {
-   "type": "count",
-   "label": "Since 2021",
-   "a": "MSST",
-   "b": "MISS",
-   "threshold": 1300,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2021 through 2025, which school had more 1,300-yard rushing seasons?",
-   "A": [],
-   "B": [
-    {
-     "name": "Quinshon Judkins",
-     "yards": 1567,
-     "season": 2022,
-     "profile": "Running back · 2022: 1,567 rushing, 132 receiving yds"
-    },
-    {
-     "name": "Kewan Lacy",
-     "yards": 1567,
-     "season": 2025,
-     "profile": "Running back · 2025: 1,567 rushing, 177 receiving yds"
-    }
-   ],
-   "sig": "tsrush13002021",
-   "bonus": "names"
-  },
-  {
-   "type": "mc",
-   "label": "Twist",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 23, 2017",
-    "winner": "MISS",
-    "loser": "MSST",
-    "ws": 31,
-    "ls": 28,
-    "venue": "Davis Wade Stadium"
-   },
-   "prompt": "The 2017 Mississippi State–Ole Miss game went to Ole Miss, 31–28, over No. 16 Mississippi State. Which team gained more total yards, and by how much?",
-   "options": [
-    "Mississippi State by 146",
-    "Ole Miss by 146",
-    "Mississippi State by 70",
-    "Ole Miss by 70"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    1,
-    0,
-    3
-   ],
-   "reveal": "🔄 Twist: Mississippi State out-gained Ole Miss 501 to 355 and still lost. (Mississippi State 294 rushing, 207 passing; Ole Miss 108 rushing, 247 passing.)",
-   "sig": "xo2017-11-23"
-  },
-  {
-   "label": "Egg Bowl",
-   "verified": true,
-   "sig": "kEgg Bowl1",
-   "type": "mc",
-   "pitted": true,
-   "prompt": "Of the 26 Mississippi State–Ole Miss games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
-   "options": [
-    "6",
-    "4",
-    "5",
-    "7"
-   ],
-   "answer": 0,
-   "reveal": "6: 2006 Ole Miss 20, Mississippi State 17 · 2007 Mississippi State 17, Ole Miss 14 · 2013 Mississippi State 17, Ole Miss 10 (OT) · 2017 Ole Miss 31, No. 16 Mississippi State 28 · 2019 Mississippi State 21, Ole Miss 20 · 2022 Mississippi State 24, No. 20 Ole Miss 22.",
-   "order": [
-    1,
-    2,
-    0,
-    3
-   ],
-   "years": {
-    "prompt": "Name the 6 seasons.",
-    "a": "MSST",
-    "b": "MISS",
-    "A": [
-     {
-      "name": "Mississippi State 17, Ole Miss 14",
-      "yards": 0,
-      "season": 2007,
-      "label": "Mississippi State 17, Ole Miss 14",
-      "profile": "Mississippi State 17, Ole Miss 14"
-     },
-     {
-      "name": "Mississippi State 17, Ole Miss 10 (OT)",
-      "yards": 0,
-      "season": 2013,
-      "label": "Mississippi State 17, Ole Miss 10 (OT)",
-      "profile": "Mississippi State 17, Ole Miss 10 (OT)"
-     },
-     {
-      "name": "Mississippi State 21, Ole Miss 20",
-      "yards": 0,
-      "season": 2019,
-      "label": "Mississippi State 21, Ole Miss 20",
-      "profile": "Mississippi State 21, Ole Miss 20"
-     },
-     {
-      "name": "Mississippi State 24, No. 20 Ole Miss 22",
-      "yards": 0,
-      "season": 2022,
-      "label": "Mississippi State 24, No. 20 Ole Miss 22",
-      "profile": "Mississippi State 24, No. 20 Ole Miss 22"
-     }
-    ],
-    "B": [
-     {
-      "name": "Ole Miss 20, Mississippi State 17",
-      "yards": 0,
-      "season": 2006,
-      "label": "Ole Miss 20, Mississippi State 17",
-      "profile": "Ole Miss 20, Mississippi State 17"
-     },
-     {
-      "name": "Ole Miss 31, No. 16 Mississippi State 28",
-      "yards": 0,
-      "season": 2017,
-      "label": "Ole Miss 31, No. 16 Mississippi State 28",
-      "profile": "Ole Miss 31, No. 16 Mississippi State 28"
-     }
-    ]
-   }
-  },
   {
    "type": "count",
    "label": "NFL Draft",
@@ -188,14 +58,14 @@
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 28, 2020",
+    "date": "Nov 29, 2014",
     "winner": "MISS",
     "loser": "MSST",
     "ws": 31,
-    "ls": 24,
+    "ls": 17,
     "venue": "Vaught-Hemingway Stadium"
    },
-   "prompt": "2020: Mississippi State vs. Ole Miss. Jaden Walley caught 9 passes. How many receiving yards did he finish with?",
+   "prompt": "2014: No. 18 Ole Miss vs. No. 4 Mississippi State. Evan Engram caught 5 passes. How many receiving yards did he finish with?",
    "options": [
     "176",
     "136",
@@ -205,69 +75,110 @@
    "answer": 0,
    "order": [
     3,
-    0,
     2,
+    0,
     1
    ],
-   "reveal": "176 receiving yards, No. 2 by anyone in this rivalry since 2007 (box scores). Mississippi State still lost, 31–24.",
-   "sig": "xb2020-11-28Jaden Walley"
+   "reveal": "176 receiving yards, the most by anyone in this rivalry since 2007 (box scores). Ole Miss won, 31–17.",
+   "sig": "xb2014-11-29Evan Engram"
   },
   {
-   "type": "mc",
-   "label": "Game Story",
+   "type": "rank",
+   "label": "Notables",
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Nov 26, 2016",
-    "winner": "MSST",
-    "loser": "MISS",
-    "ws": 55,
-    "ls": 20,
-    "venue": "Vaught-Hemingway Stadium"
-   },
-   "prompt": "The 2016 Mississippi State–Ole Miss game is the highest-scoring game in the series since 2000, but the teams combined for how many rushing yards?",
-   "options": [
-    "665",
-    "805",
-    "735",
-    "525"
+   "unit": "yds",
+   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Anthony Dixon (Mississippi State)",
+     "value": 3994,
+     "school": "MSST"
+    },
+    {
+     "label": "Joe Gunn (Ole Miss)",
+     "value": 2749,
+     "school": "MISS"
+    },
+    {
+     "label": "Brandon Bolden (Ole Miss)",
+     "value": 2604,
+     "school": "MISS"
+    },
+    {
+     "label": "Michael Haddix (Mississippi State)",
+     "value": 2558,
+     "school": "MSST"
+    }
    ],
-   "answer": 0,
-   "order": [
-    0,
-    1,
-    3,
-    2
-   ],
-   "reveal": "665: Mississippi State 457, Ole Miss 208. 80+ rushing yards: Nick Fitzgerald (Mississippi State) 258, Aeris Williams (Mississippi State) 191, Akeem Judd (Ole Miss) 107.",
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Mississippi State Bulldogs football statistical leaders\" career rushing yards table (revision 1385863841), which cites the school record book; fetched 2026-11-17; Wikipedia \"Ole Miss Rebels football statistical leaders\" career rushing yards table (revision 1386157185), which cites the school record book; fetched 2026-11-17",
+   "sig": "nrrushingAnthony Dixon,Brandon Bolden,Joe Gunn,Michael Haddix",
    "names": {
-    "prompt": "Bonus: name everyone with 80+ rushing yards in this game.",
+    "prompt": "Bonus: name the other 7 players in Mississippi State and Ole Miss's combined top 10 for career rushing yards.",
     "a": "MSST",
     "b": "MISS",
     "A": [
      {
       "name": "Nick Fitzgerald",
-      "yards": 258,
-      "label": "258 yds on 14 carries, 2 TD",
-      "profile": "Mississippi State · 258 rushing yards on 14 carries, 2 TD in this game"
+      "yards": 3607,
+      "label": "3,607",
+      "profile": "3,607 career rushing yards · No. 2 on the combined list"
      },
      {
-      "name": "Aeris Williams",
-      "yards": 191,
-      "label": "191 yds on 25 carries, 2 TD",
-      "profile": "Mississippi State · 191 rushing yards on 25 carries, 2 TD in this game"
+      "name": "Jerious Norwood",
+      "yards": 3212,
+      "label": "3,212",
+      "profile": "3,212 career rushing yards · No. 3 on the combined list"
+     },
+     {
+      "name": "Walter Packer",
+      "yards": 2820,
+      "label": "2,820",
+      "profile": "2,820 career rushing yards · No. 5 on the combined list"
+     },
+     {
+      "name": "Michael Davis",
+      "yards": 2721,
+      "label": "2,721",
+      "profile": "2,721 career rushing yards · No. 8 on the combined list"
      }
     ],
     "B": [
      {
-      "name": "Akeem Judd",
-      "yards": 107,
-      "label": "107 yds on 19 carries, 0 TD",
-      "profile": "Ole Miss · 107 rushing yards on 19 carries, 0 TD in this game"
+      "name": "Deuce McAllister",
+      "yards": 3060,
+      "label": "3,060",
+      "profile": "3,060 career rushing yards · No. 4 on the combined list"
+     },
+     {
+      "name": "Quinshon Judkins",
+      "yards": 2725,
+      "label": "2,725",
+      "profile": "2,725 career rushing yards · No. 7 on the combined list"
+     },
+     {
+      "name": "Kayo Dottley",
+      "yards": 2654,
+      "label": "2,654",
+      "profile": "2,654 career rushing yards · No. 9 on the combined list"
      }
     ]
    },
-   "sig": "gs2016-11-26rush"
+   "more": {
+    "title": "Career rushing yards, Mississippi State and Ole Miss (school top 10s)",
+    "rows": [
+     "1. Anthony Dixon (Mississippi State) 3,994",
+     "2. Nick Fitzgerald (Mississippi State) 3,607",
+     "3. Jerious Norwood (Mississippi State) 3,212",
+     "4. Deuce McAllister (Ole Miss) 3,060",
+     "5. Walter Packer (Mississippi State) 2,820",
+     "6. Joe Gunn (Ole Miss) 2,749",
+     "7. Quinshon Judkins (Ole Miss) 2,725",
+     "8. Michael Davis (Mississippi State) 2,721",
+     "9. Kayo Dottley (Ole Miss) 2,654",
+     "10. Brandon Bolden (Ole Miss) 2,604"
+    ]
+   }
   },
   {
    "label": "Egg Bowl",
@@ -285,10 +196,10 @@
    "answer": 0,
    "reveal": "Mississippi State 24, No. 20 Ole Miss 22 (2022-11-24, Vaught-Hemingway Stadium).",
    "order": [
-    1,
-    3,
     0,
-    2
+    2,
+    3,
+    1
    ]
   },
   {
@@ -378,6 +289,54 @@
    "sig": "fsrec"
   },
   {
+   "type": "mc",
+   "label": "Ranked Wins",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2018, which school has more wins over AP-ranked opponents, and how many?",
+   "options": [
+    "Ole Miss, 12",
+    "Ole Miss, 16",
+    "Mississippi State, 10",
+    "Mississippi State, 9"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    0,
+    2,
+    3
+   ],
+   "reveal": "Ole Miss 12, Mississippi State 10 (through 2025). Latest: Ole Miss: 2025 vs. No. 13 Oklahoma 34–26, 2025 vs. No. 17 Tulane 41–10, 2025 vs. No. 2 Georgia 39–34; Mississippi State: 2022 vs. No. 17 Texas A&M 42–24, 2022 vs. No. 20 Ole Miss 24–22, 2025 vs. No. 12 Arizona State 24–20.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   },
+   "sig": "rw2018"
+  },
+  {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Mississippi State–Ole Miss series?",
+   "options": [
+    "45 points",
+    "31 points",
+    "54 points",
+    "57 points"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "reveal": "45 points: Ole Miss 45, Mississippi State 0 (Nov 28, 2008).",
+   "sig": "mm45"
+  },
+  {
    "label": "Egg Bowl",
    "verified": true,
    "sig": "kEgg Bowl3",
@@ -393,109 +352,111 @@
    "answer": 0,
    "reveal": "Bo Wallace fumbled and Jamerson Love recovered in the end zone. Wallace had also thrown three first-half interceptions.",
    "order": [
-    2,
-    1,
     3,
-    0
+    0,
+    2,
+    1
    ]
   },
   {
-   "type": "rank",
-   "label": "Notables",
+   "label": "Egg Bowl",
    "verified": true,
+   "sig": "kEgg Bowl1",
+   "type": "mc",
    "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
-   "items": [
-    {
-     "label": "Jaden Walley (Mississippi State, 2020–24)",
-     "value": 1743,
-     "school": "MSST"
-    },
-    {
-     "label": "Chad Bumphis (Mississippi State, 2009–12)",
-     "value": 2270,
-     "school": "MSST"
-    },
-    {
-     "label": "Donte Moncrief (Ole Miss, 2011–13)",
-     "value": 2371,
-     "school": "MISS"
-    },
-    {
-     "label": "Chris Collins (Ole Miss, 2000–03)",
-     "value": 2621,
-     "school": "MISS"
-    }
+   "prompt": "Of the 26 Mississippi State–Ole Miss games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+   "options": [
+    "6",
+    "4",
+    "5",
+    "7"
    ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"Mississippi State Bulldogs football statistical leaders\" career receiving yards table (revision 1385863841), which cites the school record book; fetched 2026-11-23; Wikipedia \"Ole Miss Rebels football statistical leaders\" career receiving yards table (revision 1386157185), which cites the school record book; fetched 2026-11-23",
-   "sig": "nrreceivingChad Bumphis,Chris Collins,Donte Moncrief,Jaden Walley",
-   "names": {
-    "prompt": "Bonus: name the other 7 players in Mississippi State and Ole Miss's combined top 10 for career receiving yards.",
+   "answer": 0,
+   "reveal": "6: 2006 Ole Miss 20, Mississippi State 17 · 2007 Mississippi State 17, Ole Miss 14 · 2013 Mississippi State 17, Ole Miss 10 (OT) · 2017 Ole Miss 31, No. 16 Mississippi State 28 · 2019 Mississippi State 21, Ole Miss 20 · 2022 Mississippi State 24, No. 20 Ole Miss 22.",
+   "order": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "years": {
+    "prompt": "Name the 6 seasons.",
     "a": "MSST",
     "b": "MISS",
     "A": [
      {
-      "name": "Fred Ross",
-      "yards": 2528,
-      "label": "2,528 (2013–2016)",
-      "profile": "2,528 career receiving yards (2013–2016) · No. 4 on the combined list"
+      "name": "Mississippi State 17, Ole Miss 14",
+      "yards": 0,
+      "season": 2007,
+      "label": "Mississippi State 17, Ole Miss 14",
+      "profile": "Mississippi State 17, Ole Miss 14"
+     },
+     {
+      "name": "Mississippi State 17, Ole Miss 10 (OT)",
+      "yards": 0,
+      "season": 2013,
+      "label": "Mississippi State 17, Ole Miss 10 (OT)",
+      "profile": "Mississippi State 17, Ole Miss 10 (OT)"
+     },
+     {
+      "name": "Mississippi State 21, Ole Miss 20",
+      "yards": 0,
+      "season": 2019,
+      "label": "Mississippi State 21, Ole Miss 20",
+      "profile": "Mississippi State 21, Ole Miss 20"
+     },
+     {
+      "name": "Mississippi State 24, No. 20 Ole Miss 22",
+      "yards": 0,
+      "season": 2022,
+      "label": "Mississippi State 24, No. 20 Ole Miss 22",
+      "profile": "Mississippi State 24, No. 20 Ole Miss 22"
      }
     ],
     "B": [
      {
-      "name": "A. J. Brown",
-      "yards": 2984,
-      "label": "2,984 (2016–2018)",
-      "profile": "2,984 career receiving yards (2016–2018) · No. 1 on the combined list"
+      "name": "Ole Miss 20, Mississippi State 17",
+      "yards": 0,
+      "season": 2006,
+      "label": "Ole Miss 20, Mississippi State 17",
+      "profile": "Ole Miss 20, Mississippi State 17"
      },
      {
-      "name": "Shay Hodge",
-      "yards": 2646,
-      "label": "2,646 (2006–2009)",
-      "profile": "2,646 career receiving yards (2006–2009) · No. 2 on the combined list"
-     },
-     {
-      "name": "Elijah Moore",
-      "yards": 2441,
-      "label": "2,441 (2018–2020)",
-      "profile": "2,441 career receiving yards (2018–2020) · No. 5 on the combined list"
-     },
-     {
-      "name": "Laquon Treadwell",
-      "yards": 2393,
-      "label": "2,393 (2013–2015)",
-      "profile": "2,393 career receiving yards (2013–2015) · No. 6 on the combined list"
-     },
-     {
-      "name": "Evan Engram",
-      "yards": 2320,
-      "label": "2,320 (2013–2016)",
-      "profile": "2,320 career receiving yards (2013–2016) · No. 8 on the combined list"
-     },
-     {
-      "name": "Willie Green",
-      "yards": 2274,
-      "label": "2,274 (1986–1989)",
-      "profile": "2,274 career receiving yards (1986–1989) · No. 9 on the combined list"
+      "name": "Ole Miss 31, No. 16 Mississippi State 28",
+      "yards": 0,
+      "season": 2017,
+      "label": "Ole Miss 31, No. 16 Mississippi State 28",
+      "profile": "Ole Miss 31, No. 16 Mississippi State 28"
      }
     ]
-   },
-   "more": {
-    "title": "Career receiving yards, Mississippi State and Ole Miss (careers ending 2000 or later)",
-    "rows": [
-     "1. A. J. Brown (Ole Miss, 2016–18) 2,984",
-     "2. Shay Hodge (Ole Miss, 2006–09) 2,646",
-     "3. Chris Collins (Ole Miss, 2000–03) 2,621",
-     "4. Fred Ross (Mississippi State, 2013–16) 2,528",
-     "5. Elijah Moore (Ole Miss, 2018–20) 2,441",
-     "6. Laquon Treadwell (Ole Miss, 2013–15) 2,393",
-     "7. Donte Moncrief (Ole Miss, 2011–13) 2,371",
-     "8. Chad Bumphis (Mississippi State, 2009–12) 2,270",
-     "9. Justin Jenkins (Mississippi State, 2000–03) 1,974",
-     "10. De'Runnya Wilson (Mississippi State, 2013–15) 1,949"
-    ]
    }
+  },
+  {
+   "type": "count",
+   "label": "Since 2021",
+   "a": "MSST",
+   "b": "MISS",
+   "threshold": 1300,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2021 through 2025, which school had more 1,300-yard rushing seasons?",
+   "A": [],
+   "B": [
+    {
+     "name": "Quinshon Judkins",
+     "yards": 1567,
+     "season": 2022,
+     "profile": "Running back · 2022: 1,567 rushing, 132 receiving yds"
+    },
+    {
+     "name": "Kewan Lacy",
+     "yards": 1567,
+     "season": 2025,
+     "profile": "Running back · 2025: 1,567 rushing, 177 receiving yds"
+    }
+   ],
+   "sig": "tsrush13002021",
+   "bonus": "names"
   }
  ],
  "rev": 1

@@ -6,9 +6,325 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-24T02:10:32.544Z",
- "engine": 52,
+ "generatedAt": "2026-11-24T02:16:17.555Z",
+ "engine": 53,
  "questions": [
+  {
+   "type": "count",
+   "label": "NFL Draft",
+   "a": "TENN",
+   "b": "VAN",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From the 2015 draft through 2026, which school had more linebackers taken in the first three rounds?",
+   "A": [],
+   "B": [
+    {
+     "name": "Zach Cunningham",
+     "yards": 57,
+     "season": 2017,
+     "label": "No. 57 pick",
+     "profile": "Inside Linebacker · 2017 draft, round 2"
+    },
+    {
+     "name": "Oren Burks",
+     "yards": 88,
+     "season": 2018,
+     "label": "No. 88 pick",
+     "profile": "Outside Linebacker · 2018 draft, round 3"
+    }
+   ],
+   "sig": "dcr32015lb",
+   "bonus": "names"
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Dan Stricker (Vanderbilt, 1999–02)",
+     "value": 2880,
+     "school": "VAN"
+    },
+    {
+     "label": "Jordan Matthews (Vanderbilt, 2010–13)",
+     "value": 3759,
+     "school": "VAN"
+    },
+    {
+     "label": "Robert Meachem (Tennessee, 2004–06)",
+     "value": 2140,
+     "school": "TENN"
+    },
+    {
+     "label": "Denarius Moore (Tennessee, 2007–10)",
+     "value": 2004,
+     "school": "TENN"
+    }
+   ],
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Tennessee Volunteers football statistical leaders\" career receiving yards table (revision 1387103812), which cites the school record book; fetched 2026-11-23; Wikipedia \"Vanderbilt Commodores football statistical leaders\" career receiving yards table (revision 1385775995), which cites the school record book; fetched 2026-11-23",
+   "sig": "nrreceivingDan Stricker,Denarius Moore,Jordan Matthews,Robert Meachem",
+   "more": {
+    "title": "Career receiving yards, Tennessee and Vanderbilt (careers ending 2000 or later)",
+    "rows": [
+     "1. Jordan Matthews (Vanderbilt, 2010–13) 3,759",
+     "2. Dan Stricker (Vanderbilt, 1999–02) 2,880",
+     "3. Earl Bennett (Vanderbilt, 2005–07) 2,852",
+     "4. Kalija Lipscomb (Vanderbilt, 2016–19) 2,356",
+     "5. Jauan Jennings (Tennessee, 2015–19) 2,153",
+     "6. Robert Meachem (Tennessee, 2004–06) 2,140",
+     "7. Cedrick Wilson (Tennessee, 1997–00) 2,137",
+     "8. Will Sheppard (Vanderbilt, 2020–23) 2,067",
+     "9. Denarius Moore (Tennessee, 2007–10) 2,004"
+    ]
+   }
+  },
+  {
+   "label": "Tennessee–Vanderbilt",
+   "verified": true,
+   "sig": "kTennessee–Vanderbilt1",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "2007: Vanderbilt at No. 19 Tennessee. What was the final score?",
+   "options": [
+    "Tennessee 25, Vanderbilt 24",
+    "Vanderbilt 25, Tennessee 24",
+    "Tennessee 32, Vanderbilt 28",
+    "Tennessee 25, Vanderbilt 20"
+   ],
+   "answer": 0,
+   "reveal": "No. 19 Tennessee 25, Vanderbilt 24 (2007-11-17, Neyland Stadium).",
+   "order": [
+    1,
+    2,
+    0,
+    3
+   ]
+  },
+  {
+   "label": "Tennessee–Vanderbilt",
+   "verified": true,
+   "sig": "kTennessee–Vanderbilt0",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "Of the 26 Tennessee–Vanderbilt games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+   "options": [
+    "3",
+    "1",
+    "2",
+    "4"
+   ],
+   "answer": 0,
+   "reveal": "3: 2000 No. 25 Tennessee 28, Vanderbilt 26 · 2007 No. 19 Tennessee 25, Vanderbilt 24 · 2011 Tennessee 27, Vanderbilt 21 (OT).",
+   "order": [
+    0,
+    3,
+    2,
+    1
+   ],
+   "years": {
+    "prompt": "Name the 3 seasons.",
+    "a": "TENN",
+    "b": "VAN",
+    "A": [
+     {
+      "name": "No. 25 Tennessee 28, Vanderbilt 26",
+      "yards": 0,
+      "season": 2000,
+      "label": "No. 25 Tennessee 28, Vanderbilt 26",
+      "profile": "No. 25 Tennessee 28, Vanderbilt 26"
+     },
+     {
+      "name": "No. 19 Tennessee 25, Vanderbilt 24",
+      "yards": 0,
+      "season": 2007,
+      "label": "No. 19 Tennessee 25, Vanderbilt 24",
+      "profile": "No. 19 Tennessee 25, Vanderbilt 24"
+     },
+     {
+      "name": "Tennessee 27, Vanderbilt 21 (OT)",
+      "yards": 0,
+      "season": 2011,
+      "label": "Tennessee 27, Vanderbilt 21 (OT)",
+      "profile": "Tennessee 27, Vanderbilt 21 (OT)"
+     }
+    ],
+    "B": []
+   }
+  },
+  {
+   "label": "Tennessee–Vanderbilt",
+   "verified": true,
+   "sig": "kTennessee–Vanderbilt2",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "2013: Vanderbilt won at Tennessee, 14–10. How many passing yards did Tennessee finish with?",
+   "options": [
+    "53",
+    "103",
+    "153",
+    "203"
+   ],
+   "answer": 0,
+   "reveal": "53. Vanderbilt also forced three interceptions; Joshua Dobbs went 11 of 19 for 53 yards and was picked off twice.",
+   "order": [
+    2,
+    3,
+    1,
+    0
+   ]
+  },
+  {
+   "type": "mc",
+   "label": "Ranked Wins",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2015, which school has more wins over AP-ranked opponents, and how many?",
+   "options": [
+    "Tennessee, 18",
+    "Tennessee, 15",
+    "Vanderbilt, 8",
+    "Vanderbilt, 20"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    3,
+    2,
+    1
+   ],
+   "reveal": "Tennessee 18, Vanderbilt 8 (through 2025). Latest: Tennessee: 2024 vs. No. 24 NC State 51–10, 2024 vs. No. 15 Oklahoma 25–15, 2024 vs. No. 7 Alabama 24–17; Vanderbilt: 2025 vs. No. 10 LSU 31–24, 2025 vs. No. 15 Missouri 17–10, 2025 vs. No. 18 Tennessee 45–24.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   },
+   "sig": "rw2015"
+  },
+  {
+   "type": "count",
+   "label": "Since 2021",
+   "a": "TENN",
+   "b": "VAN",
+   "threshold": 15,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2021 through 2025, which school had more seasons with 15+ rushing touchdowns by one player?",
+   "A": [
+    {
+     "name": "Dylan Sampson",
+     "yards": 22,
+     "season": 2024,
+     "profile": "Running back · 2024: 1,491 rushing, 143 receiving yds, 22 rushing TD"
+    },
+    {
+     "name": "DeSean Bishop",
+     "yards": 16,
+     "season": 2025,
+     "profile": "Running back · 2025: 1,076 rushing, 135 receiving yds, 16 rushing TD"
+    }
+   ],
+   "B": [],
+   "sig": "tsrushTD152021",
+   "bonus": "names"
+  },
+  {
+   "type": "mc",
+   "label": "Game Story",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2015",
+    "winner": "TENN",
+    "loser": "VAN",
+    "ws": 53,
+    "ls": 28,
+    "venue": "Neyland Stadium"
+   },
+   "prompt": "The 2015 Tennessee–Vanderbilt game is the highest-scoring game in the series since 2000, but the teams combined for how many rushing yards?",
+   "options": [
+    "533",
+    "633",
+    "433",
+    "583"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    2,
+    0,
+    3
+   ],
+   "reveal": "533: Tennessee 331, Vanderbilt 202. 75+ rushing yards: Ralph Webb (Vanderbilt) 149, Jalen Hurd (Tennessee) 120, Alvin Kamara (Tennessee) 99, Joshua Dobbs (Tennessee) 93.",
+   "names": {
+    "prompt": "Bonus: name everyone with 75+ rushing yards in this game.",
+    "a": "TENN",
+    "b": "VAN",
+    "A": [
+     {
+      "name": "Jalen Hurd",
+      "yards": 120,
+      "label": "120 yds on 19 carries, 1 TD",
+      "profile": "Tennessee · 120 rushing yards on 19 carries, 1 TD in this game"
+     },
+     {
+      "name": "Alvin Kamara",
+      "yards": 99,
+      "label": "99 yds on 16 carries, 0 TD",
+      "profile": "Tennessee · 99 rushing yards on 16 carries, 0 TD in this game"
+     },
+     {
+      "name": "Joshua Dobbs",
+      "yards": 93,
+      "label": "93 yds on 11 carries, 1 TD",
+      "profile": "Tennessee · 93 rushing yards on 11 carries, 1 TD in this game"
+     }
+    ],
+    "B": [
+     {
+      "name": "Ralph Webb",
+      "yards": 149,
+      "label": "149 yds on 21 carries, 0 TD",
+      "profile": "Vanderbilt · 149 rushing yards on 21 carries, 0 TD in this game"
+     }
+    ]
+   },
+   "sig": "gs2015-11-28rush"
+  },
+  {
+   "type": "mc",
+   "label": "Historic Day",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 19, 2005",
+    "winner": "VAN",
+    "loser": "TENN",
+    "ws": 28,
+    "ls": 24,
+    "venue": "Neyland Stadium"
+   },
+   "prompt": "2005: Tennessee vs. Vanderbilt. Arian Foster carried 40 times. How many rushing yards did he finish with?",
+   "options": [
+    "223",
+    "183",
+    "143",
+    "103"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    2,
+    0,
+    1
+   ],
+   "reveal": "223 rushing yards and 2 TD, No. 2 by anyone in this rivalry since 2005 (box scores). Tennessee still lost, 28–24.",
+   "sig": "xb2005-11-19Arian Foster"
+  },
   {
    "type": "count",
    "label": "Fill In",
@@ -94,319 +410,6 @@
     }
    ],
    "sig": "fsrush"
-  },
-  {
-   "type": "mc",
-   "label": "Historic Day",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 19, 2005",
-    "winner": "VAN",
-    "loser": "TENN",
-    "ws": 28,
-    "ls": 24,
-    "venue": "Neyland Stadium"
-   },
-   "prompt": "2005: Tennessee vs. Vanderbilt. Arian Foster carried 40 times. How many rushing yards did he finish with?",
-   "options": [
-    "223",
-    "183",
-    "143",
-    "103"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    2,
-    0,
-    1
-   ],
-   "reveal": "223 rushing yards and 2 TD, No. 2 by anyone in this rivalry since 2005 (box scores). Tennessee still lost, 28–24.",
-   "sig": "xb2005-11-19Arian Foster"
-  },
-  {
-   "type": "count",
-   "label": "NFL Draft",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From the 2015 draft through 2026, which school had more linebackers taken in the first three rounds?",
-   "A": [],
-   "B": [
-    {
-     "name": "Zach Cunningham",
-     "yards": 57,
-     "season": 2017,
-     "label": "No. 57 pick",
-     "profile": "Inside Linebacker · 2017 draft, round 2"
-    },
-    {
-     "name": "Oren Burks",
-     "yards": 88,
-     "season": 2018,
-     "label": "No. 88 pick",
-     "profile": "Outside Linebacker · 2018 draft, round 3"
-    }
-   ],
-   "sig": "dcr32015lb",
-   "bonus": "names"
-  },
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "In which year was the highest-scoring Tennessee–Vanderbilt game from 2000 through 2025?",
-   "options": [
-    "2015",
-    "2012",
-    "2006",
-    "2001"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    2,
-    1,
-    0
-   ],
-   "reveal": "2015: Tennessee 53, Vanderbilt 28 (81 points, Nov 28, 2015). Next highest: 2016, Vanderbilt 45–34 (79).",
-   "sig": "mh2015"
-  },
-  {
-   "label": "Tennessee–Vanderbilt",
-   "verified": true,
-   "sig": "kTennessee–Vanderbilt2",
-   "type": "mc",
-   "pitted": true,
-   "prompt": "2013: Vanderbilt won at Tennessee, 14–10. How many passing yards did Tennessee finish with?",
-   "options": [
-    "53",
-    "103",
-    "153",
-    "203"
-   ],
-   "answer": 0,
-   "reveal": "53. Vanderbilt also forced three interceptions; Joshua Dobbs went 11 of 19 for 53 yards and was picked off twice.",
-   "order": [
-    3,
-    1,
-    0,
-    2
-   ]
-  },
-  {
-   "type": "rank",
-   "label": "Notables",
-   "verified": true,
-   "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
-   "items": [
-    {
-     "label": "Jamal Lewis (Tennessee)",
-     "value": 2677,
-     "school": "TENN"
-    },
-    {
-     "label": "Jamie O’Rourke (Vanderbilt)",
-     "value": 2202,
-     "school": "VAN"
-    },
-    {
-     "label": "Ralph Webb (Vanderbilt)",
-     "value": 4173,
-     "school": "VAN"
-    },
-    {
-     "label": "Travis Henry (Tennessee)",
-     "value": 3078,
-     "school": "TENN"
-    }
-   ],
-   "note": "Career totals from each school's record book. Sources: Tennessee Football 2024 Record Book, career rushing (s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/utsports.com/documents/2024/7/29/Records_Section_2024__Web_.pdf, p.16), complete through 2023; plus Dylan Sampson and DeSean Bishop (active) from Wikipedia \"Tennessee Volunteers football statistical leaders\". CollegeFootballData shows no other Tennessee rusher passing 2,122 yards in 2024-26.; Wikipedia \"Vanderbilt Commodores football statistical leaders\" career rushing yards table (revision 1385775995), which cites the school record book; fetched 2026-11-17",
-   "sig": "nrrushingJamal Lewis,Jamie O’Rourke,Ralph Webb,Travis Henry",
-   "more": {
-    "title": "Career rushing yards, Tennessee and Vanderbilt (school top 10s)",
-    "rows": [
-     "1. Ralph Webb (Vanderbilt) 4,173",
-     "2. Zac Stacy (Vanderbilt) 3,143",
-     "3. Travis Henry (Tennessee) 3,078",
-     "4. Arian Foster (Tennessee) 2,964",
-     "5. James Stewart (Tennessee) 2,890",
-     "6. Johnnie Jones (Tennessee) 2,852",
-     "7. Jamal Lewis (Tennessee) 2,677",
-     "8. Jalen Hurd (Tennessee) 2,638",
-     "9. Frank Mordica (Vanderbilt) 2,632",
-     "10. Carl Woods (Vanderbilt) 2,490"
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "label": "Game Story",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 28, 2015",
-    "winner": "TENN",
-    "loser": "VAN",
-    "ws": 53,
-    "ls": 28,
-    "venue": "Neyland Stadium"
-   },
-   "prompt": "The 2015 Tennessee–Vanderbilt game is the highest-scoring game in the series since 2000, but the teams combined for how many rushing yards?",
-   "options": [
-    "533",
-    "433",
-    "483",
-    "633"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    0,
-    2
-   ],
-   "reveal": "533: Tennessee 331, Vanderbilt 202. 75+ rushing yards: Ralph Webb (Vanderbilt) 149, Jalen Hurd (Tennessee) 120, Alvin Kamara (Tennessee) 99, Joshua Dobbs (Tennessee) 93.",
-   "names": {
-    "prompt": "Bonus: name everyone with 75+ rushing yards in this game.",
-    "a": "TENN",
-    "b": "VAN",
-    "A": [
-     {
-      "name": "Jalen Hurd",
-      "yards": 120,
-      "label": "120 yds on 19 carries, 1 TD",
-      "profile": "Tennessee · 120 rushing yards on 19 carries, 1 TD in this game"
-     },
-     {
-      "name": "Alvin Kamara",
-      "yards": 99,
-      "label": "99 yds on 16 carries, 0 TD",
-      "profile": "Tennessee · 99 rushing yards on 16 carries, 0 TD in this game"
-     },
-     {
-      "name": "Joshua Dobbs",
-      "yards": 93,
-      "label": "93 yds on 11 carries, 1 TD",
-      "profile": "Tennessee · 93 rushing yards on 11 carries, 1 TD in this game"
-     }
-    ],
-    "B": [
-     {
-      "name": "Ralph Webb",
-      "yards": 149,
-      "label": "149 yds on 21 carries, 0 TD",
-      "profile": "Vanderbilt · 149 rushing yards on 21 carries, 0 TD in this game"
-     }
-    ]
-   },
-   "sig": "gs2015-11-28rush"
-  },
-  {
-   "type": "count",
-   "label": "Since 2021",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 15,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2021 through 2025, which school had more seasons with 15+ rushing touchdowns by one player?",
-   "A": [
-    {
-     "name": "Dylan Sampson",
-     "yards": 22,
-     "season": 2024,
-     "profile": "Running back · 2024: 1,491 rushing, 143 receiving yds, 22 rushing TD"
-    },
-    {
-     "name": "DeSean Bishop",
-     "yards": 16,
-     "season": 2025,
-     "profile": "Running back · 2025: 1,076 rushing, 135 receiving yds, 16 rushing TD"
-    }
-   ],
-   "B": [],
-   "sig": "tsrushTD152021",
-   "bonus": "names"
-  },
-  {
-   "label": "Tennessee–Vanderbilt",
-   "verified": true,
-   "sig": "kTennessee–Vanderbilt1",
-   "type": "mc",
-   "pitted": true,
-   "prompt": "2007: Vanderbilt at No. 19 Tennessee. What was the final score?",
-   "options": [
-    "Tennessee 25, Vanderbilt 24",
-    "Vanderbilt 25, Tennessee 24",
-    "Tennessee 32, Vanderbilt 28",
-    "Tennessee 25, Vanderbilt 20"
-   ],
-   "answer": 0,
-   "reveal": "No. 19 Tennessee 25, Vanderbilt 24 (2007-11-17, Neyland Stadium).",
-   "order": [
-    1,
-    3,
-    0,
-    2
-   ]
-  },
-  {
-   "label": "Tennessee–Vanderbilt",
-   "verified": true,
-   "sig": "kTennessee–Vanderbilt0",
-   "type": "mc",
-   "pitted": true,
-   "prompt": "Of the 26 Tennessee–Vanderbilt games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
-   "options": [
-    "3",
-    "1",
-    "2",
-    "4"
-   ],
-   "answer": 0,
-   "reveal": "3: 2000 No. 25 Tennessee 28, Vanderbilt 26 · 2007 No. 19 Tennessee 25, Vanderbilt 24 · 2011 Tennessee 27, Vanderbilt 21 (OT).",
-   "order": [
-    2,
-    0,
-    3,
-    1
-   ],
-   "years": {
-    "prompt": "Name the 3 seasons.",
-    "a": "TENN",
-    "b": "VAN",
-    "A": [
-     {
-      "name": "No. 25 Tennessee 28, Vanderbilt 26",
-      "yards": 0,
-      "season": 2000,
-      "label": "No. 25 Tennessee 28, Vanderbilt 26",
-      "profile": "No. 25 Tennessee 28, Vanderbilt 26"
-     },
-     {
-      "name": "No. 19 Tennessee 25, Vanderbilt 24",
-      "yards": 0,
-      "season": 2007,
-      "label": "No. 19 Tennessee 25, Vanderbilt 24",
-      "profile": "No. 19 Tennessee 25, Vanderbilt 24"
-     },
-     {
-      "name": "Tennessee 27, Vanderbilt 21 (OT)",
-      "yards": 0,
-      "season": 2011,
-      "label": "Tennessee 27, Vanderbilt 21 (OT)",
-      "profile": "Tennessee 27, Vanderbilt 21 (OT)"
-     }
-    ],
-    "B": []
-   }
   }
  ],
  "rev": 1

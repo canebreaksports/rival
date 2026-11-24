@@ -1723,6 +1723,51 @@
     },
     {
      "type": "mc",
+     "prompt": "2006 was the first time Ohio State and Michigan met ranked No. 1 and No. 2. No. 1 Ohio State won 42–39 at Ohio Stadium. Which team committed more turnovers?",
+     "options": [
+      "Ohio State, 3 to 0",
+      "Michigan, 3 to 0",
+      "Ohio State, 2 to 1",
+      "Michigan, 2 to 1"
+     ],
+     "answer": 0,
+     "reveal": "🔄 Twist: Ohio State turned it over 3 times; Michigan never did, and still lost. Ohio State out-gained Michigan 503 to 397.",
+     "source": "ESPN box score, event 263220194 (turnovers Ohio State 3, Michigan 0; total yards 503 and 397); Wikipedia \"2006 Michigan vs. Ohio State football game\" (revision 1359177321): first No. 1 vs. No. 2 meeting, 42–39",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "In the 2006 No. 1 vs. No. 2 game, Mike Hart ran for 142 yards on 23 carries in Michigan's 42–39 loss. How many rushing touchdowns did he score?",
+     "options": [
+      "3",
+      "1",
+      "2",
+      "0"
+     ],
+     "answer": 0,
+     "reveal": "3 touchdowns, in a loss. He came in with 1,373 yards and 11 touchdowns on the season.",
+     "source": "ESPN box score, event 263220194 (Hart 23 carries, 142 yards, 3 TD); Wikipedia \"2006 Michigan vs. Ohio State football game\" (revision 1359177321): Hart's 1,373 yards and 11 touchdowns entering the game",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "Troy Smith won the 2006 Heisman. In the No. 1 vs. No. 2 game against Michigan, he went 29 of 41 for 316 yards. How many touchdown passes did he throw?",
+     "options": [
+      "4",
+      "2",
+      "3",
+      "1"
+     ],
+     "answer": 0,
+     "reveal": "4 touchdowns (1 interception), as Ohio State won 42–39.",
+     "source": "ESPN box score, event 263220194 (Smith 29/41, 316 yards, 4 TD, 1 INT)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
      "prompt": "2007: No. 7 Ohio State held No. 23 Michigan to 91 total yards in a 14–3 win. Ohio State had four sacks. How many were Vernon Gholston's?",
      "options": [
       "3",
