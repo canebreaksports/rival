@@ -181,6 +181,36 @@
      },
      "source": "2014 Iron Bowl (Nov 29, 2014, Bryant-Denny Stadium, Alabama 55, Auburn 44): CollegeFootballData /games/players, matched by ESPN box score (event 400548323)",
      "verified": true
+    },
+    {
+     "type": "rank",
+     "prompt": "Rank these Heisman contenders by rushing yards against their rival in their Heisman season, highest first.",
+     "items": [
+      {
+       "label": "Derrick Henry (2015 Heisman winner) vs. Auburn",
+       "value": 271,
+       "school": "ALA"
+      },
+      {
+       "label": "Trent Richardson (2011 Heisman 3rd place) vs. Auburn",
+       "value": 203,
+       "school": "ALA"
+      },
+      {
+       "label": "Kerryon Johnson (2017 Heisman 9th place) vs. Alabama",
+       "value": 104,
+       "school": "AUB"
+      },
+      {
+       "label": "Mark Ingram II (2009 Heisman winner) vs. Auburn",
+       "value": 30,
+       "school": "ALA"
+      }
+     ],
+     "unit": "yds",
+     "note": "Henry: 46 carries, 271 yards, 1 TD (2015) · Richardson: 27 carries, 203 yards (2011) · Kerryon Johnson: 30 carries, 104 yards, 1 TD (2017) · Ingram: 16 carries, 30 yards (2009, Alabama won 26–21).",
+     "source": "Iron Bowl box scores: CollegeFootballData /games/players (2015, 2017) and ESPN game summaries (2009, 2011), as in data/rivalry.json. Heisman finishes: data/honors.json (Wikipedia Heisman voting tables).",
+     "verified": true
     }
    ]
   },

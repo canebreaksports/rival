@@ -6,39 +6,9 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-23T23:47:37.134Z",
- "engine": 42,
+ "generatedAt": "2026-11-24T00:44:42.671Z",
+ "engine": 43,
  "questions": [
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Devon Achane (TAMU RB) · 2021 receiving yards",
-     "value": 261,
-     "school": "TAMU"
-    },
-    {
-     "label": "Sam Ehlinger (TEX QB) · 2018 rushing yards",
-     "value": 482,
-     "school": "TEX"
-    },
-    {
-     "label": "Ricky Williams (TEX RB) · 1996 yards from scrimmage",
-     "value": 1627,
-     "school": "TEX"
-    },
-    {
-     "label": "Vince Young (TEX QB) · 2003 rushing yards",
-     "value": 998,
-     "school": "TEX"
-    }
-   ],
-   "sig": "mxydsDevon Achane2021 receiving yards,Ricky Williams1996 yards from scrimmage,Sam Ehlinger2018 rushing yards,Vince Young2003 rushing yards"
-  },
   {
    "type": "h2h",
    "label": "Against Each Other",
@@ -46,18 +16,18 @@
    "flip": true,
    "prompt": "In Texas–Texas A&M games since 2005, who had more receiving yards against the other school?",
    "A": {
-    "label": "James Kirkendoll (TEX) vs. Texas A&M",
-    "value": 115,
+    "label": "Jordan Shipley (TEX) vs. Texas A&M",
+    "value": 234,
     "school": "TEX"
    },
    "B": {
-    "label": "Jeff Fuller (TAMU) vs. Texas",
-    "value": 344,
+    "label": "Earvin Taylor (TAMU) vs. Texas",
+    "value": 129,
     "school": "TAMU"
    },
    "unit": "receiving yds",
-   "note": "James Kirkendoll: 115 in 2 games. Jeff Fuller: 344 in 4 games.",
-   "sig": "vsrecJames Kirkendoll,Jeff Fuller",
+   "note": "Jordan Shipley: 234 in 4 games. Earvin Taylor: 129 in 2 games.",
+   "sig": "vsrecEarvin Taylor,Jordan Shipley",
    "more": {
     "title": "Top receiving yards against the other school since 2005",
     "rows": [
@@ -69,118 +39,6 @@
      "6. Earvin Taylor (TAMU) 129 in 2 games"
     ]
    }
-  },
-  {
-   "type": "mc",
-   "label": "Ranked Wins",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2018, which school has more wins over AP-ranked opponents, and how many?",
-   "options": [
-    "Texas, 24",
-    "Texas, 21",
-    "Texas A&M, 15",
-    "Texas A&M, 26"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    3,
-    1,
-    0
-   ],
-   "reveal": "Texas 24, Texas A&M 15 (through 2025). Latest: Texas: 2025 vs. No. 9 Vanderbilt 34–31, 2025 vs. No. 3 Texas A&M 27–17, 2025 vs. No. 18 Michigan 41–27; Texas A&M: 2025 vs. No. 8 Notre Dame 41–40, 2025 vs. No. 20 LSU 49–25, 2025 vs. No. 19 Missouri 38–17.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
-   },
-   "sig": "rw2018"
-  },
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what's the longest winning streak by either school in the Texas–Texas A&M series?",
-   "options": [
-    "6 straight",
-    "9 straight",
-    "3 straight",
-    "7 straight"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    0,
-    3,
-    1
-   ],
-   "reveal": "6 straight: Texas won every meeting from 2000 through 2005.",
-   "sig": "msTEX2000"
-  },
-  {
-   "type": "count",
-   "label": "NFL Draft",
-   "a": "TEX",
-   "b": "TAMU",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From the 2005 draft through 2026, which school had more quarterbacks taken in the first round?",
-   "A": [
-    {
-     "name": "Vince Young",
-     "yards": 3,
-     "season": 2006,
-     "label": "No. 3 pick",
-     "profile": "Quarterback · 2006 draft, round 1"
-    }
-   ],
-   "B": [
-    {
-     "name": "Ryan Tannehill",
-     "yards": 8,
-     "season": 2012,
-     "label": "No. 8 pick",
-     "profile": "Quarterback · 2012 draft, round 1"
-    },
-    {
-     "name": "Johnny Manziel",
-     "yards": 22,
-     "season": 2014,
-     "label": "No. 22 pick",
-     "profile": "Quarterback · 2014 draft, round 1"
-    }
-   ],
-   "sig": "dcr12005qb",
-   "bonus": "names"
-  },
-  {
-   "type": "count",
-   "label": "Since 2015",
-   "a": "TEX",
-   "b": "TAMU",
-   "threshold": 1100,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2015 through 2025, which school had more 1,100-yard receiving seasons?",
-   "A": [
-    {
-     "name": "Lil'Jordan Humphrey",
-     "yards": 1176,
-     "season": 2018,
-     "profile": "Wide receiver · 2018: 25 rushing, 1,176 receiving yds"
-    },
-    {
-     "name": "Devin Duvernay",
-     "yards": 1386,
-     "season": 2019,
-     "profile": "Wide receiver · 2019: 24 rushing, 1,386 receiving yds"
-    }
-   ],
-   "B": [],
-   "sig": "tsrec11002015",
-   "bonus": "names"
   },
   {
    "type": "rank",
@@ -281,40 +139,52 @@
    }
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
+   "type": "mc",
+   "label": "Ranked Wins",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receptions (at the school shown)?",
-   "A": {
-    "label": "Jalen Wydermyer (TAMU TE)",
-    "value": 118,
-    "school": "TAMU"
+   "pitted": true,
+   "prompt": "Since 2018, which school has more wins over AP-ranked opponents, and how many?",
+   "options": [
+    "Texas, 24",
+    "Texas, 21",
+    "Texas A&M, 15",
+    "Texas A&M, 26"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    3,
+    1,
+    0
+   ],
+   "reveal": "Texas 24, Texas A&M 15 (through 2025). Latest: Texas: 2025 vs. No. 9 Vanderbilt 34–31, 2025 vs. No. 3 Texas A&M 27–17, 2025 vs. No. 18 Michigan 41–27; Texas A&M: 2025 vs. No. 8 Notre Dame 41–40, 2025 vs. No. 20 LSU 49–25, 2025 vs. No. 19 Missouri 38–17.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
    },
-   "B": {
-    "label": "D'Onta Foreman (TEX RB)",
-    "value": 13,
-    "school": "TEX"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Jalen Wydermyer 118 vs. D'Onta Foreman 13.",
-   "sig": "urecND'Onta ForemanJalen Wydermyer"
+   "sig": "rw2018"
   },
   {
-   "type": "moment",
+   "type": "mc",
    "label": "Series History",
    "verified": true,
    "pitted": true,
-   "prompt": "From 2000 through 2025, did Texas A&M beat Texas more or fewer than",
-   "line": "3.5 times",
-   "answer": "under",
-   "reveal": "Fewer. Texas A&M went 3–11 against Texas from 2000 to 2025 (14 meetings, on-field results).",
-   "check": {
-    "value": 3,
-    "line": 3.5
-   },
-   "sig": "scTAMUTEX"
+   "prompt": "From 2000 through 2025, what's the longest winning streak by either school in the Texas–Texas A&M series?",
+   "options": [
+    "6 straight",
+    "9 straight",
+    "3 straight",
+    "7 straight"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    0,
+    3,
+    1
+   ],
+   "reveal": "6 straight: Texas won every meeting from 2000 through 2005.",
+   "sig": "msTEX2000"
   },
   {
    "type": "count",
@@ -340,6 +210,179 @@
    "info": {
     "title": "How the SEC list works",
     "text": "Seasons played as an SEC member, through 2025, from every member school's record book. The full top 10: 1. Derrick Henry (ALA 2015) 2,219 · 2. Leonard Fournette (LSU 2015) 1,953 · 3. Herschel Walker (UGA 1981) 1,891 · 4. Darren McFadden (ARK 2007) 1,830 · 5. Tre Mason (AUB 2013) 1,816 · 6. Bo Jackson (AUB 1985) 1,786 · 7. Trayveon Williams (TAMU 2018) 1,760 · 8. Herschel Walker (UGA 1982) 1,752 · 9. Charles Alexander (LSU 1977) 1,686 · 10. Trent Richardson (ALA 2011) 1,679"
+   }
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receptions (at the school shown)?",
+   "A": {
+    "label": "Jalen Wydermyer (TAMU TE)",
+    "value": 118,
+    "school": "TAMU"
+   },
+   "B": {
+    "label": "Ricky Williams (TEX RB)",
+    "value": 98,
+    "school": "TEX"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jalen Wydermyer 118 vs. Ricky Williams 98.",
+   "sig": "urecNRicky WilliamsJalen Wydermyer"
+  },
+  {
+   "type": "rank",
+   "label": "Rivalry Games",
+   "verified": true,
+   "unit": "yds",
+   "prompt": "Rank these single-game rushing performances in Texas–Texas A&M games, highest first.",
+   "items": [
+    {
+     "label": "Ben Malena (TAMU) · 2011",
+     "value": 83,
+     "school": "TAMU"
+    },
+    {
+     "label": "Colt McCoy (TEX) · 2009",
+     "value": 175,
+     "school": "TEX"
+    },
+    {
+     "label": "Cyrus Gray (TAMU) · 2010",
+     "value": 223,
+     "school": "TAMU"
+    },
+    {
+     "label": "Stephen McGee (TAMU) · 2005",
+     "value": 108,
+     "school": "TAMU"
+    }
+   ],
+   "sig": "grrushBen Malena2011,Colt McCoy2009,Cyrus Gray2010,Stephen McGee2005",
+   "more": {
+    "title": "Top rushing games in this rivalry (box scores)",
+    "rows": [
+     "1. Cyrus Gray (TAMU) 2010: 223",
+     "2. Tre Wisner (TEX) 2024: 186",
+     "3. Colt McCoy (TEX) 2009: 175",
+     "4. Tre Wisner (TEX) 2025: 155",
+     "5. Stephen McGee (TAMU) 2005: 108",
+     "6. Tre' Newton (TEX) 2009: 107",
+     "7. Cody Johnson (TEX) 2010: 107",
+     "8. Jorvorskie Lane (TAMU) 2005: 104"
+    ]
+   }
+  },
+  {
+   "type": "count",
+   "label": "NFL Draft",
+   "a": "TEX",
+   "b": "TAMU",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From the 2005 draft through 2026, which school had more quarterbacks taken in the first round?",
+   "A": [
+    {
+     "name": "Vince Young",
+     "yards": 3,
+     "season": 2006,
+     "label": "No. 3 pick",
+     "profile": "Quarterback · 2006 draft, round 1"
+    }
+   ],
+   "B": [
+    {
+     "name": "Ryan Tannehill",
+     "yards": 8,
+     "season": 2012,
+     "label": "No. 8 pick",
+     "profile": "Quarterback · 2012 draft, round 1"
+    },
+    {
+     "name": "Johnny Manziel",
+     "yards": 22,
+     "season": 2014,
+     "label": "No. 22 pick",
+     "profile": "Quarterback · 2014 draft, round 1"
+    }
+   ],
+   "sig": "dcr12005qb",
+   "bonus": "names"
+  },
+  {
+   "type": "count",
+   "label": "Since 2015",
+   "a": "TEX",
+   "b": "TAMU",
+   "threshold": 1100,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2015 through 2025, which school had more 1,100-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Lil'Jordan Humphrey",
+     "yards": 1176,
+     "season": 2018,
+     "profile": "Wide receiver · 2018: 25 rushing, 1,176 receiving yds"
+    },
+    {
+     "name": "Devin Duvernay",
+     "yards": 1386,
+     "season": 2019,
+     "profile": "Wide receiver · 2019: 24 rushing, 1,386 receiving yds"
+    }
+   ],
+   "B": [],
+   "sig": "tsrec11002015",
+   "bonus": "names"
+  },
+  {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "trap": true,
+   "verified": true,
+   "prompt": "Rank these seasons by yards from scrimmage, highest first.",
+   "items": [
+    {
+     "label": "Bijan Robinson (RB) · 2021 TEX",
+     "value": 1422,
+     "school": "TEX"
+    },
+    {
+     "label": "Ricky Williams (RB) · 1997 TEX",
+     "value": 2043,
+     "school": "TEX"
+    },
+    {
+     "label": "D'Onta Foreman (RB) · 2015 TEX",
+     "value": 745,
+     "school": "TEX"
+    },
+    {
+     "label": "Tra Carson (RB) · 2013 TAMU",
+     "value": 367,
+     "school": "TAMU"
+    }
+   ],
+   "unit": "yds",
+   "note": "🪤 Trap: Bijan Robinson's best year was 2022 (1,892), not 2021; Ricky Williams's best year was 1998 (2,634), not 1997; D'Onta Foreman's best year was 2016 (2,103), not 2015; Tra Carson's best year was 2015 (1,348), not 2013.",
+   "sig": "trscrimBijan Robinson2021,D'Onta Foreman2015,Ricky Williams1997,Tra Carson2013",
+   "more": {
+    "title": "Top 8: single-season yards from scrimmage (TEX, TAMU players in our data)",
+    "rows": [
+     "1. Ricky Williams (TEX 1998) 2,634",
+     "2. D'Onta Foreman (TEX 2016) 2,103",
+     "3. Ricky Williams (TEX 1997) 2,043",
+     "4. Bijan Robinson (TEX 2022) 1,892",
+     "5. Ricky Williams (TEX 1996) 1,627",
+     "6. Bijan Robinson (TEX 2021) 1,422",
+     "7. Tra Carson (TAMU 2015) 1,348",
+     "8. Devon Achane (TAMU 2022) 1,298"
+    ]
    }
   }
  ],

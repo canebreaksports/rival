@@ -229,7 +229,8 @@ export function genPeerAwardMC(h: HonorsData, a: SchoolKey, b: SchoolKey, rng: R
 // from both schools, their line in that season's rivalry game (box scores), single-game margins between every pair.
 const pnorm = (n: string) => n.toLowerCase().replace(/['’.]/g, "").replace(/\b(jr|sr|ii|iii|iv)\b/g, "").replace(/\s+/g, " ").trim();
 const ordp = (n: number) => (n === 1 ? "winner" : `${n}${n === 2 ? "nd" : n === 3 ? "rd" : "th"} place`);
-export function genHeismanVsRivalRank(h: HonorsData, pr: RivalryPair | undefined, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
+export function genHeismanVsRivalRank(h: HonorsData, pr: RivalryPair | undefined, a: SchoolKey, b: SchoolKey, rng: Rng,
+  runner: (name: string, school: SchoolKey) => boolean = () => true): Question | null {
   if (!pr) return null;
   const finals = h.heisman.filter(v => (v.school === a || v.school === b) && v.place <= 10);
   for (const [cat, what] of shuffle(rng, [["rush", "rushing yards"], ["rec", "receiving yards"], ["pass", "passing yards"]] as const)) {
@@ -237,6 +238,7 @@ export function genHeismanVsRivalRank(h: HonorsData, pr: RivalryPair | undefined
     const rows: Row[] = finals.flatMap((v): Row[] => {
       const g = pr.games.find(x => x.season === v.year && !!x.box && x.date < `${v.year + 1}-01-01` && x.date >= `${v.year}-08-01`); // the regular-season meeting
       const p = g?.box?.[v.school]?.find(x => x.cat === cat && pnorm(x.name) === pnorm(v.name));
+      if (cat === "rush" && v.pos === "QB" && !runner(v.name, v.school)) return []; // a passing QB doesn't belong in a rushing ranking (owner, Nov 2026)
       return g && p && p.yds >= (cat === "pass" ? 100 : 30) ? [{ v, g, p }] : [];
     });
     const gap = (x: number, y: number) => Math.abs(x - y) >= Math.max(15, 0.12 * Math.max(x, y)); // single-game box-score margin

@@ -6,9 +6,112 @@
   "away": "USC",
   "home": "UCLA"
  },
- "generatedAt": "2026-11-23T23:47:38.841Z",
- "engine": 42,
+ "generatedAt": "2026-11-24T00:44:44.519Z",
+ "engine": 43,
  "questions": [
+  {
+   "type": "mc",
+   "label": "Rankings",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Of the 26 USC–UCLA games from 2000 through 2025, how many featured at least one AP top-5 team?",
+   "options": [
+    "5",
+    "6",
+    "8",
+    "3"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    3,
+    1,
+    2
+   ],
+   "reveal": "5: 2003 (No. 2 USC 47, UCLA 22) · 2004 (No. 1 USC 29, UCLA 24) · 2005 (No. 1 USC 66, No. 11 UCLA 19) · 2006 (UCLA 13, No. 2 USC 9) · 2008 (No. 5 USC 28, UCLA 7).",
+   "info": {
+    "title": "Which poll?",
+    "text": "The AP Top 25 in force the week of each game; bowl and championship games use the last regular-season poll. Tied teams share a rank."
+   },
+   "years": {
+    "prompt": "Name the 5 seasons.",
+    "a": "USC",
+    "b": "UCLA",
+    "A": [
+     {
+      "name": "No. 2 USC 47, UCLA 22",
+      "yards": 0,
+      "season": 2003,
+      "label": "No. 2 USC 47, UCLA 22",
+      "profile": "No. 2 USC 47, UCLA 22"
+     },
+     {
+      "name": "No. 1 USC 29, UCLA 24",
+      "yards": 0,
+      "season": 2004,
+      "label": "No. 1 USC 29, UCLA 24",
+      "profile": "No. 1 USC 29, UCLA 24"
+     },
+     {
+      "name": "No. 1 USC 66, No. 11 UCLA 19",
+      "yards": 0,
+      "season": 2005,
+      "label": "No. 1 USC 66, No. 11 UCLA 19",
+      "profile": "No. 1 USC 66, No. 11 UCLA 19"
+     },
+     {
+      "name": "No. 5 USC 28, UCLA 7",
+      "yards": 0,
+      "season": 2008,
+      "label": "No. 5 USC 28, UCLA 7",
+      "profile": "No. 5 USC 28, UCLA 7"
+     }
+    ],
+    "B": [
+     {
+      "name": "UCLA 13, No. 2 USC 9",
+      "yards": 0,
+      "season": 2006,
+      "label": "UCLA 13, No. 2 USC 9",
+      "profile": "UCLA 13, No. 2 USC 9"
+     }
+    ]
+   },
+   "sig": "rkany5"
+  },
+  {
+   "type": "count",
+   "label": "Since 2020",
+   "a": "USC",
+   "b": "UCLA",
+   "threshold": 1000,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2020 through 2025, which school had more 1,000-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Drake London",
+     "yards": 1084,
+     "season": 2021,
+     "profile": "Wide receiver · 2021: 2 rushing, 1,084 receiving yds"
+    },
+    {
+     "name": "Tahj Washington",
+     "yards": 1062,
+     "season": 2023,
+     "profile": "Wide receiver · 2023: 10 rushing, 1,062 receiving yds"
+    },
+    {
+     "name": "Makai Lemon",
+     "yards": 1156,
+     "season": 2025,
+     "profile": "Wide receiver · 2025: 4 rushing, 1,156 receiving yds"
+    }
+   ],
+   "B": [],
+   "sig": "tsrec10002020",
+   "bonus": "names"
+  },
   {
    "type": "rank",
    "label": "Notables",
@@ -124,135 +227,47 @@
    "sig": "mm50"
   },
   {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2016, did Sam Darnold (USC) have more or less than",
-   "line": "200 rushing yards",
-   "answer": "over",
-   "reveal": "More. Sam Darnold had 250 rushing yards in 2016.",
-   "check": {
-    "value": 250,
-    "line": 200
-   },
-   "sig": "ppSam Darnold2016|Joshua Kelley2019rush0",
-   "pair": "ppSam Darnold2016|Joshua Kelley2019rush",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2019, did Joshua Kelley (UCLA) have more or less than",
-   "line": "1,200 rushing yards",
-   "answer": "under",
-   "reveal": "Less. Joshua Kelley had 1,060 rushing yards in 2019.",
-   "check": {
-    "value": 1060,
-    "line": 1200
-   },
-   "sig": "ppSam Darnold2016|Joshua Kelley2019rush1",
-   "pair": "ppSam Darnold2016|Joshua Kelley2019rush",
-   "pairPart": 2
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2014,
-   "stat": "Receiving season",
-   "aSchool": "UCLA",
-   "other": "USC",
-   "aName": "Jordan Payton (WR)",
-   "bName": "JuJu Smith-Schuster (WR)",
-   "A": {
-    "big": "954",
-    "sm": "rec yds · 7 TD"
-   },
-   "B": {
-    "big": "724",
-    "sm": "rec yds · 5 TD"
-   },
-   "flip": true,
-   "sig": "drec2014Jordan Payton,JuJu Smith-Schuster"
-  },
-  {
    "type": "rank",
-   "label": "Fresh Mix",
-   "trap": true,
+   "label": "Rivalry Games",
    "verified": true,
-   "prompt": "Rank these seasons by receiving yards, highest first.",
+   "unit": "yds",
+   "prompt": "Rank these single-game receiving performances in USC–UCLA games, highest first.",
    "items": [
     {
-     "label": "Tyler Vaughns (WR) · 2017 USC",
-     "value": 809,
-     "school": "USC"
-    },
-    {
-     "label": "Jordan Payton (WR) · 2014 UCLA",
-     "value": 954,
+     "label": "Kazmeir Allen (UCLA) · 2022",
+     "value": 72,
      "school": "UCLA"
     },
     {
-     "label": "JuJu Smith-Schuster (WR) · 2014 USC",
-     "value": 724,
+     "label": "Drake London (USC) · 2019",
+     "value": 142,
      "school": "USC"
     },
     {
-     "label": "Zach Charbonnet (RB) · 2022 UCLA",
-     "value": 321,
-     "school": "UCLA"
+     "label": "Michael Pittman Jr. (USC) · 2018",
+     "value": 106,
+     "school": "USC"
+    },
+    {
+     "label": "Jordan Addison (USC) · 2022",
+     "value": 178,
+     "school": "USC"
     }
    ],
-   "unit": "yds",
-   "note": "🪤 Trap: Tyler Vaughns's best year was 2019 (912), not 2017; Jordan Payton's best year was 2015 (1,106), not 2014; JuJu Smith-Schuster's best year was 2015 (1,454), not 2014.",
-   "sig": "trrecJordan Payton2014,JuJu Smith-Schuster2014,Tyler Vaughns2017,Zach Charbonnet2022",
+   "sig": "grrecDrake London2019,Jordan Addison2022,Kazmeir Allen2022,Michael Pittman Jr.2018",
    "more": {
-    "title": "Top 8: single-season receiving yards (USC, UCLA players in our data)",
+    "title": "Top receiving games in this rivalry (box scores)",
     "rows": [
-     "1. JuJu Smith-Schuster (USC 2015) 1,454",
-     "2. Jordan Payton (UCLA 2015) 1,106",
-     "3. Jordan Payton (UCLA 2014) 954",
-     "4. JuJu Smith-Schuster (USC 2016) 914",
-     "5. Tyler Vaughns (USC 2019) 912",
-     "6. Tyler Vaughns (USC 2017) 809",
-     "7. JuJu Smith-Schuster (USC 2014) 724",
-     "8. Tyler Vaughns (USC 2018) 678"
+     "1. Marqise Lee (USC) 2011: 224",
+     "2. Jordan Lasley (UCLA) 2017: 204",
+     "3. Jordan Addison (USC) 2022: 178",
+     "4. Greg Dulcich (UCLA) 2020: 167",
+     "5. Gary Bryant Jr. (USC) 2021: 161",
+     "6. Marqise Lee (USC) 2012: 158",
+     "7. Brenden Rice (USC) 2023: 147",
+     "8. Drake London (USC) 2019: 142"
     ]
    }
-  },
-  {
-   "type": "count",
-   "label": "Awards",
-   "a": "USC",
-   "b": "UCLA",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "info": {
-    "title": "What is the Lou Groza Award?",
-    "text": "The Lou Groza Award is given each year to college football's best kicker."
-   },
-   "prompt": "From 2000 through 2025, which school had more Lou Groza Award winners?",
-   "A": [],
-   "B": [
-    {
-     "name": "Kai Forbath",
-     "yards": 2009,
-     "season": 2009,
-     "label": "winner",
-     "profile": "won the Lou Groza Award (best kicker)"
-    },
-    {
-     "name": "Kaʻimi Fairbairn",
-     "yards": 2015,
-     "season": 2015,
-     "label": "winner",
-     "profile": "won the Lou Groza Award (best kicker)"
-    }
-   ],
-   "sig": "acgroza2000",
-   "bonus": "names"
   },
   {
    "type": "count",
@@ -341,6 +356,36 @@
    "sig": "fsrush"
   },
   {
+   "type": "rank",
+   "label": "Fresh Mix",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Dorian Thompson-Robinson (UCLA QB) · career rushing TDs",
+     "value": 28,
+     "school": "UCLA"
+    },
+    {
+     "label": "Tyler Vaughns (USC WR) · 2019 receiving TDs",
+     "value": 6,
+     "school": "USC"
+    },
+    {
+     "label": "Jo'quavious Marks (USC RB) · career total TDs (rushing + receiving)",
+     "value": 9,
+     "school": "USC"
+    },
+    {
+     "label": "Paul Perkins (UCLA RB) · career rushing TDs",
+     "value": 29,
+     "school": "UCLA"
+    }
+   ],
+   "sig": "mxTDDorian Thompson-Robinsoncareer rushing TDs,Jo'quavious Markscareer total TDs (rushing + receiving),Paul Perkinscareer rushing TDs,Tyler Vaughns2019 receiving TDs"
+  },
+  {
    "type": "mc",
    "label": "Ranked Wins",
    "verified": true,
@@ -368,36 +413,51 @@
   },
   {
    "type": "count",
-   "label": "Since 2020",
+   "label": "Awards",
    "a": "USC",
    "b": "UCLA",
-   "threshold": 1000,
+   "threshold": 0,
    "verified": true,
    "pitted": true,
-   "prompt": "From 2020 through 2025, which school had more 1,000-yard receiving seasons?",
-   "A": [
+   "info": {
+    "title": "What is the Lou Groza Award?",
+    "text": "The Lou Groza Award is given each year to college football's best kicker."
+   },
+   "prompt": "From 2000 through 2025, which school had more Lou Groza Award winners?",
+   "A": [],
+   "B": [
     {
-     "name": "Drake London",
-     "yards": 1084,
-     "season": 2021,
-     "profile": "Wide receiver · 2021: 2 rushing, 1,084 receiving yds"
+     "name": "Kai Forbath",
+     "yards": 2009,
+     "season": 2009,
+     "label": "winner",
+     "profile": "won the Lou Groza Award (best kicker)"
     },
     {
-     "name": "Tahj Washington",
-     "yards": 1062,
-     "season": 2023,
-     "profile": "Wide receiver · 2023: 10 rushing, 1,062 receiving yds"
-    },
-    {
-     "name": "Makai Lemon",
-     "yards": 1156,
-     "season": 2025,
-     "profile": "Wide receiver · 2025: 4 rushing, 1,156 receiving yds"
+     "name": "Kaʻimi Fairbairn",
+     "yards": 2015,
+     "season": 2015,
+     "label": "winner",
+     "profile": "won the Lou Groza Award (best kicker)"
     }
    ],
-   "B": [],
-   "sig": "tsrec10002020",
+   "sig": "acgroza2000",
    "bonus": "names"
+  },
+  {
+   "type": "moment",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, did USC beat UCLA more or fewer than",
+   "line": "17.5 times",
+   "answer": "over",
+   "reveal": "More. USC went 19–7 against UCLA from 2000 to 2025 (26 meetings, on-field results).",
+   "check": {
+    "value": 19,
+    "line": 17.5
+   },
+   "sig": "scUSCUCLA"
   }
  ]
 }
