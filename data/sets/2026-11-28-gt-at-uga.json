@@ -6,134 +6,51 @@
   "away": "GT",
   "home": "UGA"
  },
- "generatedAt": "2026-11-24T01:20:59.592Z",
- "engine": 45,
+ "generatedAt": "2026-11-24T01:25:49.399Z",
+ "engine": 47,
  "questions": [
   {
-   "type": "count",
-   "label": "Awards",
-   "a": "GT",
-   "b": "UGA",
-   "threshold": 0,
+   "type": "rank",
+   "label": "Rivalry Games",
    "verified": true,
-   "pitted": true,
-   "info": {
-    "title": "What is the Butkus Award?",
-    "text": "The Butkus Award is given each year to college football's best linebacker."
-   },
-   "prompt": "From 2000 through 2025, which school had more Butkus Award winners?",
-   "A": [],
-   "B": [
+   "unit": "yds",
+   "prompt": "Rank these single-game rushing performances in Georgia Tech–Georgia games, highest first.",
+   "items": [
     {
-     "name": "Roquan Smith",
-     "yards": 2017,
-     "season": 2017,
-     "label": "winner",
-     "profile": "won the Butkus Award (best linebacker)"
+     "label": "Roddy Jones (GT) · 2011",
+     "value": 72,
+     "school": "GT"
     },
     {
-     "name": "Nakobe Dean",
-     "yards": 2021,
-     "season": 2021,
-     "label": "winner",
-     "profile": "won the Butkus Award (best linebacker)"
+     "label": "Thomas Brown (UGA) · 2007",
+     "value": 139,
+     "school": "UGA"
     },
     {
-     "name": "Jalon Walker",
-     "yards": 2024,
-     "season": 2024,
-     "label": "winner",
-     "profile": "won the Butkus Award (best linebacker)"
+     "label": "Roddy Jones (GT) · 2008",
+     "value": 214,
+     "school": "GT"
+    },
+    {
+     "label": "Haynes King (GT) · 2024",
+     "value": 110,
+     "school": "GT"
     }
    ],
-   "sig": "acbutkus2000",
-   "bonus": "names"
-  },
-  {
-   "type": "count",
-   "label": "Fill In",
-   "a": "GT",
-   "b": "UGA",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "Georgia Tech and Georgia's combined top 10 single-season receiving yards (through 2025): which school has more seasons on the list?",
-   "A": [
-    {
-     "name": "Calvin Johnson",
-     "yards": 1202,
-     "season": 2006,
-     "label": "2006: 1,202",
-     "profile": "2006 season, 1,202 receiving yards · No. 1 on the combined list"
-    },
-    {
-     "name": "Demaryius Thomas",
-     "yards": 1157,
-     "season": 2009,
-     "label": "2009: 1,157",
-     "profile": "2009 season, 1,157 receiving yards · No. 2 on the combined list"
-    },
-    {
-     "name": "Jonathan Smith",
-     "yards": 1138,
-     "season": 2003,
-     "label": "2003: 1,138",
-     "profile": "2003 season, 1,138 receiving yards · No. 3 on the combined list"
-    },
-    {
-     "name": "Kelly Campbell",
-     "yards": 1105,
-     "season": 1999,
-     "label": "1999: 1,105",
-     "profile": "1999 season, 1,105 receiving yards · No. 4 on the combined list"
-    },
-    {
-     "name": "Kerry Watkins",
-     "yards": 1050,
-     "season": 2002,
-     "label": "2002: 1,050",
-     "profile": "2002 season, 1,050 receiving yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Dez White",
-     "yards": 973,
-     "season": 1998,
-     "label": "1998: 973",
-     "profile": "1998 season, 973 receiving yards · No. 7 on the combined list"
-    },
-    {
-     "name": "Kelly Campbell",
-     "yards": 963,
-     "season": 2000,
-     "label": "2000: 963",
-     "profile": "2000 season, 963 receiving yards · No. 9 on the combined list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Terrence Edwards",
-     "yards": 1004,
-     "season": 2002,
-     "label": "2002: 1,004",
-     "profile": "2002 season, 1,004 receiving yards · No. 6 on the combined list"
-    },
-    {
-     "name": "Brice Hunter",
-     "yards": 970,
-     "season": 1993,
-     "label": "1993: 970",
-     "profile": "1993 season, 970 receiving yards · No. 8 on the combined list"
-    },
-    {
-     "name": "A. J. Green",
-     "yards": 963,
-     "season": 2008,
-     "label": "2008: 963",
-     "profile": "2008 season, 963 receiving yards · No. 10 on the combined list"
-    }
-   ],
-   "sig": "fsrec"
+   "sig": "grrushHaynes King2024,Roddy Jones2008,Roddy Jones2011,Thomas Brown2007",
+   "more": {
+    "title": "Top rushing games in this rivalry (box scores)",
+    "rows": [
+     "1. Roddy Jones (GT) 2008: 214",
+     "2. Washaun Ealey (UGA) 2009: 183",
+     "3. Sony Michel (UGA) 2016: 170",
+     "4. Caleb King (UGA) 2009: 166",
+     "5. Anthony Allen (GT) 2010: 166",
+     "6. Kendall Milton (UGA) 2023: 156",
+     "7. Sony Michel (UGA) 2015: 149",
+     "8. Tashard Choice (GT) 2006: 146"
+    ]
+   }
   },
   {
    "type": "mc",
@@ -187,6 +104,84 @@
    "sig": "gs2013-11-30rush"
   },
   {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Georgia Tech–Georgia series?",
+   "options": [
+    "45 points",
+    "54 points",
+    "31 points",
+    "57 points"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    1,
+    2,
+    0
+   ],
+   "reveal": "45 points: Georgia 45, Georgia Tech 0 (Nov 27, 2021); also Georgia in 2019.",
+   "sig": "mm45"
+  },
+  {
+   "type": "mc",
+   "label": "Ranked Wins",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2010, which school has more wins over AP-ranked opponents, and how many?",
+   "options": [
+    "Georgia, 52",
+    "Georgia, 57",
+    "Georgia Tech, 15",
+    "Georgia Tech, 48"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    1,
+    3,
+    0
+   ],
+   "reveal": "Georgia 52, Georgia Tech 15 (through 2025). Latest: Georgia: 2025 vs. No. 10 Texas 35–10, 2025 vs. No. 23 Georgia Tech 16–9, 2025 vs. No. 10 Alabama 28–7; Georgia Tech: 2024 vs. No. 10 Florida State 24–21, 2024 vs. No. 4 Miami 28–23, 2025 vs. No. 12 Clemson 24–21.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   },
+   "sig": "rw2010"
+  },
+  {
+   "type": "mc",
+   "label": "Twist",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 26, 2005",
+    "winner": "UGA",
+    "loser": "GT",
+    "ws": 14,
+    "ls": 7,
+    "venue": "Bobby Dodd Stadium"
+   },
+   "prompt": "The 2005 Georgia Tech–Georgia game went to Georgia, 14–7. Which team gained more total yards, and by how much?",
+   "options": [
+    "Georgia Tech by 61",
+    "Georgia by 61",
+    "Georgia Tech by 101",
+    "Georgia by 101"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    3,
+    0,
+    2
+   ],
+   "reveal": "🔄 Twist: Georgia Tech out-gained Georgia 327 to 266 and still lost. (Georgia Tech 172 rushing, 155 passing; Georgia 68 rushing, 198 passing.)",
+   "sig": "xo2005-11-26"
+  },
+  {
    "type": "h2h",
    "label": "Fresh Mix",
    "upset": true,
@@ -194,44 +189,167 @@
    "flip": false,
    "prompt": "Who had more college rushing touchdowns (at the school shown)?",
    "A": {
-    "label": "Justin Thomas (GT QB)",
-    "value": 22,
+    "label": "Haynes King (GT QB)",
+    "value": 36,
     "school": "GT"
    },
    "B": {
-    "label": "D'Andre Swift (UGA RB)",
-    "value": 20,
+    "label": "Kenny McIntosh (UGA RB)",
+    "value": 16,
     "school": "UGA"
    },
    "unit": "",
-   "note": "🚨 Upset: Justin Thomas 22 vs. D'Andre Swift 20.",
-   "sig": "urushTDD'Andre SwiftJustin Thomas"
+   "note": "🚨 Upset: Haynes King 36 vs. Kenny McIntosh 16.",
+   "sig": "urushTDKenny McIntoshHaynes King"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
+   "type": "count",
+   "label": "Fill In",
+   "a": "GT",
+   "b": "UGA",
+   "threshold": 0,
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more career receiving TDs?",
-   "A": {
-    "label": "D'Andre Swift (RB) · career, UGA",
-    "value": 5,
-    "school": "UGA"
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Georgia Tech and Georgia's combined top 10 career rushing yards: which school has more players on the list?",
+   "A": [
+    {
+     "name": "Robert Lavette",
+     "yards": 4066,
+     "label": "4,066",
+     "profile": "4,066 career rushing yards · No. 3 on the combined list"
+    },
+    {
+     "name": "Jerry Mays",
+     "yards": 3699,
+     "label": "3,699",
+     "profile": "3,699 career rushing yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Eddie Lee Ivery",
+     "yards": 3517,
+     "label": "3,517",
+     "profile": "3,517 career rushing yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Tashard Choice",
+     "yards": 3365,
+     "label": "3,365",
+     "profile": "3,365 career rushing yards · No. 7 on the combined list"
+    },
+    {
+     "name": "P.J. Daniels",
+     "yards": 3346,
+     "label": "3,346",
+     "profile": "3,346 career rushing yards · No. 8 on the combined list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Herschel Walker",
+     "yards": 5259,
+     "label": "5,259",
+     "profile": "5,259 career rushing yards · No. 1 on the combined list"
+    },
+    {
+     "name": "Nick Chubb",
+     "yards": 4769,
+     "label": "4,769",
+     "profile": "4,769 career rushing yards · No. 2 on the combined list"
+    },
+    {
+     "name": "Sony Michel",
+     "yards": 3638,
+     "label": "3,638",
+     "profile": "3,638 career rushing yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Todd Gurley",
+     "yards": 3285,
+     "label": "3,285",
+     "profile": "3,285 career rushing yards · No. 9 on the combined list"
+    },
+    {
+     "name": "Garrison Hearst",
+     "yards": 3232,
+     "label": "3,232",
+     "profile": "3,232 career rushing yards · No. 10 on the combined list"
+    }
+   ],
+   "sig": "fcrush"
+  },
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "GT",
+   "b": "UGA",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "info": {
+    "title": "What is the Butkus Award?",
+    "text": "The Butkus Award is given each year to college football's best linebacker."
    },
-   "B": {
-    "label": "Malik Rutherford (WR) · career, GT",
-    "value": 10,
-    "school": "GT"
-   },
-   "unit": "receiving TDs",
-   "sig": "hD'Andre Swiftcareer,Malik RutherfordcareerrecTD",
+   "prompt": "From 2000 through 2025, which school had more Butkus Award winners?",
+   "A": [],
+   "B": [
+    {
+     "name": "Roquan Smith",
+     "yards": 2017,
+     "season": 2017,
+     "label": "winner",
+     "profile": "won the Butkus Award (best linebacker)"
+    },
+    {
+     "name": "Nakobe Dean",
+     "yards": 2021,
+     "season": 2021,
+     "label": "winner",
+     "profile": "won the Butkus Award (best linebacker)"
+    },
+    {
+     "name": "Jalon Walker",
+     "yards": 2024,
+     "season": 2024,
+     "label": "winner",
+     "profile": "won the Butkus Award (best linebacker)"
+    }
+   ],
+   "sig": "acbutkus2000",
+   "bonus": "names"
+  },
+  {
+   "type": "mc",
+   "label": "Since 2004",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2004, which player from either school has the most rushing yards against the other?",
+   "options": [
+    "Sony Michel (Georgia)",
+    "Roddy Jones (Georgia Tech)",
+    "Tashard Choice (Georgia Tech)",
+    "Washaun Ealey (Georgia)"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    3,
+    0,
+    2
+   ],
+   "reveal": "Sony Michel (Georgia) 453 in 4 games · Roddy Jones (Georgia Tech) 386 in 4 games · Tashard Choice (Georgia Tech) 311 in 3 games · Washaun Ealey (Georgia) 301 in 2 games",
+   "sig": "tvrush",
    "more": {
-    "title": "Top 4: career receiving TDs (UGA, GT players in our data)",
+    "title": "Top rushing yards against the other school since 2004",
     "rows": [
-     "1. Brock Bowers (UGA) 26",
-     "2. Malik Rutherford (GT) 10",
-     "3. D'Andre Swift (UGA) 5",
-     "4. Jahmyr Gibbs (GT) 5"
+     "1. Sony Michel (Georgia) 453 in 4 games",
+     "2. Roddy Jones (Georgia Tech) 386 in 4 games",
+     "3. Tashard Choice (Georgia Tech) 311 in 3 games",
+     "4. Washaun Ealey (Georgia) 301 in 2 games",
+     "5. Nick Chubb (Georgia) 270 in 3 games",
+     "6. Thomas Brown (Georgia) 221 in 3 games",
+     "7. Todd Gurley II (Georgia) 219 in 2 games",
+     "8. D'Andre Swift (Georgia) 215 in 3 games"
     ]
    }
   },
@@ -324,119 +442,6 @@
      "8. Brock Bowers (Georgia, 2021–23) 2,538",
      "9. Malcolm Mitchell (Georgia, 2012–15) 2,350",
      "10. Demaryius Thomas (Georgia Tech, 2007–09) 2,342"
-    ]
-   }
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more career rushing yards?",
-   "A": {
-    "label": "Zamir White (RB) · career, UGA",
-    "value": 2043,
-    "school": "UGA"
-   },
-   "B": {
-    "label": "Haynes King (QB) · career, GT",
-    "value": 2267,
-    "school": "GT"
-   },
-   "unit": "rushing yards",
-   "sig": "hHaynes Kingcareer,Zamir Whitecareerrush",
-   "more": {
-    "title": "Top 6: career rushing yards (UGA, GT players in our data)",
-    "rows": [
-     "1. Herschel Walker (UGA) 5,259",
-     "2. D'Andre Swift (UGA) 2,885",
-     "3. Jamal Haynes (GT) 2,534",
-     "4. Justin Thomas (GT) 2,412",
-     "5. Jordan Mason (GT) 2,336",
-     "6. Haynes King (GT) 2,267"
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "label": "Ranked Wins",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2015, which school has more wins over AP-ranked opponents, and how many?",
-   "options": [
-    "Georgia, 42",
-    "Georgia, 46",
-    "Georgia Tech, 11",
-    "Georgia Tech, 39"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    0,
-    3,
-    2
-   ],
-   "reveal": "Georgia 42, Georgia Tech 11 (through 2025). Latest: Georgia: 2025 vs. No. 10 Texas 35–10, 2025 vs. No. 23 Georgia Tech 16–9, 2025 vs. No. 10 Alabama 28–7; Georgia Tech: 2024 vs. No. 10 Florida State 24–21, 2024 vs. No. 4 Miami 28–23, 2025 vs. No. 12 Clemson 24–21.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
-   },
-   "sig": "rw2015"
-  },
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Georgia Tech–Georgia series?",
-   "options": [
-    "45 points",
-    "54 points",
-    "31 points",
-    "57 points"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    1,
-    2,
-    0
-   ],
-   "reveal": "45 points: Georgia 45, Georgia Tech 0 (Nov 27, 2021); also Georgia in 2019.",
-   "sig": "mm45"
-  },
-  {
-   "type": "mc",
-   "label": "Since 2004",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2004, which player from either school has the most rushing yards against the other?",
-   "options": [
-    "Sony Michel (Georgia)",
-    "Roddy Jones (Georgia Tech)",
-    "Tashard Choice (Georgia Tech)",
-    "Washaun Ealey (Georgia)"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    0,
-    2
-   ],
-   "reveal": "Sony Michel (Georgia) 453 in 4 games · Roddy Jones (Georgia Tech) 386 in 4 games · Tashard Choice (Georgia Tech) 311 in 3 games · Washaun Ealey (Georgia) 301 in 2 games",
-   "sig": "tvrush",
-   "more": {
-    "title": "Top rushing yards against the other school since 2004",
-    "rows": [
-     "1. Sony Michel (Georgia) 453 in 4 games",
-     "2. Roddy Jones (Georgia Tech) 386 in 4 games",
-     "3. Tashard Choice (Georgia Tech) 311 in 3 games",
-     "4. Washaun Ealey (Georgia) 301 in 2 games",
-     "5. Nick Chubb (Georgia) 270 in 3 games",
-     "6. Thomas Brown (Georgia) 221 in 3 games",
-     "7. Todd Gurley II (Georgia) 219 in 2 games",
-     "8. D'Andre Swift (Georgia) 215 in 3 games"
     ]
    }
   }

@@ -6,146 +6,9 @@
   "away": "FLA",
   "home": "FSU"
  },
- "generatedAt": "2026-11-24T01:20:58.960Z",
- "engine": 45,
+ "generatedAt": "2026-11-24T01:25:48.770Z",
+ "engine": 47,
  "questions": [
-  {
-   "type": "count",
-   "label": "Since 2016",
-   "a": "FLA",
-   "b": "FSU",
-   "threshold": 12,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2016 through 2025, which school had more seasons with 12+ rushing touchdowns by one player?",
-   "A": [
-    {
-     "name": "Dameon Pierce",
-     "yards": 13,
-     "season": 2021,
-     "profile": "Running back · 2021: 574 rushing, 216 receiving yds, 13 rushing TD"
-    }
-   ],
-   "B": [
-    {
-     "name": "Dalvin Cook",
-     "yards": 19,
-     "season": 2016,
-     "profile": "Running back · 2016: 1,765 rushing, 488 receiving yds, 19 rushing TD"
-    },
-    {
-     "name": "Cam Akers",
-     "yards": 14,
-     "season": 2019,
-     "profile": "Running back · 2019: 1,144 rushing, 225 receiving yds, 14 rushing TD"
-    },
-    {
-     "name": "Trey Benson",
-     "yards": 14,
-     "season": 2023,
-     "profile": "Running back · 2023: 905 rushing, 227 receiving yds, 14 rushing TD"
-    }
-   ],
-   "sig": "tsrushTD122016",
-   "bonus": "names"
-  },
-  {
-   "type": "mc",
-   "label": "Game Story",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 24, 2012",
-    "winner": "FLA",
-    "loser": "FSU",
-    "ws": 37,
-    "ls": 26,
-    "venue": "Doak Campbell Stadium"
-   },
-   "prompt": "The 2012 Florida–Florida State game was a top-10 showdown (No. 6 vs. No. 10), but the teams combined for how many rushing yards?",
-   "options": [
-    "356",
-    "276",
-    "396",
-    "316"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    1,
-    0,
-    2
-   ],
-   "reveal": "356: Florida 244, Florida State 112. 75+ rushing yards: Mike Gillislee (Florida) 140, Matt Jones (Florida) 81.",
-   "names": {
-    "prompt": "Bonus: name everyone with 75+ rushing yards in this game.",
-    "a": "FLA",
-    "b": "FSU",
-    "A": [
-     {
-      "name": "Mike Gillislee",
-      "yards": 140,
-      "label": "140 yds on 24 carries, 2 TD",
-      "profile": "Florida · 140 rushing yards on 24 carries, 2 TD in this game"
-     },
-     {
-      "name": "Matt Jones",
-      "yards": 81,
-      "label": "81 yds on 8 carries, 1 TD",
-      "profile": "Florida · 81 rushing yards on 8 carries, 1 TD in this game"
-     }
-    ],
-    "B": []
-   },
-   "sig": "gs2012-11-24rush"
-  },
-  {
-   "type": "mc",
-   "label": "Ranked Wins",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2018, which school has more wins over AP-ranked opponents, and how many?",
-   "options": [
-    "Florida, 10",
-    "Florida, 13",
-    "Florida State, 6",
-    "Florida State, 8"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    3,
-    1,
-    2
-   ],
-   "reveal": "Florida 10, Florida State 6 (through 2025). Latest: Florida: 2024 vs. No. 21 LSU 27–16, 2024 vs. No. 9 Ole Miss 24–17, 2025 vs. No. 9 Texas 29–21; Florida State: 2023 vs. No. 16 Duke 38–20, 2023 vs. No. 15 Louisville 16–6, 2025 vs. No. 8 Alabama 31–17.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
-   },
-   "sig": "rw2018"
-  },
-  {
-   "type": "duel",
-   "label": "Fresh Mix",
-   "verified": true,
-   "year": 2018,
-   "stat": "Rushing season",
-   "aSchool": "FSU",
-   "other": "FLA",
-   "aName": "Cam Akers (RB)",
-   "bName": "Lamical Perine (RB)",
-   "A": {
-    "big": "706",
-    "sm": "rush yds · 6 TD"
-   },
-   "B": {
-    "big": "826",
-    "sm": "rush yds · 7 TD"
-   },
-   "flip": true,
-   "sig": "drush2018Cam Akers,Lamical Perine"
-  },
   {
    "type": "count",
    "label": "Fill In",
@@ -231,6 +94,244 @@
     }
    ],
    "sig": "fsrec"
+  },
+  {
+   "type": "mc",
+   "label": "Game Story",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 24, 2012",
+    "winner": "FLA",
+    "loser": "FSU",
+    "ws": 37,
+    "ls": 26,
+    "venue": "Doak Campbell Stadium"
+   },
+   "prompt": "The 2012 Florida–Florida State game was a top-10 showdown (No. 6 vs. No. 10), but the teams combined for how many rushing yards?",
+   "options": [
+    "356",
+    "276",
+    "396",
+    "316"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    1,
+    0,
+    2
+   ],
+   "reveal": "356: Florida 244, Florida State 112. 75+ rushing yards: Mike Gillislee (Florida) 140, Matt Jones (Florida) 81.",
+   "names": {
+    "prompt": "Bonus: name everyone with 75+ rushing yards in this game.",
+    "a": "FLA",
+    "b": "FSU",
+    "A": [
+     {
+      "name": "Mike Gillislee",
+      "yards": 140,
+      "label": "140 yds on 24 carries, 2 TD",
+      "profile": "Florida · 140 rushing yards on 24 carries, 2 TD in this game"
+     },
+     {
+      "name": "Matt Jones",
+      "yards": 81,
+      "label": "81 yds on 8 carries, 1 TD",
+      "profile": "Florida · 81 rushing yards on 8 carries, 1 TD in this game"
+     }
+    ],
+    "B": []
+   },
+   "sig": "gs2012-11-24rush"
+  },
+  {
+   "type": "mc",
+   "label": "Ranked Wins",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2010, which school has more wins over AP-ranked opponents, and how many?",
+   "options": [
+    "Florida State, 23",
+    "Florida State, 27",
+    "Florida, 19",
+    "Florida, 20"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    1,
+    2,
+    0
+   ],
+   "reveal": "Florida State 23, Florida 19 (through 2025). Latest: Florida State: 2023 vs. No. 16 Duke 38–20, 2023 vs. No. 15 Louisville 16–6, 2025 vs. No. 8 Alabama 31–17; Florida: 2024 vs. No. 21 LSU 27–16, 2024 vs. No. 9 Ole Miss 24–17, 2025 vs. No. 9 Texas 29–21.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   },
+   "sig": "rw2010"
+  },
+  {
+   "type": "mc",
+   "label": "Rankings",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Of the 25 Florida–Florida State games from 2000 through 2025, how many featured a team ranked No. 1 in the AP poll?",
+   "options": [
+    "2",
+    "4",
+    "3",
+    "1"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    2,
+    0,
+    3
+   ],
+   "reveal": "2: 2009 (No. 1 Florida 37, Florida State 10) · 2014 (No. 1 Florida State 24, Florida 19).",
+   "info": {
+    "title": "Which poll?",
+    "text": "The AP Top 25 in force the week of each game; bowl and championship games use the last regular-season poll. Tied teams share a rank."
+   },
+   "years": {
+    "prompt": "Name the 2 seasons.",
+    "a": "FLA",
+    "b": "FSU",
+    "A": [
+     {
+      "name": "No. 1 Florida 37, Florida State 10",
+      "yards": 0,
+      "season": 2009,
+      "label": "No. 1 Florida 37, Florida State 10",
+      "profile": "No. 1 Florida 37, Florida State 10"
+     }
+    ],
+    "B": [
+     {
+      "name": "No. 1 Florida State 24, Florida 19",
+      "yards": 0,
+      "season": 2014,
+      "label": "No. 1 Florida State 24, Florida 19",
+      "profile": "No. 1 Florida State 24, Florida 19"
+     }
+    ]
+   },
+   "sig": "rkn1"
+  },
+  {
+   "type": "count",
+   "label": "Since 2016",
+   "a": "FLA",
+   "b": "FSU",
+   "threshold": 12,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2016 through 2025, which school had more seasons with 12+ rushing touchdowns by one player?",
+   "A": [
+    {
+     "name": "Dameon Pierce",
+     "yards": 13,
+     "season": 2021,
+     "profile": "Running back · 2021: 574 rushing, 216 receiving yds, 13 rushing TD"
+    }
+   ],
+   "B": [
+    {
+     "name": "Dalvin Cook",
+     "yards": 19,
+     "season": 2016,
+     "profile": "Running back · 2016: 1,765 rushing, 488 receiving yds, 19 rushing TD"
+    },
+    {
+     "name": "Cam Akers",
+     "yards": 14,
+     "season": 2019,
+     "profile": "Running back · 2019: 1,144 rushing, 225 receiving yds, 14 rushing TD"
+    },
+    {
+     "name": "Trey Benson",
+     "yards": 14,
+     "season": 2023,
+     "profile": "Running back · 2023: 905 rushing, 227 receiving yds, 14 rushing TD"
+    }
+   ],
+   "sig": "tsrushTD122016",
+   "bonus": "names"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receptions (at the school shown)?",
+   "A": {
+    "label": "Kyle Pitts (FLA TE)",
+    "value": 100,
+    "school": "FLA"
+   },
+   "B": {
+    "label": "Dalvin Cook (FSU RB)",
+    "value": 79,
+    "school": "FSU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Kyle Pitts 100 vs. Dalvin Cook 79.",
+   "sig": "urecNDalvin CookKyle Pitts"
+  },
+  {
+   "type": "mc",
+   "label": "Twist",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 26, 2011",
+    "winner": "FSU",
+    "loser": "FLA",
+    "ws": 21,
+    "ls": 7,
+    "venue": "Ben Hill Griffin Stadium"
+   },
+   "prompt": "The 2011 Florida–Florida State game went to Florida State, 21–7. Which team gained more total yards, and by how much?",
+   "options": [
+    "Florida by 89",
+    "Florida State by 89",
+    "Florida by 129",
+    "Florida State by 129"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    0,
+    2,
+    3
+   ],
+   "reveal": "🔄 Twist: Florida out-gained Florida State 184 to 95 and still lost. (Florida 54 rushing, 130 passing; Florida State 30 rushing, 65 passing.)",
+   "sig": "xo2011-11-26"
+  },
+  {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "In which year was the highest-scoring Florida–Florida State game from 2000 through 2025?",
+   "options": [
+    "2022",
+    "2024",
+    "2014",
+    "2008"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    2,
+    3,
+    1
+   ],
+   "reveal": "2022: Florida State 45, Florida 38 (83 points, Nov 25, 2022). Next highest: 2003, Florida State 38–34 (72).",
+   "sig": "mh2022"
   },
   {
    "type": "rank",
@@ -334,42 +435,6 @@
    }
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
-   "A": {
-    "label": "Kyle Pitts (FLA TE)",
-    "value": 18,
-    "school": "FLA"
-   },
-   "B": {
-    "label": "Dalvin Cook (FSU RB)",
-    "value": 2,
-    "school": "FSU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Kyle Pitts 18 vs. Dalvin Cook 2.",
-   "sig": "urecTDDalvin CookKyle Pitts"
-  },
-  {
-   "type": "moment",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, did Florida State beat Florida more or fewer than",
-   "line": "11.5 times",
-   "answer": "over",
-   "reveal": "More. Florida State went 12–13 against Florida from 2000 to 2025 (25 meetings, on-field results).",
-   "check": {
-    "value": 12,
-    "line": 11.5
-   },
-   "sig": "scFSUFLA"
-  },
-  {
    "type": "count",
    "label": "Awards",
    "a": "FLA",
@@ -401,28 +466,6 @@
    "B": [],
    "sig": "acmaxwell2000",
    "bonus": "names"
-  },
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "In which year was the highest-scoring Florida–Florida State game from 2000 through 2025?",
-   "options": [
-    "2022",
-    "2024",
-    "2014",
-    "2008"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    2,
-    3,
-    1
-   ],
-   "reveal": "2022: Florida State 45, Florida 38 (83 points, Nov 25, 2022). Next highest: 2003, Florida State 38–34 (72).",
-   "sig": "mh2022"
   }
  ]
 }

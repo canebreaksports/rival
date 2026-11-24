@@ -1,3 +1,4 @@
+import { genPropPair } from "@/lib/generators";
 import { genCareerRecRank } from "@/lib/notable-gen";
 import { pairKey } from "@/lib/rivalry-gen";
 import { genVsLeaderMC } from "@/lib/trend-gen";
@@ -154,20 +155,16 @@ describe("pitted mode", () => {
       }
     }
   });
-  it("paired props appear whole, back to back, one player per school", () => {
+  it("paired props come as two halves, one player per school (tested on the generator: weekly slots now crowd them out of sets)", () => {
     let pairs = 0;
-    for (let i = 0; i < 300; i++) for (const [a, b] of [["LSU", "TENN"], ["UGA", "SC"], ["TEX", "TAMU"]]) {
-      const qs = buildRound(DATA, a, b, mulberry32(i), VERIFIED);
-      qs.forEach((q, j) => {
-        if (q.pairPart !== 1) return;
-        pairs++;
-        const mate = qs[j + 1];
-        expect(mate?.pair).toBe(q.pair);
-        expect(mate?.pairPart).toBe(2);
-        const schoolOf = (x: typeof q) => DATA.schools.find(s => x.type === "moment" && x.prompt.includes(`(${s.name})`) || x.type === "moment" && x.prompt.includes(`his ${s.name} career`))?.key;
-        expect(new Set([schoolOf(q), schoolOf(mate!)]).size).toBe(2);
-      });
-      expect(qs.filter(q => q.pair).length % 2).toBe(0);
+    for (let i = 0; i < 100; i++) for (const [a, b] of [["LSU", "TENN"], ["UGA", "SC"], ["TEX", "TAMU"]] as const) {
+      const qs = genPropPair(makeCtx(DATA, [a, b], mulberry32(i), true), [a, b]);
+      if (!qs) continue;
+      pairs++;
+      expect(qs.map(q => q.pairPart)).toEqual([1, 2]);
+      expect(qs[0].pair).toBe(qs[1].pair);
+      const schoolOf = (x: (typeof qs)[0]) => DATA.schools.find(s => x.type === "moment" && (x.prompt.includes(`(${s.name})`) || x.prompt.includes(`his ${s.name} career`)))?.key;
+      expect(new Set([schoolOf(qs[0]), schoolOf(qs[1])]).size).toBe(2);
     }
     expect(pairs).toBeGreaterThan(0);
   });

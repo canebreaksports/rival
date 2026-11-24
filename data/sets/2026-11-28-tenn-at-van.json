@@ -6,9 +6,30 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-24T01:21:00.925Z",
- "engine": 45,
+ "generatedAt": "2026-11-24T01:25:50.782Z",
+ "engine": 47,
  "questions": [
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receptions (at the school shown)?",
+   "A": {
+    "label": "Jared Pinkney (VAN TE)",
+    "value": 114,
+    "school": "VAN"
+   },
+   "B": {
+    "label": "Jalin Hyatt (TENN WR)",
+    "value": 108,
+    "school": "TENN"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jared Pinkney 114 vs. Jalin Hyatt 108.",
+   "sig": "urecNJalin HyattJared Pinkney"
+  },
   {
    "type": "mc",
    "label": "Ranked Wins",
@@ -17,16 +38,16 @@
    "prompt": "Since 2020, which school has more wins over AP-ranked opponents, and how many?",
    "options": [
     "Tennessee, 11",
-    "Tennessee, 8",
+    "Tennessee, 14",
     "Vanderbilt, 5",
-    "Vanderbilt, 13"
+    "Vanderbilt, 9"
    ],
    "answer": 0,
    "order": [
     0,
+    2,
     1,
-    3,
-    2
+    3
    ],
    "reveal": "Tennessee 11, Vanderbilt 5 (through 2025). Latest: Tennessee: 2024 vs. No. 24 NC State 51–10, 2024 vs. No. 15 Oklahoma 25–15, 2024 vs. No. 7 Alabama 24–17; Vanderbilt: 2025 vs. No. 10 LSU 31–24, 2025 vs. No. 15 Missouri 17–10, 2025 vs. No. 18 Tennessee 45–24.",
    "info": {
@@ -80,55 +101,6 @@
      "9. Denarius Moore (Tennessee, 2007–10) 2,004"
     ]
    }
-  },
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Tennessee–Vanderbilt series?",
-   "options": [
-    "56 points",
-    "68 points",
-    "49 points",
-    "42 points"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    2,
-    0
-   ],
-   "reveal": "56 points: Tennessee 56, Vanderbilt 0 (Nov 26, 2022).",
-   "sig": "mm56"
-  },
-  {
-   "type": "count",
-   "label": "Since 2021",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 15,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2021 through 2025, which school had more seasons with 15+ rushing touchdowns by one player?",
-   "A": [
-    {
-     "name": "Dylan Sampson",
-     "yards": 22,
-     "season": 2024,
-     "profile": "Running back · 2024: 1,491 rushing, 143 receiving yds, 22 rushing TD"
-    },
-    {
-     "name": "DeSean Bishop",
-     "yards": 16,
-     "season": 2025,
-     "profile": "Running back · 2025: 1,076 rushing, 135 receiving yds, 16 rushing TD"
-    }
-   ],
-   "B": [],
-   "sig": "tsrushTD152021",
-   "bonus": "names"
   },
   {
    "type": "mc",
@@ -192,6 +164,67 @@
     ]
    },
    "sig": "gs2015-11-28rush"
+  },
+  {
+   "type": "count",
+   "label": "NFL Draft",
+   "a": "TENN",
+   "b": "VAN",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From the 2015 draft through 2026, which school had more linebackers taken in the first three rounds?",
+   "A": [],
+   "B": [
+    {
+     "name": "Zach Cunningham",
+     "yards": 57,
+     "season": 2017,
+     "label": "No. 57 pick",
+     "profile": "Inside Linebacker · 2017 draft, round 2"
+    },
+    {
+     "name": "Oren Burks",
+     "yards": 88,
+     "season": 2018,
+     "label": "No. 88 pick",
+     "profile": "Outside Linebacker · 2018 draft, round 3"
+    }
+   ],
+   "sig": "dcr32015lb",
+   "bonus": "names"
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 1997, did Jamal Lewis (Tennessee) have more or less than",
+   "line": "1,500 yards from scrimmage",
+   "answer": "over",
+   "reveal": "More. Jamal Lewis had 1,630 yards from scrimmage in 1997.",
+   "check": {
+    "value": 1630,
+    "line": 1500
+   },
+   "sig": "ppJamal Lewis1997|Ralph Webb2016scrim0",
+   "pair": "ppJamal Lewis1997|Ralph Webb2016scrim",
+   "pairPart": 1
+  },
+  {
+   "type": "moment",
+   "label": "Fresh Mix",
+   "verified": true,
+   "prompt": "In 2016, did Ralph Webb (Vanderbilt) have more or less than",
+   "line": "1,700 yards from scrimmage",
+   "answer": "under",
+   "reveal": "Less. Ralph Webb had 1,449 yards from scrimmage in 2016.",
+   "check": {
+    "value": 1449,
+    "line": 1700
+   },
+   "sig": "ppJamal Lewis1997|Ralph Webb2016scrim1",
+   "pair": "ppJamal Lewis1997|Ralph Webb2016scrim",
+   "pairPart": 2
   },
   {
    "type": "count",
@@ -280,107 +313,53 @@
    "sig": "fsrec"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
+   "type": "mc",
+   "label": "Series History",
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
-   "A": {
-    "label": "Jared Pinkney (VAN TE)",
-    "value": 14,
-    "school": "VAN"
-   },
-   "B": {
-    "label": "Arian Foster (TENN RB)",
-    "value": 2,
-    "school": "TENN"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Jared Pinkney 14 vs. Arian Foster 2.",
-   "sig": "urecTDArian FosterJared Pinkney"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more career rushing TDs?",
-   "A": {
-    "label": "Diego Pavia (QB) · career, VAN",
-    "value": 18,
-    "school": "VAN"
-   },
-   "B": {
-    "label": "Jamal Lewis (RB) · career, TENN",
-    "value": 17,
-    "school": "TENN"
-   },
-   "unit": "rushing TDs",
-   "sig": "hDiego Paviacareer,Jamal LewiscareerrushTD",
-   "more": {
-    "title": "Top 6: career rushing TDs (TENN, VAN players in our data)",
-    "rows": [
-     "1. Dylan Sampson (TENN) 35",
-     "2. Joshua Dobbs (TENN) 32",
-     "3. Ralph Webb (VAN) 32",
-     "4. Arian Foster (TENN) 23",
-     "5. Ke'Shawn Vaughn (VAN) 21",
-     "6. Diego Pavia (VAN) 18"
-    ]
-   }
+   "pitted": true,
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Tennessee–Vanderbilt series?",
+   "options": [
+    "56 points",
+    "68 points",
+    "49 points",
+    "42 points"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    3,
+    2,
+    0
+   ],
+   "reveal": "56 points: Tennessee 56, Vanderbilt 0 (Nov 26, 2022).",
+   "sig": "mm56"
   },
   {
    "type": "count",
-   "label": "NFL Draft",
+   "label": "Since 2021",
    "a": "TENN",
    "b": "VAN",
-   "threshold": 0,
+   "threshold": 15,
    "verified": true,
    "pitted": true,
-   "prompt": "From the 2015 draft through 2026, which school had more linebackers taken in the first three rounds?",
-   "A": [],
-   "B": [
+   "prompt": "From 2021 through 2025, which school had more seasons with 15+ rushing touchdowns by one player?",
+   "A": [
     {
-     "name": "Zach Cunningham",
-     "yards": 57,
-     "season": 2017,
-     "label": "No. 57 pick",
-     "profile": "Inside Linebacker · 2017 draft, round 2"
+     "name": "Dylan Sampson",
+     "yards": 22,
+     "season": 2024,
+     "profile": "Running back · 2024: 1,491 rushing, 143 receiving yds, 22 rushing TD"
     },
     {
-     "name": "Oren Burks",
-     "yards": 88,
-     "season": 2018,
-     "label": "No. 88 pick",
-     "profile": "Outside Linebacker · 2018 draft, round 3"
+     "name": "DeSean Bishop",
+     "yards": 16,
+     "season": 2025,
+     "profile": "Running back · 2025: 1,076 rushing, 135 receiving yds, 16 rushing TD"
     }
    ],
-   "sig": "dcr32015lb",
+   "B": [],
+   "sig": "tsrushTD152021",
    "bonus": "names"
-  },
-  {
-   "type": "moment",
-   "label": "Longest Play",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 19, 2005",
-    "winner": "VAN",
-    "loser": "TENN",
-    "ws": 28,
-    "ls": 24,
-    "venue": "Neyland Stadium"
-   },
-   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
-   "line": "81.5 yards",
-   "answer": "under",
-   "reveal": "Less. The longest was Arian Foster's 66-yard run for Tennessee; Vanderbilt's longest was 47 yards (George Smith).",
-   "check": {
-    "value": 66,
-    "line": 81.5
-   },
-   "sig": "lg2005-11-19"
   }
  ],
  "rev": 1
