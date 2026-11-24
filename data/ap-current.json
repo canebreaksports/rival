@@ -1,0 +1,22 @@
+{
+ "source": "CollegeFootballData /rankings?year=2026, AP Top 25, week 13 (the poll in force for this week's games), fetched 2026-11-24",
+ "season": 2026,
+ "week": 13,
+ "ranks": {
+  "UGA": 1,
+  "TEX": 5,
+  "ALA": 6,
+  "TENN": 7,
+  "UCLA": 10,
+  "IU": 12,
+  "USC": 15,
+  "ARIZ": 16,
+  "LOU": 18,
+  "OU": 19,
+  "FLA": 20,
+  "MISS": 23,
+  "MIZ": 24,
+  "OSU": 25
+ },
+ "weekOf": "2026-11-22"
+}

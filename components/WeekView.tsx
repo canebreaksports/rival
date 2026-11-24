@@ -9,7 +9,7 @@ import { store } from "@/lib/storage";
 import { Dot } from "./Dot";
 import { needsApproval, useApproved } from "@/lib/approval-client";
 
-export interface GameSummary { game: Game; slug: string; key: string; n: number; name: string | null }
+export interface GameSummary { game: Game; slug: string; key: string; n: number; name: string | null; ranks?: { away: number | null; home: number | null } } // ranks: current AP poll
 
 export function WeekView({ games, now: fixedNow, linkBase = "/play", storagePrefix = "" }: {
   games: GameSummary[]; now?: Date | null; linkBase?: string; storagePrefix?: string;
@@ -41,6 +41,9 @@ export function WeekView({ games, now: fixedNow, linkBase = "/play", storagePref
   </>;
 }
 
+/** "No. 6" before a ranked team (current AP poll). */
+const rk = (r?: number | null) => (r ? <span style={{ color: "var(--gold)", fontWeight: 800, marginRight: 4 }}>No. {r}</span> : null);
+
 function Card({ g, live, linkBase, storagePrefix }: { g: GameSummary; live: boolean; linkBase: string; storagePrefix: string }) {
   const w = windowOf(g.game), ready = g.n >= 3, sv = store.get(storagePrefix + g.key), played = !!sv?.done;
   const approvedSet = useApproved(), coach = storagePrefix !== ""; // Coach sees every set; players wait for the green light
@@ -53,8 +56,8 @@ function Card({ g, live, linkBase, storagePrefix }: { g: GameSummary; live: bool
     : sv ? `Resume · Q${sv.i + 1} of ${g.n}` : `${dfmt(w.day)} · ${g.n} questions`;
   const { away, home, site } = g.game;
   const body = <>
-    <div className="n">{g.name ?? (site ? `at ${site}` : "Showdown")}</div>
-    <div className="t"><Dot k={away} />{SCHOOL[away].name} <span className="vs">{site ? "VS" : "@"}</span> <Dot k={home} />{SCHOOL[home].name}</div>
+    {(g.name || site) && <div className="n">{g.name ?? `at ${site}`}</div>}
+    <div className="t"><Dot k={away} />{rk(g.ranks?.away)}{SCHOOL[away].name} <span className="vs">{site ? "VS" : "@"}</span> <Dot k={home} />{rk(g.ranks?.home)}{SCHOOL[home].name}</div>
     <div className="q">{status}</div>
   </>;
   if (played) return <Link className="rv played" href={`${linkBase}/${g.slug}`} aria-label={`Your results: ${SCHOOL[away].name} at ${SCHOOL[home].name}`}>{body}</Link>;
