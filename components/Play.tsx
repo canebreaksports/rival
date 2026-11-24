@@ -6,6 +6,7 @@ import { SCHOOL } from "@/lib/schools";
 import { fmt } from "@/lib/generators";
 import { applyResult, correctAnswer, grade, POINTS, scoreRank } from "@/lib/scoring";
 import { matchOne } from "@/lib/names";
+import { plainQ } from "@/lib/plain";
 import { initials } from "@/lib/profile";
 import { store } from "@/lib/storage";
 import { Dot } from "./Dot";
@@ -26,7 +27,8 @@ export interface PlayProps {
 type Reveal = { ok: boolean; msg: ReactNode; correct: string; chosen: string };
 const fresh = (n: number): Progress => ({ i: 0, pts: 0, streak: 0, best: 0, right: 0, n, done: false });
 
-export function Play({ questions, away, home, mode = "weekly", storageKey, sharePath, nextUnlock, onExit, onAgain, onFinish }: PlayProps) {
+export function Play({ questions: raw, away, home, mode = "weekly", storageKey, sharePath, nextUnlock, onExit, onAgain, onFinish }: PlayProps) {
+  const questions = useMemo(() => raw.map(q => plainQ(q)), [raw]); // no emojis on the site
   const n = questions.length;
   const [p, setP] = useState<Progress>(() => fresh(n));
   const [reveal, setReveal] = useState<Reveal | null>(null);
@@ -46,7 +48,7 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, share
   const q = questions[p.i];
 
   function settle(ok: boolean, base: number, msg: ReactNode, correct = "", chosen = "") {
-    const mark = ok ? "✅" : base > 0 ? "🟨" : "❌"; // 🟨 = partial credit (rank)
+    const mark = ok ? "✓" : base > 0 ? "~" : "✗"; // ~ = partial credit (rank)
     const scored = applyResult(p, ok, base), qpts = [...(p.qpts ?? [])];
     qpts[p.i] = scored.pts - p.pts;
     const np = { ...scored, marks: (p.marks ?? "") + mark, qpts };
@@ -116,18 +118,18 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, share
           : reveal && q.type === "mc" && q.years ? <NameYears q={q.years} prompt={q.years.prompt} onDone={finishBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
           : reveal && <div className="next show"><button className="btn" onClick={next}>{p.i === n - 1 ? "Final Whistle" : "Next Play →"}</button></div>}
       </div>
-      <div className="streak">{p.streak > 1 ? `🔥 ${p.streak} in a row` : `Question ${p.i + 1} of ${n}`}</div>
+      <div className="streak">{p.streak > 1 ? `${p.streak} in a row` : `Question ${p.i + 1} of ${n}`}</div>
     </section>
   );
 }
 
 // ---------------------------------------------------------------------------
 
-/** ⓘ explainer shown after answering and before the bonus, e.g. what the Doak Walker Award is. */
+/** explainer shown after answering and before the bonus, e.g. what the Doak Walker Award is. */
 function Info({ info }: { info: { title: string; text: string } }) {
   const [open, setOpen] = useState(false);
   return <div className="info">
-    <button className="btn ghost" style={{ width: "auto", padding: "6px 12px", fontSize: 14 }} aria-expanded={open} onClick={() => setOpen(!open)}>ⓘ {info.title}</button>
+    <button className="btn ghost" style={{ width: "auto", padding: "6px 12px", fontSize: 14 }} aria-expanded={open} onClick={() => setOpen(!open)}>{info.title}</button>
     {open && <div className="guess info" role="note" style={{ marginTop: 8 }}>{info.text}</div>}
   </div>;
 }
@@ -267,9 +269,9 @@ function NameYears({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
     if (hits.length && hits.every(i => filled.includes(i))) { setMsg({ tone: "info", text: `Already named ${y}.` }); return }
     if (hits.length) {
       const f = [...filled, ...hits.filter(i => !filled.includes(i))]; setFilled(f);
-      setMsg({ tone: "good", text: `✅ ${y}: ${hits.map(i => slots[i].who.map(w => w.name).join(", ")).join(" · ")} · +${POINTS.name * hits.filter(i => !filled.includes(i)).length}` });
+      setMsg({ tone: "good", text: `✓ ${y}: ${hits.map(i => slots[i].who.map(w => w.name).join(", ")).join(" · ")} · +${POINTS.name * hits.filter(i => !filled.includes(i)).length}` });
       if (f.length === slots.length) finish(f);
-    } else { const m = [...misses, String(y)]; setMisses(m); setMsg({ tone: "bad", text: `❌ ${y} isn't on the list.` }); if (m.length >= MISSES) finish(filled) }
+    } else { const m = [...misses, String(y)]; setMisses(m); setMsg({ tone: "bad", text: `✗ ${y} isn't on the list.` }); if (m.length >= MISSES) finish(filled) }
   }
   const open = (i: number) => !filled.includes(i);
   const nextShow = slots.map((_, i) => i).find(i => open(i) && !shown.includes(i));
@@ -302,7 +304,7 @@ function NameYears({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
       <div className={`reveal show ${filled.length ? "good" : "bad"}`}>
         <b>{filled.length} of {slots.length} named · +{filled.length * POINTS.name}</b>
         {schools.map(k => <div key={k} style={{ marginTop: 10 }}><b>{SCHOOL[k].name}</b>
-          {by(k).length ? by(k).map(s => <div key={s.i}>{filled.includes(s.i) ? "✅" : "▫️"} {s.year}: {s.who.map(w => `${w.name} (${w.label ?? fmt(w.yards)})`).join(", ")}</div>) : <div>None</div>}</div>)}
+          {by(k).length ? by(k).map(s => <div key={s.i}>{filled.includes(s.i) ? "✓" : "–"} {s.year}: {s.who.map(w => `${w.name} (${w.label ?? fmt(w.yards)})`).join(", ")}</div>) : <div>None</div>}</div>)}
       </div>
       <div className="next show"><button className="btn" onClick={onNext}>{last ? "Final Whistle" : "Next Play →"}</button></div>
     </>}
@@ -341,14 +343,14 @@ function NameNames({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
       const f = [...filled, i];
       setFilled(f);
       const left = openFor(g.name, f).length;
-      setMsg({ tone: "good", text: `✅ ${g.name}${slots[i].season ? ` (${slots[i].season})` : ""} · +${POINTS.name}${left ? ` — he's on the list ${left} more time${left > 1 ? "s" : ""}` : ""}` });
+      setMsg({ tone: "good", text: `✓ ${g.name}${slots[i].season ? ` (${slots[i].season})` : ""} · +${POINTS.name}${left ? ` — he's on the list ${left} more time${left > 1 ? "s" : ""}` : ""}` });
       if (f.length === slots.length) finish(f);
     } else if (g.status === "dup") setMsg({ tone: "info", text: `Already named every ${g.name} entry.` });
     else if (g.status === "ambiguous") setMsg({ tone: "info", text: `Which one? Add a first name: ${g.options.join(" or ")}.` });
     else {
       const m = [...misses, text.trim()];
       setMisses(m);
-      setMsg({ tone: "bad", text: `❌ “${text.trim()}” isn't on the list.` });
+      setMsg({ tone: "bad", text: `✗ “${text.trim()}” isn't on the list.` });
       if (m.length >= MISSES) finish(filled);
     }
   }
@@ -366,8 +368,8 @@ function NameNames({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
   const bySchool = (k: SchoolKey) => slots.map((x, i) => ({ ...x, i })).filter(x => x.t === k);
   const slotView = (x: (typeof slots)[0] & { i: number }) =>
     filled.includes(x.i) ? <span key={x.i} className="slot ok">{x.name}{x.season ? ` ’${String(x.season).slice(2)}` : ""}</span>
-      : (hinted.includes(x.i) || profiled.includes(x.i)) && x.season ? <span key={x.i} className="slot hint">? · {x.season}{profiled.includes(x.i) ? " 💡" : ""}</span>
-      : profiled.includes(x.i) ? <span key={x.i} className="slot hint">? 💡</span>
+      : (hinted.includes(x.i) || profiled.includes(x.i)) && x.season ? <span key={x.i} className="slot hint">? · {x.season}{profiled.includes(x.i) ? " (hint)" : ""}</span>
+      : profiled.includes(x.i) ? <span key={x.i} className="slot hint">? (hint)</span>
       : <span key={x.i} className="slot" aria-label="unnamed">▢</span>;
   return <div className="bonus">
     <div className="kind">Bonus · Name Them</div>
@@ -385,7 +387,7 @@ function NameNames({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
           autoComplete="off" autoCapitalize="words" spellCheck={false} enterKeyHint="go" autoFocus />
         <button className="btn" type="submit" style={{ width: "auto" }}>Enter</button>
       </form>
-      {profiled.filter(open).map(i => <div key={i} className="profile">💡 {slots[i].profile}{lettered.includes(i) ? ` · initials ${initials(slots[i].name)}` : ""}</div>)}
+      {profiled.filter(open).map(i => <div key={i} className="profile">Hint: {slots[i].profile}{lettered.includes(i) ? ` · initials ${initials(slots[i].name)}` : ""}</div>)}
       {msg && <div className={`guess ${msg.tone}`} role="status">{msg.text}</div>}
       <div className="row">
         {hasYears && <button className="btn ghost" disabled={nextHint == null} onClick={hint}>Year {POINTS.hint}</button>}
@@ -398,20 +400,23 @@ function NameNames({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
       <div className={`reveal show ${filled.length ? "good" : "bad"}`}>
         <b>{filled.length} of {slots.length} named · +{filled.length * POINTS.name}</b>
         {[q.a, q.b].map(k => <div key={k} style={{ marginTop: 10 }}><b>{SCHOOL[k].name}</b>
-          {bySchool(k).length ? bySchool(k).map(x => <div key={x.i}>{filled.includes(x.i) ? "✅" : "▫️"} {x.name}{x.season ? ` ${x.season}` : ""} ({x.label ?? fmt(x.yards)}{x.active ? ", active" : ""})</div>) : <div>None</div>}</div>)}
+          {bySchool(k).length ? bySchool(k).map(x => <div key={x.i}>{filled.includes(x.i) ? "✓" : "–"} {x.name}{x.season ? ` ${x.season}` : ""} ({x.label ?? fmt(x.yards)}{x.active ? ", active" : ""})</div>) : <div>None</div>}</div>)}
       </div>
       <div className="next show"><button className="btn" onClick={onNext}>{last ? "Final Whistle" : "Next Play →"}</button></div>
     </>}
   </div>;
 }
 
+/** Results marks as plain text (older saves stored emoji). */
+const plainMarks = (m: string) => m.replace(/✅/gu, "✓").replace(/🟨/gu, "~").replace(/❌/gu, "✗");
+
 function Final({ p, n, questions, weekly, away, home, nextUnlock, onExit, onAgain, sharePath }: { p: Progress; n: number; questions: Question[]; weekly: boolean; away?: SchoolKey | null; home?: SchoolKey | null; nextUnlock?: string | null; onExit: () => void; onAgain?: () => void; sharePath?: string | null }) {
   const [shared, setShared] = useState<string | null>(null);
   const hints = p.hints ?? 0;
-  const hintText = hints ? `💡 ${hints} hint${hints > 1 ? "s" : ""} used (${hints * POINTS.hint} pts)` : "💡 No hints";
+  const hintText = hints ? `${hints} hint${hints > 1 ? "s" : ""} used (${hints * POINTS.hint} pts)` : "No hints used";
   async function share() {
     const title = away && home ? `${SCHOOL[away].name} ${weekly ? "@" : "vs"} ${SCHOOL[home].name}` : "SEC Mix";
-    const text = [`PITTED · ${title}`, p.marks ?? "", `${p.pts} pts · ${p.right}/${n} · 🔥 best streak ${p.best}`, hintText, weekly ? "Can you beat it? Same 10 questions for everyone this week:" : ""].filter(Boolean).join("\n");
+    const text = [`PITTED · ${title}`, plainMarks(p.marks ?? ""), `${p.pts} pts · ${p.right}/${n} · best streak ${p.best}`, hintText, weekly ? "Can you beat it? Same 10 questions for everyone this week:" : ""].filter(Boolean).join("\n");
     const url = typeof window !== "undefined" ? window.location.origin + (sharePath ?? "") : ""; // straight to this matchup
     try {
       if (navigator.share) { await navigator.share({ title: "PITTED", text, url }); setShared("Shared") }
@@ -421,7 +426,7 @@ function Final({ p, n, questions, weekly, away, home, nextUnlock, onExit, onAgai
   return <section className="final">
     <div className="kind">Final</div>
     <div className="big">{p.pts}</div>
-    {p.marks && <div className="marks" aria-label="Question results">{p.marks}</div>}
+    {p.marks && <div className="marks" aria-label="Question results">{plainMarks(p.marks)}</div>}
     <p>{p.right}/{n} correct · best streak {p.best}<br />{hintText}<br />{grade(n ? p.right / n : 0)}
       {weekly && away && home && <><br /><br />That&apos;s this week&apos;s set for {SCHOOL[away].name} vs {SCHOOL[home].name}.{nextUnlock ? ` New matchups unlock ${nextUnlock}.` : ""}</>}</p>
     <button className="btn" onClick={share}>Share Score &amp; Link</button>
@@ -434,9 +439,9 @@ function Final({ p, n, questions, weekly, away, home, nextUnlock, onExit, onAgai
   </section>;
 }
 
-/** Your results, question by question: type, prompt, ✅/🟨/❌ and points earned. Never the correct answers. */
+/** Your results, question by question: type, prompt, ✓/~/✗ and points earned. Never the correct answers. */
 function Breakdown({ p, questions }: { p: Progress; questions: Question[] }) {
-  const marks = [...(p.marks ?? "").matchAll(/✅|🟨|❌/gu)].map(m => m[0]);
+  const marks = [...plainMarks(p.marks ?? "").matchAll(/✓|~|✗/gu)].map(m => m[0]);
   if (!marks.length) return null;
   const what = (q: Question) => q.type === "count" ? (q.prompt ?? `Which school has more ${fmt(q.threshold)}-yard career rushers?`)
     : q.type === "duel" ? `${q.year} ${q.stat.toLowerCase()}: which line belongs to ${SCHOOL[q.aSchool].name}?`

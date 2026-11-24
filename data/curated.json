@@ -224,7 +224,7 @@
       "Alabama by 40"
      ],
      "answer": 0,
-     "reveal": "🔄 Twist: Auburn out-gained Alabama 630 to 539 (456 passing, 174 rushing) and still lost. Alabama also turned it over more, 3 to 2, and won anyway.",
+     "reveal": "Twist: Auburn out-gained Alabama 630 to 539 (456 passing, 174 rushing) and still lost. Alabama also turned it over more, 3 to 2, and won anyway.",
      "source": "2014 Iron Bowl team totals: CollegeFootballData /games/teams (data/rivalry.json; points match the final). AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json).",
      "verified": true
     }
@@ -571,7 +571,7 @@
      ],
      "unit": "yds",
      "trap": true,
-     "note": "🪤 Trap: Mason's big year was 2013 (1,816), Foster's was 2007 (1,193), and Sampson's was 2024 (1,485).",
+     "note": "Trap: Mason's big year was 2013 (1,816), Foster's was 2007 (1,193), and Sampson's was 2024 (1,485).",
      "source": "Sports Reference player pages (matches data/players.json)",
      "verified": true
     },
@@ -1401,7 +1401,7 @@
       "2"
      ],
      "answer": 0,
-     "reveal": "🔄 Twist: a career-high 4, three of them in the first quarter. Florida State won anyway.",
+     "reveal": "Twist: a career-high 4, three of them in the first quarter. Florida State won anyway.",
      "source": "ESPN game recap (AP), event 400547771: \"Winston threw a career-high four interceptions, including three in the first quarter\". Score and totals match data/rivalry.json; AP ranks from data/game-ranks.json",
      "verified": true,
      "marquee": true
@@ -1910,7 +1910,7 @@
       "Michigan, 2 to 1"
      ],
      "answer": 0,
-     "reveal": "🔄 Twist: Ohio State turned it over 3 times; Michigan never did, and still lost. Ohio State out-gained Michigan 503 to 397.",
+     "reveal": "Twist: Ohio State turned it over 3 times; Michigan never did, and still lost. Ohio State out-gained Michigan 503 to 397.",
      "source": "ESPN box score, event 263220194 (turnovers Ohio State 3, Michigan 0; total yards 503 and 397); Wikipedia \"2006 Michigan vs. Ohio State football game\" (revision 1359177321): first No. 1 vs. No. 2 meeting, 42–39",
      "verified": true,
      "marquee": true
@@ -1997,7 +1997,7 @@
      },
      "unit": "TD",
      "upset": true,
-     "note": "🚨 Upset: tight end Albert Okwuegbunam 23, Biletnikoff winner Dede Westbrook 21 (4 in 2015, 17 in 2016).",
+     "note": "Upset: tight end Albert Okwuegbunam 23, Biletnikoff winner Dede Westbrook 21 (4 in 2015, 17 in 2016).",
      "source": "CollegeFootballData /stats/player/season (Okwuegbunam 11/6/6 at Missouri 2017–19; Westbrook 4/17 at Oklahoma 2015–16)",
      "verified": true,
      "marquee": true

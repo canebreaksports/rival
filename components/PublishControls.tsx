@@ -4,6 +4,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import type { Question } from "@/lib/types";
 import { bonusesOf, formatOf, reviewQuestion } from "@/lib/review";
 import { applyOrder, units } from "@/lib/order";
+import { plainQ } from "@/lib/plain";
 
 type State = { configured: boolean; approved: string[]; pending: string[]; stale: string[]; order: Record<string, string[]> };
 type QS = "ok" | "work" | "reject";
@@ -52,11 +53,11 @@ export function PublishProvider({ children }: { children: React.ReactNode }) {
 export function StorageNote() {
   const { st, err } = useContext(Ctx);
   if (err) return <p className="note" style={{ color: "var(--bad, #e66)", textAlign: "left" }}>{err}</p>;
-  if (st && !st.configured) return <p className="note" style={{ textAlign: "left" }}>⚠️ Storage isn&apos;t connected, so the buttons can&apos;t save yet. Until it is, tell Claude &quot;approve week of …&quot; (or name the matchups) and the approval is recorded in the code.</p>;
+  if (st && !st.configured) return <p className="note" style={{ textAlign: "left" }}>Storage isn&apos;t connected, so the buttons can&apos;t save yet. Until it is, tell Claude &quot;approve week of …&quot; (or name the matchups) and the approval is recorded in the code.</p>;
   return null;
 }
 
-const label = (st: State | null, slug: string) => !st ? "…" : st.approved.includes(slug) ? "🟢 Green-lit · live for players" : st.stale.includes(slug) ? "🟠 Changed since you approved it · needs review" : "🟡 Needs review · hidden from players";
+const label = (st: State | null, slug: string) => !st ? "…" : st.approved.includes(slug) ? "Green-lit · live for players" : st.stale.includes(slug) ? "Changed since you approved it · needs review" : "Needs review · hidden from players";
 
 const tally = (rv: Reviews, slug: string, sigs: string[]) => {
   const c = { ok: 0, work: 0, reject: 0, none: 0 };
@@ -73,9 +74,9 @@ export function SetStatus({ slug, sigs }: { slug: string; sigs: string[] }) {
       <button className={on ? "btn ghost" : "btn"} style={{ width: "auto", padding: "6px 14px" }} disabled={busy || !st || (!on && !ready)} onClick={() => act([slug], !on)}>{on ? "Pull back" : "Green light set"}</button>
     </div>
     <div className="row" style={{ alignItems: "center", gap: 8, flexWrap: "wrap", marginTop: 6 }}>
-      <span className="note" style={{ margin: 0 }}>Questions: ✅ {c.ok} · 🛠 {c.work} · ❌ {c.reject} · not reviewed {c.none}{!ready && !on ? " · green-light every question to publish the set" : ""}</span>
+      <span className="note" style={{ margin: 0 }}>Questions: green-lit {c.ok} · needs work {c.work} · rejected {c.reject} · not reviewed {c.none}{!ready && !on ? " · green-light every question to publish the set" : ""}</span>
       {c.none > 0 && <button className="btn ghost" style={{ width: "auto", padding: "4px 12px", fontSize: 13 }} disabled={busy || !st}
-        onClick={() => review(slug, sigs.filter(s => !rv[`${slug}|${s}`]).map(sig => ({ sig, s: "ok" as QS })))}>✅ Approve the {c.none} unreviewed</button>}
+        onClick={() => review(slug, sigs.filter(s => !rv[`${slug}|${s}`]).map(sig => ({ sig, s: "ok" as QS })))}>Approve the {c.none} unreviewed</button>}
     </div>
   </div>;
 }
@@ -98,27 +99,28 @@ function QReviewBar({ slug, sig }: { slug: string; sig: string }) {
   const off = busy || !st || !st.configured;
   const tone = cur?.s === "ok" ? "#3fbf7f" : cur?.s === "work" ? "#e0a800" : cur?.s === "reject" ? "#e5534b" : undefined;
   return <div style={{ marginTop: 8, paddingTop: 8, borderTop: "1px solid rgba(255,255,255,.08)" }}>
-    {cur && <div className="rd" style={{ color: tone, fontWeight: 700 }}>{cur.s === "ok" ? "✅ Green-lit" : cur.s === "work" ? "🛠 Needs work" : "❌ Rejected"}{cur.note ? `: ${cur.note}` : ""}</div>}
+    {cur && <div className="rd" style={{ color: tone, fontWeight: 700 }}>{cur.s === "ok" ? "Green-lit" : cur.s === "work" ? "Needs work" : "Rejected"}{cur.note ? `: ${cur.note}` : ""}</div>}
     {mode ? <div style={{ marginTop: 6 }}>
       <textarea value={note} onChange={e => setNote(e.target.value)} rows={2} placeholder={mode === "work" ? "What needs to change? (e.g. the line is too high)" : "Why? (optional)"}
         style={{ width: "100%", boxSizing: "border-box", padding: 8, borderRadius: 8, background: "rgba(0,0,0,.3)", color: "inherit", border: "1px solid rgba(255,255,255,.2)" }} />
       <div className="row" style={{ gap: 6, marginTop: 6 }}>
         <button className="btn" style={{ width: "auto", padding: "4px 12px", fontSize: 13 }} disabled={off || (mode === "work" && !note.trim())}
-          onClick={() => { review(slug, [{ sig, s: mode, note: note.trim() || undefined }]); setMode(null); setNote("") }}>Save {mode === "work" ? "🛠 needs work" : "❌ reject"}</button>
+          onClick={() => { review(slug, [{ sig, s: mode, note: note.trim() || undefined }]); setMode(null); setNote("") }}>Save {mode === "work" ? "needs work" : "reject"}</button>
         <button className="btn ghost" style={{ width: "auto", padding: "4px 12px", fontSize: 13 }} onClick={() => { setMode(null); setNote("") }}>Cancel</button>
       </div>
     </div>
     : <div className="row" style={{ gap: 6, marginTop: 6, flexWrap: "wrap" }}>
-      <button className="btn ghost" style={{ width: "auto", padding: "4px 12px", fontSize: 13, borderColor: "#3fbf7f" }} disabled={off || cur?.s === "ok"} onClick={() => review(slug, [{ sig, s: "ok" }])}>✅ Green light</button>
-      <button className="btn ghost" style={{ width: "auto", padding: "4px 12px", fontSize: 13, borderColor: "#e0a800" }} disabled={off} onClick={() => { setMode("work"); setNote(cur?.s === "work" ? cur.note ?? "" : "") }}>🛠 Needs work</button>
-      <button className="btn ghost" style={{ width: "auto", padding: "4px 12px", fontSize: 13, borderColor: "#e5534b" }} disabled={off} onClick={() => { setMode("reject"); setNote(cur?.s === "reject" ? cur.note ?? "" : "") }}>❌ Reject</button>
+      <button className="btn ghost" style={{ width: "auto", padding: "4px 12px", fontSize: 13, borderColor: "#3fbf7f" }} disabled={off || cur?.s === "ok"} onClick={() => review(slug, [{ sig, s: "ok" }])}>Green light</button>
+      <button className="btn ghost" style={{ width: "auto", padding: "4px 12px", fontSize: 13, borderColor: "#e0a800" }} disabled={off} onClick={() => { setMode("work"); setNote(cur?.s === "work" ? cur.note ?? "" : "") }}>Needs work</button>
+      <button className="btn ghost" style={{ width: "auto", padding: "4px 12px", fontSize: 13, borderColor: "#e5534b" }} disabled={off} onClick={() => { setMode("reject"); setNote(cur?.s === "reject" ? cur.note ?? "" : "") }}>Reject</button>
       {cur && <button className="btn ghost" style={{ width: "auto", padding: "4px 12px", fontSize: 13 }} disabled={off} onClick={() => review(slug, [{ sig, s: null }])}>Clear</button>}
     </div>}
   </div>;
 }
 
 /** A set's questions in the saved order, with ▲/▼ to move them (paired questions move together). */
-export function SetQuestions({ slug, questions }: { slug: string; questions: Question[] }) {
+export function SetQuestions({ slug, questions: raw }: { slug: string; questions: Question[] }) {
+  const questions = raw.map(q => plainQ(q)); // the page shows what players see: no emojis
   const { st, busy, reorder } = useContext(Ctx);
   const ordered = applyOrder(questions, st?.order[slug]), U = units(ordered);
   const locked = !st || !st.configured || st.approved.includes(slug);
@@ -141,7 +143,7 @@ export function SetQuestions({ slug, questions }: { slug: string; questions: Que
         {bonusesOf(q).map((bq, j) => <div key={j} className="rd" style={{ borderLeft: "3px solid var(--gold)", paddingLeft: 8, margin: "6px 0" }}>
           <b>{j + 2}. Bonus:</b> {bq.prompt}<br /><span style={{ opacity: 0.85, whiteSpace: "pre-line" }}><b>Bonus answers (hidden from players until they guess):</b> {bq.answers}</span></div>)}
         {q.after && <div className="rd"><b>Last: players see after the bonus:</b> {q.after}</div>}
-        {q.info && <div className="rd">ⓘ {q.info.title}: {q.info.text}</div>}
+        {q.info && <div className="rd">{q.info.title}: {q.info.text}</div>}
         {q.more?.rows.length ? <div className="rd"><b>More list (players see it after the bonus):</b> {q.more.title}: {q.more.rows.join(" · ")}</div> : null}
         <div className="rd" style={{ opacity: 0.5, fontSize: 12 }}>id: {q.sig.slice(0, 40)}</div>
         <QReviewBar slug={slug} sig={q.sig} />
@@ -161,5 +163,5 @@ export function CopyNotes({ sets }: { sets: { slug: string; title: string; qs: {
   if (!lines.length) return null;
   return <button className="btn" style={{ width: "auto", padding: "6px 14px", margin: "6px 0 10px" }}
     onClick={() => { navigator.clipboard?.writeText(lines.join("\n")).then(() => { setDone(true); setTimeout(() => setDone(false), 2500) }) }}>
-    {done ? "Copied ✓ paste it to Claude" : `📋 Copy ${lines.length} note${lines.length > 1 ? "s" : ""} for Claude`}</button>;
+    {done ? "Copied ✓ paste it to Claude" : `Copy ${lines.length} note${lines.length > 1 ? "s" : ""} for Claude`}</button>;
 }

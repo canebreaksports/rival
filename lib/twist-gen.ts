@@ -32,7 +32,7 @@ export function genOutgainedMC(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng:
   return { type: "mc", label: "Twist", verified: true, pitted: true, game: box(g),
     prompt: `The ${g.season} ${nm(a)}–${nm(b)} game ${hook}. Which team gained more total yards, and by how much?`,
     options: opts, answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
-    reveal: `🔄 Twist: ${nm(l)} out-gained ${nm(w)} ${lt} to ${wt} and still lost. (${nm(l)} ${g.team![l].rush} rushing, ${g.team![l].pass} passing; ${nm(w)} ${g.team![w].rush} rushing, ${g.team![w].pass} passing.)`,
+    reveal: `Twist: ${nm(l)} out-gained ${nm(w)} ${lt} to ${wt} and still lost. (${nm(l)} ${g.team![l].rush} rushing, ${g.team![l].pass} passing; ${nm(w)} ${g.team![w].rush} rushing, ${g.team![w].pass} passing.)`,
     sig: "xo" + g.date } as Question;
 }
 
@@ -56,7 +56,7 @@ export function genQuietStarMC(h: HonorsData, pr: RivalryPair, a: SchoolKey, b: 
   return { type: "mc", label: "Twist", verified: true, pitted: true, game: box(g),
     prompt: `${v.name} ${place} in ${v.year}. How many ${what} did he have when ${tagged(v.school, g.date, rank)} beat ${tagged(opp, g.date, rank)} that year?`,
     options: opts.map(String), answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
-    reveal: `🔄 Twist: just ${p.yds}${p.n ? ` on ${p.n} ${what === "rushing yards" ? "carries" : "catches"}` : ""}, against a season of ${tot.toLocaleString("en-US")} (about ${avg} a game). ${nm(v.school)} won ${Math.max(g.hp, g.ap)}–${Math.min(g.hp, g.ap)} anyway.`,
+    reveal: `Twist: just ${p.yds}${p.n ? ` on ${p.n} ${what === "rushing yards" ? "carries" : "catches"}` : ""}, against a season of ${tot.toLocaleString("en-US")} (about ${avg} a game). ${nm(v.school)} won ${Math.max(g.hp, g.ap)}–${Math.min(g.hp, g.ap)} anyway.`,
     sig: "xq" + v.name + v.year } as Question;
 }
 

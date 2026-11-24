@@ -11,7 +11,7 @@ export default function Home() {
     <div className="tag">College Football · Rivalry Week</div>
     <FanBar />
     <WeekView games={gameSummaries()} />
-    <Link className="btn ghost" href="/leaderboard" style={{ display: "block", textAlign: "center", textDecoration: "none", marginTop: 14 }}>🏆 School Leaderboard</Link>
+    <Link className="btn ghost" href="/leaderboard" style={{ display: "block", textAlign: "center", textDecoration: "none", marginTop: 14 }}>School Leaderboard</Link>
     <Footer />
   </section>;
 }

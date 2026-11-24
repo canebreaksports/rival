@@ -4,6 +4,7 @@ import type { FrozenSet, Question } from "./types";
 import { SCHOOL } from "./schools";
 import { correctAnswer, rankOrder } from "./scoring";
 import { sundayOf } from "./gating";
+import { plainQ } from "./plain";
 
 const n = (k: string) => SCHOOL[k]?.name ?? k;
 const f = (v: number) => v.toLocaleString("en-US");
@@ -21,8 +22,9 @@ export function bonusesOf(q: Question): { prompt: string; answers: string }[] {
 }
 type CE = { name: string; season?: number; profile?: string; label?: string };
 
-export function reviewQuestion(q: Question): ReviewItem {
-  const flags = [q.trap && "🪤 trap", q.upset && "🚨 upset", q.pair && `side by side ${q.pairPart}/2`, !q.verified && "UNVERIFIED"].filter(Boolean) as string[];
+export function reviewQuestion(raw: Question): ReviewItem {
+  const q = plainQ(raw); // no emojis on the site
+  const flags = [q.trap && "trap", q.upset && "upset", q.pair && `side by side ${q.pairPart}/2`, !q.verified && "UNVERIFIED"].filter(Boolean) as string[];
   const game = "game" in q && q.game ? `${q.game.date} · ${n(q.game.winner)} ${q.game.ws}, ${n(q.game.loser)} ${q.game.ls}${q.game.venue ? " · " + q.game.venue : ""}` : "";
   switch (q.type) {
     case "prog": {
@@ -89,7 +91,7 @@ export function reviewMarkdown(week: string, sets: FrozenSet[]): string {
       if (r.detail) lines.push(`   *Players see right after answering:* ${r.detail.replace(/\n/g, " ")}  `);
       for (const b of bonusesOf(q)) lines.push(`   *Bonus:* ${b.prompt}  `, `   *Bonus answers:* ${b.answers.replace(/\n/g, " · ")}  `);
       if (q.after) lines.push(`   *Players see after the bonus:* ${q.after}  `);
-      if (q.info) lines.push(`   *ⓘ ${q.info.title}:* ${q.info.text}  `);
+      if (q.info) lines.push(`   *${q.info.title}:* ${q.info.text}  `);
       if (q.more?.rows.length) lines.push(`   *More · ${q.more.title}:* ${q.more.rows.join(" · ")}  `);
       lines.push("");
     });

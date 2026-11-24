@@ -18,7 +18,7 @@ export default function Publish() {
     <div className="tag" style={{ marginTop: 6 }}>Coach · Publish</div>
     <h2 className="sec" style={{ fontSize: 22 }}>Review and green-light</h2>
     <p className="note" style={{ marginTop: 0, textAlign: "left" }}>Players only see a matchup after you green-light it. If a set changes after you approve it, it goes back to review.
-      Correct answers are in gold. Review each question: ✅ green light, 🛠 needs work (add a note), or ❌ reject. A set can be published once every question is green-lit. Use ▲/▼ to reorder (a new order sends the set back to review). Claude reads your notes and revises.</p>
+      Correct answers are in gold. Review each question: green light, needs work (add a note), or reject. A set can be published once every question is green-lit. Use ▲/▼ to reorder (a new order sends the set back to review). Claude reads your notes and revises.</p>
     <StorageNote />
     <CopyNotes sets={sets.map(s => ({ slug: s.slug, title: `${SCHOOL[s.game.away].name} @ ${SCHOOL[s.game.home].name}`, qs: s.questions.map(q => ({ sig: q.sig, prompt: reviewQuestion(q).prompt })) }))} />
     <nav className="note" style={{ display: "flex", flexWrap: "wrap", gap: "6px 12px", textAlign: "left" }}>{weeks.flatMap(w => sets.filter(s => weekOf(s.game.date) === w)).map(s =>

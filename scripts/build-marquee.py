@@ -58,7 +58,7 @@ EXTRA = {
  "MICH|OSU": [
   {"type": "mc", "prompt": "2006 was the first time Ohio State and Michigan met ranked No. 1 and No. 2. No. 1 Ohio State won 42–39 at Ohio Stadium. Which team committed more turnovers?",
    "options": ["Ohio State, 3 to 0", "Michigan, 3 to 0", "Ohio State, 2 to 1", "Michigan, 2 to 1"], "answer": 0,
-   "reveal": "🔄 Twist: Ohio State turned it over 3 times; Michigan never did, and still lost. Ohio State out-gained Michigan 503 to 397.",
+   "reveal": "Twist: Ohio State turned it over 3 times; Michigan never did, and still lost. Ohio State out-gained Michigan 503 to 397.",
    "source": "ESPN box score, event 263220194 (turnovers Ohio State 3, Michigan 0; total yards 503 and 397); Wikipedia \"2006 Michigan vs. Ohio State football game\" (revision 1359177321): first No. 1 vs. No. 2 meeting, 42–39", "verified": True, "marquee": True},
   {"type": "mc", "prompt": "In the 2006 No. 1 vs. No. 2 game, Mike Hart ran for 142 yards on 23 carries in Michigan's 42–39 loss. How many rushing touchdowns did he score?",
    "options": ["3", "1", "2", "0"], "answer": 0, "reveal": "3 touchdowns, in a loss. He came in with 1,373 yards and 11 touchdowns on the season.",
@@ -70,7 +70,7 @@ EXTRA = {
    "options": ["3", "4", "2", "1"], "answer": 0, "reveal": "3 of Ohio State's 4 sacks. Chris Wells added 222 rushing yards, and Michigan finished with 15 rushing yards.",
    "source": recap(273210130, "Gholston made life miserable for them with three of Ohio State's four sacks"), "verified": True, "marquee": True}],
  "FLA|FSU": [{"type": "mc", "prompt": "2014: No. 1 Florida State beat Florida 24–19 to extend its winning streak to 28 games. How many interceptions did Jameis Winston, the reigning Heisman winner, throw?",
-   "options": ["4", "0", "1", "2"], "answer": 0, "reveal": "🔄 Twist: a career-high 4, three of them in the first quarter. Florida State won anyway.",
+   "options": ["4", "0", "1", "2"], "answer": 0, "reveal": "Twist: a career-high 4, three of them in the first quarter. Florida State won anyway.",
    "source": recap(400547771, "Winston threw a career-high four interceptions, including three in the first quarter"), "verified": True, "marquee": True}],
  "LOU|UK": [{"type": "mc", "prompt": "2014: No. 24 Louisville led Kentucky 44–40 in the final minute when safety Gerod Holliman intercepted Patrick Towles. That pick tied the NCAA single-season record. Which interception of his season was it?",
    "options": ["14th", "12th", "13th", "15th"], "answer": 0, "reveal": "His 14th, with 35 seconds left, returned 65 yards to the Kentucky 2.",
@@ -138,7 +138,7 @@ more("TENN|VAN", [
 more("MIZ|OU", [
  {"type": "h2h", "prompt": "Who had more college receiving touchdowns (at the school shown)?",
   "A": {"label": "Albert Okwuegbunam (Missouri TE)", "value": 23, "school": "MIZ"}, "B": {"label": "Dede Westbrook (Oklahoma WR)", "value": 21, "school": "OU"}, "unit": "TD",
-  "upset": True, "note": "🚨 Upset: tight end Albert Okwuegbunam 23, Biletnikoff winner Dede Westbrook 21 (4 in 2015, 17 in 2016).",
+  "upset": True, "note": "Upset: tight end Albert Okwuegbunam 23, Biletnikoff winner Dede Westbrook 21 (4 in 2015, 17 in 2016).",
   "source": "CollegeFootballData /stats/player/season (Okwuegbunam 11/6/6 at Missouri 2017–19; Westbrook 4/17 at Oklahoma 2015–16)", "verified": True, "marquee": True},
  {"type": "rank", "prompt": "Rank these Oklahoma and Missouri pass catchers by career receiving yards at their school, highest first.",
   "items": [{"label": "Ryan Broyles (Oklahoma, 2008–11)", "value": 4586, "school": "OU"}, {"label": "Sterling Shepard (Oklahoma, 2012–15)", "value": 3482, "school": "OU"},

@@ -46,8 +46,8 @@ function Card({ g, live, linkBase, storagePrefix }: { g: GameSummary; live: bool
   const approvedSet = useApproved(), coach = storagePrefix !== ""; // Coach sees every set; players wait for the green light
   const inReview = !coach && needsApproval(g.slug) && !approvedSet?.has(g.slug);
   const open = live && ready && !played && !inReview;
-  const status = !live ? (ready ? `🔒 Unlocks ${unlockFmt(w.start)} · ${g.n} questions` : `🔒 Unlocks ${unlockFmt(w.start)} · Stats pack coming soon`)
-    : played ? `✓ ${sv!.pts.toLocaleString("en-US")} pts · ${sv!.right}/${sv!.n}${sv!.hints ? ` · 💡${sv!.hints}` : ""} · back next week`
+  const status = !live ? (ready ? `Unlocks ${unlockFmt(w.start)} · ${g.n} questions` : `Unlocks ${unlockFmt(w.start)} · Stats pack coming soon`)
+    : played ? `✓ ${sv!.pts.toLocaleString("en-US")} pts · ${sv!.right}/${sv!.n}${sv!.hints ? ` · ${sv!.hints} hint${sv!.hints > 1 ? "s" : ""}` : ""} · back next week`
     : !ready ? `${dfmt(w.day)} · Stats pack coming soon`
     : inReview ? (approvedSet ? `${dfmt(w.day)} · Final review · check back soon` : `${dfmt(w.day)} · …`)
     : sv ? `Resume · Q${sv.i + 1} of ${g.n}` : `${dfmt(w.day)} · ${g.n} questions`;

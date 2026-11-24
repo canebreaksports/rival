@@ -251,7 +251,7 @@ const isOff = (c: Ctx, p: PlayerSeason, k: PeakStat) => {
 
 function trapNote(c: Ctx, recs: PlayerSeason[], k: PeakStat) {
   const offs = recs.filter(p => isOff(c, p, k));
-  return offs.length ? "🪤 Trap: " + offs.map(p => { const b = peak(c, p, k); return `${p.name}'s best year was ${b.year} (${fmt(b[k]!)}), not ${p.year}` }).join("; ") + "." : "";
+  return offs.length ? "Trap: " + offs.map(p => { const b = peak(c, p, k); return `${p.name}'s best year was ${b.year} (${fmt(b[k]!)}), not ${p.year}` }).join("; ") + "." : "";
 }
 
 export function genTrapRank(c: Ctx): Question | null {
@@ -285,7 +285,7 @@ export function genTrapPOU(c: Ctx): Question | null {
   return {
     type: "moment", label: c.label, trap: true, verified: allVerified(p, b),
     prompt: `In ${p.year}, did ${p.name} (${SCHOOL[p.school].name}) have more or less than`, line: `${fmt(line)} ${ST[k][0]}`, answer: "under",
-    reveal: `Less. ${p.name} had ${fmt(v)} ${ST[k][0]} in ${p.year}. 🪤 Trap: his big year was ${b.year} (${fmt(b[k]!)}).`,
+    reveal: `Less. ${p.name} had ${fmt(v)} ${ST[k][0]} in ${p.year}. Trap: his big year was ${b.year} (${fmt(b[k]!)}).`,
     check: { value: v, line }, sig: "tp" + p.name + p.year + k,
   };
 }
@@ -339,7 +339,7 @@ export function genUpset(c: Ctx): Question | null {
   return {
     type: "h2h", label: c.label, upset: true, verified: allVerified(x.s, x.o), flip: c.rng() < 0.5,
     prompt: u.q, A: { label: lab(x.o), value: x.vo, school: x.o.school }, B: { label: lab(x.s), value: x.vs, school: x.s.school }, unit: "", ...(u.ypc ? { ypc: true } : {}),
-    note: `🚨 Upset: ${x.o.name} ${f(x.vo)}${carries(x.o)} vs. ${x.s.name} ${f(x.vs)}${carries(x.s)}.`,
+    note: `Upset: ${x.o.name} ${f(x.vo)}${carries(x.o)} vs. ${x.s.name} ${f(x.vs)}${carries(x.s)}.`,
     sig: "u" + x.k + x.s.name + x.o.name,
   };
 }
