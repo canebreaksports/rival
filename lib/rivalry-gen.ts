@@ -264,3 +264,52 @@ export function genHighScoreMC(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng:
     sig: "mh" + g.season,
   };
 }
+
+// ---- game story (owner, Nov 2026): "The 2013 Iron Bowl is remembered for the Kick Six, but the teams combined for how
+// many rushing yards?" then name the players who drove it. Four options + Name Them. ----
+const HOOK: Record<string, string> = { "ALA|AUB|2013": "the Kick Six" }; // famous names for famous games
+type Story = { g: RivalryGame; hook: string; tier: number };
+export function genGameStoryMC(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rng,
+  extra: { walkoffs?: { season: number; how: string }[]; ranks?: { date: string; ranks: Record<string, number | null> }[] } = {}): Question | null {
+  const gs = seriesGames(pr).filter(g => g.box && g.team && g.team[a] && g.team[b]);
+  if (!gs.length) return null;
+  const key = [a, b].sort().join("|"), top = Math.max(...seriesGames(pr).map(g => g.hp + g.ap));
+  const stories: Story[] = gs.flatMap((g): Story[] => {
+    const named = HOOK[`${key}|${g.season}`];
+    if (named) return [{ g, hook: `is remembered for ${named}`, tier: 0 }];
+    const w = extra.walkoffs?.find(x => x.season === g.season);
+    if (w) return [{ g, hook: w.how === "ot" ? "went to overtime" : w.how === "fg" ? "was won on a field goal as time expired" : "was won on the final play", tier: 1 }];
+    const r = extra.ranks?.find(x => x.date === g.date)?.ranks;
+    if (r && (r[a] ?? 99) <= 10 && (r[b] ?? 99) <= 10) { const [x, y] = [r[a]!, r[b]!].sort((p, q) => p - q); return [{ g, hook: `was a top-10 showdown (No. ${x} vs. No. ${y})`, tier: 2 }] }
+    if (g.hp + g.ap === top) return [{ g, hook: "is the highest-scoring game in the series since 2000", tier: 3 }];
+    return [];
+  });
+  // famous games first (named, then walk-offs, top-10 showdowns, highest-scoring); rushing first, passing only as a fallback
+  const ordered = [0, 1, 2, 3].flatMap(t => shuffle(rng, stories.filter(s => s.tier === t)));
+  const tries: [RivalryGame, string, "rush" | "pass", string, number][] = [];
+  for (const cat of ["rush", "pass"] as const) for (const { g, hook } of ordered)
+    for (const min of cat === "rush" ? [75, 80, 90, 100, 60] : [150, 200]) tries.push([g, hook, cat, cat === "rush" ? "rushing yards" : "passing yards", min]);
+  for (const [g, hook, cat, what, min] of tries) {
+    const total = g.team![a][cat] + g.team![b][cat];
+    const stars = Object.entries(g.box!).flatMap(([k, ps]) => ps.filter(p => p.cat === cat && p.yds >= min).map(p => ({ k, p })));
+    if (stars.length < (cat === "rush" ? 2 : 1) || stars.length > 5) continue;
+    if (Object.values(g.box!).flat().some(p => p.cat === cat && Math.abs(p.yds - min) < 5)) continue; // nobody right at the line
+    const step = Math.max(30, Math.round(total * 0.1 / 10) * 10), opts = [total];
+    for (const d of shuffle(rng, [-2, -1, 1, 2])) if (opts.length < 4 && total + d * step > 0) opts.push(total + d * step);
+    if (opts.length < 4) continue;
+    const w = winner(g), l = loser(g), ws = Math.max(g.hp, g.ap), ls = Math.min(g.hp, g.ap);
+    const unit = cat === "rush" ? "carries" : "completions";
+    const entry = (x: (typeof stars)[0]) => ({ name: x.p.name, yards: x.p.yds, label: `${x.p.yds} yds${x.p.n ? ` on ${x.p.n} ${unit}` : ""}, ${x.p.td} TD`,
+      profile: `${name(x.k)} · ${x.p.yds} ${what}${x.p.n ? ` on ${x.p.n} ${unit}` : ""}, ${x.p.td} TD in this game` });
+    return {
+      type: "mc", label: "Game Story", verified: SRC_VERIFIED, pitted: true,
+      game: { date: longDate(g.date), winner: w, loser: l, ws, ls, venue: venue(g) },
+      prompt: `The ${g.season} ${name(a)}–${name(b)} game ${hook}, but the teams combined for how many ${what}?`,
+      options: opts.map(n => `${fmt(n)}`), answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
+      reveal: `${fmt(total)}: ${name(a)} ${fmt(g.team![a][cat])}, ${name(b)} ${fmt(g.team![b][cat])}. ${min}+ ${what}: ${stars.map(x => `${x.p.name} (${name(x.k)}) ${x.p.yds}`).join(", ")}.`,
+      names: { prompt: `Bonus: name everyone with ${min}+ ${what} in this game.`, a, b, A: stars.filter(x => x.k === a).map(entry), B: stars.filter(x => x.k === b).map(entry) },
+      sig: "gs" + g.date + cat,
+    } as Question;
+  }
+  return null;
+}

@@ -6,9 +6,35 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-24T00:44:44.383Z",
- "engine": 43,
+ "generatedAt": "2026-11-24T01:21:00.925Z",
+ "engine": 45,
  "questions": [
+  {
+   "type": "mc",
+   "label": "Ranked Wins",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2020, which school has more wins over AP-ranked opponents, and how many?",
+   "options": [
+    "Tennessee, 11",
+    "Tennessee, 8",
+    "Vanderbilt, 5",
+    "Vanderbilt, 13"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    1,
+    3,
+    2
+   ],
+   "reveal": "Tennessee 11, Vanderbilt 5 (through 2025). Latest: Tennessee: 2024 vs. No. 24 NC State 51–10, 2024 vs. No. 15 Oklahoma 25–15, 2024 vs. No. 7 Alabama 24–17; Vanderbilt: 2025 vs. No. 10 LSU 31–24, 2025 vs. No. 15 Missouri 17–10, 2025 vs. No. 18 Tennessee 45–24.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   },
+   "sig": "rw2020"
+  },
   {
    "type": "rank",
    "label": "Notables",
@@ -56,34 +82,116 @@
    }
   },
   {
-   "type": "rank",
-   "label": "Notables",
+   "type": "mc",
+   "label": "Series History",
    "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
+   "pitted": true,
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Tennessee–Vanderbilt series?",
+   "options": [
+    "56 points",
+    "68 points",
+    "49 points",
+    "42 points"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    3,
+    2,
+    0
+   ],
+   "reveal": "56 points: Tennessee 56, Vanderbilt 0 (Nov 26, 2022).",
+   "sig": "mm56"
+  },
+  {
+   "type": "count",
+   "label": "Since 2021",
+   "a": "TENN",
+   "b": "VAN",
+   "threshold": 15,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2021 through 2025, which school had more seasons with 15+ rushing touchdowns by one player?",
+   "A": [
     {
-     "label": "Dylan Sampson (TENN RB) · 2024 rushing TDs",
-     "value": 22,
-     "school": "TENN"
+     "name": "Dylan Sampson",
+     "yards": 22,
+     "season": 2024,
+     "profile": "Running back · 2024: 1,491 rushing, 143 receiving yds, 22 rushing TD"
     },
     {
-     "label": "Diego Pavia (VAN QB) · 2025 rushing TDs",
-     "value": 10,
-     "school": "VAN"
-    },
-    {
-     "label": "Ralph Webb (VAN RB) · career rushing TDs",
-     "value": 32,
-     "school": "VAN"
-    },
-    {
-     "label": "Jalin Hyatt (TENN WR) · 2022 receiving TDs",
-     "value": 15,
-     "school": "TENN"
+     "name": "DeSean Bishop",
+     "yards": 16,
+     "season": 2025,
+     "profile": "Running back · 2025: 1,076 rushing, 135 receiving yds, 16 rushing TD"
     }
    ],
-   "sig": "nxTDDiego Pavia2025 rushing TDs,Dylan Sampson2024 rushing TDs,Jalin Hyatt2022 receiving TDs,Ralph Webbcareer rushing TDs"
+   "B": [],
+   "sig": "tsrushTD152021",
+   "bonus": "names"
+  },
+  {
+   "type": "mc",
+   "label": "Game Story",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 28, 2015",
+    "winner": "TENN",
+    "loser": "VAN",
+    "ws": 53,
+    "ls": 28,
+    "venue": "Neyland Stadium"
+   },
+   "prompt": "The 2015 Tennessee–Vanderbilt game is the highest-scoring game in the series since 2000, but the teams combined for how many rushing yards?",
+   "options": [
+    "533",
+    "483",
+    "633",
+    "583"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    0,
+    3,
+    2
+   ],
+   "reveal": "533: Tennessee 331, Vanderbilt 202. 75+ rushing yards: Ralph Webb (Vanderbilt) 149, Jalen Hurd (Tennessee) 120, Alvin Kamara (Tennessee) 99, Joshua Dobbs (Tennessee) 93.",
+   "names": {
+    "prompt": "Bonus: name everyone with 75+ rushing yards in this game.",
+    "a": "TENN",
+    "b": "VAN",
+    "A": [
+     {
+      "name": "Jalen Hurd",
+      "yards": 120,
+      "label": "120 yds on 19 carries, 1 TD",
+      "profile": "Tennessee · 120 rushing yards on 19 carries, 1 TD in this game"
+     },
+     {
+      "name": "Alvin Kamara",
+      "yards": 99,
+      "label": "99 yds on 16 carries, 0 TD",
+      "profile": "Tennessee · 99 rushing yards on 16 carries, 0 TD in this game"
+     },
+     {
+      "name": "Joshua Dobbs",
+      "yards": 93,
+      "label": "93 yds on 11 carries, 1 TD",
+      "profile": "Tennessee · 93 rushing yards on 11 carries, 1 TD in this game"
+     }
+    ],
+    "B": [
+     {
+      "name": "Ralph Webb",
+      "yards": 149,
+      "label": "149 yds on 21 carries, 0 TD",
+      "profile": "Vanderbilt · 149 rushing yards on 21 carries, 0 TD in this game"
+     }
+    ]
+   },
+   "sig": "gs2015-11-28rush"
   },
   {
    "type": "count",
@@ -172,6 +280,57 @@
    "sig": "fsrec"
   },
   {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Jared Pinkney (VAN TE)",
+    "value": 14,
+    "school": "VAN"
+   },
+   "B": {
+    "label": "Arian Foster (TENN RB)",
+    "value": 2,
+    "school": "TENN"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jared Pinkney 14 vs. Arian Foster 2.",
+   "sig": "urecTDArian FosterJared Pinkney"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more career rushing TDs?",
+   "A": {
+    "label": "Diego Pavia (QB) · career, VAN",
+    "value": 18,
+    "school": "VAN"
+   },
+   "B": {
+    "label": "Jamal Lewis (RB) · career, TENN",
+    "value": 17,
+    "school": "TENN"
+   },
+   "unit": "rushing TDs",
+   "sig": "hDiego Paviacareer,Jamal LewiscareerrushTD",
+   "more": {
+    "title": "Top 6: career rushing TDs (TENN, VAN players in our data)",
+    "rows": [
+     "1. Dylan Sampson (TENN) 35",
+     "2. Joshua Dobbs (TENN) 32",
+     "3. Ralph Webb (VAN) 32",
+     "4. Arian Foster (TENN) 23",
+     "5. Ke'Shawn Vaughn (VAN) 21",
+     "6. Diego Pavia (VAN) 18"
+    ]
+   }
+  },
+  {
    "type": "count",
    "label": "NFL Draft",
    "a": "TENN",
@@ -201,183 +360,27 @@
    "bonus": "names"
   },
   {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "Rank these seasons by receiving yards, highest first.",
-   "items": [
-    {
-     "label": "Kalija Lipscomb (WR) · 2019 VAN",
-     "value": 511,
-     "school": "VAN"
-    },
-    {
-     "label": "Will Sheppard (WR) · 2023 VAN",
-     "value": 684,
-     "school": "VAN"
-    },
-    {
-     "label": "Ke'Shawn Vaughn (RB) · 2019 VAN",
-     "value": 270,
-     "school": "VAN"
-    },
-    {
-     "label": "Jalin Hyatt (WR) · 2022 TENN",
-     "value": 1267,
-     "school": "TENN"
-    }
-   ],
-   "unit": "yds",
-   "note": "🪤 Trap: Kalija Lipscomb's best year was 2018 (916), not 2019; Will Sheppard's best year was 2022 (776), not 2023.",
-   "sig": "trrecJalin Hyatt2022,Kalija Lipscomb2019,Ke'Shawn Vaughn2019,Will Sheppard2023",
-   "more": {
-    "title": "Top 8: single-season receiving yards (TENN, VAN players in our data)",
-    "rows": [
-     "1. Jalin Hyatt (TENN 2022) 1,267",
-     "2. Kalija Lipscomb (VAN 2018) 916",
-     "3. Will Sheppard (VAN 2022) 776",
-     "4. Will Sheppard (VAN 2023) 684",
-     "5. Kalija Lipscomb (VAN 2017) 610",
-     "6. Will Sheppard (VAN 2021) 577",
-     "7. Kalija Lipscomb (VAN 2019) 511",
-     "8. Kalija Lipscomb (VAN 2016) 319"
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "label": "Walk-offs",
+   "type": "moment",
+   "label": "Longest Play",
    "verified": true,
    "pitted": true,
-   "prompt": "Of the 22 Tennessee–Vanderbilt games since 2004, how many were won on the final play or in overtime? (Counts: a game-winning score as time expired in the 4th quarter, or any overtime win.)",
-   "options": [
-    "1",
-    "3",
-    "0",
-    "2"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    1,
-    3,
-    0
-   ],
-   "reveal": "1: 2011 overtime win, Tennessee 27–21.",
-   "years": {
-    "prompt": "Name the season it happened.",
-    "a": "TENN",
-    "b": "VAN",
-    "A": [
-     {
-      "name": "Overtime win: Tennessee 27, Vanderbilt 21",
-      "yards": 6,
-      "season": 2011,
-      "label": "27–21 (OT)",
-      "profile": "Overtime win, 27–21"
-     }
-    ],
-    "B": []
+   "game": {
+    "date": "Nov 19, 2005",
+    "winner": "VAN",
+    "loser": "TENN",
+    "ws": 28,
+    "ls": 24,
+    "venue": "Neyland Stadium"
    },
-   "sig": "wm2004"
-  },
-  {
-   "type": "mc",
-   "label": "Ranked Wins",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2020, which school has more wins over AP-ranked opponents, and how many?",
-   "options": [
-    "Tennessee, 11",
-    "Tennessee, 8",
-    "Vanderbilt, 5",
-    "Vanderbilt, 13"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    2,
-    3,
-    0
-   ],
-   "reveal": "Tennessee 11, Vanderbilt 5 (through 2025). Latest: Tennessee: 2024 vs. No. 24 NC State 51–10, 2024 vs. No. 15 Oklahoma 25–15, 2024 vs. No. 7 Alabama 24–17; Vanderbilt: 2025 vs. No. 10 LSU 31–24, 2025 vs. No. 15 Missouri 17–10, 2025 vs. No. 18 Tennessee 45–24.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
+   "line": "81.5 yards",
+   "answer": "under",
+   "reveal": "Less. The longest was Arian Foster's 66-yard run for Tennessee; Vanderbilt's longest was 47 yards (George Smith).",
+   "check": {
+    "value": 66,
+    "line": 81.5
    },
-   "sig": "rw2020"
-  },
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Tennessee–Vanderbilt series?",
-   "options": [
-    "56 points",
-    "68 points",
-    "49 points",
-    "42 points"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    2,
-    0
-   ],
-   "reveal": "56 points: Tennessee 56, Vanderbilt 0 (Nov 26, 2022).",
-   "sig": "mm56"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
-   "A": {
-    "label": "Dylan Sampson (TENN RB)",
-    "value": 5.9,
-    "school": "TENN"
-   },
-   "B": {
-    "label": "Ralph Webb (VAN RB)",
-    "value": 4.5,
-    "school": "VAN"
-   },
-   "unit": "",
-   "ypc": true,
-   "note": "🚨 Upset: Dylan Sampson 5.9 per carry (420 carries) vs. Ralph Webb 4.5 per carry (931 carries).",
-   "sig": "uypcRalph WebbDylan Sampson"
-  },
-  {
-   "type": "count",
-   "label": "Since 2021",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 15,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2021 through 2025, which school had more seasons with 15+ rushing touchdowns by one player?",
-   "A": [
-    {
-     "name": "Dylan Sampson",
-     "yards": 22,
-     "season": 2024,
-     "profile": "Running back · 2024: 1,491 rushing, 143 receiving yds, 22 rushing TD"
-    },
-    {
-     "name": "DeSean Bishop",
-     "yards": 16,
-     "season": 2025,
-     "profile": "Running back · 2025: 1,076 rushing, 135 receiving yds, 16 rushing TD"
-    }
-   ],
-   "B": [],
-   "sig": "tsrushTD152021",
-   "bonus": "names"
+   "sig": "lg2005-11-19"
   }
  ],
  "rev": 1

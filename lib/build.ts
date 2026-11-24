@@ -9,11 +9,11 @@ import { genRankedMC, genRankedWinsMC } from "./ranks-gen";
 import { PROGRAM_STATS, SCHOOL, programValue } from "./data";
 import { genGameCount, genSeasonCount, genVsLeaderMC } from "./trend-gen";
 import { genAwardCount, genAwardMC, genDraftCount, genDraftMC, genHeismanCount, genHeismanMC, genPeerDraftMC, genPeerAwardMC, genHeismanVsRivalRank } from "./honors-gen";
-import { genGameMoment, genGameRank, genLongestGameMoment, genLongestSeriesMC, genSeriesCount, genTeamDiffMC, genVsH2H, pairKey, genStreakMC, genMarginMC, genHighScoreMC } from "./rivalry-gen";
+import { genGameMoment, genGameRank, genLongestGameMoment, genLongestSeriesMC, genSeriesCount, genTeamDiffMC, genVsH2H, pairKey, genStreakMC, genMarginMC, genHighScoreMC, genGameStoryMC } from "./rivalry-gen";
 import { genCount, genDuel, genMixedRank, genPropPair, genH2H, genPOU, genRank, genTrapPOU, genTrapRank, genUpset, makeCtx } from "./generators";
 
 /** Bump when a change alters generated output. Frozen sets record the version that built them. */
-export const ENGINE_VERSION = 43; // v43: curated Heisman-vs-rival (Iron Bowl), passing QBs out of rushing rankings; // v42: Heisman-vs-rival allows 3 contenders; // v41: Heisman-vs-rival guaranteed when available; // v40: Heisman finalists vs. the rival Rank It; // v39: running QB = 1,200+ career rushing yards; // v38: QB vs QB rushing upsets only between two running QBs; // v37: no QB-vs-QB rushing upsets; // v36: highest-scoring game MC; an upset every week; award winners count as famous; // v35: one combined top-10 fill-in per set; rankings first in the MC rotation; // v34: vs-the-field only via the MC rotation; // v33: TD-season counts, ranked-wins MC, guaranteed MC rotation; // v32: vs-the-field MC (draft, awards); // v31: AP-ranked games MC; // v30: MC with a Name Them bonus (2014 Iron Bowl 100-yard receivers); // v29: career ranking bonus: complete the combined top 10; // v28: SEC record-book top 10 fill-in for SEC vs SEC; // v27: series MC (longest streak / largest margin) every week, mc cap 3; // v26: no total-yards difference MC; // v25: no random single-game higher/lower; upsets need a real number; // v24: comparisons only on notable players or big seasons; // v23: no 'top N against each other' fill-ins; // v22: two fill-ins per set (+ combined career top 10), tighter game lines, rivalry week non-SEC schools; // v21: notable also = school top-10 single seasons + owner list (McCluster); // v20: Name Them by default, years only for walk-offs; bonus answers hidden until the bonus ends; // v19: fill-in questions (combined top 10 seasons, top 5 vs each other), ⓘ award explainers; // v18: higher/lower only on notable players (lib/notable.ts); // v17: 10 questions in every set (bigger generated pool, second fill pass); // v16: walk-offs (final play or OT), a record-book career ranking every week; v15: Notables Rank It; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
+export const ENGINE_VERSION = 45; // v45: game story prefers famous games and rushing; // v44: game story MC + name the players; // v43: curated Heisman-vs-rival (Iron Bowl), passing QBs out of rushing rankings; // v42: Heisman-vs-rival allows 3 contenders; // v41: Heisman-vs-rival guaranteed when available; // v40: Heisman finalists vs. the rival Rank It; // v39: running QB = 1,200+ career rushing yards; // v38: QB vs QB rushing upsets only between two running QBs; // v37: no QB-vs-QB rushing upsets; // v36: highest-scoring game MC; an upset every week; award winners count as famous; // v35: one combined top-10 fill-in per set; rankings first in the MC rotation; // v34: vs-the-field only via the MC rotation; // v33: TD-season counts, ranked-wins MC, guaranteed MC rotation; // v32: vs-the-field MC (draft, awards); // v31: AP-ranked games MC; // v30: MC with a Name Them bonus (2014 Iron Bowl 100-yard receivers); // v29: career ranking bonus: complete the combined top 10; // v28: SEC record-book top 10 fill-in for SEC vs SEC; // v27: series MC (longest streak / largest margin) every week, mc cap 3; // v26: no total-yards difference MC; // v25: no random single-game higher/lower; upsets need a real number; // v24: comparisons only on notable players or big seasons; // v23: no 'top N against each other' fill-ins; // v22: two fill-ins per set (+ combined career top 10), tighter game lines, rivalry week non-SEC schools; // v21: notable also = school top-10 single seasons + owner list (McCluster); // v20: Name Them by default, years only for walk-offs; bonus answers hidden until the bonus ends; // v19: fill-in questions (combined top 10 seasons, top 5 vs each other), ⓘ award explainers; // v18: higher/lower only on notable players (lib/notable.ts); // v17: 10 questions in every set (bigger generated pool, second fill pass); // v16: walk-offs (final play or OT), a record-book career ranking every week; v15: Notables Rank It; // v15: Notables Rank It (career receiving from record books, notable mixed seasons); v14: both schools get an edge. // v13: longest-play questions, one per kind, YPC only 100+ carries, Saban/Iron Bowl curated (v12: close calls)
 export const WEEKLY_N = 10;
 
 export interface BuildOpts { verifiedOnly: boolean; skip?: Set<string> } // skip: owner-rejected question signatures
@@ -189,6 +189,12 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
       const q = f(); if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q); break }
     }
   }
+  // Game story every week the box scores allow (owner, Nov 2026): a memorable game, a combined stat, name the players
+  if (teams.length > 1) {
+    const [x, y] = teams, pr = data.rivalry?.pairs[pairKey(x, y)], k = [x, y].sort().join("|");
+    const q = pr ? genGameStoryMC(pr, x, y, rng, { walkoffs: data.walkoffs?.pairs[k]?.list, ranks: data.gameRanks?.pairs[k]?.games }) : null;
+    if (q && !sigs.has(q.sig)) { sigs.add(q.sig); out.push(q) }
+  }
   // A second multiple choice every week, from a rotation, for variety (owner, Nov 2026): AP-ranked games, ranked wins,
   // or the two schools against the field (draft, awards)
   if (teams.length > 1) {
@@ -232,7 +238,7 @@ export function generate(data: Dataset, teams: SchoolKey[], n: number, rng: Rng,
 /** Per-set caps (spec §2). Trap and upset limits apply across generated and curated questions. */
 export function caps(progCap: number, pitted = false): Record<QType, number> {
   // Pitted sets lean on cross-school formats, so they get more room (owner's call, Nov 2026).
-  return pitted ? { moment: 4, prog: progCap, h2h: 4, rank: 3, count: 4, duel: 3, cross: 1, mc: 4 }
+  return pitted ? { moment: 4, prog: progCap, h2h: 4, rank: 3, count: 4, duel: 3, cross: 1, mc: 5 }
     : { moment: 4, prog: progCap, h2h: 3, rank: 2, count: 1, duel: 2, cross: 1, mc: 2 };
 }
 
@@ -261,7 +267,7 @@ export function involvesBoth(q: Question, a: SchoolKey, b: SchoolKey): boolean {
 
 /** Generator family of a question, from its signature prefix (e.g. "vs" = totals against each other). */
 export const questionKind = (q: Question) =>
-  q.sig.match(/^(gm|vs|tv|ts|tg|dc|dm|ac|am|hc|hm|sc|td|gr|lp|lg|mx|nx|nr|wo|wm|fs|fv|fc|st|ms|mm|mh|rk|rw|hv|pd|pa|pp|tr|tp|d|u|h|r|c|g|k|p)/)?.[1] ?? q.sig.slice(0, 2);
+  q.sig.match(/^(gm|vs|tv|ts|tg|dc|dm|ac|am|hc|hm|sc|td|gr|lp|lg|mx|nx|nr|wo|wm|fs|fv|fc|st|ms|mm|mh|rk|rw|hv|gs|pd|pa|pp|tr|tp|d|u|h|r|c|g|k|p)/)?.[1] ?? q.sig.slice(0, 2);
 // may appear twice in a set: program pit, curated items, game moments, plain head-to-heads
 const REPEATABLE = new Set(["g", "gm", "h"]);
 const CURATED_MAX = 5; // hand-written questions per set (owner adds them for big rivalries)

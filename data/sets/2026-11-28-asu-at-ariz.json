@@ -6,86 +6,89 @@
   "away": "ASU",
   "home": "ARIZ"
  },
- "generatedAt": "2026-11-24T00:44:42.804Z",
- "engine": 43,
+ "generatedAt": "2026-11-24T01:20:59.274Z",
+ "engine": 45,
  "questions": [
   {
-   "type": "count",
-   "label": "Awards",
-   "a": "ASU",
-   "b": "ARIZ",
-   "threshold": 0,
+   "type": "rank",
+   "label": "Fresh Mix",
    "verified": true,
-   "pitted": true,
-   "info": {
-    "title": "Which awards count?",
-    "text": "Heisman Trophy: most outstanding player · Maxwell Award: best all-around player · Walter Camp Award: player of the year · Doak Walker Award: best running back · Biletnikoff Award: best receiver · Davey O'Brien Award: best quarterback · John Mackey Award: best tight end · Outland Trophy: best interior lineman · Chuck Bednarik Award: best defensive player · Bronko Nagurski Trophy: best defensive player · Butkus Award: best linebacker · Jim Thorpe Award: best defensive back · Lombardi Award: best lineman or linebacker · Lou Groza Award: best kicker · Ray Guy Award: best punter"
-   },
-   "prompt": "From 2010 through 2025, which school had more winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)?",
-   "A": [
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
     {
-     "name": "Zane Gonzalez",
-     "yards": 2016,
-     "season": 2016,
-     "label": "Lou Groza Award",
-     "profile": "won the Lou Groza Award (best kicker)"
-    }
-   ],
-   "B": [
-    {
-     "name": "Scooby Wright",
-     "yards": 2014,
-     "season": 2014,
-     "label": "Chuck Bednarik Award",
-     "profile": "LB · won the Chuck Bednarik Award (best defensive player)"
+     "label": "Marion Grice (ASU RB) · 2013 receiving TDs",
+     "value": 6,
+     "school": "ASU"
     },
     {
-     "name": "Scooby Wright",
-     "yards": 2014,
-     "season": 2014,
-     "label": "Bronko Nagurski Trophy",
-     "profile": "LB · won the Bronko Nagurski Trophy (best defensive player)"
+     "label": "Michael Wiley (ARIZ RB) · 2022 rushing TDs",
+     "value": 8,
+     "school": "ARIZ"
     },
     {
-     "name": "Scooby Wright",
-     "yards": 2014,
-     "season": 2014,
-     "label": "Lombardi Award",
-     "profile": "Linebacker · won the Lombardi Award (best lineman or linebacker)"
+     "label": "Tetairoa Mcmillan (ARIZ WR) · career receiving TDs",
+     "value": 26,
+     "school": "ARIZ"
+    },
+    {
+     "label": "Nick Wilson (ARIZ RB) · 2016 rushing TDs",
+     "value": 3,
+     "school": "ARIZ"
     }
    ],
-   "sig": "acall2010",
-   "bonus": "names"
+   "sig": "mxTDMarion Grice2013 receiving TDs,Michael Wiley2022 rushing TDs,Nick Wilson2016 rushing TDs,Tetairoa Mcmillancareer receiving TDs"
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "unit": "TD",
+   "prompt": "Rank these from highest to lowest (touchdowns).",
+   "items": [
+    {
+     "label": "Khalil Tate (ARIZ QB) · 2017 rushing TDs",
+     "value": 12,
+     "school": "ARIZ"
+    },
+    {
+     "label": "Marion Grice (ASU RB) · career total TDs (rushing + receiving)",
+     "value": 39,
+     "school": "ASU"
+    },
+    {
+     "label": "Cameron Skattebo (ASU RB) · career rushing TDs",
+     "value": 30,
+     "school": "ASU"
+    },
+    {
+     "label": "Kalen Ballage (ASU RB) · 2016 rushing TDs",
+     "value": 14,
+     "school": "ASU"
+    }
+   ],
+   "sig": "nxTDCameron Skattebocareer rushing TDs,Kalen Ballage2016 rushing TDs,Khalil Tate2017 rushing TDs,Marion Gricecareer total TDs (rushing + receiving)"
   },
   {
    "type": "h2h",
    "label": "Fresh Mix",
+   "upset": true,
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more receiving yards in a single season?",
+   "flip": false,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
    "A": {
-    "label": "Marion Grice (RB) · 2013 ASU",
-    "value": 438,
-    "school": "ASU"
-   },
-   "B": {
-    "label": "Tetairoa Mcmillan (WR) · 2022 ARIZ",
-    "value": 702,
+    "label": "Tanner McLachlan (ARIZ TE)",
+    "value": 6,
     "school": "ARIZ"
    },
-   "unit": "receiving yards",
-   "sig": "hMarion Grice2013,Tetairoa Mcmillan2022rec",
-   "more": {
-    "title": "Top 6: single-season receiving yards (ARIZ, ASU players in our data)",
-    "rows": [
-     "1. Tetairoa Mcmillan (ARIZ 2023) 1,402",
-     "2. Tetairoa Mcmillan (ARIZ 2024) 1,319",
-     "3. N'Keal Harry (ASU 2017) 1,142",
-     "4. N'Keal Harry (ASU 2018) 1,088",
-     "5. Tetairoa Mcmillan (ARIZ 2022) 702",
-     "6. D.J. Foster (ASU 2014) 688"
-    ]
-   }
+   "B": {
+    "label": "Cameron Skattebo (ASU RB)",
+    "value": 4,
+    "school": "ASU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Tanner McLachlan 6 vs. Cameron Skattebo 4.",
+   "sig": "urecTDCameron SkatteboTanner McLachlan"
   },
   {
    "type": "count",
@@ -174,73 +177,156 @@
    "sig": "fsrec"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
+   "type": "mc",
+   "label": "Game Story",
    "verified": true,
-   "flip": true,
-   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
-   "A": {
-    "label": "Khalil Tate (ARIZ QB)",
-    "value": 6.2,
-    "school": "ARIZ"
+   "pitted": true,
+   "game": {
+    "date": "Nov 25, 2016",
+    "winner": "ARIZ",
+    "loser": "ASU",
+    "ws": 56,
+    "ls": 35,
+    "venue": "Arizona Stadium"
    },
-   "B": {
-    "label": "Jayden Daniels (ASU QB)",
-    "value": 4.4,
-    "school": "ASU"
+   "prompt": "The 2016 Arizona State–Arizona game is the highest-scoring game in the series since 2000, but the teams combined for how many rushing yards?",
+   "options": [
+    "631",
+    "511",
+    "571",
+    "691"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    0,
+    3,
+    1
+   ],
+   "reveal": "631: Arizona State 120, Arizona 511. 90+ rushing yards: Brandon Dawkins (Arizona) 183, Samajie Grant (Arizona) 176, Zach Green (Arizona) 126.",
+   "names": {
+    "prompt": "Bonus: name everyone with 90+ rushing yards in this game.",
+    "a": "ASU",
+    "b": "ARIZ",
+    "A": [],
+    "B": [
+     {
+      "name": "Brandon Dawkins",
+      "yards": 183,
+      "label": "183 yds on 12 carries, 2 TD",
+      "profile": "Arizona · 183 rushing yards on 12 carries, 2 TD in this game"
+     },
+     {
+      "name": "Samajie Grant",
+      "yards": 176,
+      "label": "176 yds on 19 carries, 3 TD",
+      "profile": "Arizona · 176 rushing yards on 19 carries, 3 TD in this game"
+     },
+     {
+      "name": "Zach Green",
+      "yards": 126,
+      "label": "126 yds on 14 carries, 2 TD",
+      "profile": "Arizona · 126 rushing yards on 14 carries, 2 TD in this game"
+     }
+    ]
    },
-   "unit": "",
-   "ypc": true,
-   "note": "🚨 Upset: Khalil Tate 6.2 per carry (366 carries) vs. Jayden Daniels 4.4 per carry (296 carries).",
-   "sig": "uypcJayden DanielsKhalil Tate"
+   "sig": "gs2016-11-25rush"
+  },
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "ASU",
+   "b": "ARIZ",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "info": {
+    "title": "Which awards count?",
+    "text": "Heisman Trophy: most outstanding player · Maxwell Award: best all-around player · Walter Camp Award: player of the year · Doak Walker Award: best running back · Biletnikoff Award: best receiver · Davey O'Brien Award: best quarterback · John Mackey Award: best tight end · Outland Trophy: best interior lineman · Chuck Bednarik Award: best defensive player · Bronko Nagurski Trophy: best defensive player · Butkus Award: best linebacker · Jim Thorpe Award: best defensive back · Lombardi Award: best lineman or linebacker · Lou Groza Award: best kicker · Ray Guy Award: best punter"
+   },
+   "prompt": "From 2010 through 2025, which school had more winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)?",
+   "A": [
+    {
+     "name": "Zane Gonzalez",
+     "yards": 2016,
+     "season": 2016,
+     "label": "Lou Groza Award",
+     "profile": "won the Lou Groza Award (best kicker)"
+    }
+   ],
+   "B": [
+    {
+     "name": "Scooby Wright",
+     "yards": 2014,
+     "season": 2014,
+     "label": "Chuck Bednarik Award",
+     "profile": "LB · won the Chuck Bednarik Award (best defensive player)"
+    },
+    {
+     "name": "Scooby Wright",
+     "yards": 2014,
+     "season": 2014,
+     "label": "Bronko Nagurski Trophy",
+     "profile": "LB · won the Bronko Nagurski Trophy (best defensive player)"
+    },
+    {
+     "name": "Scooby Wright",
+     "yards": 2014,
+     "season": 2014,
+     "label": "Lombardi Award",
+     "profile": "Linebacker · won the Lombardi Award (best lineman or linebacker)"
+    }
+   ],
+   "sig": "acall2010",
+   "bonus": "names"
   },
   {
    "type": "mc",
    "label": "Ranked Wins",
    "verified": true,
    "pitted": true,
-   "prompt": "Since 2015, which school has more wins over AP-ranked opponents, and how many?",
+   "prompt": "Since 2010, which school has more wins over AP-ranked opponents, and how many?",
    "options": [
-    "Arizona State, 16",
-    "Arizona State, 21",
-    "Arizona, 11",
-    "Arizona, 12"
+    "Arizona State, 25",
+    "Arizona State, 29",
+    "Arizona, 18",
+    "Arizona, 22"
    ],
    "answer": 0,
    "order": [
-    3,
     2,
+    1,
     0,
-    1
+    3
    ],
-   "reveal": "Arizona State 16, Arizona 11 (through 2025). Latest: Arizona State: 2024 vs. No. 16 Iowa State 45–19, 2025 vs. No. 24 TCU 27–24, 2025 vs. No. 7 Texas Tech 26–22; Arizona: 2023 vs. No. 12 Oklahoma 38–24, 2024 vs. No. 10 Utah 23–10, 2025 vs. No. 22 Cincinnati 30–24.",
+   "reveal": "Arizona State 25, Arizona 18 (through 2025). Latest: Arizona State: 2024 vs. No. 16 Iowa State 45–19, 2025 vs. No. 24 TCU 27–24, 2025 vs. No. 7 Texas Tech 26–22; Arizona: 2023 vs. No. 12 Oklahoma 38–24, 2024 vs. No. 10 Utah 23–10, 2025 vs. No. 22 Cincinnati 30–24.",
    "info": {
     "title": "What counts as a ranked win?",
     "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
    },
-   "sig": "rw2015"
+   "sig": "rw2010"
   },
   {
-   "type": "duel",
-   "label": "Fresh Mix",
+   "type": "mc",
+   "label": "Series History",
    "verified": true,
-   "year": 2024,
-   "stat": "Receiving season",
-   "aSchool": "ASU",
-   "other": "ARIZ",
-   "aName": "Cameron Skattebo (RB)",
-   "bName": "Tetairoa Mcmillan (WR)",
-   "A": {
-    "big": "605",
-    "sm": "rec yds · 3 TD"
-   },
-   "B": {
-    "big": "1,319",
-    "sm": "rec yds · 8 TD"
-   },
-   "flip": true,
-   "sig": "drec2024Cameron Skattebo,Tetairoa Mcmillan"
+   "pitted": true,
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Arizona State–Arizona series?",
+   "options": [
+    "63 points",
+    "72 points",
+    "56 points",
+    "49 points"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    3,
+    2,
+    1
+   ],
+   "reveal": "63 points: Arizona State 70, Arizona 7 (Dec 11, 2020).",
+   "sig": "mm63"
   },
   {
    "type": "count",
@@ -384,73 +470,6 @@
      "10. Austin Hill (Arizona, 2011–14) 2,280"
     ]
    }
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "Rank these seasons by rushing yards, highest first.",
-   "items": [
-    {
-     "label": "Khalil Tate (QB) · 2019 ARIZ",
-     "value": 413,
-     "school": "ARIZ"
-    },
-    {
-     "label": "Cameron Skattebo (RB) · 2023 ASU",
-     "value": 788,
-     "school": "ASU"
-    },
-    {
-     "label": "D.J. Foster (WR) · 2015 ASU",
-     "value": 280,
-     "school": "ASU"
-    },
-    {
-     "label": "Demario Richard (RB) · 2016 ASU",
-     "value": 593,
-     "school": "ASU"
-    }
-   ],
-   "unit": "yds",
-   "note": "🪤 Trap: Khalil Tate's best year was 2017 (1,411), not 2019; Cameron Skattebo's best year was 2024 (1,715), not 2023; D.J. Foster's best year was 2014 (1,081), not 2015.",
-   "sig": "trrushCameron Skattebo2023,D.J. Foster2015,Demario Richard2016,Khalil Tate2019",
-   "more": {
-    "title": "Top 8: single-season rushing yards (ASU, ARIZ players in our data)",
-    "rows": [
-     "1. Cameron Skattebo (ASU 2024) 1,715",
-     "2. Eno Benjamin (ASU 2018) 1,642",
-     "3. J.J. Taylor (ARIZ 2018) 1,432",
-     "4. Khalil Tate (ARIZ 2017) 1,411",
-     "5. Nick Wilson (ARIZ 2014) 1,375",
-     "6. Demario Richard (ASU 2015) 1,098",
-     "7. Eno Benjamin (ASU 2019) 1,083",
-     "8. D.J. Foster (ASU 2014) 1,081"
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Arizona State–Arizona series?",
-   "options": [
-    "63 points",
-    "72 points",
-    "56 points",
-    "49 points"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    3,
-    2,
-    1
-   ],
-   "reveal": "63 points: Arizona State 70, Arizona 7 (Dec 11, 2020).",
-   "sig": "mm63"
   }
  ]
 }
