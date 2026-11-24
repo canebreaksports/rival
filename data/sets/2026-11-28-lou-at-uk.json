@@ -6,143 +6,34 @@
   "away": "LOU",
   "home": "UK"
  },
- "generatedAt": "2026-11-24T01:44:38.527Z",
- "engine": 51,
+ "generatedAt": "2026-11-24T02:10:31.396Z",
+ "engine": 52,
  "questions": [
   {
-   "type": "count",
-   "label": "Awards",
-   "a": "LOU",
-   "b": "UK",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "info": {
-    "title": "Which awards count?",
-    "text": "Heisman Trophy: most outstanding player · Maxwell Award: best all-around player · Walter Camp Award: player of the year · Doak Walker Award: best running back · Biletnikoff Award: best receiver · Davey O'Brien Award: best quarterback · John Mackey Award: best tight end · Outland Trophy: best interior lineman · Chuck Bednarik Award: best defensive player · Bronko Nagurski Trophy: best defensive player · Butkus Award: best linebacker · Jim Thorpe Award: best defensive back · Lombardi Award: best lineman or linebacker · Lou Groza Award: best kicker · Ray Guy Award: best punter"
-   },
-   "prompt": "From 2000 through 2025, which school had more winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)?",
-   "A": [
-    {
-     "name": "Lamar Jackson",
-     "yards": 2016,
-     "season": 2016,
-     "label": "Heisman Trophy",
-     "profile": "QB · won the Heisman Trophy (most outstanding player)"
-    },
-    {
-     "name": "Lamar Jackson",
-     "yards": 2016,
-     "season": 2016,
-     "label": "Maxwell Award",
-     "profile": "QB · won the Maxwell Award (best all-around player)"
-    },
-    {
-     "name": "Lamar Jackson",
-     "yards": 2016,
-     "season": 2016,
-     "label": "Walter Camp Award",
-     "profile": "QB · won the Walter Camp Award (player of the year)"
-    },
-    {
-     "name": "Elvis Dumervil",
-     "yards": 2005,
-     "season": 2005,
-     "label": "Bronko Nagurski Trophy",
-     "profile": "DE · won the Bronko Nagurski Trophy (best defensive player)"
-    },
-    {
-     "name": "Gerod Holliman",
-     "yards": 2014,
-     "season": 2014,
-     "label": "Jim Thorpe Award",
-     "profile": "S · won the Jim Thorpe Award (best defensive back)"
-    },
-    {
-     "name": "Art Carmody",
-     "yards": 2006,
-     "season": 2006,
-     "label": "Lou Groza Award",
-     "profile": "won the Lou Groza Award (best kicker)"
-    }
-   ],
-   "B": [
-    {
-     "name": "Josh Allen",
-     "yards": 2018,
-     "season": 2018,
-     "label": "Chuck Bednarik Award",
-     "profile": "LB · won the Chuck Bednarik Award (best defensive player)"
-    },
-    {
-     "name": "Josh Allen",
-     "yards": 2018,
-     "season": 2018,
-     "label": "Bronko Nagurski Trophy",
-     "profile": "LB · won the Bronko Nagurski Trophy (best defensive player)"
-    },
-    {
-     "name": "Max Duffy",
-     "yards": 2019,
-     "season": 2019,
-     "label": "Ray Guy Award",
-     "profile": "won the Ray Guy Award (best punter)"
-    }
-   ],
-   "sig": "acall2000",
-   "bonus": "names"
-  },
-  {
    "type": "mc",
-   "label": "Series History",
+   "label": "Ranked Wins",
    "verified": true,
    "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Louisville–Kentucky series?",
+   "prompt": "Since 2020, which school has more wins over AP-ranked opponents, and how many?",
    "options": [
-    "46 points",
-    "58 points",
-    "52 points",
-    "32 points"
+    "Kentucky, 9",
+    "Kentucky, 8",
+    "Louisville, 5",
+    "Louisville, 10"
    ],
    "answer": 0,
    "order": [
     3,
-    2,
-    1,
-    0
-   ],
-   "reveal": "46 points: Kentucky 56, Louisville 10 (Nov 24, 2018).",
-   "sig": "mm46"
-  },
-  {
-   "type": "mc",
-   "label": "Twist",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 25, 2023",
-    "winner": "UK",
-    "loser": "LOU",
-    "ws": 38,
-    "ls": 31,
-    "venue": "L&N Federal Credit Union Stadium"
-   },
-   "prompt": "The 2023 Louisville–Kentucky game went to Kentucky, 38–31, over No. 9 Louisville. Which team gained more total yards, and by how much?",
-   "options": [
-    "Louisville by 114",
-    "Kentucky by 114",
-    "Louisville by 60",
-    "Kentucky by 60"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    1,
     0,
+    1,
     2
    ],
-   "reveal": "🔄 Twist: Louisville out-gained Kentucky 403 to 289 and still lost. (Louisville 161 rushing, 242 passing; Kentucky 83 rushing, 206 passing.)",
-   "sig": "xo2023-11-25"
+   "reveal": "Kentucky 9, Louisville 5 (through 2025). Latest: Kentucky: 2023 vs. No. 22 Florida 33–14, 2023 vs. No. 9 Louisville 38–31, 2024 vs. No. 6 Ole Miss 20–17; Louisville: 2023 vs. No. 20 Duke 23–0, 2024 vs. No. 11 Clemson 33–21, 2025 vs. No. 2 Miami 24–21.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   },
+   "sig": "rw2020"
   },
   {
    "type": "count",
@@ -177,193 +68,6 @@
    ],
    "sig": "tsrush13002019",
    "bonus": "names"
-  },
-  {
-   "type": "mc",
-   "label": "Ranked Wins",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2020, which school has more wins over AP-ranked opponents, and how many?",
-   "options": [
-    "Kentucky, 9",
-    "Kentucky, 8",
-    "Louisville, 5",
-    "Louisville, 10"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    0,
-    1,
-    2
-   ],
-   "reveal": "Kentucky 9, Louisville 5 (through 2025). Latest: Kentucky: 2023 vs. No. 22 Florida 33–14, 2023 vs. No. 9 Louisville 38–31, 2024 vs. No. 6 Ole Miss 20–17; Louisville: 2023 vs. No. 20 Duke 23–0, 2024 vs. No. 11 Clemson 33–21, 2025 vs. No. 2 Miami 24–21.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
-   },
-   "sig": "rw2020"
-  },
-  {
-   "type": "count",
-   "label": "Fill In",
-   "a": "LOU",
-   "b": "UK",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "Louisville and Kentucky's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
-   "A": [
-    {
-     "name": "Lamar Jackson",
-     "yards": 1601,
-     "season": 2017,
-     "label": "2017: 1,601",
-     "profile": "2017 season, 1,601 rushing yards · No. 1 on the combined list"
-    },
-    {
-     "name": "Lamar Jackson",
-     "yards": 1571,
-     "season": 2016,
-     "label": "2016: 1,571",
-     "profile": "2016 season, 1,571 rushing yards · No. 3 on the combined list"
-    },
-    {
-     "name": "Javian Hawkins",
-     "yards": 1525,
-     "season": 2019,
-     "label": "2019: 1,525",
-     "profile": "2019 season, 1,525 rushing yards · No. 4 on the combined list"
-    },
-    {
-     "name": "Howard Stevens",
-     "yards": 1429,
-     "season": 1971,
-     "label": "1971: 1,429",
-     "profile": "1971 season, 1,429 rushing yards · No. 7 on the combined list"
-    },
-    {
-     "name": "Bilal Powell",
-     "yards": 1405,
-     "season": 2010,
-     "label": "2010: 1,405",
-     "profile": "2010 season, 1,405 rushing yards · No. 9 on the combined list"
-    },
-    {
-     "name": "Nathan Poole",
-     "yards": 1394,
-     "season": 1978,
-     "label": "1978: 1,394",
-     "profile": "1978 season, 1,394 rushing yards · No. 10 on the combined list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Moe Williams",
-     "yards": 1600,
-     "season": 1995,
-     "label": "1995: 1,600",
-     "profile": "1995 season, 1,600 rushing yards · No. 2 on the combined list"
-    },
-    {
-     "name": "Lynn Bowden",
-     "yards": 1468,
-     "season": 2019,
-     "label": "2019: 1,468",
-     "profile": "2019 season, 1,468 rushing yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Benny Snell",
-     "yards": 1449,
-     "season": 2018,
-     "label": "2018: 1,449",
-     "profile": "2018 season, 1,449 rushing yards · No. 6 on the combined list"
-    },
-    {
-     "name": "Artose Pinner",
-     "yards": 1414,
-     "season": 2002,
-     "label": "2002: 1,414",
-     "profile": "2002 season, 1,414 rushing yards · No. 8 on the combined list"
-    }
-   ],
-   "sig": "fsrush"
-  },
-  {
-   "type": "mc",
-   "label": "Historic Day",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Sep 15, 2007",
-    "winner": "UK",
-    "loser": "LOU",
-    "ws": 40,
-    "ls": 34,
-    "venue": "Kroger Field"
-   },
-   "prompt": "2007: No. 9 Louisville vs. Kentucky. Harry Douglas caught 13 passes. How many receiving yards did he finish with?",
-   "options": [
-    "223",
-    "183",
-    "143",
-    "103"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    0,
-    1,
-    2
-   ],
-   "reveal": "223 receiving yards and 1 TD, the most by anyone in this rivalry since 2004 (box scores). Louisville still lost, 40–34.",
-   "sig": "xb2007-09-15Harry Douglas"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "trap": true,
-   "verified": true,
-   "prompt": "Rank these seasons by receiving yards, highest first.",
-   "items": [
-    {
-     "label": "Jaylen Smith (WR) · 2018 LOU",
-     "value": 550,
-     "school": "LOU"
-    },
-    {
-     "label": "Garrett Johnson (WR) · 2014 UK",
-     "value": 271,
-     "school": "UK"
-    },
-    {
-     "label": "Dez Fitzpatrick (WR) · 2019 LOU",
-     "value": 635,
-     "school": "LOU"
-    },
-    {
-     "label": "Dane Key (WR) · 2024 UK",
-     "value": 715,
-     "school": "UK"
-    }
-   ],
-   "unit": "yds",
-   "note": "🪤 Trap: Jaylen Smith's best year was 2017 (980), not 2018; Garrett Johnson's best year was 2015 (694), not 2014; Dez Fitzpatrick's best year was 2020 (833), not 2019.",
-   "sig": "trrecDane Key2024,Dez Fitzpatrick2019,Garrett Johnson2014,Jaylen Smith2018",
-   "more": {
-    "title": "Top 8: single-season receiving yards (UK, LOU players in our data)",
-    "rows": [
-     "1. Wan'Dale Robinson (UK 2021) 1,334",
-     "2. Jaylen Smith (LOU 2017) 980",
-     "3. Dez Fitzpatrick (LOU 2020) 833",
-     "4. Dane Key (UK 2024) 715",
-     "5. Dez Fitzpatrick (LOU 2017) 699",
-     "6. Garrett Johnson (UK 2015) 694",
-     "7. Dane Key (UK 2023) 636",
-     "8. Dez Fitzpatrick (LOU 2019) 635"
-    ]
-   }
   },
   {
    "type": "rank",
@@ -464,25 +168,299 @@
    }
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
+   "label": "Louisville–Kentucky",
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
-   "A": {
-    "label": "Marshon Ford (LOU TE)",
-    "value": 18,
-    "school": "LOU"
+   "sig": "kLouisville–Kentucky1",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "2014: No. 24 Louisville led Kentucky 44–40 in the final minute when safety Gerod Holliman intercepted Patrick Towles. That pick tied the NCAA single-season record. Which interception of his season was it?",
+   "options": [
+    "14th",
+    "12th",
+    "13th",
+    "15th"
+   ],
+   "answer": 0,
+   "reveal": "His 14th, with 35 seconds left, returned 65 yards to the Kentucky 2.",
+   "order": [
+    0,
+    1,
+    3,
+    2
+   ]
+  },
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "LOU",
+   "b": "UK",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "info": {
+    "title": "Which awards count?",
+    "text": "Heisman Trophy: most outstanding player · Maxwell Award: best all-around player · Walter Camp Award: player of the year · Doak Walker Award: best running back · Biletnikoff Award: best receiver · Davey O'Brien Award: best quarterback · John Mackey Award: best tight end · Outland Trophy: best interior lineman · Chuck Bednarik Award: best defensive player · Bronko Nagurski Trophy: best defensive player · Butkus Award: best linebacker · Jim Thorpe Award: best defensive back · Lombardi Award: best lineman or linebacker · Lou Groza Award: best kicker · Ray Guy Award: best punter"
    },
-   "B": {
-    "label": "Chris Rodriguez Jr. (UK RB)",
-    "value": 3,
-    "school": "UK"
+   "prompt": "From 2000 through 2025, which school had more winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)?",
+   "A": [
+    {
+     "name": "Lamar Jackson",
+     "yards": 2016,
+     "season": 2016,
+     "label": "Heisman Trophy",
+     "profile": "QB · won the Heisman Trophy (most outstanding player)"
+    },
+    {
+     "name": "Lamar Jackson",
+     "yards": 2016,
+     "season": 2016,
+     "label": "Maxwell Award",
+     "profile": "QB · won the Maxwell Award (best all-around player)"
+    },
+    {
+     "name": "Lamar Jackson",
+     "yards": 2016,
+     "season": 2016,
+     "label": "Walter Camp Award",
+     "profile": "QB · won the Walter Camp Award (player of the year)"
+    },
+    {
+     "name": "Elvis Dumervil",
+     "yards": 2005,
+     "season": 2005,
+     "label": "Bronko Nagurski Trophy",
+     "profile": "DE · won the Bronko Nagurski Trophy (best defensive player)"
+    },
+    {
+     "name": "Gerod Holliman",
+     "yards": 2014,
+     "season": 2014,
+     "label": "Jim Thorpe Award",
+     "profile": "S · won the Jim Thorpe Award (best defensive back)"
+    },
+    {
+     "name": "Art Carmody",
+     "yards": 2006,
+     "season": 2006,
+     "label": "Lou Groza Award",
+     "profile": "won the Lou Groza Award (best kicker)"
+    }
+   ],
+   "B": [
+    {
+     "name": "Josh Allen",
+     "yards": 2018,
+     "season": 2018,
+     "label": "Chuck Bednarik Award",
+     "profile": "LB · won the Chuck Bednarik Award (best defensive player)"
+    },
+    {
+     "name": "Josh Allen",
+     "yards": 2018,
+     "season": 2018,
+     "label": "Bronko Nagurski Trophy",
+     "profile": "LB · won the Bronko Nagurski Trophy (best defensive player)"
+    },
+    {
+     "name": "Max Duffy",
+     "yards": 2019,
+     "season": 2019,
+     "label": "Ray Guy Award",
+     "profile": "won the Ray Guy Award (best punter)"
+    }
+   ],
+   "sig": "acall2000",
+   "bonus": "names"
+  },
+  {
+   "label": "Louisville–Kentucky",
+   "verified": true,
+   "sig": "kLouisville–Kentucky0",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "2016: Kentucky at No. 11 Louisville, and the unranked team won. What was the final score?",
+   "options": [
+    "Kentucky 41, Louisville 38",
+    "Louisville 41, Kentucky 38",
+    "Kentucky 48, Louisville 42",
+    "Kentucky 41, Louisville 34"
+   ],
+   "answer": 0,
+   "reveal": "Kentucky 41, No. 11 Louisville 38 (2016-11-26, L&N Federal Credit Union Stadium).",
+   "order": [
+    0,
+    2,
+    1,
+    3
+   ]
+  },
+  {
+   "type": "mc",
+   "label": "Historic Day",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Sep 15, 2007",
+    "winner": "UK",
+    "loser": "LOU",
+    "ws": 40,
+    "ls": 34,
+    "venue": "Kroger Field"
    },
-   "unit": "",
-   "note": "🚨 Upset: Marshon Ford 18 vs. Chris Rodriguez Jr. 3.",
-   "sig": "urecTDChris Rodriguez Jr.Marshon Ford"
+   "prompt": "2007: No. 9 Louisville vs. Kentucky. Harry Douglas caught 13 passes. How many receiving yards did he finish with?",
+   "options": [
+    "223",
+    "183",
+    "143",
+    "103"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    0,
+    1,
+    2
+   ],
+   "reveal": "223 receiving yards and 1 TD, the most by anyone in this rivalry since 2004 (box scores). Louisville still lost, 40–34.",
+   "sig": "xb2007-09-15Harry Douglas"
+  },
+  {
+   "type": "mc",
+   "label": "Twist",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 25, 2023",
+    "winner": "UK",
+    "loser": "LOU",
+    "ws": 38,
+    "ls": 31,
+    "venue": "L&N Federal Credit Union Stadium"
+   },
+   "prompt": "The 2023 Louisville–Kentucky game went to Kentucky, 38–31, over No. 9 Louisville. Which team gained more total yards, and by how much?",
+   "options": [
+    "Louisville by 114",
+    "Kentucky by 114",
+    "Louisville by 60",
+    "Kentucky by 60"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    1,
+    0,
+    2
+   ],
+   "reveal": "🔄 Twist: Louisville out-gained Kentucky 403 to 289 and still lost. (Louisville 161 rushing, 242 passing; Kentucky 83 rushing, 206 passing.)",
+   "sig": "xo2023-11-25"
+  },
+  {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Louisville–Kentucky series?",
+   "options": [
+    "46 points",
+    "58 points",
+    "52 points",
+    "32 points"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    2,
+    1,
+    0
+   ],
+   "reveal": "46 points: Kentucky 56, Louisville 10 (Nov 24, 2018).",
+   "sig": "mm46"
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "LOU",
+   "b": "UK",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Louisville and Kentucky's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
+   "A": [
+    {
+     "name": "Lamar Jackson",
+     "yards": 1601,
+     "season": 2017,
+     "label": "2017: 1,601",
+     "profile": "2017 season, 1,601 rushing yards · No. 1 on the combined list"
+    },
+    {
+     "name": "Lamar Jackson",
+     "yards": 1571,
+     "season": 2016,
+     "label": "2016: 1,571",
+     "profile": "2016 season, 1,571 rushing yards · No. 3 on the combined list"
+    },
+    {
+     "name": "Javian Hawkins",
+     "yards": 1525,
+     "season": 2019,
+     "label": "2019: 1,525",
+     "profile": "2019 season, 1,525 rushing yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Howard Stevens",
+     "yards": 1429,
+     "season": 1971,
+     "label": "1971: 1,429",
+     "profile": "1971 season, 1,429 rushing yards · No. 7 on the combined list"
+    },
+    {
+     "name": "Bilal Powell",
+     "yards": 1405,
+     "season": 2010,
+     "label": "2010: 1,405",
+     "profile": "2010 season, 1,405 rushing yards · No. 9 on the combined list"
+    },
+    {
+     "name": "Nathan Poole",
+     "yards": 1394,
+     "season": 1978,
+     "label": "1978: 1,394",
+     "profile": "1978 season, 1,394 rushing yards · No. 10 on the combined list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Moe Williams",
+     "yards": 1600,
+     "season": 1995,
+     "label": "1995: 1,600",
+     "profile": "1995 season, 1,600 rushing yards · No. 2 on the combined list"
+    },
+    {
+     "name": "Lynn Bowden",
+     "yards": 1468,
+     "season": 2019,
+     "label": "2019: 1,468",
+     "profile": "2019 season, 1,468 rushing yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Benny Snell",
+     "yards": 1449,
+     "season": 2018,
+     "label": "2018: 1,449",
+     "profile": "2018 season, 1,449 rushing yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Artose Pinner",
+     "yards": 1414,
+     "season": 2002,
+     "label": "2002: 1,414",
+     "profile": "2002 season, 1,414 rushing yards · No. 8 on the combined list"
+    }
+   ],
+   "sig": "fsrush"
   }
  ]
 }

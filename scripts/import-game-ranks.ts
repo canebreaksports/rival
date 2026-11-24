@@ -6,6 +6,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { NEW_SCHOOLS } from "../lib/cfbd-teams";
+// Central-time game day, the same convention as data/rivalry.json (a night kickoff's UTC timestamp rolls past midnight)
+const localDate = (iso: string) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(iso));
 
 const [cache] = process.argv.slice(2);
 if (!cache) { console.error("usage: tsx scripts/import-game-ranks.ts <gamesCacheDir>"); process.exit(1); }
@@ -31,7 +33,7 @@ for (const g of [...games.values()].sort((x, y) => x.startDate.localeCompare(y.s
   const h = KEY[g.homeTeam], a = KEY[g.awayTeam], pk = [h, a].sort().join("|"), P = (out[pk] ??= { from: 2000, games: [] });
   const poll = ap.get(`${g.season}|${g.seasonType === "regular" ? g.week : lastReg.get(g.season)}`);
   if (!poll) { P.from = g.season + 1; P.games = []; continue } // no poll for this game: start the window after it
-  P.games.push({ season: g.season, date: g.startDate.slice(0, 10), ranks: { [h]: poll.get(g.homeTeam) ?? null, [a]: poll.get(g.awayTeam) ?? null } });
+  P.games.push({ season: g.season, date: localDate(g.startDate), ranks: { [h]: poll.get(g.homeTeam) ?? null, [a]: poll.get(g.awayTeam) ?? null } });
 }
 fs.writeFileSync("data/game-ranks.json", JSON.stringify({ source: "CollegeFootballData /rankings (AP Top 25, poll in force for the game's week; bowls use the last regular-season poll) and /games, 2000–2025, fetched 2026-11-23", pairs: out }) + "\n");
 const show = (k: string) => { const p = out[k]; console.log(k, "from", p.from, p.games.filter(x => Object.values(x.ranks).some(r => r !== null && r <= 5)).map(x => `${x.season}:${Object.entries(x.ranks).map(([s, r]) => s + (r ?? "-")).join("/")}`).join(" ")) };

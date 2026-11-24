@@ -6,9 +6,61 @@
   "away": "MICH",
   "home": "OSU"
  },
- "generatedAt": "2026-11-24T01:44:38.849Z",
- "engine": 51,
+ "generatedAt": "2026-11-24T02:10:31.781Z",
+ "engine": 52,
  "questions": [
+  {
+   "type": "mc",
+   "label": "Twist",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 30, 2013",
+    "winner": "OSU",
+    "loser": "MICH",
+    "ws": 42,
+    "ls": 41,
+    "venue": "Michigan Stadium"
+   },
+   "prompt": "The 2013 Michigan–Ohio State game went to No. 3 Ohio State, 42–41, over Michigan. Which team gained more total yards, and by how much?",
+   "options": [
+    "Michigan by 77",
+    "Ohio State by 77",
+    "Michigan by 117",
+    "Ohio State by 117"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    1,
+    3,
+    2
+   ],
+   "reveal": "🔄 Twist: Michigan out-gained Ohio State 603 to 526 and still lost. (Michigan 152 rushing, 451 passing; Ohio State 393 rushing, 133 passing.)",
+   "sig": "xo2013-11-30"
+  },
+  {
+   "label": "Michigan–Ohio State",
+   "verified": true,
+   "sig": "kMichigan–Ohio State1",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "2016: No. 3 Michigan at No. 2 Ohio State, a game that went to overtime. What was the final score?",
+   "options": [
+    "Ohio State 30, Michigan 27",
+    "Michigan 30, Ohio State 27",
+    "Ohio State 37, Michigan 31",
+    "Ohio State 30, Michigan 23"
+   ],
+   "answer": 0,
+   "reveal": "No. 2 Ohio State 30, No. 3 Michigan 27 (OT) (2016-11-26, Ohio Stadium).",
+   "order": [
+    3,
+    2,
+    0,
+    1
+   ]
+  },
   {
    "type": "count",
    "label": "Since 2021",
@@ -104,58 +156,51 @@
    "bonus": "names"
   },
   {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what's the longest winning streak by either school in the Michigan–Ohio State series?",
-   "options": [
-    "8 straight",
-    "10 straight",
-    "9 straight",
-    "5 straight"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    1,
-    2,
-    3
-   ],
-   "reveal": "8 straight: Ohio State won every meeting from 2012 through 2019.",
-   "sig": "msOSU2012"
-  },
-  {
    "type": "rank",
-   "label": "Heisman vs. Rival",
+   "label": "Notables",
    "verified": true,
    "pitted": true,
    "unit": "yds",
-   "prompt": "Rank these Heisman contenders by rushing yards against their rival in their Heisman season, highest first.",
+   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
    "items": [
     {
-     "label": "Ezekiel Elliott (2015 Heisman 8th place) vs. Michigan",
-     "value": 214,
-     "school": "OSU"
-    },
-    {
-     "label": "Blake Corum (2023 Heisman 9th place) vs. Ohio State",
-     "value": 88,
+     "label": "Ronnie Bell (Michigan, 2018–22)",
+     "value": 2269,
      "school": "MICH"
     },
     {
-     "label": "Braxton Miller (2013 Heisman 9th place) vs. Michigan",
-     "value": 153,
+     "label": "Roy Roundtree (Michigan, 2009–12)",
+     "value": 2304,
+     "school": "MICH"
+    },
+    {
+     "label": "Chris Olave (Ohio State, 2018–21)",
+     "value": 2711,
      "school": "OSU"
     },
     {
-     "label": "Denard Robinson (2010 Heisman 6th place) vs. Ohio State",
-     "value": 105,
-     "school": "MICH"
+     "label": "Michael Jenkins (Ohio State, 2001–03)",
+     "value": 2898,
+     "school": "OSU"
     }
    ],
-   "note": "Ezekiel Elliott: 214 rushing yards on 30 carries, 2 TD (2015-11-28) · Blake Corum: 88 rushing yards on 22 carries, 2 TD (2023-11-25) · Braxton Miller: 153 rushing yards on 16 carries, 3 TD (2013-11-30) · Denard Robinson: 105 rushing yards on 18 carries, 0 TD (2010-11-27)",
-   "sig": "hvrushBlake Corum2023,Braxton Miller2013,Denard Robinson2010,Ezekiel Elliott2015"
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Michigan Wolverines football statistical leaders\" career receiving yards table (revision 1352691178), which cites the school record book; fetched 2026-11-23; Wikipedia \"Ohio State Buckeyes football statistical leaders\" career receiving yards table (revision 1387105526), which cites the school record book; fetched 2026-11-23",
+   "sig": "nrreceivingChris Olave,Michael Jenkins,Ronnie Bell,Roy Roundtree",
+   "more": {
+    "title": "Career receiving yards, Michigan and Ohio State (careers ending 2000 or later)",
+    "rows": [
+     "1. Braylon Edwards (Michigan, 2001–04) 3,541",
+     "2. Michael Jenkins (Ohio State, 2001–03) 2,898",
+     "3. Emeka Egbuka (Ohio State, 2021–24) 2,868",
+     "4. Chris Olave (Ohio State, 2018–21) 2,711",
+     "5. Jeremy Gallon (Michigan, 2010–13) 2,704",
+     "6. Marvin Harrison Jr. (Ohio State, 2021–23) 2,613",
+     "7. Devin Smith (Ohio State, 2011–14) 2,503",
+     "8. K. J. Hill (Ohio State, 2016–19) 2,332",
+     "9. David Terrell (Michigan, 1998–00) 2,317",
+     "10. Mario Manningham (Michigan, 2005–07) 2,310"
+    ]
+   }
   },
   {
    "type": "count",
@@ -189,6 +234,151 @@
    ],
    "sig": "acnagurski2000",
    "bonus": "names"
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "MICH",
+   "b": "OSU",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Michigan and Ohio State's combined top 10 single-season receiving yards (through 2025): which school has more seasons on the list?",
+   "A": [
+    {
+     "name": "Jeremy Gallon",
+     "yards": 1373,
+     "season": 2013,
+     "label": "2013: 1,373",
+     "profile": "2013 season, 1,373 receiving yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Braylon Edwards",
+     "yards": 1330,
+     "season": 2004,
+     "label": "2004: 1,330",
+     "profile": "2004 season, 1,330 receiving yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Mario Manningham",
+     "yards": 1174,
+     "season": 2007,
+     "label": "2007: 1,174",
+     "profile": "2007 season, 1,174 receiving yards · No. 10 on the combined list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Jaxon Smith-Njigba",
+     "yards": 1606,
+     "season": 2021,
+     "label": "2021: 1,606",
+     "profile": "2021 season, 1,606 receiving yards · No. 1 on the combined list"
+    },
+    {
+     "name": "David Boston",
+     "yards": 1435,
+     "season": 1998,
+     "label": "1998: 1,435",
+     "profile": "1998 season, 1,435 receiving yards · No. 2 on the combined list"
+    },
+    {
+     "name": "Terry Glenn",
+     "yards": 1411,
+     "season": 1995,
+     "label": "1995: 1,411",
+     "profile": "1995 season, 1,411 receiving yards · No. 3 on the combined list"
+    },
+    {
+     "name": "Jeremiah Smith",
+     "yards": 1315,
+     "season": 2024,
+     "label": "2024: 1,315",
+     "profile": "2024 season, 1,315 receiving yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Marvin Harrison Jr.",
+     "yards": 1263,
+     "season": 2022,
+     "label": "2022: 1,263",
+     "profile": "2022 season, 1,263 receiving yards · No. 7 on the combined list"
+    },
+    {
+     "name": "Jeremiah Smith",
+     "yards": 1243,
+     "season": 2025,
+     "label": "2025: 1,243",
+     "profile": "2025 season, 1,243 receiving yards · No. 8 on the combined list"
+    },
+    {
+     "name": "Marvin Harrison Jr.",
+     "yards": 1211,
+     "season": 2023,
+     "label": "2023: 1,211",
+     "profile": "2023 season, 1,211 receiving yards · No. 9 on the combined list"
+    }
+   ],
+   "sig": "fsrec"
+  },
+  {
+   "label": "Michigan–Ohio State",
+   "verified": true,
+   "sig": "kMichigan–Ohio State0",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "Of the 25 Michigan–Ohio State games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+   "options": [
+    "4",
+    "2",
+    "3",
+    "5"
+   ],
+   "answer": 0,
+   "reveal": "4: 2006 No. 1 Ohio State 42, No. 2 Michigan 39 · 2013 No. 3 Ohio State 42, Michigan 41 · 2016 No. 2 Ohio State 30, No. 3 Michigan 27 (OT) · 2024 Michigan 13, No. 2 Ohio State 10.",
+   "order": [
+    1,
+    3,
+    2,
+    0
+   ],
+   "years": {
+    "prompt": "Name the 4 seasons.",
+    "a": "MICH",
+    "b": "OSU",
+    "A": [
+     {
+      "name": "Michigan 13, No. 2 Ohio State 10",
+      "yards": 0,
+      "season": 2024,
+      "label": "Michigan 13, No. 2 Ohio State 10",
+      "profile": "Michigan 13, No. 2 Ohio State 10"
+     }
+    ],
+    "B": [
+     {
+      "name": "No. 1 Ohio State 42, No. 2 Michigan 39",
+      "yards": 0,
+      "season": 2006,
+      "label": "No. 1 Ohio State 42, No. 2 Michigan 39",
+      "profile": "No. 1 Ohio State 42, No. 2 Michigan 39"
+     },
+     {
+      "name": "No. 3 Ohio State 42, Michigan 41",
+      "yards": 0,
+      "season": 2013,
+      "label": "No. 3 Ohio State 42, Michigan 41",
+      "profile": "No. 3 Ohio State 42, Michigan 41"
+     },
+     {
+      "name": "No. 2 Ohio State 30, No. 3 Michigan 27 (OT)",
+      "yards": 0,
+      "season": 2016,
+      "label": "No. 2 Ohio State 30, No. 3 Michigan 27 (OT)",
+      "profile": "No. 2 Ohio State 30, No. 3 Michigan 27 (OT)"
+     }
+    ]
+   }
   },
   {
    "type": "mc",
@@ -248,302 +438,24 @@
    "sig": "gs2018-11-24rush"
   },
   {
-   "type": "count",
-   "label": "Fill In",
-   "a": "MICH",
-   "b": "OSU",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "Michigan and Ohio State's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
-   "A": [
-    {
-     "name": "Tim Biakabutuka",
-     "yards": 1818,
-     "season": 1995,
-     "label": "1995: 1,818",
-     "profile": "1995 season, 1,818 rushing yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Anthony Thomas",
-     "yards": 1733,
-     "season": 2000,
-     "label": "2000: 1,733",
-     "profile": "2000 season, 1,733 rushing yards · No. 7 on the combined list"
-    },
-    {
-     "name": "Jamie Morris",
-     "yards": 1703,
-     "season": 1987,
-     "label": "1987: 1,703",
-     "profile": "1987 season, 1,703 rushing yards · No. 8 on the combined list"
-    },
-    {
-     "name": "Denard Robinson",
-     "yards": 1702,
-     "season": 2010,
-     "label": "2010: 1,702",
-     "profile": "2010 season, 1,702 rushing yards · No. 9 on the combined list"
-    }
-   ],
-   "B": [
-    {
-     "name": "J. K. Dobbins",
-     "yards": 2003,
-     "season": 2019,
-     "label": "2019: 2,003",
-     "profile": "2019 season, 2,003 rushing yards · No. 1 on the combined list"
-    },
-    {
-     "name": "Eddie George",
-     "yards": 1927,
-     "season": 1995,
-     "label": "1995: 1,927",
-     "profile": "1995 season, 1,927 rushing yards · No. 2 on the combined list"
-    },
-    {
-     "name": "Ezekiel Elliott",
-     "yards": 1878,
-     "season": 2014,
-     "label": "2014: 1,878",
-     "profile": "2014 season, 1,878 rushing yards · No. 3 on the combined list"
-    },
-    {
-     "name": "Ezekiel Elliott",
-     "yards": 1821,
-     "season": 2015,
-     "label": "2015: 1,821",
-     "profile": "2015 season, 1,821 rushing yards · No. 4 on the combined list"
-    },
-    {
-     "name": "Keith Byars",
-     "yards": 1764,
-     "season": 1984,
-     "label": "1984: 1,764",
-     "profile": "1984 season, 1,764 rushing yards · No. 6 on the combined list"
-    },
-    {
-     "name": "Archie Griffin",
-     "yards": 1695,
-     "season": 1974,
-     "label": "1974: 1,695",
-     "profile": "1974 season, 1,695 rushing yards · No. 10 on the combined list"
-    }
-   ],
-   "sig": "fsrush"
-  },
-  {
-   "type": "rank",
-   "label": "Notables",
-   "verified": true,
-   "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
-   "items": [
-    {
-     "label": "Butch Woolfolk (Michigan)",
-     "value": 3850,
-     "school": "MICH"
-    },
-    {
-     "label": "Ezekiel Elliott (Ohio State)",
-     "value": 3961,
-     "school": "OSU"
-    },
-    {
-     "label": "Archie Griffin (Ohio State)",
-     "value": 5589,
-     "school": "OSU"
-    },
-    {
-     "label": "Tyrone Wheatley (Michigan)",
-     "value": 4178,
-     "school": "MICH"
-    }
-   ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"Michigan Wolverines football statistical leaders\" career rushing yards table (revision 1352691178), which cites the school record book; fetched 2026-11-17; Wikipedia \"Ohio State Buckeyes football statistical leaders\" career rushing yards table (revision 1387105526), which cites the school record book; fetched 2026-11-17",
-   "sig": "nrrushingArchie Griffin,Butch Woolfolk,Ezekiel Elliott,Tyrone Wheatley",
-   "names": {
-    "prompt": "Bonus: name the other 6 players in Michigan and Ohio State's combined top 10 for career rushing yards.",
-    "a": "MICH",
-    "b": "OSU",
-    "A": [
-     {
-      "name": "Mike Hart",
-      "yards": 5040,
-      "label": "5,040",
-      "profile": "5,040 career rushing yards · No. 2 on the combined list"
-     },
-     {
-      "name": "Denard Robinson",
-      "yards": 4495,
-      "label": "4,495",
-      "profile": "4,495 career rushing yards · No. 3 on the combined list"
-     },
-     {
-      "name": "Anthony Thomas",
-      "yards": 4472,
-      "label": "4,472",
-      "profile": "4,472 career rushing yards · No. 4 on the combined list"
-     },
-     {
-      "name": "Jamie Morris",
-      "yards": 4392,
-      "label": "4,392",
-      "profile": "4,392 career rushing yards · No. 6 on the combined list"
-     }
-    ],
-    "B": [
-     {
-      "name": "J. K. Dobbins",
-      "yards": 4459,
-      "label": "4,459",
-      "profile": "4,459 career rushing yards · No. 5 on the combined list"
-     },
-     {
-      "name": "Eddie George",
-      "yards": 3768,
-      "label": "3,768",
-      "profile": "3,768 career rushing yards · No. 10 on the combined list"
-     }
-    ]
-   },
-   "more": {
-    "title": "Career rushing yards, Michigan and Ohio State (school top 10s)",
-    "rows": [
-     "1. Archie Griffin (Ohio State) 5,589",
-     "2. Mike Hart (Michigan) 5,040",
-     "3. Denard Robinson (Michigan) 4,495",
-     "4. Anthony Thomas (Michigan) 4,472",
-     "5. J. K. Dobbins (Ohio State) 4,459",
-     "6. Jamie Morris (Michigan) 4,392",
-     "7. Tyrone Wheatley (Michigan) 4,178",
-     "8. Ezekiel Elliott (Ohio State) 3,961",
-     "9. Butch Woolfolk (Michigan) 3,850",
-     "10. Eddie George (Ohio State) 3,768"
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "label": "Twist",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 30, 2013",
-    "winner": "OSU",
-    "loser": "MICH",
-    "ws": 42,
-    "ls": 41,
-    "venue": "Michigan Stadium"
-   },
-   "prompt": "The 2013 Michigan–Ohio State game went to No. 3 Ohio State, 42–41, over Michigan. Which team gained more total yards, and by how much?",
-   "options": [
-    "Michigan by 77",
-    "Ohio State by 77",
-    "Michigan by 117",
-    "Ohio State by 117"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    1,
-    3,
-    2
-   ],
-   "reveal": "🔄 Twist: Michigan out-gained Ohio State 603 to 526 and still lost. (Michigan 152 rushing, 451 passing; Ohio State 393 rushing, 133 passing.)",
-   "sig": "xo2013-11-30"
-  },
-  {
-   "type": "mc",
-   "label": "Rankings",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Of the 25 Michigan–Ohio State games from 2000 through 2025, how many had both teams in the AP top 5?",
-   "options": [
-    "5",
-    "7",
-    "4",
-    "6"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    0,
-    3,
-    2
-   ],
-   "reveal": "5: 2003 (No. 5 Michigan 35, No. 4 Ohio State 21) · 2006 (No. 1 Ohio State 42, No. 2 Michigan 39) · 2016 (No. 2 Ohio State 30, No. 3 Michigan 27) · 2022 (No. 3 Michigan 45, No. 2 Ohio State 23) · 2023 (No. 3 Michigan 30, No. 2 Ohio State 24).",
-   "info": {
-    "title": "Which poll?",
-    "text": "The AP Top 25 in force the week of each game; bowl and championship games use the last regular-season poll. Tied teams share a rank."
-   },
-   "years": {
-    "prompt": "Name the 5 seasons.",
-    "a": "MICH",
-    "b": "OSU",
-    "A": [
-     {
-      "name": "No. 5 Michigan 35, No. 4 Ohio State 21",
-      "yards": 0,
-      "season": 2003,
-      "label": "No. 5 Michigan 35, No. 4 Ohio State 21",
-      "profile": "No. 5 Michigan 35, No. 4 Ohio State 21"
-     },
-     {
-      "name": "No. 3 Michigan 45, No. 2 Ohio State 23",
-      "yards": 0,
-      "season": 2022,
-      "label": "No. 3 Michigan 45, No. 2 Ohio State 23",
-      "profile": "No. 3 Michigan 45, No. 2 Ohio State 23"
-     },
-     {
-      "name": "No. 3 Michigan 30, No. 2 Ohio State 24",
-      "yards": 0,
-      "season": 2023,
-      "label": "No. 3 Michigan 30, No. 2 Ohio State 24",
-      "profile": "No. 3 Michigan 30, No. 2 Ohio State 24"
-     }
-    ],
-    "B": [
-     {
-      "name": "No. 1 Ohio State 42, No. 2 Michigan 39",
-      "yards": 0,
-      "season": 2006,
-      "label": "No. 1 Ohio State 42, No. 2 Michigan 39",
-      "profile": "No. 1 Ohio State 42, No. 2 Michigan 39"
-     },
-     {
-      "name": "No. 2 Ohio State 30, No. 3 Michigan 27",
-      "yards": 0,
-      "season": 2016,
-      "label": "No. 2 Ohio State 30, No. 3 Michigan 27",
-      "profile": "No. 2 Ohio State 30, No. 3 Michigan 27"
-     }
-    ]
-   },
-   "sig": "rkt5"
-  },
-  {
    "type": "mc",
    "label": "Historic Day",
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 17, 2007",
+    "date": "Nov 28, 2015",
     "winner": "OSU",
     "loser": "MICH",
-    "ws": 14,
-    "ls": 3,
+    "ws": 42,
+    "ls": 13,
     "venue": "Michigan Stadium"
    },
-   "prompt": "2007: No. 7 Ohio State vs. No. 23 Michigan. Chris Wells carried 39 times. How many rushing yards did he finish with?",
+   "prompt": "2015: No. 8 Ohio State vs. No. 12 Michigan. Ezekiel Elliott carried 30 times. How many rushing yards did he finish with?",
    "options": [
-    "222",
-    "182",
-    "142",
-    "102"
+    "214",
+    "174",
+    "134",
+    "94"
    ],
    "answer": 0,
    "order": [
@@ -552,8 +464,30 @@
     2,
     3
    ],
-   "reveal": "222 rushing yards and 2 TD, the most by anyone in this rivalry since 2005 (box scores). Ohio State won, 14–3.",
-   "sig": "xb2007-11-17Chris Wells"
+   "reveal": "214 rushing yards and 2 TD, No. 3 by anyone in this rivalry since 2005 (box scores). Ohio State won, 42–13.",
+   "sig": "xb2015-11-28Ezekiel Elliott"
+  },
+  {
+   "label": "Michigan–Ohio State",
+   "verified": true,
+   "sig": "kMichigan–Ohio State2",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "2007: No. 7 Ohio State held No. 23 Michigan to 91 total yards in a 14–3 win. Ohio State had four sacks. How many were Vernon Gholston's?",
+   "options": [
+    "3",
+    "4",
+    "2",
+    "1"
+   ],
+   "answer": 0,
+   "reveal": "3 of Ohio State's 4 sacks. Chris Wells added 222 rushing yards, and Michigan finished with 15 rushing yards.",
+   "order": [
+    2,
+    1,
+    0,
+    3
+   ]
   }
  ]
 }

@@ -6,8 +6,8 @@
   "away": "SC",
   "home": "CLEM"
  },
- "generatedAt": "2026-11-24T01:44:39.393Z",
- "engine": 51,
+ "generatedAt": "2026-11-24T02:10:32.403Z",
+ "engine": 52,
  "questions": [
   {
    "type": "mc",
@@ -60,62 +60,6 @@
    "sig": "gs2007-11-24rush"
   },
   {
-   "type": "mc",
-   "label": "Ranked Wins",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2020, which school has more wins over AP-ranked opponents, and how many?",
-   "options": [
-    "Clemson, 11",
-    "Clemson, 14",
-    "South Carolina, 8",
-    "South Carolina, 9"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    2,
-    0
-   ],
-   "reveal": "Clemson 11, South Carolina 8 (through 2025). Latest: Clemson: 2023 vs. No. 22 North Carolina 31–20, 2024 vs. No. 8 SMU 34–31, 2025 vs. No. 19 Louisville 20–19; South Carolina: 2024 vs. No. 24 Vanderbilt 28–7, 2024 vs. No. 24 Missouri 34–30, 2024 vs. No. 12 Clemson 17–14.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
-   },
-   "sig": "rw2020"
-  },
-  {
-   "type": "mc",
-   "label": "Twist",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 30, 2019",
-    "winner": "CLEM",
-    "loser": "SC",
-    "ws": 38,
-    "ls": 3,
-    "venue": "Williams-Brice Stadium"
-   },
-   "prompt": "Travis Etienne finished 9th in Heisman voting in 2019. How many rushing yards did he have when No. 3 Clemson beat South Carolina that year?",
-   "options": [
-    "51",
-    "86",
-    "121",
-    "156"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    0,
-    3,
-    2
-   ],
-   "reveal": "🔄 Twist: just 51 on 15 carries, against a season of 1,614 (about 124 a game). Clemson won 38–3 anyway.",
-   "sig": "xqTravis Etienne2019"
-  },
-  {
    "type": "count",
    "label": "Since 2012",
    "a": "SC",
@@ -149,63 +93,26 @@
    "bonus": "names"
   },
   {
-   "type": "count",
-   "label": "NFL Draft",
-   "a": "SC",
-   "b": "CLEM",
-   "threshold": 0,
+   "label": "South Carolina–Clemson",
    "verified": true,
-   "pitted": true,
-   "prompt": "From the 2015 draft through 2026, which school had more wide receivers and tight ends taken in the first round?",
-   "A": [
-    {
-     "name": "Hayden Hurst",
-     "yards": 25,
-     "season": 2018,
-     "label": "No. 25 pick",
-     "profile": "Tight End · 2018 draft, round 1"
-    },
-    {
-     "name": "Xavier Legette",
-     "yards": 32,
-     "season": 2024,
-     "label": "No. 32 pick",
-     "profile": "Wide Receiver · 2024 draft, round 1"
-    }
-   ],
-   "B": [
-    {
-     "name": "Mike Williams",
-     "yards": 7,
-     "season": 2017,
-     "label": "No. 7 pick",
-     "profile": "Wide Receiver · 2017 draft, round 1"
-    }
-   ],
-   "sig": "dcr12015wr",
-   "bonus": "names"
-  },
-  {
+   "sig": "kSouth Carolina–Clemson1",
    "type": "mc",
-   "label": "Series History",
-   "verified": true,
    "pitted": true,
-   "prompt": "From 2000 through 2025, what's the longest winning streak by either school in the South Carolina–Clemson series?",
+   "prompt": "2022: South Carolina at No. 7 Clemson, and the unranked team won. What was the final score?",
    "options": [
-    "7 straight",
-    "5 straight",
-    "9 straight",
-    "4 straight"
+    "South Carolina 31, Clemson 30",
+    "Clemson 31, South Carolina 30",
+    "South Carolina 38, Clemson 34",
+    "South Carolina 31, Clemson 26"
    ],
    "answer": 0,
+   "reveal": "South Carolina 31, No. 7 Clemson 30 (2022-11-26, Memorial Stadium (Clemson, SC)).",
    "order": [
     3,
     0,
-    1,
-    2
-   ],
-   "reveal": "7 straight: Clemson won every meeting from 2014 through 2021.",
-   "sig": "msCLEM2014"
+    2,
+    1
+   ]
   },
   {
    "type": "count",
@@ -294,25 +201,189 @@
    "sig": "fsrec"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
+   "type": "mc",
+   "label": "Twist",
    "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receptions (at the school shown)?",
-   "A": {
-    "label": "Will Shipley (CLEM RB)",
-    "value": 85,
-    "school": "CLEM"
+   "pitted": true,
+   "game": {
+    "date": "Nov 30, 2019",
+    "winner": "CLEM",
+    "loser": "SC",
+    "ws": 38,
+    "ls": 3,
+    "venue": "Williams-Brice Stadium"
    },
-   "B": {
-    "label": "Mike Davis (SC RB)",
-    "value": 70,
-    "school": "SC"
+   "prompt": "Travis Etienne finished 9th in Heisman voting in 2019. How many rushing yards did he have when No. 3 Clemson beat South Carolina that year?",
+   "options": [
+    "51",
+    "86",
+    "121",
+    "156"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    0,
+    3,
+    2
+   ],
+   "reveal": "🔄 Twist: just 51 on 15 carries, against a season of 1,614 (about 124 a game). Clemson won 38–3 anyway.",
+   "sig": "xqTravis Etienne2019"
+  },
+  {
+   "type": "mc",
+   "label": "Historic Day",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 29, 2014",
+    "winner": "CLEM",
+    "loser": "SC",
+    "ws": 35,
+    "ls": 17,
+    "venue": "Memorial Stadium (Clemson, SC)"
    },
-   "unit": "",
-   "note": "🚨 Upset: Will Shipley 85 vs. Mike Davis 70.",
-   "sig": "urecNMike DavisWill Shipley"
+   "prompt": "2014: No. 23 Clemson vs. South Carolina. Artavis Scott caught 7 passes. How many receiving yards did he finish with?",
+   "options": [
+    "185",
+    "145",
+    "105",
+    "65"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    2,
+    3,
+    1
+   ],
+   "reveal": "185 receiving yards and 2 TD, No. 2 by anyone in this rivalry since 2004 (box scores). Clemson won, 35–17.",
+   "sig": "xb2014-11-29Artavis Scott"
+  },
+  {
+   "label": "South Carolina–Clemson",
+   "verified": true,
+   "sig": "kSouth Carolina–Clemson0",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "Of the 25 South Carolina–Clemson games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+   "options": [
+    "5",
+    "3",
+    "4",
+    "6"
+   ],
+   "answer": 0,
+   "reveal": "5: 2000 No. 16 Clemson 16, No. 25 South Carolina 14 · 2006 South Carolina 31, No. 24 Clemson 28 · 2007 No. 21 Clemson 23, South Carolina 21 · 2022 South Carolina 31, No. 7 Clemson 30 · 2024 No. 16 South Carolina 17, No. 12 Clemson 14.",
+   "order": [
+    1,
+    2,
+    3,
+    0
+   ],
+   "years": {
+    "prompt": "Name the 5 seasons.",
+    "a": "SC",
+    "b": "CLEM",
+    "A": [
+     {
+      "name": "South Carolina 31, No. 24 Clemson 28",
+      "yards": 0,
+      "season": 2006,
+      "label": "South Carolina 31, No. 24 Clemson 28",
+      "profile": "South Carolina 31, No. 24 Clemson 28"
+     },
+     {
+      "name": "South Carolina 31, No. 7 Clemson 30",
+      "yards": 0,
+      "season": 2022,
+      "label": "South Carolina 31, No. 7 Clemson 30",
+      "profile": "South Carolina 31, No. 7 Clemson 30"
+     },
+     {
+      "name": "No. 16 South Carolina 17, No. 12 Clemson 14",
+      "yards": 0,
+      "season": 2024,
+      "label": "No. 16 South Carolina 17, No. 12 Clemson 14",
+      "profile": "No. 16 South Carolina 17, No. 12 Clemson 14"
+     }
+    ],
+    "B": [
+     {
+      "name": "No. 16 Clemson 16, No. 25 South Carolina 14",
+      "yards": 0,
+      "season": 2000,
+      "label": "No. 16 Clemson 16, No. 25 South Carolina 14",
+      "profile": "No. 16 Clemson 16, No. 25 South Carolina 14"
+     },
+     {
+      "name": "No. 21 Clemson 23, South Carolina 21",
+      "yards": 0,
+      "season": 2007,
+      "label": "No. 21 Clemson 23, South Carolina 21",
+      "profile": "No. 21 Clemson 23, South Carolina 21"
+     }
+    ]
+   }
+  },
+  {
+   "label": "South Carolina–Clemson",
+   "verified": true,
+   "sig": "kSouth Carolina–Clemson2",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "2012: No. 13 South Carolina won at No. 12 Clemson, 27–17, with backup quarterback Dylan Thompson. How many sacks did Jadeveon Clowney have?",
+   "options": [
+    "4.5",
+    "3",
+    "2.5",
+    "1.5"
+   ],
+   "answer": 0,
+   "reveal": "4.5 sacks, a South Carolina single-game record: 1.5 in the first half and 3 in the second. It also set the school's single-season record (13).",
+   "order": [
+    2,
+    1,
+    0,
+    3
+   ]
+  },
+  {
+   "type": "count",
+   "label": "NFL Draft",
+   "a": "SC",
+   "b": "CLEM",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From the 2015 draft through 2026, which school had more wide receivers and tight ends taken in the first round?",
+   "A": [
+    {
+     "name": "Hayden Hurst",
+     "yards": 25,
+     "season": 2018,
+     "label": "No. 25 pick",
+     "profile": "Tight End · 2018 draft, round 1"
+    },
+    {
+     "name": "Xavier Legette",
+     "yards": 32,
+     "season": 2024,
+     "label": "No. 32 pick",
+     "profile": "Wide Receiver · 2024 draft, round 1"
+    }
+   ],
+   "B": [
+    {
+     "name": "Mike Williams",
+     "yards": 7,
+     "season": 2017,
+     "label": "No. 7 pick",
+     "profile": "Wide Receiver · 2017 draft, round 1"
+    }
+   ],
+   "sig": "dcr12015wr",
+   "bonus": "names"
   },
   {
    "type": "rank",
@@ -411,36 +482,6 @@
      "10. Steve Wadiak (South Carolina) 2,878"
     ]
    }
-  },
-  {
-   "type": "mc",
-   "label": "Historic Day",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 29, 2014",
-    "winner": "CLEM",
-    "loser": "SC",
-    "ws": 35,
-    "ls": 17,
-    "venue": "Memorial Stadium (Clemson, SC)"
-   },
-   "prompt": "2014: No. 23 Clemson vs. South Carolina. Artavis Scott caught 7 passes. How many receiving yards did he finish with?",
-   "options": [
-    "185",
-    "145",
-    "105",
-    "65"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    2,
-    3,
-    1
-   ],
-   "reveal": "185 receiving yards and 2 TD, No. 2 by anyone in this rivalry since 2004 (box scores). Clemson won, 35–17.",
-   "sig": "xb2014-11-29Artavis Scott"
   }
  ]
 }

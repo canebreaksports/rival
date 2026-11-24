@@ -6,49 +6,160 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-24T01:44:38.681Z",
- "engine": 51,
+ "generatedAt": "2026-11-24T02:10:31.596Z",
+ "engine": 52,
  "questions": [
   {
-   "type": "count",
-   "label": "SEC Record Book",
-   "a": "LSU",
-   "b": "ARK",
-   "threshold": 0,
+   "type": "mc",
+   "label": "Series History",
    "verified": true,
    "pitted": true,
-   "bonus": "names",
-   "prompt": "Which school has more seasons in the SEC's all-time top 10 for single-season rushing yards?",
-   "A": [
-    {
-     "name": "Leonard Fournette",
-     "yards": 1953,
-     "season": 2015,
-     "label": "2015: 1,953",
-     "profile": "2015 season, 1,953 rushing yards · No. 2 in SEC history"
-    },
-    {
-     "name": "Charles Alexander",
-     "yards": 1686,
-     "season": 1977,
-     "label": "1977: 1,686",
-     "profile": "1977 season, 1,686 rushing yards · No. 9 in SEC history"
-    }
+   "prompt": "In which year was the highest-scoring LSU–Arkansas game from 2000 through 2025?",
+   "options": [
+    "2007",
+    "2020",
+    "2016",
+    "2021"
    ],
-   "B": [
-    {
-     "name": "Darren McFadden",
-     "yards": 1830,
-     "season": 2007,
-     "label": "2007: 1,830",
-     "profile": "2007 season, 1,830 rushing yards · No. 4 in SEC history"
-    }
+   "answer": 0,
+   "order": [
+    3,
+    1,
+    0,
+    2
    ],
-   "sig": "strush",
-   "info": {
-    "title": "How the SEC list works",
-    "text": "Seasons played as an SEC member, through 2025, from every member school's record book. The full top 10: 1. Derrick Henry (ALA 2015) 2,219 · 2. Leonard Fournette (LSU 2015) 1,953 · 3. Herschel Walker (UGA 1981) 1,891 · 4. Darren McFadden (ARK 2007) 1,830 · 5. Tre Mason (AUB 2013) 1,816 · 6. Bo Jackson (AUB 1985) 1,786 · 7. Trayveon Williams (TAMU 2018) 1,760 · 8. Herschel Walker (UGA 1982) 1,752 · 9. Charles Alexander (LSU 1977) 1,686 · 10. Trent Richardson (ALA 2011) 1,679"
+   "reveal": "2007: Arkansas 50, LSU 48 (98 points, Nov 23, 2007). Next highest: 2001, LSU 41–38 (79).",
+   "sig": "mh2007"
+  },
+  {
+   "label": "LSU–Arkansas",
+   "verified": true,
+   "sig": "kLSU–Arkansas0",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "Of the 26 LSU–Arkansas games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+   "options": [
+    "11",
+    "9",
+    "10",
+    "12"
+   ],
+   "answer": 0,
+   "reveal": "11: 2001 LSU 41, No. 24 Arkansas 38 · 2002 Arkansas 21, No. 18 LSU 20 · 2005 No. 3 LSU 19, Arkansas 17 · 2007 Arkansas 50, No. 1 LSU 48 (OT) · 2008 Arkansas 31, LSU 30 · 2009 No. 17 LSU 33, Arkansas 30 (OT) · 2020 LSU 27, Arkansas 24 · 2021 Arkansas 16, LSU 13 (OT) · 2022 No. 7 LSU 13, Arkansas 10 · 2023 No. 12 LSU 34, Arkansas 31 · 2025 LSU 23, Arkansas 22.",
+   "order": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "years": {
+    "prompt": "Name the 11 seasons.",
+    "a": "LSU",
+    "b": "ARK",
+    "A": [
+     {
+      "name": "LSU 41, No. 24 Arkansas 38",
+      "yards": 0,
+      "season": 2001,
+      "label": "LSU 41, No. 24 Arkansas 38",
+      "profile": "LSU 41, No. 24 Arkansas 38"
+     },
+     {
+      "name": "No. 3 LSU 19, Arkansas 17",
+      "yards": 0,
+      "season": 2005,
+      "label": "No. 3 LSU 19, Arkansas 17",
+      "profile": "No. 3 LSU 19, Arkansas 17"
+     },
+     {
+      "name": "No. 17 LSU 33, Arkansas 30 (OT)",
+      "yards": 0,
+      "season": 2009,
+      "label": "No. 17 LSU 33, Arkansas 30 (OT)",
+      "profile": "No. 17 LSU 33, Arkansas 30 (OT)"
+     },
+     {
+      "name": "LSU 27, Arkansas 24",
+      "yards": 0,
+      "season": 2020,
+      "label": "LSU 27, Arkansas 24",
+      "profile": "LSU 27, Arkansas 24"
+     },
+     {
+      "name": "No. 7 LSU 13, Arkansas 10",
+      "yards": 0,
+      "season": 2022,
+      "label": "No. 7 LSU 13, Arkansas 10",
+      "profile": "No. 7 LSU 13, Arkansas 10"
+     },
+     {
+      "name": "No. 12 LSU 34, Arkansas 31",
+      "yards": 0,
+      "season": 2023,
+      "label": "No. 12 LSU 34, Arkansas 31",
+      "profile": "No. 12 LSU 34, Arkansas 31"
+     },
+     {
+      "name": "LSU 23, Arkansas 22",
+      "yards": 0,
+      "season": 2025,
+      "label": "LSU 23, Arkansas 22",
+      "profile": "LSU 23, Arkansas 22"
+     }
+    ],
+    "B": [
+     {
+      "name": "Arkansas 21, No. 18 LSU 20",
+      "yards": 0,
+      "season": 2002,
+      "label": "Arkansas 21, No. 18 LSU 20",
+      "profile": "Arkansas 21, No. 18 LSU 20"
+     },
+     {
+      "name": "Arkansas 50, No. 1 LSU 48 (OT)",
+      "yards": 0,
+      "season": 2007,
+      "label": "Arkansas 50, No. 1 LSU 48 (OT)",
+      "profile": "Arkansas 50, No. 1 LSU 48 (OT)"
+     },
+     {
+      "name": "Arkansas 31, LSU 30",
+      "yards": 0,
+      "season": 2008,
+      "label": "Arkansas 31, LSU 30",
+      "profile": "Arkansas 31, LSU 30"
+     },
+     {
+      "name": "Arkansas 16, LSU 13 (OT)",
+      "yards": 0,
+      "season": 2021,
+      "label": "Arkansas 16, LSU 13 (OT)",
+      "profile": "Arkansas 16, LSU 13 (OT)"
+     }
+    ]
    }
+  },
+  {
+   "label": "LSU–Arkansas",
+   "verified": true,
+   "sig": "kLSU–Arkansas1",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "2007: Arkansas at No. 1 LSU, a game that went to overtime. What was the final score?",
+   "options": [
+    "Arkansas 50, LSU 48",
+    "LSU 50, Arkansas 48",
+    "Arkansas 57, LSU 52",
+    "Arkansas 50, LSU 44"
+   ],
+   "answer": 0,
+   "reveal": "Arkansas 50, No. 1 LSU 48 (OT) (2007-11-23, Tiger Stadium (LA)).",
+   "order": [
+    2,
+    3,
+    1,
+    0
+   ]
   },
   {
    "type": "count",
@@ -122,108 +233,23 @@
   },
   {
    "type": "mc",
-   "label": "Game Story",
+   "label": "Historic Day",
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 23, 2007",
-    "winner": "ARK",
-    "loser": "LSU",
-    "ws": 50,
-    "ls": 48,
-    "venue": "Tiger Stadium (LA)"
-   },
-   "prompt": "The 2007 LSU–Arkansas game went to overtime, but the teams combined for how many rushing yards?",
-   "options": [
-    "589",
-    "529",
-    "649",
-    "469"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    0,
-    1,
-    3
-   ],
-   "reveal": "589: LSU 204, Arkansas 385. 75+ rushing yards: Darren McFadden (Arkansas) 206, Peyton Hillis (Arkansas) 89, Felix Jones (Arkansas) 85, Jacob Hester (LSU) 126.",
-   "names": {
-    "prompt": "Bonus: name everyone with 75+ rushing yards in this game.",
-    "a": "LSU",
-    "b": "ARK",
-    "A": [
-     {
-      "name": "Jacob Hester",
-      "yards": 126,
-      "label": "126 yds on 28 carries, 2 TD",
-      "profile": "LSU · 126 rushing yards on 28 carries, 2 TD in this game"
-     }
-    ],
-    "B": [
-     {
-      "name": "Darren McFadden",
-      "yards": 206,
-      "label": "206 yds on 32 carries, 3 TD",
-      "profile": "Arkansas · 206 rushing yards on 32 carries, 3 TD in this game"
-     },
-     {
-      "name": "Peyton Hillis",
-      "yards": 89,
-      "label": "89 yds on 11 carries, 2 TD",
-      "profile": "Arkansas · 89 rushing yards on 11 carries, 2 TD in this game"
-     },
-     {
-      "name": "Felix Jones",
-      "yards": 85,
-      "label": "85 yds on 9 carries, 0 TD",
-      "profile": "Arkansas · 85 rushing yards on 9 carries, 0 TD in this game"
-     }
-    ]
-   },
-   "sig": "gs2007-11-23rush"
-  },
-  {
-   "type": "mc",
-   "label": "Twist",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 23, 2012",
+    "date": "Nov 12, 2016",
     "winner": "LSU",
     "loser": "ARK",
-    "ws": 20,
-    "ls": 13,
+    "ws": 38,
+    "ls": 10,
     "venue": "Razorback Stadium"
    },
-   "prompt": "The 2012 LSU–Arkansas game went to No. 8 LSU, 20–13, over Arkansas. Which team gained more total yards, and by how much?",
+   "prompt": "2016: No. 19 LSU vs. Arkansas. Derrius Guice carried 21 times. How many rushing yards did he finish with?",
    "options": [
-    "Arkansas by 156",
-    "LSU by 156",
-    "Arkansas by 80",
-    "LSU by 80"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    0,
-    3,
-    2
-   ],
-   "reveal": "🔄 Twist: Arkansas out-gained LSU 462 to 306 and still lost. (Arkansas 103 rushing, 359 passing; LSU 89 rushing, 217 passing.)",
-   "sig": "xo2012-11-23"
-  },
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "In which year was the highest-scoring LSU–Arkansas game from 2000 through 2025?",
-   "options": [
-    "2007",
-    "2020",
-    "2016",
-    "2021"
+    "252",
+    "212",
+    "172",
+    "132"
    ],
    "answer": 0,
    "order": [
@@ -232,34 +258,8 @@
     0,
     2
    ],
-   "reveal": "2007: Arkansas 50, LSU 48 (98 points, Nov 23, 2007). Next highest: 2001, LSU 41–38 (79).",
-   "sig": "mh2007"
-  },
-  {
-   "type": "mc",
-   "label": "Ranked Wins",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2015, which school has more wins over AP-ranked opponents, and how many?",
-   "options": [
-    "LSU, 28",
-    "LSU, 33",
-    "Arkansas, 11",
-    "Arkansas, 24"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    0,
-    2,
-    3
-   ],
-   "reveal": "LSU 28, Arkansas 11 (through 2025). Latest: LSU: 2023 vs. No. 21 Missouri 49–39, 2024 vs. No. 9 Ole Miss 29–26, 2025 vs. No. 4 Clemson 17–10; Arkansas: 2022 vs. No. 23 Cincinnati 31–24, 2022 vs. No. 14 Ole Miss 42–27, 2024 vs. No. 4 Tennessee 19–14.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
-   },
-   "sig": "rw2015"
+   "reveal": "252 rushing yards and 2 TD, the most by anyone in this rivalry since 2005 (box scores). LSU won, 38–10.",
+   "sig": "xb2016-11-12Derrius Guice"
   },
   {
    "type": "rank",
@@ -361,60 +361,137 @@
   },
   {
    "type": "mc",
-   "label": "Historic Day",
+   "label": "Twist",
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 12, 2016",
+    "date": "Nov 23, 2012",
     "winner": "LSU",
     "loser": "ARK",
-    "ws": 38,
-    "ls": 10,
+    "ws": 20,
+    "ls": 13,
     "venue": "Razorback Stadium"
    },
-   "prompt": "2016: LSU vs. Arkansas. Derrius Guice carried 21 times. How many rushing yards did he finish with?",
+   "prompt": "The 2012 LSU–Arkansas game went to No. 8 LSU, 20–13, over Arkansas. Which team gained more total yards, and by how much?",
    "options": [
-    "252",
-    "212",
-    "172",
-    "132"
+    "Arkansas by 156",
+    "LSU by 156",
+    "Arkansas by 80",
+    "LSU by 80"
    ],
    "answer": 0,
    "order": [
-    3,
     1,
     0,
+    3,
     2
    ],
-   "reveal": "252 rushing yards and 2 TD, the most by anyone in this rivalry since 2005 (box scores). LSU won, 38–10.",
-   "sig": "xb2016-11-12Derrius Guice"
+   "reveal": "🔄 Twist: Arkansas out-gained LSU 462 to 306 and still lost. (Arkansas 103 rushing, 359 passing; LSU 89 rushing, 217 passing.)",
+   "sig": "xo2012-11-23"
   },
   {
-   "type": "rank",
-   "label": "Heisman vs. Rival",
+   "type": "mc",
+   "label": "Game Story",
    "verified": true,
    "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these Heisman contenders by rushing yards against their rival in their Heisman season, highest first.",
-   "items": [
+   "game": {
+    "date": "Nov 23, 2007",
+    "winner": "ARK",
+    "loser": "LSU",
+    "ws": 50,
+    "ls": 48,
+    "venue": "Tiger Stadium (LA)"
+   },
+   "prompt": "The 2007 LSU–Arkansas game went to overtime, but the teams combined for how many rushing yards?",
+   "options": [
+    "589",
+    "529",
+    "649",
+    "469"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    0,
+    1,
+    3
+   ],
+   "reveal": "589: LSU 204, Arkansas 385. 75+ rushing yards: Darren McFadden (Arkansas) 206, Peyton Hillis (Arkansas) 89, Felix Jones (Arkansas) 85, Jacob Hester (LSU) 126.",
+   "names": {
+    "prompt": "Bonus: name everyone with 75+ rushing yards in this game.",
+    "a": "LSU",
+    "b": "ARK",
+    "A": [
+     {
+      "name": "Jacob Hester",
+      "yards": 126,
+      "label": "126 yds on 28 carries, 2 TD",
+      "profile": "LSU · 126 rushing yards on 28 carries, 2 TD in this game"
+     }
+    ],
+    "B": [
+     {
+      "name": "Darren McFadden",
+      "yards": 206,
+      "label": "206 yds on 32 carries, 3 TD",
+      "profile": "Arkansas · 206 rushing yards on 32 carries, 3 TD in this game"
+     },
+     {
+      "name": "Peyton Hillis",
+      "yards": 89,
+      "label": "89 yds on 11 carries, 2 TD",
+      "profile": "Arkansas · 89 rushing yards on 11 carries, 2 TD in this game"
+     },
+     {
+      "name": "Felix Jones",
+      "yards": 85,
+      "label": "85 yds on 9 carries, 0 TD",
+      "profile": "Arkansas · 85 rushing yards on 9 carries, 0 TD in this game"
+     }
+    ]
+   },
+   "sig": "gs2007-11-23rush"
+  },
+  {
+   "type": "count",
+   "label": "SEC Record Book",
+   "a": "LSU",
+   "b": "ARK",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Which school has more seasons in the SEC's all-time top 10 for single-season rushing yards?",
+   "A": [
     {
-     "label": "Darren McFadden (2007 Heisman 2nd place) vs. LSU",
-     "value": 206,
-     "school": "ARK"
+     "name": "Leonard Fournette",
+     "yards": 1953,
+     "season": 2015,
+     "label": "2015: 1,953",
+     "profile": "2015 season, 1,953 rushing yards · No. 2 in SEC history"
     },
     {
-     "label": "Jayden Daniels (2023 Heisman winner) vs. Arkansas",
-     "value": 36,
-     "school": "LSU"
-    },
-    {
-     "label": "Leonard Fournette (2015 Heisman 6th place) vs. Arkansas",
-     "value": 91,
-     "school": "LSU"
+     "name": "Charles Alexander",
+     "yards": 1686,
+     "season": 1977,
+     "label": "1977: 1,686",
+     "profile": "1977 season, 1,686 rushing yards · No. 9 in SEC history"
     }
    ],
-   "note": "Darren McFadden: 206 rushing yards on 32 carries, 3 TD (2007-11-23) · Jayden Daniels: 36 rushing yards on 10 carries, 0 TD (2023-09-23) · Leonard Fournette: 91 rushing yards on 19 carries, 1 TD (2015-11-14)",
-   "sig": "hvrushDarren McFadden2007,Jayden Daniels2023,Leonard Fournette2015"
+   "B": [
+    {
+     "name": "Darren McFadden",
+     "yards": 1830,
+     "season": 2007,
+     "label": "2007: 1,830",
+     "profile": "2007 season, 1,830 rushing yards · No. 4 in SEC history"
+    }
+   ],
+   "sig": "strush",
+   "info": {
+    "title": "How the SEC list works",
+    "text": "Seasons played as an SEC member, through 2025, from every member school's record book. The full top 10: 1. Derrick Henry (ALA 2015) 2,219 · 2. Leonard Fournette (LSU 2015) 1,953 · 3. Herschel Walker (UGA 1981) 1,891 · 4. Darren McFadden (ARK 2007) 1,830 · 5. Tre Mason (AUB 2013) 1,816 · 6. Bo Jackson (AUB 1985) 1,786 · 7. Trayveon Williams (TAMU 2018) 1,760 · 8. Herschel Walker (UGA 1982) 1,752 · 9. Charles Alexander (LSU 1977) 1,686 · 10. Trent Richardson (ALA 2011) 1,679"
+   }
   }
  ],
  "rev": 1

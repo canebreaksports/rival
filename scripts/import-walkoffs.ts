@@ -11,6 +11,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { NEW_SCHOOLS } from "../lib/cfbd-teams";
+// Central-time game day, the same convention as data/rivalry.json (a night kickoff's UTC timestamp rolls past midnight)
+const localDate = (iso: string) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(iso));
 
 const [cache] = process.argv.slice(2);
 if (!cache) { console.error("usage: tsx scripts/import-walkoffs.ts <gamesCacheDir>"); process.exit(1); }
@@ -41,7 +43,7 @@ for (const g of [...games.values()].sort((x, y) => x.startDate.localeCompare(y.s
   if (!h || !a || g.homePoints == null || g.homePoints === g.awayPoints) continue;
   const pk = [h, a].sort().join("|"), P = (pairs[pk] ??= { from: 2001, games: 0, list: [], problems: [] });
   const winH = g.homePoints > g.awayPoints, W = winH ? h : a, Lk = winH ? a : h;
-  const base = { season: g.season, date: g.startDate.slice(0, 10), winner: W, loser: Lk, ws: Math.max(g.homePoints, g.awayPoints), ls: Math.min(g.homePoints, g.awayPoints) };
+  const base = { season: g.season, date: localDate(g.startDate), winner: W, loser: Lk, ws: Math.max(g.homePoints, g.awayPoints), ls: Math.min(g.homePoints, g.awayPoints) };
   const fail = (why: string) => { P.problems.push(`${g.season} ${a}@${h}: ${why}`); P.from = g.season + 1; P.list = P.list.filter(x => x.season > g.season); P.games = 0 };
   P.games++;
   const hl = g.homeLineScores, al = g.awayLineScores;

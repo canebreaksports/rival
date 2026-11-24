@@ -5,6 +5,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { NEW_SCHOOLS } from "../lib/cfbd-teams";
+// Central-time game day, the same convention as data/rivalry.json (a night kickoff's UTC timestamp rolls past midnight)
+const localDate = (iso: string) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(iso));
 
 const [cache] = process.argv.slice(2);
 if (!cache) { console.error("usage: tsx scripts/import-ranked-wins.ts <gamesCacheDir>"); process.exit(1); }
@@ -29,7 +31,7 @@ for (const [team, k] of Object.entries(KEY)) {
   const wins = mine.filter(g => g.season >= from).flatMap(g => {
     const home = g.homeTeam === team, us = home ? g.homePoints! : g.awayPoints!, them = home ? g.awayPoints! : g.homePoints!, opp = home ? g.awayTeam : g.homeTeam;
     const rank = ap.get(`${g.season}|${g.seasonType === "regular" ? g.week : lastReg.get(g.season)}`)?.get(opp);
-    return us > them && rank ? [{ season: g.season, date: g.startDate.slice(0, 10), opp, rank, score: `${us}–${them}` }] : [];
+    return us > them && rank ? [{ season: g.season, date: localDate(g.startDate), opp, rank, score: `${us}–${them}` }] : [];
   }).sort((x, y) => x.date.localeCompare(y.date));
   out[k] = { from, wins };
 }

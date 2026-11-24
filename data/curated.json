@@ -926,6 +926,21 @@
      },
      "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
+    },
+    {
+     "type": "mc",
+     "prompt": "2011: Texas at Texas A&M, decided by a field goal as time expired. What was the final score?",
+     "options": [
+      "Texas 27, Texas A&M 25",
+      "Texas A&M 27, Texas 25",
+      "Texas 34, Texas A&M 29",
+      "Texas 27, Texas A&M 21"
+     ],
+     "answer": 0,
+     "reveal": "Texas 27, Texas A&M 25 (2011-11-24, Kyle Field).",
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
     }
    ]
   },
@@ -1132,6 +1147,909 @@
      },
      "source": "Prototype draft from memory, spot-checked only. Re-verify against a box score or Winsipedia (spec §8.7)",
      "verified": false
+    },
+    {
+     "type": "mc",
+     "prompt": "Of the 26 Mississippi State–Ole Miss games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+     "options": [
+      "6",
+      "4",
+      "5",
+      "7"
+     ],
+     "answer": 0,
+     "reveal": "6: 2006 Ole Miss 20, Mississippi State 17 · 2007 Mississippi State 17, Ole Miss 14 · 2013 Mississippi State 17, Ole Miss 10 (OT) · 2017 Ole Miss 31, No. 16 Mississippi State 28 · 2019 Mississippi State 21, Ole Miss 20 · 2022 Mississippi State 24, No. 20 Ole Miss 22.",
+     "years": {
+      "prompt": "Name the 6 seasons.",
+      "a": "MSST",
+      "b": "MISS",
+      "A": [
+       {
+        "name": "Mississippi State 17, Ole Miss 14",
+        "yards": 0,
+        "season": 2007,
+        "label": "Mississippi State 17, Ole Miss 14",
+        "profile": "Mississippi State 17, Ole Miss 14"
+       },
+       {
+        "name": "Mississippi State 17, Ole Miss 10 (OT)",
+        "yards": 0,
+        "season": 2013,
+        "label": "Mississippi State 17, Ole Miss 10 (OT)",
+        "profile": "Mississippi State 17, Ole Miss 10 (OT)"
+       },
+       {
+        "name": "Mississippi State 21, Ole Miss 20",
+        "yards": 0,
+        "season": 2019,
+        "label": "Mississippi State 21, Ole Miss 20",
+        "profile": "Mississippi State 21, Ole Miss 20"
+       },
+       {
+        "name": "Mississippi State 24, No. 20 Ole Miss 22",
+        "yards": 0,
+        "season": 2022,
+        "label": "Mississippi State 24, No. 20 Ole Miss 22",
+        "profile": "Mississippi State 24, No. 20 Ole Miss 22"
+       }
+      ],
+      "B": [
+       {
+        "name": "Ole Miss 20, Mississippi State 17",
+        "yards": 0,
+        "season": 2006,
+        "label": "Ole Miss 20, Mississippi State 17",
+        "profile": "Ole Miss 20, Mississippi State 17"
+       },
+       {
+        "name": "Ole Miss 31, No. 16 Mississippi State 28",
+        "yards": 0,
+        "season": 2017,
+        "label": "Ole Miss 31, No. 16 Mississippi State 28",
+        "profile": "Ole Miss 31, No. 16 Mississippi State 28"
+       }
+      ]
+     },
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "2022: Mississippi State at No. 20 Ole Miss, and the unranked team won. What was the final score?",
+     "options": [
+      "Mississippi State 24, Ole Miss 22",
+      "Ole Miss 24, Mississippi State 22",
+      "Mississippi State 31, Ole Miss 26",
+      "Mississippi State 24, Ole Miss 18"
+     ],
+     "answer": 0,
+     "reveal": "Mississippi State 24, No. 20 Ole Miss 22 (2022-11-24, Vaught-Hemingway Stadium).",
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "The 2013 Egg Bowl went to overtime: Mississippi State scored first, 17–10. How did Ole Miss's last chance end?",
+     "options": [
+      "Bo Wallace fumbled; Mississippi State recovered in the end zone",
+      "An interception in the end zone",
+      "A missed field goal",
+      "A turnover on downs at the 1"
+     ],
+     "answer": 0,
+     "reveal": "Bo Wallace fumbled and Jamerson Love recovered in the end zone. Wallace had also thrown three first-half interceptions.",
+     "source": "ESPN game recap (AP), event 333320344: \"the drive ended when quarterback Bo Wallace fumbled and Mississippi State's Jamerson Love recovered the ball in the end zone\". Score and totals match data/rivalry.json; AP ranks from data/game-ranks.json",
+     "verified": true,
+     "marquee": true
+    }
+   ]
+  },
+  {
+   "a": "FLA",
+   "b": "FSU",
+   "name": "Florida–Florida State",
+   "items": [
+    {
+     "type": "mc",
+     "prompt": "2021: Florida State at Florida. What was the final score?",
+     "options": [
+      "Florida 24, Florida State 21",
+      "Florida State 24, Florida 21",
+      "Florida 31, Florida State 25",
+      "Florida 24, Florida State 17"
+     ],
+     "answer": 0,
+     "reveal": "Florida 24, Florida State 21 (2021-11-27, Ben Hill Griffin Stadium).",
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "2014: No. 1 Florida State beat Florida 24–19 to extend its winning streak to 28 games. How many interceptions did Jameis Winston, the reigning Heisman winner, throw?",
+     "options": [
+      "4",
+      "0",
+      "1",
+      "2"
+     ],
+     "answer": 0,
+     "reveal": "🔄 Twist: a career-high 4, three of them in the first quarter. Florida State won anyway.",
+     "source": "ESPN game recap (AP), event 400547771: \"Winston threw a career-high four interceptions, including three in the first quarter\". Score and totals match data/rivalry.json; AP ranks from data/game-ranks.json",
+     "verified": true,
+     "marquee": true
+    }
+   ]
+  },
+  {
+   "a": "ASU",
+   "b": "ARIZ",
+   "name": "Arizona State–Arizona",
+   "items": [
+    {
+     "type": "mc",
+     "prompt": "Of the 26 Arizona State–Arizona games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+     "options": [
+      "6",
+      "4",
+      "5",
+      "7"
+     ],
+     "answer": 0,
+     "reveal": "6: 2005 Arizona State 23, Arizona 20 · 2007 No. 13 Arizona State 20, Arizona 17 · 2009 Arizona 20, Arizona State 17 · 2010 Arizona State 30, Arizona 29 (OT) · 2018 Arizona State 41, Arizona 40 · 2022 Arizona 38, Arizona State 35.",
+     "years": {
+      "prompt": "Name the 6 seasons.",
+      "a": "ASU",
+      "b": "ARIZ",
+      "A": [
+       {
+        "name": "Arizona State 23, Arizona 20",
+        "yards": 0,
+        "season": 2005,
+        "label": "Arizona State 23, Arizona 20",
+        "profile": "Arizona State 23, Arizona 20"
+       },
+       {
+        "name": "No. 13 Arizona State 20, Arizona 17",
+        "yards": 0,
+        "season": 2007,
+        "label": "No. 13 Arizona State 20, Arizona 17",
+        "profile": "No. 13 Arizona State 20, Arizona 17"
+       },
+       {
+        "name": "Arizona State 30, Arizona 29 (OT)",
+        "yards": 0,
+        "season": 2010,
+        "label": "Arizona State 30, Arizona 29 (OT)",
+        "profile": "Arizona State 30, Arizona 29 (OT)"
+       },
+       {
+        "name": "Arizona State 41, Arizona 40",
+        "yards": 0,
+        "season": 2018,
+        "label": "Arizona State 41, Arizona 40",
+        "profile": "Arizona State 41, Arizona 40"
+       }
+      ],
+      "B": [
+       {
+        "name": "Arizona 20, Arizona State 17",
+        "yards": 0,
+        "season": 2009,
+        "label": "Arizona 20, Arizona State 17",
+        "profile": "Arizona 20, Arizona State 17"
+       },
+       {
+        "name": "Arizona 38, Arizona State 35",
+        "yards": 0,
+        "season": 2022,
+        "label": "Arizona 38, Arizona State 35",
+        "profile": "Arizona 38, Arizona State 35"
+       }
+      ]
+     },
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "2010: Arizona State at Arizona, a game that went to overtime. What was the final score?",
+     "options": [
+      "Arizona State 30, Arizona 29",
+      "Arizona 30, Arizona State 29",
+      "Arizona State 37, Arizona 33",
+      "Arizona State 30, Arizona 25"
+     ],
+     "answer": 0,
+     "reveal": "Arizona State 30, Arizona 29 (OT) (2010-12-02, Arizona Stadium).",
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "2012: Arizona led Arizona State 27–17 after three quarters. Arizona State won 41–34. How many points did the Sun Devils score in the fourth quarter?",
+     "options": [
+      "24",
+      "14",
+      "17",
+      "21"
+     ],
+     "answer": 0,
+     "reveal": "24, turning two turnovers and a blocked punt into three touchdowns. Arizona still out-gained them, 522 to 460.",
+     "source": "ESPN game recap (AP), event 323280012: \"Arizona State scores 24 in fourth quarter to rally vs. Arizona\". Score and totals match data/rivalry.json; AP ranks from data/game-ranks.json",
+     "verified": true,
+     "marquee": true
+    }
+   ]
+  },
+  {
+   "a": "GT",
+   "b": "UGA",
+   "name": "Georgia Tech–Georgia",
+   "items": [
+    {
+     "type": "mc",
+     "prompt": "Of the 25 Georgia Tech–Georgia games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+     "options": [
+      "6",
+      "4",
+      "5",
+      "7"
+     ],
+     "answer": 0,
+     "reveal": "6: 2006 Georgia 15, No. 16 Georgia Tech 12 · 2008 No. 18 Georgia Tech 45, No. 13 Georgia 42 · 2013 Georgia 41, Georgia Tech 34 (OT) · 2014 No. 16 Georgia Tech 30, No. 8 Georgia 24 (OT) · 2016 Georgia Tech 28, Georgia 27 · 2024 No. 6 Georgia 44, Georgia Tech 42 (OT).",
+     "years": {
+      "prompt": "Name the 6 seasons.",
+      "a": "GT",
+      "b": "UGA",
+      "A": [
+       {
+        "name": "No. 18 Georgia Tech 45, No. 13 Georgia 42",
+        "yards": 0,
+        "season": 2008,
+        "label": "No. 18 Georgia Tech 45, No. 13 Georgia 42",
+        "profile": "No. 18 Georgia Tech 45, No. 13 Georgia 42"
+       },
+       {
+        "name": "No. 16 Georgia Tech 30, No. 8 Georgia 24 (OT)",
+        "yards": 0,
+        "season": 2014,
+        "label": "No. 16 Georgia Tech 30, No. 8 Georgia 24 (OT)",
+        "profile": "No. 16 Georgia Tech 30, No. 8 Georgia 24 (OT)"
+       },
+       {
+        "name": "Georgia Tech 28, Georgia 27",
+        "yards": 0,
+        "season": 2016,
+        "label": "Georgia Tech 28, Georgia 27",
+        "profile": "Georgia Tech 28, Georgia 27"
+       }
+      ],
+      "B": [
+       {
+        "name": "Georgia 15, No. 16 Georgia Tech 12",
+        "yards": 0,
+        "season": 2006,
+        "label": "Georgia 15, No. 16 Georgia Tech 12",
+        "profile": "Georgia 15, No. 16 Georgia Tech 12"
+       },
+       {
+        "name": "Georgia 41, Georgia Tech 34 (OT)",
+        "yards": 0,
+        "season": 2013,
+        "label": "Georgia 41, Georgia Tech 34 (OT)",
+        "profile": "Georgia 41, Georgia Tech 34 (OT)"
+       },
+       {
+        "name": "No. 6 Georgia 44, Georgia Tech 42 (OT)",
+        "yards": 0,
+        "season": 2024,
+        "label": "No. 6 Georgia 44, Georgia Tech 42 (OT)",
+        "profile": "No. 6 Georgia 44, Georgia Tech 42 (OT)"
+       }
+      ]
+     },
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "2014: No. 16 Georgia Tech at No. 8 Georgia, a game that went to overtime. What was the final score?",
+     "options": [
+      "Georgia Tech 30, Georgia 24",
+      "Georgia 30, Georgia Tech 24",
+      "Georgia Tech 37, Georgia 28",
+      "Georgia Tech 30, Georgia 20"
+     ],
+     "answer": 0,
+     "reveal": "No. 16 Georgia Tech 30, No. 8 Georgia 24 (OT) (2014-11-29, Sanford Stadium).",
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "2012: No. 3 Georgia beat Georgia Tech 42–10. Safety Bacarri Rambo's interception that day tied Jake Scott's school record for career interceptions. Which career interception was it?",
+     "options": [
+      "16th",
+      "14th",
+      "15th",
+      "17th"
+     ],
+     "answer": 0,
+     "reveal": "His 16th. He also stripped the ball at the Georgia 1 to stop Georgia Tech's first possession.",
+     "source": "ESPN game recap (AP), event 323290061: \"grabbing his 16th career interception to tie Jake Scott's school record\". Score and totals match data/rivalry.json; AP ranks from data/game-ranks.json",
+     "verified": true,
+     "marquee": true
+    }
+   ]
+  },
+  {
+   "a": "LOU",
+   "b": "UK",
+   "name": "Louisville–Kentucky",
+   "items": [
+    {
+     "type": "mc",
+     "prompt": "2016: Kentucky at No. 11 Louisville, and the unranked team won. What was the final score?",
+     "options": [
+      "Kentucky 41, Louisville 38",
+      "Louisville 41, Kentucky 38",
+      "Kentucky 48, Louisville 42",
+      "Kentucky 41, Louisville 34"
+     ],
+     "answer": 0,
+     "reveal": "Kentucky 41, No. 11 Louisville 38 (2016-11-26, L&N Federal Credit Union Stadium).",
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "2014: No. 24 Louisville led Kentucky 44–40 in the final minute when safety Gerod Holliman intercepted Patrick Towles. That pick tied the NCAA single-season record. Which interception of his season was it?",
+     "options": [
+      "14th",
+      "12th",
+      "13th",
+      "15th"
+     ],
+     "answer": 0,
+     "reveal": "His 14th, with 35 seconds left, returned 65 yards to the Kentucky 2.",
+     "source": "ESPN game recap (AP), event 400547785: \"Gerod Holliman sealed it with an NCAA record-tying 14th interception with 35 seconds left\". Score and totals match data/rivalry.json; AP ranks from data/game-ranks.json",
+     "verified": true,
+     "marquee": true
+    }
+   ]
+  },
+  {
+   "a": "LSU",
+   "b": "ARK",
+   "name": "LSU–Arkansas",
+   "items": [
+    {
+     "type": "mc",
+     "prompt": "Of the 26 LSU–Arkansas games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+     "options": [
+      "11",
+      "9",
+      "10",
+      "12"
+     ],
+     "answer": 0,
+     "reveal": "11: 2001 LSU 41, No. 24 Arkansas 38 · 2002 Arkansas 21, No. 18 LSU 20 · 2005 No. 3 LSU 19, Arkansas 17 · 2007 Arkansas 50, No. 1 LSU 48 (OT) · 2008 Arkansas 31, LSU 30 · 2009 No. 17 LSU 33, Arkansas 30 (OT) · 2020 LSU 27, Arkansas 24 · 2021 Arkansas 16, LSU 13 (OT) · 2022 No. 7 LSU 13, Arkansas 10 · 2023 No. 12 LSU 34, Arkansas 31 · 2025 LSU 23, Arkansas 22.",
+     "years": {
+      "prompt": "Name the 11 seasons.",
+      "a": "LSU",
+      "b": "ARK",
+      "A": [
+       {
+        "name": "LSU 41, No. 24 Arkansas 38",
+        "yards": 0,
+        "season": 2001,
+        "label": "LSU 41, No. 24 Arkansas 38",
+        "profile": "LSU 41, No. 24 Arkansas 38"
+       },
+       {
+        "name": "No. 3 LSU 19, Arkansas 17",
+        "yards": 0,
+        "season": 2005,
+        "label": "No. 3 LSU 19, Arkansas 17",
+        "profile": "No. 3 LSU 19, Arkansas 17"
+       },
+       {
+        "name": "No. 17 LSU 33, Arkansas 30 (OT)",
+        "yards": 0,
+        "season": 2009,
+        "label": "No. 17 LSU 33, Arkansas 30 (OT)",
+        "profile": "No. 17 LSU 33, Arkansas 30 (OT)"
+       },
+       {
+        "name": "LSU 27, Arkansas 24",
+        "yards": 0,
+        "season": 2020,
+        "label": "LSU 27, Arkansas 24",
+        "profile": "LSU 27, Arkansas 24"
+       },
+       {
+        "name": "No. 7 LSU 13, Arkansas 10",
+        "yards": 0,
+        "season": 2022,
+        "label": "No. 7 LSU 13, Arkansas 10",
+        "profile": "No. 7 LSU 13, Arkansas 10"
+       },
+       {
+        "name": "No. 12 LSU 34, Arkansas 31",
+        "yards": 0,
+        "season": 2023,
+        "label": "No. 12 LSU 34, Arkansas 31",
+        "profile": "No. 12 LSU 34, Arkansas 31"
+       },
+       {
+        "name": "LSU 23, Arkansas 22",
+        "yards": 0,
+        "season": 2025,
+        "label": "LSU 23, Arkansas 22",
+        "profile": "LSU 23, Arkansas 22"
+       }
+      ],
+      "B": [
+       {
+        "name": "Arkansas 21, No. 18 LSU 20",
+        "yards": 0,
+        "season": 2002,
+        "label": "Arkansas 21, No. 18 LSU 20",
+        "profile": "Arkansas 21, No. 18 LSU 20"
+       },
+       {
+        "name": "Arkansas 50, No. 1 LSU 48 (OT)",
+        "yards": 0,
+        "season": 2007,
+        "label": "Arkansas 50, No. 1 LSU 48 (OT)",
+        "profile": "Arkansas 50, No. 1 LSU 48 (OT)"
+       },
+       {
+        "name": "Arkansas 31, LSU 30",
+        "yards": 0,
+        "season": 2008,
+        "label": "Arkansas 31, LSU 30",
+        "profile": "Arkansas 31, LSU 30"
+       },
+       {
+        "name": "Arkansas 16, LSU 13 (OT)",
+        "yards": 0,
+        "season": 2021,
+        "label": "Arkansas 16, LSU 13 (OT)",
+        "profile": "Arkansas 16, LSU 13 (OT)"
+       }
+      ]
+     },
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "2007: Arkansas at No. 1 LSU, a game that went to overtime. What was the final score?",
+     "options": [
+      "Arkansas 50, LSU 48",
+      "LSU 50, Arkansas 48",
+      "Arkansas 57, LSU 52",
+      "Arkansas 50, LSU 44"
+     ],
+     "answer": 0,
+     "reveal": "Arkansas 50, No. 1 LSU 48 (OT) (2007-11-23, Tiger Stadium (LA)).",
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    }
+   ]
+  },
+  {
+   "a": "MICH",
+   "b": "OSU",
+   "name": "Michigan–Ohio State",
+   "items": [
+    {
+     "type": "mc",
+     "prompt": "Of the 25 Michigan–Ohio State games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+     "options": [
+      "4",
+      "2",
+      "3",
+      "5"
+     ],
+     "answer": 0,
+     "reveal": "4: 2006 No. 1 Ohio State 42, No. 2 Michigan 39 · 2013 No. 3 Ohio State 42, Michigan 41 · 2016 No. 2 Ohio State 30, No. 3 Michigan 27 (OT) · 2024 Michigan 13, No. 2 Ohio State 10.",
+     "years": {
+      "prompt": "Name the 4 seasons.",
+      "a": "MICH",
+      "b": "OSU",
+      "A": [
+       {
+        "name": "Michigan 13, No. 2 Ohio State 10",
+        "yards": 0,
+        "season": 2024,
+        "label": "Michigan 13, No. 2 Ohio State 10",
+        "profile": "Michigan 13, No. 2 Ohio State 10"
+       }
+      ],
+      "B": [
+       {
+        "name": "No. 1 Ohio State 42, No. 2 Michigan 39",
+        "yards": 0,
+        "season": 2006,
+        "label": "No. 1 Ohio State 42, No. 2 Michigan 39",
+        "profile": "No. 1 Ohio State 42, No. 2 Michigan 39"
+       },
+       {
+        "name": "No. 3 Ohio State 42, Michigan 41",
+        "yards": 0,
+        "season": 2013,
+        "label": "No. 3 Ohio State 42, Michigan 41",
+        "profile": "No. 3 Ohio State 42, Michigan 41"
+       },
+       {
+        "name": "No. 2 Ohio State 30, No. 3 Michigan 27 (OT)",
+        "yards": 0,
+        "season": 2016,
+        "label": "No. 2 Ohio State 30, No. 3 Michigan 27 (OT)",
+        "profile": "No. 2 Ohio State 30, No. 3 Michigan 27 (OT)"
+       }
+      ]
+     },
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "2016: No. 3 Michigan at No. 2 Ohio State, a game that went to overtime. What was the final score?",
+     "options": [
+      "Ohio State 30, Michigan 27",
+      "Michigan 30, Ohio State 27",
+      "Ohio State 37, Michigan 31",
+      "Ohio State 30, Michigan 23"
+     ],
+     "answer": 0,
+     "reveal": "No. 2 Ohio State 30, No. 3 Michigan 27 (OT) (2016-11-26, Ohio Stadium).",
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "2007: No. 7 Ohio State held No. 23 Michigan to 91 total yards in a 14–3 win. Ohio State had four sacks. How many were Vernon Gholston's?",
+     "options": [
+      "3",
+      "4",
+      "2",
+      "1"
+     ],
+     "answer": 0,
+     "reveal": "3 of Ohio State's 4 sacks. Chris Wells added 222 rushing yards, and Michigan finished with 15 rushing yards.",
+     "source": "ESPN game recap (AP), event 273210130: \"Gholston made life miserable for them with three of Ohio State's four sacks\". Score and totals match data/rivalry.json; AP ranks from data/game-ranks.json",
+     "verified": true,
+     "marquee": true
+    }
+   ]
+  },
+  {
+   "a": "OU",
+   "b": "MIZ",
+   "name": "Oklahoma–Missouri",
+   "items": []
+  },
+  {
+   "a": "PUR",
+   "b": "IU",
+   "name": "Purdue–Indiana",
+   "items": [
+    {
+     "type": "mc",
+     "prompt": "Of the 25 Purdue–Indiana games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+     "options": [
+      "4",
+      "2",
+      "3",
+      "5"
+     ],
+     "answer": 0,
+     "reveal": "4: 2007 Indiana 27, Purdue 24 · 2010 Indiana 34, Purdue 31 · 2016 Indiana 26, Purdue 24 · 2019 Indiana 44, Purdue 41.",
+     "years": {
+      "prompt": "Name the 4 seasons.",
+      "a": "PUR",
+      "b": "IU",
+      "A": [],
+      "B": [
+       {
+        "name": "Indiana 27, Purdue 24",
+        "yards": 0,
+        "season": 2007,
+        "label": "Indiana 27, Purdue 24",
+        "profile": "Indiana 27, Purdue 24"
+       },
+       {
+        "name": "Indiana 34, Purdue 31",
+        "yards": 0,
+        "season": 2010,
+        "label": "Indiana 34, Purdue 31",
+        "profile": "Indiana 34, Purdue 31"
+       },
+       {
+        "name": "Indiana 26, Purdue 24",
+        "yards": 0,
+        "season": 2016,
+        "label": "Indiana 26, Purdue 24",
+        "profile": "Indiana 26, Purdue 24"
+       },
+       {
+        "name": "Indiana 44, Purdue 41",
+        "yards": 0,
+        "season": 2019,
+        "label": "Indiana 44, Purdue 41",
+        "profile": "Indiana 44, Purdue 41"
+       }
+      ]
+     },
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "2019: Indiana at Purdue. What was the final score?",
+     "options": [
+      "Indiana 44, Purdue 41",
+      "Purdue 44, Indiana 41",
+      "Indiana 51, Purdue 45",
+      "Indiana 44, Purdue 37"
+     ],
+     "answer": 0,
+     "reveal": "Indiana 44, Purdue 41 (2019-11-30, Ross-Ade Stadium).",
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    }
+   ]
+  },
+  {
+   "a": "SC",
+   "b": "CLEM",
+   "name": "South Carolina–Clemson",
+   "items": [
+    {
+     "type": "mc",
+     "prompt": "Of the 25 South Carolina–Clemson games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+     "options": [
+      "5",
+      "3",
+      "4",
+      "6"
+     ],
+     "answer": 0,
+     "reveal": "5: 2000 No. 16 Clemson 16, No. 25 South Carolina 14 · 2006 South Carolina 31, No. 24 Clemson 28 · 2007 No. 21 Clemson 23, South Carolina 21 · 2022 South Carolina 31, No. 7 Clemson 30 · 2024 No. 16 South Carolina 17, No. 12 Clemson 14.",
+     "years": {
+      "prompt": "Name the 5 seasons.",
+      "a": "SC",
+      "b": "CLEM",
+      "A": [
+       {
+        "name": "South Carolina 31, No. 24 Clemson 28",
+        "yards": 0,
+        "season": 2006,
+        "label": "South Carolina 31, No. 24 Clemson 28",
+        "profile": "South Carolina 31, No. 24 Clemson 28"
+       },
+       {
+        "name": "South Carolina 31, No. 7 Clemson 30",
+        "yards": 0,
+        "season": 2022,
+        "label": "South Carolina 31, No. 7 Clemson 30",
+        "profile": "South Carolina 31, No. 7 Clemson 30"
+       },
+       {
+        "name": "No. 16 South Carolina 17, No. 12 Clemson 14",
+        "yards": 0,
+        "season": 2024,
+        "label": "No. 16 South Carolina 17, No. 12 Clemson 14",
+        "profile": "No. 16 South Carolina 17, No. 12 Clemson 14"
+       }
+      ],
+      "B": [
+       {
+        "name": "No. 16 Clemson 16, No. 25 South Carolina 14",
+        "yards": 0,
+        "season": 2000,
+        "label": "No. 16 Clemson 16, No. 25 South Carolina 14",
+        "profile": "No. 16 Clemson 16, No. 25 South Carolina 14"
+       },
+       {
+        "name": "No. 21 Clemson 23, South Carolina 21",
+        "yards": 0,
+        "season": 2007,
+        "label": "No. 21 Clemson 23, South Carolina 21",
+        "profile": "No. 21 Clemson 23, South Carolina 21"
+       }
+      ]
+     },
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "2022: South Carolina at No. 7 Clemson, and the unranked team won. What was the final score?",
+     "options": [
+      "South Carolina 31, Clemson 30",
+      "Clemson 31, South Carolina 30",
+      "South Carolina 38, Clemson 34",
+      "South Carolina 31, Clemson 26"
+     ],
+     "answer": 0,
+     "reveal": "South Carolina 31, No. 7 Clemson 30 (2022-11-26, Memorial Stadium (Clemson, SC)).",
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "2012: No. 13 South Carolina won at No. 12 Clemson, 27–17, with backup quarterback Dylan Thompson. How many sacks did Jadeveon Clowney have?",
+     "options": [
+      "4.5",
+      "3",
+      "2.5",
+      "1.5"
+     ],
+     "answer": 0,
+     "reveal": "4.5 sacks, a South Carolina single-game record: 1.5 in the first half and 3 in the second. It also set the school's single-season record (13).",
+     "source": "ESPN game recap (AP), event 323290228: \"Jadeveon Clowney had 4½ sacks\". Score and totals match data/rivalry.json; AP ranks from data/game-ranks.json; Wikipedia \"Jadeveon Clowney\" (revision 1386779542): \"a single-game school record 4.5\"",
+     "verified": true,
+     "marquee": true
+    }
+   ]
+  },
+  {
+   "a": "TENN",
+   "b": "VAN",
+   "name": "Tennessee–Vanderbilt",
+   "items": [
+    {
+     "type": "mc",
+     "prompt": "Of the 26 Tennessee–Vanderbilt games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+     "options": [
+      "3",
+      "1",
+      "2",
+      "4"
+     ],
+     "answer": 0,
+     "reveal": "3: 2000 No. 25 Tennessee 28, Vanderbilt 26 · 2007 No. 19 Tennessee 25, Vanderbilt 24 · 2011 Tennessee 27, Vanderbilt 21 (OT).",
+     "years": {
+      "prompt": "Name the 3 seasons.",
+      "a": "TENN",
+      "b": "VAN",
+      "A": [
+       {
+        "name": "No. 25 Tennessee 28, Vanderbilt 26",
+        "yards": 0,
+        "season": 2000,
+        "label": "No. 25 Tennessee 28, Vanderbilt 26",
+        "profile": "No. 25 Tennessee 28, Vanderbilt 26"
+       },
+       {
+        "name": "No. 19 Tennessee 25, Vanderbilt 24",
+        "yards": 0,
+        "season": 2007,
+        "label": "No. 19 Tennessee 25, Vanderbilt 24",
+        "profile": "No. 19 Tennessee 25, Vanderbilt 24"
+       },
+       {
+        "name": "Tennessee 27, Vanderbilt 21 (OT)",
+        "yards": 0,
+        "season": 2011,
+        "label": "Tennessee 27, Vanderbilt 21 (OT)",
+        "profile": "Tennessee 27, Vanderbilt 21 (OT)"
+       }
+      ],
+      "B": []
+     },
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "2007: Vanderbilt at No. 19 Tennessee. What was the final score?",
+     "options": [
+      "Tennessee 25, Vanderbilt 24",
+      "Vanderbilt 25, Tennessee 24",
+      "Tennessee 32, Vanderbilt 28",
+      "Tennessee 25, Vanderbilt 20"
+     ],
+     "answer": 0,
+     "reveal": "No. 19 Tennessee 25, Vanderbilt 24 (2007-11-17, Neyland Stadium).",
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "2013: Vanderbilt won at Tennessee, 14–10. How many passing yards did Tennessee finish with?",
+     "options": [
+      "53",
+      "103",
+      "153",
+      "203"
+     ],
+     "answer": 0,
+     "reveal": "53. Vanderbilt also forced three interceptions; Joshua Dobbs went 11 of 19 for 53 yards and was picked off twice.",
+     "source": "ESPN game recap (AP), event 333272633: \"The Commodores still held Tennessee to 53 yards passing while forcing three interceptions\". Score and totals match data/rivalry.json; AP ranks from data/game-ranks.json",
+     "verified": true,
+     "marquee": true
+    }
+   ]
+  },
+  {
+   "a": "USC",
+   "b": "UCLA",
+   "name": "USC–UCLA",
+   "items": [
+    {
+     "type": "mc",
+     "prompt": "Of the 26 USC–UCLA games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+     "options": [
+      "2",
+      "0",
+      "1",
+      "3"
+     ],
+     "answer": 0,
+     "reveal": "2: 2000 USC 38, UCLA 35 · 2022 No. 7 USC 48, No. 16 UCLA 45.",
+     "years": {
+      "prompt": "Name the 2 seasons.",
+      "a": "USC",
+      "b": "UCLA",
+      "A": [
+       {
+        "name": "USC 38, UCLA 35",
+        "yards": 0,
+        "season": 2000,
+        "label": "USC 38, UCLA 35",
+        "profile": "USC 38, UCLA 35"
+       },
+       {
+        "name": "No. 7 USC 48, No. 16 UCLA 45",
+        "yards": 0,
+        "season": 2022,
+        "label": "No. 7 USC 48, No. 16 UCLA 45",
+        "profile": "No. 7 USC 48, No. 16 UCLA 45"
+       }
+      ],
+      "B": []
+     },
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
+    },
+    {
+     "type": "mc",
+     "prompt": "2022: No. 7 USC at No. 16 UCLA. What was the final score?",
+     "options": [
+      "USC 48, UCLA 45",
+      "UCLA 48, USC 45",
+      "USC 55, UCLA 49",
+      "USC 48, UCLA 41"
+     ],
+     "answer": 0,
+     "reveal": "No. 7 USC 48, No. 16 UCLA 45 (2022-11-19, Rose Bowl).",
+     "source": "CollegeFootballData /games (scores), data/rivalry.json; AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json); overtime: CFBD line scores (data/walkoffs.json)",
+     "verified": true,
+     "marquee": true
     }
    ]
   }

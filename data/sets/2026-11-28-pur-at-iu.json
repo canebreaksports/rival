@@ -6,8 +6,8 @@
   "away": "PUR",
   "home": "IU"
  },
- "generatedAt": "2026-11-24T01:44:39.251Z",
- "engine": 51,
+ "generatedAt": "2026-11-24T02:10:32.254Z",
+ "engine": 52,
  "questions": [
   {
    "type": "rank",
@@ -115,6 +115,36 @@
   },
   {
    "type": "mc",
+   "label": "Twist",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 30, 2019",
+    "winner": "IU",
+    "loser": "PUR",
+    "ws": 44,
+    "ls": 41,
+    "venue": "Ross-Ade Stadium"
+   },
+   "prompt": "The 2019 Purdue–Indiana game went to Indiana, 44–41, over Purdue. Which team gained more total yards, and by how much?",
+   "options": [
+    "Purdue by 67",
+    "Indiana by 67",
+    "Purdue by 107",
+    "Indiana by 107"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    3,
+    0,
+    2
+   ],
+   "reveal": "🔄 Twist: Purdue out-gained Indiana 589 to 522 and still lost. (Purdue 181 rushing, 408 passing; Indiana 185 rushing, 337 passing.)",
+   "sig": "xo2019-11-30"
+  },
+  {
+   "type": "mc",
    "label": "Series History",
    "verified": true,
    "pitted": true,
@@ -136,37 +166,26 @@
    "sig": "mm66"
   },
   {
-   "type": "count",
-   "label": "Since 2018",
-   "a": "PUR",
-   "b": "IU",
-   "threshold": 1100,
+   "label": "Purdue–Indiana",
    "verified": true,
+   "sig": "kPurdue–Indiana1",
+   "type": "mc",
    "pitted": true,
-   "prompt": "From 2018 through 2025, which school had more 1,100-yard receiving seasons?",
-   "A": [
-    {
-     "name": "Rondale Moore",
-     "yards": 1258,
-     "season": 2018,
-     "profile": "Wide receiver · 2018: 213 rushing, 1,258 receiving yds"
-    },
-    {
-     "name": "David Bell",
-     "yards": 1286,
-     "season": 2021,
-     "profile": "Wide receiver · 2021: 39 rushing, 1,286 receiving yds"
-    },
-    {
-     "name": "Charlie Jones",
-     "yards": 1361,
-     "season": 2022,
-     "profile": "Wide receiver · 2022: 3 rushing, 1,361 receiving yds"
-    }
+   "prompt": "2019: Indiana at Purdue. What was the final score?",
+   "options": [
+    "Indiana 44, Purdue 41",
+    "Purdue 44, Indiana 41",
+    "Indiana 51, Purdue 45",
+    "Indiana 44, Purdue 37"
    ],
-   "B": [],
-   "sig": "tsrec11002018",
-   "bonus": "names"
+   "answer": 0,
+   "reveal": "Indiana 44, Purdue 41 (2019-11-30, Ross-Ade Stadium).",
+   "order": [
+    1,
+    0,
+    3,
+    2
+   ]
   },
   {
    "type": "mc",
@@ -225,6 +244,64 @@
    "sig": "gs2013-11-30rush"
   },
   {
+   "label": "Purdue–Indiana",
+   "verified": true,
+   "sig": "kPurdue–Indiana0",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "Of the 25 Purdue–Indiana games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+   "options": [
+    "4",
+    "2",
+    "3",
+    "5"
+   ],
+   "answer": 0,
+   "reveal": "4: 2007 Indiana 27, Purdue 24 · 2010 Indiana 34, Purdue 31 · 2016 Indiana 26, Purdue 24 · 2019 Indiana 44, Purdue 41.",
+   "order": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "years": {
+    "prompt": "Name the 4 seasons.",
+    "a": "PUR",
+    "b": "IU",
+    "A": [],
+    "B": [
+     {
+      "name": "Indiana 27, Purdue 24",
+      "yards": 0,
+      "season": 2007,
+      "label": "Indiana 27, Purdue 24",
+      "profile": "Indiana 27, Purdue 24"
+     },
+     {
+      "name": "Indiana 34, Purdue 31",
+      "yards": 0,
+      "season": 2010,
+      "label": "Indiana 34, Purdue 31",
+      "profile": "Indiana 34, Purdue 31"
+     },
+     {
+      "name": "Indiana 26, Purdue 24",
+      "yards": 0,
+      "season": 2016,
+      "label": "Indiana 26, Purdue 24",
+      "profile": "Indiana 26, Purdue 24"
+     },
+     {
+      "name": "Indiana 44, Purdue 41",
+      "yards": 0,
+      "season": 2019,
+      "label": "Indiana 44, Purdue 41",
+      "profile": "Indiana 44, Purdue 41"
+     }
+    ]
+   }
+  },
+  {
    "type": "count",
    "label": "Awards",
    "a": "PUR",
@@ -272,64 +349,37 @@
    "bonus": "names"
   },
   {
-   "type": "mc",
-   "label": "Historic Day",
+   "type": "count",
+   "label": "Since 2018",
+   "a": "PUR",
+   "b": "IU",
+   "threshold": 1100,
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Nov 25, 2017",
-    "winner": "PUR",
-    "loser": "IU",
-    "ws": 31,
-    "ls": 24,
-    "venue": "Ross-Ade Stadium"
-   },
-   "prompt": "2017: Purdue vs. Indiana. Markell Jones carried 31 times. How many rushing yards did he finish with?",
-   "options": [
-    "217",
-    "177",
-    "137",
-    "97"
+   "prompt": "From 2018 through 2025, which school had more 1,100-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Rondale Moore",
+     "yards": 1258,
+     "season": 2018,
+     "profile": "Wide receiver · 2018: 213 rushing, 1,258 receiving yds"
+    },
+    {
+     "name": "David Bell",
+     "yards": 1286,
+     "season": 2021,
+     "profile": "Wide receiver · 2021: 39 rushing, 1,286 receiving yds"
+    },
+    {
+     "name": "Charlie Jones",
+     "yards": 1361,
+     "season": 2022,
+     "profile": "Wide receiver · 2022: 3 rushing, 1,361 receiving yds"
+    }
    ],
-   "answer": 0,
-   "order": [
-    1,
-    0,
-    3,
-    2
-   ],
-   "reveal": "217 rushing yards, the most by anyone in this rivalry since 2005 (box scores). Purdue won, 31–24.",
-   "sig": "xb2017-11-25Markell Jones"
-  },
-  {
-   "type": "mc",
-   "label": "Twist",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 30, 2019",
-    "winner": "IU",
-    "loser": "PUR",
-    "ws": 44,
-    "ls": 41,
-    "venue": "Ross-Ade Stadium"
-   },
-   "prompt": "The 2019 Purdue–Indiana game went to Indiana, 44–41, over Purdue. Which team gained more total yards, and by how much?",
-   "options": [
-    "Purdue by 67",
-    "Indiana by 67",
-    "Purdue by 107",
-    "Indiana by 107"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    0,
-    2
-   ],
-   "reveal": "🔄 Twist: Purdue out-gained Indiana 589 to 522 and still lost. (Purdue 181 rushing, 408 passing; Indiana 185 rushing, 337 passing.)",
-   "sig": "xo2019-11-30"
+   "B": [],
+   "sig": "tsrec11002018",
+   "bonus": "names"
   },
   {
    "type": "count",
@@ -419,50 +469,33 @@
   },
   {
    "type": "mc",
-   "label": "Ranked Wins",
+   "label": "Historic Day",
    "verified": true,
    "pitted": true,
-   "prompt": "Since 2020, which school has more wins over AP-ranked opponents, and how many?",
+   "game": {
+    "date": "Nov 25, 2017",
+    "winner": "PUR",
+    "loser": "IU",
+    "ws": 31,
+    "ls": 24,
+    "venue": "Ross-Ade Stadium"
+   },
+   "prompt": "2017: Purdue vs. Indiana. Markell Jones carried 31 times. How many rushing yards did he finish with?",
    "options": [
-    "Indiana, 9",
-    "Indiana, 10",
-    "Purdue, 4",
-    "Purdue, 8"
+    "217",
+    "177",
+    "137",
+    "97"
    ],
    "answer": 0,
    "order": [
     1,
     0,
-    2,
-    3
+    3,
+    2
    ],
-   "reveal": "Indiana 9, Purdue 4 (through 2025). Latest: Indiana: 2025 vs. No. 11 Alabama 38–3, 2025 vs. No. 5 Oregon 56–22, 2025 vs. No. 10 Miami 27–21; Purdue: 2021 vs. No. 5 Michigan State 40–29, 2022 vs. No. 21 Minnesota 20–10, 2022 vs. No. 21 Illinois 31–24.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
-   },
-   "sig": "rw2020"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receptions (at the school shown)?",
-   "A": {
-    "label": "Payne Durham (PUR TE)",
-    "value": 126,
-    "school": "PUR"
-   },
-   "B": {
-    "label": "Tevin Coleman (IU RB)",
-    "value": 54,
-    "school": "IU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Payne Durham 126 vs. Tevin Coleman 54.",
-   "sig": "urecNTevin ColemanPayne Durham"
+   "reveal": "217 rushing yards, the most by anyone in this rivalry since 2005 (box scores). Purdue won, 31–24.",
+   "sig": "xb2017-11-25Markell Jones"
   }
  ]
 }
