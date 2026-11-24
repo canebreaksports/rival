@@ -18,11 +18,11 @@ const THRESH = { rush: [800, 900, 1000, 1100, 1200, 1300, 1500], rec: [600, 700,
 type SK = keyof typeof THRESH;
 
 /** 1. Season counts over a window, e.g. "From 2018 through 2025, which school had more 850-yard receiving seasons?" */
+const v = (s: LeaderSeason, k: SK) => s[k] ?? 0, td = (k: SK) => k === "rushTD" || k === "recTD";
 export function genSeasonCount(sl: SeasonLeaders, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
   const A = sl.schools[a] ?? [], B = sl.schools[b] ?? [];
   const cands: { k: SK; t: number; from: number }[] = [];
-  const v = (s: LeaderSeason, k: SK) => s[k] ?? 0, td = (k: SK) => k === "rushTD" || k === "recTD";
-  for (const k of Object.keys(THRESH) as SK[]) for (const t of THRESH[k]) for (const from of [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]) {
+  for (const k of Object.keys(THRESH) as SK[]) for (const t of THRESH[k]) for (const from of td(k) ? [2012, 2014, 2016] : [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]) { // TD counts: longer windows (owner)
     const rows = [...A, ...B].filter(s => s.season >= from && s.season <= sl.to);
     if (td(k) ? rows.some(s => v(s, k) === t || v(s, k) === t - 1) : rows.some(s => Math.abs(v(s, k) - t) < s.margin)) continue; // nobody close enough to flip it
     const n = (L: typeof A) => L.filter(s => s.season >= from && s.season <= sl.to && v(s, k) >= t).length;

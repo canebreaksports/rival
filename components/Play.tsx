@@ -72,6 +72,7 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
   // after a question is answered, progress is saved as already past it (see settle)
   const savePast = (np: Progress) => save({ ...np, i: np.i + 1 >= n ? np.i : np.i + 1, done: np.i + 1 >= n });
   const [bonusDoneAt, setBonusDoneAt] = useState(-1);
+  const [stageAt, setStageAt] = useState(-1); // chained bonuses (years, then names): the second runs once the first is done
   const hasBonus = q?.type === "count" || (q?.type === "mc" && !!(q.years || q.names)) || (q?.type === "rank" && !!q.names);
   const afterBonus = !hasBonus || bonusDoneAt === p.i; // More lists and full reveals would give the bonus answers away
   const finishBonus = (pts: number) => { addBonus(pts); setBonusDoneAt(p.i) };
@@ -108,6 +109,7 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
         {reveal && afterBonus && q.type === "mc" && (q.years || q.names) && <div className="more">{q.reveal}</div>}
         {reveal && afterBonus && q.more && q.more.rows.length > 0 && <div className="more"><div className="kind">More · {q.more.title}</div>{q.more.rows.map(r => <div key={r}>{r}</div>)}</div>}
         {reveal && q.type === "count" ? <NameThem q={q} onDone={finishBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
+          : reveal && q.type === "mc" && q.years && q.names && stageAt !== p.i ? <NameYears key={"y" + p.i} q={q.years} prompt={q.years.prompt} onDone={addBonus} onHint={addHint} onNext={() => setStageAt(p.i)} last={false} />
           : reveal && q.type === "mc" && q.names ? <NameNames q={q.names} prompt={q.names.prompt} onDone={finishBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
           : reveal && q.type === "rank" && q.names ? <NameNames q={q.names} prompt={q.names.prompt} onDone={finishBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
           : reveal && q.type === "mc" && q.years ? <NameYears q={q.years} prompt={q.years.prompt} onDone={finishBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />

@@ -6,119 +6,9 @@
   "away": "PUR",
   "home": "IU"
  },
- "generatedAt": "2026-11-24T02:16:17.119Z",
- "engine": 53,
+ "generatedAt": "2026-11-24T04:01:26.469Z",
+ "engine": 55,
  "questions": [
-  {
-   "type": "count",
-   "label": "Since 2018",
-   "a": "PUR",
-   "b": "IU",
-   "threshold": 1100,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2018 through 2025, which school had more 1,100-yard receiving seasons?",
-   "A": [
-    {
-     "name": "Rondale Moore",
-     "yards": 1258,
-     "season": 2018,
-     "profile": "Wide receiver · 2018: 213 rushing, 1,258 receiving yds"
-    },
-    {
-     "name": "David Bell",
-     "yards": 1286,
-     "season": 2021,
-     "profile": "Wide receiver · 2021: 39 rushing, 1,286 receiving yds"
-    },
-    {
-     "name": "Charlie Jones",
-     "yards": 1361,
-     "season": 2022,
-     "profile": "Wide receiver · 2022: 3 rushing, 1,361 receiving yds"
-    }
-   ],
-   "B": [],
-   "sig": "tsrec11002018",
-   "bonus": "names"
-  },
-  {
-   "type": "mc",
-   "label": "Historic Day",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 25, 2017",
-    "winner": "PUR",
-    "loser": "IU",
-    "ws": 31,
-    "ls": 24,
-    "venue": "Ross-Ade Stadium"
-   },
-   "prompt": "2017: Purdue vs. Indiana. Markell Jones carried 31 times. How many rushing yards did he finish with?",
-   "options": [
-    "217",
-    "177",
-    "137",
-    "97"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    1,
-    3,
-    0
-   ],
-   "reveal": "217 rushing yards, the most by anyone in this rivalry since 2005 (box scores). Purdue won, 31–24.",
-   "sig": "xb2017-11-25Markell Jones"
-  },
-  {
-   "type": "count",
-   "label": "Awards",
-   "a": "PUR",
-   "b": "IU",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "info": {
-    "title": "Which awards count?",
-    "text": "Heisman Trophy: most outstanding player · Maxwell Award: best all-around player · Walter Camp Award: player of the year · Doak Walker Award: best running back · Biletnikoff Award: best receiver · Davey O'Brien Award: best quarterback · John Mackey Award: best tight end · Outland Trophy: best interior lineman · Chuck Bednarik Award: best defensive player · Bronko Nagurski Trophy: best defensive player · Butkus Award: best linebacker · Jim Thorpe Award: best defensive back · Lombardi Award: best lineman or linebacker · Lou Groza Award: best kicker · Ray Guy Award: best punter"
-   },
-   "prompt": "From 2010 through 2025, which school had more winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)?",
-   "A": [],
-   "B": [
-    {
-     "name": "Fernando Mendoza",
-     "yards": 2025,
-     "season": 2025,
-     "label": "Heisman Trophy",
-     "profile": "QB · won the Heisman Trophy (most outstanding player)"
-    },
-    {
-     "name": "Fernando Mendoza",
-     "yards": 2025,
-     "season": 2025,
-     "label": "Maxwell Award",
-     "profile": "QB · won the Maxwell Award (best all-around player)"
-    },
-    {
-     "name": "Fernando Mendoza",
-     "yards": 2025,
-     "season": 2025,
-     "label": "Walter Camp Award",
-     "profile": "QB · won the Walter Camp Award (player of the year)"
-    },
-    {
-     "name": "Fernando Mendoza",
-     "yards": 2025,
-     "season": 2025,
-     "label": "Davey O'Brien Award",
-     "profile": "won the Davey O'Brien Award (best quarterback)"
-    }
-   ],
-   "sig": "acall2010",
-   "bonus": "names"
-  },
   {
    "label": "Purdue–Indiana",
    "verified": true,
@@ -140,6 +30,53 @@
     1,
     3
    ]
+  },
+  {
+   "type": "mc",
+   "label": "Ranked Wins",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2018, which school has more wins over AP-ranked opponents, and how many?",
+   "options": [
+    "Indiana, 9",
+    "Indiana, 11",
+    "Purdue, 7",
+    "Purdue, 8"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    2,
+    3,
+    0
+   ],
+   "reveal": "Indiana 9, Purdue 7 (through 2025). Latest: Indiana: 2025 vs. No. 11 Alabama 38–3, 2025 vs. No. 5 Oregon 56–22, 2025 vs. No. 10 Miami 27–21; Purdue: 2021 vs. No. 5 Michigan State 40–29, 2022 vs. No. 21 Minnesota 20–10, 2022 vs. No. 21 Illinois 31–24.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   },
+   "sig": "rw2018"
+  },
+  {
+   "type": "duel",
+   "label": "Fresh Mix",
+   "verified": true,
+   "year": 2015,
+   "stat": "Rushing season",
+   "aSchool": "IU",
+   "other": "PUR",
+   "aName": "Devine Redding (RB)",
+   "bName": "Markell Jones (RB)",
+   "A": {
+    "big": "1,012",
+    "sm": "rush yds · 9 TD"
+   },
+   "B": {
+    "big": "875",
+    "sm": "rush yds · 10 TD"
+   },
+   "flip": true,
+   "sig": "drush2015Devine Redding,Markell Jones"
   },
   {
    "type": "count",
@@ -241,12 +178,12 @@
     "5"
    ],
    "answer": 0,
-   "reveal": "4: 2007 Indiana 27, Purdue 24 · 2010 Indiana 34, Purdue 31 · 2016 Indiana 26, Purdue 24 · 2019 Indiana 44, Purdue 41.",
+   "reveal": "4: 2007 (Purdue at Indiana) · 2010 (Indiana at Purdue) · 2016 (Purdue at Indiana) · 2019 (Indiana at Purdue).",
    "order": [
+    1,
     0,
-    3,
     2,
-    1
+    3
    ],
    "years": {
     "prompt": "Name the 4 seasons.",
@@ -255,57 +192,133 @@
     "A": [],
     "B": [
      {
-      "name": "Indiana 27, Purdue 24",
+      "name": "Purdue at Indiana",
       "yards": 0,
       "season": 2007,
-      "label": "Indiana 27, Purdue 24",
-      "profile": "Indiana 27, Purdue 24"
+      "label": "Purdue at Indiana",
+      "profile": "Purdue at Indiana"
      },
      {
-      "name": "Indiana 34, Purdue 31",
+      "name": "Indiana at Purdue",
       "yards": 0,
       "season": 2010,
-      "label": "Indiana 34, Purdue 31",
-      "profile": "Indiana 34, Purdue 31"
+      "label": "Indiana at Purdue",
+      "profile": "Indiana at Purdue"
      },
      {
-      "name": "Indiana 26, Purdue 24",
+      "name": "Purdue at Indiana",
       "yards": 0,
       "season": 2016,
-      "label": "Indiana 26, Purdue 24",
-      "profile": "Indiana 26, Purdue 24"
+      "label": "Purdue at Indiana",
+      "profile": "Purdue at Indiana"
      },
      {
-      "name": "Indiana 44, Purdue 41",
+      "name": "Indiana at Purdue",
       "yards": 0,
       "season": 2019,
-      "label": "Indiana 44, Purdue 41",
-      "profile": "Indiana 44, Purdue 41"
+      "label": "Indiana at Purdue",
+      "profile": "Indiana at Purdue"
      }
     ]
    }
   },
   {
-   "type": "mc",
-   "label": "Series History",
+   "type": "rank",
+   "label": "Notables",
    "verified": true,
    "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Purdue–Indiana series?",
-   "options": [
-    "66 points",
-    "59 points",
-    "52 points",
-    "78 points"
+   "unit": "yds",
+   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
+   "items": [
+    {
+     "label": "David Bell (Purdue, 2019–21)",
+     "value": 2946,
+     "school": "PUR"
+    },
+    {
+     "label": "Nick Westbrook-Ikhine (Indiana, 2015–19)",
+     "value": 2226,
+     "school": "IU"
+    },
+    {
+     "label": "James Hardy (Indiana, 2005–07)",
+     "value": 2740,
+     "school": "IU"
+    },
+    {
+     "label": "Taylor Stubblefield (Purdue, 2001–04)",
+     "value": 3629,
+     "school": "PUR"
+    }
    ],
-   "answer": 0,
-   "order": [
-    0,
-    2,
-    1,
-    3
-   ],
-   "reveal": "66 points: Indiana 66, Purdue 0 (Nov 30, 2024).",
-   "sig": "mm66"
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Purdue Boilermakers football statistical leaders\" career receiving yards table (revision 1387405885), which cites the school record book; fetched 2026-11-23; Wikipedia \"Indiana Hoosiers football statistical leaders\" career receiving yards table (revision 1387103435), which cites the school record book; fetched 2026-11-23",
+   "sig": "nrreceivingDavid Bell,James Hardy,Nick Westbrook-Ikhine,Taylor Stubblefield",
+   "names": {
+    "prompt": "Bonus: name the other 7 players in Purdue and Indiana's combined top 10 for career receiving yards.",
+    "a": "PUR",
+    "b": "IU",
+    "A": [
+     {
+      "name": "John Standeford",
+      "yards": 3788,
+      "label": "3,788 (2000–2003)",
+      "profile": "3,788 career receiving yards (2000–2003) · No. 1 on the combined list"
+     },
+     {
+      "name": "Dorien Bryant",
+      "yards": 3548,
+      "label": "3,548 (2004–2007)",
+      "profile": "3,548 career receiving yards (2004–2007) · No. 3 on the combined list"
+     },
+     {
+      "name": "Brian Alford",
+      "yards": 3029,
+      "label": "3,029 (1994–1997)",
+      "profile": "3,029 career receiving yards (1994–1997) · No. 4 on the combined list"
+     },
+     {
+      "name": "Vinny Sutherland",
+      "yards": 2370,
+      "label": "2,370 (1997–2000)",
+      "profile": "2,370 career receiving yards (1997–2000) · No. 8 on the combined list"
+     },
+     {
+      "name": "Greg Orton",
+      "yards": 2356,
+      "label": "2,356 (2005–2008)",
+      "profile": "2,356 career receiving yards (2005–2008) · No. 10 on the combined list"
+     }
+    ],
+    "B": [
+     {
+      "name": "Courtney Roby",
+      "yards": 2524,
+      "label": "2,524 (2001–2004)",
+      "profile": "2,524 career receiving yards (2001–2004) · No. 7 on the combined list"
+     },
+     {
+      "name": "Ernie Jones",
+      "yards": 2361,
+      "label": "2,361 (1984–1987)",
+      "profile": "2,361 career receiving yards (1984–1987) · No. 9 on the combined list"
+     }
+    ]
+   },
+   "more": {
+    "title": "Career receiving yards, Purdue and Indiana (careers ending 2000 or later)",
+    "rows": [
+     "1. John Standeford (Purdue, 2000–03) 3,788",
+     "2. Taylor Stubblefield (Purdue, 2001–04) 3,629",
+     "3. Dorien Bryant (Purdue, 2004–07) 3,548",
+     "4. David Bell (Purdue, 2019–21) 2,946",
+     "5. James Hardy (Indiana, 2005–07) 2,740",
+     "6. Courtney Roby (Indiana, 2001–04) 2,524",
+     "7. Vinny Sutherland (Purdue, 1997–00) 2,370",
+     "8. Greg Orton (Purdue, 2005–08) 2,356",
+     "9. Ty Fryfogle (Indiana, 2017–21) 2,231",
+     "10. Nick Westbrook-Ikhine (Indiana, 2015–19) 2,226"
+    ]
+   }
   },
   {
    "type": "mc",
@@ -329,13 +342,82 @@
    ],
    "answer": 0,
    "order": [
+    1,
     0,
     3,
-    2,
-    1
+    2
    ],
    "reveal": "🔄 Twist: Purdue out-gained Indiana 589 to 522 and still lost. (Purdue 181 rushing, 408 passing; Indiana 185 rushing, 337 passing.)",
    "sig": "xo2019-11-30"
+  },
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "PUR",
+   "b": "IU",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "info": {
+    "title": "Which awards count?",
+    "text": "Heisman Trophy: most outstanding player · Maxwell Award: best all-around player · Walter Camp Award: player of the year · Doak Walker Award: best running back · Biletnikoff Award: best receiver · Davey O'Brien Award: best quarterback · John Mackey Award: best tight end · Outland Trophy: best interior lineman · Chuck Bednarik Award: best defensive player · Bronko Nagurski Trophy: best defensive player · Butkus Award: best linebacker · Jim Thorpe Award: best defensive back · Lombardi Award: best lineman or linebacker · Lou Groza Award: best kicker · Ray Guy Award: best punter"
+   },
+   "prompt": "From 2000 through 2025, which school had more winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)?",
+   "A": [
+    {
+     "name": "Drew Brees",
+     "yards": 2000,
+     "season": 2000,
+     "label": "Maxwell Award",
+     "profile": "QB · won the Maxwell Award (best all-around player)"
+    },
+    {
+     "name": "Tim Stratton",
+     "yards": 2000,
+     "season": 2000,
+     "label": "John Mackey Award",
+     "profile": "won the John Mackey Award (best tight end)"
+    },
+    {
+     "name": "Travis Dorsch",
+     "yards": 2001,
+     "season": 2001,
+     "label": "Ray Guy Award",
+     "profile": "won the Ray Guy Award (best punter)"
+    }
+   ],
+   "B": [
+    {
+     "name": "Fernando Mendoza",
+     "yards": 2025,
+     "season": 2025,
+     "label": "Heisman Trophy",
+     "profile": "QB · won the Heisman Trophy (most outstanding player)"
+    },
+    {
+     "name": "Fernando Mendoza",
+     "yards": 2025,
+     "season": 2025,
+     "label": "Maxwell Award",
+     "profile": "QB · won the Maxwell Award (best all-around player)"
+    },
+    {
+     "name": "Fernando Mendoza",
+     "yards": 2025,
+     "season": 2025,
+     "label": "Walter Camp Award",
+     "profile": "QB · won the Walter Camp Award (player of the year)"
+    },
+    {
+     "name": "Fernando Mendoza",
+     "yards": 2025,
+     "season": 2025,
+     "label": "Davey O'Brien Award",
+     "profile": "won the Davey O'Brien Award (best quarterback)"
+    }
+   ],
+   "sig": "acall2000",
+   "bonus": "names"
   },
   {
    "type": "h2h",
@@ -345,50 +427,51 @@
    "flip": false,
    "prompt": "Who had more college receiving yards (at the school shown)?",
    "A": {
-    "label": "D.J. Knox (PUR RB)",
-    "value": 517,
-    "school": "PUR"
-   },
-   "B": {
-    "label": "Tevin Coleman (IU RB)",
-    "value": 383,
+    "label": "Nick Westbrook (IU WR)",
+    "value": 2226,
     "school": "IU"
    },
+   "B": {
+    "label": "Rondale Moore (PUR WR)",
+    "value": 1915,
+    "school": "PUR"
+   },
    "unit": "",
-   "note": "🚨 Upset: D.J. Knox 517 vs. Tevin Coleman 383.",
-   "sig": "urecTevin ColemanD.J. Knox"
+   "note": "🚨 Upset: Nick Westbrook 2,226 vs. Rondale Moore 1,915.",
+   "sig": "urecRondale MooreNick Westbrook"
   },
   {
-   "type": "mc",
-   "label": "Heisman",
+   "type": "count",
+   "label": "Since 2018",
+   "a": "PUR",
+   "b": "IU",
+   "threshold": 1100,
    "verified": true,
    "pitted": true,
-   "prompt": "Which of these finished highest in Heisman Trophy voting that season?",
-   "options": [
-    "Fernando Mendoza (Indiana, 2025)",
-    "Tevin Coleman (Indiana, 2014)",
-    "Drew Brees (Purdue, 2000)",
-    "Kurtis Rourke (Indiana, 2024)"
+   "prompt": "From 2018 through 2025, which school had more 1,100-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Rondale Moore",
+     "yards": 1258,
+     "season": 2018,
+     "profile": "Wide receiver · 2018: 213 rushing, 1,258 receiving yds"
+    },
+    {
+     "name": "David Bell",
+     "yards": 1286,
+     "season": 2021,
+     "profile": "Wide receiver · 2021: 39 rushing, 1,286 receiving yds"
+    },
+    {
+     "name": "Charlie Jones",
+     "yards": 1361,
+     "season": 2022,
+     "profile": "Wide receiver · 2022: 3 rushing, 1,361 receiving yds"
+    }
    ],
-   "answer": 0,
-   "order": [
-    3,
-    2,
-    0,
-    1
-   ],
-   "reveal": "Fernando Mendoza: 1st in 2025 · Drew Brees: 3rd in 2000 · Tevin Coleman: 7th in 2014 · Kurtis Rourke: 9th in 2024",
-   "sig": "hmDrew Brees2000,Fernando Mendoza2025,Kurtis Rourke2024,Tevin Coleman2014",
-   "more": {
-    "title": "Purdue and Indiana top-10 Heisman finishes (seasons with checked voting)",
-    "rows": [
-     "1st: Fernando Mendoza (IU) 2025",
-     "3rd: Drew Brees (PUR) 2000",
-     "6th: Antwaan Randle El (IU) 2001",
-     "7th: Tevin Coleman (IU) 2014",
-     "9th: Kurtis Rourke (IU) 2024"
-    ]
-   }
+   "B": [],
+   "sig": "tsrec11002018",
+   "bonus": "names"
   }
  ]
 }

@@ -89,7 +89,7 @@ export function genGameRank(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rn
     if (picks.length < 4) continue;
     return {
       type: "rank", label: "Rivalry Games", verified: SRC_VERIFIED, unit: "yds",
-      prompt: `Rank these single-game ${cat === "rush" ? "rushing" : "receiving"} performances in ${name(a)}–${name(b)} games, highest first.`,
+      prompt: `Rank these single-game ${cat === "rush" ? "rushing" : "receiving"} performances in ${name(a)}–${name(b)} games since ${pr.vsFrom ?? 2004}, highest first.`,
       items: picks.map(x => ({ label: `${x.p.name} (${x.school}) · ${x.g.season}${x.g.bowl ? " postseason" : ""}`, value: x.p.yds, school: x.school })),
       sig: "gr" + cat + picks.map(x => x.p.name + x.g.season).sort(),
       more: { title: `Top ${cat === "rush" ? "rushing" : "receiving"} games in this rivalry (box scores)`,
@@ -199,6 +199,14 @@ const fourNumbers = (rng: Rng, n: number, steps: number[]) => {
   return opts.length === 4 ? opts : null;
 };
 
+/** A team's leading passer in a game (the box score's top passing line), as a Name Them entry. */
+const passer = (g: RivalryGame, k: SchoolKey) => {
+  const p = (g.box?.[k] ?? []).filter(x => x.cat === "pass").sort((x, y) => y.yds - x.yds)[0];
+  return p && p.yds >= 50 ? { name: p.name, yards: p.yds, label: `${p.yds} passing yds, ${p.td} TD`, profile: `${name(k)} quarterback · ${p.yds} passing yards, ${p.td} TD in this game` } : null;
+};
+const yearEntry = (g: RivalryGame) => ({ name: `${name(winner(g))} ${Math.max(g.hp, g.ap)}, ${name(loser(g))} ${Math.min(g.hp, g.ap)}`, yards: 0, season: g.season,
+  label: `${name(winner(g))} ${Math.max(g.hp, g.ap)}–${Math.min(g.hp, g.ap)}`, profile: `${name(winner(g))} ${Math.max(g.hp, g.ap)}, ${name(loser(g))} ${Math.min(g.hp, g.ap)}` });
+
 /** Longest winning streak by either school in the series, 2000–2025 (consecutive meetings). */
 export function genStreakMC(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
   const gs = seriesGames(pr);
@@ -241,6 +249,9 @@ export function genMarginMC(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rn
     prompt: `From 2000 through 2025, what was the largest margin of victory in the ${name(a)}–${name(b)} series?`,
     options: opts.map(n => `${n} points`), answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
     reveal: `${top} points: ${name(w)} ${ws}, ${name(l)} ${ls} (${longDate(g.date)})${at.length > 1 ? `; also ${at.slice(0, -1).map(x => `${name(winner(x))} in ${x.season}`).join(", ")}` : ""}.`,
+    // bonuses (owner, Nov 2026): guess the year, then name the winning team's quarterback
+    ...(at.length === 1 ? { years: { prompt: "Bonus: name the year.", a, b, A: w === a ? [yearEntry(g)] : [], B: w === b ? [yearEntry(g)] : [] } } : {}),
+    ...(passer(g, w) ? { names: { prompt: `Bonus: name ${name(w)}'s quarterback in that game (its leading passer).`, a, b, A: w === a ? [passer(g, w)!] : [], B: w === b ? [passer(g, w)!] : [] } } : {}),
     sig: "mm" + top,
   };
 }
@@ -261,6 +272,8 @@ export function genHighScoreMC(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng:
     prompt: `In which year was the highest-scoring ${name(a)}–${name(b)} game from 2000 through 2025?`,
     options: [String(g.season), ...others.map(String)], answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
     reveal: `${g.season}: ${name(w)} ${ws}, ${name(l)} ${ls} (${top} points, ${longDate(g.date)}). Next highest: ${next.season}, ${name(winner(next))} ${Math.max(next.hp, next.ap)}–${Math.min(next.hp, next.ap)} (${tot(next)}).`,
+    // bonus (owner, Nov 2026): name each team's quarterback (leading passer)
+    ...(passer(g, a) && passer(g, b) ? { names: { prompt: "Bonus: name each team's quarterback in that game (its leading passer).", a, b, A: [passer(g, a)!], B: [passer(g, b)!] } } : {}),
     sig: "mh" + g.season,
   };
 }

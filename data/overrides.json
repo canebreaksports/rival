@@ -6,6 +6,61 @@
     "hvrushBryce Young2022,Derrick Henry2015,Kerryon Johnson2017,Trent Richardson2011"
    ],
    "why": "Owner: Mark Ingram 2009 replaces Bryce Young (curated Heisman ranking); the 2014 out-gained twist is curated"
+  },
+  "2026-11-27-tex-at-tamu": {
+   "skip": [
+    "mxydsIsaiah Spiller2021 rushing yards,Johnathan Graycareer yards from scrimmage,Josh Reynolds2014 receiving yards,Roschon Johnsoncareer rushing yards",
+    "grrushJorvorskie Lane2005,Marcel Reed2024,Tre Wisner2024,Tre Wisner2025"
+   ],
+   "why": "Owner review round 1 (Nov 24): replaced by hand-written versions",
+   "pin": [
+    "mm40"
+   ]
+  },
+  "2026-11-28-lou-at-uk": {
+   "skip": [
+    "grrushJutahn Mcclain2022,Kolby Smith2005,Lionel Gates2004,Rafael Little2007"
+   ],
+   "why": "Owner review round 1 (Nov 24): replaced by hand-written versions"
+  },
+  "2026-11-28-sc-at-clem": {
+   "skip": [
+    "grrushBobby Wallace2005,Cory Boyd2006,James Davis2005,Mike Davis2008"
+   ],
+   "why": "Owner review round 1 (Nov 24): replaced by hand-written versions"
+  },
+  "2026-11-28-msst-at-miss": {
+   "skip": [
+    "nrrushingAnthony Dixon,Brandon Bolden,Joe Gunn,Michael Haddix"
+   ],
+   "why": "Owner review round 1 (Nov 24): replaced by hand-written versions"
+  },
+  "2026-11-28-tenn-at-van": {
+   "skip": [
+    "nrreceivingDan Stricker,Denarius Moore,Jordan Matthews,Robert Meachem"
+   ],
+   "why": "Owner review round 1 (Nov 24): replaced by hand-written versions"
+  },
+  "2026-11-28-ou-at-miz": {
+   "skip": [
+    "urecTDJoe MixonAlbert Okwuegbunam",
+    "hmChase Daniel2007,Cody Schrader2023,Quentin Griffin2002,Sam Bradford2008"
+   ],
+   "why": "Owner review round 1 (Nov 24): replaced by hand-written versions",
+   "pin": [
+    "acheisman2000"
+   ]
+  },
+  "2026-11-28-usc-at-ucla": {
+   "skip": [
+    "mxydsJo'quavious Markscareer rushing yards,Sam Darnold2016 rushing yards,Tyler Vaughns2020 receiving yards,Zach Charbonnet2022 rushing yards"
+   ],
+   "why": "Owner review round 1 (Nov 24): replaced by hand-written versions"
+  },
+  "2026-11-28-asu-at-ariz": {
+   "pin": [
+    "mh2016"
+   ]
   }
  }
 }

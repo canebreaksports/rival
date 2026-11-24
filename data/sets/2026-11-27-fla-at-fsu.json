@@ -6,139 +6,146 @@
   "away": "FLA",
   "home": "FSU"
  },
- "generatedAt": "2026-11-24T02:16:15.387Z",
- "engine": 53,
+ "generatedAt": "2026-11-24T04:01:25.053Z",
+ "engine": 55,
  "questions": [
   {
-   "type": "mc",
-   "label": "Historic Day",
+   "type": "h2h",
+   "label": "Against Each Other",
    "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 30, 2013",
-    "winner": "FSU",
-    "loser": "FLA",
-    "ws": 37,
-    "ls": 7,
-    "venue": "Ben Hill Griffin Stadium"
+   "flip": true,
+   "prompt": "In Florida–Florida State games since 2004, who had more receiving yards against the other school?",
+   "A": {
+    "label": "Trevon Grimes (FLA) vs. Florida State",
+    "value": 132,
+    "school": "FLA"
    },
-   "prompt": "2013: No. 2 Florida State vs. Florida. Kelvin Benjamin caught 9 passes. How many receiving yards did he finish with?",
-   "options": [
-    "212",
-    "172",
-    "132",
-    "92"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    0,
-    1,
-    3
-   ],
-   "reveal": "212 receiving yards and 3 TD, the most by anyone in this rivalry since 2004 (box scores). Florida State won, 37–7.",
-   "sig": "xb2013-11-30Kelvin Benjamin"
-  },
-  {
-   "type": "rank",
-   "label": "Notables",
-   "verified": true,
-   "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
-   "items": [
-    {
-     "label": "Jabar Gaffney (Florida, 2000–01)",
-     "value": 2375,
-     "school": "FLA"
-    },
-    {
-     "label": "Craphonso Thorpe (Florida State, 2001–04)",
-     "value": 2153,
-     "school": "FSU"
-    },
-    {
-     "label": "Greg Carr (Florida State, 2005–08)",
-     "value": 2574,
-     "school": "FSU"
-    },
-    {
-     "label": "Dallas Baker (Florida, 2003–06)",
-     "value": 2236,
-     "school": "FLA"
-    }
-   ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"Florida Gators football statistical leaders\" career receiving yards table (revision 1385857120), which cites the school record book; fetched 2026-11-23; Wikipedia \"Florida State Seminoles football statistical leaders\" career receiving yards table (revision 1378376740), which cites the school record book; fetched 2026-11-23",
-   "sig": "nrreceivingCraphonso Thorpe,Dallas Baker,Greg Carr,Jabar Gaffney",
-   "names": {
-    "prompt": "Bonus: name the other 8 players in Florida and Florida State's combined top 10 for career receiving yards.",
-    "a": "FLA",
-    "b": "FSU",
-    "A": [
-     {
-      "name": "Carlos Alvarez",
-      "yards": 2563,
-      "label": "2,563 (1969–1971)",
-      "profile": "2,563 career receiving yards (1969–1971) · No. 7 on the combined list"
-     },
-     {
-      "name": "Andre Caldwell",
-      "yards": 2349,
-      "label": "2,349 (2003–2007)",
-      "profile": "2,349 career receiving yards (2003–2007) · No. 10 on the combined list"
-     }
-    ],
-    "B": [
-     {
-      "name": "Rashad Greene",
-      "yards": 3830,
-      "label": "3,830 (2011–2014)",
-      "profile": "3,830 career receiving yards (2011–2014) · No. 1 on the combined list"
-     },
-     {
-      "name": "Ron Sellers",
-      "yards": 3598,
-      "label": "3,598 (1966–1968)",
-      "profile": "3,598 career receiving yards (1966–1968) · No. 2 on the combined list"
-     },
-     {
-      "name": "Peter Warrick",
-      "yards": 3517,
-      "label": "3,517 (1996–1999)",
-      "profile": "3,517 career receiving yards (1996–1999) · No. 3 on the combined list"
-     },
-     {
-      "name": "E.G. Green",
-      "yards": 2920,
-      "label": "2,920 (1994–1997)",
-      "profile": "2,920 career receiving yards (1994–1997) · No. 4 on the combined list"
-     },
-     {
-      "name": "Kez McCorvey",
-      "yards": 2660,
-      "label": "2,660 (1991–1994)",
-      "profile": "2,660 career receiving yards (1991–1994) · No. 5 on the combined list"
-     },
-     {
-      "name": "Barry Smith",
-      "yards": 2392,
-      "label": "2,392 (1970–1972)",
-      "profile": "2,392 career receiving yards (1970–1972) · No. 8 on the combined list"
-     }
-    ]
+   "B": {
+    "label": "Kelvin Benjamin (FSU) vs. Florida",
+    "value": 212,
+    "school": "FSU"
    },
+   "unit": "receiving yds",
+   "note": "Trevon Grimes: 132 in 2 games. Kelvin Benjamin: 212 in 1 game.",
+   "sig": "vsrecKelvin Benjamin,Trevon Grimes",
    "more": {
-    "title": "Career receiving yards, Florida and Florida State (careers ending 2000 or later)",
+    "title": "Top receiving yards against the other school since 2004",
     "rows": [
-     "1. Rashad Greene (Florida State, 2011–14) 3,830",
-     "2. Greg Carr (Florida State, 2005–08) 2,574",
-     "3. Jabar Gaffney (Florida, 2000–01) 2,375",
-     "4. Andre Caldwell (Florida, 2003–07) 2,349",
-     "5. Travis Rudolph (Florida State, 2014–16) 2,311",
-     "6. Dallas Baker (Florida, 2003–06) 2,236",
-     "7. Craphonso Thorpe (Florida State, 2001–04) 2,153"
+     "1. Andre Jerome Caldwell (FLA) 242 in 3 games",
+     "2. Kelvin Benjamin (FSU) 212 in 1 game",
+     "3. Tamorrion Terry (FSU) 209 in 2 games",
+     "4. Chauncey Stovall (FSU) 181 in 1 game",
+     "5. Ricky Pearsall (FLA) 165 in 2 games",
+     "6. Chad Jackson (FLA) 162 in 2 games"
     ]
    }
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+   "A": {
+    "label": "Kyle Pitts (FLA TE)",
+    "value": 18,
+    "school": "FLA"
+   },
+   "B": {
+    "label": "Dalvin Cook (FSU RB)",
+    "value": 2,
+    "school": "FSU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Kyle Pitts 18 vs. Dalvin Cook 2.",
+   "sig": "urecTDDalvin CookKyle Pitts"
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "FLA",
+   "b": "FSU",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Florida and Florida State's combined top 10 single-season receiving yards (through 2025): which school has more seasons on the list?",
+   "A": [
+    {
+     "name": "Travis McGriff",
+     "yards": 1357,
+     "season": 1998,
+     "label": "1998: 1,357",
+     "profile": "1998 season, 1,357 receiving yards · No. 3 on the combined list"
+    },
+    {
+     "name": "Carlos Alvarez",
+     "yards": 1329,
+     "season": 1969,
+     "label": "1969: 1,329",
+     "profile": "1969 season, 1,329 receiving yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Reidel Anthony",
+     "yards": 1293,
+     "season": 1996,
+     "label": "1996: 1,293",
+     "profile": "1996 season, 1,293 receiving yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Jabar Gaffney",
+     "yards": 1191,
+     "season": 2001,
+     "label": "2001: 1,191",
+     "profile": "2001 season, 1,191 receiving yards · No. 10 on the combined list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Ron Sellers",
+     "yards": 1496,
+     "season": 1968,
+     "label": "1968: 1,496",
+     "profile": "1968 season, 1,496 receiving yards · No. 1 on the combined list"
+    },
+    {
+     "name": "Rashad Greene",
+     "yards": 1365,
+     "season": 2014,
+     "label": "2014: 1,365",
+     "profile": "2014 season, 1,365 receiving yards · No. 2 on the combined list"
+    },
+    {
+     "name": "Snoop Minnis",
+     "yards": 1340,
+     "season": 2000,
+     "label": "2000: 1,340",
+     "profile": "2000 season, 1,340 receiving yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Barry Smith",
+     "yards": 1243,
+     "season": 1972,
+     "label": "1972: 1,243",
+     "profile": "1972 season, 1,243 receiving yards · No. 7 on the combined list"
+    },
+    {
+     "name": "Peter Warrick",
+     "yards": 1232,
+     "season": 1998,
+     "label": "1998: 1,232",
+     "profile": "1998 season, 1,232 receiving yards · No. 8 on the combined list"
+    },
+    {
+     "name": "Ron Sellers",
+     "yards": 1228,
+     "season": 1967,
+     "label": "1967: 1,228",
+     "profile": "1967 season, 1,228 receiving yards · No. 9 on the combined list"
+    }
+   ],
+   "sig": "fsrec"
   },
   {
    "type": "count",
@@ -174,155 +181,6 @@
    "bonus": "names"
   },
   {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Florida–Florida State games, highest first.",
-   "items": [
-    {
-     "label": "Chris Rainey (FLA) · 2010",
-     "value": 73,
-     "school": "FLA"
-    },
-    {
-     "label": "Trey Benson (FSU) · 2022",
-     "value": 111,
-     "school": "FSU"
-    },
-    {
-     "label": "Percy Harvin (FLA) · 2007",
-     "value": 157,
-     "school": "FLA"
-    },
-    {
-     "label": "Jadan Baugh (FLA) · 2025",
-     "value": 266,
-     "school": "FLA"
-    }
-   ],
-   "sig": "grrushChris Rainey2010,Jadan Baugh2025,Percy Harvin2007,Trey Benson2022",
-   "more": {
-    "title": "Top rushing games in this rivalry (box scores)",
-    "rows": [
-     "1. Jadan Baugh (FLA) 2025: 266",
-     "2. Dalvin Cook (FSU) 2015: 183",
-     "3. Percy Harvin (FLA) 2007: 157",
-     "4. Dalvin Cook (FSU) 2016: 153",
-     "5. Dalvin Cook (FSU) 2014: 144",
-     "6. Mike Gillislee (FLA) 2012: 140",
-     "7. Kelvin Taylor (FLA) 2015: 136",
-     "8. Lamical Perine (FLA) 2018: 129"
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what's the longest winning streak by either school in the Florida–Florida State series?",
-   "options": [
-    "6 straight",
-    "3 straight",
-    "9 straight",
-    "5 straight"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    0,
-    3,
-    2
-   ],
-   "reveal": "6 straight: Florida won every meeting from 2004 through 2009.",
-   "sig": "msFLA2004"
-  },
-  {
-   "label": "Florida–Florida State",
-   "verified": true,
-   "sig": "kFlorida–Florida State0",
-   "type": "mc",
-   "pitted": true,
-   "prompt": "2021: Florida State at Florida. What was the final score?",
-   "options": [
-    "Florida 24, Florida State 21",
-    "Florida State 24, Florida 21",
-    "Florida 31, Florida State 25",
-    "Florida 24, Florida State 17"
-   ],
-   "answer": 0,
-   "reveal": "Florida 24, Florida State 21 (2021-11-27, Ben Hill Griffin Stadium).",
-   "order": [
-    0,
-    1,
-    2,
-    3
-   ]
-  },
-  {
-   "type": "count",
-   "label": "Since 2016",
-   "a": "FLA",
-   "b": "FSU",
-   "threshold": 12,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2016 through 2025, which school had more seasons with 12+ rushing touchdowns by one player?",
-   "A": [
-    {
-     "name": "Dameon Pierce",
-     "yards": 13,
-     "season": 2021,
-     "profile": "Running back · 2021: 574 rushing, 216 receiving yds, 13 rushing TD"
-    }
-   ],
-   "B": [
-    {
-     "name": "Dalvin Cook",
-     "yards": 19,
-     "season": 2016,
-     "profile": "Running back · 2016: 1,765 rushing, 488 receiving yds, 19 rushing TD"
-    },
-    {
-     "name": "Cam Akers",
-     "yards": 14,
-     "season": 2019,
-     "profile": "Running back · 2019: 1,144 rushing, 225 receiving yds, 14 rushing TD"
-    },
-    {
-     "name": "Trey Benson",
-     "yards": 14,
-     "season": 2023,
-     "profile": "Running back · 2023: 905 rushing, 227 receiving yds, 14 rushing TD"
-    }
-   ],
-   "sig": "tsrushTD122016",
-   "bonus": "names"
-  },
-  {
-   "label": "Florida–Florida State",
-   "verified": true,
-   "sig": "kFlorida–Florida State1",
-   "type": "mc",
-   "pitted": true,
-   "prompt": "2014: No. 1 Florida State beat Florida 24–19 to extend its winning streak to 28 games. How many interceptions did Jameis Winston, the reigning Heisman winner, throw?",
-   "options": [
-    "4",
-    "0",
-    "1",
-    "2"
-   ],
-   "answer": 0,
-   "reveal": "🔄 Twist: a career-high 4, three of them in the first quarter. Florida State won anyway.",
-   "order": [
-    0,
-    2,
-    3,
-    1
-   ]
-  },
-  {
    "type": "mc",
    "label": "Game Story",
    "verified": true,
@@ -338,16 +196,16 @@
    "prompt": "The 2012 Florida–Florida State game was a top-10 showdown (No. 6 vs. No. 10), but the teams combined for how many rushing yards?",
    "options": [
     "356",
-    "316",
     "276",
+    "316",
     "396"
    ],
    "answer": 0,
    "order": [
-    3,
+    0,
     1,
     2,
-    0
+    3
    ],
    "reveal": "356: Florida 244, Florida State 112. 75+ rushing yards: Mike Gillislee (Florida) 140, Matt Jones (Florida) 81.",
    "names": {
@@ -374,52 +232,151 @@
   },
   {
    "type": "mc",
-   "label": "Rankings",
+   "label": "Historic Day",
    "verified": true,
    "pitted": true,
-   "prompt": "Of the 25 Florida–Florida State games from 2000 through 2025, how many featured a team ranked No. 1 in the AP poll?",
+   "game": {
+    "date": "Nov 29, 2025",
+    "winner": "FLA",
+    "loser": "FSU",
+    "ws": 40,
+    "ls": 21,
+    "venue": "Ben Hill Griffin Stadium"
+   },
+   "prompt": "2025: Florida vs. Florida State. Jadan Baugh carried 38 times. How many rushing yards did he finish with?",
    "options": [
-    "2",
-    "4",
-    "0",
-    "3"
+    "266",
+    "226",
+    "186",
+    "146"
    ],
    "answer": 0,
    "order": [
+    3,
+    0,
+    2,
+    1
+   ],
+   "reveal": "266 rushing yards and 2 TD, the most by anyone in this rivalry since 2004 (box scores). Florida won, 40–21.",
+   "sig": "xb2025-11-29Jadan Baugh"
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Emmitt Smith (Florida)",
+     "value": 3928,
+     "school": "FLA"
+    },
+    {
+     "label": "Larry Key (Florida State)",
+     "value": 2953,
+     "school": "FSU"
+    },
+    {
+     "label": "Fred Taylor (Florida)",
+     "value": 3075,
+     "school": "FLA"
+    },
+    {
+     "label": "Dalvin Cook (Florida State)",
+     "value": 4464,
+     "school": "FSU"
+    }
+   ],
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Florida Gators football statistical leaders\" career rushing yards table (revision 1385857120), which cites the school record book; fetched 2026-11-17; Wikipedia \"Florida State Seminoles football statistical leaders\" career rushing yards table (revision 1378376740), which cites the school record book; fetched 2026-11-17",
+   "sig": "nrrushingDalvin Cook,Emmitt Smith,Fred Taylor,Larry Key",
+   "more": {
+    "title": "Career rushing yards, Florida and Florida State (school top 10s)",
+    "rows": [
+     "1. Dalvin Cook (Florida State) 4,464",
+     "2. Errict Rhett (Florida) 4,163",
+     "3. Warrick Dunn (Florida State) 3,959",
+     "4. Emmitt Smith (Florida) 3,928",
+     "5. Greg Allen (Florida State) 3,769",
+     "6. Neal Anderson (Florida) 3,234",
+     "7. Travis Minor (Florida State) 3,218",
+     "8. Fred Taylor (Florida) 3,075",
+     "9. Earnest Graham (Florida) 3,065",
+     "10. Larry Key (Florida State) 2,953"
+    ]
+   }
+  },
+  {
+   "label": "Florida–Florida State",
+   "verified": true,
+   "sig": "kFlorida–Florida State0",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "2021: Florida State at Florida. What was the final score?",
+   "options": [
+    "Florida 24, Florida State 21",
+    "Florida State 24, Florida 21",
+    "Florida 31, Florida State 25",
+    "Florida 24, Florida State 17"
+   ],
+   "answer": 0,
+   "reveal": "Florida 24, Florida State 21 (2021-11-27, Ben Hill Griffin Stadium).",
+   "order": [
+    1,
+    3,
+    2,
+    0
+   ]
+  },
+  {
+   "type": "count",
+   "label": "Since 2015",
+   "a": "FLA",
+   "b": "FSU",
+   "threshold": 1500,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2015 through 2025, which school had more 1,500-yard rushing seasons?",
+   "A": [],
+   "B": [
+    {
+     "name": "Dalvin Cook",
+     "yards": 1691,
+     "season": 2015,
+     "profile": "Running back · 2015: 1,691 rushing, 244 receiving yds · also on this list in 2016"
+    },
+    {
+     "name": "Dalvin Cook",
+     "yards": 1765,
+     "season": 2016,
+     "profile": "Running back · 2016: 1,765 rushing, 488 receiving yds · also on this list in 2015"
+    }
+   ],
+   "sig": "tsrush15002015",
+   "bonus": "names"
+  },
+  {
+   "label": "Florida–Florida State",
+   "verified": true,
+   "sig": "kFlorida–Florida State1",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "2014: No. 1 Florida State beat Florida 24–19 to extend its winning streak to 28 games. How many interceptions did Jameis Winston, the reigning Heisman winner, throw?",
+   "options": [
+    "4",
+    "0",
+    "1",
+    "2"
+   ],
+   "answer": 0,
+   "reveal": "🔄 Twist: a career-high 4, three of them in the first quarter. Florida State won anyway.",
+   "order": [
+    3,
     1,
     2,
-    0,
-    3
-   ],
-   "reveal": "2: 2009 (No. 1 Florida 37, Florida State 10) · 2014 (No. 1 Florida State 24, Florida 19).",
-   "info": {
-    "title": "Which poll?",
-    "text": "The AP Top 25 in force the week of each game; bowl and championship games use the last regular-season poll. Tied teams share a rank."
-   },
-   "years": {
-    "prompt": "Name the 2 seasons.",
-    "a": "FLA",
-    "b": "FSU",
-    "A": [
-     {
-      "name": "No. 1 Florida 37, Florida State 10",
-      "yards": 0,
-      "season": 2009,
-      "label": "No. 1 Florida 37, Florida State 10",
-      "profile": "No. 1 Florida 37, Florida State 10"
-     }
-    ],
-    "B": [
-     {
-      "name": "No. 1 Florida State 24, Florida 19",
-      "yards": 0,
-      "season": 2014,
-      "label": "No. 1 Florida State 24, Florida 19",
-      "profile": "No. 1 Florida State 24, Florida 19"
-     }
-    ]
-   },
-   "sig": "rkn1"
+    0
+   ]
   }
  ]
 }

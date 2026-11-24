@@ -22,16 +22,24 @@ for a, b in PAIRS:
   n = len(close)
   if 2 <= n <= 12:
     opts = [n] + [x for x in [n - 2, n - 1, n + 1, n + 2, n + 3] if x >= 0 and x != n][:3]
-    ent = lambda g: {"name": line(g), "yards": 0, "season": g['season'], "label": line(g), "profile": line(g)}
+    meet = lambda g: f"{tag(p, g, g['away'])} at {tag(p, g, g['home'])}{' (OT)' if ot(p, g) else ''}"  # no score or winner: those would give away the classic finish
+    ent = lambda g: {"name": meet(g), "yards": 0, "season": g['season'], "label": meet(g), "profile": meet(g)}
     out.append({"type": "mc", "prompt": f"Of the {len(gs)} {S[a]}–{S[b]} games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
       "options": [str(x) for x in opts], "answer": 0,
-      "reveal": f"{n}: " + " · ".join(f"{g['season']} {line(g)}" for g in close) + ".",
+      "reveal": f"{n}: " + " · ".join(f"{g['season']} ({meet(g)})" for g in close) + ".",
       "years": {"prompt": f"Name the {n} seasons.", "a": a, "b": b, "A": [ent(g) for g in close if wl(g)[0] == a], "B": [ent(g) for g in close if wl(g)[0] == b]},
       "source": SRC, "verified": True, "marquee": True})
   def score(g):
     w, l = wl(g); walk = any(x['season'] == g['season'] for x in W.get(p, {}).get('list', []))
     return (2 if rank(p, g, w) and rank(p, g, l) else 1 if rank(p, g, w) or rank(p, g, l) else 0) + (1 if walk else 0) + (1 if rank(p, g, l) and not rank(p, g, w) else 0) + (1 if abs(g['hp'] - g['ap']) <= 1 else 0)
-  if close:
+  if p == "ARK|LSU":
+    out.append({"type": "mc", "prompt": "2007: Arkansas won at No. 1 LSU, 50–48, a game that went to overtime. How many overtimes did it take?",
+      "options": ["3", "1", "2", "4"], "answer": 0, "reveal": "Three overtimes. Darren McFadden ran for 206 yards; Arkansas scored 22 points in overtime to LSU's 20.",
+      "source": "Wikipedia \"2007 LSU Tigers football team\" (revision 1367377976) and \"2007 Arkansas Razorbacks football team\" (revision 1361825609) schedules: 48–50 / 50–48, 3OT; overtime points: ESPN line score, event 273270099; McFadden: data/rivalry.json (ESPN box)",
+      "verified": True, "marquee": True})
+    close_classic = False
+  else: close_classic = True
+  if close and close_classic:
     g = max(close, key=lambda g: (score(g), g['season'])); w, l = wl(g); ws, ls = max(g['hp'], g['ap']), min(g['hp'], g['ap'])
     opts = [f"{S[w]} {ws}, {S[l]} {ls}", f"{S[l]} {ws}, {S[w]} {ls}", f"{S[w]} {ws + 7}, {S[l]} {ls + 4}", f"{S[w]} {ws}, {S[l]} {max(0, ls - 4)}"]
     if len(set(opts)) == 4:
@@ -81,6 +89,79 @@ EXTRA = {
    "options": ["16th", "14th", "15th", "17th"], "answer": 0, "reveal": "His 16th. He also stripped the ball at the Georgia 1 to stop Georgia Tech's first possession.",
    "source": recap(323290061, "grabbing his 16th career interception to tie Jake Scott's school record"), "verified": True, "marquee": True}],
 }
+# ---- owner review round (Nov 2026): swaps and bonuses ----
+RB = "data/rivalry.json (box scores: CollegeFootballData /games/players 2012+, ESPN game summaries before)"
+REC_BOOK = lambda pages: "School record books via Wikipedia statistical leaders pages (" + pages + "), data/season-records.json / data/career-*.json"
+def more(pk, items): EXTRA.setdefault(pk, []).extend(items)
+more("TAMU|TEX", [
+ {"type": "rank", "prompt": "Rank these Texas and Texas A&M seasons by yards, highest first.",
+  "items": [{"label": "Trayveon Williams (Texas A&M, 2018) · rushing yards", "value": 1760, "school": "TAMU"},
+            {"label": "Earl Campbell (Texas, 1977) · rushing yards", "value": 1744, "school": "TEX"},
+            {"label": "Jordan Shipley (Texas, 2009) · receiving yards", "value": 1485, "school": "TEX"},
+            {"label": "Kyler Murray (Texas A&M, 2015) · passing + rushing yards", "value": 1021, "school": "TAMU"}],
+  "unit": "yds", "note": "Williams 1,760 and Campbell 1,744 are their schools' record-book seasons (Williams is A&M's single-season record). Murray, as an A&M freshman: 686 passing + 335 rushing.",
+  "source": REC_BOOK("Texas A&M, Texas") + "; Kyler Murray 2015: CollegeFootballData /stats/player/season (686 passing, 335 rushing yards)", "verified": True, "marquee": True},
+ {"type": "mc", "prompt": "2009: No. 3 Texas won at Texas A&M, 49–39. The game's leading rusher ran for 175 yards. Who was it?",
+  "options": ["Colt McCoy (Texas QB)", "Tre' Newton (Texas RB)", "Christine Michael (Texas A&M RB)", "Jerrod Johnson (Texas A&M QB)"], "answer": 0,
+  "reveal": "Quarterback Colt McCoy, 175 rushing yards. Also over 75: Tre' Newton 107, Jerrod Johnson 97, Christine Michael 83.",
+  "source": RB + " (2009 box: McCoy 175, Newton 107, Johnson 97, Michael 83); AP rank: data/game-ranks.json", "verified": True, "marquee": True}])
+more("LOU|UK", [
+ {"type": "rank", "prompt": "Rank these single-game rushing performances in Louisville–Kentucky games since 2004, highest first.",
+  "items": [{"label": "Benny Snell Jr. (Kentucky, 2017)", "value": 211, "school": "UK"}, {"label": "Lamar Jackson (Louisville, 2015)", "value": 186, "school": "LOU"},
+            {"label": "Rafael Little (Kentucky, 2007)", "value": 151, "school": "UK"}, {"label": "Lionel Gates (Louisville, 2004)", "value": 112, "school": "LOU"}],
+  "unit": "yds", "note": "Snell: 29 carries, 211 yards, 2 TD (2017). Jackson: 17 carries, 186 yards, 2 TD (2015).",
+  "source": RB, "verified": True, "marquee": True}])
+more("CLEM|SC", [
+ {"type": "rank", "prompt": "Rank these single-game rushing performances in South Carolina–Clemson games since 2004, highest first.",
+  "items": [{"label": "Wayne Gallman (Clemson, 2014)", "value": 191, "school": "CLEM"}, {"label": "LaNorris Sellers (South Carolina, 2024)", "value": 166, "school": "SC"},
+            {"label": "C.J. Spiller (Clemson, 2006)", "value": 155, "school": "CLEM"}, {"label": "Cory Boyd (South Carolina, 2006)", "value": 106, "school": "SC"}],
+  "unit": "yds", "note": "Gallman: 27 carries, 191 yards (2014). Sellers: 16 carries, 166 yards, 2 TD (2024). Spiller: 10 carries, 155 yards, 2 TD (2006). Boyd: 16 carries, 106 yards (2006).",
+  "source": RB, "verified": True, "marquee": True}])
+more("MISS|MSST", [
+ {"type": "rank", "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
+  "items": [{"label": "Anthony Dixon (Mississippi State)", "value": 3994, "school": "MSST"}, {"label": "Jerious Norwood (Mississippi State)", "value": 3212, "school": "MSST"},
+            {"label": "Deuce McAllister (Ole Miss)", "value": 3060, "school": "MISS"}, {"label": "Brandon Bolden (Ole Miss)", "value": 2604, "school": "MISS"}],
+  "unit": "yds", "note": "Career totals from each school's record book.",
+  "names": {"prompt": "Bonus: name the other 6 players in Mississippi State and Ole Miss's combined top 10 for career rushing yards.", "a": "MSST", "b": "MISS",
+   "A": [{"name": "Nick Fitzgerald", "yards": 3607, "label": "3,607", "profile": "Mississippi State QB · 3,607 career rushing yards · No. 2 on the combined list"},
+         {"name": "Walter Packer", "yards": 2820, "label": "2,820", "profile": "Mississippi State · 2,820 career rushing yards · No. 5"},
+         {"name": "Michael Davis", "yards": 2721, "label": "2,721", "profile": "Mississippi State · 2,721 career rushing yards · No. 8"}],
+   "B": [{"name": "Joe Gunn", "yards": 2749, "label": "2,749", "profile": "Ole Miss · 2,749 career rushing yards · No. 6"},
+         {"name": "Quinshon Judkins", "yards": 2725, "label": "2,725", "profile": "Ole Miss · 2,725 career rushing yards · No. 7"},
+         {"name": "Kayo Dottley", "yards": 2654, "label": "2,654", "profile": "Ole Miss · 2,654 career rushing yards · No. 9"}]},
+  "source": REC_BOOK("Mississippi State, Ole Miss career rushing"), "verified": True, "marquee": True}])
+more("TENN|VAN", [
+ {"type": "rank", "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
+  "items": [{"label": "Jordan Matthews (Vanderbilt, 2010–13)", "value": 3759, "school": "VAN"}, {"label": "Dan Stricker (Vanderbilt, 1999–02)", "value": 2880, "school": "VAN"},
+            {"label": "Joey Kent (Tennessee, 1993–96)", "value": 2814, "school": "TENN"}, {"label": "Jauan Jennings (Tennessee, 2015–19)", "value": 2153, "school": "TENN"}],
+  "unit": "yds", "note": "Career totals from each school's record book.", "source": REC_BOOK("Tennessee, Vanderbilt career receiving"), "verified": True, "marquee": True}])
+more("MIZ|OU", [
+ {"type": "h2h", "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+  "A": {"label": "Albert Okwuegbunam (Missouri TE)", "value": 23, "school": "MIZ"}, "B": {"label": "Dede Westbrook (Oklahoma WR)", "value": 21, "school": "OU"}, "unit": "TD",
+  "upset": True, "note": "🚨 Upset: tight end Albert Okwuegbunam 23, Biletnikoff winner Dede Westbrook 21 (4 in 2015, 17 in 2016).",
+  "source": "CollegeFootballData /stats/player/season (Okwuegbunam 11/6/6 at Missouri 2017–19; Westbrook 4/17 at Oklahoma 2015–16)", "verified": True, "marquee": True},
+ {"type": "rank", "prompt": "Rank these Oklahoma and Missouri pass catchers by career receiving yards at their school, highest first.",
+  "items": [{"label": "Ryan Broyles (Oklahoma, 2008–11)", "value": 4586, "school": "OU"}, {"label": "Sterling Shepard (Oklahoma, 2012–15)", "value": 3482, "school": "OU"},
+            {"label": "Danario Alexander (Missouri, 2006–09)", "value": 2778, "school": "MIZ"}, {"label": "Jeremy Maclin (Missouri, 2007–08)", "value": 2315, "school": "MIZ"}],
+  "unit": "yds", "note": "Career totals from each school's record book. Maclin did it in two seasons.", "source": REC_BOOK("Oklahoma, Missouri career receiving"), "verified": True, "marquee": True}])
+more("UCLA|USC", [
+ {"type": "rank", "prompt": "Rank these USC and UCLA seasons by yards, highest first.",
+  "items": [{"label": "Reggie Bush (USC, 2005) · rushing yards", "value": 1740, "school": "USC"}, {"label": "Marqise Lee (USC, 2012) · receiving yards", "value": 1721, "school": "USC"},
+            {"label": "Paul Perkins (UCLA, 2014) · rushing yards", "value": 1575, "school": "UCLA"}, {"label": "Freddie Mitchell (UCLA, 2000) · receiving yards", "value": 1494, "school": "UCLA"}],
+  "unit": "yds", "note": "Single seasons from each school's record book.", "source": REC_BOOK("USC, UCLA single season"), "verified": True, "marquee": True}])
+# bonuses on existing recap questions
+for it in EXTRA["MICH|OSU"]:
+  if "Gholston" in it.get("prompt", ""):
+    it["names"] = {"prompt": "Bonus: name the game's leading rusher.", "a": "MICH", "b": "OSU", "A": [],
+      "B": [{"name": "Chris Wells", "yards": 222, "label": "39 carries, 222 yds, 2 TD", "profile": "Ohio State RB · 39 carries, 222 yards, 2 TD (career high)"}]}
+    it["source"] += "; Chris Wells 222 yards: same recap and " + RB
+for it in EXTRA["TENN|VAN"]:
+  if "53" in it.get("reveal", ""):
+    it["names"] = {"prompt": "Bonus: name Tennessee's quarterback.", "a": "TENN", "b": "VAN", "A": [{"name": "Joshua Dobbs", "yards": 53, "label": "11 of 19, 53 yds, 2 INT", "profile": "Tennessee QB · 11 of 19 for 53 yards, 2 interceptions"}], "B": []}
+for it in EXTRA["MISS|MSST"]:
+  if "last chance" in it.get("prompt", ""):
+    it["options"] = ["A fumble in the end zone", "An interception", "A missed field goal", "A turnover on downs"]
+
 d = json.load(open('data/curated.json'))
 for a, b in PAIRS:
   p = pk(a, b)

@@ -87,8 +87,11 @@ export function genAwardCount(h: HonorsData, a: SchoolKey, b: SchoolKey, rng: Rn
     if (all.length >= 2 && all.length <= 14) opts.push({ key: null, from });
     for (const aw of h.awards) { const n = all.filter(w => w.award === aw.key).length; if (n >= 2 && n <= 10) opts.push({ key: aw.key, from }) }
   }
-  if (!opts.length) return null;
-  const { key, from } = pick(rng, opts);
+  // a school with none in a shorter window: use the widest one instead (owner, Nov 2026: "expand the time period")
+  const n = (s: SchoolKey, key: string | null, from: number) => h.wins.filter(w => w.school === s && w.year >= from && (!key || w.award === key)).length;
+  const wide = opts.filter(o => o.from === 2000 || (n(a, o.key, o.from) > 0 && n(b, o.key, o.from) > 0) || !opts.some(x => x.key === o.key && x.from === 2000));
+  if (!wide.length) return null;
+  const { key, from } = pick(rng, wide);
   const list = (s: SchoolKey): CountEntry[] => h.wins.filter(w => w.school === s && w.year >= from && (!key || w.award === key))
     .map(w => ({ name: w.name, yards: w.year, season: w.year, label: key ? (w.pos || "winner") : awardName(w.award),
       profile: [w.pos, `won the ${awardName(w.award)} (${h.awards.find(x => x.key === w.award)?.for ?? ""})`].filter(Boolean).join(" · ") }));
@@ -156,7 +159,7 @@ export function genHeismanCount(h: HonorsData, a: SchoolKey, b: SchoolKey, rng: 
 
 export function genHeismanMC(h: HonorsData, a: SchoolKey, b: SchoolKey, rng: Rng): Question | null {
   // Options are specific seasons (player + year), each a checked row, so the answer can't hinge on a season we lack.
-  const pool = h.heisman.filter(v => v.school === a || v.school === b);
+  const pool = h.heisman.filter(v => (v.school === a || v.school === b) && v.place > 1); // no winners: they make it obvious (owner, Nov 2026)
   for (let t = 0; t < 10; t++) {
     const picks: HeismanVote[] = [];
     const ok = (p: HeismanVote) => !picks.some(x => x.name === p.name || x.place === p.place);

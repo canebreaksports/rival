@@ -62,7 +62,8 @@ export function formatOf(q: Question): string {
     case "h2h": return "Head to head: pick 1 of 2";
     case "duel": return "Blind stat duel: pick Player X or Y";
     case "cross": return "Multiple choice: pick 1 of 4";
-    case "mc": return `Multiple choice: pick 1 of ${q.options.length}` + (q.years ? ", then Name the Years bonus (one year at a time, 3 misses, hints −10)" : q.names ? ", then Name Them bonus (one name at a time, 3 misses, hints −10)" : "");
+    case "mc": return `Multiple choice: pick 1 of ${q.options.length}` + (q.years && q.names ? ", then two bonuses: Name the Year, then Name Them (3 misses each, hints −10)"
+      : q.years ? ", then Name the Years bonus (one year at a time, 3 misses, hints −10)" : q.names ? ", then Name Them bonus (one name at a time, 3 misses, hints −10)" : "");
   }
 }
 

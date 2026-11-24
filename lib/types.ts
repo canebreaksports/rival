@@ -40,8 +40,8 @@ export type CuratedItem = Sourced & (
   | { type: "duel"; year: number; stat: string; aSchool: SchoolKey; aName: string; bName: string; A: { big: string; sm: string }; B: { big: string; sm: string } }
   | { type: "cross"; prompt: string; options: string[]; answer: number; reveal: string }
   | { type: "mc"; prompt: string; options: string[]; answer: number; reveal: string; game?: GameBox; years?: YearsBonus; names?: YearsBonus }
-  | { type: "rank"; prompt: string; items: { label: string; value: number }[]; unit: string; trap?: boolean; note?: string }
-  | { type: "h2h"; prompt: string; A: { label: string; value: number }; B: { label: string; value: number }; unit: string }
+  | { type: "rank"; prompt: string; items: { label: string; value: number; school?: SchoolKey }[]; unit: string; trap?: boolean; note?: string; names?: YearsBonus }
+  | { type: "h2h"; prompt: string; A: { label: string; value: number; school?: SchoolKey }; B: { label: string; value: number; school?: SchoolKey }; unit: string; note?: string; upset?: boolean }
 );
 export interface Matchup { a: SchoolKey; b: SchoolKey; name: string; items: CuratedItem[] }
 

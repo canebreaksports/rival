@@ -6,9 +6,39 @@
   "away": "LOU",
   "home": "UK"
  },
- "generatedAt": "2026-11-24T02:16:16.180Z",
- "engine": 53,
+ "generatedAt": "2026-11-24T04:01:25.756Z",
+ "engine": 55,
  "questions": [
+  {
+   "type": "mc",
+   "label": "Twist",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 25, 2023",
+    "winner": "UK",
+    "loser": "LOU",
+    "ws": 38,
+    "ls": 31,
+    "venue": "L&N Federal Credit Union Stadium"
+   },
+   "prompt": "The 2023 Louisville–Kentucky game went to Kentucky, 38–31, over No. 9 Louisville. Which team gained more total yards, and by how much?",
+   "options": [
+    "Louisville by 114",
+    "Kentucky by 114",
+    "Louisville by 60",
+    "Kentucky by 60"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    1,
+    0,
+    2
+   ],
+   "reveal": "🔄 Twist: Louisville out-gained Kentucky 403 to 289 and still lost. (Louisville 161 rushing, 242 passing; Kentucky 83 rushing, 206 passing.)",
+   "sig": "xo2023-11-25"
+  },
   {
    "type": "mc",
    "label": "Historic Day",
@@ -38,6 +68,40 @@
    ],
    "reveal": "223 receiving yards and 1 TD, the most by anyone in this rivalry since 2004 (box scores). Louisville still lost, 40–34.",
    "sig": "xb2007-09-15Harry Douglas"
+  },
+  {
+   "type": "count",
+   "label": "Since 2019",
+   "a": "LOU",
+   "b": "UK",
+   "threshold": 1300,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2019 through 2025, which school had more 1,300-yard rushing seasons?",
+   "A": [
+    {
+     "name": "Javian Hawkins",
+     "yards": 1525,
+     "season": 2019,
+     "profile": "Running back · 2019: 1,525 rushing, 58 receiving yds"
+    }
+   ],
+   "B": [
+    {
+     "name": "Lynn Bowden Jr.",
+     "yards": 1468,
+     "season": 2019,
+     "profile": "Wide receiver · 2019: 1,468 rushing, 348 receiving yds"
+    },
+    {
+     "name": "Chris Rodriguez Jr.",
+     "yards": 1379,
+     "season": 2021,
+     "profile": "Running back · 2021: 1,379 rushing, 61 receiving yds"
+    }
+   ],
+   "sig": "tsrush13002019",
+   "bonus": "names"
   },
   {
    "type": "count",
@@ -124,36 +188,6 @@
     }
    ],
    "sig": "fsrec"
-  },
-  {
-   "type": "mc",
-   "label": "Twist",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 25, 2023",
-    "winner": "UK",
-    "loser": "LOU",
-    "ws": 38,
-    "ls": 31,
-    "venue": "L&N Federal Credit Union Stadium"
-   },
-   "prompt": "The 2023 Louisville–Kentucky game went to Kentucky, 38–31, over No. 9 Louisville. Which team gained more total yards, and by how much?",
-   "options": [
-    "Louisville by 114",
-    "Kentucky by 114",
-    "Louisville by 60",
-    "Kentucky by 60"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    1,
-    0,
-    2
-   ],
-   "reveal": "🔄 Twist: Louisville out-gained Kentucky 403 to 289 and still lost. (Louisville 161 rushing, 242 passing; Kentucky 83 rushing, 206 passing.)",
-   "sig": "xo2023-11-25"
   },
   {
    "type": "rank",
@@ -260,47 +294,35 @@
    }
   },
   {
-   "type": "rank",
-   "label": "Rivalry Games",
+   "label": "Louisville–Kentucky",
    "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Louisville–Kentucky games, highest first.",
+   "sig": "kLouisville–Kentucky2",
+   "type": "rank",
+   "prompt": "Rank these single-game rushing performances in Louisville–Kentucky games since 2004, highest first.",
    "items": [
     {
-     "label": "Lionel Gates (LOU) · 2004",
-     "value": 112,
-     "school": "LOU"
-    },
-    {
-     "label": "Jutahn Mcclain (UK) · 2022",
-     "value": 50,
+     "label": "Benny Snell Jr. (Kentucky, 2017)",
+     "value": 211,
      "school": "UK"
     },
     {
-     "label": "Kolby Smith (LOU) · 2005",
-     "value": 76,
+     "label": "Lamar Jackson (Louisville, 2015)",
+     "value": 186,
      "school": "LOU"
     },
     {
-     "label": "Rafael Little (UK) · 2007",
+     "label": "Rafael Little (Kentucky, 2007)",
      "value": 151,
      "school": "UK"
+    },
+    {
+     "label": "Lionel Gates (Louisville, 2004)",
+     "value": 112,
+     "school": "LOU"
     }
    ],
-   "sig": "grrushJutahn Mcclain2022,Kolby Smith2005,Lionel Gates2004,Rafael Little2007",
-   "more": {
-    "title": "Top rushing games in this rivalry (box scores)",
-    "rows": [
-     "1. Lynn Bowden Jr. (UK) 2019: 284",
-     "2. Benny Snell Jr. (UK) 2017: 211",
-     "3. Lamar Jackson (LOU) 2015: 186",
-     "4. Isaac Brown (LOU) 2024: 178",
-     "5. Lamar Jackson (LOU) 2016: 171",
-     "6. Lamar Jackson (LOU) 2017: 156",
-     "7. Bilal Powell (LOU) 2010: 153",
-     "8. Rafael Little (UK) 2007: 151"
-    ]
-   }
+   "unit": "yds",
+   "note": "Snell: 29 carries, 211 yards, 2 TD (2017). Jackson: 17 carries, 186 yards, 2 TD (2015)."
   },
   {
    "type": "mc",
@@ -349,40 +371,6 @@
     1,
     2
    ]
-  },
-  {
-   "type": "count",
-   "label": "Since 2019",
-   "a": "LOU",
-   "b": "UK",
-   "threshold": 1300,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2019 through 2025, which school had more 1,300-yard rushing seasons?",
-   "A": [
-    {
-     "name": "Javian Hawkins",
-     "yards": 1525,
-     "season": 2019,
-     "profile": "Running back · 2019: 1,525 rushing, 58 receiving yds"
-    }
-   ],
-   "B": [
-    {
-     "name": "Lynn Bowden Jr.",
-     "yards": 1468,
-     "season": 2019,
-     "profile": "Wide receiver · 2019: 1,468 rushing, 348 receiving yds"
-    },
-    {
-     "name": "Chris Rodriguez Jr.",
-     "yards": 1379,
-     "season": 2021,
-     "profile": "Running back · 2021: 1,379 rushing, 61 receiving yds"
-    }
-   ],
-   "sig": "tsrush13002019",
-   "bonus": "names"
   },
   {
    "type": "count",

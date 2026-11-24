@@ -6,62 +6,230 @@
   "away": "OU",
   "home": "MIZ"
  },
- "generatedAt": "2026-11-24T02:16:16.978Z",
- "engine": 53,
+ "generatedAt": "2026-11-24T04:01:26.352Z",
+ "engine": 55,
  "questions": [
   {
-   "type": "count",
-   "label": "Awards",
-   "a": "OU",
-   "b": "MIZ",
-   "threshold": 0,
+   "type": "mc",
+   "label": "Game Story",
    "verified": true,
    "pitted": true,
-   "info": {
-    "title": "What is the Heisman Trophy?",
-    "text": "The Heisman Trophy is given each year to college football's most outstanding player."
+   "game": {
+    "date": "Dec 1, 2007",
+    "winner": "OU",
+    "loser": "MIZ",
+    "ws": 38,
+    "ls": 17,
+    "venue": "Alamodome"
    },
-   "prompt": "From 2010 through 2025, which school had more Heisman Trophy winners?",
-   "A": [
-    {
-     "name": "Baker Mayfield",
-     "yards": 2017,
-     "season": 2017,
-     "label": "QB",
-     "profile": "QB · won the Heisman Trophy (most outstanding player)"
-    },
-    {
-     "name": "Kyler Murray",
-     "yards": 2018,
-     "season": 2018,
-     "label": "QB",
-     "profile": "QB · won the Heisman Trophy (most outstanding player)"
-    }
+   "prompt": "The 2007 Oklahoma–Missouri game was a top-10 showdown (No. 1 vs. No. 9), but the teams combined for how many rushing yards?",
+   "options": [
+    "264",
+    "324",
+    "234",
+    "294"
    ],
-   "B": [],
-   "sig": "acheisman2010",
-   "bonus": "names"
+   "answer": 0,
+   "order": [
+    1,
+    2,
+    3,
+    0
+   ],
+   "reveal": "264: Oklahoma 166, Missouri 98. 60+ rushing yards: Allen Patrick (Oklahoma) 88, Chris Brown (Oklahoma) 71.",
+   "names": {
+    "prompt": "Bonus: name everyone with 60+ rushing yards in this game.",
+    "a": "OU",
+    "b": "MIZ",
+    "A": [
+     {
+      "name": "Allen Patrick",
+      "yards": 88,
+      "label": "88 yds on 13 carries, 1 TD",
+      "profile": "Oklahoma · 88 rushing yards on 13 carries, 1 TD in this game"
+     },
+     {
+      "name": "Chris Brown",
+      "yards": 71,
+      "label": "71 yds on 23 carries, 2 TD",
+      "profile": "Oklahoma · 71 rushing yards on 23 carries, 2 TD in this game"
+     }
+    ],
+    "B": []
+   },
+   "sig": "gs2007-12-01rush"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
+   "label": "Oklahoma–Missouri",
    "verified": true,
-   "flip": true,
+   "sig": "kOklahoma–Missouri0",
+   "type": "h2h",
    "prompt": "Who had more college receiving touchdowns (at the school shown)?",
    "A": {
-    "label": "Albert Okwuegbunam (MIZ TE)",
+    "label": "Albert Okwuegbunam (Missouri TE)",
     "value": 23,
     "school": "MIZ"
    },
    "B": {
-    "label": "Joe Mixon (OU RB)",
-    "value": 9,
+    "label": "Dede Westbrook (Oklahoma WR)",
+    "value": 21,
     "school": "OU"
    },
-   "unit": "",
-   "note": "🚨 Upset: Albert Okwuegbunam 23 vs. Joe Mixon 9.",
-   "sig": "urecTDJoe MixonAlbert Okwuegbunam"
+   "unit": "TD",
+   "flip": false,
+   "note": "🚨 Upset: tight end Albert Okwuegbunam 23, Biletnikoff winner Dede Westbrook 21 (4 in 2015, 17 in 2016).",
+   "upset": true
+  },
+  {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, what's the longest winning streak by either school in the Oklahoma–Missouri series?",
+   "options": [
+    "6 straight",
+    "4 straight",
+    "3 straight",
+    "8 straight"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    3,
+    2,
+    1
+   ],
+   "reveal": "6 straight: Oklahoma won every meeting from 2002 through 2008.",
+   "sig": "msOU2002"
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Joe Washington (Oklahoma)",
+     "value": 4071,
+     "school": "OU"
+    },
+    {
+     "label": "Brad Smith (Missouri)",
+     "value": 4289,
+     "school": "MIZ"
+    },
+    {
+     "label": "Billy Sims (Oklahoma)",
+     "value": 4118,
+     "school": "OU"
+    },
+    {
+     "label": "Zack Abron (Missouri)",
+     "value": 3198,
+     "school": "MIZ"
+    }
+   ],
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Oklahoma Sooners football statistical leaders\" career rushing yards table (revision 1373733678), which cites the school record book; fetched 2026-11-17; Wikipedia \"Missouri Tigers football statistical leaders\" career rushing yards table (revision 1385738145), which cites the school record book; fetched 2026-11-17",
+   "sig": "nrrushingBilly Sims,Brad Smith,Joe Washington,Zack Abron",
+   "names": {
+    "prompt": "Bonus: name the other 7 players in Oklahoma and Missouri's combined top 10 for career rushing yards.",
+    "a": "OU",
+    "b": "MIZ",
+    "A": [
+     {
+      "name": "Samaje Perine",
+      "yards": 4122,
+      "label": "4,122",
+      "profile": "4,122 career rushing yards · No. 2 on the combined list"
+     },
+     {
+      "name": "Adrian Peterson",
+      "yards": 4045,
+      "label": "4,045",
+      "profile": "4,045 career rushing yards · No. 5 on the combined list"
+     },
+     {
+      "name": "Steve Owens",
+      "yards": 4041,
+      "label": "4,041",
+      "profile": "4,041 career rushing yards · No. 6 on the combined list"
+     },
+     {
+      "name": "Quentin Griffin",
+      "yards": 3938,
+      "label": "3,938",
+      "profile": "3,938 career rushing yards · No. 7 on the combined list"
+     },
+     {
+      "name": "DeMarco Murray",
+      "yards": 3685,
+      "label": "3,685",
+      "profile": "3,685 career rushing yards · No. 9 on the combined list"
+     },
+     {
+      "name": "De'Mond Parker",
+      "yards": 3403,
+      "label": "3,403",
+      "profile": "3,403 career rushing yards · No. 10 on the combined list"
+     }
+    ],
+    "B": [
+     {
+      "name": "Larry Rountree III",
+      "yards": 3720,
+      "label": "3,720",
+      "profile": "3,720 career rushing yards · No. 8 on the combined list"
+     }
+    ]
+   },
+   "more": {
+    "title": "Career rushing yards, Oklahoma and Missouri (school top 10s)",
+    "rows": [
+     "1. Brad Smith (Missouri) 4,289",
+     "2. Samaje Perine (Oklahoma) 4,122",
+     "3. Billy Sims (Oklahoma) 4,118",
+     "4. Joe Washington (Oklahoma) 4,071",
+     "5. Adrian Peterson (Oklahoma) 4,045",
+     "6. Steve Owens (Oklahoma) 4,041",
+     "7. Quentin Griffin (Oklahoma) 3,938",
+     "8. Larry Rountree III (Missouri) 3,720",
+     "9. Zack Abron (Missouri) 3,198",
+     "10. Brock Olivo (Missouri) 3,026"
+    ]
+   }
+  },
+  {
+   "label": "Oklahoma–Missouri",
+   "verified": true,
+   "sig": "kOklahoma–Missouri1",
+   "type": "rank",
+   "prompt": "Rank these Oklahoma and Missouri pass catchers by career receiving yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Ryan Broyles (Oklahoma, 2008–11)",
+     "value": 4586,
+     "school": "OU"
+    },
+    {
+     "label": "Sterling Shepard (Oklahoma, 2012–15)",
+     "value": 3482,
+     "school": "OU"
+    },
+    {
+     "label": "Danario Alexander (Missouri, 2006–09)",
+     "value": 2778,
+     "school": "MIZ"
+    },
+    {
+     "label": "Jeremy Maclin (Missouri, 2007–08)",
+     "value": 2315,
+     "school": "MIZ"
+    }
+   ],
+   "unit": "yds",
+   "note": "Career totals from each school's record book. Maclin did it in two seasons."
   },
   {
    "type": "mc",
@@ -71,16 +239,16 @@
    "prompt": "Of the 10 Oklahoma–Missouri games from 2000 through 2025, how many featured at least one AP top-5 team?",
    "options": [
     "6",
-    "8",
     "9",
-    "7"
+    "7",
+    "4"
    ],
    "answer": 0,
    "order": [
-    1,
     2,
     3,
-    0
+    0,
+    1
    ],
    "reveal": "6: 2002 (No. 3 Oklahoma 31, Missouri 24) · 2003 (No. 1 Oklahoma 34, No. 24 Missouri 13) · 2007 (No. 9 Oklahoma 38, No. 1 Missouri 17) · 2008 (No. 4 Oklahoma 62, No. 19 Missouri 21) · 2010 (No. 18 Missouri 36, No. 3 Oklahoma 27) · 2011 (No. 1 Oklahoma 38, Missouri 28).",
    "info": {
@@ -141,76 +309,83 @@
    "sig": "rkany5"
   },
   {
-   "type": "mc",
-   "label": "Game Story",
+   "type": "count",
+   "label": "Heisman",
+   "a": "OU",
+   "b": "MIZ",
+   "threshold": 0,
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Dec 1, 2007",
-    "winner": "OU",
-    "loser": "MIZ",
-    "ws": 38,
-    "ls": 17,
-    "venue": "Alamodome"
+   "info": {
+    "title": "How Heisman voting works",
+    "text": "The Heisman Trophy goes to college football's most outstanding player. Voters rank three players: a 1st-place vote is worth 3 points, 2nd place 2 and 3rd place 1, and the finish follows total points."
    },
-   "prompt": "The 2007 Oklahoma–Missouri game was a top-10 showdown (No. 1 vs. No. 9), but the teams combined for how many rushing yards?",
-   "options": [
-    "264",
-    "204",
-    "234",
-    "324"
+   "prompt": "From 2010 through 2025, which school had more Heisman Trophy winners?",
+   "A": [
+    {
+     "name": "Baker Mayfield",
+     "yards": 1,
+     "season": 2017,
+     "label": "1st place",
+     "profile": "QB · 2017 Heisman voting: 2,398 points"
+    },
+    {
+     "name": "Kyler Murray",
+     "yards": 1,
+     "season": 2018,
+     "label": "1st place",
+     "profile": "QB · 2018 Heisman voting: 2,167 points"
+    }
    ],
-   "answer": 0,
-   "order": [
-    1,
-    0,
-    3,
-    2
-   ],
-   "reveal": "264: Oklahoma 166, Missouri 98. 60+ rushing yards: Allen Patrick (Oklahoma) 88, Chris Brown (Oklahoma) 71.",
-   "names": {
-    "prompt": "Bonus: name everyone with 60+ rushing yards in this game.",
-    "a": "OU",
-    "b": "MIZ",
-    "A": [
-     {
-      "name": "Allen Patrick",
-      "yards": 88,
-      "label": "88 yds on 13 carries, 1 TD",
-      "profile": "Oklahoma · 88 rushing yards on 13 carries, 1 TD in this game"
-     },
-     {
-      "name": "Chris Brown",
-      "yards": 71,
-      "label": "71 yds on 23 carries, 2 TD",
-      "profile": "Oklahoma · 71 rushing yards on 23 carries, 2 TD in this game"
-     }
-    ],
-    "B": []
-   },
-   "sig": "gs2007-12-01rush"
+   "B": [],
+   "sig": "hc12010",
+   "bonus": "names"
   },
   {
-   "type": "mc",
-   "label": "Series History",
+   "type": "count",
+   "label": "Awards",
+   "a": "OU",
+   "b": "MIZ",
+   "threshold": 0,
    "verified": true,
    "pitted": true,
-   "prompt": "From 2000 through 2025, what's the longest winning streak by either school in the Oklahoma–Missouri series?",
-   "options": [
-    "6 straight",
-    "8 straight",
-    "7 straight",
-    "9 straight"
+   "info": {
+    "title": "What is the Heisman Trophy?",
+    "text": "The Heisman Trophy is given each year to college football's most outstanding player."
+   },
+   "prompt": "From 2000 through 2025, which school had more Heisman Trophy winners?",
+   "A": [
+    {
+     "name": "Jason White",
+     "yards": 2003,
+     "season": 2003,
+     "label": "QB",
+     "profile": "QB · won the Heisman Trophy (most outstanding player)"
+    },
+    {
+     "name": "Sam Bradford",
+     "yards": 2008,
+     "season": 2008,
+     "label": "QB",
+     "profile": "QB · won the Heisman Trophy (most outstanding player)"
+    },
+    {
+     "name": "Baker Mayfield",
+     "yards": 2017,
+     "season": 2017,
+     "label": "QB",
+     "profile": "QB · won the Heisman Trophy (most outstanding player)"
+    },
+    {
+     "name": "Kyler Murray",
+     "yards": 2018,
+     "season": 2018,
+     "label": "QB",
+     "profile": "QB · won the Heisman Trophy (most outstanding player)"
+    }
    ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    0,
-    2
-   ],
-   "reveal": "6 straight: Oklahoma won every meeting from 2002 through 2008.",
-   "sig": "msOU2002"
+   "B": [],
+   "sig": "acheisman2000"
   },
   {
    "type": "count",
@@ -300,15 +475,21 @@
   },
   {
    "type": "count",
-   "label": "Since 2022",
+   "label": "Since 2017",
    "a": "OU",
    "b": "MIZ",
    "threshold": 1500,
    "verified": true,
    "pitted": true,
-   "prompt": "From 2022 through 2025, which school had more 1,500-yard rushing seasons?",
+   "prompt": "From 2017 through 2025, which school had more 1,500-yard rushing seasons?",
    "A": [],
    "B": [
+    {
+     "name": "Tyler Badie",
+     "yards": 1604,
+     "season": 2021,
+     "profile": "Running back · 2021: 1,604 rushing, 330 receiving yds"
+    },
     {
      "name": "Cody Schrader",
      "yards": 1617,
@@ -322,110 +503,8 @@
      "profile": "Running back · 2025: 1,649 rushing, 22 receiving yds"
     }
    ],
-   "sig": "tsrush15002022",
+   "sig": "tsrush15002017",
    "bonus": "names"
-  },
-  {
-   "type": "mc",
-   "label": "Awards",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Which of these players won the Davey O'Brien Award, given to the nation's best quarterback?",
-   "options": [
-    "Kyler Murray (Oklahoma)",
-    "Chase Daniel (Missouri)",
-    "Jalen Hurts (Oklahoma)",
-    "Josh Heupel (Oklahoma)"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    0,
-    2
-   ],
-   "reveal": "Kyler Murray (Oklahoma) won the Davey O'Brien Award in 2018.",
-   "sig": "amobrien2018",
-   "more": {
-    "title": "Every Oklahoma and Missouri winner of the Davey O'Brien Award",
-    "rows": [
-     "1978: Billy Sims (OU)",
-     "2003: Jason White (OU)",
-     "2004: Jason White (OU)",
-     "2008: Sam Bradford (OU)",
-     "2017: Baker Mayfield (OU)",
-     "2018: Kyler Murray (OU)"
-    ]
-   }
-  },
-  {
-   "type": "rank",
-   "label": "Notables",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Larry Rountree III (MIZ RB) · career total TDs (rushing + receiving)",
-     "value": 40,
-     "school": "MIZ"
-    },
-    {
-     "label": "Kennedy Brooks (OU RB) · 2021 rushing TDs",
-     "value": 13,
-     "school": "OU"
-    },
-    {
-     "label": "CeeDee Lamb (OU WR) · 2019 receiving TDs",
-     "value": 14,
-     "school": "OU"
-    },
-    {
-     "label": "Samaje Perine (OU RB) · 2014 rushing TDs",
-     "value": 21,
-     "school": "OU"
-    }
-   ],
-   "sig": "nxTDCeeDee Lamb2019 receiving TDs,Kennedy Brooks2021 rushing TDs,Larry Rountree IIIcareer total TDs (rushing + receiving),Samaje Perine2014 rushing TDs"
-  },
-  {
-   "type": "mc",
-   "label": "Heisman",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Which of these finished highest in Heisman Trophy voting that season?",
-   "options": [
-    "Sam Bradford (Oklahoma, 2008)",
-    "Quentin Griffin (Oklahoma, 2002)",
-    "Chase Daniel (Missouri, 2007)",
-    "Cody Schrader (Missouri, 2023)"
-   ],
-   "answer": 0,
-   "order": [
-    3,
-    0,
-    1,
-    2
-   ],
-   "reveal": "Sam Bradford: 1st in 2008 · Chase Daniel: 4th in 2007 · Cody Schrader: 8th in 2023 · Quentin Griffin: 10th in 2002",
-   "sig": "hmChase Daniel2007,Cody Schrader2023,Quentin Griffin2002,Sam Bradford2008",
-   "more": {
-    "title": "Oklahoma and Missouri top-10 Heisman finishes (seasons with checked voting)",
-    "rows": [
-     "1st: Jason White (OU) 2003",
-     "1st: Sam Bradford (OU) 2008",
-     "1st: Baker Mayfield (OU) 2017",
-     "1st: Kyler Murray (OU) 2018",
-     "2nd: Josh Heupel (OU) 2000",
-     "2nd: Adrian Peterson (OU) 2004",
-     "2nd: Jalen Hurts (OU) 2019",
-     "3rd: Jason White (OU) 2004",
-     "3rd: Baker Mayfield (OU) 2016",
-     "4th: Chase Daniel (MIZ) 2007",
-     "4th: Baker Mayfield (OU) 2015",
-     "4th: Dede Westbrook (OU) 2016"
-    ]
-   }
   }
  ],
  "rev": 1

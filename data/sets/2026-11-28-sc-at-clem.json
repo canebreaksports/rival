@@ -6,9 +6,46 @@
   "away": "SC",
   "home": "CLEM"
  },
- "generatedAt": "2026-11-24T02:16:17.353Z",
- "engine": 53,
+ "generatedAt": "2026-11-24T04:01:26.604Z",
+ "engine": 55,
  "questions": [
+  {
+   "type": "count",
+   "label": "NFL Draft",
+   "a": "SC",
+   "b": "CLEM",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From the 2015 draft through 2026, which school had more wide receivers and tight ends taken in the first round?",
+   "A": [
+    {
+     "name": "Hayden Hurst",
+     "yards": 25,
+     "season": 2018,
+     "label": "No. 25 pick",
+     "profile": "Tight End · 2018 draft, round 1"
+    },
+    {
+     "name": "Xavier Legette",
+     "yards": 32,
+     "season": 2024,
+     "label": "No. 32 pick",
+     "profile": "Wide Receiver · 2024 draft, round 1"
+    }
+   ],
+   "B": [
+    {
+     "name": "Mike Williams",
+     "yards": 7,
+     "season": 2017,
+     "label": "No. 7 pick",
+     "profile": "Wide Receiver · 2017 draft, round 1"
+    }
+   ],
+   "sig": "dcr12015wr",
+   "bonus": "names"
+  },
   {
    "label": "South Carolina–Clemson",
    "verified": true,
@@ -25,10 +62,10 @@
    "answer": 0,
    "reveal": "South Carolina 31, No. 7 Clemson 30 (2022-11-26, Memorial Stadium (Clemson, SC)).",
    "order": [
-    3,
-    1,
     2,
-    0
+    0,
+    3,
+    1
    ]
   },
   {
@@ -40,18 +77,115 @@
    "options": [
     "7 straight",
     "6 straight",
-    "4 straight",
+    "10 straight",
     "5 straight"
    ],
    "answer": 0,
    "order": [
-    1,
-    2,
     0,
+    2,
+    1,
     3
    ],
    "reveal": "7 straight: Clemson won every meeting from 2014 through 2021.",
    "sig": "msCLEM2014"
+  },
+  {
+   "label": "South Carolina–Clemson",
+   "verified": true,
+   "sig": "kSouth Carolina–Clemson0",
+   "type": "mc",
+   "pitted": true,
+   "prompt": "Of the 25 South Carolina–Clemson games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
+   "options": [
+    "5",
+    "3",
+    "4",
+    "6"
+   ],
+   "answer": 0,
+   "reveal": "5: 2000 (No. 25 South Carolina at No. 16 Clemson) · 2006 (South Carolina at No. 24 Clemson) · 2007 (No. 21 Clemson at South Carolina) · 2022 (South Carolina at No. 7 Clemson) · 2024 (No. 16 South Carolina at No. 12 Clemson).",
+   "order": [
+    2,
+    1,
+    0,
+    3
+   ],
+   "years": {
+    "prompt": "Name the 5 seasons.",
+    "a": "SC",
+    "b": "CLEM",
+    "A": [
+     {
+      "name": "South Carolina at No. 24 Clemson",
+      "yards": 0,
+      "season": 2006,
+      "label": "South Carolina at No. 24 Clemson",
+      "profile": "South Carolina at No. 24 Clemson"
+     },
+     {
+      "name": "South Carolina at No. 7 Clemson",
+      "yards": 0,
+      "season": 2022,
+      "label": "South Carolina at No. 7 Clemson",
+      "profile": "South Carolina at No. 7 Clemson"
+     },
+     {
+      "name": "No. 16 South Carolina at No. 12 Clemson",
+      "yards": 0,
+      "season": 2024,
+      "label": "No. 16 South Carolina at No. 12 Clemson",
+      "profile": "No. 16 South Carolina at No. 12 Clemson"
+     }
+    ],
+    "B": [
+     {
+      "name": "No. 25 South Carolina at No. 16 Clemson",
+      "yards": 0,
+      "season": 2000,
+      "label": "No. 25 South Carolina at No. 16 Clemson",
+      "profile": "No. 25 South Carolina at No. 16 Clemson"
+     },
+     {
+      "name": "No. 21 Clemson at South Carolina",
+      "yards": 0,
+      "season": 2007,
+      "label": "No. 21 Clemson at South Carolina",
+      "profile": "No. 21 Clemson at South Carolina"
+     }
+    ]
+   }
+  },
+  {
+   "label": "South Carolina–Clemson",
+   "verified": true,
+   "sig": "kSouth Carolina–Clemson3",
+   "type": "rank",
+   "prompt": "Rank these single-game rushing performances in South Carolina–Clemson games since 2004, highest first.",
+   "items": [
+    {
+     "label": "Wayne Gallman (Clemson, 2014)",
+     "value": 191,
+     "school": "CLEM"
+    },
+    {
+     "label": "LaNorris Sellers (South Carolina, 2024)",
+     "value": 166,
+     "school": "SC"
+    },
+    {
+     "label": "C.J. Spiller (Clemson, 2006)",
+     "value": 155,
+     "school": "CLEM"
+    },
+    {
+     "label": "Cory Boyd (South Carolina, 2006)",
+     "value": 106,
+     "school": "SC"
+    }
+   ],
+   "unit": "yds",
+   "note": "Gallman: 27 carries, 191 yards (2014). Sellers: 16 carries, 166 yards, 2 TD (2024). Spiller: 10 carries, 155 yards, 2 TD (2006). Boyd: 16 carries, 106 yards (2006)."
   },
   {
    "label": "South Carolina–Clemson",
@@ -69,11 +203,136 @@
    "answer": 0,
    "reveal": "4.5 sacks, a South Carolina single-game record: 1.5 in the first half and 3 in the second. It also set the school's single-season record (13).",
    "order": [
-    0,
-    2,
     3,
-    1
+    0,
+    1,
+    2
    ]
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Aaron Kelly (Clemson, 2005–08)",
+     "value": 2733,
+     "school": "CLEM"
+    },
+    {
+     "label": "Sammy Watkins (Clemson, 2011–13)",
+     "value": 3391,
+     "school": "CLEM"
+    },
+    {
+     "label": "Bryan Edwards (South Carolina, 2016–19)",
+     "value": 3045,
+     "school": "SC"
+    },
+    {
+     "label": "Sidney Rice (South Carolina, 2005–06)",
+     "value": 2233,
+     "school": "SC"
+    }
+   ],
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"South Carolina Gamecocks football statistical leaders\" career receiving yards table (revision 1384437077), which cites the school record book; fetched 2026-11-23; Wikipedia \"Clemson Tigers football statistical leaders\" career receiving yards table (revision 1383648805), which cites the school record book; fetched 2026-11-23",
+   "sig": "nrreceivingAaron Kelly,Bryan Edwards,Sammy Watkins,Sidney Rice",
+   "names": {
+    "prompt": "Bonus: name the other 7 players in South Carolina and Clemson's combined top 10 for career receiving yards.",
+    "a": "SC",
+    "b": "CLEM",
+    "A": [
+     {
+      "name": "Alshon Jeffery",
+      "yards": 3042,
+      "label": "3,042 (2009–2011)",
+      "profile": "3,042 career receiving yards (2009–2011) · No. 3 on the combined list"
+     },
+     {
+      "name": "Kenny McKinley",
+      "yards": 2781,
+      "label": "2,781 (2005–2008)",
+      "profile": "2,781 career receiving yards (2005–2008) · No. 5 on the combined list"
+     },
+     {
+      "name": "Sterling Sharpe",
+      "yards": 2497,
+      "label": "2,497 (1983–1987)",
+      "profile": "2,497 career receiving yards (1983–1987) · No. 10 on the combined list"
+     }
+    ],
+    "B": [
+     {
+      "name": "DeAndre Hopkins",
+      "yards": 3020,
+      "label": "3,020 (2010–2012)",
+      "profile": "3,020 career receiving yards (2010–2012) · No. 4 on the combined list"
+     },
+     {
+      "name": "Mike Williams",
+      "yards": 2727,
+      "label": "2,727 (2013–2016)",
+      "profile": "2,727 career receiving yards (2013–2016) · No. 7 on the combined list"
+     },
+     {
+      "name": "Terry Smith",
+      "yards": 2681,
+      "label": "2,681 (1990–1993)",
+      "profile": "2,681 career receiving yards (1990–1993) · No. 8 on the combined list"
+     },
+     {
+      "name": "Perry Tuttle",
+      "yards": 2534,
+      "label": "2,534 (1978–1981)",
+      "profile": "2,534 career receiving yards (1978–1981) · No. 9 on the combined list"
+     }
+    ]
+   },
+   "more": {
+    "title": "Career receiving yards, South Carolina and Clemson (careers ending 2000 or later)",
+    "rows": [
+     "1. Sammy Watkins (Clemson, 2011–13) 3,391",
+     "2. Bryan Edwards (South Carolina, 2016–19) 3,045",
+     "3. Alshon Jeffery (South Carolina, 2009–11) 3,042",
+     "4. DeAndre Hopkins (Clemson, 2010–12) 3,020",
+     "5. Kenny McKinley (South Carolina, 2005–08) 2,781",
+     "6. Aaron Kelly (Clemson, 2005–08) 2,733",
+     "7. Mike Williams (Clemson, 2013–16) 2,727",
+     "8. Artavis Scott (Clemson, 2014–16) 2,480",
+     "9. Tee Higgins (Clemson, 2017–19) 2,448",
+     "10. Sidney Rice (South Carolina, 2005–06) 2,233"
+    ]
+   }
+  },
+  {
+   "type": "count",
+   "label": "Since 2016",
+   "a": "SC",
+   "b": "CLEM",
+   "threshold": 1300,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2016 through 2025, which school had more 1,300-yard rushing seasons?",
+   "A": [],
+   "B": [
+    {
+     "name": "Travis Etienne",
+     "yards": 1658,
+     "season": 2018,
+     "profile": "Running back · 2018: 1,658 rushing, 78 receiving yds · also on this list in 2019"
+    },
+    {
+     "name": "Travis Etienne",
+     "yards": 1614,
+     "season": 2019,
+     "profile": "Running back · 2019: 1,614 rushing, 432 receiving yds · also on this list in 2018"
+    }
+   ],
+   "sig": "tsrush13002016",
+   "bonus": "names"
   },
   {
    "type": "mc",
@@ -91,16 +350,16 @@
    "prompt": "The 2007 South Carolina–Clemson game was won on a field goal as time expired, but the teams combined for how many rushing yards?",
    "options": [
     "294",
+    "234",
     "354",
-    "324",
-    "234"
+    "264"
    ],
    "answer": 0,
    "order": [
+    3,
     2,
-    1,
     0,
-    3
+    1
    ],
    "reveal": "294: South Carolina 80, Clemson 214. 80+ rushing yards: James Davis (Clemson) 122, C.J. Spiller (Clemson) 88.",
    "names": {
@@ -124,148 +383,6 @@
     ]
    },
    "sig": "gs2007-11-24rush"
-  },
-  {
-   "label": "South Carolina–Clemson",
-   "verified": true,
-   "sig": "kSouth Carolina–Clemson0",
-   "type": "mc",
-   "pitted": true,
-   "prompt": "Of the 25 South Carolina–Clemson games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
-   "options": [
-    "5",
-    "3",
-    "4",
-    "6"
-   ],
-   "answer": 0,
-   "reveal": "5: 2000 No. 16 Clemson 16, No. 25 South Carolina 14 · 2006 South Carolina 31, No. 24 Clemson 28 · 2007 No. 21 Clemson 23, South Carolina 21 · 2022 South Carolina 31, No. 7 Clemson 30 · 2024 No. 16 South Carolina 17, No. 12 Clemson 14.",
-   "order": [
-    3,
-    0,
-    1,
-    2
-   ],
-   "years": {
-    "prompt": "Name the 5 seasons.",
-    "a": "SC",
-    "b": "CLEM",
-    "A": [
-     {
-      "name": "South Carolina 31, No. 24 Clemson 28",
-      "yards": 0,
-      "season": 2006,
-      "label": "South Carolina 31, No. 24 Clemson 28",
-      "profile": "South Carolina 31, No. 24 Clemson 28"
-     },
-     {
-      "name": "South Carolina 31, No. 7 Clemson 30",
-      "yards": 0,
-      "season": 2022,
-      "label": "South Carolina 31, No. 7 Clemson 30",
-      "profile": "South Carolina 31, No. 7 Clemson 30"
-     },
-     {
-      "name": "No. 16 South Carolina 17, No. 12 Clemson 14",
-      "yards": 0,
-      "season": 2024,
-      "label": "No. 16 South Carolina 17, No. 12 Clemson 14",
-      "profile": "No. 16 South Carolina 17, No. 12 Clemson 14"
-     }
-    ],
-    "B": [
-     {
-      "name": "No. 16 Clemson 16, No. 25 South Carolina 14",
-      "yards": 0,
-      "season": 2000,
-      "label": "No. 16 Clemson 16, No. 25 South Carolina 14",
-      "profile": "No. 16 Clemson 16, No. 25 South Carolina 14"
-     },
-     {
-      "name": "No. 21 Clemson 23, South Carolina 21",
-      "yards": 0,
-      "season": 2007,
-      "label": "No. 21 Clemson 23, South Carolina 21",
-      "profile": "No. 21 Clemson 23, South Carolina 21"
-     }
-    ]
-   }
-  },
-  {
-   "type": "count",
-   "label": "Since 2012",
-   "a": "SC",
-   "b": "CLEM",
-   "threshold": 1300,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2012 through 2025, which school had more 1,300-yard rushing seasons?",
-   "A": [],
-   "B": [
-    {
-     "name": "Wayne Gallman",
-     "yards": 1527,
-     "season": 2015,
-     "profile": "Running back · 2015: 1,527 rushing, 213 receiving yds"
-    },
-    {
-     "name": "Travis Etienne",
-     "yards": 1658,
-     "season": 2018,
-     "profile": "Running back · 2018: 1,658 rushing, 78 receiving yds · also on this list in 2019"
-    },
-    {
-     "name": "Travis Etienne",
-     "yards": 1614,
-     "season": 2019,
-     "profile": "Running back · 2019: 1,614 rushing, 432 receiving yds · also on this list in 2018"
-    }
-   ],
-   "sig": "tsrush13002012",
-   "bonus": "names"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in South Carolina–Clemson games, highest first.",
-   "items": [
-    {
-     "label": "James Davis (CLEM) · 2005",
-     "value": 145,
-     "school": "CLEM"
-    },
-    {
-     "label": "Mike Davis (SC) · 2008",
-     "value": 76,
-     "school": "SC"
-    },
-    {
-     "label": "Bobby Wallace (SC) · 2005",
-     "value": 51,
-     "school": "SC"
-    },
-    {
-     "label": "Cory Boyd (SC) · 2006",
-     "value": 106,
-     "school": "SC"
-    }
-   ],
-   "sig": "grrushBobby Wallace2005,Cory Boyd2006,James Davis2005,Mike Davis2008",
-   "more": {
-    "title": "Top rushing games in this rivalry (box scores)",
-    "rows": [
-     "1. Wayne Gallman (CLEM) 2014: 191",
-     "2. Lanorris Sellers (SC) 2024: 166",
-     "3. C.J. Spiller (CLEM) 2006: 155",
-     "4. Travis Etienne (CLEM) 2018: 150",
-     "5. James Davis (CLEM) 2005: 145",
-     "6. Will Shipley (CLEM) 2022: 132",
-     "7. Will Shipley (CLEM) 2021: 128",
-     "8. Reggie Merriweather (CLEM) 2004: 125"
-    ]
-   }
   },
   {
    "type": "count",
@@ -352,73 +469,6 @@
     }
    ],
    "sig": "fsrush"
-  },
-  {
-   "type": "count",
-   "label": "NFL Draft",
-   "a": "SC",
-   "b": "CLEM",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From the 2015 draft through 2026, which school had more wide receivers and tight ends taken in the first round?",
-   "A": [
-    {
-     "name": "Hayden Hurst",
-     "yards": 25,
-     "season": 2018,
-     "label": "No. 25 pick",
-     "profile": "Tight End · 2018 draft, round 1"
-    },
-    {
-     "name": "Xavier Legette",
-     "yards": 32,
-     "season": 2024,
-     "label": "No. 32 pick",
-     "profile": "Wide Receiver · 2024 draft, round 1"
-    }
-   ],
-   "B": [
-    {
-     "name": "Mike Williams",
-     "yards": 7,
-     "season": 2017,
-     "label": "No. 7 pick",
-     "profile": "Wide Receiver · 2017 draft, round 1"
-    }
-   ],
-   "sig": "dcr12015wr",
-   "bonus": "names"
-  },
-  {
-   "type": "mc",
-   "label": "Twist",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 30, 2019",
-    "winner": "CLEM",
-    "loser": "SC",
-    "ws": 38,
-    "ls": 3,
-    "venue": "Williams-Brice Stadium"
-   },
-   "prompt": "Travis Etienne finished 9th in Heisman voting in 2019. How many rushing yards did he have when No. 3 Clemson beat South Carolina that year?",
-   "options": [
-    "51",
-    "86",
-    "121",
-    "156"
-   ],
-   "answer": 0,
-   "order": [
-    0,
-    2,
-    1,
-    3
-   ],
-   "reveal": "🔄 Twist: just 51 on 15 carries, against a season of 1,614 (about 124 a game). Clemson won 38–3 anyway.",
-   "sig": "xqTravis Etienne2019"
   }
  ]
 }

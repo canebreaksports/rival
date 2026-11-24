@@ -6,101 +6,9 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-24T02:16:15.549Z",
- "engine": 53,
+ "generatedAt": "2026-11-24T04:01:25.194Z",
+ "engine": 55,
  "questions": [
-  {
-   "type": "rank",
-   "label": "Notables",
-   "verified": true,
-   "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
-   "items": [
-    {
-     "label": "Jamaal Charles (Texas)",
-     "value": 3328,
-     "school": "TEX"
-    },
-    {
-     "label": "Bijan Robinson (Texas)",
-     "value": 3410,
-     "school": "TEX"
-    },
-    {
-     "label": "Trayveon Williams (Texas A&M)",
-     "value": 3379,
-     "school": "TAMU"
-    },
-    {
-     "label": "Cyrus Gray (Texas A&M)",
-     "value": 3298,
-     "school": "TAMU"
-    }
-   ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"Texas Longhorns football statistical leaders\" career rushing yards table (revision 1385899717), which cites the school record book; fetched 2026-11-17; Wikipedia \"Texas A&M Aggies football statistical leaders\" career rushing yards table (revision 1385856132), which cites the school record book; fetched 2026-11-17",
-   "sig": "nrrushingBijan Robinson,Cyrus Gray,Jamaal Charles,Trayveon Williams",
-   "names": {
-    "prompt": "Bonus: name the other 6 players in Texas and Texas A&M's combined top 10 for career rushing yards.",
-    "a": "TEX",
-    "b": "TAMU",
-    "A": [
-     {
-      "name": "Ricky Williams",
-      "yards": 6279,
-      "label": "6,279",
-      "profile": "6,279 career rushing yards · No. 1 on the combined list"
-     },
-     {
-      "name": "Cedric Benson",
-      "yards": 5540,
-      "label": "5,540",
-      "profile": "5,540 career rushing yards · No. 2 on the combined list"
-     },
-     {
-      "name": "Earl Campbell",
-      "yards": 4443,
-      "label": "4,443",
-      "profile": "4,443 career rushing yards · No. 4 on the combined list"
-     }
-    ],
-    "B": [
-     {
-      "name": "Darren Lewis",
-      "yards": 5012,
-      "label": "5,012",
-      "profile": "5,012 career rushing yards · No. 3 on the combined list"
-     },
-     {
-      "name": "Curtis Dickey",
-      "yards": 3703,
-      "label": "3,703",
-      "profile": "3,703 career rushing yards · No. 5 on the combined list"
-     },
-     {
-      "name": "Greg Hill",
-      "yards": 3262,
-      "label": "3,262",
-      "profile": "3,262 career rushing yards · No. 10 on the combined list"
-     }
-    ]
-   },
-   "more": {
-    "title": "Career rushing yards, Texas and Texas A&M (school top 10s)",
-    "rows": [
-     "1. Ricky Williams (Texas) 6,279",
-     "2. Cedric Benson (Texas) 5,540",
-     "3. Darren Lewis (Texas A&M) 5,012",
-     "4. Earl Campbell (Texas) 4,443",
-     "5. Curtis Dickey (Texas A&M) 3,703",
-     "6. Bijan Robinson (Texas) 3,410",
-     "7. Trayveon Williams (Texas A&M) 3,379",
-     "8. Jamaal Charles (Texas) 3,328",
-     "9. Cyrus Gray (Texas A&M) 3,298",
-     "10. Greg Hill (Texas A&M) 3,262"
-    ]
-   }
-  },
   {
    "type": "count",
    "label": "SEC Record Book",
@@ -128,128 +36,6 @@
    }
   },
   {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Texas–Texas A&M series?",
-   "options": [
-    "40 points",
-    "49 points",
-    "30 points",
-    "26 points"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    0,
-    2
-   ],
-   "reveal": "40 points: Texas 49, Texas A&M 9 (Nov 27, 2008).",
-   "sig": "mm40"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these from highest to lowest (yards).",
-   "items": [
-    {
-     "label": "Roschon Johnson (TEX RB) · career rushing yards",
-     "value": 2189,
-     "school": "TEX"
-    },
-    {
-     "label": "Isaiah Spiller (TAMU RB) · 2021 rushing yards",
-     "value": 1011,
-     "school": "TAMU"
-    },
-    {
-     "label": "Josh Reynolds (TAMU WR) · 2014 receiving yards",
-     "value": 842,
-     "school": "TAMU"
-    },
-    {
-     "label": "Johnathan Gray (TEX RB) · career yards from scrimmage",
-     "value": 3024,
-     "school": "TEX"
-    }
-   ],
-   "sig": "mxydsIsaiah Spiller2021 rushing yards,Johnathan Graycareer yards from scrimmage,Josh Reynolds2014 receiving yards,Roschon Johnsoncareer rushing yards"
-  },
-  {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Texas–Texas A&M games, highest first.",
-   "items": [
-    {
-     "label": "Jorvorskie Lane (TAMU) · 2005",
-     "value": 104,
-     "school": "TAMU"
-    },
-    {
-     "label": "Tre Wisner (TEX) · 2025",
-     "value": 155,
-     "school": "TEX"
-    },
-    {
-     "label": "Marcel Reed (TAMU) · 2024",
-     "value": 60,
-     "school": "TAMU"
-    },
-    {
-     "label": "Tre Wisner (TEX) · 2024",
-     "value": 186,
-     "school": "TEX"
-    }
-   ],
-   "sig": "grrushJorvorskie Lane2005,Marcel Reed2024,Tre Wisner2024,Tre Wisner2025",
-   "more": {
-    "title": "Top rushing games in this rivalry (box scores)",
-    "rows": [
-     "1. Cyrus Gray (TAMU) 2010: 223",
-     "2. Tre Wisner (TEX) 2024: 186",
-     "3. Colt McCoy (TEX) 2009: 175",
-     "4. Tre Wisner (TEX) 2025: 155",
-     "5. Stephen McGee (TAMU) 2005: 108",
-     "6. Tre' Newton (TEX) 2009: 107",
-     "7. Cody Johnson (TEX) 2010: 107",
-     "8. Jorvorskie Lane (TAMU) 2005: 104"
-    ]
-   }
-  },
-  {
-   "type": "count",
-   "label": "Since 2015",
-   "a": "TEX",
-   "b": "TAMU",
-   "threshold": 1100,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2015 through 2025, which school had more 1,100-yard receiving seasons?",
-   "A": [
-    {
-     "name": "Lil'Jordan Humphrey",
-     "yards": 1176,
-     "season": 2018,
-     "profile": "Wide receiver · 2018: 25 rushing, 1,176 receiving yds"
-    },
-    {
-     "name": "Devin Duvernay",
-     "yards": 1386,
-     "season": 2019,
-     "profile": "Wide receiver · 2019: 24 rushing, 1,386 receiving yds"
-    }
-   ],
-   "B": [],
-   "sig": "tsrec11002015",
-   "bonus": "names"
-  },
-  {
    "label": "Lone Star Showdown",
    "verified": true,
    "sig": "kLone Star Showdown1",
@@ -265,37 +51,223 @@
    "answer": 0,
    "reveal": "Texas 27, Texas A&M 25 (2011-11-24, Kyle Field).",
    "order": [
-    3,
-    1,
+    0,
     2,
-    0
+    3,
+    1
    ]
+  },
+  {
+   "label": "Lone Star Showdown",
+   "verified": true,
+   "sig": "kLone Star Showdown2",
+   "type": "rank",
+   "prompt": "Rank these Texas and Texas A&M seasons by yards, highest first.",
+   "items": [
+    {
+     "label": "Trayveon Williams (Texas A&M, 2018) · rushing yards",
+     "value": 1760,
+     "school": "TAMU"
+    },
+    {
+     "label": "Earl Campbell (Texas, 1977) · rushing yards",
+     "value": 1744,
+     "school": "TEX"
+    },
+    {
+     "label": "Jordan Shipley (Texas, 2009) · receiving yards",
+     "value": 1485,
+     "school": "TEX"
+    },
+    {
+     "label": "Kyler Murray (Texas A&M, 2015) · passing + rushing yards",
+     "value": 1021,
+     "school": "TAMU"
+    }
+   ],
+   "unit": "yds",
+   "note": "Williams 1,760 and Campbell 1,744 are their schools' record-book seasons (Williams is A&M's single-season record). Murray, as an A&M freshman: 686 passing + 335 rushing."
+  },
+  {
+   "type": "mc",
+   "label": "Game Story",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 26, 2009",
+    "winner": "TEX",
+    "loser": "TAMU",
+    "ws": 49,
+    "ls": 39,
+    "venue": "Kyle Field"
+   },
+   "prompt": "The 2009 Texas–Texas A&M game is the highest-scoring game in the series since 2000, but the teams combined for how many rushing yards?",
+   "options": [
+    "483",
+    "583",
+    "383",
+    "433"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    0,
+    3,
+    1
+   ],
+   "reveal": "483: Texas 293, Texas A&M 190. 75+ rushing yards: Colt McCoy (Texas) 175, Tre' Newton (Texas) 107, Jerrod Johnson (Texas A&M) 97, Christine Michael (Texas A&M) 83.",
+   "names": {
+    "prompt": "Bonus: name everyone with 75+ rushing yards in this game.",
+    "a": "TEX",
+    "b": "TAMU",
+    "A": [
+     {
+      "name": "Colt McCoy",
+      "yards": 175,
+      "label": "175 yds on 18 carries, 1 TD",
+      "profile": "Texas · 175 rushing yards on 18 carries, 1 TD in this game"
+     },
+     {
+      "name": "Tre' Newton",
+      "yards": 107,
+      "label": "107 yds on 16 carries, 1 TD",
+      "profile": "Texas · 107 rushing yards on 16 carries, 1 TD in this game"
+     }
+    ],
+    "B": [
+     {
+      "name": "Jerrod Johnson",
+      "yards": 97,
+      "label": "97 yds on 14 carries, 0 TD",
+      "profile": "Texas A&M · 97 rushing yards on 14 carries, 0 TD in this game"
+     },
+     {
+      "name": "Christine Michael",
+      "yards": 83,
+      "label": "83 yds on 19 carries, 1 TD",
+      "profile": "Texas A&M · 83 rushing yards on 19 carries, 1 TD in this game"
+     }
+    ]
+   },
+   "sig": "gs2009-11-26rush"
+  },
+  {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Texas–Texas A&M series?",
+   "options": [
+    "40 points",
+    "26 points",
+    "33 points",
+    "30 points"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    0,
+    1,
+    2
+   ],
+   "reveal": "40 points: Texas 49, Texas A&M 9 (Nov 27, 2008).",
+   "years": {
+    "prompt": "Bonus: name the year.",
+    "a": "TEX",
+    "b": "TAMU",
+    "A": [
+     {
+      "name": "Texas 49, Texas A&M 9",
+      "yards": 0,
+      "season": 2008,
+      "label": "Texas 49–9",
+      "profile": "Texas 49, Texas A&M 9"
+     }
+    ],
+    "B": []
+   },
+   "names": {
+    "prompt": "Bonus: name Texas's quarterback in that game (its leading passer).",
+    "a": "TEX",
+    "b": "TAMU",
+    "A": [
+     {
+      "name": "Colt McCoy",
+      "yards": 311,
+      "label": "311 passing yds, 2 TD",
+      "profile": "Texas quarterback · 311 passing yards, 2 TD in this game"
+     }
+    ],
+    "B": []
+   },
+   "sig": "mm40"
   },
   {
    "type": "mc",
    "label": "Ranked Wins",
    "verified": true,
    "pitted": true,
-   "prompt": "Since 2018, which school has more wins over AP-ranked opponents, and how many?",
+   "prompt": "Since 2015, which school has more wins over AP-ranked opponents, and how many?",
    "options": [
-    "Texas, 24",
-    "Texas, 20",
-    "Texas A&M, 15",
+    "Texas, 29",
+    "Texas, 32",
+    "Texas A&M, 20",
     "Texas A&M, 27"
    ],
    "answer": 0,
    "order": [
     3,
+    2,
     1,
-    0,
-    2
+    0
    ],
-   "reveal": "Texas 24, Texas A&M 15 (through 2025). Latest: Texas: 2025 vs. No. 9 Vanderbilt 34–31, 2025 vs. No. 3 Texas A&M 27–17, 2025 vs. No. 18 Michigan 41–27; Texas A&M: 2025 vs. No. 8 Notre Dame 41–40, 2025 vs. No. 20 LSU 49–25, 2025 vs. No. 19 Missouri 38–17.",
+   "reveal": "Texas 29, Texas A&M 20 (through 2025). Latest: Texas: 2025 vs. No. 9 Vanderbilt 34–31, 2025 vs. No. 3 Texas A&M 27–17, 2025 vs. No. 18 Michigan 41–27; Texas A&M: 2025 vs. No. 8 Notre Dame 41–40, 2025 vs. No. 20 LSU 49–25, 2025 vs. No. 19 Missouri 38–17.",
    "info": {
     "title": "What counts as a ranked win?",
     "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
    },
-   "sig": "rw2018"
+   "sig": "rw2015"
+  },
+  {
+   "type": "count",
+   "label": "Awards",
+   "a": "TEX",
+   "b": "TAMU",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "info": {
+    "title": "What is the Outland Trophy?",
+    "text": "The Outland Trophy is given each year to college football's best interior lineman."
+   },
+   "prompt": "From 2000 through 2025, which school had more Outland Trophy winners?",
+   "A": [
+    {
+     "name": "T'Vondre Sweat",
+     "yards": 2023,
+     "season": 2023,
+     "label": "Defensive tackle",
+     "profile": "Defensive tackle · won the Outland Trophy (best interior lineman)"
+    },
+    {
+     "name": "Kelvin Banks Jr.",
+     "yards": 2024,
+     "season": 2024,
+     "label": "Offensive tackle",
+     "profile": "Offensive tackle · won the Outland Trophy (best interior lineman)"
+    }
+   ],
+   "B": [
+    {
+     "name": "Luke Joeckel",
+     "yards": 2012,
+     "season": 2012,
+     "label": "Offensive tackle",
+     "profile": "Offensive tackle · won the Outland Trophy (best interior lineman)"
+    }
+   ],
+   "sig": "acoutland2000",
+   "bonus": "names"
   },
   {
    "type": "count",
@@ -305,64 +277,107 @@
    "threshold": 0,
    "verified": true,
    "pitted": true,
-   "prompt": "From the 2005 draft through 2026, which school had more quarterbacks taken in the first round?",
+   "prompt": "From the 2010 draft through 2026, which school had more offensive linemen taken in the first round?",
    "A": [
     {
-     "name": "Vince Young",
-     "yards": 3,
-     "season": 2006,
-     "label": "No. 3 pick",
-     "profile": "Quarterback · 2006 draft, round 1"
+     "name": "Kelvin Banks Jr.",
+     "yards": 9,
+     "season": 2025,
+     "label": "No. 9 pick",
+     "profile": "Offensive Tackle · 2025 draft, round 1"
     }
    ],
    "B": [
     {
-     "name": "Ryan Tannehill",
-     "yards": 8,
-     "season": 2012,
-     "label": "No. 8 pick",
-     "profile": "Quarterback · 2012 draft, round 1"
+     "name": "Luke Joeckel",
+     "yards": 2,
+     "season": 2013,
+     "label": "No. 2 pick",
+     "profile": "Offensive Tackle · 2013 draft, round 1"
     },
     {
-     "name": "Johnny Manziel",
-     "yards": 22,
+     "name": "Jake Matthews",
+     "yards": 6,
      "season": 2014,
-     "label": "No. 22 pick",
-     "profile": "Quarterback · 2014 draft, round 1"
+     "label": "No. 6 pick",
+     "profile": "Offensive Tackle · 2014 draft, round 1"
+    },
+    {
+     "name": "Cedric Ogbuehi",
+     "yards": 21,
+     "season": 2015,
+     "label": "No. 21 pick",
+     "profile": "Offensive Tackle · 2015 draft, round 1"
+    },
+    {
+     "name": "Germain Ifedi",
+     "yards": 31,
+     "season": 2016,
+     "label": "No. 31 pick",
+     "profile": "Offensive Tackle · 2016 draft, round 1"
+    },
+    {
+     "name": "Kenyon Green",
+     "yards": 15,
+     "season": 2022,
+     "label": "No. 15 pick",
+     "profile": "Offensive Guard · 2022 draft, round 1"
     }
    ],
-   "sig": "dcr12005qb",
+   "sig": "dcr12010ol",
    "bonus": "names"
   },
   {
+   "label": "Lone Star Showdown",
+   "verified": true,
+   "sig": "kLone Star Showdown3",
    "type": "mc",
-   "label": "Historic Day",
+   "pitted": true,
+   "prompt": "2009: No. 3 Texas won at Texas A&M, 49–39. The game's leading rusher ran for 175 yards. Who was it?",
+   "options": [
+    "Colt McCoy (Texas QB)",
+    "Tre' Newton (Texas RB)",
+    "Christine Michael (Texas A&M RB)",
+    "Jerrod Johnson (Texas A&M QB)"
+   ],
+   "answer": 0,
+   "reveal": "Quarterback Colt McCoy, 175 rushing yards. Also over 75: Tre' Newton 107, Jerrod Johnson 97, Christine Michael 83.",
+   "order": [
+    3,
+    0,
+    2,
+    1
+   ]
+  },
+  {
+   "type": "mc",
+   "label": "Twist",
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Nov 25, 2010",
-    "winner": "TAMU",
-    "loser": "TEX",
-    "ws": 24,
-    "ls": 17,
-    "venue": "DKR-Texas Memorial Stadium"
+    "date": "Nov 25, 2005",
+    "winner": "TEX",
+    "loser": "TAMU",
+    "ws": 40,
+    "ls": 29,
+    "venue": "Kyle Field"
    },
-   "prompt": "2010: No. 17 Texas A&M vs. Texas. Cyrus Gray carried 27 times. How many rushing yards did he finish with?",
+   "prompt": "The 2005 Texas–Texas A&M game went to No. 2 Texas, 40–29, over Texas A&M. Which team gained more total yards, and by how much?",
    "options": [
-    "223",
-    "183",
-    "143",
-    "103"
+    "Texas A&M by 59",
+    "Texas by 59",
+    "Texas A&M by 99",
+    "Texas by 99"
    ],
    "answer": 0,
    "order": [
-    3,
     1,
+    3,
     0,
     2
    ],
-   "reveal": "223 rushing yards and 2 TD, the most by anyone in this rivalry since 2005 (box scores). Texas A&M won, 24–17.",
-   "sig": "xb2010-11-25Cyrus Gray"
+   "reveal": "🔄 Twist: Texas A&M out-gained Texas 395 to 336 and still lost. (Texas A&M 277 rushing, 118 passing; Texas 174 rushing, 162 passing.)",
+   "sig": "xo2005-11-25"
   }
  ],
  "rev": 1
