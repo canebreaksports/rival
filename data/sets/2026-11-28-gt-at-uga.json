@@ -6,102 +6,64 @@
   "away": "GT",
   "home": "UGA"
  },
- "generatedAt": "2026-11-24T01:25:49.399Z",
- "engine": 47,
+ "generatedAt": "2026-11-24T01:44:38.396Z",
+ "engine": 51,
  "questions": [
   {
-   "type": "rank",
-   "label": "Rivalry Games",
-   "verified": true,
-   "unit": "yds",
-   "prompt": "Rank these single-game rushing performances in Georgia Tech–Georgia games, highest first.",
-   "items": [
-    {
-     "label": "Roddy Jones (GT) · 2011",
-     "value": 72,
-     "school": "GT"
-    },
-    {
-     "label": "Thomas Brown (UGA) · 2007",
-     "value": 139,
-     "school": "UGA"
-    },
-    {
-     "label": "Roddy Jones (GT) · 2008",
-     "value": 214,
-     "school": "GT"
-    },
-    {
-     "label": "Haynes King (GT) · 2024",
-     "value": 110,
-     "school": "GT"
-    }
-   ],
-   "sig": "grrushHaynes King2024,Roddy Jones2008,Roddy Jones2011,Thomas Brown2007",
-   "more": {
-    "title": "Top rushing games in this rivalry (box scores)",
-    "rows": [
-     "1. Roddy Jones (GT) 2008: 214",
-     "2. Washaun Ealey (UGA) 2009: 183",
-     "3. Sony Michel (UGA) 2016: 170",
-     "4. Caleb King (UGA) 2009: 166",
-     "5. Anthony Allen (GT) 2010: 166",
-     "6. Kendall Milton (UGA) 2023: 156",
-     "7. Sony Michel (UGA) 2015: 149",
-     "8. Tashard Choice (GT) 2006: 146"
-    ]
-   }
-  },
-  {
    "type": "mc",
-   "label": "Game Story",
+   "label": "NFL Draft",
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Nov 30, 2013",
-    "winner": "UGA",
-    "loser": "GT",
-    "ws": 41,
-    "ls": 34,
-    "venue": "Bobby Dodd Stadium"
-   },
-   "prompt": "The 2013 Georgia Tech–Georgia game went to overtime, but the teams combined for how many rushing yards?",
+   "prompt": "Which of these Georgia Tech and Georgia players was drafted highest?",
    "options": [
-    "401",
-    "321",
-    "441",
-    "481"
+    "Michael  Johnson (Georgia Tech)",
+    "Jonas Jennings (Georgia)",
+    "Zachariah Branch (Georgia)",
+    "Jordan Jenkins (Georgia)"
    ],
    "answer": 0,
    "order": [
     0,
+    1,
     2,
-    3,
-    1
+    3
    ],
-   "reveal": "401: Georgia Tech 263, Georgia 138. 80+ rushing yards: David Sims (Georgia Tech) 100, Todd Gurley II (Georgia) 122.",
-   "names": {
-    "prompt": "Bonus: name everyone with 80+ rushing yards in this game.",
-    "a": "GT",
-    "b": "UGA",
-    "A": [
-     {
-      "name": "David Sims",
-      "yards": 100,
-      "label": "100 yds on 21 carries, 0 TD",
-      "profile": "Georgia Tech · 100 rushing yards on 21 carries, 0 TD in this game"
-     }
-    ],
-    "B": [
-     {
-      "name": "Todd Gurley II",
-      "yards": 122,
-      "label": "122 yds on 20 carries, 3 TD",
-      "profile": "Georgia · 122 rushing yards on 20 carries, 3 TD in this game"
-     }
+   "reveal": "Michael  Johnson: No. 70 overall in 2009 · Zachariah Branch: No. 79 overall in 2026 · Jordan Jenkins: No. 83 overall in 2016 · Jonas Jennings: No. 95 overall in 2001",
+   "sig": "dmJonas Jennings,Jordan Jenkins,Michael  Johnson,Zachariah Branch",
+   "more": {
+    "title": "Highest-drafted Georgia Tech and Georgia players since 2000",
+    "rows": [
+     "1. Matthew Stafford (UGA) No. 1, 2009",
+     "2. Travon Walker (UGA) No. 1, 2022",
+     "3. Calvin Johnson (GT) No. 2, 2007",
+     "4. A.J. Green (UGA) No. 4, 2011",
+     "5. Andrew Thomas (UGA) No. 4, 2020",
+     "6. Richard Seymour (UGA) No. 6, 2001",
+     "7. Johnathan Sullivan (UGA) No. 6, 2003",
+     "8. Roquan Smith (UGA) No. 8, 2018"
     ]
+   }
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Jamal Haynes (GT RB)",
+    "value": 562,
+    "school": "GT"
    },
-   "sig": "gs2013-11-30rush"
+   "B": {
+    "label": "Herschel Walker (UGA RB)",
+    "value": 243,
+    "school": "UGA"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Jamal Haynes 562 vs. Herschel Walker 243.",
+   "sig": "urecHerschel WalkerJamal Haynes"
   },
   {
    "type": "mc",
@@ -111,172 +73,19 @@
    "prompt": "From 2000 through 2025, what was the largest margin of victory in the Georgia Tech–Georgia series?",
    "options": [
     "45 points",
-    "54 points",
     "31 points",
+    "54 points",
     "57 points"
    ],
    "answer": 0,
    "order": [
-    3,
-    1,
     2,
-    0
+    1,
+    0,
+    3
    ],
    "reveal": "45 points: Georgia 45, Georgia Tech 0 (Nov 27, 2021); also Georgia in 2019.",
    "sig": "mm45"
-  },
-  {
-   "type": "mc",
-   "label": "Ranked Wins",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2010, which school has more wins over AP-ranked opponents, and how many?",
-   "options": [
-    "Georgia, 52",
-    "Georgia, 57",
-    "Georgia Tech, 15",
-    "Georgia Tech, 48"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    1,
-    3,
-    0
-   ],
-   "reveal": "Georgia 52, Georgia Tech 15 (through 2025). Latest: Georgia: 2025 vs. No. 10 Texas 35–10, 2025 vs. No. 23 Georgia Tech 16–9, 2025 vs. No. 10 Alabama 28–7; Georgia Tech: 2024 vs. No. 10 Florida State 24–21, 2024 vs. No. 4 Miami 28–23, 2025 vs. No. 12 Clemson 24–21.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
-   },
-   "sig": "rw2010"
-  },
-  {
-   "type": "mc",
-   "label": "Twist",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 26, 2005",
-    "winner": "UGA",
-    "loser": "GT",
-    "ws": 14,
-    "ls": 7,
-    "venue": "Bobby Dodd Stadium"
-   },
-   "prompt": "The 2005 Georgia Tech–Georgia game went to Georgia, 14–7. Which team gained more total yards, and by how much?",
-   "options": [
-    "Georgia Tech by 61",
-    "Georgia by 61",
-    "Georgia Tech by 101",
-    "Georgia by 101"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    0,
-    2
-   ],
-   "reveal": "🔄 Twist: Georgia Tech out-gained Georgia 327 to 266 and still lost. (Georgia Tech 172 rushing, 155 passing; Georgia 68 rushing, 198 passing.)",
-   "sig": "xo2005-11-26"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
-   "A": {
-    "label": "Haynes King (GT QB)",
-    "value": 36,
-    "school": "GT"
-   },
-   "B": {
-    "label": "Kenny McIntosh (UGA RB)",
-    "value": 16,
-    "school": "UGA"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Haynes King 36 vs. Kenny McIntosh 16.",
-   "sig": "urushTDKenny McIntoshHaynes King"
-  },
-  {
-   "type": "count",
-   "label": "Fill In",
-   "a": "GT",
-   "b": "UGA",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "Georgia Tech and Georgia's combined top 10 career rushing yards: which school has more players on the list?",
-   "A": [
-    {
-     "name": "Robert Lavette",
-     "yards": 4066,
-     "label": "4,066",
-     "profile": "4,066 career rushing yards · No. 3 on the combined list"
-    },
-    {
-     "name": "Jerry Mays",
-     "yards": 3699,
-     "label": "3,699",
-     "profile": "3,699 career rushing yards · No. 4 on the combined list"
-    },
-    {
-     "name": "Eddie Lee Ivery",
-     "yards": 3517,
-     "label": "3,517",
-     "profile": "3,517 career rushing yards · No. 6 on the combined list"
-    },
-    {
-     "name": "Tashard Choice",
-     "yards": 3365,
-     "label": "3,365",
-     "profile": "3,365 career rushing yards · No. 7 on the combined list"
-    },
-    {
-     "name": "P.J. Daniels",
-     "yards": 3346,
-     "label": "3,346",
-     "profile": "3,346 career rushing yards · No. 8 on the combined list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Herschel Walker",
-     "yards": 5259,
-     "label": "5,259",
-     "profile": "5,259 career rushing yards · No. 1 on the combined list"
-    },
-    {
-     "name": "Nick Chubb",
-     "yards": 4769,
-     "label": "4,769",
-     "profile": "4,769 career rushing yards · No. 2 on the combined list"
-    },
-    {
-     "name": "Sony Michel",
-     "yards": 3638,
-     "label": "3,638",
-     "profile": "3,638 career rushing yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Todd Gurley",
-     "yards": 3285,
-     "label": "3,285",
-     "profile": "3,285 career rushing yards · No. 9 on the combined list"
-    },
-    {
-     "name": "Garrison Hearst",
-     "yards": 3232,
-     "label": "3,232",
-     "profile": "3,232 career rushing yards · No. 10 on the combined list"
-    }
-   ],
-   "sig": "fcrush"
   },
   {
    "type": "count",
@@ -320,38 +129,145 @@
   },
   {
    "type": "mc",
-   "label": "Since 2004",
+   "label": "Ranked Wins",
    "verified": true,
    "pitted": true,
-   "prompt": "Since 2004, which player from either school has the most rushing yards against the other?",
+   "prompt": "Since 2018, which school has more wins over AP-ranked opponents, and how many?",
    "options": [
-    "Sony Michel (Georgia)",
-    "Roddy Jones (Georgia Tech)",
-    "Tashard Choice (Georgia Tech)",
-    "Washaun Ealey (Georgia)"
+    "Georgia, 36",
+    "Georgia, 33",
+    "Georgia Tech, 8",
+    "Georgia Tech, 38"
    ],
    "answer": 0,
    "order": [
-    1,
-    3,
     0,
+    3,
+    1,
     2
    ],
-   "reveal": "Sony Michel (Georgia) 453 in 4 games · Roddy Jones (Georgia Tech) 386 in 4 games · Tashard Choice (Georgia Tech) 311 in 3 games · Washaun Ealey (Georgia) 301 in 2 games",
-   "sig": "tvrush",
-   "more": {
-    "title": "Top rushing yards against the other school since 2004",
-    "rows": [
-     "1. Sony Michel (Georgia) 453 in 4 games",
-     "2. Roddy Jones (Georgia Tech) 386 in 4 games",
-     "3. Tashard Choice (Georgia Tech) 311 in 3 games",
-     "4. Washaun Ealey (Georgia) 301 in 2 games",
-     "5. Nick Chubb (Georgia) 270 in 3 games",
-     "6. Thomas Brown (Georgia) 221 in 3 games",
-     "7. Todd Gurley II (Georgia) 219 in 2 games",
-     "8. D'Andre Swift (Georgia) 215 in 3 games"
-    ]
-   }
+   "reveal": "Georgia 36, Georgia Tech 8 (through 2025). Latest: Georgia: 2025 vs. No. 10 Texas 35–10, 2025 vs. No. 23 Georgia Tech 16–9, 2025 vs. No. 10 Alabama 28–7; Georgia Tech: 2024 vs. No. 10 Florida State 24–21, 2024 vs. No. 4 Miami 28–23, 2025 vs. No. 12 Clemson 24–21.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   },
+   "sig": "rw2018"
+  },
+  {
+   "type": "mc",
+   "label": "Twist",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 29, 2008",
+    "winner": "GT",
+    "loser": "UGA",
+    "ws": 45,
+    "ls": 42,
+    "venue": "Sanford Stadium"
+   },
+   "prompt": "The 2008 Georgia Tech–Georgia game went to No. 18 Georgia Tech, 45–42, over No. 13 Georgia. Which team gained more total yards, and by how much?",
+   "options": [
+    "Georgia by 60",
+    "Georgia Tech by 60",
+    "Georgia by 100",
+    "Georgia Tech by 100"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    2,
+    3,
+    1
+   ],
+   "reveal": "🔄 Twist: Georgia out-gained Georgia Tech 488 to 428 and still lost. (Georgia 81 rushing, 407 passing; Georgia Tech 409 rushing, 19 passing.)",
+   "sig": "xo2008-11-29"
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "GT",
+   "b": "UGA",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Georgia Tech and Georgia's combined top 10 single-season receiving yards (through 2025): which school has more seasons on the list?",
+   "A": [
+    {
+     "name": "Calvin Johnson",
+     "yards": 1202,
+     "season": 2006,
+     "label": "2006: 1,202",
+     "profile": "2006 season, 1,202 receiving yards · No. 1 on the combined list"
+    },
+    {
+     "name": "Demaryius Thomas",
+     "yards": 1157,
+     "season": 2009,
+     "label": "2009: 1,157",
+     "profile": "2009 season, 1,157 receiving yards · No. 2 on the combined list"
+    },
+    {
+     "name": "Jonathan Smith",
+     "yards": 1138,
+     "season": 2003,
+     "label": "2003: 1,138",
+     "profile": "2003 season, 1,138 receiving yards · No. 3 on the combined list"
+    },
+    {
+     "name": "Kelly Campbell",
+     "yards": 1105,
+     "season": 1999,
+     "label": "1999: 1,105",
+     "profile": "1999 season, 1,105 receiving yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Kerry Watkins",
+     "yards": 1050,
+     "season": 2002,
+     "label": "2002: 1,050",
+     "profile": "2002 season, 1,050 receiving yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Dez White",
+     "yards": 973,
+     "season": 1998,
+     "label": "1998: 973",
+     "profile": "1998 season, 973 receiving yards · No. 7 on the combined list"
+    },
+    {
+     "name": "Kelly Campbell",
+     "yards": 963,
+     "season": 2000,
+     "label": "2000: 963",
+     "profile": "2000 season, 963 receiving yards · No. 9 on the combined list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Terrence Edwards",
+     "yards": 1004,
+     "season": 2002,
+     "label": "2002: 1,004",
+     "profile": "2002 season, 1,004 receiving yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Brice Hunter",
+     "yards": 970,
+     "season": 1993,
+     "label": "1993: 970",
+     "profile": "1993 season, 970 receiving yards · No. 8 on the combined list"
+    },
+    {
+     "name": "A. J. Green",
+     "yards": 963,
+     "season": 2008,
+     "label": "2008: 963",
+     "profile": "2008 season, 963 receiving yards · No. 10 on the combined list"
+    }
+   ],
+   "sig": "fsrec"
   },
   {
    "type": "rank",
@@ -362,28 +278,28 @@
    "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
    "items": [
     {
-     "label": "A. J. Green (Georgia, 2008–10)",
-     "value": 2619,
-     "school": "UGA"
-    },
-    {
      "label": "Brock Bowers (Georgia, 2021–23)",
      "value": 2538,
      "school": "UGA"
     },
     {
-     "label": "Calvin Johnson (Georgia Tech, 2004–06)",
-     "value": 2927,
-     "school": "GT"
+     "label": "Fred Gibson (Georgia, 2001–04)",
+     "value": 2884,
+     "school": "UGA"
     },
     {
      "label": "Kerry Watkins (Georgia Tech, 1999–02)",
      "value": 2680,
      "school": "GT"
+    },
+    {
+     "label": "Calvin Johnson (Georgia Tech, 2004–06)",
+     "value": 2927,
+     "school": "GT"
     }
    ],
    "note": "Career totals from each school's record book. Sources: Wikipedia \"Georgia Tech Yellow Jackets football statistical leaders\" career receiving yards table (revision 1380386584), which cites the school record book; fetched 2026-11-23; Wikipedia \"Georgia Bulldogs football statistical leaders\" career receiving yards table (revision 1385737765), which cites the school record book; fetched 2026-11-23",
-   "sig": "nrreceivingA. J. Green,Brock Bowers,Calvin Johnson,Kerry Watkins",
+   "sig": "nrreceivingBrock Bowers,Calvin Johnson,Fred Gibson,Kerry Watkins",
    "names": {
     "prompt": "Bonus: name the other 6 players in Georgia Tech and Georgia's combined top 10 for career receiving yards.",
     "a": "GT",
@@ -404,10 +320,10 @@
       "profile": "3,093 career receiving yards (1999–2002) · No. 1 on the combined list"
      },
      {
-      "name": "Fred Gibson",
-      "yards": 2884,
-      "label": "2,884 (2001–2004)",
-      "profile": "2,884 career receiving yards (2001–2004) · No. 4 on the combined list"
+      "name": "A. J. Green",
+      "yards": 2619,
+      "label": "2,619 (2008–2010)",
+      "profile": "2,619 career receiving yards (2008–2010) · No. 6 on the combined list"
      },
      {
       "name": "Tavarres King",
@@ -444,6 +360,91 @@
      "10. Demaryius Thomas (Georgia Tech, 2007–09) 2,342"
     ]
    }
+  },
+  {
+   "type": "mc",
+   "label": "Since 2004",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2004, which player from either school has the most rushing yards against the other?",
+   "options": [
+    "Sony Michel (Georgia)",
+    "Roddy Jones (Georgia Tech)",
+    "Tashard Choice (Georgia Tech)",
+    "Washaun Ealey (Georgia)"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    3,
+    0,
+    2
+   ],
+   "reveal": "Sony Michel (Georgia) 453 in 4 games · Roddy Jones (Georgia Tech) 386 in 4 games · Tashard Choice (Georgia Tech) 311 in 3 games · Washaun Ealey (Georgia) 301 in 2 games",
+   "sig": "tvrush",
+   "more": {
+    "title": "Top rushing yards against the other school since 2004",
+    "rows": [
+     "1. Sony Michel (Georgia) 453 in 4 games",
+     "2. Roddy Jones (Georgia Tech) 386 in 4 games",
+     "3. Tashard Choice (Georgia Tech) 311 in 3 games",
+     "4. Washaun Ealey (Georgia) 301 in 2 games",
+     "5. Nick Chubb (Georgia) 270 in 3 games",
+     "6. Thomas Brown (Georgia) 221 in 3 games",
+     "7. Todd Gurley II (Georgia) 219 in 2 games",
+     "8. D'Andre Swift (Georgia) 215 in 3 games"
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "label": "Game Story",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 29, 2024",
+    "winner": "UGA",
+    "loser": "GT",
+    "ws": 44,
+    "ls": 42,
+    "venue": "Sanford Stadium"
+   },
+   "prompt": "The 2024 Georgia Tech–Georgia game went to overtime, but the teams combined for how many rushing yards?",
+   "options": [
+    "368",
+    "288",
+    "328",
+    "408"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    3,
+    1,
+    0
+   ],
+   "reveal": "368: Georgia Tech 260, Georgia 108. 75+ rushing yards: Haynes King (Georgia Tech) 110, Jamal Haynes (Georgia Tech) 91.",
+   "names": {
+    "prompt": "Bonus: name everyone with 75+ rushing yards in this game.",
+    "a": "GT",
+    "b": "UGA",
+    "A": [
+     {
+      "name": "Haynes King",
+      "yards": 110,
+      "label": "110 yds on 24 carries, 3 TD",
+      "profile": "Georgia Tech · 110 rushing yards on 24 carries, 3 TD in this game"
+     },
+     {
+      "name": "Jamal Haynes",
+      "yards": 91,
+      "label": "91 yds on 13 carries, 0 TD",
+      "profile": "Georgia Tech · 91 rushing yards on 13 carries, 0 TD in this game"
+     }
+    ],
+    "B": []
+   },
+   "sig": "gs2024-11-29rush"
   }
  ]
 }

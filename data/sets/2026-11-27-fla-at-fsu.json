@@ -6,9 +6,58 @@
   "away": "FLA",
   "home": "FSU"
  },
- "generatedAt": "2026-11-24T01:25:48.770Z",
- "engine": 47,
+ "generatedAt": "2026-11-24T01:44:37.765Z",
+ "engine": 51,
  "questions": [
+  {
+   "type": "mc",
+   "label": "Rankings",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Of the 25 Florida–Florida State games from 2000 through 2025, how many featured a team ranked No. 1 in the AP poll?",
+   "options": [
+    "2",
+    "0",
+    "1",
+    "4"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    3,
+    1,
+    0
+   ],
+   "reveal": "2: 2009 (No. 1 Florida 37, Florida State 10) · 2014 (No. 1 Florida State 24, Florida 19).",
+   "info": {
+    "title": "Which poll?",
+    "text": "The AP Top 25 in force the week of each game; bowl and championship games use the last regular-season poll. Tied teams share a rank."
+   },
+   "years": {
+    "prompt": "Name the 2 seasons.",
+    "a": "FLA",
+    "b": "FSU",
+    "A": [
+     {
+      "name": "No. 1 Florida 37, Florida State 10",
+      "yards": 0,
+      "season": 2009,
+      "label": "No. 1 Florida 37, Florida State 10",
+      "profile": "No. 1 Florida 37, Florida State 10"
+     }
+    ],
+    "B": [
+     {
+      "name": "No. 1 Florida State 24, Florida 19",
+      "yards": 0,
+      "season": 2014,
+      "label": "No. 1 Florida State 24, Florida 19",
+      "profile": "No. 1 Florida State 24, Florida 19"
+     }
+    ]
+   },
+   "sig": "rkn1"
+  },
   {
    "type": "count",
    "label": "Fill In",
@@ -111,16 +160,16 @@
    "prompt": "The 2012 Florida–Florida State game was a top-10 showdown (No. 6 vs. No. 10), but the teams combined for how many rushing yards?",
    "options": [
     "356",
+    "316",
     "276",
-    "396",
-    "316"
+    "396"
    ],
    "answer": 0,
    "order": [
     3,
-    1,
     0,
-    2
+    2,
+    1
    ],
    "reveal": "356: Florida 244, Florida State 112. 75+ rushing yards: Mike Gillislee (Florida) 140, Matt Jones (Florida) 81.",
    "names": {
@@ -147,15 +196,23 @@
   },
   {
    "type": "mc",
-   "label": "Ranked Wins",
+   "label": "Historic Day",
    "verified": true,
    "pitted": true,
-   "prompt": "Since 2010, which school has more wins over AP-ranked opponents, and how many?",
+   "game": {
+    "date": "Nov 29, 2025",
+    "winner": "FLA",
+    "loser": "FSU",
+    "ws": 40,
+    "ls": 21,
+    "venue": "Ben Hill Griffin Stadium"
+   },
+   "prompt": "2025: Florida vs. Florida State. Jadan Baugh carried 38 times. How many rushing yards did he finish with?",
    "options": [
-    "Florida State, 23",
-    "Florida State, 27",
-    "Florida, 19",
-    "Florida, 20"
+    "266",
+    "226",
+    "186",
+    "146"
    ],
    "answer": 0,
    "order": [
@@ -164,61 +221,8 @@
     2,
     0
    ],
-   "reveal": "Florida State 23, Florida 19 (through 2025). Latest: Florida State: 2023 vs. No. 16 Duke 38–20, 2023 vs. No. 15 Louisville 16–6, 2025 vs. No. 8 Alabama 31–17; Florida: 2024 vs. No. 21 LSU 27–16, 2024 vs. No. 9 Ole Miss 24–17, 2025 vs. No. 9 Texas 29–21.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
-   },
-   "sig": "rw2010"
-  },
-  {
-   "type": "mc",
-   "label": "Rankings",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Of the 25 Florida–Florida State games from 2000 through 2025, how many featured a team ranked No. 1 in the AP poll?",
-   "options": [
-    "2",
-    "4",
-    "3",
-    "1"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    2,
-    0,
-    3
-   ],
-   "reveal": "2: 2009 (No. 1 Florida 37, Florida State 10) · 2014 (No. 1 Florida State 24, Florida 19).",
-   "info": {
-    "title": "Which poll?",
-    "text": "The AP Top 25 in force the week of each game; bowl and championship games use the last regular-season poll. Tied teams share a rank."
-   },
-   "years": {
-    "prompt": "Name the 2 seasons.",
-    "a": "FLA",
-    "b": "FSU",
-    "A": [
-     {
-      "name": "No. 1 Florida 37, Florida State 10",
-      "yards": 0,
-      "season": 2009,
-      "label": "No. 1 Florida 37, Florida State 10",
-      "profile": "No. 1 Florida 37, Florida State 10"
-     }
-    ],
-    "B": [
-     {
-      "name": "No. 1 Florida State 24, Florida 19",
-      "yards": 0,
-      "season": 2014,
-      "label": "No. 1 Florida State 24, Florida 19",
-      "profile": "No. 1 Florida State 24, Florida 19"
-     }
-    ]
-   },
-   "sig": "rkn1"
+   "reveal": "266 rushing yards and 2 TD, the most by anyone in this rivalry since 2004 (box scores). Florida won, 40–21.",
+   "sig": "xb2025-11-29Jadan Baugh"
   },
   {
    "type": "count",
@@ -261,77 +265,26 @@
    "bonus": "names"
   },
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": true,
-   "prompt": "Who had more college receptions (at the school shown)?",
-   "A": {
-    "label": "Kyle Pitts (FLA TE)",
-    "value": 100,
-    "school": "FLA"
-   },
-   "B": {
-    "label": "Dalvin Cook (FSU RB)",
-    "value": 79,
-    "school": "FSU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Kyle Pitts 100 vs. Dalvin Cook 79.",
-   "sig": "urecNDalvin CookKyle Pitts"
-  },
-  {
-   "type": "mc",
-   "label": "Twist",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 26, 2011",
-    "winner": "FSU",
-    "loser": "FLA",
-    "ws": 21,
-    "ls": 7,
-    "venue": "Ben Hill Griffin Stadium"
-   },
-   "prompt": "The 2011 Florida–Florida State game went to Florida State, 21–7. Which team gained more total yards, and by how much?",
-   "options": [
-    "Florida by 89",
-    "Florida State by 89",
-    "Florida by 129",
-    "Florida State by 129"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    0,
-    2,
-    3
-   ],
-   "reveal": "🔄 Twist: Florida out-gained Florida State 184 to 95 and still lost. (Florida 54 rushing, 130 passing; Florida State 30 rushing, 65 passing.)",
-   "sig": "xo2011-11-26"
-  },
-  {
    "type": "mc",
    "label": "Series History",
    "verified": true,
    "pitted": true,
-   "prompt": "In which year was the highest-scoring Florida–Florida State game from 2000 through 2025?",
+   "prompt": "From 2000 through 2025, what's the longest winning streak by either school in the Florida–Florida State series?",
    "options": [
-    "2022",
-    "2024",
-    "2014",
-    "2008"
+    "6 straight",
+    "8 straight",
+    "4 straight",
+    "9 straight"
    ],
    "answer": 0,
    "order": [
-    0,
     2,
+    0,
     3,
     1
    ],
-   "reveal": "2022: Florida State 45, Florida 38 (83 points, Nov 25, 2022). Next highest: 2003, Florida State 38–34 (72).",
-   "sig": "mh2022"
+   "reveal": "6 straight: Florida won every meeting from 2004 through 2009.",
+   "sig": "msFLA2004"
   },
   {
    "type": "rank",
@@ -342,14 +295,14 @@
    "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
    "items": [
     {
-     "label": "Rashad Greene (Florida State, 2011–14)",
-     "value": 3830,
-     "school": "FSU"
+     "label": "Andre Caldwell (Florida, 2003–07)",
+     "value": 2349,
+     "school": "FLA"
     },
     {
-     "label": "Jabar Gaffney (Florida, 2000–01)",
-     "value": 2375,
-     "school": "FLA"
+     "label": "Craphonso Thorpe (Florida State, 2001–04)",
+     "value": 2153,
+     "school": "FSU"
     },
     {
      "label": "Dallas Baker (Florida, 2003–06)",
@@ -357,13 +310,13 @@
      "school": "FLA"
     },
     {
-     "label": "Craphonso Thorpe (Florida State, 2001–04)",
-     "value": 2153,
+     "label": "Greg Carr (Florida State, 2005–08)",
+     "value": 2574,
      "school": "FSU"
     }
    ],
    "note": "Career totals from each school's record book. Sources: Wikipedia \"Florida Gators football statistical leaders\" career receiving yards table (revision 1385857120), which cites the school record book; fetched 2026-11-23; Wikipedia \"Florida State Seminoles football statistical leaders\" career receiving yards table (revision 1378376740), which cites the school record book; fetched 2026-11-23",
-   "sig": "nrreceivingCraphonso Thorpe,Dallas Baker,Jabar Gaffney,Rashad Greene",
+   "sig": "nrreceivingAndre Caldwell,Craphonso Thorpe,Dallas Baker,Greg Carr",
    "names": {
     "prompt": "Bonus: name the other 8 players in Florida and Florida State's combined top 10 for career receiving yards.",
     "a": "FLA",
@@ -376,13 +329,19 @@
       "profile": "2,563 career receiving yards (1969–1971) · No. 7 on the combined list"
      },
      {
-      "name": "Andre Caldwell",
-      "yards": 2349,
-      "label": "2,349 (2003–2007)",
-      "profile": "2,349 career receiving yards (2003–2007) · No. 10 on the combined list"
+      "name": "Jabar Gaffney",
+      "yards": 2375,
+      "label": "2,375 (2000–2001)",
+      "profile": "2,375 career receiving yards (2000–2001) · No. 9 on the combined list"
      }
     ],
     "B": [
+     {
+      "name": "Rashad Greene",
+      "yards": 3830,
+      "label": "3,830 (2011–2014)",
+      "profile": "3,830 career receiving yards (2011–2014) · No. 1 on the combined list"
+     },
      {
       "name": "Ron Sellers",
       "yards": 3598,
@@ -406,12 +365,6 @@
       "yards": 2660,
       "label": "2,660 (1991–1994)",
       "profile": "2,660 career receiving yards (1991–1994) · No. 5 on the combined list"
-     },
-     {
-      "name": "Greg Carr",
-      "yards": 2574,
-      "label": "2,574 (2005–2008)",
-      "profile": "2,574 career receiving yards (2005–2008) · No. 6 on the combined list"
      },
      {
       "name": "Barry Smith",
@@ -466,6 +419,57 @@
    "B": [],
    "sig": "acmaxwell2000",
    "bonus": "names"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college rushing touchdowns (at the school shown)?",
+   "A": {
+    "label": "Tim Tebow (FLA QB)",
+    "value": 57,
+    "school": "FLA"
+   },
+   "B": {
+    "label": "Dalvin Cook (FSU RB)",
+    "value": 46,
+    "school": "FSU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Tim Tebow 57 vs. Dalvin Cook 46.",
+   "sig": "urushTDDalvin CookTim Tebow"
+  },
+  {
+   "type": "mc",
+   "label": "Twist",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 26, 2005",
+    "winner": "FLA",
+    "loser": "FSU",
+    "ws": 34,
+    "ls": 7,
+    "venue": "Ben Hill Griffin Stadium"
+   },
+   "prompt": "The 2005 Florida–Florida State game went to No. 19 Florida, 34–7, over No. 23 Florida State. Which team gained more total yards, and by how much?",
+   "options": [
+    "Florida State by 50",
+    "Florida by 50",
+    "Florida State by 90",
+    "Florida by 90"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    3,
+    1,
+    0
+   ],
+   "reveal": "🔄 Twist: Florida State out-gained Florida 334 to 284 and still lost. (Florida State 49 rushing, 285 passing; Florida 73 rushing, 211 passing.)",
+   "sig": "xo2005-11-26"
   }
  ]
 }

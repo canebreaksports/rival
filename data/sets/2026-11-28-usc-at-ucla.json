@@ -6,128 +6,9 @@
   "away": "USC",
   "home": "UCLA"
  },
- "generatedAt": "2026-11-24T01:25:50.937Z",
- "engine": 47,
+ "generatedAt": "2026-11-24T01:44:39.699Z",
+ "engine": 51,
  "questions": [
-  {
-   "type": "count",
-   "label": "Fill In",
-   "a": "USC",
-   "b": "UCLA",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "USC and UCLA's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
-   "A": [
-    {
-     "name": "Marcus Allen",
-     "yards": 2427,
-     "season": 1981,
-     "label": "1981: 2,427",
-     "profile": "1981 season, 2,427 rushing yards · No. 1 on the combined list"
-    },
-    {
-     "name": "Charles White",
-     "yards": 2050,
-     "season": 1979,
-     "label": "1979: 2,050",
-     "profile": "1979 season, 2,050 rushing yards · No. 2 on the combined list"
-    },
-    {
-     "name": "Ricky Bell",
-     "yards": 1957,
-     "season": 1975,
-     "label": "1975: 1,957",
-     "profile": "1975 season, 1,957 rushing yards · No. 3 on the combined list"
-    },
-    {
-     "name": "O. J. Simpson",
-     "yards": 1880,
-     "season": 1968,
-     "label": "1968: 1,880",
-     "profile": "1968 season, 1,880 rushing yards · No. 4 on the combined list"
-    },
-    {
-     "name": "Charles White",
-     "yards": 1859,
-     "season": 1978,
-     "label": "1978: 1,859",
-     "profile": "1978 season, 1,859 rushing yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Reggie Bush",
-     "yards": 1740,
-     "season": 2005,
-     "label": "2005: 1,740",
-     "profile": "2005 season, 1,740 rushing yards · No. 6 on the combined list"
-    },
-    {
-     "name": "Marcus Allen",
-     "yards": 1563,
-     "season": 1980,
-     "label": "1980: 1,563",
-     "profile": "1980 season, 1,563 rushing yards · No. 10 on the combined list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Johnathan Franklin",
-     "yards": 1734,
-     "season": 2012,
-     "label": "2012: 1,734",
-     "profile": "2012 season, 1,734 rushing yards · No. 7 on the combined list"
-    },
-    {
-     "name": "Paul Perkins",
-     "yards": 1575,
-     "season": 2014,
-     "label": "2014: 1,575",
-     "profile": "2014 season, 1,575 rushing yards · No. 8 on the combined list"
-    },
-    {
-     "name": "Karim Abdul-Jabbar",
-     "yards": 1571,
-     "season": 1995,
-     "label": "1995: 1,571",
-     "profile": "1995 season, 1,571 rushing yards · No. 9 on the combined list"
-    }
-   ],
-   "sig": "fsrush"
-  },
-  {
-   "type": "count",
-   "label": "Since 2020",
-   "a": "USC",
-   "b": "UCLA",
-   "threshold": 1000,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2020 through 2025, which school had more 1,000-yard receiving seasons?",
-   "A": [
-    {
-     "name": "Drake London",
-     "yards": 1084,
-     "season": 2021,
-     "profile": "Wide receiver · 2021: 2 rushing, 1,084 receiving yds"
-    },
-    {
-     "name": "Tahj Washington",
-     "yards": 1062,
-     "season": 2023,
-     "profile": "Wide receiver · 2023: 10 rushing, 1,062 receiving yds"
-    },
-    {
-     "name": "Makai Lemon",
-     "yards": 1156,
-     "season": 2025,
-     "profile": "Wide receiver · 2025: 4 rushing, 1,156 receiving yds"
-    }
-   ],
-   "B": [],
-   "sig": "tsrec10002020",
-   "bonus": "names"
-  },
   {
    "type": "mc",
    "label": "Ranked Wins",
@@ -136,16 +17,16 @@
    "prompt": "Since 2015, which school has more wins over AP-ranked opponents, and how many?",
    "options": [
     "USC, 16",
-    "USC, 21",
+    "USC, 12",
     "UCLA, 11",
-    "UCLA, 12"
+    "UCLA, 19"
    ],
    "answer": 0,
    "order": [
-    0,
-    2,
+    1,
     3,
-    1
+    0,
+    2
    ],
    "reveal": "USC 16, UCLA 11 (through 2025). Latest: USC: 2023 vs. No. 16 Louisville 42–28, 2024 vs. No. 13 LSU 27–20, 2025 vs. No. 15 Michigan 31–13; UCLA: 2022 vs. No. 11 Utah 42–32, 2023 vs. No. 13 Washington State 25–17, 2025 vs. No. 7 Penn State 42–37.",
    "info": {
@@ -153,174 +34,6 @@
     "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
    },
    "sig": "rw2015"
-  },
-  {
-   "type": "h2h",
-   "label": "Against Each Other",
-   "verified": true,
-   "flip": false,
-   "prompt": "In USC–UCLA games since 2004, who had more receiving yards against the other school?",
-   "A": {
-    "label": "Kyle Ford (USC) vs. UCLA",
-    "value": 102,
-    "school": "USC"
-   },
-   "B": {
-    "label": "Jordan Lasley (UCLA) vs. USC",
-    "value": 267,
-    "school": "UCLA"
-   },
-   "unit": "receiving yds",
-   "note": "Kyle Ford: 102 in 2 games. Jordan Lasley: 267 in 2 games.",
-   "sig": "vsrecJordan Lasley,Kyle Ford",
-   "more": {
-    "title": "Top receiving yards against the other school since 2004",
-    "rows": [
-     "1. Marqise Lee (USC) 451 in 3 games",
-     "2. Amon-Ra St. Brown (USC) 299 in 3 games",
-     "3. Tyler Vaughns (USC) 290 in 4 games",
-     "4. Jordan Lasley (UCLA) 267 in 2 games",
-     "5. Kyle Philips (UCLA) 266 in 3 games",
-     "6. Nelson Rosario (UCLA) 266 in 3 games"
-    ]
-   }
-  },
-  {
-   "type": "moment",
-   "label": "Longest Play",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 23, 2019",
-    "winner": "USC",
-    "loser": "UCLA",
-    "ws": 52,
-    "ls": 35,
-    "venue": "Los Angeles Memorial Coliseum"
-   },
-   "prompt": "In this game, was the longest offensive play (run or catch) more or less than",
-   "line": "71.5 yards",
-   "answer": "under",
-   "reveal": "Less. The longest was Devin Asiasi's 53-yard catch for UCLA; USC's longest was 49 yards (Tyler Vaughns).",
-   "check": {
-    "value": 53,
-    "line": 71.5
-   },
-   "sig": "lg2019-11-23"
-  },
-  {
-   "type": "rank",
-   "label": "Notables",
-   "verified": true,
-   "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
-   "items": [
-    {
-     "label": "Ricky Bell (USC)",
-     "value": 3689,
-     "school": "USC"
-    },
-    {
-     "label": "O. J. Simpson (USC)",
-     "value": 3423,
-     "school": "USC"
-    },
-    {
-     "label": "Gaston Green (UCLA)",
-     "value": 3731,
-     "school": "UCLA"
-    },
-    {
-     "label": "Paul Perkins (UCLA)",
-     "value": 3611,
-     "school": "UCLA"
-    }
-   ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"USC Trojans football statistical leaders\" career rushing yards table (revision 1387109358), which cites the school record book; fetched 2026-11-17; Wikipedia \"UCLA Bruins football statistical leaders\" career rushing yards table (revision 1385843112), which cites the school record book; fetched 2026-11-17",
-   "sig": "nrrushingGaston Green,O. J. Simpson,Paul Perkins,Ricky Bell",
-   "names": {
-    "prompt": "Bonus: name the other 6 players in USC and UCLA's combined top 10 for career rushing yards.",
-    "a": "USC",
-    "b": "UCLA",
-    "A": [
-     {
-      "name": "Charles White",
-      "yards": 6245,
-      "label": "6,245",
-      "profile": "6,245 career rushing yards · No. 1 on the combined list"
-     },
-     {
-      "name": "Marcus Allen",
-      "yards": 4810,
-      "label": "4,810",
-      "profile": "4,810 career rushing yards · No. 2 on the combined list"
-     },
-     {
-      "name": "Anthony Davis",
-      "yards": 3724,
-      "label": "3,724",
-      "profile": "3,724 career rushing yards · No. 5 on the combined list"
-     },
-     {
-      "name": "Ronald Jones II",
-      "yards": 3619,
-      "label": "3,619",
-      "profile": "3,619 career rushing yards · No. 7 on the combined list"
-     },
-     {
-      "name": "Mike Garrett",
-      "yards": 3221,
-      "label": "3,221",
-      "profile": "3,221 career rushing yards · No. 10 on the combined list"
-     }
-    ],
-    "B": [
-     {
-      "name": "Johnathan Franklin",
-      "yards": 4403,
-      "label": "4,403",
-      "profile": "4,403 career rushing yards · No. 3 on the combined list"
-     }
-    ]
-   },
-   "more": {
-    "title": "Career rushing yards, USC and UCLA (school top 10s)",
-    "rows": [
-     "1. Charles White (USC) 6,245",
-     "2. Marcus Allen (USC) 4,810",
-     "3. Johnathan Franklin (UCLA) 4,403",
-     "4. Gaston Green (UCLA) 3,731",
-     "5. Anthony Davis (USC) 3,724",
-     "6. Ricky Bell (USC) 3,689",
-     "7. Ronald Jones II (USC) 3,619",
-     "8. Paul Perkins (UCLA) 3,611",
-     "9. O. J. Simpson (USC) 3,423",
-     "10. Freeman McNeil (UCLA) 3,195"
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the USC–UCLA series?",
-   "options": [
-    "50 points",
-    "56 points",
-    "36 points",
-    "40 points"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    0,
-    3,
-    1
-   ],
-   "reveal": "50 points: USC 50, UCLA 0 (Nov 26, 2011).",
-   "sig": "mm50"
   },
   {
    "type": "mc",
@@ -339,15 +52,15 @@
    "options": [
     "419",
     "459",
-    "499",
-    "339"
+    "339",
+    "499"
    ],
    "answer": 0,
    "order": [
-    1,
     2,
     3,
-    0
+    0,
+    1
    ],
    "reveal": "419: USC 159, UCLA 260. 75+ rushing yards: Zach Charbonnet (UCLA) 167, Keaontay Ingram (USC) 96.",
    "names": {
@@ -372,6 +85,76 @@
     ]
    },
    "sig": "gs2021-11-20rush"
+  },
+  {
+   "type": "mc",
+   "label": "Rankings",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Of the 26 USC–UCLA games from 2000 through 2025, how many featured at least one AP top-5 team?",
+   "options": [
+    "5",
+    "3",
+    "6",
+    "8"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    3,
+    2,
+    1
+   ],
+   "reveal": "5: 2003 (No. 2 USC 47, UCLA 22) · 2004 (No. 1 USC 29, UCLA 24) · 2005 (No. 1 USC 66, No. 11 UCLA 19) · 2006 (UCLA 13, No. 2 USC 9) · 2008 (No. 5 USC 28, UCLA 7).",
+   "info": {
+    "title": "Which poll?",
+    "text": "The AP Top 25 in force the week of each game; bowl and championship games use the last regular-season poll. Tied teams share a rank."
+   },
+   "years": {
+    "prompt": "Name the 5 seasons.",
+    "a": "USC",
+    "b": "UCLA",
+    "A": [
+     {
+      "name": "No. 2 USC 47, UCLA 22",
+      "yards": 0,
+      "season": 2003,
+      "label": "No. 2 USC 47, UCLA 22",
+      "profile": "No. 2 USC 47, UCLA 22"
+     },
+     {
+      "name": "No. 1 USC 29, UCLA 24",
+      "yards": 0,
+      "season": 2004,
+      "label": "No. 1 USC 29, UCLA 24",
+      "profile": "No. 1 USC 29, UCLA 24"
+     },
+     {
+      "name": "No. 1 USC 66, No. 11 UCLA 19",
+      "yards": 0,
+      "season": 2005,
+      "label": "No. 1 USC 66, No. 11 UCLA 19",
+      "profile": "No. 1 USC 66, No. 11 UCLA 19"
+     },
+     {
+      "name": "No. 5 USC 28, UCLA 7",
+      "yards": 0,
+      "season": 2008,
+      "label": "No. 5 USC 28, UCLA 7",
+      "profile": "No. 5 USC 28, UCLA 7"
+     }
+    ],
+    "B": [
+     {
+      "name": "UCLA 13, No. 2 USC 9",
+      "yards": 0,
+      "season": 2006,
+      "label": "UCLA 13, No. 2 USC 9",
+      "profile": "UCLA 13, No. 2 USC 9"
+     }
+    ]
+   },
+   "sig": "rkany5"
   },
   {
    "type": "count",
@@ -412,19 +195,19 @@
    "verified": true,
    "pitted": true,
    "game": {
-    "date": "Dec 2, 2006",
+    "date": "Nov 17, 2012",
     "winner": "UCLA",
     "loser": "USC",
-    "ws": 13,
-    "ls": 9,
+    "ws": 38,
+    "ls": 28,
     "venue": "Rose Bowl"
    },
-   "prompt": "The 2006 USC–UCLA game went to UCLA, 13–9. Which team gained more total yards, and by how much?",
+   "prompt": "The 2012 USC–UCLA game went to No. 17 UCLA, 38–28, over No. 21 USC. Which team gained more total yards, and by how much?",
    "options": [
-    "USC by 94",
-    "UCLA by 94",
-    "USC by 134",
-    "UCLA by 134"
+    "USC by 107",
+    "UCLA by 107",
+    "USC by 50",
+    "UCLA by 50"
    ],
    "answer": 0,
    "order": [
@@ -433,8 +216,277 @@
     1,
     2
    ],
-   "reveal": "🔄 Twist: USC out-gained UCLA 329 to 235 and still lost. (USC 55 rushing, 274 passing; UCLA 121 rushing, 114 passing.)",
-   "sig": "xo2006-12-02"
+   "reveal": "🔄 Twist: USC out-gained UCLA 513 to 406 and still lost. (USC 172 rushing, 341 passing; UCLA 172 rushing, 234 passing.)",
+   "sig": "xo2012-11-17"
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Ronald Jones II (USC)",
+     "value": 3619,
+     "school": "USC"
+    },
+    {
+     "label": "Freeman McNeil (UCLA)",
+     "value": 3195,
+     "school": "UCLA"
+    },
+    {
+     "label": "Anthony Davis (USC)",
+     "value": 3724,
+     "school": "USC"
+    },
+    {
+     "label": "Johnathan Franklin (UCLA)",
+     "value": 4403,
+     "school": "UCLA"
+    }
+   ],
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"USC Trojans football statistical leaders\" career rushing yards table (revision 1387109358), which cites the school record book; fetched 2026-11-17; Wikipedia \"UCLA Bruins football statistical leaders\" career rushing yards table (revision 1385843112), which cites the school record book; fetched 2026-11-17",
+   "sig": "nrrushingAnthony Davis,Freeman McNeil,Johnathan Franklin,Ronald Jones II",
+   "names": {
+    "prompt": "Bonus: name the other 7 players in USC and UCLA's combined top 10 for career rushing yards.",
+    "a": "USC",
+    "b": "UCLA",
+    "A": [
+     {
+      "name": "Charles White",
+      "yards": 6245,
+      "label": "6,245",
+      "profile": "6,245 career rushing yards · No. 1 on the combined list"
+     },
+     {
+      "name": "Marcus Allen",
+      "yards": 4810,
+      "label": "4,810",
+      "profile": "4,810 career rushing yards · No. 2 on the combined list"
+     },
+     {
+      "name": "Ricky Bell",
+      "yards": 3689,
+      "label": "3,689",
+      "profile": "3,689 career rushing yards · No. 6 on the combined list"
+     },
+     {
+      "name": "O. J. Simpson",
+      "yards": 3423,
+      "label": "3,423",
+      "profile": "3,423 career rushing yards · No. 9 on the combined list"
+     },
+     {
+      "name": "Mike Garrett",
+      "yards": 3221,
+      "label": "3,221",
+      "profile": "3,221 career rushing yards · No. 10 on the combined list"
+     }
+    ],
+    "B": [
+     {
+      "name": "Gaston Green",
+      "yards": 3731,
+      "label": "3,731",
+      "profile": "3,731 career rushing yards · No. 4 on the combined list"
+     },
+     {
+      "name": "Paul Perkins",
+      "yards": 3611,
+      "label": "3,611",
+      "profile": "3,611 career rushing yards · No. 8 on the combined list"
+     }
+    ]
+   },
+   "more": {
+    "title": "Career rushing yards, USC and UCLA (school top 10s)",
+    "rows": [
+     "1. Charles White (USC) 6,245",
+     "2. Marcus Allen (USC) 4,810",
+     "3. Johnathan Franklin (UCLA) 4,403",
+     "4. Gaston Green (UCLA) 3,731",
+     "5. Anthony Davis (USC) 3,724",
+     "6. Ricky Bell (USC) 3,689",
+     "7. Ronald Jones II (USC) 3,619",
+     "8. Paul Perkins (UCLA) 3,611",
+     "9. O. J. Simpson (USC) 3,423",
+     "10. Freeman McNeil (UCLA) 3,195"
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2000 through 2025, what was the largest margin of victory in the USC–UCLA series?",
+   "options": [
+    "50 points",
+    "62 points",
+    "36 points",
+    "43 points"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    2,
+    1,
+    0
+   ],
+   "reveal": "50 points: USC 50, UCLA 0 (Nov 26, 2011).",
+   "sig": "mm50"
+  },
+  {
+   "type": "mc",
+   "label": "Historic Day",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 26, 2011",
+    "winner": "USC",
+    "loser": "UCLA",
+    "ws": 50,
+    "ls": 0,
+    "venue": "Los Angeles Memorial Coliseum"
+   },
+   "prompt": "2011: USC vs. UCLA. Marqise Lee caught 13 passes. How many receiving yards did he finish with?",
+   "options": [
+    "224",
+    "184",
+    "144",
+    "104"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    0,
+    3,
+    1
+   ],
+   "reveal": "224 receiving yards and 2 TD, the most by anyone in this rivalry since 2004 (box scores). USC won, 50–0.",
+   "sig": "xb2011-11-26Marqise Lee"
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "USC",
+   "b": "UCLA",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "USC and UCLA's combined top 10 single-season receiving yards (through 2025): which school has more seasons on the list?",
+   "A": [
+    {
+     "name": "Marqise Lee",
+     "yards": 1721,
+     "season": 2012,
+     "label": "2012: 1,721",
+     "profile": "2012 season, 1,721 receiving yards · No. 1 on the combined list"
+    },
+    {
+     "name": "Johnnie Morton",
+     "yards": 1520,
+     "season": 1993,
+     "label": "1993: 1,520",
+     "profile": "1993 season, 1,520 receiving yards · No. 2 on the combined list"
+    },
+    {
+     "name": "JuJu Smith-Schuster",
+     "yards": 1454,
+     "season": 2015,
+     "label": "2015: 1,454",
+     "profile": "2015 season, 1,454 receiving yards · No. 4 on the combined list"
+    },
+    {
+     "name": "Keyshawn Johnson",
+     "yards": 1434,
+     "season": 1995,
+     "label": "1995: 1,434",
+     "profile": "1995 season, 1,434 receiving yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Keyshawn Johnson",
+     "yards": 1362,
+     "season": 1994,
+     "label": "1994: 1,362",
+     "profile": "1994 season, 1,362 receiving yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Mike Williams",
+     "yards": 1314,
+     "season": 2003,
+     "label": "2003: 1,314",
+     "profile": "2003 season, 1,314 receiving yards · No. 7 on the combined list"
+    },
+    {
+     "name": "Nelson Agholor",
+     "yards": 1313,
+     "season": 2014,
+     "label": "2014: 1,313",
+     "profile": "2014 season, 1,313 receiving yards · No. 8 on the combined list"
+    },
+    {
+     "name": "Robert Woods",
+     "yards": 1292,
+     "season": 2011,
+     "label": "2011: 1,292",
+     "profile": "2011 season, 1,292 receiving yards · No. 9 on the combined list"
+    },
+    {
+     "name": "Michael Pittman Jr.",
+     "yards": 1275,
+     "season": 2019,
+     "label": "2019: 1,275",
+     "profile": "2019 season, 1,275 receiving yards · No. 10 on the combined list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Freddie Mitchell",
+     "yards": 1494,
+     "season": 2000,
+     "label": "2000: 1,494",
+     "profile": "2000 season, 1,494 receiving yards · No. 3 on the combined list"
+    }
+   ],
+   "sig": "fsrec"
+  },
+  {
+   "type": "count",
+   "label": "Since 2020",
+   "a": "USC",
+   "b": "UCLA",
+   "threshold": 1000,
+   "verified": true,
+   "pitted": true,
+   "prompt": "From 2020 through 2025, which school had more 1,000-yard receiving seasons?",
+   "A": [
+    {
+     "name": "Drake London",
+     "yards": 1084,
+     "season": 2021,
+     "profile": "Wide receiver · 2021: 2 rushing, 1,084 receiving yds"
+    },
+    {
+     "name": "Tahj Washington",
+     "yards": 1062,
+     "season": 2023,
+     "profile": "Wide receiver · 2023: 10 rushing, 1,062 receiving yds"
+    },
+    {
+     "name": "Makai Lemon",
+     "yards": 1156,
+     "season": 2025,
+     "profile": "Wide receiver · 2025: 4 rushing, 1,156 receiving yds"
+    }
+   ],
+   "B": [],
+   "sig": "tsrec10002020",
+   "bonus": "names"
   }
  ]
 }

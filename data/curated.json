@@ -211,6 +211,20 @@
      "note": "Henry: 46 carries, 271 yards, 1 TD (2015) · Richardson: 27 carries, 203 yards (2011) · Kerryon Johnson: 30 carries, 104 yards, 1 TD (2017) · Ingram: 16 carries, 30 yards (2009, Alabama won 26–21).",
      "source": "Iron Bowl box scores: CollegeFootballData /games/players (2015, 2017) and ESPN game summaries (2009, 2011), as in data/rivalry.json. Heisman finishes: data/honors.json (Wikipedia Heisman voting tables).",
      "verified": true
+    },
+    {
+     "type": "mc",
+     "prompt": "The 2014 Iron Bowl went to No. 2 Alabama, 55–44, over No. 15 Auburn. Which team gained more total yards, and by how much?",
+     "options": [
+      "Auburn by 91",
+      "Alabama by 91",
+      "Auburn by 40",
+      "Alabama by 40"
+     ],
+     "answer": 0,
+     "reveal": "🔄 Twist: Auburn out-gained Alabama 630 to 539 (456 passing, 174 rushing) and still lost. Alabama also turned it over more, 3 to 2, and won anyway.",
+     "source": "2014 Iron Bowl team totals: CollegeFootballData /games/teams (data/rivalry.json; points match the final). AP ranks: CollegeFootballData /rankings, poll in force that week (data/game-ranks.json).",
+     "verified": true
     }
    ]
   },

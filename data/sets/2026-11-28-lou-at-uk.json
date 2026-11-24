@@ -6,112 +6,91 @@
   "away": "LOU",
   "home": "UK"
  },
- "generatedAt": "2026-11-24T01:25:49.551Z",
- "engine": 47,
+ "generatedAt": "2026-11-24T01:44:38.527Z",
+ "engine": 51,
  "questions": [
   {
-   "type": "rank",
-   "label": "Notables",
+   "type": "count",
+   "label": "Awards",
+   "a": "LOU",
+   "b": "UK",
+   "threshold": 0,
    "verified": true,
    "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
-   "items": [
+   "info": {
+    "title": "Which awards count?",
+    "text": "Heisman Trophy: most outstanding player · Maxwell Award: best all-around player · Walter Camp Award: player of the year · Doak Walker Award: best running back · Biletnikoff Award: best receiver · Davey O'Brien Award: best quarterback · John Mackey Award: best tight end · Outland Trophy: best interior lineman · Chuck Bednarik Award: best defensive player · Bronko Nagurski Trophy: best defensive player · Butkus Award: best linebacker · Jim Thorpe Award: best defensive back · Lombardi Award: best lineman or linebacker · Lou Groza Award: best kicker · Ray Guy Award: best punter"
+   },
+   "prompt": "From 2000 through 2025, which school had more winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)?",
+   "A": [
     {
-     "label": "Dicky Lyons Jr. (Kentucky, 2004–08)",
-     "value": 1752,
-     "school": "UK"
+     "name": "Lamar Jackson",
+     "yards": 2016,
+     "season": 2016,
+     "label": "Heisman Trophy",
+     "profile": "QB · won the Heisman Trophy (most outstanding player)"
     },
     {
-     "label": "Garrett Johnson (Kentucky, 2014–17)",
-     "value": 2089,
-     "school": "UK"
+     "name": "Lamar Jackson",
+     "yards": 2016,
+     "season": 2016,
+     "label": "Maxwell Award",
+     "profile": "QB · won the Maxwell Award (best all-around player)"
     },
     {
-     "label": "J. R. Russell (Louisville, 2001–04)",
-     "value": 2619,
-     "school": "LOU"
+     "name": "Lamar Jackson",
+     "yards": 2016,
+     "season": 2016,
+     "label": "Walter Camp Award",
+     "profile": "QB · won the Walter Camp Award (player of the year)"
     },
     {
-     "label": "Harry Douglas (Louisville, 2004–07)",
-     "value": 2924,
-     "school": "LOU"
+     "name": "Elvis Dumervil",
+     "yards": 2005,
+     "season": 2005,
+     "label": "Bronko Nagurski Trophy",
+     "profile": "DE · won the Bronko Nagurski Trophy (best defensive player)"
+    },
+    {
+     "name": "Gerod Holliman",
+     "yards": 2014,
+     "season": 2014,
+     "label": "Jim Thorpe Award",
+     "profile": "S · won the Jim Thorpe Award (best defensive back)"
+    },
+    {
+     "name": "Art Carmody",
+     "yards": 2006,
+     "season": 2006,
+     "label": "Lou Groza Award",
+     "profile": "won the Lou Groza Award (best kicker)"
     }
    ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"Louisville Cardinals football statistical leaders\" career receiving yards table (revision 1379530191), which cites the school record book; fetched 2026-11-23; Wikipedia \"Kentucky Wildcats football statistical leaders\" career receiving yards table (revision 1381777200), which cites the school record book; fetched 2026-11-23",
-   "sig": "nrreceivingDicky Lyons Jr.,Garrett Johnson,Harry Douglas,J. R. Russell",
-   "names": {
-    "prompt": "Bonus: name the other 8 players in Louisville and Kentucky's combined top 10 for career receiving yards.",
-    "a": "LOU",
-    "b": "UK",
-    "A": [
-     {
-      "name": "Arnold Jackson",
-      "yards": 3670,
-      "label": "3,670 (1997–2000)",
-      "profile": "3,670 career receiving yards (1997–2000) · No. 1 on the combined list"
-     },
-     {
-      "name": "Ibn Green",
-      "yards": 2830,
-      "label": "2,830 (1996–1999)",
-      "profile": "2,830 career receiving yards (1996–1999) · No. 4 on the combined list"
-     },
-     {
-      "name": "DeVante Parker",
-      "yards": 2775,
-      "label": "2,775 (2011–2014)",
-      "profile": "2,775 career receiving yards (2011–2014) · No. 5 on the combined list"
-     },
-     {
-      "name": "Dez Fitzpatrick",
-      "yards": 2589,
-      "label": "2,589 (2017–2020)",
-      "profile": "2,589 career receiving yards (2017–2020) · No. 7 on the combined list"
-     },
-     {
-      "name": "Jaylen Smith",
-      "yards": 2561,
-      "label": "2,561 (2015–2018)",
-      "profile": "2,561 career receiving yards (2015–2018) · No. 8 on the combined list"
-     }
-    ],
-    "B": [
-     {
-      "name": "Craig Yeast",
-      "yards": 2899,
-      "label": "2,899 (1995–1998)",
-      "profile": "2,899 career receiving yards (1995–1998) · No. 3 on the combined list"
-     },
-     {
-      "name": "Keenan Burton",
-      "yards": 2376,
-      "label": "2,376 (2003–2007)",
-      "profile": "2,376 career receiving yards (2003–2007) · No. 9 on the combined list"
-     },
-     {
-      "name": "Derek Abney",
-      "yards": 2339,
-      "label": "2,339 (2000–2003)",
-      "profile": "2,339 career receiving yards (2000–2003) · No. 10 on the combined list"
-     }
-    ]
-   },
-   "more": {
-    "title": "Career receiving yards, Louisville and Kentucky (careers ending 2000 or later)",
-    "rows": [
-     "1. Arnold Jackson (Louisville, 1997–00) 3,670",
-     "2. Harry Douglas (Louisville, 2004–07) 2,924",
-     "3. DeVante Parker (Louisville, 2011–14) 2,775",
-     "4. J. R. Russell (Louisville, 2001–04) 2,619",
-     "5. Dez Fitzpatrick (Louisville, 2017–20) 2,589",
-     "6. Jaylen Smith (Louisville, 2015–18) 2,561",
-     "7. Keenan Burton (Kentucky, 2003–07) 2,376",
-     "8. Derek Abney (Kentucky, 2000–03) 2,339",
-     "9. Garrett Johnson (Kentucky, 2014–17) 2,089",
-     "10. Dane Key (Kentucky, 2022–24) 1,870"
-    ]
-   }
+   "B": [
+    {
+     "name": "Josh Allen",
+     "yards": 2018,
+     "season": 2018,
+     "label": "Chuck Bednarik Award",
+     "profile": "LB · won the Chuck Bednarik Award (best defensive player)"
+    },
+    {
+     "name": "Josh Allen",
+     "yards": 2018,
+     "season": 2018,
+     "label": "Bronko Nagurski Trophy",
+     "profile": "LB · won the Bronko Nagurski Trophy (best defensive player)"
+    },
+    {
+     "name": "Max Duffy",
+     "yards": 2019,
+     "season": 2019,
+     "label": "Ray Guy Award",
+     "profile": "won the Ray Guy Award (best punter)"
+    }
+   ],
+   "sig": "acall2000",
+   "bonus": "names"
   },
   {
    "type": "mc",
@@ -122,14 +101,14 @@
    "options": [
     "46 points",
     "58 points",
-    "55 points",
-    "52 points"
+    "52 points",
+    "32 points"
    ],
    "answer": 0,
    "order": [
-    1,
-    2,
     3,
+    2,
+    1,
     0
    ],
    "reveal": "46 points: Kentucky 56, Louisville 10 (Nov 24, 2018).",
@@ -137,29 +116,33 @@
   },
   {
    "type": "mc",
-   "label": "Ranked Wins",
+   "label": "Twist",
    "verified": true,
    "pitted": true,
-   "prompt": "Since 2015, which school has more wins over AP-ranked opponents, and how many?",
+   "game": {
+    "date": "Nov 25, 2023",
+    "winner": "UK",
+    "loser": "LOU",
+    "ws": 38,
+    "ls": 31,
+    "venue": "L&N Federal Credit Union Stadium"
+   },
+   "prompt": "The 2023 Louisville–Kentucky game went to Kentucky, 38–31, over No. 9 Louisville. Which team gained more total yards, and by how much?",
    "options": [
-    "Kentucky, 14",
-    "Kentucky, 11",
-    "Louisville, 7",
-    "Louisville, 16"
+    "Louisville by 114",
+    "Kentucky by 114",
+    "Louisville by 60",
+    "Kentucky by 60"
    ],
    "answer": 0,
    "order": [
     3,
-    0,
     1,
+    0,
     2
    ],
-   "reveal": "Kentucky 14, Louisville 7 (through 2025). Latest: Kentucky: 2023 vs. No. 22 Florida 33–14, 2023 vs. No. 9 Louisville 38–31, 2024 vs. No. 6 Ole Miss 20–17; Louisville: 2023 vs. No. 20 Duke 23–0, 2024 vs. No. 11 Clemson 33–21, 2025 vs. No. 2 Miami 24–21.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
-   },
-   "sig": "rw2015"
+   "reveal": "🔄 Twist: Louisville out-gained Kentucky 403 to 289 and still lost. (Louisville 161 rushing, 242 passing; Kentucky 83 rushing, 206 passing.)",
+   "sig": "xo2023-11-25"
   },
   {
    "type": "count",
@@ -196,64 +179,30 @@
    "bonus": "names"
   },
   {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "unit": "TD",
-   "prompt": "Rank these from highest to lowest (touchdowns).",
-   "items": [
-    {
-     "label": "Benny Snell Jr. (UK RB) · career rushing TDs",
-     "value": 48,
-     "school": "UK"
-    },
-    {
-     "label": "Javian Hawkins (LOU RB) · 2020 rushing TDs",
-     "value": 7,
-     "school": "LOU"
-    },
-    {
-     "label": "Stanley Williams (UK RB) · career total TDs (rushing + receiving)",
-     "value": 20,
-     "school": "UK"
-    },
-    {
-     "label": "Lamar Jackson (LOU QB) · 2017 rushing TDs",
-     "value": 18,
-     "school": "LOU"
-    }
-   ],
-   "sig": "mxTDBenny Snell Jr.career rushing TDs,Javian Hawkins2020 rushing TDs,Lamar Jackson2017 rushing TDs,Stanley Williamscareer total TDs (rushing + receiving)"
-  },
-  {
    "type": "mc",
-   "label": "Twist",
+   "label": "Ranked Wins",
    "verified": true,
    "pitted": true,
-   "game": {
-    "date": "Nov 25, 2023",
-    "winner": "UK",
-    "loser": "LOU",
-    "ws": 38,
-    "ls": 31,
-    "venue": "L&N Federal Credit Union Stadium"
-   },
-   "prompt": "The 2023 Louisville–Kentucky game went to Kentucky, 38–31. Which team gained more total yards, and by how much?",
+   "prompt": "Since 2020, which school has more wins over AP-ranked opponents, and how many?",
    "options": [
-    "Louisville by 114",
-    "Kentucky by 114",
-    "Louisville by 60",
-    "Kentucky by 60"
+    "Kentucky, 9",
+    "Kentucky, 8",
+    "Louisville, 5",
+    "Louisville, 10"
    ],
    "answer": 0,
    "order": [
-    1,
-    2,
+    3,
     0,
-    3
+    1,
+    2
    ],
-   "reveal": "🔄 Twist: Louisville out-gained Kentucky 403 to 289 and still lost. (Louisville 161 rushing, 242 passing; Kentucky 83 rushing, 206 passing.)",
-   "sig": "xo2023-11-25"
+   "reveal": "Kentucky 9, Louisville 5 (through 2025). Latest: Kentucky: 2023 vs. No. 22 Florida 33–14, 2023 vs. No. 9 Louisville 38–31, 2024 vs. No. 6 Ole Miss 20–17; Louisville: 2023 vs. No. 20 Duke 23–0, 2024 vs. No. 11 Clemson 33–21, 2025 vs. No. 2 Miami 24–21.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   },
+   "sig": "rw2020"
   },
   {
    "type": "count",
@@ -342,87 +291,34 @@
    "sig": "fsrush"
   },
   {
-   "type": "count",
-   "label": "Awards",
-   "a": "LOU",
-   "b": "UK",
-   "threshold": 0,
+   "type": "mc",
+   "label": "Historic Day",
    "verified": true,
    "pitted": true,
-   "info": {
-    "title": "Which awards count?",
-    "text": "Heisman Trophy: most outstanding player · Maxwell Award: best all-around player · Walter Camp Award: player of the year · Doak Walker Award: best running back · Biletnikoff Award: best receiver · Davey O'Brien Award: best quarterback · John Mackey Award: best tight end · Outland Trophy: best interior lineman · Chuck Bednarik Award: best defensive player · Bronko Nagurski Trophy: best defensive player · Butkus Award: best linebacker · Jim Thorpe Award: best defensive back · Lombardi Award: best lineman or linebacker · Lou Groza Award: best kicker · Ray Guy Award: best punter"
+   "game": {
+    "date": "Sep 15, 2007",
+    "winner": "UK",
+    "loser": "LOU",
+    "ws": 40,
+    "ls": 34,
+    "venue": "Kroger Field"
    },
-   "prompt": "From 2000 through 2025, which school had more winners of major national awards (Heisman, Maxwell, Walter Camp, Doak Walker, Biletnikoff and more)?",
-   "A": [
-    {
-     "name": "Lamar Jackson",
-     "yards": 2016,
-     "season": 2016,
-     "label": "Heisman Trophy",
-     "profile": "QB · won the Heisman Trophy (most outstanding player)"
-    },
-    {
-     "name": "Lamar Jackson",
-     "yards": 2016,
-     "season": 2016,
-     "label": "Maxwell Award",
-     "profile": "QB · won the Maxwell Award (best all-around player)"
-    },
-    {
-     "name": "Lamar Jackson",
-     "yards": 2016,
-     "season": 2016,
-     "label": "Walter Camp Award",
-     "profile": "QB · won the Walter Camp Award (player of the year)"
-    },
-    {
-     "name": "Elvis Dumervil",
-     "yards": 2005,
-     "season": 2005,
-     "label": "Bronko Nagurski Trophy",
-     "profile": "DE · won the Bronko Nagurski Trophy (best defensive player)"
-    },
-    {
-     "name": "Gerod Holliman",
-     "yards": 2014,
-     "season": 2014,
-     "label": "Jim Thorpe Award",
-     "profile": "S · won the Jim Thorpe Award (best defensive back)"
-    },
-    {
-     "name": "Art Carmody",
-     "yards": 2006,
-     "season": 2006,
-     "label": "Lou Groza Award",
-     "profile": "won the Lou Groza Award (best kicker)"
-    }
+   "prompt": "2007: No. 9 Louisville vs. Kentucky. Harry Douglas caught 13 passes. How many receiving yards did he finish with?",
+   "options": [
+    "223",
+    "183",
+    "143",
+    "103"
    ],
-   "B": [
-    {
-     "name": "Josh Allen",
-     "yards": 2018,
-     "season": 2018,
-     "label": "Chuck Bednarik Award",
-     "profile": "LB · won the Chuck Bednarik Award (best defensive player)"
-    },
-    {
-     "name": "Josh Allen",
-     "yards": 2018,
-     "season": 2018,
-     "label": "Bronko Nagurski Trophy",
-     "profile": "LB · won the Bronko Nagurski Trophy (best defensive player)"
-    },
-    {
-     "name": "Max Duffy",
-     "yards": 2019,
-     "season": 2019,
-     "label": "Ray Guy Award",
-     "profile": "won the Ray Guy Award (best punter)"
-    }
+   "answer": 0,
+   "order": [
+    3,
+    0,
+    1,
+    2
    ],
-   "sig": "acall2000",
-   "bonus": "names"
+   "reveal": "223 receiving yards and 1 TD, the most by anyone in this rivalry since 2004 (box scores). Louisville still lost, 40–34.",
+   "sig": "xb2007-09-15Harry Douglas"
   },
   {
    "type": "rank",
@@ -466,6 +362,104 @@
      "6. Garrett Johnson (UK 2015) 694",
      "7. Dane Key (UK 2023) 636",
      "8. Dez Fitzpatrick (LOU 2019) 635"
+    ]
+   }
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Harry Douglas (Louisville, 2004–07)",
+     "value": 2924,
+     "school": "LOU"
+    },
+    {
+     "label": "Dicky Lyons Jr. (Kentucky, 2004–08)",
+     "value": 1752,
+     "school": "UK"
+    },
+    {
+     "label": "DeVante Parker (Louisville, 2011–14)",
+     "value": 2775,
+     "school": "LOU"
+    },
+    {
+     "label": "Keenan Burton (Kentucky, 2003–07)",
+     "value": 2376,
+     "school": "UK"
+    }
+   ],
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Louisville Cardinals football statistical leaders\" career receiving yards table (revision 1379530191), which cites the school record book; fetched 2026-11-23; Wikipedia \"Kentucky Wildcats football statistical leaders\" career receiving yards table (revision 1381777200), which cites the school record book; fetched 2026-11-23",
+   "sig": "nrreceivingDeVante Parker,Dicky Lyons Jr.,Harry Douglas,Keenan Burton",
+   "names": {
+    "prompt": "Bonus: name the other 7 players in Louisville and Kentucky's combined top 10 for career receiving yards.",
+    "a": "LOU",
+    "b": "UK",
+    "A": [
+     {
+      "name": "Arnold Jackson",
+      "yards": 3670,
+      "label": "3,670 (1997–2000)",
+      "profile": "3,670 career receiving yards (1997–2000) · No. 1 on the combined list"
+     },
+     {
+      "name": "Ibn Green",
+      "yards": 2830,
+      "label": "2,830 (1996–1999)",
+      "profile": "2,830 career receiving yards (1996–1999) · No. 4 on the combined list"
+     },
+     {
+      "name": "J. R. Russell",
+      "yards": 2619,
+      "label": "2,619 (2001–2004)",
+      "profile": "2,619 career receiving yards (2001–2004) · No. 6 on the combined list"
+     },
+     {
+      "name": "Dez Fitzpatrick",
+      "yards": 2589,
+      "label": "2,589 (2017–2020)",
+      "profile": "2,589 career receiving yards (2017–2020) · No. 7 on the combined list"
+     },
+     {
+      "name": "Jaylen Smith",
+      "yards": 2561,
+      "label": "2,561 (2015–2018)",
+      "profile": "2,561 career receiving yards (2015–2018) · No. 8 on the combined list"
+     }
+    ],
+    "B": [
+     {
+      "name": "Craig Yeast",
+      "yards": 2899,
+      "label": "2,899 (1995–1998)",
+      "profile": "2,899 career receiving yards (1995–1998) · No. 3 on the combined list"
+     },
+     {
+      "name": "Derek Abney",
+      "yards": 2339,
+      "label": "2,339 (2000–2003)",
+      "profile": "2,339 career receiving yards (2000–2003) · No. 10 on the combined list"
+     }
+    ]
+   },
+   "more": {
+    "title": "Career receiving yards, Louisville and Kentucky (careers ending 2000 or later)",
+    "rows": [
+     "1. Arnold Jackson (Louisville, 1997–00) 3,670",
+     "2. Harry Douglas (Louisville, 2004–07) 2,924",
+     "3. DeVante Parker (Louisville, 2011–14) 2,775",
+     "4. J. R. Russell (Louisville, 2001–04) 2,619",
+     "5. Dez Fitzpatrick (Louisville, 2017–20) 2,589",
+     "6. Jaylen Smith (Louisville, 2015–18) 2,561",
+     "7. Keenan Burton (Kentucky, 2003–07) 2,376",
+     "8. Derek Abney (Kentucky, 2000–03) 2,339",
+     "9. Garrett Johnson (Kentucky, 2014–17) 2,089",
+     "10. Dane Key (Kentucky, 2022–24) 1,870"
     ]
    }
   },

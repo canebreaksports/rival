@@ -6,295 +6,9 @@
   "away": "ASU",
   "home": "ARIZ"
  },
- "generatedAt": "2026-11-24T01:25:49.082Z",
- "engine": 47,
+ "generatedAt": "2026-11-24T01:44:38.085Z",
+ "engine": 51,
  "questions": [
-  {
-   "type": "mc",
-   "label": "Twist",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 23, 2012",
-    "winner": "ASU",
-    "loser": "ARIZ",
-    "ws": 41,
-    "ls": 34,
-    "venue": "Arizona Stadium"
-   },
-   "prompt": "The 2012 Arizona State–Arizona game went to Arizona State, 41–34. Which team gained more total yards, and by how much?",
-   "options": [
-    "Arizona by 62",
-    "Arizona State by 62",
-    "Arizona by 102",
-    "Arizona State by 102"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    0,
-    2,
-    3
-   ],
-   "reveal": "🔄 Twist: Arizona out-gained Arizona State 522 to 460 and still lost. (Arizona 292 rushing, 230 passing; Arizona State 269 rushing, 191 passing.)",
-   "sig": "xo2012-11-23"
-  },
-  {
-   "type": "rank",
-   "label": "Notables",
-   "verified": true,
-   "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
-   "items": [
-    {
-     "label": "Derek Hagan (Arizona State, 2002–05)",
-     "value": 3939,
-     "school": "ASU"
-    },
-    {
-     "label": "Chris McGaha (Arizona State, 2006–09)",
-     "value": 2242,
-     "school": "ASU"
-    },
-    {
-     "label": "Austin Hill (Arizona, 2011–14)",
-     "value": 2280,
-     "school": "ARIZ"
-    },
-    {
-     "label": "Samajie Grant (Arizona, 2013–16)",
-     "value": 1946,
-     "school": "ARIZ"
-    }
-   ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"Arizona State Sun Devils football statistical leaders\" career receiving yards table (revision 1387163761), which cites the school record book; fetched 2026-11-23; Wikipedia \"Arizona Wildcats football statistical leaders\" career receiving yards table (revision 1387112364), which cites the school record book; fetched 2026-11-23",
-   "sig": "nrreceivingAustin Hill,Chris McGaha,Derek Hagan,Samajie Grant",
-   "names": {
-    "prompt": "Bonus: name the other 9 players in Arizona State and Arizona's combined top 10 for career receiving yards.",
-    "a": "ASU",
-    "b": "ARIZ",
-    "A": [
-     {
-      "name": "John Jefferson",
-      "yards": 2993,
-      "label": "2,993 (1974–1977)",
-      "profile": "2,993 career receiving yards (1974–1977) · No. 6 on the combined list"
-     },
-     {
-      "name": "N'Keal Harry",
-      "yards": 2889,
-      "label": "2,889 (2016–2018)",
-      "profile": "2,889 career receiving yards (2016–2018) · No. 7 on the combined list"
-     },
-     {
-      "name": "Shaun McDonald",
-      "yards": 2867,
-      "label": "2,867 (2000–2002)",
-      "profile": "2,867 career receiving yards (2000–2002) · No. 8 on the combined list"
-     },
-     {
-      "name": "Aaron Cox",
-      "yards": 2694,
-      "label": "2,694 (1984–1987)",
-      "profile": "2,694 career receiving yards (1984–1987) · No. 10 on the combined list"
-     }
-    ],
-    "B": [
-     {
-      "name": "Tetairoa McMillan",
-      "yards": 3423,
-      "label": "3,423 (2022–2024)",
-      "profile": "3,423 career receiving yards (2022–2024) · No. 2 on the combined list"
-     },
-     {
-      "name": "Bobby Wade",
-      "yards": 3351,
-      "label": "3,351 (1999–2002)",
-      "profile": "3,351 career receiving yards (1999–2002) · No. 3 on the combined list"
-     },
-     {
-      "name": "Dennis Northcutt",
-      "yards": 3252,
-      "label": "3,252 (1996–1999)",
-      "profile": "3,252 career receiving yards (1996–1999) · No. 4 on the combined list"
-     },
-     {
-      "name": "Mike Thomas",
-      "yards": 3231,
-      "label": "3,231 (2005–2008)",
-      "profile": "3,231 career receiving yards (2005–2008) · No. 5 on the combined list"
-     },
-     {
-      "name": "Juron Criner",
-      "yards": 2859,
-      "label": "2,859 (2008–2011)",
-      "profile": "2,859 career receiving yards (2008–2011) · No. 9 on the combined list"
-     }
-    ]
-   },
-   "more": {
-    "title": "Career receiving yards, Arizona State and Arizona (careers ending 2000 or later)",
-    "rows": [
-     "1. Derek Hagan (Arizona State, 2002–05) 3,939",
-     "2. Tetairoa McMillan (Arizona, 2022–24) 3,423",
-     "3. Bobby Wade (Arizona, 1999–02) 3,351",
-     "4. Mike Thomas (Arizona, 2005–08) 3,231",
-     "5. N'Keal Harry (Arizona State, 2016–18) 2,889",
-     "6. Shaun McDonald (Arizona State, 2000–02) 2,867",
-     "7. Juron Criner (Arizona, 2008–11) 2,859",
-     "8. D. J. Foster (Arizona State, 2012–15) 2,458",
-     "9. Jaelen Strong (Arizona State, 2013–14) 2,287",
-     "10. Austin Hill (Arizona, 2011–14) 2,280"
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "label": "Ranked Wins",
-   "verified": true,
-   "pitted": true,
-   "prompt": "Since 2010, which school has more wins over AP-ranked opponents, and how many?",
-   "options": [
-    "Arizona State, 25",
-    "Arizona State, 30",
-    "Arizona, 18",
-    "Arizona, 21"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    0,
-    3,
-    1
-   ],
-   "reveal": "Arizona State 25, Arizona 18 (through 2025). Latest: Arizona State: 2024 vs. No. 16 Iowa State 45–19, 2025 vs. No. 24 TCU 27–24, 2025 vs. No. 7 Texas Tech 26–22; Arizona: 2023 vs. No. 12 Oklahoma 38–24, 2024 vs. No. 10 Utah 23–10, 2025 vs. No. 22 Cincinnati 30–24.",
-   "info": {
-    "title": "What counts as a ranked win?",
-    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
-   },
-   "sig": "rw2010"
-  },
-  {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
-   "verified": true,
-   "flip": false,
-   "prompt": "Whose best college season had more rushing yards?",
-   "A": {
-    "label": "Khalil Tate (ARIZ QB)",
-    "value": 1411,
-    "school": "ARIZ"
-   },
-   "B": {
-    "label": "Jayden Daniels (ASU QB)",
-    "value": 710,
-    "school": "ASU"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Khalil Tate 1,411 vs. Jayden Daniels 710.",
-   "sig": "upeakRushJayden DanielsKhalil Tate"
-  },
-  {
-   "type": "mc",
-   "label": "Game Story",
-   "verified": true,
-   "pitted": true,
-   "game": {
-    "date": "Nov 25, 2016",
-    "winner": "ARIZ",
-    "loser": "ASU",
-    "ws": 56,
-    "ls": 35,
-    "venue": "Arizona Stadium"
-   },
-   "prompt": "The 2016 Arizona State–Arizona game is the highest-scoring game in the series since 2000, but the teams combined for how many rushing yards?",
-   "options": [
-    "631",
-    "511",
-    "571",
-    "691"
-   ],
-   "answer": 0,
-   "order": [
-    2,
-    0,
-    3,
-    1
-   ],
-   "reveal": "631: Arizona State 120, Arizona 511. 90+ rushing yards: Brandon Dawkins (Arizona) 183, Samajie Grant (Arizona) 176, Zach Green (Arizona) 126.",
-   "names": {
-    "prompt": "Bonus: name everyone with 90+ rushing yards in this game.",
-    "a": "ASU",
-    "b": "ARIZ",
-    "A": [],
-    "B": [
-     {
-      "name": "Brandon Dawkins",
-      "yards": 183,
-      "label": "183 yds on 12 carries, 2 TD",
-      "profile": "Arizona · 183 rushing yards on 12 carries, 2 TD in this game"
-     },
-     {
-      "name": "Samajie Grant",
-      "yards": 176,
-      "label": "176 yds on 19 carries, 3 TD",
-      "profile": "Arizona · 176 rushing yards on 19 carries, 3 TD in this game"
-     },
-     {
-      "name": "Zach Green",
-      "yards": 126,
-      "label": "126 yds on 14 carries, 2 TD",
-      "profile": "Arizona · 126 rushing yards on 14 carries, 2 TD in this game"
-     }
-    ]
-   },
-   "sig": "gs2016-11-25rush"
-  },
-  {
-   "type": "rank",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "Rank these seasons by rushing TDs, highest first.",
-   "items": [
-    {
-     "label": "J.J. Taylor (RB) · 2017 ARIZ",
-     "value": 5,
-     "school": "ARIZ"
-    },
-    {
-     "label": "Jayden Daniels (QB) · 2021 ASU",
-     "value": 6,
-     "school": "ASU"
-    },
-    {
-     "label": "Khalil Tate (QB) · 2019 ARIZ",
-     "value": 3,
-     "school": "ARIZ"
-    },
-    {
-     "label": "Michael Wiley (RB) · 2022 ARIZ",
-     "value": 8,
-     "school": "ARIZ"
-    }
-   ],
-   "unit": "TD",
-   "sig": "rsea|rushTDJ.J. Taylor2017,Jayden Daniels2021,Khalil Tate2019,Michael Wiley2022",
-   "more": {
-    "title": "Top 8: single-season rushing TDs (ASU, ARIZ players in our data)",
-    "rows": [
-     "1. Cameron Skattebo (ASU 2024) 21",
-     "2. Nick Wilson (ARIZ 2014) 16",
-     "3. Eno Benjamin (ASU 2018) 16",
-     "4. Kalen Ballage (ASU 2016) 14",
-     "5. Marion Grice (ASU 2013) 14",
-     "6. Khalil Tate (ARIZ 2017) 12",
-     "7. Demario Richard (ASU 2017) 12",
-     "8. Marion Grice (ASU 2012) 11"
-    ]
-   }
-  },
   {
    "type": "count",
    "label": "Awards",
@@ -430,6 +144,110 @@
    "sig": "fsrec"
   },
   {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Derek Hagan (Arizona State, 2002–05)",
+     "value": 3939,
+     "school": "ASU"
+    },
+    {
+     "label": "Samajie Grant (Arizona, 2013–16)",
+     "value": 1946,
+     "school": "ARIZ"
+    },
+    {
+     "label": "Shaun McDonald (Arizona State, 2000–02)",
+     "value": 2867,
+     "school": "ASU"
+    },
+    {
+     "label": "Austin Hill (Arizona, 2011–14)",
+     "value": 2280,
+     "school": "ARIZ"
+    }
+   ],
+   "note": "Career totals from each school's record book. Sources: Wikipedia \"Arizona State Sun Devils football statistical leaders\" career receiving yards table (revision 1387163761), which cites the school record book; fetched 2026-11-23; Wikipedia \"Arizona Wildcats football statistical leaders\" career receiving yards table (revision 1387112364), which cites the school record book; fetched 2026-11-23",
+   "sig": "nrreceivingAustin Hill,Derek Hagan,Samajie Grant,Shaun McDonald",
+   "names": {
+    "prompt": "Bonus: name the other 8 players in Arizona State and Arizona's combined top 10 for career receiving yards.",
+    "a": "ASU",
+    "b": "ARIZ",
+    "A": [
+     {
+      "name": "John Jefferson",
+      "yards": 2993,
+      "label": "2,993 (1974–1977)",
+      "profile": "2,993 career receiving yards (1974–1977) · No. 6 on the combined list"
+     },
+     {
+      "name": "N'Keal Harry",
+      "yards": 2889,
+      "label": "2,889 (2016–2018)",
+      "profile": "2,889 career receiving yards (2016–2018) · No. 7 on the combined list"
+     },
+     {
+      "name": "Aaron Cox",
+      "yards": 2694,
+      "label": "2,694 (1984–1987)",
+      "profile": "2,694 career receiving yards (1984–1987) · No. 10 on the combined list"
+     }
+    ],
+    "B": [
+     {
+      "name": "Tetairoa McMillan",
+      "yards": 3423,
+      "label": "3,423 (2022–2024)",
+      "profile": "3,423 career receiving yards (2022–2024) · No. 2 on the combined list"
+     },
+     {
+      "name": "Bobby Wade",
+      "yards": 3351,
+      "label": "3,351 (1999–2002)",
+      "profile": "3,351 career receiving yards (1999–2002) · No. 3 on the combined list"
+     },
+     {
+      "name": "Dennis Northcutt",
+      "yards": 3252,
+      "label": "3,252 (1996–1999)",
+      "profile": "3,252 career receiving yards (1996–1999) · No. 4 on the combined list"
+     },
+     {
+      "name": "Mike Thomas",
+      "yards": 3231,
+      "label": "3,231 (2005–2008)",
+      "profile": "3,231 career receiving yards (2005–2008) · No. 5 on the combined list"
+     },
+     {
+      "name": "Juron Criner",
+      "yards": 2859,
+      "label": "2,859 (2008–2011)",
+      "profile": "2,859 career receiving yards (2008–2011) · No. 9 on the combined list"
+     }
+    ]
+   },
+   "more": {
+    "title": "Career receiving yards, Arizona State and Arizona (careers ending 2000 or later)",
+    "rows": [
+     "1. Derek Hagan (Arizona State, 2002–05) 3,939",
+     "2. Tetairoa McMillan (Arizona, 2022–24) 3,423",
+     "3. Bobby Wade (Arizona, 1999–02) 3,351",
+     "4. Mike Thomas (Arizona, 2005–08) 3,231",
+     "5. N'Keal Harry (Arizona State, 2016–18) 2,889",
+     "6. Shaun McDonald (Arizona State, 2000–02) 2,867",
+     "7. Juron Criner (Arizona, 2008–11) 2,859",
+     "8. D. J. Foster (Arizona State, 2012–15) 2,458",
+     "9. Jaelen Strong (Arizona State, 2013–14) 2,287",
+     "10. Austin Hill (Arizona, 2011–14) 2,280"
+    ]
+   }
+  },
+  {
    "type": "mc",
    "label": "Series History",
    "verified": true,
@@ -437,19 +255,75 @@
    "prompt": "From 2000 through 2025, what was the largest margin of victory in the Arizona State–Arizona series?",
    "options": [
     "63 points",
-    "72 points",
-    "56 points",
+    "53 points",
+    "75 points",
     "49 points"
    ],
    "answer": 0,
    "order": [
     0,
-    3,
     2,
+    3,
     1
    ],
    "reveal": "63 points: Arizona State 70, Arizona 7 (Dec 11, 2020).",
    "sig": "mm63"
+  },
+  {
+   "type": "mc",
+   "label": "Historic Day",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 25, 2023",
+    "winner": "ARIZ",
+    "loser": "ASU",
+    "ws": 59,
+    "ls": 23,
+    "venue": "Mountain America Stadium"
+   },
+   "prompt": "2023: No. 16 Arizona vs. Arizona State. Tetairoa Mcmillan caught 11 passes. How many receiving yards did he finish with?",
+   "options": [
+    "266",
+    "226",
+    "186",
+    "146"
+   ],
+   "answer": 0,
+   "order": [
+    0,
+    3,
+    1,
+    2
+   ],
+   "reveal": "266 receiving yards and 1 TD, the most by anyone in this rivalry since 2006 (box scores). Arizona won, 59–23.",
+   "sig": "xb2023-11-25Tetairoa Mcmillan"
+  },
+  {
+   "type": "mc",
+   "label": "Ranked Wins",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Since 2015, which school has more wins over AP-ranked opponents, and how many?",
+   "options": [
+    "Arizona State, 16",
+    "Arizona State, 12",
+    "Arizona, 11",
+    "Arizona, 19"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    3,
+    0,
+    1
+   ],
+   "reveal": "Arizona State 16, Arizona 11 (through 2025). Latest: Arizona State: 2024 vs. No. 16 Iowa State 45–19, 2025 vs. No. 24 TCU 27–24, 2025 vs. No. 7 Texas Tech 26–22; Arizona: 2023 vs. No. 12 Oklahoma 38–24, 2024 vs. No. 10 Utah 23–10, 2025 vs. No. 22 Cincinnati 30–24.",
+   "info": {
+    "title": "What counts as a ranked win?",
+    "text": "A win over a team in the AP Top 25 the week of the game (bowls use the last regular-season poll), regular season and postseason, through 2025."
+   },
+   "sig": "rw2015"
   },
   {
    "type": "count",
@@ -483,6 +357,113 @@
    "B": [],
    "sig": "tsrushTD122020",
    "bonus": "names"
+  },
+  {
+   "type": "mc",
+   "label": "Game Story",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 25, 2016",
+    "winner": "ARIZ",
+    "loser": "ASU",
+    "ws": 56,
+    "ls": 35,
+    "venue": "Arizona Stadium"
+   },
+   "prompt": "The 2016 Arizona State–Arizona game is the highest-scoring game in the series since 2000, but the teams combined for how many rushing yards?",
+   "options": [
+    "631",
+    "571",
+    "691",
+    "511"
+   ],
+   "answer": 0,
+   "order": [
+    1,
+    2,
+    3,
+    0
+   ],
+   "reveal": "631: Arizona State 120, Arizona 511. 90+ rushing yards: Brandon Dawkins (Arizona) 183, Samajie Grant (Arizona) 176, Zach Green (Arizona) 126.",
+   "names": {
+    "prompt": "Bonus: name everyone with 90+ rushing yards in this game.",
+    "a": "ASU",
+    "b": "ARIZ",
+    "A": [],
+    "B": [
+     {
+      "name": "Brandon Dawkins",
+      "yards": 183,
+      "label": "183 yds on 12 carries, 2 TD",
+      "profile": "Arizona · 183 rushing yards on 12 carries, 2 TD in this game"
+     },
+     {
+      "name": "Samajie Grant",
+      "yards": 176,
+      "label": "176 yds on 19 carries, 3 TD",
+      "profile": "Arizona · 176 rushing yards on 19 carries, 3 TD in this game"
+     },
+     {
+      "name": "Zach Green",
+      "yards": 126,
+      "label": "126 yds on 14 carries, 2 TD",
+      "profile": "Arizona · 126 rushing yards on 14 carries, 2 TD in this game"
+     }
+    ]
+   },
+   "sig": "gs2016-11-25rush"
+  },
+  {
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": true,
+   "prompt": "Who had more college receiving yards (at the school shown)?",
+   "A": {
+    "label": "Tanner McLachlan (ARIZ TE)",
+    "value": 984,
+    "school": "ARIZ"
+   },
+   "B": {
+    "label": "Cameron Skattebo (ASU RB)",
+    "value": 891,
+    "school": "ASU"
+   },
+   "unit": "",
+   "note": "🚨 Upset: Tanner McLachlan 984 vs. Cameron Skattebo 891.",
+   "sig": "urecCameron SkatteboTanner McLachlan"
+  },
+  {
+   "type": "mc",
+   "label": "Twist",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 24, 2018",
+    "winner": "ASU",
+    "loser": "ARIZ",
+    "ws": 41,
+    "ls": 40,
+    "venue": "Arizona Stadium"
+   },
+   "prompt": "The 2018 Arizona State–Arizona game went to Arizona State, 41–40, over Arizona. Which team gained more total yards, and by how much?",
+   "options": [
+    "Arizona by 119",
+    "Arizona State by 119",
+    "Arizona by 60",
+    "Arizona State by 60"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    3,
+    0,
+    1
+   ],
+   "reveal": "🔄 Twist: Arizona out-gained Arizona State 520 to 401 and still lost. (Arizona 238 rushing, 282 passing; Arizona State 136 rushing, 265 passing.)",
+   "sig": "xo2018-11-24"
   }
  ]
 }

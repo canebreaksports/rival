@@ -6,29 +6,82 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-24T01:25:50.782Z",
- "engine": 47,
+ "generatedAt": "2026-11-24T01:44:39.541Z",
+ "engine": 51,
  "questions": [
   {
-   "type": "h2h",
-   "label": "Fresh Mix",
-   "upset": true,
+   "type": "count",
+   "label": "Since 2021",
+   "a": "TENN",
+   "b": "VAN",
+   "threshold": 15,
    "verified": true,
-   "flip": false,
-   "prompt": "Who had more college receptions (at the school shown)?",
-   "A": {
-    "label": "Jared Pinkney (VAN TE)",
-    "value": 114,
-    "school": "VAN"
-   },
-   "B": {
-    "label": "Jalin Hyatt (TENN WR)",
-    "value": 108,
-    "school": "TENN"
-   },
-   "unit": "",
-   "note": "🚨 Upset: Jared Pinkney 114 vs. Jalin Hyatt 108.",
-   "sig": "urecNJalin HyattJared Pinkney"
+   "pitted": true,
+   "prompt": "From 2021 through 2025, which school had more seasons with 15+ rushing touchdowns by one player?",
+   "A": [
+    {
+     "name": "Dylan Sampson",
+     "yards": 22,
+     "season": 2024,
+     "profile": "Running back · 2024: 1,491 rushing, 143 receiving yds, 22 rushing TD"
+    },
+    {
+     "name": "DeSean Bishop",
+     "yards": 16,
+     "season": 2025,
+     "profile": "Running back · 2025: 1,076 rushing, 135 receiving yds, 16 rushing TD"
+    }
+   ],
+   "B": [],
+   "sig": "tsrushTD152021",
+   "bonus": "names"
+  },
+  {
+   "type": "rank",
+   "label": "Notables",
+   "verified": true,
+   "pitted": true,
+   "unit": "yds",
+   "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
+   "items": [
+    {
+     "label": "Jamal Lewis (Tennessee)",
+     "value": 2677,
+     "school": "TENN"
+    },
+    {
+     "label": "Jamie O’Rourke (Vanderbilt)",
+     "value": 2202,
+     "school": "VAN"
+    },
+    {
+     "label": "Ralph Webb (Vanderbilt)",
+     "value": 4173,
+     "school": "VAN"
+    },
+    {
+     "label": "Travis Henry (Tennessee)",
+     "value": 3078,
+     "school": "TENN"
+    }
+   ],
+   "note": "Career totals from each school's record book. Sources: Tennessee Football 2024 Record Book, career rushing (s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/utsports.com/documents/2024/7/29/Records_Section_2024__Web_.pdf, p.16), complete through 2023; plus Dylan Sampson and DeSean Bishop (active) from Wikipedia \"Tennessee Volunteers football statistical leaders\". CollegeFootballData shows no other Tennessee rusher passing 2,122 yards in 2024-26.; Wikipedia \"Vanderbilt Commodores football statistical leaders\" career rushing yards table (revision 1385775995), which cites the school record book; fetched 2026-11-17",
+   "sig": "nrrushingJamal Lewis,Jamie O’Rourke,Ralph Webb,Travis Henry",
+   "more": {
+    "title": "Career rushing yards, Tennessee and Vanderbilt (school top 10s)",
+    "rows": [
+     "1. Ralph Webb (Vanderbilt) 4,173",
+     "2. Zac Stacy (Vanderbilt) 3,143",
+     "3. Travis Henry (Tennessee) 3,078",
+     "4. Arian Foster (Tennessee) 2,964",
+     "5. James Stewart (Tennessee) 2,890",
+     "6. Johnnie Jones (Tennessee) 2,852",
+     "7. Jamal Lewis (Tennessee) 2,677",
+     "8. Jalen Hurd (Tennessee) 2,638",
+     "9. Frank Mordica (Vanderbilt) 2,632",
+     "10. Carl Woods (Vanderbilt) 2,490"
+    ]
+   }
   },
   {
    "type": "mc",
@@ -38,15 +91,15 @@
    "prompt": "Since 2020, which school has more wins over AP-ranked opponents, and how many?",
    "options": [
     "Tennessee, 11",
-    "Tennessee, 14",
+    "Tennessee, 8",
     "Vanderbilt, 5",
-    "Vanderbilt, 9"
+    "Vanderbilt, 13"
    ],
    "answer": 0,
    "order": [
+    1,
     0,
     2,
-    1,
     3
    ],
    "reveal": "Tennessee 11, Vanderbilt 5 (through 2025). Latest: Tennessee: 2024 vs. No. 24 NC State 51–10, 2024 vs. No. 15 Oklahoma 25–15, 2024 vs. No. 7 Alabama 24–17; Vanderbilt: 2025 vs. No. 10 LSU 31–24, 2025 vs. No. 15 Missouri 17–10, 2025 vs. No. 18 Tennessee 45–24.",
@@ -57,50 +110,221 @@
    "sig": "rw2020"
   },
   {
-   "type": "rank",
-   "label": "Notables",
+   "type": "h2h",
+   "label": "Fresh Mix",
+   "upset": true,
+   "verified": true,
+   "flip": false,
+   "prompt": "Who averaged more yards per carry in college (at the school shown)?",
+   "A": {
+    "label": "Mike Wright (VAN QB)",
+    "value": 5.2,
+    "school": "VAN"
+   },
+   "B": {
+    "label": "Arian Foster (TENN RB)",
+    "value": 4.6,
+    "school": "TENN"
+   },
+   "unit": "",
+   "ypc": true,
+   "note": "🚨 Upset: Mike Wright 5.2 per carry (175 carries) vs. Arian Foster 4.6 per carry (650 carries).",
+   "sig": "uypcArian FosterMike Wright"
+  },
+  {
+   "type": "count",
+   "label": "NFL Draft",
+   "a": "TENN",
+   "b": "VAN",
+   "threshold": 0,
    "verified": true,
    "pitted": true,
-   "unit": "yds",
-   "prompt": "Rank these pass catchers by career receiving yards at their school, highest first.",
-   "items": [
+   "prompt": "From the 2015 draft through 2026, which school had more linebackers taken in the first three rounds?",
+   "A": [],
+   "B": [
     {
-     "label": "Cedrick Wilson (Tennessee, 1997–00)",
-     "value": 2137,
-     "school": "TENN"
+     "name": "Zach Cunningham",
+     "yards": 57,
+     "season": 2017,
+     "label": "No. 57 pick",
+     "profile": "Inside Linebacker · 2017 draft, round 2"
     },
     {
-     "label": "Kalija Lipscomb (Vanderbilt, 2016–19)",
-     "value": 2356,
-     "school": "VAN"
-    },
-    {
-     "label": "Earl Bennett (Vanderbilt, 2005–07)",
-     "value": 2852,
-     "school": "VAN"
-    },
-    {
-     "label": "Denarius Moore (Tennessee, 2007–10)",
-     "value": 2004,
-     "school": "TENN"
+     "name": "Oren Burks",
+     "yards": 88,
+     "season": 2018,
+     "label": "No. 88 pick",
+     "profile": "Outside Linebacker · 2018 draft, round 3"
     }
    ],
-   "note": "Career totals from each school's record book. Sources: Wikipedia \"Tennessee Volunteers football statistical leaders\" career receiving yards table (revision 1387103812), which cites the school record book; fetched 2026-11-23; Wikipedia \"Vanderbilt Commodores football statistical leaders\" career receiving yards table (revision 1385775995), which cites the school record book; fetched 2026-11-23",
-   "sig": "nrreceivingCedrick Wilson,Denarius Moore,Earl Bennett,Kalija Lipscomb",
+   "sig": "dcr32015lb",
+   "bonus": "names"
+  },
+  {
+   "type": "count",
+   "label": "Fill In",
+   "a": "TENN",
+   "b": "VAN",
+   "threshold": 0,
+   "verified": true,
+   "pitted": true,
+   "bonus": "names",
+   "prompt": "Tennessee and Vanderbilt's combined top 10 single-season rushing yards (through 2025): which school has more seasons on the list?",
+   "A": [
+    {
+     "name": "Dylan Sampson",
+     "yards": 1491,
+     "season": 2024,
+     "label": "2024: 1,491",
+     "profile": "2024 season, 1,491 rushing yards · No. 1 on the combined list"
+    },
+    {
+     "name": "Travis Stephens",
+     "yards": 1464,
+     "season": 2001,
+     "label": "2001: 1,464",
+     "profile": "2001 season, 1,464 rushing yards · No. 2 on the combined list"
+    },
+    {
+     "name": "Jay Graham",
+     "yards": 1438,
+     "season": 1995,
+     "label": "1995: 1,438",
+     "profile": "1995 season, 1,438 rushing yards · No. 3 on the combined list"
+    },
+    {
+     "name": "Jamal Lewis",
+     "yards": 1364,
+     "season": 1997,
+     "label": "1997: 1,364",
+     "profile": "1997 season, 1,364 rushing yards · No. 5 on the combined list"
+    },
+    {
+     "name": "Montario Hardesty",
+     "yards": 1345,
+     "season": 2009,
+     "label": "2009: 1,345",
+     "profile": "2009 season, 1,345 rushing yards · No. 6 on the combined list"
+    },
+    {
+     "name": "Travis Henry",
+     "yards": 1314,
+     "season": 2000,
+     "label": "2000: 1,314",
+     "profile": "2000 season, 1,314 rushing yards · No. 7 on the combined list"
+    },
+    {
+     "name": "Johnnie Jones",
+     "yards": 1290,
+     "season": 1984,
+     "label": "1984: 1,290",
+     "profile": "1984 season, 1,290 rushing yards · No. 8 on the combined list"
+    },
+    {
+     "name": "Jalen Hurd",
+     "yards": 1288,
+     "season": 2015,
+     "label": "2015: 1,288",
+     "profile": "2015 season, 1,288 rushing yards · No. 9 on the combined list"
+    },
+    {
+     "name": "Tony Thompson",
+     "yards": 1261,
+     "season": 1990,
+     "label": "1990: 1,261",
+     "profile": "1990 season, 1,261 rushing yards · No. 10 on the combined list"
+    }
+   ],
+   "B": [
+    {
+     "name": "Ralph Webb",
+     "yards": 1384,
+     "season": 2016,
+     "label": "2016: 1,384",
+     "profile": "2016 season, 1,384 rushing yards · No. 4 on the combined list"
+    }
+   ],
+   "sig": "fsrush"
+  },
+  {
+   "type": "mc",
+   "label": "Awards",
+   "verified": true,
+   "pitted": true,
+   "prompt": "Which of these players won the Biletnikoff Award, given to the nation's best receiver?",
+   "options": [
+    "Jalin Hyatt (Tennessee)",
+    "Jared Pinkney (Vanderbilt)",
+    "Will Sheppard (Vanderbilt)",
+    "Kalija Lipscomb (Vanderbilt)"
+   ],
+   "answer": 0,
+   "order": [
+    2,
+    3,
+    1,
+    0
+   ],
+   "reveal": "Jalin Hyatt (Tennessee) won the Biletnikoff Award in 2022.",
+   "sig": "ambiletnikoff2022",
    "more": {
-    "title": "Career receiving yards, Tennessee and Vanderbilt (careers ending 2000 or later)",
+    "title": "Every Tennessee and Vanderbilt winner of the Biletnikoff Award",
     "rows": [
-     "1. Jordan Matthews (Vanderbilt, 2010–13) 3,759",
-     "2. Dan Stricker (Vanderbilt, 1999–02) 2,880",
-     "3. Earl Bennett (Vanderbilt, 2005–07) 2,852",
-     "4. Kalija Lipscomb (Vanderbilt, 2016–19) 2,356",
-     "5. Jauan Jennings (Tennessee, 2015–19) 2,153",
-     "6. Robert Meachem (Tennessee, 2004–06) 2,140",
-     "7. Cedrick Wilson (Tennessee, 1997–00) 2,137",
-     "8. Will Sheppard (Vanderbilt, 2020–23) 2,067",
-     "9. Denarius Moore (Tennessee, 2007–10) 2,004"
+     "2022: Jalin Hyatt (TENN)"
     ]
    }
+  },
+  {
+   "type": "mc",
+   "label": "Series History",
+   "verified": true,
+   "pitted": true,
+   "prompt": "In which year was the highest-scoring Tennessee–Vanderbilt game from 2000 through 2025?",
+   "options": [
+    "2015",
+    "2012",
+    "2006",
+    "2001"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    2,
+    1,
+    0
+   ],
+   "reveal": "2015: Tennessee 53, Vanderbilt 28 (81 points, Nov 28, 2015). Next highest: 2016, Vanderbilt 45–34 (79).",
+   "sig": "mh2015"
+  },
+  {
+   "type": "mc",
+   "label": "Historic Day",
+   "verified": true,
+   "pitted": true,
+   "game": {
+    "date": "Nov 19, 2005",
+    "winner": "VAN",
+    "loser": "TENN",
+    "ws": 28,
+    "ls": 24,
+    "venue": "Neyland Stadium"
+   },
+   "prompt": "2005: Tennessee vs. Vanderbilt. Arian Foster carried 40 times. How many rushing yards did he finish with?",
+   "options": [
+    "223",
+    "183",
+    "143",
+    "103"
+   ],
+   "answer": 0,
+   "order": [
+    3,
+    2,
+    0,
+    1
+   ],
+   "reveal": "223 rushing yards and 2 TD, No. 2 by anyone in this rivalry since 2005 (box scores). Tennessee still lost, 28–24.",
+   "sig": "xb2005-11-19Arian Foster"
   },
   {
    "type": "mc",
@@ -118,15 +342,15 @@
    "prompt": "The 2015 Tennessee–Vanderbilt game is the highest-scoring game in the series since 2000, but the teams combined for how many rushing yards?",
    "options": [
     "533",
+    "433",
     "483",
-    "633",
-    "583"
+    "633"
    ],
    "answer": 0,
    "order": [
     1,
-    0,
     3,
+    0,
     2
    ],
    "reveal": "533: Tennessee 331, Vanderbilt 202. 75+ rushing yards: Ralph Webb (Vanderbilt) 149, Jalen Hurd (Tennessee) 120, Alvin Kamara (Tennessee) 99, Joshua Dobbs (Tennessee) 93.",
@@ -164,202 +388,6 @@
     ]
    },
    "sig": "gs2015-11-28rush"
-  },
-  {
-   "type": "count",
-   "label": "NFL Draft",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From the 2015 draft through 2026, which school had more linebackers taken in the first three rounds?",
-   "A": [],
-   "B": [
-    {
-     "name": "Zach Cunningham",
-     "yards": 57,
-     "season": 2017,
-     "label": "No. 57 pick",
-     "profile": "Inside Linebacker · 2017 draft, round 2"
-    },
-    {
-     "name": "Oren Burks",
-     "yards": 88,
-     "season": 2018,
-     "label": "No. 88 pick",
-     "profile": "Outside Linebacker · 2018 draft, round 3"
-    }
-   ],
-   "sig": "dcr32015lb",
-   "bonus": "names"
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 1997, did Jamal Lewis (Tennessee) have more or less than",
-   "line": "1,500 yards from scrimmage",
-   "answer": "over",
-   "reveal": "More. Jamal Lewis had 1,630 yards from scrimmage in 1997.",
-   "check": {
-    "value": 1630,
-    "line": 1500
-   },
-   "sig": "ppJamal Lewis1997|Ralph Webb2016scrim0",
-   "pair": "ppJamal Lewis1997|Ralph Webb2016scrim",
-   "pairPart": 1
-  },
-  {
-   "type": "moment",
-   "label": "Fresh Mix",
-   "verified": true,
-   "prompt": "In 2016, did Ralph Webb (Vanderbilt) have more or less than",
-   "line": "1,700 yards from scrimmage",
-   "answer": "under",
-   "reveal": "Less. Ralph Webb had 1,449 yards from scrimmage in 2016.",
-   "check": {
-    "value": 1449,
-    "line": 1700
-   },
-   "sig": "ppJamal Lewis1997|Ralph Webb2016scrim1",
-   "pair": "ppJamal Lewis1997|Ralph Webb2016scrim",
-   "pairPart": 2
-  },
-  {
-   "type": "count",
-   "label": "Fill In",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 0,
-   "verified": true,
-   "pitted": true,
-   "bonus": "names",
-   "prompt": "Tennessee and Vanderbilt's combined top 10 single-season receiving yards (through 2025): which school has more seasons on the list?",
-   "A": [
-    {
-     "name": "Robert Meachem",
-     "yards": 1298,
-     "season": 2006,
-     "label": "2006: 1,298",
-     "profile": "2006 season, 1,298 receiving yards · No. 3 on the combined list"
-    },
-    {
-     "name": "Jalin Hyatt",
-     "yards": 1267,
-     "season": 2022,
-     "label": "2022: 1,267",
-     "profile": "2022 season, 1,267 receiving yards · No. 4 on the combined list"
-    },
-    {
-     "name": "Marcus Nash",
-     "yards": 1170,
-     "season": 1997,
-     "label": "1997: 1,170",
-     "profile": "1997 season, 1,170 receiving yards · No. 6 on the combined list"
-    },
-    {
-     "name": "Justin Hunter",
-     "yards": 1083,
-     "season": 2012,
-     "label": "2012: 1,083",
-     "profile": "2012 season, 1,083 receiving yards · No. 9 on the combined list"
-    },
-    {
-     "name": "Cedric Tillman",
-     "yards": 1081,
-     "season": 2021,
-     "label": "2021: 1,081",
-     "profile": "2021 season, 1,081 receiving yards · No. 10 on the combined list"
-    }
-   ],
-   "B": [
-    {
-     "name": "Jordan Matthews",
-     "yards": 1477,
-     "season": 2013,
-     "label": "2013: 1,477",
-     "profile": "2013 season, 1,477 receiving yards · No. 1 on the combined list"
-    },
-    {
-     "name": "Jordan Matthews",
-     "yards": 1323,
-     "season": 2012,
-     "label": "2012: 1,323",
-     "profile": "2012 season, 1,323 receiving yards · No. 2 on the combined list"
-    },
-    {
-     "name": "Boo Mitchell",
-     "yards": 1213,
-     "season": 1988,
-     "label": "1988: 1,213",
-     "profile": "1988 season, 1,213 receiving yards · No. 5 on the combined list"
-    },
-    {
-     "name": "Earl Bennett",
-     "yards": 1146,
-     "season": 2006,
-     "label": "2006: 1,146",
-     "profile": "2006 season, 1,146 receiving yards · No. 7 on the combined list"
-    },
-    {
-     "name": "Bob Goodridge",
-     "yards": 1114,
-     "season": 1967,
-     "label": "1967: 1,114",
-     "profile": "1967 season, 1,114 receiving yards · No. 8 on the combined list"
-    }
-   ],
-   "sig": "fsrec"
-  },
-  {
-   "type": "mc",
-   "label": "Series History",
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2000 through 2025, what was the largest margin of victory in the Tennessee–Vanderbilt series?",
-   "options": [
-    "56 points",
-    "68 points",
-    "49 points",
-    "42 points"
-   ],
-   "answer": 0,
-   "order": [
-    1,
-    3,
-    2,
-    0
-   ],
-   "reveal": "56 points: Tennessee 56, Vanderbilt 0 (Nov 26, 2022).",
-   "sig": "mm56"
-  },
-  {
-   "type": "count",
-   "label": "Since 2021",
-   "a": "TENN",
-   "b": "VAN",
-   "threshold": 15,
-   "verified": true,
-   "pitted": true,
-   "prompt": "From 2021 through 2025, which school had more seasons with 15+ rushing touchdowns by one player?",
-   "A": [
-    {
-     "name": "Dylan Sampson",
-     "yards": 22,
-     "season": 2024,
-     "profile": "Running back · 2024: 1,491 rushing, 143 receiving yds, 22 rushing TD"
-    },
-    {
-     "name": "DeSean Bishop",
-     "yards": 16,
-     "season": 2025,
-     "profile": "Running back · 2025: 1,076 rushing, 135 receiving yds, 16 rushing TD"
-    }
-   ],
-   "B": [],
-   "sig": "tsrushTD152021",
-   "bonus": "names"
   }
  ],
  "rev": 1
