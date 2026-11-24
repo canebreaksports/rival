@@ -16,6 +16,7 @@ export interface PlayProps {
   home?: SchoolKey | null;
   mode?: "weekly" | "dive" | "mix" | "round";
   storageKey?: string | null;   // weekly runs save progress here
+  sharePath?: string | null;    // the matchup's page, sent with Share Results
   nextUnlock?: string | null;   // e.g. "Sun, Nov 22" for the final screen
   onExit: () => void;
   onAgain?: () => void;         // free play only
@@ -25,7 +26,7 @@ export interface PlayProps {
 type Reveal = { ok: boolean; msg: ReactNode; correct: string; chosen: string };
 const fresh = (n: number): Progress => ({ i: 0, pts: 0, streak: 0, best: 0, right: 0, n, done: false });
 
-export function Play({ questions, away, home, mode = "weekly", storageKey, nextUnlock, onExit, onAgain, onFinish }: PlayProps) {
+export function Play({ questions, away, home, mode = "weekly", storageKey, sharePath, nextUnlock, onExit, onAgain, onFinish }: PlayProps) {
   const n = questions.length;
   const [p, setP] = useState<Progress>(() => fresh(n));
   const [reveal, setReveal] = useState<Reveal | null>(null);
@@ -87,7 +88,7 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
   });
 
   if (!loaded) return null;
-  if (finished) return <Final p={p} n={n} questions={questions} weekly={mode === "weekly"} away={away} home={home} nextUnlock={nextUnlock} onExit={onExit} onAgain={onAgain} />;
+  if (finished) return <Final p={p} n={n} questions={questions} weekly={mode === "weekly"} away={away} home={home} nextUnlock={nextUnlock} onExit={onExit} onAgain={onAgain} sharePath={sharePath} />;
   if (!q) return <p className="note">No questions available.</p>;
 
   return (
@@ -404,14 +405,14 @@ function NameNames({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
   </div>;
 }
 
-function Final({ p, n, questions, weekly, away, home, nextUnlock, onExit, onAgain }: { p: Progress; n: number; questions: Question[]; weekly: boolean; away?: SchoolKey | null; home?: SchoolKey | null; nextUnlock?: string | null; onExit: () => void; onAgain?: () => void }) {
+function Final({ p, n, questions, weekly, away, home, nextUnlock, onExit, onAgain, sharePath }: { p: Progress; n: number; questions: Question[]; weekly: boolean; away?: SchoolKey | null; home?: SchoolKey | null; nextUnlock?: string | null; onExit: () => void; onAgain?: () => void; sharePath?: string | null }) {
   const [shared, setShared] = useState<string | null>(null);
   const hints = p.hints ?? 0;
   const hintText = hints ? `💡 ${hints} hint${hints > 1 ? "s" : ""} used (${hints * POINTS.hint} pts)` : "💡 No hints";
   async function share() {
     const title = away && home ? `${SCHOOL[away].name} ${weekly ? "@" : "vs"} ${SCHOOL[home].name}` : "SEC Mix";
-    const text = [`PITTED · ${title}`, p.marks ?? "", `${p.pts} pts · ${p.right}/${n} · 🔥 best streak ${p.best}`, hintText].filter(Boolean).join("\n");
-    const url = typeof window !== "undefined" ? window.location.origin : "";
+    const text = [`PITTED · ${title}`, p.marks ?? "", `${p.pts} pts · ${p.right}/${n} · 🔥 best streak ${p.best}`, hintText, weekly ? "Can you beat it? Same 10 questions for everyone this week:" : ""].filter(Boolean).join("\n");
+    const url = typeof window !== "undefined" ? window.location.origin + (sharePath ?? "") : ""; // straight to this matchup
     try {
       if (navigator.share) { await navigator.share({ title: "PITTED", text, url }); setShared("Shared") }
       else { await navigator.clipboard.writeText(`${text}\n${url}`); setShared("Copied to clipboard") }
@@ -423,7 +424,8 @@ function Final({ p, n, questions, weekly, away, home, nextUnlock, onExit, onAgai
     {p.marks && <div className="marks" aria-label="Question results">{p.marks}</div>}
     <p>{p.right}/{n} correct · best streak {p.best}<br />{hintText}<br />{grade(n ? p.right / n : 0)}
       {weekly && away && home && <><br /><br />That&apos;s this week&apos;s set for {SCHOOL[away].name} vs {SCHOOL[home].name}.{nextUnlock ? ` New matchups unlock ${nextUnlock}.` : ""}</>}</p>
-    <button className="btn" onClick={share}>Share Results</button>
+    <button className="btn" onClick={share}>Share Score &amp; Link</button>
+    {weekly && <a className="btn ghost" href="/leaderboard" style={{ display: "block", textAlign: "center", textDecoration: "none", marginTop: 8 }}>School Leaderboard</a>}
     <Breakdown p={p} questions={questions} />
     {shared && <div className="note" style={{ marginTop: 8 }}>{shared}</div>}
     <div style={{ height: 10 }} />

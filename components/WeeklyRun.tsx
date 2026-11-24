@@ -47,7 +47,7 @@ export function WeeklyRun({ set, games, preview = false }: { set: FrozenSet; gam
   if (!preview && !fan) return <SchoolPicker onPick={k => { const f = setFan(k); setF(f); track({ e: "pick", pid: f.pid, school: k }) }} />;
   const N = nextGames(games, now);
   return <Play questions={questions} away={set.game.away} home={set.game.home} mode="weekly"
-    storageKey={key} nextUnlock={N.length ? unlockFmt(windowOf(N[0]).start) : null}
+    storageKey={key} sharePath={preview ? null : `/play/${set.slug}`} nextUnlock={N.length ? unlockFmt(windowOf(N[0]).start) : null}
     onExit={() => router.push(home)}
     onFinish={p => { if (!preview && fan) track({ e: "finish", pid: fan.pid, school: fan.school, slug: set.slug, pts: p.pts, right: p.right, hints: p.hints ?? 0 }) }} />;
 }
