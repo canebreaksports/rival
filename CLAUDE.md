@@ -117,7 +117,7 @@ The cloud environment allows www.winsipedia.com, en.wikipedia.org, aws.sports-re
 
 ## Deploy
 
-Site: **pitted.vercel.app** (Vercel project "pitted", renamed from "rival" Nov 2026; rival-ruddy.vercel.app still works). Admin: /coach (COACH_PASSWORD).
+Site: **www.pitted.site** (pitted.site redirects to it; DNS at the owner's registrar). Also pitted.vercel.app and rival-ruddy.vercel.app (Vercel project "pitted", renamed from "rival" Nov 2026). Admin: /coach (COACH_PASSWORD).
 
 Tracking needs two things in the Vercel project: an Upstash Redis database connected to it (provides `KV_REST_API_URL` / `KV_REST_API_TOKEN`) and an env var `STATS_KEY` (any secret; used to open `/coach/stats`).
 
