@@ -44,7 +44,8 @@
   "2026-11-28-ou-at-miz": {
    "skip": [
     "urecTDJoe MixonAlbert Okwuegbunam",
-    "hmChase Daniel2007,Cody Schrader2023,Quentin Griffin2002,Sam Bradford2008"
+    "hmChase Daniel2007,Cody Schrader2023,Quentin Griffin2002,Sam Bradford2008",
+    "nrrushingBilly Sims,Brad Smith,Joe Washington,Zack Abron"
    ],
    "why": "Owner review round 1 (Nov 24): replaced by hand-written versions",
    "pin": [
@@ -60,6 +61,11 @@
   "2026-11-28-asu-at-ariz": {
    "pin": [
     "mh2016"
+   ]
+  },
+  "2026-11-27-fla-at-fsu": {
+   "skip": [
+    "urecTDDalvin CookKyle Pitts"
    ]
   }
  }

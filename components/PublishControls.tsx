@@ -138,6 +138,7 @@ export function SetQuestions({ slug, questions }: { slug: string; questions: Que
         {r.options && q.type !== "rank" && <div className="ro">{r.options.join(" / ")}</div>}
         <div className="ra" style={{ whiteSpace: "pre-line" }}>{r.answer}</div>
         {r.detail && <div className="rd" style={{ whiteSpace: "pre-line" }}>{r.detail}</div>}
+        {q.after && <div className="rd"><b>After the bonus:</b> {q.after}</div>}
         {q.info && <div className="rd">ⓘ {q.info.title}: {q.info.text}</div>}
         {q.more?.rows.length ? <div className="rd">More · {q.more.title}: {q.more.rows.join(" · ")}</div> : null}
         <div className="rd" style={{ opacity: 0.5, fontSize: 12 }}>id: {q.sig.slice(0, 40)}</div>

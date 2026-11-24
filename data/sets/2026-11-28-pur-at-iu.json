@@ -6,8 +6,8 @@
   "away": "PUR",
   "home": "IU"
  },
- "generatedAt": "2026-11-24T04:01:26.469Z",
- "engine": 55,
+ "generatedAt": "2026-11-24T04:22:48.001Z",
+ "engine": 56,
  "questions": [
   {
    "label": "Purdue–Indiana",
@@ -178,7 +178,7 @@
     "5"
    ],
    "answer": 0,
-   "reveal": "4: 2007 (Purdue at Indiana) · 2010 (Indiana at Purdue) · 2016 (Purdue at Indiana) · 2019 (Indiana at Purdue).",
+   "reveal": "4.",
    "order": [
     1,
     0,
@@ -220,7 +220,8 @@
       "profile": "Indiana at Purdue"
      }
     ]
-   }
+   },
+   "after": "2007 (Purdue at Indiana) · 2010 (Indiana at Purdue) · 2016 (Purdue at Indiana) · 2019 (Indiana at Purdue)."
   },
   {
    "type": "rank",

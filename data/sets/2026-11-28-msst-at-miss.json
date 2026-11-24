@@ -6,8 +6,8 @@
   "away": "MSST",
   "home": "MISS"
  },
- "generatedAt": "2026-11-24T04:01:26.218Z",
- "engine": 55,
+ "generatedAt": "2026-11-24T04:22:47.725Z",
+ "engine": 56,
  "questions": [
   {
    "type": "count",
@@ -227,7 +227,7 @@
     "7"
    ],
    "answer": 0,
-   "reveal": "6: 2006 (Mississippi State at Ole Miss) · 2007 (Ole Miss at Mississippi State) · 2013 (Ole Miss at Mississippi State (OT)) · 2017 (Ole Miss at No. 16 Mississippi State) · 2019 (Ole Miss at Mississippi State) · 2022 (Mississippi State at No. 20 Ole Miss).",
+   "reveal": "6.",
    "order": [
     1,
     3,
@@ -284,7 +284,8 @@
       "profile": "Ole Miss at No. 16 Mississippi State"
      }
     ]
-   }
+   },
+   "after": "2006 (Mississippi State at Ole Miss) · 2007 (Ole Miss at Mississippi State) · 2013 (Ole Miss at Mississippi State (OT)) · 2017 (Ole Miss at No. 16 Mississippi State) · 2019 (Ole Miss at Mississippi State) · 2022 (Mississippi State at No. 20 Ole Miss)."
   },
   {
    "label": "Egg Bowl",
@@ -433,7 +434,8 @@
     2,
     3
    ],
-   "reveal": "45 points: Ole Miss 45, Mississippi State 0 (Nov 28, 2008).",
+   "reveal": "45 points.",
+   "after": "Ole Miss 45, Mississippi State 0 (Nov 28, 2008), with Jevan Snead at quarterback.",
    "years": {
     "prompt": "Bonus: name the year.",
     "a": "MSST",

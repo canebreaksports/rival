@@ -94,7 +94,7 @@
       "5–0"
      ],
      "answer": 0,
-     "reveal": "0–5. Auburn won all five: 2007 (finished 9–4), 2010 (14–0), 2013 (12–2), 2017 (10–4) and 2019 (9–4). Against every other Auburn team, Saban's Alabama went 12–0.",
+     "reveal": "0–5. Against every other Auburn team, Saban's Alabama went 12–0.",
      "source": "Iron Bowl results: CollegeFootballData /games. Auburn final records: CollegeFootballData /games, matched for all 17 seasons by Wikipedia \"List of Auburn Tigers football seasons\" (revision 1382122272). Saban at Alabama 2007–2023: Wikipedia \"Nick Saban\" (revision 1387234359)",
      "verified": true,
      "years": {
@@ -139,7 +139,8 @@
        }
       ],
       "B": []
-     }
+     },
+     "after": "Auburn won all five: 2007 (finished 9–4), 2010 (14–0), 2013 (12–2), 2017 (10–4) and 2019 (9–4)."
     },
     {
      "type": "mc",
@@ -151,7 +152,7 @@
       "4"
      ],
      "answer": 0,
-     "reveal": "3: Amari Cooper (Alabama) 13 catches for 224 yards and 3 TD, Sammie Coates (Auburn) 5 for 206 and 2 TD, and Duke Williams (Auburn) 7 for 121.",
+     "reveal": "3 players topped 100 receiving yards.",
      "names": {
       "prompt": "Bonus: name the three players who topped 100 receiving yards in the 2014 Iron Bowl.",
       "a": "AUB",
@@ -180,7 +181,8 @@
       ]
      },
      "source": "2014 Iron Bowl (Nov 29, 2014, Bryant-Denny Stadium, Alabama 55, Auburn 44): CollegeFootballData /games/players, matched by ESPN box score (event 400548323)",
-     "verified": true
+     "verified": true,
+     "after": "Amari Cooper (Alabama) 13 catches for 224 yards and 3 TD, Sammie Coates (Auburn) 5 for 206 and 2 TD, and Duke Williams (Auburn) 7 for 121."
     },
     {
      "type": "rank",
@@ -1204,7 +1206,8 @@
       "7"
      ],
      "answer": 0,
-     "reveal": "6: 2006 (Mississippi State at Ole Miss) · 2007 (Ole Miss at Mississippi State) · 2013 (Ole Miss at Mississippi State (OT)) · 2017 (Ole Miss at No. 16 Mississippi State) · 2019 (Ole Miss at Mississippi State) · 2022 (Mississippi State at No. 20 Ole Miss).",
+     "reveal": "6.",
+     "after": "2006 (Mississippi State at Ole Miss) · 2007 (Ole Miss at Mississippi State) · 2013 (Ole Miss at Mississippi State (OT)) · 2017 (Ole Miss at No. 16 Mississippi State) · 2019 (Ole Miss at Mississippi State) · 2022 (Mississippi State at No. 20 Ole Miss).",
      "years": {
       "prompt": "Name the 6 seasons.",
       "a": "MSST",
@@ -1402,6 +1405,25 @@
      "source": "ESPN game recap (AP), event 400547771: \"Winston threw a career-high four interceptions, including three in the first quarter\". Score and totals match data/rivalry.json; AP ranks from data/game-ranks.json",
      "verified": true,
      "marquee": true
+    },
+    {
+     "type": "h2h",
+     "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+     "A": {
+      "label": "Kyle Pitts (Florida TE)",
+      "value": 18,
+      "school": "FLA"
+     },
+     "B": {
+      "label": "Anquan Boldin (Florida State WR)",
+      "value": 21,
+      "school": "FSU"
+     },
+     "unit": "TD",
+     "note": "Boldin 21 (1999–2002, 13 of them in 2002), Pitts 18 (2018–20, 12 of them in 2020).",
+     "source": "Wikipedia \"Florida State Seminoles football statistical leaders\" (revision 1378376740): Boldin 21 career and 13 in 2002; Kyle Pitts: CollegeFootballData /stats/player/season (1, 5, 12)",
+     "verified": true,
+     "marquee": true
     }
    ]
   },
@@ -1420,7 +1442,8 @@
       "7"
      ],
      "answer": 0,
-     "reveal": "6: 2005 (Arizona at Arizona State) · 2007 (Arizona at No. 13 Arizona State) · 2009 (Arizona at Arizona State) · 2010 (Arizona State at Arizona (OT)) · 2018 (Arizona State at Arizona) · 2022 (Arizona State at Arizona).",
+     "reveal": "6.",
+     "after": "2005 (Arizona at Arizona State) · 2007 (Arizona at No. 13 Arizona State) · 2009 (Arizona at Arizona State) · 2010 (Arizona State at Arizona (OT)) · 2018 (Arizona State at Arizona) · 2022 (Arizona State at Arizona).",
      "years": {
       "prompt": "Name the 6 seasons.",
       "a": "ASU",
@@ -1523,7 +1546,8 @@
       "7"
      ],
      "answer": 0,
-     "reveal": "6: 2006 (No. 16 Georgia Tech at Georgia) · 2008 (No. 18 Georgia Tech at No. 13 Georgia) · 2013 (Georgia at Georgia Tech (OT)) · 2014 (No. 16 Georgia Tech at No. 8 Georgia (OT)) · 2016 (Georgia Tech at Georgia) · 2024 (Georgia Tech at No. 6 Georgia (OT)).",
+     "reveal": "6.",
+     "after": "2006 (No. 16 Georgia Tech at Georgia) · 2008 (No. 18 Georgia Tech at No. 13 Georgia) · 2013 (Georgia at Georgia Tech (OT)) · 2014 (No. 16 Georgia Tech at No. 8 Georgia (OT)) · 2016 (Georgia Tech at Georgia) · 2024 (Georgia Tech at No. 6 Georgia (OT)).",
      "years": {
       "prompt": "Name the 6 seasons.",
       "a": "GT",
@@ -1694,7 +1718,8 @@
       "12"
      ],
      "answer": 0,
-     "reveal": "11: 2001 (No. 24 Arkansas at LSU) · 2002 (No. 18 LSU at Arkansas) · 2005 (Arkansas at No. 3 LSU) · 2007 (Arkansas at No. 1 LSU (OT)) · 2008 (LSU at Arkansas) · 2009 (Arkansas at No. 17 LSU (OT)) · 2020 (LSU at Arkansas) · 2021 (Arkansas at LSU (OT)) · 2022 (No. 7 LSU at Arkansas) · 2023 (Arkansas at No. 12 LSU) · 2025 (Arkansas at LSU).",
+     "reveal": "11.",
+     "after": "2001 (No. 24 Arkansas at LSU) · 2002 (No. 18 LSU at Arkansas) · 2005 (Arkansas at No. 3 LSU) · 2007 (Arkansas at No. 1 LSU (OT)) · 2008 (LSU at Arkansas) · 2009 (Arkansas at No. 17 LSU (OT)) · 2020 (LSU at Arkansas) · 2021 (Arkansas at LSU (OT)) · 2022 (No. 7 LSU at Arkansas) · 2023 (Arkansas at No. 12 LSU) · 2025 (Arkansas at LSU).",
      "years": {
       "prompt": "Name the 11 seasons.",
       "a": "LSU",
@@ -1817,7 +1842,8 @@
       "5"
      ],
      "answer": 0,
-     "reveal": "4: 2006 (No. 2 Michigan at No. 1 Ohio State) · 2013 (No. 3 Ohio State at Michigan) · 2016 (No. 3 Michigan at No. 2 Ohio State (OT)) · 2024 (Michigan at No. 2 Ohio State).",
+     "reveal": "4.",
+     "after": "2006 (No. 2 Michigan at No. 1 Ohio State) · 2013 (No. 3 Ohio State at Michigan) · 2016 (No. 3 Michigan at No. 2 Ohio State (OT)) · 2024 (Michigan at No. 2 Ohio State).",
      "years": {
       "prompt": "Name the 4 seasons.",
       "a": "MICH",
@@ -1929,7 +1955,7 @@
       "1"
      ],
      "answer": 0,
-     "reveal": "3 of Ohio State's 4 sacks. Chris Wells added 222 rushing yards, and Michigan finished with 15 rushing yards.",
+     "reveal": "3 of Ohio State's 4 sacks. Michigan finished with 91 total yards and 15 rushing.",
      "source": "ESPN game recap (AP), event 273210130: \"Gholston made life miserable for them with three of Ohio State's four sacks\". Score and totals match data/rivalry.json; AP ranks from data/game-ranks.json; Chris Wells 222 yards: same recap and data/rivalry.json (box scores: CollegeFootballData /games/players 2012+, ESPN game summaries before)",
      "verified": true,
      "marquee": true,
@@ -1946,7 +1972,8 @@
         "profile": "Ohio State RB · 39 carries, 222 yards, 2 TD (career high)"
        }
       ]
-     }
+     },
+     "after": "Chris Wells led everyone with 222 rushing yards (39 carries, 2 TD)."
     }
    ]
   },
@@ -2005,6 +2032,88 @@
      "source": "School record books via Wikipedia statistical leaders pages (Oklahoma, Missouri career receiving), data/season-records.json / data/career-*.json",
      "verified": true,
      "marquee": true
+    },
+    {
+     "type": "rank",
+     "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
+     "items": [
+      {
+       "label": "Brad Smith (Missouri)",
+       "value": 4289,
+       "school": "MIZ"
+      },
+      {
+       "label": "Billy Sims (Oklahoma)",
+       "value": 4118,
+       "school": "OU"
+      },
+      {
+       "label": "Adrian Peterson (Oklahoma)",
+       "value": 4045,
+       "school": "OU"
+      },
+      {
+       "label": "Zack Abron (Missouri)",
+       "value": 3198,
+       "school": "MIZ"
+      }
+     ],
+     "unit": "yds",
+     "note": "Career totals from each school's record book. Brad Smith, a quarterback, is Missouri's career leader.",
+     "names": {
+      "prompt": "Bonus: name the other 7 players in Oklahoma and Missouri's combined top 10 for career rushing yards.",
+      "a": "OU",
+      "b": "MIZ",
+      "A": [
+       {
+        "name": "Samaje Perine",
+        "yards": 4122,
+        "label": "4,122",
+        "profile": "Oklahoma · 4,122 career rushing yards · No. 2 on the combined list"
+       },
+       {
+        "name": "Joe Washington",
+        "yards": 4071,
+        "label": "4,071",
+        "profile": "Oklahoma · 4,071 career rushing yards · No. 4 on the combined list"
+       },
+       {
+        "name": "Steve Owens",
+        "yards": 4041,
+        "label": "4,041",
+        "profile": "Oklahoma · 4,041 career rushing yards · No. 6 on the combined list"
+       },
+       {
+        "name": "Quentin Griffin",
+        "yards": 3938,
+        "label": "3,938",
+        "profile": "Oklahoma · 3,938 career rushing yards · No. 7 on the combined list"
+       },
+       {
+        "name": "DeMarco Murray",
+        "yards": 3685,
+        "label": "3,685",
+        "profile": "Oklahoma · 3,685 career rushing yards · No. 9 on the combined list"
+       },
+       {
+        "name": "De'Mond Parker",
+        "yards": 3403,
+        "label": "3,403",
+        "profile": "Oklahoma · 3,403 career rushing yards · No. 10 on the combined list"
+       }
+      ],
+      "B": [
+       {
+        "name": "Larry Rountree III",
+        "yards": 3720,
+        "label": "3,720",
+        "profile": "Missouri · 3,720 career rushing yards · No. 8 on the combined list"
+       }
+      ]
+     },
+     "source": "School record books via Wikipedia statistical leaders pages (Oklahoma, Missouri career rushing), data/season-records.json / data/career-*.json",
+     "verified": true,
+     "marquee": true
     }
    ]
   },
@@ -2023,7 +2132,8 @@
       "5"
      ],
      "answer": 0,
-     "reveal": "4: 2007 (Purdue at Indiana) · 2010 (Indiana at Purdue) · 2016 (Purdue at Indiana) · 2019 (Indiana at Purdue).",
+     "reveal": "4.",
+     "after": "2007 (Purdue at Indiana) · 2010 (Indiana at Purdue) · 2016 (Purdue at Indiana) · 2019 (Indiana at Purdue).",
      "years": {
       "prompt": "Name the 4 seasons.",
       "a": "PUR",
@@ -2096,7 +2206,8 @@
       "6"
      ],
      "answer": 0,
-     "reveal": "5: 2000 (No. 25 South Carolina at No. 16 Clemson) · 2006 (South Carolina at No. 24 Clemson) · 2007 (No. 21 Clemson at South Carolina) · 2022 (South Carolina at No. 7 Clemson) · 2024 (No. 16 South Carolina at No. 12 Clemson).",
+     "reveal": "5.",
+     "after": "2000 (No. 25 South Carolina at No. 16 Clemson) · 2006 (South Carolina at No. 24 Clemson) · 2007 (No. 21 Clemson at South Carolina) · 2022 (South Carolina at No. 7 Clemson) · 2024 (No. 16 South Carolina at No. 12 Clemson).",
      "years": {
       "prompt": "Name the 5 seasons.",
       "a": "SC",
@@ -2223,7 +2334,8 @@
       "4"
      ],
      "answer": 0,
-     "reveal": "3: 2000 (No. 25 Tennessee at Vanderbilt) · 2007 (Vanderbilt at No. 19 Tennessee) · 2011 (Vanderbilt at Tennessee (OT)).",
+     "reveal": "3.",
+     "after": "2000 (No. 25 Tennessee at Vanderbilt) · 2007 (Vanderbilt at No. 19 Tennessee) · 2011 (Vanderbilt at Tennessee (OT)).",
      "years": {
       "prompt": "Name the 3 seasons.",
       "a": "TENN",
@@ -2282,7 +2394,7 @@
       "203"
      ],
      "answer": 0,
-     "reveal": "53. Vanderbilt also forced three interceptions; Joshua Dobbs went 11 of 19 for 53 yards and was picked off twice.",
+     "reveal": "53 passing yards. Vanderbilt also forced three interceptions.",
      "source": "ESPN game recap (AP), event 333272633: \"The Commodores still held Tennessee to 53 yards passing while forcing three interceptions\". Score and totals match data/rivalry.json; AP ranks from data/game-ranks.json",
      "verified": true,
      "marquee": true,
@@ -2299,7 +2411,8 @@
        }
       ],
       "B": []
-     }
+     },
+     "after": "Joshua Dobbs went 11 of 19 for 53 yards and was picked off twice."
     },
     {
      "type": "rank",
@@ -2349,7 +2462,8 @@
       "3"
      ],
      "answer": 0,
-     "reveal": "2: 2000 (USC at UCLA) · 2022 (No. 7 USC at No. 16 UCLA).",
+     "reveal": "2.",
+     "after": "2000 (USC at UCLA) · 2022 (No. 7 USC at No. 16 UCLA).",
      "years": {
       "prompt": "Name the 2 seasons.",
       "a": "USC",

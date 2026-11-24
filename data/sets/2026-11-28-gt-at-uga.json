@@ -6,8 +6,8 @@
   "away": "GT",
   "home": "UGA"
  },
- "generatedAt": "2026-11-24T04:01:25.636Z",
- "engine": 55,
+ "generatedAt": "2026-11-24T04:22:46.949Z",
+ "engine": 56,
  "questions": [
   {
    "label": "Georgia Tech–Georgia",
@@ -93,7 +93,7 @@
     "7"
    ],
    "answer": 0,
-   "reveal": "6: 2006 (No. 16 Georgia Tech at Georgia) · 2008 (No. 18 Georgia Tech at No. 13 Georgia) · 2013 (Georgia at Georgia Tech (OT)) · 2014 (No. 16 Georgia Tech at No. 8 Georgia (OT)) · 2016 (Georgia Tech at Georgia) · 2024 (Georgia Tech at No. 6 Georgia (OT)).",
+   "reveal": "6.",
    "order": [
     0,
     3,
@@ -150,7 +150,8 @@
       "profile": "Georgia Tech at No. 6 Georgia (OT)"
      }
     ]
-   }
+   },
+   "after": "2006 (No. 16 Georgia Tech at Georgia) · 2008 (No. 18 Georgia Tech at No. 13 Georgia) · 2013 (Georgia at Georgia Tech (OT)) · 2014 (No. 16 Georgia Tech at No. 8 Georgia (OT)) · 2016 (Georgia Tech at Georgia) · 2024 (Georgia Tech at No. 6 Georgia (OT))."
   },
   {
    "type": "rank",

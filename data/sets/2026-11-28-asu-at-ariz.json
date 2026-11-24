@@ -6,8 +6,8 @@
   "away": "ASU",
   "home": "ARIZ"
  },
- "generatedAt": "2026-11-24T04:01:25.330Z",
- "engine": 55,
+ "generatedAt": "2026-11-24T04:22:46.622Z",
+ "engine": 56,
  "questions": [
   {
    "type": "mc",
@@ -118,7 +118,7 @@
     "7"
    ],
    "answer": 0,
-   "reveal": "6: 2005 (Arizona at Arizona State) · 2007 (Arizona at No. 13 Arizona State) · 2009 (Arizona at Arizona State) · 2010 (Arizona State at Arizona (OT)) · 2018 (Arizona State at Arizona) · 2022 (Arizona State at Arizona).",
+   "reveal": "6.",
    "order": [
     1,
     2,
@@ -175,7 +175,8 @@
       "profile": "Arizona State at Arizona"
      }
     ]
-   }
+   },
+   "after": "2005 (Arizona at Arizona State) · 2007 (Arizona at No. 13 Arizona State) · 2009 (Arizona at Arizona State) · 2010 (Arizona State at Arizona (OT)) · 2018 (Arizona State at Arizona) · 2022 (Arizona State at Arizona)."
   },
   {
    "type": "count",
@@ -360,7 +361,8 @@
     2,
     1
    ],
-   "reveal": "631: Arizona State 120, Arizona 511. 90+ rushing yards: Brandon Dawkins (Arizona) 183, Samajie Grant (Arizona) 176, Zach Green (Arizona) 126.",
+   "reveal": "631: Arizona State 120, Arizona 511.",
+   "after": "90+ rushing yards: Brandon Dawkins (Arizona) 183, Samajie Grant (Arizona) 176, Zach Green (Arizona) 126.",
    "names": {
     "prompt": "Bonus: name everyone with 90+ rushing yards in this game.",
     "a": "ASU",

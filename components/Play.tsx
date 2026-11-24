@@ -106,7 +106,7 @@ export function Play({ questions, away, home, mode = "weekly", storageKey, nextU
           </div>
         )}
         {reveal && q.info && <Info key={"i" + p.i} info={q.info} />}
-        {reveal && afterBonus && q.type === "mc" && (q.years || q.names) && <div className="more">{q.reveal}</div>}
+        {reveal && afterBonus && hasBonus && (q.after || (q.type === "mc" && (q.years || q.names))) && <div className="more">{q.after ?? (q.type === "mc" ? q.reveal : "")}</div>}
         {reveal && afterBonus && q.more && q.more.rows.length > 0 && <div className="more"><div className="kind">More · {q.more.title}</div>{q.more.rows.map(r => <div key={r}>{r}</div>)}</div>}
         {reveal && q.type === "count" ? <NameThem q={q} onDone={finishBonus} onHint={addHint} onNext={next} last={p.i === n - 1} />
           : reveal && q.type === "mc" && q.years && q.names && stageAt !== p.i ? <NameYears key={"y" + p.i} q={q.years} prompt={q.years.prompt} onDone={addBonus} onHint={addHint} onNext={() => setStageAt(p.i)} last={false} />
@@ -161,7 +161,7 @@ function revealText(q: Question): ReactNode {
     case "h2h": return <>{q.A.label}: {h2hFmt(q, q.A.value)} · {q.B.label}: {h2hFmt(q, q.B.value)}{q.note && <><br />{q.note}</>}</>;
     case "duel": return `${SCHOOL[q.aSchool].name}: ${q.aName} (${q.A.big}). ${SCHOOL[q.other].name}: ${q.bName} (${q.B.big}).`;
     case "cross": return q.reveal;
-    case "mc": return q.years || q.names ? `${q.options[q.answer]}.` : q.reveal; // the full reveal gives the bonus away: hold it // the full reveal lists the years: hold it until the bonus is over
+    case "mc": return q.years || q.names ? (q.after ? q.reveal : `${q.options[q.answer]}.`) : q.reveal; // bonus answers wait for q.after // the full reveal lists the years: hold it until the bonus is over
     case "rank": return "";
   }
 }

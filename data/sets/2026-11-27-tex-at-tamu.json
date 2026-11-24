@@ -6,8 +6,8 @@
   "away": "TEX",
   "home": "TAMU"
  },
- "generatedAt": "2026-11-24T04:01:25.194Z",
- "engine": 55,
+ "generatedAt": "2026-11-24T04:22:46.506Z",
+ "engine": 56,
  "questions": [
   {
    "type": "count",
@@ -115,7 +115,8 @@
     3,
     1
    ],
-   "reveal": "483: Texas 293, Texas A&M 190. 75+ rushing yards: Colt McCoy (Texas) 175, Tre' Newton (Texas) 107, Jerrod Johnson (Texas A&M) 97, Christine Michael (Texas A&M) 83.",
+   "reveal": "483: Texas 293, Texas A&M 190.",
+   "after": "75+ rushing yards: Colt McCoy (Texas) 175, Tre' Newton (Texas) 107, Jerrod Johnson (Texas A&M) 97, Christine Michael (Texas A&M) 83.",
    "names": {
     "prompt": "Bonus: name everyone with 75+ rushing yards in this game.",
     "a": "TEX",
@@ -170,7 +171,8 @@
     1,
     2
    ],
-   "reveal": "40 points: Texas 49, Texas A&M 9 (Nov 27, 2008).",
+   "reveal": "40 points.",
+   "after": "Texas 49, Texas A&M 9 (Nov 27, 2008), with Colt McCoy at quarterback.",
    "years": {
     "prompt": "Bonus: name the year.",
     "a": "TEX",

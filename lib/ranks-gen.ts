@@ -37,7 +37,7 @@ export function genRankedMC(gr: GameRanks, pr: RivalryPair | undefined, a: Schoo
     return { type: "mc", label: "Rankings", verified: true, pitted: true,
       prompt: `Of the ${p.games.length} ${nm(a)}–${nm(b)} games from ${p.from} through 2025, how many ${what}?`,
       options: opts.map(String), answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
-      reveal: `${n}: ${L.map(x => `${x.g.season} (${x.l!.text})`).join(" · ")}.`,
+      reveal: `${n}.`, after: L.map(x => `${x.g.season} (${x.l!.text})`).join(" · ") + ".",
       info: { title: "Which poll?", text: "The AP Top 25 in force the week of each game; bowl and championship games use the last regular-season poll. Tied teams share a rank." },
       years, sig: "rk" + key } as Question;
   }

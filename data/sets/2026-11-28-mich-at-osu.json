@@ -6,8 +6,8 @@
   "away": "MICH",
   "home": "OSU"
  },
- "generatedAt": "2026-11-24T04:01:26.092Z",
- "engine": 55,
+ "generatedAt": "2026-11-24T04:22:47.563Z",
+ "engine": 56,
  "questions": [
   {
    "label": "Michigan–Ohio State",
@@ -321,7 +321,7 @@
     "1"
    ],
    "answer": 0,
-   "reveal": "3 of Ohio State's 4 sacks. Chris Wells added 222 rushing yards, and Michigan finished with 15 rushing yards.",
+   "reveal": "3 of Ohio State's 4 sacks. Michigan finished with 91 total yards and 15 rushing.",
    "order": [
     0,
     2,
@@ -341,7 +341,8 @@
       "profile": "Ohio State RB · 39 carries, 222 yards, 2 TD (career high)"
      }
     ]
-   }
+   },
+   "after": "Chris Wells led everyone with 222 rushing yards (39 carries, 2 TD)."
   },
   {
    "label": "Michigan–Ohio State",
@@ -379,7 +380,7 @@
     "5"
    ],
    "answer": 0,
-   "reveal": "4: 2006 (No. 2 Michigan at No. 1 Ohio State) · 2013 (No. 3 Ohio State at Michigan) · 2016 (No. 3 Michigan at No. 2 Ohio State (OT)) · 2024 (Michigan at No. 2 Ohio State).",
+   "reveal": "4.",
    "order": [
     1,
     0,
@@ -422,7 +423,8 @@
       "profile": "No. 3 Michigan at No. 2 Ohio State (OT)"
      }
     ]
-   }
+   },
+   "after": "2006 (No. 2 Michigan at No. 1 Ohio State) · 2013 (No. 3 Ohio State at Michigan) · 2016 (No. 3 Michigan at No. 2 Ohio State (OT)) · 2024 (Michigan at No. 2 Ohio State)."
   }
  ]
 }

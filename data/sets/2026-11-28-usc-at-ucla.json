@@ -6,8 +6,8 @@
   "away": "USC",
   "home": "UCLA"
  },
- "generatedAt": "2026-11-24T04:01:26.850Z",
- "engine": 55,
+ "generatedAt": "2026-11-24T04:22:48.371Z",
+ "engine": 56,
  "questions": [
   {
    "type": "mc",
@@ -150,7 +150,7 @@
     "3"
    ],
    "answer": 0,
-   "reveal": "2: 2000 (USC at UCLA) · 2022 (No. 7 USC at No. 16 UCLA).",
+   "reveal": "2.",
    "order": [
     3,
     0,
@@ -178,7 +178,8 @@
      }
     ],
     "B": []
-   }
+   },
+   "after": "2000 (USC at UCLA) · 2022 (No. 7 USC at No. 16 UCLA)."
   },
   {
    "type": "mc",
@@ -199,7 +200,8 @@
     3,
     0
    ],
-   "reveal": "50 points: USC 50, UCLA 0 (Nov 26, 2011).",
+   "reveal": "50 points.",
+   "after": "USC 50, UCLA 0 (Nov 26, 2011), with Matt Barkley at quarterback.",
    "years": {
     "prompt": "Bonus: name the year.",
     "a": "USC",
@@ -470,7 +472,8 @@
     1,
     3
    ],
-   "reveal": "419: USC 159, UCLA 260. 75+ rushing yards: Zach Charbonnet (UCLA) 167, Keaontay Ingram (USC) 96.",
+   "reveal": "419: USC 159, UCLA 260.",
+   "after": "75+ rushing yards: Zach Charbonnet (UCLA) 167, Keaontay Ingram (USC) 96.",
    "names": {
     "prompt": "Bonus: name everyone with 75+ rushing yards in this game.",
     "a": "USC",

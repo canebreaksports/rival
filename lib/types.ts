@@ -39,7 +39,7 @@ export type CuratedItem = Sourced & (
   | { type: "moment"; prompt: string; line: string; answer: "over" | "under"; reveal: string; game?: GameBox }
   | { type: "duel"; year: number; stat: string; aSchool: SchoolKey; aName: string; bName: string; A: { big: string; sm: string }; B: { big: string; sm: string } }
   | { type: "cross"; prompt: string; options: string[]; answer: number; reveal: string }
-  | { type: "mc"; prompt: string; options: string[]; answer: number; reveal: string; game?: GameBox; years?: YearsBonus; names?: YearsBonus }
+  | { type: "mc"; prompt: string; options: string[]; answer: number; reveal: string; game?: GameBox; years?: YearsBonus; names?: YearsBonus; after?: string }
   | { type: "rank"; prompt: string; items: { label: string; value: number; school?: SchoolKey }[]; unit: string; trap?: boolean; note?: string; names?: YearsBonus }
   | { type: "h2h"; prompt: string; A: { label: string; value: number; school?: SchoolKey }; B: { label: string; value: number; school?: SchoolKey }; unit: string; note?: string; upset?: boolean }
 );
@@ -74,6 +74,7 @@ export interface RivalryPair { games: RivalryGame[]; vs: VsTotal[]; vsFrom?: num
 interface QBase { label: string; verified: boolean; sig: string; trap?: boolean; upset?: boolean; pair?: string; pairPart?: 1 | 2; pitted?: boolean;
   more?: { title: string; rows: string[] }; // extra examples shown after answering (a mini leaderboard)
   bonus?: "names" | "years";
+  after?: string; // shown only after the bonus ends (details that would give the bonus away)
   info?: { title: string; text: string } } // ⓘ button after answering, before the bonus (e.g. "What is the Doak Walker Award?")               // Name Them variant for count questions // pitted: about both schools by construction
 export interface CountEntry { name: string; yards: number; active?: boolean; season?: number; profile?: string; label?: string } // label: shown instead of yards (e.g. "No. 3 pick") // season: season/game counts; profile: hint 2
 export interface Item { label: string; value: number; school?: SchoolKey } // school: who the item belongs to (pitted checks)

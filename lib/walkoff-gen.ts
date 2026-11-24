@@ -35,6 +35,6 @@ export function genWalkoffMC(d: WalkoffData, a: SchoolKey, b: SchoolKey, rng: Rn
   return { type: "mc", label: "Walk-offs", verified: true, pitted: true,
     prompt: `Of the ${p.games} ${nm(a)}–${nm(b)} games since ${p.from}, how many were won on the final play or in overtime? (${QUAL})`,
     options: opts.map(String), answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
-    reveal: `${n}: ${p.list.map(w => `${w.season} ${HOW[w.how].toLowerCase()}, ${nm(w.winner)} ${w.ws}–${w.ls}`).join(" · ")}.`,
+    reveal: `${n}.`, after: p.list.map(w => `${w.season} ${HOW[w.how].toLowerCase()}, ${nm(w.winner)} ${w.ws}–${w.ls}`).join(" · ") + ".",
     years, sig: "wm" + p.from } as Question;
 }

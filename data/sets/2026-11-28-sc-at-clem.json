@@ -6,8 +6,8 @@
   "away": "SC",
   "home": "CLEM"
  },
- "generatedAt": "2026-11-24T04:01:26.604Z",
- "engine": 55,
+ "generatedAt": "2026-11-24T04:22:48.132Z",
+ "engine": 56,
  "questions": [
   {
    "type": "count",
@@ -104,7 +104,7 @@
     "6"
    ],
    "answer": 0,
-   "reveal": "5: 2000 (No. 25 South Carolina at No. 16 Clemson) · 2006 (South Carolina at No. 24 Clemson) · 2007 (No. 21 Clemson at South Carolina) · 2022 (South Carolina at No. 7 Clemson) · 2024 (No. 16 South Carolina at No. 12 Clemson).",
+   "reveal": "5.",
    "order": [
     2,
     1,
@@ -154,7 +154,8 @@
       "profile": "No. 21 Clemson at South Carolina"
      }
     ]
-   }
+   },
+   "after": "2000 (No. 25 South Carolina at No. 16 Clemson) · 2006 (South Carolina at No. 24 Clemson) · 2007 (No. 21 Clemson at South Carolina) · 2022 (South Carolina at No. 7 Clemson) · 2024 (No. 16 South Carolina at No. 12 Clemson)."
   },
   {
    "label": "South Carolina–Clemson",
@@ -361,7 +362,8 @@
     0,
     1
    ],
-   "reveal": "294: South Carolina 80, Clemson 214. 80+ rushing yards: James Davis (Clemson) 122, C.J. Spiller (Clemson) 88.",
+   "reveal": "294: South Carolina 80, Clemson 214.",
+   "after": "80+ rushing yards: James Davis (Clemson) 122, C.J. Spiller (Clemson) 88.",
    "names": {
     "prompt": "Bonus: name everyone with 80+ rushing yards in this game.",
     "a": "SC",

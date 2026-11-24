@@ -78,6 +78,7 @@ export function reviewMarkdown(week: string, sets: FrozenSet[]): string {
       if (r.options && q.type !== "rank") lines.push(`   Options: ${r.options.join(" / ")}  `);
       lines.push(...r.answer.split("\n").map(a => `   **${a}**  `));
       if (r.detail) lines.push(...r.detail.split("\n").map(d => `   ${d}  `));
+      if (q.after) lines.push(`   *After the bonus:* ${q.after}  `);
       if (q.info) lines.push(`   *ⓘ ${q.info.title}:* ${q.info.text}  `);
       if (q.more?.rows.length) lines.push(`   *More · ${q.more.title}:* ${q.more.rows.join(" · ")}  `);
       lines.push("");

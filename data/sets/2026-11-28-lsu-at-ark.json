@@ -6,8 +6,8 @@
   "away": "LSU",
   "home": "ARK"
  },
- "generatedAt": "2026-11-24T04:01:25.888Z",
- "engine": 55,
+ "generatedAt": "2026-11-24T04:22:47.217Z",
+ "engine": 56,
  "questions": [
   {
    "type": "rank",
@@ -94,7 +94,7 @@
     "12"
    ],
    "answer": 0,
-   "reveal": "11: 2001 (No. 24 Arkansas at LSU) · 2002 (No. 18 LSU at Arkansas) · 2005 (Arkansas at No. 3 LSU) · 2007 (Arkansas at No. 1 LSU (OT)) · 2008 (LSU at Arkansas) · 2009 (Arkansas at No. 17 LSU (OT)) · 2020 (LSU at Arkansas) · 2021 (Arkansas at LSU (OT)) · 2022 (No. 7 LSU at Arkansas) · 2023 (Arkansas at No. 12 LSU) · 2025 (Arkansas at LSU).",
+   "reveal": "11.",
    "order": [
     0,
     3,
@@ -186,7 +186,8 @@
       "profile": "Arkansas at LSU (OT)"
      }
     ]
-   }
+   },
+   "after": "2001 (No. 24 Arkansas at LSU) · 2002 (No. 18 LSU at Arkansas) · 2005 (Arkansas at No. 3 LSU) · 2007 (Arkansas at No. 1 LSU (OT)) · 2008 (LSU at Arkansas) · 2009 (Arkansas at No. 17 LSU (OT)) · 2020 (LSU at Arkansas) · 2021 (Arkansas at LSU (OT)) · 2022 (No. 7 LSU at Arkansas) · 2023 (Arkansas at No. 12 LSU) · 2025 (Arkansas at LSU)."
   },
   {
    "type": "mc",
@@ -215,7 +216,8 @@
     2,
     1
    ],
-   "reveal": "589: LSU 204, Arkansas 385. 75+ rushing yards: Darren McFadden (Arkansas) 206, Peyton Hillis (Arkansas) 89, Felix Jones (Arkansas) 85, Jacob Hester (LSU) 126.",
+   "reveal": "589: LSU 204, Arkansas 385.",
+   "after": "75+ rushing yards: Darren McFadden (Arkansas) 206, Peyton Hillis (Arkansas) 89, Felix Jones (Arkansas) 85, Jacob Hester (LSU) 126.",
    "names": {
     "prompt": "Bonus: name everyone with 75+ rushing yards in this game.",
     "a": "LSU",

@@ -26,7 +26,7 @@ for a, b in PAIRS:
     ent = lambda g: {"name": meet(g), "yards": 0, "season": g['season'], "label": meet(g), "profile": meet(g)}
     out.append({"type": "mc", "prompt": f"Of the {len(gs)} {S[a]}–{S[b]} games from 2000 through 2025, how many were decided by 3 points or fewer, or in overtime?",
       "options": [str(x) for x in opts], "answer": 0,
-      "reveal": f"{n}: " + " · ".join(f"{g['season']} ({meet(g)})" for g in close) + ".",
+      "reveal": f"{n}.", "after": " · ".join(f"{g['season']} ({meet(g)})" for g in close) + ".",
       "years": {"prompt": f"Name the {n} seasons.", "a": a, "b": b, "A": [ent(g) for g in close if wl(g)[0] == a], "B": [ent(g) for g in close if wl(g)[0] == b]},
       "source": SRC, "verified": True, "marquee": True})
   def score(g):
@@ -161,6 +161,26 @@ for it in EXTRA["TENN|VAN"]:
 for it in EXTRA["MISS|MSST"]:
   if "last chance" in it.get("prompt", ""):
     it["options"] = ["A fumble in the end zone", "An interception", "A missed field goal", "A turnover on downs"]
+
+# ---- owner review round 2 (Nov 2026) ----
+for it in EXTRA["MICH|OSU"]:
+  if "Gholston" in it.get("prompt", ""):
+    it["reveal"] = "3 of Ohio State's 4 sacks. Michigan finished with 91 total yards and 15 rushing."; it["after"] = "Chris Wells led everyone with 222 rushing yards (39 carries, 2 TD)."
+for it in EXTRA["TENN|VAN"]:
+  if "53" in it.get("reveal", ""):
+    it["reveal"] = "53 passing yards. Vanderbilt also forced three interceptions."; it["after"] = "Joshua Dobbs went 11 of 19 for 53 yards and was picked off twice."
+more("FLA|FSU", [{"type": "h2h", "prompt": "Who had more college receiving touchdowns (at the school shown)?",
+  "A": {"label": "Kyle Pitts (Florida TE)", "value": 18, "school": "FLA"}, "B": {"label": "Anquan Boldin (Florida State WR)", "value": 21, "school": "FSU"}, "unit": "TD",
+  "note": "Boldin 21 (1999–2002, 13 of them in 2002), Pitts 18 (2018–20, 12 of them in 2020).",
+  "source": "Wikipedia \"Florida State Seminoles football statistical leaders\" (revision 1378376740): Boldin 21 career and 13 in 2002; Kyle Pitts: CollegeFootballData /stats/player/season (1, 5, 12)", "verified": True, "marquee": True}])
+more("MIZ|OU", [{"type": "rank", "prompt": "Rank these ball carriers by career rushing yards at their school, highest first.",
+  "items": [{"label": "Brad Smith (Missouri)", "value": 4289, "school": "MIZ"}, {"label": "Billy Sims (Oklahoma)", "value": 4118, "school": "OU"},
+            {"label": "Adrian Peterson (Oklahoma)", "value": 4045, "school": "OU"}, {"label": "Zack Abron (Missouri)", "value": 3198, "school": "MIZ"}],
+  "unit": "yds", "note": "Career totals from each school's record book. Brad Smith, a quarterback, is Missouri's career leader.",
+  "names": {"prompt": "Bonus: name the other 7 players in Oklahoma and Missouri's combined top 10 for career rushing yards.", "a": "OU", "b": "MIZ",
+   "A": [{"name": n, "yards": y, "label": f"{y:,}", "profile": f"Oklahoma · {y:,} career rushing yards · No. {r} on the combined list"} for n, y, r in [("Samaje Perine", 4122, 2), ("Joe Washington", 4071, 4), ("Steve Owens", 4041, 6), ("Quentin Griffin", 3938, 7), ("DeMarco Murray", 3685, 9), ("De'Mond Parker", 3403, 10)]],
+   "B": [{"name": "Larry Rountree III", "yards": 3720, "label": "3,720", "profile": "Missouri · 3,720 career rushing yards · No. 8 on the combined list"}]},
+  "source": REC_BOOK("Oklahoma, Missouri career rushing"), "verified": True, "marquee": True}])
 
 d = json.load(open('data/curated.json'))
 for a, b in PAIRS:

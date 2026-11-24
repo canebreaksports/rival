@@ -99,7 +99,10 @@ export function genAwardCount(h: HonorsData, a: SchoolKey, b: SchoolKey, rng: Rn
   const aw = key ? h.awards.find(x => x.key === key)! : null;
   const info = aw ? { title: `What is the ${aw.name}?`, text: `The ${aw.name} is given each year to college football's ${aw.for}.` }
     : { title: "Which awards count?", text: h.awards.map(x => `${x.name}: ${x.for}`).join(" · ") };
-  return { type: "count", label: "Awards", a, b, threshold: 0, verified: true, pitted: true, info,
+  // for Heisman counts, after the bonus: the best finish by a school with no winners in the window (owner: "add Chase Daniel's ranking")
+  const best = key === "heisman" ? [a, b].filter(s => !list(s).length).map(s => h.heisman.filter(v => v.school === s && v.year >= from && v.place > 1).sort((x, y) => x.place - y.place || x.year - y.year)[0]).filter(Boolean) : [];
+  const after = best.length ? best.map(v => `${name(v.school)}'s highest finish: ${v.name}, ${ord(v.place)} in ${v.year}.`).join(" ") : undefined;
+  return { type: "count", label: "Awards", a, b, threshold: 0, verified: true, pitted: true, info, ...(after ? { after } : {}),
     prompt: `From ${from} through 2025, which school had more ${what}?`, A: list(a), B: list(b), sig: "ac" + (key ?? "all") + from };
 }
 

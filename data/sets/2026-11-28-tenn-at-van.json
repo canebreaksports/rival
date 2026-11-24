@@ -6,8 +6,8 @@
   "away": "TENN",
   "home": "VAN"
  },
- "generatedAt": "2026-11-24T04:01:26.719Z",
- "engine": 55,
+ "generatedAt": "2026-11-24T04:22:48.249Z",
+ "engine": 56,
  "questions": [
   {
    "type": "count",
@@ -180,7 +180,7 @@
     "4"
    ],
    "answer": 0,
-   "reveal": "3: 2000 (No. 25 Tennessee at Vanderbilt) · 2007 (Vanderbilt at No. 19 Tennessee) · 2011 (Vanderbilt at Tennessee (OT)).",
+   "reveal": "3.",
    "order": [
     2,
     0,
@@ -215,7 +215,8 @@
      }
     ],
     "B": []
-   }
+   },
+   "after": "2000 (No. 25 Tennessee at Vanderbilt) · 2007 (Vanderbilt at No. 19 Tennessee) · 2011 (Vanderbilt at Tennessee (OT))."
   },
   {
    "type": "rank",
@@ -304,7 +305,7 @@
     "203"
    ],
    "answer": 0,
-   "reveal": "53. Vanderbilt also forced three interceptions; Joshua Dobbs went 11 of 19 for 53 yards and was picked off twice.",
+   "reveal": "53 passing yards. Vanderbilt also forced three interceptions.",
    "order": [
     3,
     1,
@@ -324,7 +325,8 @@
      }
     ],
     "B": []
-   }
+   },
+   "after": "Joshua Dobbs went 11 of 19 for 53 yards and was picked off twice."
   },
   {
    "label": "Tennessee–Vanderbilt",

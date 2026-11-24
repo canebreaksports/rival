@@ -6,8 +6,8 @@
   "away": "AUB",
   "home": "ALA"
  },
- "generatedAt": "2026-11-24T04:01:25.480Z",
- "engine": 55,
+ "generatedAt": "2026-11-24T04:22:46.783Z",
+ "engine": 56,
  "questions": [
   {
    "type": "count",
@@ -75,7 +75,7 @@
     "5–0"
    ],
    "answer": 0,
-   "reveal": "0–5. Auburn won all five: 2007 (finished 9–4), 2010 (14–0), 2013 (12–2), 2017 (10–4) and 2019 (9–4). Against every other Auburn team, Saban's Alabama went 12–0.",
+   "reveal": "0–5. Against every other Auburn team, Saban's Alabama went 12–0.",
    "order": [
     1,
     0,
@@ -124,7 +124,8 @@
      }
     ],
     "B": []
-   }
+   },
+   "after": "Auburn won all five: 2007 (finished 9–4), 2010 (14–0), 2013 (12–2), 2017 (10–4) and 2019 (9–4)."
   },
   {
    "label": "Iron Bowl",
@@ -140,7 +141,7 @@
     "4"
    ],
    "answer": 0,
-   "reveal": "3: Amari Cooper (Alabama) 13 catches for 224 yards and 3 TD, Sammie Coates (Auburn) 5 for 206 and 2 TD, and Duke Williams (Auburn) 7 for 121.",
+   "reveal": "3 players topped 100 receiving yards.",
    "order": [
     1,
     0,
@@ -173,7 +174,8 @@
       "profile": "Alabama WR · 13 catches for 224 yards and 3 TD"
      }
     ]
-   }
+   },
+   "after": "Amari Cooper (Alabama) 13 catches for 224 yards and 3 TD, Sammie Coates (Auburn) 5 for 206 and 2 TD, and Duke Williams (Auburn) 7 for 121."
   },
   {
    "label": "Iron Bowl",
@@ -364,7 +366,8 @@
     1,
     2
    ],
-   "reveal": "514: Auburn 296, Alabama 218. 75+ rushing yards: T.J. Yeldon (Alabama) 141, Tre Mason (Auburn) 164, Nick Marshall (Auburn) 99.",
+   "reveal": "514: Auburn 296, Alabama 218.",
+   "after": "75+ rushing yards: T.J. Yeldon (Alabama) 141, Tre Mason (Auburn) 164, Nick Marshall (Auburn) 99.",
    "names": {
     "prompt": "Bonus: name everyone with 75+ rushing yards in this game.",
     "a": "AUB",

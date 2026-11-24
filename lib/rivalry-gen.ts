@@ -248,7 +248,8 @@ export function genMarginMC(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng: Rn
     type: "mc", label: "Series History", verified: SRC_VERIFIED, pitted: true,
     prompt: `From 2000 through 2025, what was the largest margin of victory in the ${name(a)}–${name(b)} series?`,
     options: opts.map(n => `${n} points`), answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
-    reveal: `${top} points: ${name(w)} ${ws}, ${name(l)} ${ls} (${longDate(g.date)})${at.length > 1 ? `; also ${at.slice(0, -1).map(x => `${name(winner(x))} in ${x.season}`).join(", ")}` : ""}.`,
+    reveal: `${top} points.`,
+    after: `${name(w)} ${ws}, ${name(l)} ${ls} (${longDate(g.date)})${passer(g, w) ? `, with ${passer(g, w)!.name} at quarterback` : ""}${at.length > 1 ? `; also ${at.slice(0, -1).map(x => `${name(winner(x))} in ${x.season}`).join(", ")}` : ""}.`,
     // bonuses (owner, Nov 2026): guess the year, then name the winning team's quarterback
     ...(at.length === 1 ? { years: { prompt: "Bonus: name the year.", a, b, A: w === a ? [yearEntry(g)] : [], B: w === b ? [yearEntry(g)] : [] } } : {}),
     ...(passer(g, w) ? { names: { prompt: `Bonus: name ${name(w)}'s quarterback in that game (its leading passer).`, a, b, A: w === a ? [passer(g, w)!] : [], B: w === b ? [passer(g, w)!] : [] } } : {}),
@@ -319,7 +320,8 @@ export function genGameStoryMC(pr: RivalryPair, a: SchoolKey, b: SchoolKey, rng:
       game: { date: longDate(g.date), winner: w, loser: l, ws, ls, venue: venue(g) },
       prompt: `The ${g.season} ${name(a)}–${name(b)} game ${hook}, but the teams combined for how many ${what}?`,
       options: opts.map(n => `${fmt(n)}`), answer: 0, order: shuffle(rng, [0, 1, 2, 3]),
-      reveal: `${fmt(total)}: ${name(a)} ${fmt(g.team![a][cat])}, ${name(b)} ${fmt(g.team![b][cat])}. ${min}+ ${what}: ${stars.map(x => `${x.p.name} (${name(x.k)}) ${x.p.yds}`).join(", ")}.`,
+      reveal: `${fmt(total)}: ${name(a)} ${fmt(g.team![a][cat])}, ${name(b)} ${fmt(g.team![b][cat])}.`,
+      after: `${min}+ ${what}: ${stars.map(x => `${x.p.name} (${name(x.k)}) ${x.p.yds}`).join(", ")}.`,
       names: { prompt: `Bonus: name everyone with ${min}+ ${what} in this game.`, a, b, A: stars.filter(x => x.k === a).map(entry), B: stars.filter(x => x.k === b).map(entry) },
       sig: "gs" + g.date + cat,
     } as Question;

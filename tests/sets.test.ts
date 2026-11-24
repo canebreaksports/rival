@@ -52,4 +52,12 @@ describe("frozen sets", () => {
       for (const side of [q.A, q.B]) { const p = career(side.label, side.school!)!; expect(p.rush ?? 0, `${s.slug}: ${side.label}`).toBeGreaterThanOrEqual(1200) }
     }
   });
+  it("from this week on, nothing shown before a bonus gives its answers away (owner, Nov 2026)", () => {
+    for (const s of sets.filter(s => s.game.date >= "2026-11-22")) for (const q of s.questions) {
+      const b = (["names", "years"] as const).flatMap(k => { const x = (q as unknown as Record<string, { A: { name: string; season?: number }[]; B: { name: string; season?: number }[] } | undefined>)[k]; return x ? [...x.A, ...x.B].map(e => ({ k, e })) : [] });
+      if (!b.length) continue;
+      const first = q.type === "mc" ? (q.after ? q.reveal : q.options[q.answer]) : q.type === "rank" ? (q.note ?? "") : "";
+      for (const { k, e } of b) expect(k === "names" ? first.includes(e.name.split(" ").pop()!) : first.includes(String(e.season)), `${s.slug} ${q.sig}: ${e.name}`).toBe(false);
+    }
+  });
 });
