@@ -1,4 +1,4 @@
-// Fill-in questions (pitted): pick the school, then name everyone on the list (Name Them, +25 each).
+// Fill-in questions (pitted): pick the school, then name everyone on the list (Name Them: 100 split across the answers).
 //   1. Combined top 10 single-season rushing / receiving yards for both schools (school record books, data/season-records.json).
 //      Each school's top 10 always contains its part of the combined top 10, so the combined list is complete.
 //   2. Top 5 players in rushing / receiving / scrimmage yards against the other school since the box-score window opened.

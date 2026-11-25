@@ -1,7 +1,15 @@
 // Answer checking and scoring (spec §5). Pure functions so the UI and tests share them.
 import type { Progress, Question } from "./types";
 
-export const POINTS = { correct: 100, perfectRank: 150, rankSlot: 25, streakStep: 25, bonus: 50, name: 25, hint: -10 }; // hint: per Name Them hint used
+export const POINTS = { correct: 100, perfectRank: 150, rankSlot: 25, streakStep: 25, bonus: 50 };
+/** Bonus rounds (owner, Nov 2026): worth 100 in all, the same as a question, split evenly across the answers
+ *  (10 answers = 10 each). Each hint on an answer takes 25% off that answer: three hints leave 25%. */
+export const BONUS = { total: 100, hintCut: 0.25, maxHints: 3 };
+export const answerValue = (answers: number) => (answers ? BONUS.total / answers : 0);
+export const earnedFor = (answers: number, hintsOnIt: number) => answerValue(answers) * Math.max(0, 1 - BONUS.hintCut * Math.min(BONUS.maxHints, hintsOnIt));
+/** Total for a finished bonus: the answers named, each reduced by its hints. */
+export const bonusTotal = (answers: number, named: number[], hintsOn: (i: number) => number) => Math.round(named.reduce((t, i) => t + earnedFor(answers, hintsOn(i)), 0));
+export const fmtPts = (v: number) => (Number.isInteger(v) ? String(v) : v.toFixed(1).replace(/\.0$/, ""));
 
 /** The correct answer token for a question (rank questions are scored with scoreRank instead). */
 export function correctAnswer(q: Question): string {

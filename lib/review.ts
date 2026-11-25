@@ -67,14 +67,14 @@ export const weekOf = (date: string) => sundayOf(date);
 export function formatOf(q: Question): string {
   switch (q.type) {
     case "prog": return "Pick a school: A / B / Tied";
-    case "count": return q.bonus === "years" ? "Pick a school: A / B / Tied, then Name the Years bonus (one year at a time, 3 misses, hints −10)" : "Pick a school: A / B / Tied, then Name Them bonus (one name at a time, 3 misses, hints −10)";
+    case "count": return q.bonus === "years" ? "Pick a school: A / B / Tied, then Name the Years bonus (one year at a time, 3 misses, worth 100 split across the answers, each hint −25% of that answer)" : "Pick a school: A / B / Tied, then Name Them bonus (one name at a time, 3 misses, worth 100 split across the answers, each hint −25% of that answer)";
     case "moment": return q.pair ? "Higher or lower: More / Less (paired, 1 of 2 back to back)" : "Higher or lower: More / Less";
-    case "rank": return `Rank It: tap ${q.items.length} in order, highest first` + (q.names ? ", then Name Them bonus: complete the combined top 10 (3 misses, hints −10)" : "");
+    case "rank": return `Rank It: tap ${q.items.length} in order, highest first` + (q.names ? ", then Name Them bonus: complete the combined top 10 (3 misses, worth 100 split across the answers, each hint −25% of that answer)" : "");
     case "h2h": return "Head to head: pick 1 of 2";
     case "duel": return "Blind stat duel: pick Player X or Y";
     case "cross": return "Multiple choice: pick 1 of 4";
-    case "mc": return `Multiple choice: pick 1 of ${q.options.length}` + (q.years && q.names ? ", then two bonuses: Name the Year, then Name Them (3 misses each, hints −10)"
-      : q.years ? ", then Name the Years bonus (one year at a time, 3 misses, hints −10)" : q.names ? ", then Name Them bonus (one name at a time, 3 misses, hints −10)" : "");
+    case "mc": return `Multiple choice: pick 1 of ${q.options.length}` + (q.years && q.names ? ", then two bonuses: Name the Year, then Name Them (3 misses each, worth 100 split across the answers, each hint −25% of that answer)"
+      : q.years ? ", then Name the Years bonus (one year at a time, 3 misses, worth 100 split across the answers, each hint −25% of that answer)" : q.names ? ", then Name Them bonus (one name at a time, 3 misses, worth 100 split across the answers, each hint −25% of that answer)" : "");
   }
 }
 

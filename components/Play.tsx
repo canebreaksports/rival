@@ -5,7 +5,7 @@ import type { Game, Progress, Question, SchoolKey } from "@/lib/types";
 import { ComeBack } from "./ComeBack";
 import { SCHOOL } from "@/lib/schools";
 import { fmt } from "@/lib/generators";
-import { applyResult, correctAnswer, grade, POINTS, scoreRank } from "@/lib/scoring";
+import { answerValue, applyResult, bonusTotal, correctAnswer, earnedFor, fmtPts, grade, POINTS, scoreRank } from "@/lib/scoring";
 import { matchOne } from "@/lib/names";
 import { plainQ } from "@/lib/plain";
 import { initials } from "@/lib/profile";
@@ -86,9 +86,8 @@ export function Play({ questions: raw, away, home, mode = "weekly", storageKey, 
     const np = { ...x, pts: x.pts + pts, qpts }; savePast(np); return np;
   });
   // each hint costs 10 points, charged to the current question
-  const addHint = () => setP(x => {
-    const qpts = [...(x.qpts ?? [])]; qpts[x.i] = (qpts[x.i] ?? 0) + POINTS.hint;
-    const np = { ...x, pts: x.pts + POINTS.hint, hints: (x.hints ?? 0) + 1, qpts }; savePast(np); return np;
+  const addHint = () => setP(x => { // a hint lowers that answer's bonus value (scored in the bonus), and is counted for the report
+    const np = { ...x, hints: (x.hints ?? 0) + 1 }; savePast(np); return np;
   });
 
   if (!loaded) return null;
@@ -261,7 +260,9 @@ function NameYears({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
   const [misses, setMisses] = useState<string[]>([]);
   const [msg, setMsg] = useState<{ tone: "good" | "bad" | "info"; text: string } | null>(null);
   const [over, setOver] = useState(false);
-  const finish = (f: number[]) => { setOver(true); onDone(f.length * POINTS.name) };
+  const hintsOn = (i: number) => (shown.includes(i) ? 1 : 0) + (decade.includes(i) ? 1 : 0);
+  const worth = (i: number) => earnedFor(slots.length, hintsOn(i));
+  const finish = (f: number[]) => { setOver(true); onDone(bonusTotal(slots.length, f, hintsOn)) };
   const parseYear = (s: string) => { const m = s.trim().match(/^[’']?(\d{2}|\d{4})$/); if (!m) return null; const n = Number(m[1]); return m[1].length === 4 ? n : n <= 40 ? 2000 + n : 1900 + n };
   function guess(e: React.FormEvent) {
     e.preventDefault(); if (!text.trim() || over) return;
@@ -271,7 +272,7 @@ function NameYears({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
     if (hits.length && hits.every(i => filled.includes(i))) { setMsg({ tone: "info", text: `Already named ${y}.` }); return }
     if (hits.length) {
       const f = [...filled, ...hits.filter(i => !filled.includes(i))]; setFilled(f);
-      setMsg({ tone: "good", text: `✓ ${y}: ${hits.map(i => slots[i].who.map(w => w.name).join(", ")).join(" · ")} · +${POINTS.name * hits.filter(i => !filled.includes(i)).length}` });
+      setMsg({ tone: "good", text: `✓ ${y}: ${hits.map(i => slots[i].who.map(w => w.name).join(", ")).join(" · ")} · +${fmtPts(hits.filter(i => !filled.includes(i)).reduce((t, i) => t + worth(i), 0))}` });
       if (f.length === slots.length) finish(f);
     } else { const m = [...misses, String(y)]; setMisses(m); setMsg({ tone: "bad", text: `✗ ${y} isn't on the list.` }); if (m.length >= MISSES) finish(filled) }
   }
@@ -285,8 +286,8 @@ function NameYears({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
     : <span key={s.i} className="slot" aria-label="unnamed">▢</span>;
   return <div className="bonus">
     <div className="kind">Bonus · Name the Years</div>
-    <div className="hintnote">Hints: the {prompt ? "score" : "player"}, then the decade · {POINTS.hint} each</div>
-    <div className="prompt" style={{ fontSize: 15, margin: "6px 0 10px" }}>{prompt ?? `Name the ${slots.length} seasons one at a time, from either school.`} +{POINTS.name} each. {MISSES} misses and you&apos;re out.</div>
+    <div className="hintnote">Hints: the {prompt ? "score" : "player"}, then the decade · each takes 25% off that answer</div>
+    <div className="prompt" style={{ fontSize: 15, margin: "6px 0 10px" }}>{prompt ?? `Name the ${slots.length} seasons one at a time, from either school.`} Worth 100: {fmtPts(answerValue(slots.length))} per answer. {MISSES} misses and you&apos;re out.</div>
     {!over && <>
       <div className="tally" aria-live="polite"><span>{filled.length} of {slots.length} named</span>
         <span aria-label={`${misses.length} of ${MISSES} misses`}>{Array.from({ length: MISSES }, (_, i) => (i < misses.length ? "✗" : "○")).join(" ")}</span></div>
@@ -297,14 +298,14 @@ function NameYears({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
       </form>
       {msg && <div className={`guess ${msg.tone}`} role="status">{msg.text}</div>}
       <div className="row">
-        <button className="btn ghost" disabled={nextShow == null} onClick={() => { if (nextShow != null) { setShown([...shown, nextShow]); onHint() } }}>{prompt ? "Score" : "Player"} {POINTS.hint}</button>
-        <button className="btn ghost" disabled={decTarget == null} onClick={() => { if (decTarget != null) { setDecade([...decade, decTarget]); onHint() } }}>Decade {POINTS.hint}</button>
+        <button className="btn ghost" disabled={nextShow == null} onClick={() => { if (nextShow != null) { setShown([...shown, nextShow]); onHint() } }}>{prompt ? "Score" : "Player"} hint</button>
+        <button className="btn ghost" disabled={decTarget == null} onClick={() => { if (decTarget != null) { setDecade([...decade, decTarget]); onHint() } }}>Decade hint</button>
       </div>
       <button className="btn ghost" style={{ marginTop: 10 }} onClick={() => finish(filled)}>I&apos;m done</button>
     </>}
     {over && <>
       <div className={`reveal show ${filled.length ? "good" : "bad"}`}>
-        <b>{filled.length} of {slots.length} named · +{filled.length * POINTS.name}</b>
+        <b>{filled.length} of {slots.length} named · +{bonusTotal(slots.length, filled, hintsOn)} of 100</b>
         {schools.map(k => <div key={k} style={{ marginTop: 10 }}><b>{SCHOOL[k].name}</b>
           {by(k).length ? by(k).map(s => <div key={s.i}>{filled.includes(s.i) ? "✓" : "–"} {s.year}: {s.who.map(w => `${w.name} (${w.label ?? fmt(w.yards)})`).join(", ")}</div>) : <div>None</div>}</div>)}
       </div>
@@ -328,7 +329,8 @@ function NameNames({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
   const [over, setOver] = useState(false);
   if (!slots.length) return <div className="next show"><button className="btn" onClick={onNext}>{last ? "Final Whistle" : "Next Play →"}</button></div>;
   const hasYears = slots.some(x => x.season);
-  const finish = (f: number[]) => { setOver(true); onDone(f.length * POINTS.name) };
+  const hintsOn = (i: number) => (hinted.includes(i) ? 1 : 0) + (profiled.includes(i) ? 1 : 0) + (lettered.includes(i) ? 1 : 0);
+  const finish = (f: number[]) => { setOver(true); onDone(bonusTotal(slots.length, f, hintsOn)) };
   const openFor = (name: string, f: number[]) => slots.map((x, i) => i).filter(i => slots[i].name === name && !f.includes(i));
   // players whose every slot is filled count as "already named"
   const done = new Set(unique.filter(u => openFor(u.name, filled).length === 0).map(u => u.name));
@@ -345,7 +347,7 @@ function NameNames({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
       const f = [...filled, i];
       setFilled(f);
       const left = openFor(g.name, f).length;
-      setMsg({ tone: "good", text: `✓ ${g.name}${slots[i].season ? ` (${slots[i].season})` : ""} · +${POINTS.name}${left ? ` — he's on the list ${left} more time${left > 1 ? "s" : ""}` : ""}` });
+      setMsg({ tone: "good", text: `✓ ${g.name}${slots[i].season ? ` (${slots[i].season})` : ""} · +${fmtPts(earnedFor(slots.length, hintsOn(i)))}${left ? ` — he's on the list ${left} more time${left > 1 ? "s" : ""}` : ""}` });
       if (f.length === slots.length) finish(f);
     } else if (g.status === "dup") setMsg({ tone: "info", text: `Already named every ${g.name} entry.` });
     else if (g.status === "ambiguous") setMsg({ tone: "info", text: `Which one? Add a first name: ${g.options.join(" or ")}.` });
@@ -375,9 +377,9 @@ function NameNames({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
       : <span key={x.i} className="slot" aria-label="unnamed">▢</span>;
   return <div className="bonus">
     <div className="kind">Bonus · Name Them</div>
-    <div className="hintnote">Hints: year, then profile, then initials · {POINTS.hint} each</div>
+    <div className="hintnote">Hints: year, then profile, then initials · each takes 25% off that answer</div>
     <div className="prompt" style={{ fontSize: 15, margin: "6px 0 10px" }}>
-      {prompt && <>{prompt} </>}Name all {slots.length} one at a time, from either school{hasYears && slots.length !== unique.length ? " (a player on the list twice must be named twice)" : ""}. +{POINTS.name} each, hints {POINTS.hint}. Last names are fine. {MISSES} misses and you&apos;re out.</div>
+      {prompt && <>{prompt} </>}Name all {slots.length} one at a time, from either school{hasYears && slots.length !== unique.length ? " (a player on the list twice must be named twice)" : ""}. Worth 100: {fmtPts(answerValue(slots.length))} per answer, and each hint takes 25% off that answer. Last names are fine. {MISSES} misses and you&apos;re out.</div>
     {!over && <>
       <div className="tally" aria-live="polite">
         <span>{filled.length} of {slots.length} named</span>
@@ -392,15 +394,15 @@ function NameNames({ q, prompt, onDone, onHint, onNext, last }: { q: Pick<Extrac
       {profiled.filter(open).map(i => <div key={i} className="profile">Hint: {slots[i].profile}{lettered.includes(i) ? ` · initials ${initials(slots[i].name)}` : ""}</div>)}
       {msg && <div className={`guess ${msg.tone}`} role="status">{msg.text}</div>}
       <div className="row">
-        {hasYears && <button className="btn ghost" disabled={nextHint == null} onClick={hint}>Year {POINTS.hint}</button>}
-        <button className="btn ghost" disabled={profileTarget == null} onClick={hintProfile} title={hasYears ? "Profile of the player behind your latest year hint" : "Profile of an unnamed player"}>Profile {POINTS.hint}</button>
-        <button className="btn ghost" disabled={initialsTarget == null} onClick={hintInitials} title="Initials of the player behind your latest profile hint">Initials {POINTS.hint}</button>
+        {hasYears && <button className="btn ghost" disabled={nextHint == null} onClick={hint}>Year hint</button>}
+        <button className="btn ghost" disabled={profileTarget == null} onClick={hintProfile} title={hasYears ? "Profile of the player behind your latest year hint" : "Profile of an unnamed player"}>Profile hint</button>
+        <button className="btn ghost" disabled={initialsTarget == null} onClick={hintInitials} title="Initials of the player behind your latest profile hint">Initials hint</button>
         </div>
       <button className="btn ghost" style={{ marginTop: 10 }} onClick={() => finish(filled)}>I&apos;m done</button>
     </>}
     {over && <>
       <div className={`reveal show ${filled.length ? "good" : "bad"}`}>
-        <b>{filled.length} of {slots.length} named · +{filled.length * POINTS.name}</b>
+        <b>{filled.length} of {slots.length} named · +{bonusTotal(slots.length, filled, hintsOn)} of 100</b>
         {[q.a, q.b].map(k => <div key={k} style={{ marginTop: 10 }}><b>{SCHOOL[k].name}</b>
           {bySchool(k).length ? bySchool(k).map(x => <div key={x.i}>{filled.includes(x.i) ? "✓" : "–"} {x.name}{x.season ? ` ${x.season}` : ""} ({x.label ?? fmt(x.yards)}{x.active ? ", active" : ""})</div>) : <div>None</div>}</div>)}
       </div>
@@ -415,7 +417,7 @@ const plainMarks = (m: string) => m.replace(/✅/gu, "✓").replace(/🟨/gu, "~
 function Final({ p, n, questions, weekly, away, home, nextUnlock, onExit, onAgain, sharePath, games }: { p: Progress; n: number; questions: Question[]; weekly: boolean; away?: SchoolKey | null; home?: SchoolKey | null; nextUnlock?: string | null; onExit: () => void; onAgain?: () => void; sharePath?: string | null; games?: Game[] }) {
   const [shared, setShared] = useState<string | null>(null);
   const hints = p.hints ?? 0;
-  const hintText = hints ? `${hints} hint${hints > 1 ? "s" : ""} used (${hints * POINTS.hint} pts)` : "No hints used";
+  const hintText = hints ? `${hints} hint${hints > 1 ? "s" : ""} used` : "No hints used";
   async function share() {
     const title = away && home ? `${SCHOOL[away].name} ${weekly ? "@" : "vs"} ${SCHOOL[home].name}` : "SEC Mix";
     const text = [`PITTED · ${title}`, plainMarks(p.marks ?? ""), `${p.pts} pts · ${p.right}/${n} · best streak ${p.best}`, hintText, weekly ? "Can you beat it? Same 10 questions for everyone this week:" : ""].filter(Boolean).join("\n");
