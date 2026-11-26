@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { teamName, TEAM } from "@/lib/teams";
 import { getFan } from "@/lib/fan";
+import Logo from "./Logo";
 
 type Row = { school: string; entries: number; players: number; avg: number };
 export function Leaderboard() {
@@ -11,7 +12,7 @@ export function Leaderboard() {
   const [mine, setMine] = useState<string | null>(null);
   useEffect(() => { setMine(getFan()?.school ?? null); fetch("/api/leaderboard").then(r => r.json()).then(setD).catch(() => setD({ configured: true, rows: [], entries: 0 })) }, []);
   return <section>
-    <h1>PIT<span>T</span>ED</h1>
+    <Logo />
     <div className="tag">School Leaderboard</div>
     <p className="note" style={{ textAlign: "left" }}>Every completed game counts as an entry for the school its player picked. Which fan base plays the most?</p>
     {!d ? <p className="note">Loading…</p> : !d.rows.length ? <p className="note">No entries yet. Be the first: play this week&apos;s matchup.</p> :

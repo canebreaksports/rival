@@ -10,6 +10,7 @@ import { store } from "@/lib/storage";
 import { WeekView, type GameSummary } from "./WeekView";
 import { Play } from "./Play";
 import { Dot } from "./Dot";
+import Logo from "./Logo";
 
 type Free = { build: () => Question[]; away: SchoolKey | null; home: SchoolKey | null; mode: "dive" | "mix" | "round" };
 
@@ -28,7 +29,7 @@ export function CoachClient({ games }: { games: GameSummary[] }) {
   const keys = DATA.schools.map(s => s.key);
   const opts = { verifiedOnly: false };
   return <section>
-    <h1>PIT<span>T</span>ED</h1>
+    <Logo />
     <div className="tag">Coach · Preview Mode</div>
     <p className="note" style={{ marginTop: 0 }}>Testing only. Weekly runs here use separate progress, so they don&apos;t use up your real run.</p>
 

@@ -5,10 +5,11 @@ import { FanBar } from "@/components/FanBar";
 import { gameSummaries } from "@/lib/summaries";
 import { ComeBack } from "@/components/ComeBack";
 import { DATA } from "@/lib/data";
+import Logo from "@/components/Logo";
 
 export default function Home() {
   return <section>
-    <h1>PIT<span>T</span>ED</h1>
+    <Logo />
     <div className="byline">Your school vs. theirs. Every game week.</div>
     <div className="tag">College Football · Rivalry Week</div>
     <FanBar />

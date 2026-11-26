@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { teamName } from "@/lib/teams";
 import { SCHOOL } from "@/lib/schools";
+import Logo from "./Logo";
 
 type Stats = { configured: boolean; fans?: Record<string, string>; starts?: Record<string, number>; finishes?: Record<string, number>; points?: Record<string, number>; hints?: Record<string, number> };
 const matchupName = (slug: string) => { const [a, h] = slug.slice(11).split("-at-").map(x => x.toUpperCase()); return `${SCHOOL[a]?.name ?? a} @ ${SCHOOL[h]?.name ?? h} · ${slug.slice(5, 10)}` };
@@ -34,7 +35,7 @@ export function StatsClient() {
   const tot = Object.values(bySchool).reduce((t, r) => ({ own: t.own + r.own, other: t.other + r.other, done: t.done + r.done }), { own: 0, other: 0, done: 0 });
 
   return <section>
-    <h1>PIT<span>T</span>ED</h1>
+    <Logo />
     <div className="tag">Coach · Player Stats</div>
     {!data?.configured && <form className="row" onSubmit={e => { e.preventDefault(); void load(key) }}>
       <input type="password" value={key} onChange={e => setKey(e.target.value)} placeholder="Stats key" aria-label="Stats key" style={{ flex: 1, background: "#050a07", color: "var(--chalk)", border: "1px solid var(--line)", borderRadius: 10, padding: 12 }} />
