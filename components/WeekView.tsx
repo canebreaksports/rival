@@ -50,7 +50,7 @@ function Card({ g, live, linkBase, storagePrefix }: { g: GameSummary; live: bool
   const inReview = !coach && needsApproval(g.slug) && !approvedSet?.has(g.slug);
   const open = live && ready && !played && !inReview;
   const status = !live ? (ready ? `Unlocks ${unlockFmt(w.start)} · ${g.n} questions` : `Unlocks ${unlockFmt(w.start)} · Stats pack coming soon`)
-    : played ? `✓ ${sv!.pts.toLocaleString("en-US")} pts · ${sv!.right}/${sv!.n}${sv!.hints ? ` · ${sv!.hints} hint${sv!.hints > 1 ? "s" : ""}` : ""} · back next week`
+    : played ? `${sv!.right} of ${sv!.n} correct${sv!.hints ? ` · ${sv!.hints} hint${sv!.hints > 1 ? "s" : ""}` : ""} · tap to see your results`
     : !ready ? `${dfmt(w.day)} · Stats pack coming soon`
     : inReview ? (approvedSet ? `${dfmt(w.day)} · Final review · check back soon` : `${dfmt(w.day)} · …`)
     : sv ? `Resume · Q${sv.i + 1} of ${g.n}` : `${dfmt(w.day)} · ${g.n} questions`;
@@ -58,6 +58,7 @@ function Card({ g, live, linkBase, storagePrefix }: { g: GameSummary; live: bool
   const body = <>
     {(g.name || site) && <div className="n">{g.name ?? `at ${site}`}</div>}
     <div className="t"><Dot k={away} />{rk(g.ranks?.away)}{SCHOOL[away].name} <span className="vs">{site ? "VS" : "@"}</span> <Dot k={home} />{rk(g.ranks?.home)}{SCHOOL[home].name}</div>
+    {played && <div className="score"><span className="lbl">Your score</span><span className="pts">{sv!.pts.toLocaleString("en-US")}</span><span className="lbl">pts</span></div>}
     <div className="q">{status}</div>
   </>;
   if (played) return <Link className="rv played" href={`${linkBase}/${g.slug}`} aria-label={`Your results: ${SCHOOL[away].name} at ${SCHOOL[home].name}`}>{body}</Link>;

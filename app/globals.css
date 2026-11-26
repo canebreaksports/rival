@@ -105,6 +105,9 @@ textarea,input[type=date]{width:100%;background:#050a07;color:var(--chalk);borde
 .review .rd{font-size:12px;color:var(--dim);margin-top:6px;white-space:pre-line;line-height:1.5}
 /* results breakdown */
 .rv.played{border-color:var(--good)}
+.rv .score{display:flex;align-items:baseline;gap:6px;margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
+.rv .score .lbl{white-space:nowrap;font-family:Oswald;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--dim)}
+.rv .score .pts{font-family:Oswald;font-size:26px;font-weight:700;line-height:1;color:var(--gold)}
 .breakdown{margin:18px 0 6px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
 .breakdown summary{font:700 13px Oswald;letter-spacing:2px;text-transform:uppercase;color:var(--gold);cursor:pointer}
 .breakdown ol{list-style:none;margin-top:10px;display:grid;gap:8px}
